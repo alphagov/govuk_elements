@@ -12,26 +12,30 @@ module.exports = {
       res.render('sample',
                 {'assetPath' : assetPath});
     });
+    
+    /* Elements example pages */
 
-    /* Example pages */
-
-    app.get('/examples/hello-world', function (req, res) {
-      res.render('examples/hello_world', {'message' : 'Hello world'});
+    app.get('/examples/grid-layout', function (req, res) {
+      res.render('examples/elements/grid_layout', {'assetPath' : assetPath });    
     });
 
-    app.get('/examples/inheritance', function (req, res) {
-      res.render('examples/inheritance/page_level', {'message' : 'Hello world'});
+    app.get('/examples/typography', function (req, res) {
+      res.render('examples/elements/typography', {'assetPath' : assetPath });    
     });
+    
+    app.get('/examples/forms', function (req, res) {
+      res.render('examples/elements/forms', {'assetPath' : assetPath });    
+    });
+
+    /* Prototype example pages */
 
     app.get('/examples/alpha', function (req, res) {
       res.render('examples/alpha/alpha', {'assetPath' : assetPath });    
     });
 
     app.get('/examples/template-partial-areas', function (req, res) {
-
-      res.render('examples/template_partial_areas',
-                {'assetPath' : assetPath});
-      
+      res.render('examples/template_partial_areas', {'assetPath' : assetPath}); 
     });
+
   }
 };
