@@ -144,6 +144,14 @@ Example usage:
 }
 
 */
+.text-secondary {
+  color: #6f777b; }
+
+.cf:after {
+  content: "";
+  display: block;
+  clear: both; }
+
 #content {
   margin: 0 auto;
   max-width: 1020px;
@@ -244,17 +252,34 @@ Example usage:
           background-image: none;
           margin-right: 0; }
 
-.cf:after {
-  content: "";
-  display: block;
-  clear: both; }
-
-.text-secondary {
-  color: #6f777b; }
-
 .page-header {
   margin-left: 30px;
   margin-right: 30px; }
+
+code {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none; }
+  @media (max-width: 640px) {
+    code {
+      font-size: 14px;
+      line-height: 1.14286; } }
+
+.heading-36 {
+  border-top: 1px solid #bfc1c3;
+  padding-top: 45px; }
+
+.example .heading-36 {
+  border-top: none;
+  padding-top: 0; }
+
+.list-bullet {
+  margin-bottom: 45px; }
+
+.tight {
+  margin-bottom: 0; }
 
 .example {
   position: relative;
@@ -303,8 +328,7 @@ Example usage:
 .find-out-more {
   margin-bottom: 60px;
   margin-top: 30px;
-  padding-bottom: 15px;
-  border-bottom: 2px solid #bfc1c3; }
+  padding-bottom: 15px; }
   .find-out-more .heading-24 {
     margin-top: 0;
     padding-top: 15px; }
@@ -529,14 +553,3 @@ Example usage:
 
 .swatch-highlight-colour {
   background-color: #f8f8f8; }
-
-code {
-  font-family: "nta", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.25;
-  font-weight: 300;
-  text-transform: none; }
-  @media (max-width: 640px) {
-    code {
-      font-size: 14px;
-      line-height: 1.14286; } }

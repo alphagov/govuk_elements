@@ -37,17 +37,25 @@
           <div id="guide-layout">
             
             <h2 class="heading-36">1. Layout</h2>
-            
-            <p>Key points for layouts:</p>
 
             <ul class="list-bullet">
-              <li>use white space to create a visual hierarchy on the page</li>
-              <li>design for small screens first, using a single column layout</li>
-              <li>introduce columns as the content requires it</li>
-              <li>base column ratios on halves, thirds or quarters of the page width</li>
-              <li>spacing between elements is usually 5px,10px,15px or multiples of 15px</li>
-              <li>gutters are 15px for smaller screens and 30px for larger screens</li>
-              <li>lines of text should be no longer than 75 characters</li>
+              <li>Use white space to create a visual hierarchy on the page</li>
+              <li>Design for small screens first, using a single column layout</li>
+              <li>Introduce columns as the content requires it</li>
+              <li>Base column ratios on halves, thirds or quarters of the page width</li>
+              <li>Spacing between elements is usually 5px,10px,15px or multiples of 15px</li>
+              <li>Gutters are 15px for smaller screens and 30px for larger screens</li>
+              <li>Lines of text should be no longer than 75 characters</li>
+              <li>Set breakpoints for small, medium and large screens using media queries</li>
+              <li>Optimise your layout for different screen sizes, but don’t make assumptions about what devices people are using (things change)</li>
+              <li>The media queries for these breakpoints can be found in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_conditionals.scss">_conditionals.scss</a> file</li>
+            </ul>
+            
+            <p class="tight">
+              Find out more: 
+            </p>
+            <ul>
+              <li>Here's an example of <a href="{{ site.baseurl}}/examples/grid_layout.html">Grid layout</a></li>
             </ul>
 
             <h3 class="heading-24">Grid unit proportions</h3>
@@ -117,25 +125,6 @@
                 </div>
               </div>
             </div>
-            
-            <div class="text">
-
-              <h3 class="heading-24">Breakpoints</h3>
-              <p>
-                Set breakpoints for small, medium and large screens using media queries.
-              </p>
-              <p>
-                Optimise your layout for different screen sizes, but don’t make assumptions about what devices people are using (things change).
-              </p>
-              <p>The media queries for these breakpoints can be found in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_conditionals.scss">_conditionals.scss</a> file.</p>
-            </div>
-
-            <div class="find-out-more">
-              <h3 class="heading-24">Find out more</h3>
-              <ul>
-                <li>See an example page for <a href="{{ site.baseurl}}/examples/grid.html">Grid layout</a></li>
-              </ul>
-            </div><!-- / .find-out-more -->
 
           </div>
           <!-- / #guide-layout -->
@@ -143,21 +132,26 @@
           <div id="guide-typography">
             <h2 class="heading-36">2. Typography</h2>
             
-            <p>
-              Key points for typography:
-            </p>
             <ul class="list-bullet text">
-              <li>use the GDS Transport Website font in Light and Bold, it is licenced for use on the GOV.UK domains only. Services publically available on a different domains need to use an alternative typeface like Arial
+              <li>Use the GDS Transport Website font in Light and Bold, it is licenced for use on the GOV.UK domains only. Services publically available on a different domains need to use an alternative typeface like Arial
               </li>
-              <li>create clear hierarchy using headings so content is easy to scan</li>
-              <li>use headings in a uniform way across your service</li>
-              <li>body copy should be the main focus of the page</li>
-              <li>use 19px GDS Transport Website Light light for body copy and caption text. Width should be 75 characters for legibility</li>
-              <li>common font colours, can be found in the <a href="#">colour palette</a></li>
-              <li>avoid using bold text inline and italics</li>
-              <li>for specialist/internal user content smaller text sizes can be used (14px, 12px, 10px), always ensure that there is a real user need</li>
+              <li>Create clear hierarchy using headings so content is easy to scan</li>
+              <li>Use headings in a uniform way across your service</li>
+              <li>Body copy should be the main focus of the page</li>
+              <li>Use 19px GDS Transport Website Light light for body copy and caption text. Width should be 75 characters for legibility</li>
+              <li>Common font colours, can be found in the <a href="#">colour palette</a></li>
+              <li>Avoid using bold text inline and italics</li>
+              <li>For specialist/internal user content smaller text sizes can be used (14px, 12px, 10px), always ensure that there is a real user need</li>
             </ul>
             
+            <p class="tight">
+              Find out more:
+            </p>
+           <ul>
+              <li>Read more about <a href="https://www.gov.uk/service-manual/user-centered-design/resources/typography.html">GOV.UK Typography</a></li>
+              <li>Here's an example of <a href="{{ site.baseurl}}/examples/typography.html">Typography</a></li>
+            </ul>
+
             <h3 class="heading-24">
               Headings <br> 
               <span class="text-secondary">GDS Transport Website Bold</span>
@@ -252,14 +246,19 @@
 
               </div>
             </div>
+            
+            <h3 class="heading-24">Inset text</h3>
+            <div class="example">
+              <div class="inner-block">
+                
+                <div class="text text-indent">
+                  <p>
+                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent commodo cursus magna.
+                  </p>
+                </div>
 
-            <div class="find-out-more">
-              <h3 class="heading-24">Find out more</h3>
-              <ul>
-                <li><a href="https://www.gov.uk/service-manual/user-centered-design/resources/typography.html">Read more about GOV.UK Typography</a></li>
-                <li>See the example page for <a href="{{ site.baseurl}}/examples/typography.html">Typography</a></li>
-              </ul>
-            </div><!-- / .find-out-more -->
+              </div>
+            </div>
 
           </div>
           <!-- / #guide-typography -->
@@ -267,11 +266,19 @@
           <div id="guide-colour">
             <h2 class="heading-36">3. Colour</h2>
 
-            <p>Key points for colour:</p>
             <ul class="list-bullet text">
-              <li>text should be set in black with secondary text in grey</li>
-              <li>links should be set in blue and buttons or dialog boxes should have text in white</li>
-              <li>use Sass variables in case colour values need to be updated, the variables are defined in <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss">colours.scss</a> in the GOV.UK front end toolkit.</li>
+              <li>Text should be set in black with secondary text in grey</li>
+              <li>Links should be set in blue and buttons or dialog boxes should have text in white</li>
+              <li>Text and functional elements need to be easily differentiated. When colour is desaturated we work toward an AA colour ratio standard of 4.5:1</li>
+              <li>Use Sass variables in case colour values need to be updated, the variables are defined in <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss">colours.scss</a> in the GOV.UK front end toolkit.</li>
+            </ul>
+            
+            <p class="tight">
+              Find out more:
+            </p>
+            <ul>
+              <li>Read more about the <a href="https://www.gov.uk/service-manual/user-centered-design/resources/colour-palettes.html">GOV.UK colour palette</a></li>
+              <li>Read more about <a href="https://www.gov.uk/service-manual/user-centered-design/accessibility.html">accessibility</a></li>
             </ul>
 
             <h3 class="heading-24">Colour<br> 
@@ -708,30 +715,17 @@
               </div>
             </div>
 
-            <div class="find-out-more">
-              <h3 class="heading-24">Find out more</h3>
-              <ul class="text">
-                <li><a href="https://www.gov.uk/service-manual/user-centered-design/resources/colour-palettes.html">Read more about the GOV.UK colour palette</a></li>
-                <li>You can find more HEX values and Sass variable names for the GOV.UK colour palette in the <a href="https://github.com/alphagov/govuk_frontend_toolkit#colours">GOV.UK front end toolkit</a>.</a></li>
-              </ul>
-            </div><!-- / .find-out-more -->
-
           </div>
           <!-- / #guide-colour -->
 
           <div id="guide-images-icons">
             <h2 class="heading-36">4. Images and icons</h2>
 
-            <p>
-              Key points for images and icons:
-            </p>
             <ul class="list-bullet text">
-              <li>avoid unnecessary decoration, only use images and icons if there is a there is a real user need</li>
-              <li>if images are needed they should be landscape, 3:2 aspect ratio</li>
-              <li>if icons are needed ensure they are clear, simple and help to convey information more clearly than text alone could</li>
-              <li>
-                when using icons we recommend where possible that text is used to accompany the icon, to make it easily understood
-              </li>
+              <li>Avoid unnecessary decoration, only use images and icons if there is a there is a real user need</li>
+              <li>If images are needed they should be landscape, 3:2 aspect ratio</li>
+              <li>If icons are needed ensure they are clear, simple and help to convey information more clearly than text alone could. Don’t hide functionality under icons</li>
+              <li>Ensure icons meet contrast ratio requirements</li>
             </ul>
 
             <h3 class="heading-24">Image aspect ratio</h3>
@@ -756,10 +750,9 @@
           <div id="guide-data">
             <h2 class="heading-36">5. Data</h2>
 
-            <p>Key points for data:</p>
             <ul class="list-bullet text">
-              <li>data is recommended as an alternative to using photography</li>
-              <li>for screen readers, ensure the data value appears first so it makes sense when read aloud</li>
+              <li>Data is recommended as an alternative to using photography</li>
+              <li>For screen readers, ensure the data value appears first so it makes sense when read aloud</li>
             </ul>
 
             <h3 class="heading-24">Large data</h3>
@@ -825,12 +818,17 @@
 
             <p></p>
             <ul class="list-bullet text">
-              <li>use hint text for supporting contextual help, don’t use placeholder text in fields</li>
-              <li>hint text should sit above a form field</li>
-              <li>for more than two options, radio buttons or checkboxes should appear stacked</li>
-              <li>avoid using dropdowns, instead we recommend; radio buttons, using predictive fields (good for long lists like countries) and checkboxes</li>
-              <li>indents are used within forms to highlight supporting information</li>
-              <li>all elements use the Sass variable <code>$yellow</code>, Hex <code>#FFBF47</code> as a focus colour, often this is used as a fill or an outline of 3px</li>
+              <li>Keep forms as simple as possible, only ask what is needed to run your service</li>
+              
+              <li>Hint text should sit above a form field</li>
+              <li>Use hint text for supporting contextual help, don’t use placeholder text in fields</li>
+              
+              <li>For more than two options, radio buttons or checkboxes should appear stacked</li>
+              <li>Avoid using dropdowns, instead we recommend; radio buttons, using predictive fields (good for long lists like countries) and checkboxes</li>
+
+              <li>Indents are used within forms to highlight supporting information</li>
+              <li>All elements use the Sass variable <code>$yellow</code>, Hex <code>#FFBF47</code> as a focus colour, often this is used as a fill or an outline of 3px</li>
+
             </ul>
             
             <h3 class="heading-24">Form inputs and labels</h3>
@@ -1002,25 +1000,6 @@
               </div>
             </div>
             
-            <h3 class="heading-24">Inset text</h3>
-            <div class="example">
-              <div class="inner-block">
-                
-                <form action="" class="form">
-                  <fieldset>
-
-                    <div class="form-group form-group-indent">
-                      <div class="text">
-                        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent commodo cursus magna.</p>
-                      </div>
-                    </div>
-
-                  </fieldset>
-                </form>
-
-              </div>
-            </div>
-
             <!-- TODO: Add progressive disclosure -->
               
             <div class="find-out-more">
@@ -1036,13 +1015,13 @@
           <div id="guide-buttons">
             <h2 class="heading-36">7. Buttons</h2>
             
-            <p>Key points for buttons:</p>
             <ul class="list-bullet text">
-              <li>start buttons use the colour <code>#00823B</code></li>
-              <li>primary buttons use the Sass variable green <code>#006435</code> <code>$green</code></li>
-              <li>buttons can be created using the button mixin defined in the <a href="https://github.com/alphagov/govuk_frontend_toolkit#buttons">GOV.UK front end toolkit</a>
+              <li>Use Buttons to move though a transaction. Don't use them to represent choices, instead use radio buttons, checkboxes or links</li>
+              <li>Start buttons use the colour <code>#00823B</code></li>
+              <li>Primary buttons use the Sass variable green <code>#006435</code> <code>$green</code></li>
+              <li>Buttons can be created using the button mixin defined in the <a href="https://github.com/alphagov/govuk_frontend_toolkit#buttons">GOV.UK front end toolkit</a>
               </li>
-              <li>all elements use the Sass variable <code>$yellow</code>, Hex <code>#FFBF47</code> as a focus colour, often this is used as a fill or an outline of 3px</li>
+              <li>All elements use the Sass variable <code>$yellow</code>, Hex <code>#FFBF47</code> as a focus colour, often this is used as a fill or an outline of 3px</li>
             </ul>
             
             <h3 class="heading-24">Start button</h3>
@@ -1090,10 +1069,11 @@
           <div id="guide-errors">
             <h2 class="heading-36">8. Errors and validation</h2>
 
-            <p>Key points for errors and validation:</p>
             <ul class="list-bullet text">
-              <li>summarise validation errors at the top of your page</li>
-              <li>the red bar visually connects the summary to the messages in the form</li>
+              <li>Summarise validation errors at the top of your page, with jump links</li>
+              <li>The red bar visually connects the summary to the messages in the form</li>
+              <li>Error copy should be specific to question and validation should identify all errors</li>
+              <li>Errors should not cause pre-filled fields to clear</li>
             </ul>
             
             <h3 class="heading-24">Form validation errors</h3>

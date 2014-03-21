@@ -1,0 +1,6 @@
+// Increase default font size to 19px
+// Scope to .govuk to only affect main content area
+.govuk {
+  @include core-19;
+  -webkit-font-smoothing: antialiased;
+}
