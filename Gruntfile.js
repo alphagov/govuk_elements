@@ -1,13 +1,13 @@
 module.exports = function(grunt){
+  
   grunt.initConfig({
 
     // Builds Sass
     sass: {
       dev: {
         files: {
-          'public/stylesheets/application.css': 'public/sass/application.scss',
-          'public/stylesheets/examples.css': 'public/sass/examples.scss',
-          'public/stylesheets/elements.css': 'public/sass/elements.scss'
+          'public/stylesheets/elements.css': 'public/sass/elements.scss',
+          'public/stylesheets/examples.css': 'public/sass/examples.scss'
         },
         options: {
           includePaths: ['govuk/public/sass'],
@@ -118,4 +118,7 @@ module.exports = function(grunt){
     'sass',
     'concurrent:target'
   ]);
+
+
+
 };

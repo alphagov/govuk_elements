@@ -22,6 +22,7 @@
   "devDependencies": {
     "grunt-sass": "~0.10.0",
     "grunt-text-replace": "~0.3.10",
-    "grunt-concurrent": "~0.4.3"
+    "grunt-concurrent": "~0.4.3",
+    "express-writer": "0.0.4"
   }
 }

@@ -1,0 +1,53 @@
+// Helper classes
+@import "_helpers.scss";
+
+// Validation summary box
+.validation-summary {
+  border: 3px solid $mellow-red;
+  background: #fef7f7; // NOT IN THE PALETTE !!
+  padding: $gutter-half $gutter;
+  margin-bottom: $gutter;
+}
+
+.validation-summary ul {
+  margin-top: 10px;
+}
+
+.validation-summary p,
+.validation-summary li {
+  @include core-16;
+}
+
+.validation-summary p {
+  margin-top: $gutter-half;
+  margin-bottom: 5px;
+}
+
+.validation-summary a {
+  color: $mellow-red;
+}
+
+.validation-summary .heading-19 {
+  margin-top: $gutter-half;
+}
+
+// Validation message box
+.validation {
+  @include contain-floats;
+  border-left: 3px solid $mellow-red;
+  background: #fef7f7; // NOT IN THE PALETTE !!
+  padding-top: $gutter-half;
+  padding-bottom: $gutter;
+  padding-left: $gutter;
+  margin-bottom: $gutter-half;
+}
+
+.validation p {
+  margin-bottom: 10px;
+}
+
+// Validation message
+.validation-message {
+  @include core-16;
+  color: $mellow-red;
+}

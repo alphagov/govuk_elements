@@ -1,0 +1,5 @@
+source="www.foo.com"
+destination="./output"
+
+[options]
+filter=["/","/assets/**"]
