@@ -38,13 +38,14 @@
             
             <h2 class="heading-36">1. Layout</h2>
             
-            <p>Recommended use for layouts:</p>
-            <ul class="list-bullet">
+            <p class="lead">Key points for layouts:</p>
+
+            <ul class="list-bullet lead">
               <li>use white space to create a visual hierarchy on the page</li>
               <li>design for small screens first, using a single column layout</li>
               <li>introduce columns as the content requires it</li>
-              <li>base column ratios on halves, thirds or quar  ters of the page width</li>
-              <li>spacing between elements is usually 15px or multiples of 15px</li>
+              <li>base column ratios on halves, thirds or quarters of the page width</li>
+              <li>spacing between elements is usually 5px,10px,15px or multiples of 15px</li>
               <li>gutters are 15px for smaller screens and 30px for larger screens</li>
               <li>lines of text should be no longer than 75 characters</li>
             </ul>
@@ -123,18 +124,16 @@
               <p>
                 Set breakpoints for small, medium and large screens using media queries.
               </p>
-              <ul class="list-bullet">
-                <li><code>mobile</code> is used for to hide small screen styles from desktop browsers, by setting a maximum width of 640px</li>
-                <li><code>tablet</code> is used to adjust styles for tablet and up, starting at 641px</li>
-                <li><code>desktop</code> styles apply from a minimum width of 769px</li>
-              </ul>
-              <p>The media queries for these breakpoints can be found in the GOV.UK frontend toolkit <a href="#">_conditionals.scss</a> file.</p>
+              <p>
+                Optimise your layout for different screen sizes, but don’t make assumptions about what devices people are using (things change).
+              </p>
+              <p>The media queries for these breakpoints can be found in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_conditionals.scss">_conditionals.scss</a> file.</p>
             </div>
 
             <div class="find-out-more">
               <h3 class="heading-24">Find out more</h3>
               <ul>
-                <li>See the example page: <a href="{{ site.baseurl}}/example/grid.html">Grid layout</a></li>
+                <li>See an example page for <a href="{{ site.baseurl}}/examples/grid.html">Grid layout</a></li>
               </ul>
             </div><!-- / .find-out-more -->
 
@@ -144,19 +143,25 @@
           <div id="guide-typography">
             <h2 class="heading-36">2. Typography</h2>
             
-            <ul class="list-bullet text">
-              <li>Body copy should be the main focus of the page</li>
-              <li>19px for paragraph and caption text</li>
-              <li>Recommended width for body text is 75 characters for legibility</li>
-              <li>For common font colours, see the <a href="#guide-colour">colour palette</a></li>
-              <li>Create clear hierarchy using headings so content is easy to scan</li>
-              <li>Use headings in a uniform way across your service</li>
-              <li>Avoid using bold text inline</li>
-              <li>Avoid italics</li>
-              <li>Smaller text sizes (14px, 12px, 10px) can be used for more specialist/internal user content, always ensure that there is a real user need</li>
+            <p class="lede">
+              Key points for typography:
+            </p>
+            <ul class="list-bullet lede text">
+              <li>use the GDS Transport Website font in Light and Bold, it is licenced for use on the GOV.UK domains only. Services publically available on a different domains need to use an alternative typeface like Arial
+              </li>
+              <li>create clear hierarchy using headings so content is easy to scan</li>
+              <li>use headings in a uniform way across your service</li>
+              <li>body copy should be the main focus of the page</li>
+              <li>use 19px GDS Transport Website Light light for body copy and caption text. Width should be 75 characters for legibility</li>
+              <li>common font colours, can be found in the <a href="#">colour palette</a></li>
+              <li>avoid using bold text inline and italics</li>
+              <li>for specialist/internal user content smaller text sizes can be used (14px, 12px, 10px), always ensure that there is a real user need</li>
             </ul>
             
-            <h3 class="heading-24">Headings <br> <span class="text-secondary">New Transport Bold</span></h3>
+            <h3 class="heading-24">
+              Headings <br> 
+              <span class="text-secondary">GDS Transport Website Bold</span>
+            </h3>
             
             <div class="example">
               <div class="grid grid-1-2">
@@ -181,12 +186,16 @@
               </div>
             </div>
             
-            <h3 class="heading-24">Body copy <br> <span class="text-secondary">New Transport</span></h3>
+            <h3 class="heading-24">
+              Body copy <br> 
+              <span class="text-secondary">GDS Transport Website Light</span>
+            </h3>
+
             <div class="example">
               <div class="grid grid-1-2">
                 <div class="inner-block">
 
-                  <p class="lead">A 24px lead paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                  <p class="lede">A 24px lead paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
                   <p class="copy-19">A 19px body copy paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
                   <p class="copy-16">A 16px supporting text paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. </p>
 
@@ -195,7 +204,7 @@
               <div class="grid grid-1-2">
                 <div class="inner-block">
 
-                  <p class="lead">Paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. <em class="highlight">Normal 24px</em></p>
+                  <p class="lede">Paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. <em class="highlight">Normal 24px</em></p>
                   <p class="copy-19">Paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. <em class="highlight">Normal 19px</em></p>
                   <p class="copy-16">Paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. <em class="highlight">Normal 16px</em></p>
 
@@ -247,8 +256,8 @@
             <div class="find-out-more">
               <h3 class="heading-24">Find out more</h3>
               <ul>
-                <li><a href="/service-manual/user-centered-design/resources/typography.html">Read more about GOV.UK Typography</a></li>
-                <li>See the example page: <a href="{{ site.baseurl}}/example/typography.html">Typography</a></li>
+                <li><a href="https://www.gov.uk/service-manual/user-centered-design/resources/typography.html">Read more about GOV.UK Typography</a></li>
+                <li>See the example page for <a href="{{ site.baseurl}}/examples/typography.html">Typography</a></li>
               </ul>
             </div><!-- / .find-out-more -->
 
@@ -257,14 +266,16 @@
 
           <div id="guide-colour">
             <h2 class="heading-36">3. Colour</h2>
-            <h3 class="heading-24">Key points:</h3>
-            <ul class="list-bullet text">
-              <li>Text should only be set in black with secondary text in grey. </li>
-              <li>Links should be blue and buttons or dialog boxes should have text in white.</li>
-              <li>Use Sass variables in case colour values need to be updated. The variables are defined in <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss">colours.scss</a> in the GOV.UK front end toolkit.</li>
+
+            <p class="lede">Key points for colour:</p>
+            <ul class="list-bullet lede text">
+              <li>text should be set in black with secondary text in grey</li>
+              <li>links should be set in blue and buttons or dialog boxes should have text in white</li>
+              <li>use Sass variables in case colour values need to be updated, the variables are defined in <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss">colours.scss</a> in the GOV.UK front end toolkit.</li>
             </ul>
 
-            <h3 class="heading-24">Colour palette <br> <span class="text-secondary">HEX values and Sass variable names</span></h3>
+            <h3 class="heading-24">Colour<br> 
+            <span class="text-secondary">HEX values and Sass variable names</span></h3>
             <div class="example">
               <div class="inner-block">
                 
@@ -700,7 +711,7 @@
             <div class="find-out-more">
               <h3 class="heading-24">Find out more</h3>
               <ul class="text">
-                <li><a href="/service-manual/user-centered-design/resources/colour-palettes.html">Read more about the GOV.UK colour palette</a></li>
+                <li><a href="https://www.gov.uk/service-manual/user-centered-design/resources/colour-palettes.html">Read more about the GOV.UK colour palette</a></li>
                 <li>You can find more HEX values and Sass variable names for the GOV.UK colour palette in the <a href="https://github.com/alphagov/govuk_frontend_toolkit#colours">GOV.UK front end toolkit</a>.</a></li>
               </ul>
             </div><!-- / .find-out-more -->
@@ -710,10 +721,17 @@
 
           <div id="guide-images-icons">
             <h2 class="heading-36">4. Images and icons</h2>
-            <h3 class="heading-24">Key points:</h3>
-            <ul class="list-bullet text">
-              <li>Avoid using images, GOV.UK is for services and information, not photographs</li>
-              <li>If images cannot be avoided they should be landscape, 3:2 aspect ratio</li>
+
+            <p class="lede">
+              Key points for images and icons:
+            </p>
+            <ul class="list-bullet lede text">
+              <li>avoid unnecessary decoration, only use images and icons if there is a there is a real user need</li>
+              <li>if images are needed they should be landscape, 3:2 aspect ratio</li>
+              <li>if icons are needed ensure they are clear, simple and help to convey information more clearly than text alone could</li>
+              <li>
+                when using icons we recommend where possible that text is used to accompany the icon, to make it easily understood
+              </li>
             </ul>
 
             <h3 class="heading-24">Image aspect ratio</h3>
@@ -731,23 +749,17 @@
                 </div>
               </div>
             </div>
-          
-            <h2 class="heading-36">Icons</h2>
-            <h3 class="heading-24">Key points:</h3>
-            <ul class="list-bullet text">
-              <li>Avoid using icons</li>
-              <li>When icons are necessary ensure they are clear, simple and help to convey information more clearly than text alone could</li>
-              <li>When using icons we recommend where possible that text is used to accompany the icon, to make it easily understood</li>
-            </ul>
+
           </div>
           <!-- / #guide-images-icons -->
 
           <div id="guide-data">
             <h2 class="heading-36">5. Data</h2>
-            <h3 class="heading-24">Key points:</h3>
+
+            <p class="lede">Key points for data:</p>
             <ul class="list-bullet text">
-              <li>Data is recommended as an alternative to using photography</li>
-              <li>For screenreaders, ensure the data value appears first so it makes sense when read aloud</li>
+              <li>data is recommended as an alternative to using photography</li>
+              <li>for screen readers, ensure the data value appears first so it makes sense when read aloud</li>
             </ul>
 
             <h3 class="heading-24">Large data</h3>
@@ -801,7 +813,7 @@
             <div class="find-out-more">
               <h3 class="heading-24">Find out more</h3>
               <ul>
-                <li><a href="/service-manual/user-centered-design/data-visualisation.html">Read more about GOV.UK data visualisation</a></li>
+                <li><a href="https://www.gov.uk/service-manual/user-centered-design/data-visualisation.html">Read more about GOV.UK data visualisation</a></li>
               </ul>
             </div><!-- / .find-out-more -->
 
@@ -810,13 +822,15 @@
 
           <div id="guide-forms">
             <h2 class="heading-36">6. Forms</h2>
-            <h3 class="heading-24">Key points:</h3>
-            <ul class="list-bullet text">
-              <li>Hint text should sit above a form field</li> 
-              <li>For more than two options, radio buttons or checkboxes should appear stacked</li>
-              <li>Avoid placeholder text in fields. If copy is needed, instead use hint text</li>
-              <li>Avoid using dropdowns. Instead we recommend; radio buttons, using predictive fields (good for long lists like countries) and checkboxes.</li>
-              <li>Indents are used within forms to highlight supporting information.</li>
+
+            <p class="lede"></p>
+            <ul class="list-bullet lede text">
+              <li>use hint text for supporting contextual help, don’t use placeholder text in fields</li>
+              <li>hint text should sit above a form field</li>
+              <li>for more than two options, radio buttons or checkboxes should appear stacked</li>
+              <li>avoid using dropdowns, instead we recommend; radio buttons, using predictive fields (good for long lists like countries) and checkboxes</li>
+              <li>indents are used within forms to highlight supporting information</li>
+              <li>all elements use the Sass variable <code>$yellow</code>, Hex <code>#FFBF47</code> as a focus colour, often this is used as a fill or an outline of 3px</li>
             </ul>
             
             <h3 class="heading-24">Form inputs and labels</h3>
@@ -1012,7 +1026,7 @@
             <div class="find-out-more">
               <h3 class="heading-24">Find out more</h3>
               <ul>
-                <li><a href="{{ site.baseurl}}/example/form.html">See an example page</a></li>
+                <li>See an example of <a href="{{ site.baseurl}}/example/form.html">form layout</a></li>
               </ul>
             </div><!-- / .find-out-more -->
 
@@ -1021,13 +1035,14 @@
 
           <div id="guide-buttons">
             <h2 class="heading-36">7. Buttons</h2>
-            <h3 class="heading-24">Key points:</h3>
-            <ul class="list-bullet text">
-              <li>Primary buttons use the Sass variable green <code>$green</code></li>
-              <li>
-               Buttons can be created using the button mixin defined in the <a href="https://github.com/alphagov/govuk_frontend_toolkit#buttons">GOV.UK front end toolkit</a>
+            
+            <p class="lede">Key points for buttons:</p>
+            <ul class="list-bullet lede text">
+              <li>start buttons use the colour <code>#00823B</code></li>
+              <li>primary buttons use the Sass variable green <code>#006435</code> <code>$green</code></li>
+              <li>buttons can be created using the button mixin defined in the <a href="https://github.com/alphagov/govuk_frontend_toolkit#buttons">GOV.UK front end toolkit</a>
               </li>
-              <li>All buttons have yellow focus states</li>
+              <li>all elements use the Sass variable <code>$yellow</code>, Hex <code>#FFBF47</code> as a focus colour, often this is used as a fill or an outline of 3px</li>
             </ul>
             
             <h3 class="heading-24">Start button</h3>
@@ -1074,10 +1089,11 @@
 
           <div id="guide-errors">
             <h2 class="heading-36">8. Errors and validation</h2>
-            <h3 class="heading-24">Key points:</h3>
-            <ul class="list-bullet text">
-              <li>Summarise validation errors at the top of your page</li>
-              <li>The red bar visually connects the summary to the messages in the form</li>
+
+            <p class="lede">Key points for errors and validation:</p>
+            <ul class="list-bullet lede text">
+              <li>summarise validation errors at the top of your page</li>
+              <li>the red bar visually connects the summary to the messages in the form</li>
             </ul>
             
             <h3 class="heading-24">Form validation errors</h3>
