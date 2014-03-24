@@ -1,0 +1,5 @@
+.sass-cache
+.DS_Store
+.start.pid
+# Ignore compiled stylesheets
+public/stylesheets/
