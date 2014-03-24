@@ -1,12 +1,17 @@
 govuk_elements
 ==============
 
-GOV.UK Elements form the building blocks from which all pages are made.
+GOV.UK elements form the building blocks from which all pages are made.
 
-# GOV.UK Elements
+View the prototype here:
+[http://govuk-elements.herokuapp.com/](http://govuk-elements.herokuapp.com/)
 
+### GOV.UK Elements
 
-## Requirements
+This project uses Tom's Express prototyping tool:
+[https://github.com/tombye/express_prototype](https://github.com/tombye/express_prototype)
+
+### Requirements
 
 * [Node](http://nodejs.org/)
 
@@ -16,7 +21,7 @@ You may already have it, try:
 node --version
 ```
 
-## Getting started
+### Getting started
 
 * Clone this repo.
 
@@ -30,6 +35,4 @@ node start.js
 ```
 
 * Go to [localhost:3000](http://localhost:3000) in your browser.
-
-
 
