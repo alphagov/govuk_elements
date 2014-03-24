@@ -553,3 +553,7 @@ code {
 
 .swatch-highlight-colour {
   background-color: #f8f8f8; }
+
+.example-back-link {
+  display: inline-block;
+  margin: 40px 0; }
