@@ -8,7 +8,8 @@ In an attempt to apply the [single responsibility principle to Sass](http://cssw
 
 This folder contains any reset styles you may need, for example - [Normalize.css](http://necolas.github.io/normalize.css/) and base styles for typography and grid layout.
 
-There's a '.govuk' class, in '_typography-base.scss' which increases the default font size to 19px.
+There's a `.govuk` class, in `_typography-base.scss` which increases the default font size to 19px. 
+Apply this to your `main` content area.
 
 #### helpers
 
