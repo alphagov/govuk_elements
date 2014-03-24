@@ -21,7 +21,7 @@ This folder contains styles for discrete components, or modules.
 
 ## Find out more about structuring your Sass project
 
-The best way to structure your Sass project is the way that works for you and your team. This is a suggestion based on how I like to work. 
+The best way to structure your Sass project is the way that works for you and your team. 
 
 For more on structuring Sass, read on:
 
