@@ -4,14 +4,15 @@ module.exports = function(grunt){
 
     // Builds Sass
     sass: {
-      dev: {
+      ruby: {
         files: {
           'public/stylesheets/main.css': 'public/sass/main.scss',
           'public/stylesheets/examples.css': 'public/sass/examples.scss'
         },
         options: {
-          includePaths: ['govuk/public/sass'],
-          outputStyle: 'expanded'
+          loadPath: ['govuk/public/sass'],
+          style: 'expanded',
+          lineNumbers: true
         } 
       }
     },
@@ -46,18 +47,6 @@ module.exports = function(grunt){
 
     },
 
-    // workaround for libsass
-    replace: {
-      fixSass: {
-        src: ['govuk/public/sass/**/*.scss'],
-        overwrite: true,
-        replacements: [{ 
-          from: /filter:chroma(.*);/g,
-          to: 'filter:unquote("chroma$1");'
-        }]
-      }
-    },
-
     // Watches styles and specs for changes
     watch: {
       css: {
@@ -90,7 +79,7 @@ module.exports = function(grunt){
   [
     'grunt-contrib-copy',
     'grunt-contrib-watch',
-    'grunt-sass',
+    'grunt-contrib-sass',
     'grunt-nodemon',
     'grunt-text-replace',
     'grunt-concurrent'
@@ -114,11 +103,8 @@ module.exports = function(grunt){
     'copy:govuk_assets',
     'convert_template',
     'copy:govuk_frontend_toolkit',
-    'replace',
-    'sass',
+    'sass:ruby',
     'concurrent:target'
   ]);
-
-
 
 };
