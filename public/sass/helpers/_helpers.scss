@@ -23,7 +23,7 @@ $gutter-two-thirds: $gutter - $gutter-one-third;
 }
 
 
-// Apply this to a the .cf 'contain-floats' or 'clearfix' class
+// Apply the contain floats mixin to a .cf 'contain-floats' or 'clearfix' class
 
 .cf {
   @include contain-floats;

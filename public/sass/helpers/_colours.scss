@@ -19,14 +19,11 @@ $palette: (
 
 
 @mixin color-palette {
-
   @each $color in $palette {
-  
     $color-name: nth($color, 1);
     $color-var: nth($color, 2);
     $color-var-50: nth($color, 3);
     $color-var-25: nth($color, 4);
-
     .color-#{$color-name} {
       background-color: $color-var;
     }
@@ -36,7 +33,6 @@ $palette: (
     .color-#{$color-name}-25 {
       background-color: $color-var-25;
     }
-
   }
 }
 

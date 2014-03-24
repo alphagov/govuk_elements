@@ -3,7 +3,7 @@ govuk_elements
 
 GOV.UK elements - the building blocks that pages on GOV.UK are made from.
 
-This prototype is a guide to show how create pages in the GOV.UK style.
+This guide explains how to make your service look consistent with the rest of GOV.UK.
 
 View the prototype here:
 [http://govuk-elements.herokuapp.com/](http://govuk-elements.herokuapp.com/)
