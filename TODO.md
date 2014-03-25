@@ -7,14 +7,12 @@ Here's a list:
 
 Guidance
 
-* Tables
 * Lightboxes
 * Progressive disclosure
 
 
 All pages
 
-* Add stylesheets for older versions of IE
 * Check page using a screenreader
 
 
@@ -27,4 +25,3 @@ Styles
 Examples
 
 * Add JavaScript for grid example page
-* Remove elements stylesheet from examples pages
