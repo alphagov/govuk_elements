@@ -2,7 +2,7 @@
   max-width: 1020px;
   width: auto;
   margin: 0 auto 90px;
-  @extend %contain-floats;
+  @include contain-floats;
 
   @include ie-lte(6)  {
     width: 990px;
