@@ -1,6 +1,3 @@
-// Helper classes
-@import "../helpers/_helpers.scss";
-
 .heading-48 {
   @include bold-48();
   margin-top: $gutter-half;

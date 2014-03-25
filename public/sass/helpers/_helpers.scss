@@ -3,14 +3,6 @@
 // Import GOV.UK frontend toolkit shims
 @import "_shims";
 
-// These can be removed once the govuk_frontend_toolkit node module is updated
-
-$gutter: 30px;
-$gutter-one-quarter: $gutter/4;
-$gutter-one-third: $gutter/3;
-$gutter-half: $gutter/2;
-$gutter-two-thirds: $gutter - $gutter-one-third;
-
 // Extend the %contain-floats placeholder
 // Apply the contain floats mixin to a .cf 'contain-floats' or 'clearfix' class
 
