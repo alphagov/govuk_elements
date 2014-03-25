@@ -1,6 +1,6 @@
 // Wrap grid layout
 .grid-wrapper {
-  @extend %contain-floats;
+  @include contain-floats;
   padding: 0 $gutter-half;
   @include media(tablet) {
     padding: 0 $gutter-half;

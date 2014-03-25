@@ -33,7 +33,7 @@
 
 // Validation message box
 .validation {
-  @extend %contain-floats;
+  @include contain-floats;
   border-left: 3px solid $mellow-red;
   background: #fef7f7; // NOT IN THE PALETTE !!
   padding-top: $gutter-half;

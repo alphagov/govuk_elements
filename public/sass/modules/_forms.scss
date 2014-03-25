@@ -210,7 +210,7 @@ textarea {
 // Block form layout (tablet and up)
 
 .form-group-block {
-  @extend %contain-floats;
+  @include contain-floats;
 }
 .form-group-block .form-checkbox,
 .form-group-block .form-radio {

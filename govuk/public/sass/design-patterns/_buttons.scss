@@ -131,7 +131,7 @@
     &[type="submit"],
     &[type="reset"],
     &[type="button"] {
-      filter:chroma(color=#000000);
+      filter:unquote("chroma(color=#000000)");
     }
 
     &[type=submit].button {

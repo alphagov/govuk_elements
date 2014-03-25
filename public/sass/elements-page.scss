@@ -80,7 +80,7 @@ code {
 // Example box
 .example {
 
-  @extend %contain-floats;
+  @include contain-floats;
   position: relative;
   overflow: hidden;
   border: 1px solid $grey-2;
