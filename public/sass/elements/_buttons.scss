@@ -12,37 +12,39 @@
 }
 
 // Start now buttons
-.get-started .button {
-	@include bold-24;
-	line-height: 0.66667;
-	color: #FFF;
-	background-color: #00823b; // Not in palette!! 
-	padding: 0.60em 1.7em 0.45em 0.67em;
-	background-image: url(https://assets.digital.cabinet-office.gov.uk/static/icon-pointer-063838cde108768e30b077e5303783fc.png);
-	background-position: 100% 50%;
-	background-repeat: no-repeat;
-	margin-bottom: 0;
-}
-.get-started .button:hover {
-	background-color: $green;
-}
+.get-started {
 
-.get-started .destination {
-	@include core-14;
-	color: #2e3133;
-	display: block;
-	margin-top: 7px;
-	max-width: 182px;
+	.button {
+		@include bold-24;
+		line-height: 0.66667;
+		color: #FFF;
+		background-color: #00823b; // Add to palette
+		padding: 0.60em 1.7em 0.45em 0.67em;
+		background-image: url(https://assets.digital.cabinet-office.gov.uk/static/icon-pointer-063838cde108768e30b077e5303783fc.png);
+		background-position: 100% 50%;
+		background-repeat: no-repeat;
+		margin-bottom: 0;
+	}
+	.button:hover {
+		background-color: $green;
+	}
+	
+	.destination {
+		@include core-14;
+		color: #2e3133;
+		display: block;
+		margin-top: 7px;
+		max-width: 182px;
+	}
+
 }
 
 // Link style buttons
 .button-link {
-	// Remove browser default button styles
+	@include core-19;
 	background: none;
 	border: none;
-	// Override webkit default button styles
 	-webkit-font-smoothing: antialiased;
-	// Match .button styles
 	display: inline-block;
 	color: $link-colour;
 	line-height: 1.25;
