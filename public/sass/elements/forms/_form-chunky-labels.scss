@@ -1,0 +1,23 @@
+// Large hit area 
+// Radio buttons & checkboxes
+
+.form-group .block-label {
+  width: auto;
+  display: inline-block;
+  padding: (18px $gutter $gutter-half $gutter-half);
+  background: $grey-3;
+}
+
+// Only if JavaScript is enabled
+// Remove focus styles from block radio and checkboxes
+
+.block-label input:focus {
+  outline: none;
+}
+
+// Instead, add focus styles to labels
+
+.add-focus {
+  outline: 3px solid $yellow;
+}
+

@@ -1,31 +1,4 @@
-// Import GOV.UK frontend toolkit
-
-@import "_colours";
-@import "_css3";
-@import "_shims";
-@import "_typography";
-@import "_measurements";
-
-@import "design-patterns/_alpha-beta";
-@import "design-patterns/_buttons";
-
-// Helpers
-// ==========================================================================
-
-// Variables
-// @import "helpers/_variables";
-// Variables for colour palette
-@import "helpers/_colours";
-
-// Functions
-// @import "helpers/_functions";
-
-// Mixins
-// @import "helpers/_mixins";
-
-// Helper classes
-@import "helpers/_helpers";
-
+@import "main";
 
 // Service Design Manual styles
 // ==========================================================================
@@ -35,47 +8,45 @@
 @import "service-design-manual/helpers/breadcrumbs";
 
 // Adjust Service Design header to align with content
+#global-breadcrumb,
 .page-header {
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: $gutter-half;
+  margin-right: $gutter-half;
+
+  @include media(tablet) {
+    margin-left: $gutter;
+    margin-right: $gutter;
+  }
 }
 
 // Elements page styles
 // ==========================================================================
 
 // These are example styles, used only for the Elements page example boxes
-// We're not splitting these styles into smaller files, to avoid confusing these with the base GOV.UK elements styles
-
-// No need to include these styles in your project
 
 // Code styles
 code {
   @include core-16;
 }
 
-// Heading styles
+// Headings
+
 .heading-with-border {
   border-top: 1px solid $border-colour;
   padding-top: ($gutter*1.5);
 }
 
-.example .heading-36 {
-  border-top: none;
-  padding-top: 0;
-}
-
-// List styles 
-
-.list-bullet {
-  margin-bottom: ($gutter*1.5);
-}
-
-// Text styles
+// Text
 
 .tight {
   margin-bottom: 0;
 }
 
+// Lists
+
+.list-bullet {
+  margin-bottom: ($gutter*1.5);
+}
 
 // Example box
 .example {
@@ -155,7 +126,7 @@ code {
 }
 
 
-// Colour swatche wrapper
+// Colour swatch wrapper
 .swatch-wrapper {
   @include media(tablet) {
     float: left; 
@@ -177,11 +148,9 @@ code {
     padding-top: 10px;
   }
 }
-
 .swatch-wrapper li {
   @include core-16;
 }
-
 .swatch-wrapper b {
   font-weight: bold;
   text-transform: uppercase;
@@ -204,23 +173,36 @@ code {
 }
 
 // Generate swatch classes for each colour in palette list
-@each $color in $palette {
+@mixin color-swatches {
+  @each $color in $palette {
+    $color-name: nth($color, 1);
+    $color-var: nth($color, 2);
+    .swatch-#{$color-name} {
+      background-color: $color-var;
+    }
+  }
+}
+
+// Usage: 
+@include color-swatches;
+
+// Common colours
+.swatch-alpha {
+  background-color: $alpha-colour;
+}
+.swatch-beta {
+  background-color: $beta-colour;
+}
+
+.swatch-error {
+  background-color: $error;
+}
+.swatch-error-background {
+  background-color: $error-background;
+}
   
-  $color-name: nth($color, 1);
-  $color-var: nth($color, 2);
-  $color-var-50: nth($color, 3);
-  $color-var-25: nth($color, 4);
-
-  .swatch-#{$color-name} {
-    background-color: $color-var;
-  }
-  .swatch-#{$color-name}-50 {
-    background-color: $color-var-50;
-  }
-  .swatch-#{$color-name}-25 {
-    background-color: $color-var-25;
-  }
-
+.swatch-focus {
+  background-color: $yellow;
 }
 
 // Create swatch classes for other colours in palette
@@ -274,10 +256,4 @@ code {
 }
 .swatch-highlight-colour {
   background-color: $highlight-colour;
-}
-
-// Example pages
-.example-back-link {
-  display: inline-block;
-  margin: 40px 0;
 }

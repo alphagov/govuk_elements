@@ -1,0 +1,10 @@
+// Panels
+// ==========================================================================
+
+// Indented panels with a grey left hand border
+.text-indent {
+  // @include box-sizing(border-box);
+  border-left: 5px solid $grey-3;
+  padding-left: $gutter-half;
+  margin: ($gutter $gutter-two-thirds $gutter 0);
+}

@@ -2,94 +2,45 @@
 
 // Import GOV.UK frontend toolkit
 
-@import "_colours";
-@import "_css3";
-@import "_shims";
-@import "_typography";
-@import "_measurements";
+@import "colours";
+@import "measurements";
+@import "conditionals";
+@import "shims";
+@import "typography";
+@import "css3";
+@import "design-patterns/buttons";
 
-@import "design-patterns/_alpha-beta";
-@import "design-patterns/_buttons";
+// Reset
+@import "elements/helpers";
 
-// Helpers
-// ==========================================================================
-
-// Variables
-// @import "helpers/_variables";
-// Variables for colour palette
-// @import "helpers/_colours";
-
-// Functions
-// @import "helpers/_functions";
-
-// Mixins
-// @import "helpers/_mixins";
-
-// Helper classes
-@import "helpers/_helpers";
-
-// Base
-// ==========================================================================
-
-// Normalize
-// @import "base/_normalize";
-
-// Global styles
-// @import "base/_global";
+// Reset
+@import "elements/reset";
 
 // Typography 
-@import "base/_typography-base";
-@import "base/_typography-general";
-@import "base/_typography-headings";
-@import "base/_typography-data";
+@import "elements/typography";
 
-// Grid layout
-@import "base/_grid-wrapper";
-@import "base/_grid-unit";
-@import "base/_grid-1-2";
-@import "base/_grid-1-3";
-@import "base/_grid-1-4";
-@import "base/_grid-2-3";
-@import "base/_grid-3-4";
+// Layout
+@import "elements/layout";
 
 
-// Template
+// Modules
 // ==========================================================================
 
-// Header
-// @import "template/_header";
-
-// Footer
-// @import "template/_footer";
-
-// Breadcrumb
-// @import "template/_breadcrumb";
-
-// Main content
-@import "template/_main-wrapper";
-
-
-// // Modules
-// // ==========================================================================
-
 // Forms
-@import "modules/_forms";
-
-// Form validation
-@import "modules/_form-validation";
+@import "elements/forms";
 
 // Tables
-@import "modules/_tables";
+@import "elements/tables";
 
 // Buttons
-@import "modules/_buttons";
+@import "elements/buttons";
 
 // Lists
-@import "modules/_lists";
+@import "elements/lists";
 
-// Boxes and borders
-@import "modules/_text-indent";
+// Panels
+@import "elements/panels";
 
-
-
+// Colours
+@import "elements/colours";
 
