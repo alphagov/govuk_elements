@@ -23,5 +23,4 @@ Styles
 Examples
 
 * Show inset text in forms
-* Reduce padding for example boxes for tablet and below
 * Add horizontal rule styles to show 'easy spacing'

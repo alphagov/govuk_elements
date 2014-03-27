@@ -64,9 +64,13 @@ code {
   border: 1px solid $grey-2;
   outline: $gutter-half solid $highlight-colour;
   margin: $gutter 0 $gutter*2 0;
-  padding: $gutter-half;
+  
+  padding-top: $gutter-half;
+  padding-bottom: $gutter-half;
+  
   @include media(tablet) {
-    padding: $gutter $gutter-half;
+    padding-top: $gutter;
+    padding-bottom: $gutter;
   }
   
   .highlight {
@@ -85,13 +89,14 @@ code {
 
 }
 
-
 // Example box - grids
 .example-grid {
   background: white;
-  padding: 15px 0 10px 0;
+  padding-top: 15px;
+  padding-bottom: 10px;
   @include media(tablet) {
-    padding: 25px 0 20px 0;
+    padding-top: 25px;
+    padding-bottom: 20px;
   }
 }
 
@@ -109,11 +114,6 @@ code {
 
 
 // Example box - Images
-.example-images {
-  padding-left: 0;
-  padding-right: 0;
-}
-
 .example-images img {
   max-width: 100%;
   vertical-align: top;
