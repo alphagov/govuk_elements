@@ -25,8 +25,15 @@
 // These are example styles, used only for the Elements page example boxes
 
 // Code styles
+// Match those in the Service Manual
+pre,
 code {
-  @include core-16;
+  font-size: 13px;
+  line-height: 19px;
+  color: $black;
+  background-color: $highlight-colour;
+  border: 1px solid $border-colour;
+  padding: 3px 7px;
 }
 
 // Headings

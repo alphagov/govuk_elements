@@ -24,4 +24,4 @@ Styles
 
 Examples
 
-* Add JavaScript for grid example page
+* Show inset text in forms
