@@ -18,10 +18,10 @@ All pages
 
 Styles
 
-* Add 'selected' styles for radio buttons and checkboxes
-* Add aria to form elements
 * Box sizing fallback for old IE/check form styles
 
 Examples
 
 * Show inset text in forms
+* Reduce padding for example boxes for tablet and below
+* Add horizontal rule styles to show 'easy spacing'

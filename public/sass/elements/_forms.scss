@@ -100,6 +100,10 @@ legend {
 
 
 // Radio buttons
+.form-radio {
+  display: block;
+  margin: 10px 0;
+}
 .form-radio input {
   vertical-align: middle;
   margin: -4px 5px 0 0;
@@ -107,6 +111,10 @@ legend {
 
 
 // Checkboxes
+.form-radio {
+  display: block;
+  margin: 10px 0;
+}
 .form-checkbox input {
   vertical-align: middle;
   margin: -2px 5px 0 0;

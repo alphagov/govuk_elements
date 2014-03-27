@@ -806,18 +806,17 @@
             
             <form action="" class="form">
               <fieldset>
-                <div class="form-radio">
-                  <label for="radio-option-1c">
-                    <input id="radio-option-1c" type="radio" name="option-radio" value="">
-                    Radio option 1
-                  </label>
-                </div>
-                <div class="form-radio">
-                  <label for="radio-option-2c">
-                    <input id="radio-option-2c" type="radio" name="option-radio" value="">
-                    Radio option 2
-                  </label>
-                </div>
+
+                <label for="radio-option-1c" class="form-radio">
+                  <input id="radio-option-1c" type="radio" aria-required="true" name="option-radio" value="1">
+                  Radio option 1
+                </label>
+
+                <label for="radio-option-2c" class="form-radio">
+                  <input id="radio-option-2c" type="radio" aria-required="true" name="option-radio" value="2">
+                  Radio option 2
+                </label>
+
               </fieldset>
             </form>
 
@@ -857,11 +856,11 @@
               <fieldset>
                 <div class="form-group form-radio">
                     <label for="radio-option-1a" class="block-label">
-                      <input id="radio-option-1a" type="radio" name="option-radio" value="">
+                      <input id="radio-option-1a" type="radio" aria-required="true" name="option-radio" value="Yes">
                       Yes
                     </label>
                     <label for="radio-option-2a" class="block-label">
-                      <input id="radio-option-2a" type="radio" name="option-radio" value="">
+                      <input id="radio-option-2a" type="radio" naria-required="true" name="option-radio" value="No">
                       No
                     </label>
                 </div>
