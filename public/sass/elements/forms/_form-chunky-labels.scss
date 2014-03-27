@@ -3,9 +3,13 @@
 
 .form-group .block-label {
   width: auto;
-  display: inline-block;
+  @include inline-block;
+
   padding: (18px $gutter $gutter-half $gutter-half);
+  margin-right: 5px;  
+
   background: $grey-3;
+  border: 1px solid $grey-3;
 }
 
 // Only if JavaScript is enabled
@@ -17,7 +21,12 @@
 
 // Instead, add focus styles to labels
 
-.add-focus {
+.form .add-focus {
   outline: 3px solid $yellow;
 }
 
+// Add selected state to label of checked inputs/radios
+.form .selected {
+  background: $white;
+  border-color: black;
+}

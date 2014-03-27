@@ -28,12 +28,24 @@ $(document).ready(function () {
   
   if ($('.form').length>0) {
 
+    $(".block-label").each(function(){
+
+      // Add focus
       $(".block-label input").focus(function() {
         $("label[for='" + this.id + "']").addClass("add-focus");
-      }).blur(function() {
+        }).blur(function() {
         $("label").removeClass("add-focus");
       });
-      
+      // Add selected class
+      $('input:checked').parent().addClass('selected');
+    });
+
+    // Remove selected class
+    $('.block-label').find('input[type=radio], input[type=checkbox]').click(function() {
+      $('input:not(:checked)').parent().removeClass('selected');
+      $('input:checked').parent().addClass('selected');
+    });
+
   }
   
 });
