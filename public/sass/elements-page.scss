@@ -77,16 +77,22 @@ code {
     font-style: normal;
     color: $hm-government;
   }
-
+  
+  // Reduce top and bottom margins on content in example boxes
+  .panel-indent,
+  .panel-indent p {
+    margin: 0;
+  }
+  
+  .form-group {
+    margin-bottom: 0;
+  }
+  
   .button,
   .button-link {
     margin-bottom: 5px;
   }
-
-  .form-group {
-    margin-bottom: 0;
-  }
-
+  
 }
 
 // Example box - grids

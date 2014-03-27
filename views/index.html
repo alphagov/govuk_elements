@@ -144,6 +144,7 @@
           <li>Common font colours, can be found in the <a href="#guide-colour">colour palette</a></li>
           <li>Avoid using bold text inline and italics</li>
           <li>For specialist/internal user content smaller text sizes can be used (14px, 12px, 10px), always ensure that there is a real user need</li>
+          <li>Inset text is used to draw attention to important text on the page</li>
         </ul>
         
         <p class="tight">
@@ -253,9 +254,9 @@
         <div class="example">
           <div class="inner-block">
             
-            <div class="text text-indent">
+            <div class="text panel-indent">
               <p>
-                Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent commodo cursus magna.
+                It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
               </p>
             </div>
 
@@ -890,7 +891,44 @@
 
           </div>
         </div>
+
+        <h3 class="heading-24">Indented form content</h3>
+        <p class="text">
+          Indents are used to draw attention to supporting information
+        </p>
+
+        <div class="example">
+          <div class="inner-block">
+            
+            <form action="" class="form">
+              <fieldset>
+                <div class="panel-indent">
+                  <p>
+                    Insert pertinent question here?
+                  </p>
+                  <div class="form-group form-radio">
+                    <label for="radio-option-5a" class="block-label">
+                      <input id="radio-option-5a" type="radio" aria-required="true" name="option-radio" value="Yes">
+                      Yes
+                    </label>
+                    <label for="radio-option-6a" class="block-label">
+                      <input id="radio-option-6a" type="radio" naria-required="true" name="option-radio" value="No">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+
+          </div>
+        </div>
         
+<!--             <div class="text panel-indent">
+              <p>
+                Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent commodo cursus magna.
+              </p>
+            </div> -->
+
         <!-- TODO: Add progressive disclosure -->
         
       </div>

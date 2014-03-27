@@ -22,5 +22,4 @@ Styles
 
 Examples
 
-* Show inset text in forms
 * Add horizontal rule styles to show 'easy spacing'
