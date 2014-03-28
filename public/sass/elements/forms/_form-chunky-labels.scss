@@ -13,11 +13,17 @@
   border: 1px solid $grey-3;
   padding: (18px $gutter $gutter-half $gutter*1.5);
   margin-bottom: $gutter-half;
+  
+  cursor: pointer; // Encourage clicking on block labels
 
   @include media(tablet) {
     float: left;
     // width: 25%; - Test : check that text within labels will wrap
   }
+}
+
+.block-label:hover {
+  border-color: $black;
 }
 
 // Position checkbox within label, to allow text to wrap
@@ -41,7 +47,7 @@
 }
 
 // Remove focus styles from radio and checkbox inputs
-.js-enabled input:focus {
+.js-enabled .block-label input:focus {
   outline: none;
 }
 
