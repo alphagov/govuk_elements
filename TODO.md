@@ -23,3 +23,4 @@ Styles
 Examples
 
 * Add horizontal rule styles to show 'easy spacing'
+* Progressive disclosure

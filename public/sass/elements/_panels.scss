@@ -4,14 +4,11 @@
 // Indented panels with a grey left hand border
 .panel-indent {
   @include contain-floats;
+  clear: both;
   border-left: 5px solid $grey-3;
   
   padding-left: $gutter-half;
+  padding-top: 10px;
 
   margin: ($gutter $gutter-half $gutter 0);
-}
-
-// When used to indent form content, align with bottom of label
-.panel-indent label {
-  margin-bottom: 0;
 }

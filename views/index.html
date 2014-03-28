@@ -798,6 +798,14 @@
           </div>
         </div>
 
+        <h3 class="heading-24">Large hit area radio buttons/checkboxes</h3>
+        <p class="text">
+          Radio buttons and checkboxes with large hit areas are easier to select with a mouse and also for touch devices.
+        </p>
+        <p>
+          Use large hit area checkboxes and radio buttons for the most important choices on a page.
+        </p>
+        
         <h3 class="heading-24">Radio buttons</h3>
         <p>
           Radio buttons let users choose a single option from a list. 
@@ -807,14 +815,14 @@
             
             <form action="" class="form">
               <fieldset>
-
-                <label for="radio-option-1c" class="form-radio">
-                  <input id="radio-option-1c" type="radio" aria-required="true" name="option-radio" value="1">
+                
+                <label for="radio-opt-1" class="form-label">
+                  <input id="radio-opt-1" type="radio" aria-required="true" name="radio" value="1">
                   Radio option 1
                 </label>
 
-                <label for="radio-option-2c" class="form-radio">
-                  <input id="radio-option-2c" type="radio" aria-required="true" name="option-radio" value="2">
+                <label for="radio-opt-2" class="form-label">
+                  <input id="radio-opt-2" type="radio" aria-required="true" name="radio" value="2">
                   Radio option 2
                 </label>
 
@@ -824,6 +832,60 @@
           </div>
         </div>
 
+        <div class="example">
+          <div class="inner-block">
+            
+            <form action="" class="form">
+              <fieldset>
+                
+                <div class="form-group">
+                  <label for="radio-1" class="block-label">
+                    <input id="radio-1" type="radio" aria-required="true" name="radio-group" value="1">
+                    Northern Ireland
+                  </label>
+
+                  <label for="radio-2" class="block-label">
+                    <input id="radio-2" type="radio" aria-required="true" name="radio-group" value="2">
+                    Isle of Man or the Channel Islands
+                  </label>
+                </div>
+                
+                <div class="form-group">
+                  <p>or</p>
+                  <label for="radio-3" class="block-label">
+                    <input id="radio-3" type="radio" aria-required="true" name="radio-group" value="2">
+                    I am a British citizen living abroad
+                  </label>
+                </div>
+
+              </fieldset>
+            </form>
+            
+          </div>
+        </div>
+        
+        <div class="example">
+          <div class="inner-block">
+            
+            <form action="" class="form">
+              <fieldset class="inline">
+      
+                <label for="radio-inline-1" class="block-label">
+                  <input id="radio-inline-1" type="radio" aria-required="true" name="radio-inline-group" value="Yes">
+                  Yes
+                </label>
+
+                <label for="radio-inline-2" class="block-label">
+                  <input id="radio-inline-2" type="radio" naria-required="true" name="radio-inline-group" value="No">
+                  No
+                </label>
+
+              </fieldset>
+            </form>
+            
+          </div>
+        </div>
+        
         <h3 class="heading-24">Checkboxes</h3>
         <p>
           Checkboxes let users select either on/off toggles or multiple selections.
@@ -833,38 +895,17 @@
             
             <form action="" class="form">
               <fieldset>
-                <div class="form-checkbox">
-                  <label for="checkbox-option-1d">
-                    <input id="checkbox-option-1d" type="checkbox" value="">
-                    Checkbox option 1
+
+                <div class="form-group">
+                  <label for="telephone-number" class="form-label">Enter your telephone numner</label>
+                  <input type="text" class="form-control" id="telephone-numeber">
+               
+                  <label for="checkbox-telephone-number" class="form-checkbox">
+                    <input id="checkbox-telephone-number" type="checkbox" value="checkbox-telephone-number">
+                    I need to be contacted using a text phone
                   </label>
                 </div>
-              </fieldset>
-            </form>
 
-          </div>
-        </div>
-
-        <h3 class="heading-24">Large hit area radio buttons/checkboxes</h3>
-        <p class="text">
-          Radio buttons and checkboxes with large hit areas are easier to select with a mouse and also for touch devices
-        </p>
-
-        <div class="example">
-          <div class="inner-block">
-            
-            <form action="" class="form">
-              <fieldset>
-                <div class="form-group form-radio">
-                    <label for="radio-option-1a" class="block-label">
-                      <input id="radio-option-1a" type="radio" aria-required="true" name="option-radio" value="Yes">
-                      Yes
-                    </label>
-                    <label for="radio-option-2a" class="block-label">
-                      <input id="radio-option-2a" type="radio" naria-required="true" name="option-radio" value="No">
-                      No
-                    </label>
-                </div>
               </fieldset>
             </form>
 
@@ -874,24 +915,46 @@
         <div class="example">
           <div class="inner-block">
             
+            
             <form action="" class="form">
               <fieldset>
-                <div class="form-group form-checkbox">
-                  <label for="checkbox-option-3a" class="block-label">
-                    <input id="checkbox-option-3a" type="checkbox" value="">
-                    Checkbox option 1
-                  </label>
-                  <label for="checkbox-option-4b" class="block-label">
-                    <input id="checkbox-option-4b" type="checkbox" value="">
-                    Checkbox option 2
-                  </label>
-                </div>
+
+                <label for="checkbox-1" class="block-label">
+                  <input id="checkbox-1" type="checkbox" value="1">
+                  Checkbox option 1
+                </label>
+                <label for="checkbox-2" class="block-label">
+                  <input id="checkbox-2" type="checkbox" value="2">
+                  Checkbox option 2
+                </label>
+                
               </fieldset>
             </form>
 
           </div>
         </div>
 
+        <div class="example">
+          <div class="inner-block">
+            
+            <form action="" class="form">
+              <fieldset class="inline">
+
+                <label for="checkbox-inline-1" class="block-label">
+                  <input id="checkbox-inline-1" type="checkbox" value="1">
+                  Checkbox option 1
+                </label>
+                <label for="checkbox-inline-2" class="block-label">
+                  <input id="checkbox-inline-2" type="checkbox" value="2">
+                  Checkbox option 2
+                </label>
+                
+              </fieldset>
+            </form>
+
+          </div>
+        </div>
+        
         <h3 class="heading-24">Indented form content</h3>
         <p class="text">
           Indents are used to draw attention to supporting information
@@ -901,34 +964,28 @@
           <div class="inner-block">
             
             <form action="" class="form">
-              <fieldset>
-                <div class="panel-indent">
-                  <p>
-                    Insert pertinent question here?
-                  </p>
-                  <div class="form-group form-radio">
-                    <label for="radio-option-5a" class="block-label">
-                      <input id="radio-option-5a" type="radio" aria-required="true" name="option-radio" value="Yes">
-                      Yes
-                    </label>
-                    <label for="radio-option-6a" class="block-label">
-                      <input id="radio-option-6a" type="radio" naria-required="true" name="option-radio" value="No">
-                      No
-                    </label>
-                  </div>
-                </div>
+              <p>Do you know their national insurance number?</p>
+              
+              <fieldset class="inline">
+                <label for="radio-indent-1" class="block-label selected">
+                  <input id="radio-indent-1" type="radio" aria-required="true" name="radio-indent-group" value="Yes">
+                  Yes
+                </label>
+                <label for="radio-indent-2" class="block-label">
+                  <input id="radio-indent-2" type="radio" naria-required="true" name="radio-indent-group" value="No">
+                  No
+                </label>
               </fieldset>
+
+              <div class="panel-indent">
+                <label for="national-insurance" class="form-label">National insurance number</label>
+                <input type="text" class="form-control" id="national-insurance">
+              </div>
+
             </form>
 
           </div>
         </div>
-        
-<!--             <div class="text panel-indent">
-              <p>
-                Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent commodo cursus magna.
-              </p>
-            </div> -->
-
         <!-- TODO: Add progressive disclosure -->
         
       </div>

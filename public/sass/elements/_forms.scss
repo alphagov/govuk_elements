@@ -28,11 +28,10 @@ legend {
 // Labels
 
 // Form labels, or for legends styled to look like labels
-.form-label,
-.form-group label {
+.form-label {
   @include core-19;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 
@@ -111,9 +110,9 @@ legend {
 
 
 // Checkboxes
-.form-radio {
+.form-checkbox {
   display: block;
-  margin: 10px 0;
+  margin: $gutter-half 0;
 }
 .form-checkbox input {
   vertical-align: middle;
