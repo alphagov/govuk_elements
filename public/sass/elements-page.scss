@@ -64,34 +64,34 @@ code {
   border: 1px solid $grey-2;
   outline: $gutter-half solid $highlight-colour;
   margin: $gutter 0 $gutter*2 0;
-  
+
   padding-top: $gutter-half;
   padding-bottom: $gutter-half;
-  
+
   @include media(tablet) {
     padding-top: $gutter;
     padding-bottom: $gutter;
   }
-  
+
   .highlight {
     font-style: normal;
     color: $hm-government;
   }
-  
+
   // Reduce top and bottom margins on content in example boxes
   .panel-indent {
     margin: 0;
   }
-  
+
   .form-group {
     margin-bottom: 0;
   }
-  
+
   .button,
   .button-link {
     margin-bottom: 5px;
   }
-  
+
 }
 
 // Example box - grids
@@ -141,7 +141,7 @@ code {
 // Colour swatch wrapper
 .swatch-wrapper {
   @include media(tablet) {
-    float: left; 
+    float: left;
     width: 20%;
     text-align: center;
   }
@@ -195,7 +195,6 @@ code {
   }
 }
 
-// Usage: 
 @include color-swatches;
 
 // Common colours
@@ -212,7 +211,7 @@ code {
 .swatch-error-background {
   background-color: $error-background;
 }
-  
+
 .swatch-focus {
   background-color: $yellow;
 }
@@ -269,3 +268,9 @@ code {
 .swatch-highlight-colour {
   background-color: $highlight-colour;
 }
+
+// Toggle hidden content
+.js-enabled .toggle-content{
+    display: none;
+}
+

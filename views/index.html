@@ -6,7 +6,7 @@
 
 <main id="wrapper" role="main">
   <div id="content">
-    
+
     {{>service_manual_breadcrumb}}
     {{>service_manual_header}}
 
@@ -17,7 +17,7 @@
         <p class="lead">
           This guide explains how to make your service look consistent with the rest of GOV.UK.
         </p>
-        
+
         <ol class="list-number">
           <li><a href="#guide-layout">Layout</a></li>
           <li><a href="#guide-typography">Typography</a></li>
@@ -29,17 +29,17 @@
           <li><a href="#guide-errors">Errors and validation</a></li>
           <li><a href="#guide-tables">Tables</a></li>
         </ol>
-        
+
         <p>
-          Looking for the styles? The Sass files for <a href="https://github.com/alphagov/govuk_elements/tree/master/public/sass">all the examples in this page, can be found on GitHub</a>. 
+          Looking for the styles? The Sass files for <a href="https://github.com/alphagov/govuk_elements/tree/master/public/sass">all the examples in this page, can be found on GitHub</a>.
         </p>
-        
+
       </div>
 
       <div id="guide-layout">
-        
+
         <h2 class="heading-36 heading-with-border">1. Layout</h2>
-        
+
         <ul class="list-bullet">
           <li>use white space to create a visual hierarchy on the page</li>
           <li>design for small screens first, using a single column layout</li>
@@ -52,9 +52,9 @@
           <li>optimise your layout for different screen sizes, but don’t make assumptions about what devices people are using (things change)</li>
           <li>the media queries for these breakpoints can be found in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_conditionals.scss">_conditionals.scss</a> file</li>
         </ul>
-        
+
         <p class="tight">
-          Find out more: 
+          Find out more:
         </p>
         <ul>
           <li>Here's an example of <a href="{{ site.baseurl}}/examples/grid-layout/">grid layout</a></li>
@@ -100,9 +100,9 @@
             </div>
           </div>
         </div>
-        
+
         <h4 class="heading-19">Four equal columns</h4>
-        
+
         <div class="example example-grid">
           <div class="grid-wrapper">
             <div class="grid grid-1-4">
@@ -133,7 +133,7 @@
 
       <div id="guide-typography">
         <h2 class="heading-36 heading-with-border">2. Typography</h2>
-        
+
         <ul class="list-bullet text">
           <li>use the GDS Transport Website font in Light and Bold, it is licenced for use on the GOV.UK domains only. Services publically available on a different domains need to use an alternative typeface like Arial
           </li>
@@ -146,7 +146,7 @@
           <li>for specialist/internal user content smaller text sizes can be used (14px, 12px, 10px), always ensure that there is a real user need</li>
           <li>inset text is used to draw attention to important text on the page</li>
         </ul>
-        
+
         <p class="tight">
           Find out more:
         </p>
@@ -156,10 +156,10 @@
         </ul>
 
         <h3 class="heading-24">
-          Headings <br> 
+          Headings <br>
           <span class="text-secondary">GDS Transport Website Bold</span>
         </h3>
-        
+
         <div class="example">
           <div class="grid grid-1-2">
             <div class="inner-block">
@@ -173,7 +173,7 @@
           </div>
           <div class="grid grid-1-2">
             <div class="inner-block">
-              
+
               <h1 class="heading-48">Heading <em class="highlight">Bold 48px</em></h1>
               <h2 class="heading-36">Heading <em class="highlight">Bold 36px</em></h2>
               <h3 class="heading-24">Heading <em class="highlight">Bold 24px</em></h3>
@@ -182,9 +182,9 @@
             </div>
           </div>
         </div>
-        
+
         <h3 class="heading-24">
-          Body copy <br> 
+          Body copy <br>
           <span class="text-secondary">GDS Transport Website Light</span>
         </h3>
 
@@ -208,7 +208,7 @@
             </div>
           </div>
         </div>
-        
+
         <h3 class="heading-24">Links and interaction states</h3>
         <div class="example">
           <div class="grid grid-1-2">
@@ -249,11 +249,11 @@
 
           </div>
         </div>
-        
+
         <h3 class="heading-24">Inset text</h3>
         <div class="example">
           <div class="inner-block">
-            
+
             <div class="text panel-indent">
               <p>
                 It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
@@ -268,14 +268,14 @@
 
       <div id="guide-colour">
         <h2 class="heading-36 heading-with-border">3. Colour</h2>
-        
+
         <ul class="list-bullet text">
           <li>text should be set in black with secondary text in grey</li>
           <li>links should be set in blue and buttons or dialog boxes should have text in white</li>
           <li>text and functional elements need to be easily differentiated. When colour is desaturated we work toward an AA colour ratio standard of 4.5:1</li>
           <li>use Sass variables in case colour values need to be updated, the variables are defined in <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss">colours.scss</a> in the GOV.UK front end toolkit.</li>
         </ul>
-        
+
         <p class="tight">
           Find out more:
         </p>
@@ -284,17 +284,17 @@
           <li>Read more about <a href="https://www.gov.uk/service-manual/user-centered-design/accessibility.html">accessibility</a></li>
         </ul>
 
-        <h3 class="heading-24">Colour<br> 
+        <h3 class="heading-24">Colour<br>
         <span class="text-secondary">HEX values and Sass variable names</span></h3>
         <div class="example">
           <div class="inner-block">
 
             <h3 class="heading-24">Text and background colours</h3>
-              
+
             <div class="swatch-wrapper">
-              
+
               <h4 class="heading-19">Text</h4>
-                
+
               <div class="swatch swatch-text-colour"></div>
               <ul>
                 <li><b>#0B0C0C</b></li>
@@ -316,9 +316,9 @@
             </div>
 
             <div class="swatch-wrapper">
-              
+
               <h4 class="heading-19">Links</h4>
-                
+
               <div class="swatch swatch-link-colour"></div>
               <ul>
                 <li><b>#005ea5</b></li>
@@ -340,9 +340,9 @@
             </div>
 
             <div class="swatch-wrapper">
-              
+
               <h4 class="heading-19">Backgrounds</h4>
-                
+
               <div class="swatch swatch-border-colour"></div>
               <ul>
                 <li><b>#BFC1C3</b></li>
@@ -364,9 +364,9 @@
             </div>
 
             <div class="swatch-wrapper">
-              
+
               <h4 class="heading-19">Grey to white</h4>
-                
+
               <div class="swatch swatch-black"></div>
               <ul>
                 <li><b>#0B0C0C</b></li>
@@ -387,9 +387,9 @@
 
             </div>
             <div class="swatch-wrapper">
-              
+
               <h4 class="heading-19 invisible">Grey to white</h4>
-                
+
               <div class="swatch swatch-grey-3"></div>
               <ul>
                 <li><b>#DEE0E2</b></li>
@@ -413,21 +413,21 @@
             <h3 class="heading-24">Commonly used colours</h3>
 
             <div class="swatch-wrapper">
-              
+
               <h4 class="heading-19">Alpha</h4>
-                
+
               <div class="swatch swatch-alpha"></div>
               <ul>
                 <li><b>#d53880</b></li>
                 <li>$alpha-colour</li>
               </ul>
-  
+
             </div>
-            
+
             <div class="swatch-wrapper">
-              
+
               <h4 class="heading-19">Beta</h4>
-                
+
               <div class="swatch swatch-beta"></div>
               <ul>
                 <li><b>#f47738</b></li>
@@ -436,9 +436,9 @@
 
             </div>
             <div class="swatch-wrapper">
-              
+
               <h4 class="heading-19">Error outline</h4>
-                
+
               <div class="swatch swatch-error"></div>
               <ul>
                 <li><b>#df3034</b></li>
@@ -446,11 +446,11 @@
               </ul>
 
             </div>
-            
+
             <div class="swatch-wrapper">
-              
+
               <h4 class="heading-19">Error background</h4>
-                
+
               <div class="swatch swatch-error-background"></div>
               <ul>
                 <li><b>#fef7f7</b></li>
@@ -460,9 +460,9 @@
             </div>
 
             <div class="swatch-wrapper">
-              
+
               <h4 class="heading-19">Focus</h4>
-                
+
               <div class="swatch swatch-focus"></div>
               <ul>
                 <li><b>#FFBF47</b></li>
@@ -472,11 +472,11 @@
             </div>
 
             <h3 class="heading-24">Colour palette</h3>
-            
+
             <div class="swatch-wrapper">
-              
+
               <h4 class="heading-19">Purple</h4>
-                
+
               <div class="swatch swatch-purple"></div>
               <ul>
                 <li><b>#2e358b</b></li>
@@ -484,7 +484,7 @@
               </ul>
 
               <h4 class="heading-19">Mauve</h4>
-                
+
               <div class="swatch swatch-mauve"></div>
               <ul>
                 <li><b>#6f72af</b></li>
@@ -601,7 +601,7 @@
 
       <div id="guide-images-icons">
         <h2 class="heading-36 heading-with-border">4. Images and icons</h2>
-        
+
         <ul class="list-bullet text">
           <li>avoid unnecessary decoration, only use images and icons if there is a there is a real user need</li>
           <li>if images are needed they should be landscape, 3:2 aspect ratio</li>
@@ -630,14 +630,14 @@
 
       <div id="guide-data">
         <h2 class="heading-36 heading-with-border">5. Data</h2>
-        
+
         <ul class="list-bullet text">
           <li>data is recommended as an alternative to using photography</li>
           <li>for screen readers, ensure the data value appears first so it makes sense when read aloud</li>
         </ul>
 
         <p class="tight">
-          Find out more: 
+          Find out more:
         </p>
 
         <ul>
@@ -649,22 +649,22 @@
         <div class="example">
           <div class="grid grid-1-2">
             <div class="inner-block">
-              
+
               <div class="data">
                 <h2 class="data-80">24</h2>
                 <p>Ministerial departments</p>
               </div>
-              
+
             </div>
           </div>
           <div class="grid grid-1-2">
             <div class="inner-block">
-              
+
               <div class="data">
                 <h2 class="data-80">80px</h2>
                 <p>16px</p>
               </div>
-              
+
             </div>
           </div>
         </div>
@@ -673,22 +673,22 @@
         <div class="example">
           <div class="grid grid-1-2">
             <div class="inner-block">
-              
+
               <div class="data">
                 <h2 class="data-48">56/154</h2>
                 <p>on GOV.UK</p>
               </div>
-              
+
             </div>
           </div>
           <div class="grid grid-1-2">
             <div class="inner-block">
-              
+
               <div class="data">
                 <h2 class="data-48">48px</h2>
                 <p>16px</p>
               </div>
-              
+
             </div>
           </div>
         </div>
@@ -698,13 +698,13 @@
 
       <div id="guide-forms">
         <h2 class="heading-36 heading-with-border">6. Forms</h2>
-        
+
         <ul class="list-bullet text">
           <li>keep forms as simple as possible, only ask what is needed to run your service</li>
-          
+
           <li>hint text should sit above a form field</li>
           <li>use hint text for supporting contextual help, don’t use placeholder text in fields</li>
-          
+
           <li>for more than two options, radio buttons or checkboxes should appear stacked</li>
           <li>avoid using dropdowns, instead we recommend; radio buttons, using predictive fields (good for long lists like countries) and checkboxes</li>
 
@@ -713,12 +713,12 @@
         </ul>
 
         <p class="tight">
-          Find out more: 
+          Find out more:
         </p>
         <ul>
           <li>See an example of <a href="{{ site.baseurl}}/examples/forms/">form layout</a></li>
         </ul>
-        
+
         <h3 class="heading-24">Form inputs and labels</h3>
         <p>
           Labels should be aligned above their controls.
@@ -737,15 +737,15 @@
 
           </div>
         </div>
-        
+
         <h3 class="heading-24">Spacing between form elements</h3>
-        
+
         <p class="text">
           A form wrapper, <code>.form-group</code> can be used to enclose a form label and input pair. This will create 45px bottom spacing between form rows.
         </p>
         <div class="example">
           <div class="inner-block">
-            
+
             <form action="" class="form">
               <fieldset>
                 <div class="form-group">
@@ -765,7 +765,7 @@
         </p>
         <div class="example">
           <div class="inner-block">
-            
+
             <form action="" class="form">
               <fieldset>
                 <div class="form-group">
@@ -784,7 +784,7 @@
         </p>
         <div class="example">
           <div class="inner-block">
-            
+
             <form action="" class="form">
               <fieldset>
                 <div class="form-group">
@@ -800,14 +800,14 @@
 
         <h3 class="heading-24">Radio buttons</h3>
         <p>
-          Radio buttons let users choose a single option from a list. 
+          Radio buttons let users choose a single option from a list.
         </p>
         <div class="example">
           <div class="inner-block">
-            
+
             <form action="" class="form">
               <fieldset>
-                
+
                 <label for="radio-opt-1" class="form-radio">
                   <input id="radio-opt-1" type="radio" aria-required="true" name="radio" value="1">
                   Radio option 1
@@ -823,17 +823,17 @@
 
           </div>
         </div>
-        
+
         <p class="text">
           Radio buttons and checkboxes with large hit areas are easier to select with a mouse and also for touch devices.
         </p>
 
         <div class="example">
           <div class="inner-block">
-            
+
             <form action="" class="form">
               <fieldset>
-                
+
                 <div class="form-group">
                   <label for="radio-1" class="block-label">
                     <input id="radio-1" type="radio" aria-required="true" name="radio-group" value="1">
@@ -845,7 +845,7 @@
                     Isle of Man or the Channel Islands
                   </label>
                 </div>
-                
+
                 <div class="form-group">
                   <p>or</p>
                   <label for="radio-3" class="block-label">
@@ -856,16 +856,16 @@
 
               </fieldset>
             </form>
-            
+
           </div>
         </div>
-        
+
         <div class="example">
           <div class="inner-block">
-            
+
             <form action="" class="form">
               <fieldset class="inline">
-      
+
                 <label for="radio-inline-1" class="block-label">
                   <input id="radio-inline-1" type="radio" aria-required="true" name="radio-inline-group" value="Yes">
                   Yes
@@ -878,10 +878,10 @@
 
               </fieldset>
             </form>
-            
+
           </div>
         </div>
-        
+
         <h3 class="heading-24">Checkboxes</h3>
         <p>
           Checkboxes let users select either on/off toggles or multiple selections.
@@ -889,14 +889,14 @@
 
         <div class="example">
           <div class="inner-block">
-            
+
             <form action="" class="form">
               <fieldset>
 
                 <div class="form-group">
                   <label for="telephone-number" class="form-label">Enter your telephone numner</label>
                   <input type="text" class="form-control" id="telephone-numeber">
-               
+
                   <label for="checkbox-telephone-number" class="form-checkbox">
                     <input id="checkbox-telephone-number" type="checkbox" value="checkbox-telephone-number">
                     I need to be contacted using a text phone
@@ -911,8 +911,8 @@
 
         <div class="example">
           <div class="inner-block">
-            
-            
+
+
             <form action="" class="form">
               <fieldset>
 
@@ -924,7 +924,7 @@
                   <input id="checkbox-2" type="checkbox" value="2">
                   Checkbox option 2
                 </label>
-                
+
               </fieldset>
             </form>
 
@@ -933,7 +933,7 @@
 
         <div class="example">
           <div class="inner-block">
-            
+
             <form action="" class="form">
               <fieldset class="inline">
 
@@ -945,13 +945,13 @@
                   <input id="checkbox-inline-2" type="checkbox" value="2">
                   Checkbox option 2
                 </label>
-                
+
               </fieldset>
             </form>
 
           </div>
         </div>
-        
+
         <h3 class="heading-24">Indented form content</h3>
         <p class="text">
           Indents are used to draw attention to supporting information
@@ -959,12 +959,12 @@
 
         <div class="example">
           <div class="inner-block">
-            
+
             <form action="" class="form">
               <p>Do you know their national insurance number?</p>
-              
+
               <fieldset class="inline">
-                <label for="radio-indent-1" class="block-label selected">
+                <label for="radio-indent-1" class="block-label toggle-label" data-target="example-ni-number">
                   <input id="radio-indent-1" type="radio" aria-required="true" name="radio-indent-group" value="Yes">
                   Yes
                 </label>
@@ -974,7 +974,7 @@
                 </label>
               </fieldset>
 
-              <div class="panel-indent">
+              <div class="panel-indent toggle-content" id="example-ni-number">
                 <label for="national-insurance" class="form-label">National insurance number</label>
                 <input type="text" class="form-control" id="national-insurance">
               </div>
@@ -984,13 +984,13 @@
           </div>
         </div>
         <!-- TODO: Add progressive disclosure -->
-        
+
       </div>
       <!-- / #guide-forms -->
 
       <div id="guide-buttons">
         <h2 class="heading-36 heading-with-border">7. Buttons</h2>
-        
+
         <ul class="list-bullet text">
           <li>use Buttons to move though a transaction. Don't use them to represent choices, instead use radio buttons, checkboxes or links</li>
           <li>start buttons use the colour <code>#00823B</code></li>
@@ -999,9 +999,9 @@
           </li>
           <li>all elements use the Sass variable <code>$yellow</code>, Hex <code>#FFBF47</code> as a focus colour, often this is used as a fill or an outline of 3px</li>
         </ul>
-        
+
         <p class="tight">
-          Find out more: 
+          Find out more:
         </p>
         <ul class="text">
           <li><a href="https://www.gov.uk/service-manual/user-centered-design/resources/buttons.html">Read more about buttons</a></li>
@@ -1013,7 +1013,7 @@
             <div class="get-started">
               <a href="https://bluebadge.direct.gov.uk/directgovapply.html" rel="external" class="button" target="_blank">Start now</a>
               <span class="destination"> on the Blue Badge eligibility tool</span>
-            </div> 
+            </div>
           </div>
         </div>
 
@@ -1044,16 +1044,16 @@
 
       <div id="guide-errors">
         <h2 class="heading-36 heading-with-border">8. Errors and validation</h2>
-        
+
         <ul class="list-bullet text">
           <li>summarise validation errors at the top of your page, with jump links</li>
           <li>the red bar visually connects the summary to the messages in the form</li>
           <li>error copy should be specific to question and validation should identify all errors</li>
           <li>errors should not cause pre-filled fields to clear</li>
         </ul>
-        
+
         <p class="tight">
-          Find out more: 
+          Find out more:
         </p>
         <ul>
           <li><a href="https://www.gov.uk/service-manual/resources/registration-form.html">Read more about form validation</a></li>
@@ -1064,7 +1064,7 @@
 
         <div class="example">
           <div class="inner-block">
-            
+
             <div class="validation-summary">
               <h3 class="heading-19">There was a problem submitting the form</h3>
               <p>Please try the following:</p>
@@ -1098,23 +1098,23 @@
 
       </div>
       <!-- / #guide-errors -->
-            
+
       <div id="guide-tables">
 
         <h2 class="heading-36 heading-with-border">9. Tables</h2>
-        
+
         <ul class="list-bullet text">
           <li>consider putting content into tables to make it easier to scan</li>
         </ul>
-        
+
         <p class="tight">
-          Find out more: 
+          Find out more:
         </p>
         <ul>
           <li><a href="#">Read more about using tables</a></li>
           <li>See an example of <a href="https://www.gov.uk/vehicle-tax-rate-tables">table usage on GOV.UK</a></li>
         </ul>
-        
+
         <h3 class="heading-24">Data in a table</h3>
 
         <div class="example">
@@ -1152,7 +1152,7 @@
 
       </div>
       <!-- / #guide-tables -->
-  
+
    </div>
 </main>
 
