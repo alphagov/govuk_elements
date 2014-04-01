@@ -40,7 +40,7 @@
 
         <h2 class="heading-36 heading-with-border">1. Layout</h2>
 
-        <ul class="list-bullet">
+        <ul class="list-bullet text">
           <li>use white space to create a visual hierarchy on the page</li>
           <li>design for small screens first, using a single column layout</li>
           <li>introduce columns as the content requires it</li>
@@ -135,16 +135,16 @@
         <h2 class="heading-36 heading-with-border">2. Typography</h2>
 
         <ul class="list-bullet text">
-          <li>use the GDS Transport Website font in Light and Bold, it is licenced for use on the GOV.UK domains only. Services publically available on a different domains need to use an alternative typeface like Arial
+          <li>use the GDS Transport Website font in Light and Bold, it is licenced for use on the GOV.UK domains only. Services publicly available on different domains need to use an alternative typeface like Arial
           </li>
           <li>create clear hierarchy using headings so content is easy to scan</li>
           <li>use headings in a uniform way across your service</li>
           <li>body copy should be the main focus of the page</li>
-          <li>use 19px GDS Transport Website Light for body copy and caption text. Width should be 75 characters for legibility</li>
+          <li>use 19px GDS Transport Website Light for body copy and caption text. Copy width should be 75 characters for legibility</li>
           <li>common font colours, can be found in the <a href="#guide-colour">colour palette</a></li>
           <li>avoid using bold text inline and italics</li>
           <li>for specialist/internal user content smaller text sizes can be used (14px, 12px, 10px), always ensure that there is a real user need</li>
-          <li>inset text is used to draw attention to important text on the page</li>
+          <li>use bordered inset text to draw attention to important content on the page</li>
         </ul>
 
         <p class="tight">
@@ -702,8 +702,8 @@
         <ul class="list-bullet text">
           <li>keep forms as simple as possible, only ask what is needed to run your service</li>
 
-          <li>hint text should sit above a form field</li>
           <li>use hint text for supporting contextual help, don’t use placeholder text in fields</li>
+          <li>hint text should sit above a form field</li>
 
           <li>for more than two options, radio buttons or checkboxes should appear stacked</li>
           <li>avoid using dropdowns, instead we recommend; radio buttons, using predictive fields (good for long lists like countries) and checkboxes</li>
@@ -818,6 +818,11 @@
                   Radio option 2
                 </label>
 
+                <label for="radio-opt-3" class="form-radio">
+                  <input id="radio-opt-3" type="radio" aria-required="true" name="radio" value="3">
+                  Radio option 2
+                </label>
+
               </fieldset>
             </form>
 
@@ -924,6 +929,10 @@
                   <input id="checkbox-2" type="checkbox" value="2">
                   Checkbox option 2
                 </label>
+                <label for="checkbox-3" class="block-label">
+                  <input id="checkbox-3" type="checkbox" value="2">
+                  Checkbox option 3
+                </label>
 
               </fieldset>
             </form>
@@ -964,7 +973,7 @@
               <p>Do you know their national insurance number?</p>
 
               <fieldset class="inline">
-                <label for="radio-indent-1" class="block-label toggle-label" data-target="example-ni-number">
+                <label for="radio-indent-1" class="block-label" data-target="example-ni-number">
                   <input id="radio-indent-1" type="radio" aria-required="true" name="radio-indent-group" value="Yes">
                   Yes
                 </label>
@@ -992,9 +1001,9 @@
         <h2 class="heading-36 heading-with-border">7. Buttons</h2>
 
         <ul class="list-bullet text">
-          <li>use Buttons to move though a transaction. Don't use them to represent choices, instead use radio buttons, checkboxes or links</li>
-          <li>start buttons use the colour <code>#00823B</code></li>
-          <li>primary buttons use the Sass variable green <code>#006435</code> <code>$green</code></li>
+          <li>use buttons to move though a transaction. Don't use them to represent choices, instead use radio buttons, checkboxes or links</li>
+          <li>start buttons use the colour Hex <code>#00823B</code></li>
+          <li>primary buttons use the Sass variable green, <code>$green</code> Hex <code>#006435</code></li>
           <li>buttons can be created using the button mixin defined in the <a href="https://github.com/alphagov/govuk_frontend_toolkit#buttons">GOV.UK front end toolkit</a>
           </li>
           <li>all elements use the Sass variable <code>$yellow</code>, Hex <code>#FFBF47</code> as a focus colour, often this is used as a fill or an outline of 3px</li>
@@ -1046,9 +1055,10 @@
         <h2 class="heading-36 heading-with-border">8. Errors and validation</h2>
 
         <ul class="list-bullet text">
-          <li>summarise validation errors at the top of your page, with jump links</li>
-          <li>the red bar visually connects the summary to the messages in the form</li>
-          <li>error copy should be specific to question and validation should identify all errors</li>
+          <li>summarise validation errors in a box at the top of your page, with jump links</li>
+          <li>the red background and border on the box visually connects the errors to the messages in the form</li>
+          <li>apply the same background and border colour to the area of the form where an error has occurred</li>
+          <li>error copy should be specific to the question and validation should identify all errors</li>
           <li>errors should not cause pre-filled fields to clear</li>
         </ul>
 
