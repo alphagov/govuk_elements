@@ -3,4 +3,7 @@
   @include ie-lte(8){
     width: 1020px;
   }
+  @include ie-lte(6){
+    width: 960px;
+  }
 }
