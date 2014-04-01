@@ -9,9 +9,14 @@
     background-color: $beta-colour;
   }
 
-  p {
+  .inner-block {
     max-width: 960px;
     margin: 0 auto;
+  }
+
+  p {
+    margin: 0;
+    max-width: none;
     color: $text-colour;
     @include core-16;
   }

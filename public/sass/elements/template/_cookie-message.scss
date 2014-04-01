@@ -5,11 +5,20 @@
   padding-left: 0;
   padding-right: 0;
 
+  .inner-block {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  p {
+    margin: 0;
+    max-width: none;
+  }
+
   // Prevent cookie message resizing in IE8 and below
   @include ie-lte(8) {
     .inner-block {
       width: 960px;
-      margin: 0 auto;
     }
   }
 
