@@ -1,10 +1,16 @@
 #global-cookie-message {
-  padding: 8px $gutter-half;
-  @include media(tablet){
-    padding: 8px $gutter;
-  }
+
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 0;
+  padding-right: 0;
+
   // Prevent cookie message resizing in IE8 and below
-  @include ie-lte(8){
-    width: 1020px;
+  @include ie-lte(8) {
+    .inner-block {
+      width: 960px;
+      margin: 0 auto;
+    }
   }
+
 }

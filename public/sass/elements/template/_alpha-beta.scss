@@ -3,15 +3,6 @@
   padding-top: 8px;
   padding-bottom: 8px;
 
-  padding-left: $gutter-half;
-  padding-right: $gutter-half;
-
-  @include media(tablet){
-    padding-left: $gutter;
-    padding-right: $gutter;
-  }
-
-
   @if $state == alpha {
     background-color: $alpha-colour;
   } @else if $state == beta {
@@ -38,7 +29,10 @@
   @include fix-phase-banner(alpha);
 
   // Prevent alpha banner resizing in IE8 and below
-  @include ie-lte(8){
-    width: 1020px;
+  @include ie-lte(8) {
+    .inner-block {
+      width: 960px;
+      margin: 0 auto;
+    }
   }
 }
