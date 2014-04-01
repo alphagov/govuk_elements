@@ -16,18 +16,24 @@
 
 	.button {
 		@include bold-24;
-		line-height: 0.66667;
-		color: #FFF;
-		background-color: $button-colour;
-		padding: 14px 41px 10px 16px;
-		background-image: url(https://assets.digital.cabinet-office.gov.uk/static/icon-pointer-063838cde108768e30b077e5303783fc.png);
-		background-position: 100% 50%;
-		background-repeat: no-repeat;
-		margin-bottom: 0;
+		// line-height: 0.66667;
+		// color: #FFF;
+		// background-color: $button-colour;
+		// padding: 14px 41px 10px 16px;
+		// background-image: url(https://assets.digital.cabinet-office.gov.uk/static/icon-pointer-063838cde108768e30b077e5303783fc.png);
+		// background-position: 100% 50%;
+		// background-repeat: no-repeat;
+		// margin-bottom: 0;
+			padding: 0.60em 1.7em 0.45em 0.67em;
+		  background-image: url(https://assets.digital.cabinet-office.gov.uk/static/icon-pointer-063838cde108768e30b077e5303783fc.png);
+		  background-position: 100% 50%;
+		  background-repeat: no-repeat;
+
 
 	  @include ie-lte(6){
 	    display: inline-block;
-	    padding: 0.45em 0.5em 0.62em 0.5em;
+	    padding: 0.45em 0.5em 0.62em 0em;
+	    background-image: url(https://assets.digital.cabinet-office.gov.uk/static/icon-pointer-indexed-837e19e1ba2d4beb5563d052b044770b.png);
 	  }
 	}
 
