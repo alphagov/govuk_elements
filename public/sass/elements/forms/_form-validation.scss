@@ -7,6 +7,11 @@
 
   padding: $gutter-half $gutter;
   margin-bottom: $gutter;
+
+  @include ie-lte(6){
+    width: 100%;
+    background: yellow; // testing only
+  }
 }
 
 .validation-summary ul {
@@ -25,6 +30,9 @@
 
 .validation-summary a {
   color: $error-colour;
+  @include ie-lte(6){
+    color: $error-colour !important;
+  }
 }
 
 .validation-summary .heading-19 {
