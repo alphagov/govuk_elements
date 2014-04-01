@@ -8,6 +8,7 @@
 @import "shims";
 @import "typography";
 @import "css3";
+@import "design-patterns/alpha-beta";
 @import "design-patterns/buttons";
 
 // Helpers
@@ -16,12 +17,19 @@
 // Reset
 @import "elements/reset";
 
-// Typography 
+// Typography
 @import "elements/typography";
 
 // Layout
 @import "elements/layout";
 
+// Set up GOV.UK template (TODO: to be moved into govuk_frontend_toolkit & govuk_template)
+// Phase banner
+@import "elements/template/alpha-beta";
+// Global cookie message
+@import "elements/template/cookie-message";
+// Header width for IE8
+@import "elements/template/cookie-message";
 
 // Modules
 // ==========================================================================

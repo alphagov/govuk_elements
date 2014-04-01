@@ -1,0 +1,6 @@
+#global-cookie-message {
+  padding: 8px $gutter-half;
+  @include media(tablet){
+    padding: 8px $gutter;
+  }
+}

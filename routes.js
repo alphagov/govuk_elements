@@ -4,21 +4,25 @@ module.exports = {
 
       res.render('index',
                 {'assetPath' : assetPath});
-      
+
     });
-    
+
     // Elements example pages
 
     app.get('/examples/grid-layout', function (req, res) {
-      res.render('examples/grid_layout', {'assetPath' : assetPath }); 
+      res.render('examples/grid_layout', {'assetPath' : assetPath });
     });
 
     app.get('/examples/typography', function (req, res) {
-      res.render('examples/typography', {'assetPath' : assetPath }); 
+      res.render('examples/typography', {'assetPath' : assetPath });
     });
-    
+
     app.get('/examples/forms', function (req, res) {
-      res.render('examples/forms', {'assetPath' : assetPath });  
+      res.render('examples/forms', {'assetPath' : assetPath });
+    });
+
+    app.get('/examples/template', function (req, res) {
+      res.render('examples/template', {'assetPath' : assetPath });
     });
 
   }
