@@ -10,9 +10,14 @@ table tr {
   padding: 12px 8px 12px 16px;
 }
 
-table tr.stripe td,
-table tr:nth-child(even) td { 
-  background-color: #fff 
+table tr:nth-child(even) td {
+  background-color: #fff
+}
+
+@include ie-lte(8) {
+  table .stripe td {
+    background-color: #fff
+  }
 }
 
 table th,
