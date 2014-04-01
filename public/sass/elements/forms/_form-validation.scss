@@ -2,7 +2,7 @@
 
 // Validation summary box
 .validation-summary {
-  border: 3px solid $error;
+  border: 3px solid $error-colour;
   background: $error-background;
 
   padding: $gutter-half $gutter;
@@ -24,7 +24,7 @@
 }
 
 .validation-summary a {
-  color: $error;
+  color: $error-colour;
 }
 
 .validation-summary .heading-19 {
@@ -35,7 +35,7 @@
 // Validation message box
 .validation {
   @include contain-floats;
-  border-left: 3px solid $error;
+  border-left: 3px solid $error-colour;
   background: $error-background;
   padding-top: $gutter-half;
   padding-bottom: $gutter;
@@ -52,5 +52,5 @@
 // Validation message
 .validation-message {
   @include core-16;
-  color: $error;
+  color: $error-colour;
 }

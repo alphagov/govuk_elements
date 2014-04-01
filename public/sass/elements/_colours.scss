@@ -1,15 +1,15 @@
 // Colours
 // ==========================================================================
 
-// Errors 
-$error: $mellow-red;
+// Errors (TODO: Awaiting merge into frontend toolkit)
+$error-colour: $mellow-red;
 $error-background: #fef7f7;
 
 
 // Sass list for colour palette
 
-$palette: ( 
-  ("purple", $purple), 
+$palette: (
+  ("purple", $purple),
   ("mauve", $mauve),
   ("fuschia", $fuschia),
   ("pink", $pink),
@@ -35,7 +35,7 @@ $palette: (
   }
 }
 
-// Usage: 
+// Usage:
 // @include color-palette;
 
 .text-secondary {
