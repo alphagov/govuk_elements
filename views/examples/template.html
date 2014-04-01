@@ -7,8 +7,11 @@
 
     /* The css here is used to highlight the main page sections, to check alignment */
 
+    #global-header {
+      background: orange;
+    }
     #global-header .header-wrapper {
-      background: pink;
+      background: black;
     }
 
     #global-header .header-logo,
@@ -18,7 +21,7 @@
     }
 
     #wrapper {
-      background: green;
+      background: orange;
     }
 
     .example-show-cookie-message {
@@ -52,23 +55,9 @@
 <main id="wrapper" role="main">
   <div id="content">
 
-    <div class="inner-block">
-
-      <p>
-        Full width content, no need for grid wrapper.
-      </p>
-      <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur.</p>
-
-    </div>
-
-
     <div class="grid-wrapper">
       <div class="grid">
         <div class="inner-block">
-
-
 
           <h1 class="heading-48">
             Grid layout
@@ -188,7 +177,22 @@
       </div>
     </div>
 
-    <a href="/" class="example-back-link">Back to GOV.UK elements</a>
+    <div class="inner-block">
+
+      <h1 class="heading-36">
+        If you don't need a grid&hellip;
+      </h1>
+
+      <p>
+        You can still have full width content, using only .inner-block to set left and right padding.
+      </p>
+      <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur.</p>
+
+      <a href="/" class="example-back-link">Back to GOV.UK elements</a>
+
+    </div>
 
   </div>
 </main>

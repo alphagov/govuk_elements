@@ -5,11 +5,13 @@
   padding-left: 0;
   padding-right: 0;
 
+  // Set a max width on .inner-block
   .inner-block {
     max-width: 960px;
     margin: 0 auto;
   }
 
+  // Don't set a max-width for any content inside .inner-block
   p {
     margin: 0;
     max-width: none;
