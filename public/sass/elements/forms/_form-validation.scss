@@ -9,7 +9,7 @@
   margin-bottom: $gutter;
 
   @include ie-lte(6){
-    width: auto;
+    zoom: 1;
   }
 }
 
