@@ -9,7 +9,7 @@
   margin-bottom: $gutter;
 
   @include ie-lte(6){
-    width: auto;
+    zoom: 1;
   }
 }
 
@@ -36,6 +36,9 @@
 
 .validation-summary .heading-19 {
   margin-top: $gutter-half;
+  @include ie-lte(6){
+    zoom: 1;
+  }
 }
 
 
