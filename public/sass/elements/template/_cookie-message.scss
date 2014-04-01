@@ -3,4 +3,8 @@
   @include media(tablet){
     padding: 8px $gutter;
   }
+  // Prevent cookie message resizing in IE8 and below
+  @include ie-lte(8){
+    width: 1020px;
+  }
 }

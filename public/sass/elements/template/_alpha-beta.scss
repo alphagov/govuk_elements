@@ -36,4 +36,9 @@
 
 .alpha-banner {
   @include fix-phase-banner(alpha);
+
+  // Prevent alpha banner resizing in IE8 and below
+  @include ie-lte(8){
+    width: 1020px;
+  }
 }
