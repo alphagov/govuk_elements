@@ -9,8 +9,7 @@
   margin-bottom: $gutter;
 
   @include ie-lte(6){
-    width: 100%;
-    background: yellow; // testing only
+    width: auto;
   }
 }
 
@@ -30,7 +29,7 @@
 
 .validation-summary a {
   color: $error-colour;
-  @include ie-lte(6){
+  @include ie-lte(6) {
     color: $error-colour !important;
   }
 }
