@@ -1,0 +1,15 @@
+#footer {
+  .inner-block {
+    padding-top: 30px;
+    @include media(tablet) {
+      padding-top: 60px;
+    }
+    // Prevent footer resizing in IE8 and below
+    @include ie-lte(8) {
+      width: 1020px;
+    }
+    @include ie-lte(6) {
+      width: 990px;
+    }
+  }
+}
