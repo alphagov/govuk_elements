@@ -1,7 +1,7 @@
 // Helpers
 // ==========================================================================
 
-// Use the contain floats mixin for this project, 
+// Use the contain floats mixin for this project,
 // as placeholders are not supported by libsass
 @mixin contain-floats {
   &:after {
@@ -11,6 +11,18 @@
   }
   @include ie-lte(7) {
     zoom: 1;
+  }
+}
+
+// Use the inner block mixin for this project,
+// until it is merged into the front end toolkit
+@mixin inner-block {
+  padding-left: $gutter-half;
+  padding-right: $gutter-half;
+
+  @include media(tablet) {
+    padding-left: $gutter;
+    padding-right: $gutter;
   }
 }
 

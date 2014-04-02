@@ -23,20 +23,8 @@
 
 }
 
-// TODO: Move into front end toolkit
-
-// Inner block usage:
-// .inner-block {
-//    @include inner-block;
-// }
-
 .inner-block {
-  padding-left: $gutter-half;
-  padding-right: $gutter-half;
-  @include media(tablet) {
-    padding-left: $gutter;
-    padding-right: $gutter;
-  }
+  @include inner-block;
 }
 
 // Grid layout

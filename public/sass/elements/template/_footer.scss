@@ -1,5 +1,7 @@
 #footer {
-  .inner-block {
+  .footer-wrapper {
+    @include inner-block;
+
     padding-top: 30px;
     @include media(tablet) {
       padding-top: 60px;
