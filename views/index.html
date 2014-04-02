@@ -39,28 +39,67 @@
       <div id="guide-layout">
 
         <h2 class="heading-36 heading-with-border">1. Layout</h2>
-        <ul class="list-bullet text">
-          <li>use white space to create a visual hierarchy on the page</li>
-          <li>design for small screens first, using a single column layout</li>
-          <li>introduce columns as the content requires it</li>
-          <li>base column ratios on halves, thirds or quarters of the page width</li>
-          <li>spacing between elements is usually 5px, 10px, 15px or multiples of 15px</li>
-          <li>gutters are 15px for smaller screens and 30px for larger screens</li>
-          <li>lines of text should be no longer than 75 characters</li>
-          <li>set breakpoints for small, medium and large screens using media queries</li>
-          <li>optimise your layout for different screen sizes, but don’t make assumptions about what devices people are using (things change)</li>
-          <li>the media queries for these breakpoints can be found in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_conditionals.scss">_conditionals.scss</a> file</li>
+        <div class="text">
+          <p>
+            When creating your layouts use white space to create a visual hierarchy on the page, aim to design for small screens first, using a single column layout. Consider how you can optimise your layout for different screen sizes, but don’t make assumptions about what devices people are using (things change.)
+          </p>
+        </div>
+
+        <ul>
+          <li><a href="{{ site.baseurl}}/examples/grid-layout/">See an example of GOV.UK grid layout</a></li>
         </ul>
 
-        <p class="tight">
-          Find out more:
+        <h3 class="heading-24">Spacing</h3>
+        <p>
+          Spacing between elements is usually 5px, 10px, 15px or multiples of 15px.
         </p>
-        <ul>
-          <li>Here's an example of <a href="{{ site.baseurl}}/examples/grid-layout/">grid layout</a></li>
-        </ul>
 
         <h3 class="heading-24">Grid unit proportions</h3>
-        <h4 class="heading-19">Two columns</h4>
+        <ul class="list-bullet text">
+          <li>base column ratios on halves, thirds or quarters of the page width</li>
+          <li>set breakpoints for small, medium and large screens using media queries</li>
+          <li>the media queries for these breakpoints can be found in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_conditionals.scss">_conditionals.scss</a> file</li>
+           <li>gutters are 15px for smaller screens and 30px for larger screens</li>
+          <li>introduce columns as the content requires it</li>
+        </ul>
+
+        <h4 class="heading-19">Halves</h4>
+        <div class="example example-grid">
+          <div class="grid-wrapper">
+            <div class="grid grid-1-2">
+              <div class="inner-block">
+                <p>Content</p>
+              </div>
+            </div>
+            <div class="grid grid-1-2">
+              <div class="inner-block">
+                <p>Content</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h4 class="heading-19">Thirds</h4>
+        <div class="example example-grid">
+          <div class="grid-wrapper">
+            <div class="grid grid-1-3">
+              <div class="inner-block">
+                <p>Content</p>
+              </div>
+            </div>
+            <div class="grid grid-1-3">
+              <div class="inner-block">
+                <p>Content</p>
+              </div>
+            </div>
+            <div class="grid grid-1-3">
+              <div class="inner-block">
+                <p>Content</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="example example-grid">
           <div class="grid-wrapper">
             <div class="grid grid-2-3">
@@ -76,28 +115,7 @@
           </div>
         </div>
 
-        <h4 class="heading-19">Three equal columns</h4>
-        <div class="example example-grid">
-          <div class="grid-wrapper">
-            <div class="grid grid-1-3">
-              <div class="inner-block">
-                <p>Content</p>
-              </div>
-            </div>
-            <div class="grid grid-1-3">
-              <div class="inner-block">
-                <p>Content</p>
-              </div>
-            </div>
-            <div class="grid grid-1-3">
-              <div class="inner-block">
-                <p>Content</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <h4 class="heading-19">Four equal columns</h4>
+        <h4 class="heading-19">Quarters</h4>
         <div class="example example-grid">
           <div class="grid-wrapper">
             <div class="grid grid-1-4">
@@ -129,31 +147,23 @@
       <div id="guide-typography">
 
         <h2 class="heading-36 heading-with-border">2. Typography</h2>
-        <ul class="list-bullet text">
-          <li>use the GDS Transport Website font in Light and Bold, it is licenced for use on the GOV.UK domains only. Services publicly available on different domains need to use an alternative typeface like Arial
-          </li>
-          <li>create clear hierarchy using headings so content is easy to scan</li>
-          <li>use headings in a uniform way across your service</li>
-          <li>body copy should be the main focus of the page</li>
-          <li>use 19px GDS Transport Website Light for body copy and caption text. Copy width should be 75 characters for legibility</li>
-          <li>common font colours, can be found in the <a href="#guide-colour">colour palette</a></li>
-          <li>avoid using bold text inline and italics</li>
-          <li>for specialist/internal user content smaller text sizes can be used (14px, 12px, 10px), always ensure that there is a real user need</li>
-          <li>use bordered inset text to draw attention to important content on the page</li>
-        </ul>
-
-        <p class="tight">
-          Find out more:
+        <p class="text">
+           Use the GDS Transport Website font in Light and Bold, it is licensed for use on the GOV.UK domains only. Services publicly available on different domains need to use an alternative typeface like Arial. Common font colours, can be found in the <a href="#guide-colour">colour palette</a>.
         </p>
+
         <ul>
-          <li>Read more about <a href="https://www.gov.uk/service-manual/user-centered-design/resources/typography.html">GOV.UK Typography</a></li>
-          <li>Here's an example of <a href="{{ site.baseurl}}/examples/typography/">typography</a></li>
+          <li><a href="https://www.gov.uk/service-manual/user-centered-design/resources/typography.html">Read more about GOV.UK Typography</a></li>
+          <li><a href="{{ site.baseurl}}/examples/typography/">See an example of GOV.UK Typography</a></li>
         </ul>
 
         <h3 class="heading-24">
           Headings <br>
           <span class="text-secondary">GDS Transport Website Bold</span>
         </h3>
+        <p>
+          Use headings consistently to create a clear hierarchy.
+        </p>
+
         <div class="example">
           <div class="grid-wrapper">
             <div class="grid grid-1-2">
@@ -183,6 +193,12 @@
           Body copy <br>
           <span class="text-secondary">GDS Transport Website Light</span>
         </h3>
+        <ul class="list-bullet text">
+          <li>19px body copy should be the main focus of the page</li>
+          <li>copy width should be a maximum 75 characters for legibility</li>
+          <li>avoid using bold text inline and italics</li>
+          <li>for specialist/internal user content smaller text sizes can be used (14px, 12px, 10px), always ensure that there is a real user need</li>
+        </ul>
         <div class="example">
           <div class="grid-wrapper">
             <div class="grid grid-1-2">
@@ -242,6 +258,9 @@
         </div>
 
         <h3 class="heading-24">Inset text</h3>
+        <p class="text">
+          Use bordered inset text to draw attention to important content on the page.
+        </p>
         <div class="example">
           <div class="inner-block">
 
@@ -260,27 +279,25 @@
       <div id="guide-colour">
 
         <h2 class="heading-36 heading-with-border">3. Colour</h2>
+        <p class="text">
+
+        </p>
+
+        <h3 class="heading-24">Colour and accessibility</h3>
+        <p class="text">
+          When using colour on text and functional elements (like buttons) make sure difference between the foreground and background has a high enough in contrast to be seen by those with visual impairments. We aim to meet the AA colour contrast standard ratio of 4.5:1 <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">prescribed by W3C</a>, to do this we recommend testing using colour contrast tools.
+        </p>
+
+        <h3 class="heading-24">Text and background colours</h3>
         <ul class="list-bullet text">
+          <li>use Sass variables in case colour values need to be updated, the variables are defined in <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss">colours.scss</a> in the GOV.UK front end toolkit</li>
           <li>text should be set in black with secondary text in grey</li>
           <li>links should be set in blue and buttons or dialog boxes should have text in white</li>
-          <li>text and functional elements need to be easily differentiated. When colour is desaturated we work toward an AA colour ratio standard of 4.5:1</li>
-          <li>use Sass variables in case colour values need to be updated, the variables are defined in <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss">colours.scss</a> in the GOV.UK front end toolkit.</li>
         </ul>
 
-        <p class="tight">
-          Find out more:
-        </p>
-        <ul>
-          <li>Read more about the <a href="https://www.gov.uk/service-manual/user-centered-design/resources/colour-palettes.html">GOV.UK colour palette</a></li>
-          <li>Read more about <a href="https://www.gov.uk/service-manual/user-centered-design/accessibility.html">accessibility</a></li>
-        </ul>
-
-        <h3 class="heading-24">Colour<br>
-        <span class="text-secondary">HEX values and Sass variable names</span></h3>
         <div class="example">
           <div class="inner-block">
 
-            <h3 class="heading-24">Text and background colours</h3>
             <div class="swatch-wrapper">
               <h4 class="heading-19">Text</h4>
 
@@ -359,7 +376,7 @@
 
               <div class="swatch swatch-grey-1"></div>
               <ul>
-                <li><b>#BFC1C3</b></li>
+                <li><b>#6F777B</b></li>
                 <li>$grey-1</li>
               </ul>
 
@@ -393,7 +410,12 @@
               </ul>
             </div>
 
-            <h3 class="heading-24">Commonly used colours</h3>
+          </div>
+        </div>
+
+        <h3 class="heading-24">Commonly used colours</h3>
+        <div class="example">
+          <div class="inner-block">
 
             <div class="swatch-wrapper">
               <h4 class="heading-19">Alpha</h4>
@@ -416,12 +438,12 @@
             </div>
 
             <div class="swatch-wrapper">
-              <h4 class="heading-19">Error outline</h4>
+              <h4 class="heading-19">Error colour</h4>
 
               <div class="swatch swatch-error"></div>
               <ul>
                 <li><b>#df3034</b></li>
-                <li>$error</li>
+                <li>$error-colour</li>
               </ul>
             </div>
 
@@ -445,7 +467,18 @@
               </ul>
             </div>
 
-            <h3 class="heading-24">Colour palette</h3>
+          </div>
+        </div>
+
+        <h3 class="heading-24">Extended pallete</h3>
+        <ul class="list-bullet text">
+          <li>for tints of the extended palette use 50% or 25%</li>
+          <li>used for graphs and supporting material</li>
+          <li><a href="https://www.gov.uk/performance/carers-allowance">see an example using the extended colour palette</a></li>
+        </ul>
+
+        <div class="example">
+          <div class="inner-block">
 
             <div class="swatch-wrapper">
               <h4 class="heading-19">Purple</h4>
@@ -578,14 +611,21 @@
       <div id="guide-images-icons">
 
         <h2 class="heading-36 heading-with-border">4. Images and icons</h2>
+        <p class="text">
+          Avoid unnecessary decoration, only use images and icons if there is a there is a real user need.
+        </p>
+
+        <h3 class="heading-24">Icons</h3>
         <ul class="list-bullet text">
-          <li>avoid unnecessary decoration, only use images and icons if there is a there is a real user need</li>
-          <li>if images are needed they should be landscape, 3:2 aspect ratio</li>
           <li>if icons are needed ensure they are clear, simple and help to convey information more clearly than text alone could. Don’t hide functionality under icons</li>
           <li>ensure icons meet contrast ratio requirements</li>
         </ul>
 
         <h3 class="heading-24">Image aspect ratio</h3>
+        <p>
+          If images are needed they should be landscape, 3:2 aspect ratio.
+        </p>
+
         <div class="example example-images">
           <div class="grid-wrapper">
             <div class="grid grid-1-2">
@@ -607,19 +647,13 @@
       <div id="guide-data">
 
         <h2 class="heading-36 heading-with-border">5. Data</h2>
-        <ul class="list-bullet text">
-          <li>data is recommended as an alternative to using photography</li>
-          <li>for screen readers, ensure the data value appears first so it makes sense when read aloud</li>
-        </ul>
-
-        <p class="tight">
-          Find out more:
+        <p class="text">
+          Data is recommended as an alternative to using photography. For screen readers, ensure the data value appears first so it makes sense when read aloud.
         </p>
-        <ul>
-          <li>
-            <a href="https://www.gov.uk/service-manual/user-centered-design/data-visualisation.html">Read more about GOV.UK data visualisation</a>
-          </li>
-        </ul>
+
+        <p>
+          <a href="https://www.gov.uk/service-manual/user-centered-design/data-visualisation.html">Read more about GOV.UK data visualisation</a>
+        </p>
 
         <h3 class="heading-24">Large data</h3>
         <div class="example">
@@ -679,30 +713,22 @@
       <div id="guide-forms">
 
         <h2 class="heading-36 heading-with-border">6. Forms</h2>
-        <ul class="list-bullet text">
-          <li>keep forms as simple as possible, only ask what is needed to run your service</li>
-
-          <li>use hint text for supporting contextual help, don’t use placeholder text in fields</li>
-          <li>hint text should sit above a form field</li>
-
-          <li>for more than two options, radio buttons or checkboxes should appear stacked</li>
-          <li>avoid using dropdowns, instead we recommend; radio buttons, using predictive fields (good for long lists like countries) and checkboxes</li>
-
-          <li>indents are used within forms to highlight supporting information</li>
-          <li>all elements use the Sass variable <code>$yellow</code>, Hex <code>#FFBF47</code> as a focus colour, often this is used as a fill or an outline of 3px</li>
-        </ul>
-
-        <p class="tight">
-          Find out more:
+        <p class="text">
+          Keep forms as simple as possible, only ask what is needed to run your service. All elements use the yellow focus style, it is often a fill or 3px outline. The used is colour is Sass variable <code>$yellow</code>, Hex <code>#FFBF47</code>.
         </p>
-        <ul>
-          <li>See an example of <a href="{{ site.baseurl}}/examples/forms/">form layout</a></li>
-        </ul>
+
+        <p><a href="{{ site.baseurl}}/examples/forms/">See an example of GOV.UK form layout</a></p>
+
+        <h3 class="heading-24">Dropdowns</h3>
+        <p class="text">
+          Avoid using dropdowns, instead we recommend; radio buttons, using predictive fields (good for long lists like countries) and checkboxes.
+        </p>
 
         <h3 class="heading-24">Form inputs and labels</h3>
-        <p>
+        <p class="text">
           Labels should be aligned above their controls.
         </p>
+
         <div class="example">
           <div class="inner-block">
 
@@ -720,8 +746,9 @@
 
         <h3 class="heading-24">Spacing between form elements</h3>
         <p class="text">
-          A form wrapper, <code>.form-group</code> can be used to enclose a form label and input pair. This will create 45px bottom spacing between form rows.
+          Use <code>.form-group</code> to create 45px bottom spacing between form rows.
         </p>
+
         <div class="example">
           <div class="inner-block">
 
@@ -739,40 +766,20 @@
         </div>
 
         <h3 class="heading-24">Hint text and example text</h3>
-        <p>
-          Form hints should appear above the form control
-        </p>
+        <ul class="list-bullet text">
+          <li>use hint text for supporting contextual help, don’t use placeholder text in fields</li>
+          <li>hint text should sit above a form field</li>
+        </ul>
         <div class="example">
           <div class="inner-block">
 
             <form action="" class="form">
               <fieldset>
                 <div class="form-group">
-                  <label class="form-label" for="full-name-3">Full name</label>
-                  <p class="form-hint">As shown on your birth certificate or passport</p>
-                  <input type="text" class="form-control" id="full-name-3">
+                  <label class="form-label" for="ni-number-1">National Insurance number</label>
+                  <p class="form-hint">It'll be on your last payslip. For example JH 219 00A.</p>
+                  <input type="text" class="form-control" id="ni-number-1">
                 </div>
-              </fieldset>
-            </form>
-
-          </div>
-        </div>
-
-        <p>
-          Form examples should also appear above the form control
-        </p>
-        <div class="example">
-          <div class="inner-block">
-
-            <form action="" class="form">
-              <fieldset>
-
-                <div class="form-group">
-                  <label class="form-label" for="other-names">Any other last names</label>
-                  <p class="form-hint">For example your maiden name</p>
-                  <input type="text" class="form-control" id="other-names">
-                </div>
-
               </fieldset>
             </form>
 
@@ -780,9 +787,14 @@
         </div>
 
         <h3 class="heading-24">Radio buttons</h3>
-        <p>
-          Radio buttons let users choose a single option from a list.
-        </p>
+        <ul class="list-bullet text">
+          <li>radio buttons let users choose a single option from a list</li>
+          <li>for more than two options, radio buttons or checkboxes should appear stacked</li>
+        </ul>
+
+        <h4 class="heading-19">
+          Example 1
+        </h4>
         <div class="example">
           <div class="inner-block">
 
@@ -810,10 +822,12 @@
           </div>
         </div>
 
+        <h4 class="heading-19">
+          Example 2
+        </h4>
         <p class="text">
           Radio buttons and checkboxes with large hit areas are easier to select with a mouse and also for touch devices.
         </p>
-
         <div class="example">
           <div class="inner-block">
 
@@ -846,6 +860,9 @@
           </div>
         </div>
 
+        <h4 class="heading-19">
+          Example 3
+        </h4>
         <div class="example">
           <div class="inner-block">
 
@@ -873,6 +890,9 @@
           Checkboxes let users select either on/off toggles or multiple selections.
         </p>
 
+        <h4 class="heading-19">
+          Example 1
+        </h4>
         <div class="example">
           <div class="inner-block">
 
@@ -895,13 +915,16 @@
           </div>
         </div>
 
+        <h4 class="heading-19">
+          Example 2
+        </h4>
         <div class="example">
           <div class="inner-block">
 
             <form action="" class="form">
               <fieldset>
                 <h3 class="heading-24">Which types of waste do you transport regularly?</h3>
-                <p>Select all that appply</p>
+                <p>Select all that apply</p>
                 <label for="checkbox-1" class="block-label">
                   <input id="checkbox-1" type="checkbox" value="1">
                   Waste from animal carcasses
@@ -921,6 +944,9 @@
           </div>
         </div>
 
+        <h4 class="heading-19">
+          Example 3
+        </h4>
         <div class="example">
           <div class="inner-block">
 
@@ -944,7 +970,7 @@
 
         <h3 class="heading-24">Indented form content</h3>
         <p class="text">
-          Indents are used to draw attention to supporting information
+          Indents are used within forms to highlight supporting information.
         </p>
 
         <div class="example">
@@ -982,23 +1008,19 @@
       <div id="guide-buttons">
 
         <h2 class="heading-36 heading-with-border">7. Buttons</h2>
-        <ul class="list-bullet text">
-          <li>use buttons to move though a transaction. Don't use them to represent choices, instead use radio buttons, checkboxes or links</li>
-          <li>start buttons use the colour Hex <code>#00823B</code></li>
-          <li>primary buttons use the Sass variable green, <code>$green</code> Hex <code>#006435</code></li>
-          <li>buttons can be created using the button mixin defined in the <a href="https://github.com/alphagov/govuk_frontend_toolkit#buttons">GOV.UK front end toolkit</a>
-          </li>
-          <li>all elements use the Sass variable <code>$yellow</code>, Hex <code>#FFBF47</code> as a focus colour, often this is used as a fill or an outline of 3px</li>
-        </ul>
-
-        <p class="tight">
-          Find out more:
+        <p class="text">
+          Use buttons to move though a transaction.
+          Don't use them to represent choices, instead use radio buttons, checkboxes or links.
         </p>
-        <ul class="text">
-          <li><a href="https://www.gov.uk/service-manual/user-centered-design/resources/buttons.html">Read more about buttons</a></li>
+
+        <h3 class="heading-24">Button colours</h3>
+        <ul class="list-bullet text">
+          <li>buttons use the use the Sass variable, <code>$button-colour</code>, Hex <code>#00823B</code></li>
+          <li>buttons can be created, by passing this a colour variable to the button mixin defined in the <a href="https://github.com/alphagov/govuk_frontend_toolkit#buttons">GOV.UK front end toolkit</a>
+          <li>all buttons use the Sass variable <code>$yellow</code>, Hex <code>#FFBF47</code> as a focus colour, often this is used as a fill or an outline of 3px</li>
         </ul>
 
-        <h3 class="heading-24">Start button</h3>
+        <h3 class="heading-24">Start now button</h3>
         <div class="example">
           <div class="inner-block">
             <div class="get-started">
@@ -1036,23 +1058,19 @@
       <div id="guide-errors">
 
         <h2 class="heading-36 heading-with-border">8. Errors and validation</h2>
+        <p class="text">
+          Summarise validation errors in a box at the top of your page. Use a red background and border on the box to visually connect the errors and messages in the form. Apply the same colour to the area of the form where an error has occurred.
+        </p>
+
+        <p><a href="https://www.gov.uk/contact/foi">See an example of form validation on GOV.UK</a></p>
+
+        <h3 class="heading-24">Form validation errors</h3>
         <ul class="list-bullet text">
-          <li>summarise validation errors in a box at the top of your page, with jump links</li>
-          <li>the red background and border on the box visually connects the errors to the messages in the form</li>
-          <li>apply the same background and border colour to the area of the form where an error has occurred</li>
+          <li>use jump links in the summary box, to reach the errors in the form</li>
           <li>error copy should be specific to the question and validation should identify all errors</li>
           <li>errors should not cause pre-filled fields to clear</li>
         </ul>
 
-        <p class="tight">
-          Find out more:
-        </p>
-        <ul>
-          <li><a href="https://www.gov.uk/service-manual/resources/registration-form.html">Read more about form validation</a></li>
-          <li>See an example of <a href="https://www.gov.uk/contact/foi">form validation on GOV.UK</a></li>
-        </ul>
-
-        <h3 class="heading-24">Form validation errors</h3>
         <div class="example">
           <div class="inner-block">
 
@@ -1094,16 +1112,10 @@
       <div id="guide-tables">
 
         <h2 class="heading-36 heading-with-border">9. Tables</h2>
-        <ul class="list-bullet text">
-          <li>consider putting content into tables to make it easier to scan</li>
-        </ul>
-
-        <p class="tight">
-          Find out more:
+        <p class="text">
+          Consider putting content into tables to make it easier to scan.
         </p>
-        <ul>
-          <li>See an example of <a href="https://www.gov.uk/vehicle-tax-rate-tables">table usage on GOV.UK</a></li>
-        </ul>
+        <p><a href="https://www.gov.uk/vehicle-tax-rate-tables">See an example of table usage on GOV.UK</a></p>
 
         <h3 class="heading-24">Data in a table</h3>
         <div class="example">

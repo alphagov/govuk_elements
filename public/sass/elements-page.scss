@@ -49,6 +49,29 @@ code {
   margin-bottom: 0;
 }
 
+// Panels
+.panel-indent {
+  @include contain-floats;
+  clear: both;
+  border-left: 5px solid $grey-3;
+
+  margin: ($gutter $gutter-half $gutter 0);
+  @include media(tablet){
+    margin: ($gutter $gutter-half $gutter*2 0);
+  }
+  padding: 5px 5px 5px $gutter-half;
+  @include media(tablet){
+    padding: 10px $gutter-half 10px $gutter;
+  }
+
+
+}
+
+.panel-indent p,
+.panel-indent ul {
+  margin-bottom: 0;
+}
+
 // Lists
 
 .list-bullet {
@@ -63,7 +86,7 @@ code {
   overflow: hidden;
   border: 1px solid $grey-2;
   outline: $gutter-half solid $highlight-colour;
-  margin: $gutter 0 $gutter*2 0;
+  margin: $gutter*1.5 0 $gutter*2 0;
 
   padding-top: $gutter-half;
   padding-bottom: $gutter-half;
@@ -149,13 +172,10 @@ code {
     width: 20%;
     text-align: center;
   }
-  margin-bottom: $gutter;
 }
 
 .swatch-wrapper .heading-19 {
-  @include media(mobile) {
-    margin-bottom: $gutter-half;
-  }
+  margin-bottom: $gutter-half;
 }
 
 .swatch-wrapper ul {
