@@ -110,6 +110,11 @@ code {
     margin-bottom: 0;
   }
 
+  // Show form group styles, only for this example
+  .form-group-example .form-group {
+    margin-bottom: 45px;
+  }
+
   .button,
   .button-link {
     margin-bottom: 5px;
@@ -175,10 +180,11 @@ code {
 }
 
 .swatch-wrapper .heading-19 {
-  margin-bottom: $gutter-half;
+  margin: $gutter-half 0;
 }
 
 .swatch-wrapper ul {
+  padding-bottom: $gutter-half;
   @include media(mobile) {
     min-height: 50px;
     padding-top: 10px;
@@ -238,6 +244,10 @@ code {
 
 .swatch-focus {
   background-color: $yellow;
+}
+
+.swatch-button-colour {
+  background-color: $button-colour;
 }
 
 // Create swatch classes for other colours in palette

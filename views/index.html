@@ -50,17 +50,33 @@
         </ul>
 
         <h3 class="heading-24">Spacing</h3>
-        <p>
-          Spacing between elements is usually 5px, 10px, 15px or multiples of 15px.
-        </p>
+        <ul class="list-bullet text">
+          <li>Spacing between elements is usually 5px, 10px, 15px or multiples of 15px.</li>
+          <li>Gutters are 15px for smaller screens and 30px for larger screens.</li>
+        </ul>
+
+        <div class="example example-images">
+          <div class="grid-wrapper">
+            <div class="grid grid-1-2">
+              <div class="inner-block">
+                <img src="/public/images/examples/15px-gutter-example.png" alt="15px gutter example">
+              </div>
+            </div>
+            <div class="grid grid-1-2">
+              <div class="inner-block">
+                <img src="/public/images/examples/30px-gutter-example.png" alt="30px gutter example">
+              </div>
+            </div>
+          </div>
+        </div>
 
         <h3 class="heading-24">Grid unit proportions</h3>
         <ul class="list-bullet text">
-          <li>base column ratios on halves, thirds or quarters of the page width</li>
-          <li>set breakpoints for small, medium and large screens using media queries</li>
-          <li>the media queries for these breakpoints can be found in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_conditionals.scss">_conditionals.scss</a> file</li>
-           <li>gutters are 15px for smaller screens and 30px for larger screens</li>
-          <li>introduce columns as the content requires it</li>
+          <li>Base column ratios on halves, thirds or quarters of the page width.</li>
+          <li>Set breakpoints for small, medium and large screens using media queries.</li>
+          <li>The media queries for these breakpoints can be found in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_conditionals.scss">_conditionals.scss</a> file.</li>
+
+          <li>Introduce columns as the content requires it.</li>
         </ul>
 
         <h4 class="heading-19">Halves</h4>
@@ -148,12 +164,12 @@
 
         <h2 class="heading-36 heading-with-border">2. Typography</h2>
         <p class="text">
-           Use the GDS Transport Website font in Light and Bold, it is licensed for use on the GOV.UK domains only. Services publicly available on different domains need to use an alternative typeface like Arial. Common font colours, can be found in the <a href="#guide-colour">colour palette</a>.
+           Use the GDS Transport Website font in Light and Bold, it is licensed for use on the GOV.UK domains only. Services publicly available on different domains need to use an alternative typeface like Arial. Common font colours can be found in the <a href="#guide-colour">colour palette</a>.
         </p>
 
         <ul>
-          <li><a href="https://www.gov.uk/service-manual/user-centered-design/resources/typography.html">Read more about GOV.UK Typography</a></li>
           <li><a href="{{ site.baseurl}}/examples/typography/">See an example of GOV.UK Typography</a></li>
+          <li><a href="https://www.gov.uk/service-manual/user-centered-design/resources/typography.html">Read more about GOV.UK Typography</a></li>
         </ul>
 
         <h3 class="heading-24">
@@ -194,10 +210,10 @@
           <span class="text-secondary">GDS Transport Website Light</span>
         </h3>
         <ul class="list-bullet text">
-          <li>19px body copy should be the main focus of the page</li>
-          <li>copy width should be a maximum 75 characters for legibility</li>
-          <li>avoid using bold text inline and italics</li>
-          <li>for specialist/internal user content smaller text sizes can be used (14px, 12px, 10px), always ensure that there is a real user need</li>
+          <li>19px body copy should be the main focus of the page.</li>
+          <li>Copy width should be a maximum 75 characters for legibility.</li>
+          <li>Avoid using bold text inline and italics.</li>
+          <li>For specialist/internal user content smaller text sizes can be used (14px, 12px, 10px), always ensure that there is a real user need.</li>
         </ul>
         <div class="example">
           <div class="grid-wrapper">
@@ -241,17 +257,17 @@
           <div class="inner-block">
 
             <ul class="list-bullet">
-              <li>here is a bulleted list</li>
-              <li>vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor</li>
-              <li>vestibulum id ligula porta felis euismod semper</li>
-              <li>integer posuere erat a ante venenatis dapibus posuere velit aliquet</li>
+              <li>Here is a bulleted list.</li>
+              <li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
+              <li>Vestibulum id ligula porta felis euismod semper.</li>
+              <li>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
             </ul>
 
             <ol class="list-number">
-              <li>here is a numbered list</li>
-              <li>vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor</li>
-              <li>vestibulum id ligula porta felis euismod semper</li>
-              <li>integer posuere erat a ante venenatis dapibus posuere velit aliquet</li>
+              <li>Here is a numbered list.</li>
+              <li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
+              <li>Vestibulum id ligula porta felis euismod semper.</li>
+              <li>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
             </ol>
 
           </div>
@@ -288,11 +304,11 @@
           When using colour on text and functional elements (like buttons) make sure difference between the foreground and background has a high enough in contrast to be seen by those with visual impairments. We aim to meet the AA colour contrast standard ratio of 4.5:1 <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">prescribed by W3C</a>, to do this we recommend testing using colour contrast tools.
         </p>
 
-        <h3 class="heading-24">Text and background colours</h3>
+        <h3 class="heading-24">Text, background and button colours</h3>
         <ul class="list-bullet text">
-          <li>use Sass variables in case colour values need to be updated, the variables are defined in <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss">colours.scss</a> in the GOV.UK front end toolkit</li>
-          <li>text should be set in black with secondary text in grey</li>
-          <li>links should be set in blue and buttons or dialog boxes should have text in white</li>
+          <li>Use Sass variables in case colour values need to be updated, the variables are defined in <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss">colours.scss</a> in the GOV.UK front end toolkit.</li>
+          <li>Text should be set in black with secondary text in grey.</li>
+          <li>Links should be set in blue and buttons or dialog boxes should have text in white.</li>
         </ul>
 
         <div class="example">
@@ -366,101 +382,24 @@
             </div>
 
             <div class="swatch-wrapper">
-              <h4 class="heading-19">Grey to white</h4>
+              <h4 class="heading-19">Buttons</h4>
 
-              <div class="swatch swatch-black"></div>
+              <div class="swatch swatch-button-colour"></div>
               <ul>
-                <li><b>#0B0C0C</b></li>
-                <li>$black</li>
+                <li><b>#00823B</b></li>
+                <li>$button-colour</li>
               </ul>
 
-              <div class="swatch swatch-grey-1"></div>
+              <div class="swatch swatch-green"></div>
               <ul>
-                <li><b>#6F777B</b></li>
-                <li>$grey-1</li>
-              </ul>
-
-              <div class="swatch swatch-grey-2"></div>
-              <ul>
-                <li><b>#BFC1C3</b></li>
-                <li>$grey-2</li>
-              </ul>
-            </div>
-
-            <div class="swatch-wrapper">
-              <h4 class="heading-19 invisible">Grey to white</h4>
-
-              <div class="swatch swatch-grey-3"></div>
-              <ul>
-                <li><b>#DEE0E2</b></li>
-                <li>$grey-3</li>
-              </ul>
-
-              <div class="swatch swatch-grey-4"></div>
-
-              <ul>
-                <li><b>#F8F8F8</b></li>
-                <li>$grey-4</li>
-              </ul>
-
-              <div class="swatch swatch-white"></div>
-              <ul>
-                <li><b>#FFFFFF</b></li>
-                <li>$white</li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-
-        <h3 class="heading-24">Commonly used colours</h3>
-        <div class="example">
-          <div class="inner-block">
-
-            <div class="swatch-wrapper">
-              <h4 class="heading-19">Alpha</h4>
-
-              <div class="swatch swatch-alpha"></div>
-              <ul>
-                <li><b>#d53880</b></li>
-                <li>$alpha-colour</li>
-              </ul>
-            </div>
-
-            <div class="swatch-wrapper">
-              <h4 class="heading-19">Beta</h4>
-
-              <div class="swatch swatch-beta"></div>
-              <ul>
-                <li><b>#f47738</b></li>
-                <li>$beta-colour</li>
-              </ul>
-            </div>
-
-            <div class="swatch-wrapper">
-              <h4 class="heading-19">Error colour</h4>
-
-              <div class="swatch swatch-error"></div>
-              <ul>
-                <li><b>#df3034</b></li>
-                <li>$error-colour</li>
-              </ul>
-            </div>
-
-            <div class="swatch-wrapper">
-              <h4 class="heading-19">Error background</h4>
-
-              <div class="swatch swatch-error-background"></div>
-              <ul>
-                <li><b>#fef7f7</b></li>
-                <li>$error-background</li>
+                <li><b>#006435</b></li>
+                <li>$green (hover colour)</li>
               </ul>
             </div>
 
             <div class="swatch-wrapper">
               <h4 class="heading-19">Focus</h4>
-
-              <div class="swatch swatch-focus"></div>
+              <div class="swatch swatch-yellow"></div>
               <ul>
                 <li><b>#FFBF47</b></li>
                 <li>$yellow</li>
@@ -470,12 +409,99 @@
           </div>
         </div>
 
-        <h3 class="heading-24">Extended pallete</h3>
+        <h3 class="heading-24">Status colours</h3>
+        <div class="example">
+          <div class="inner-block">
+
+            <div class="swatch-wrapper">
+
+              <h4 class="heading-19">Phases</h4>
+
+              <div class="swatch swatch-alpha"></div>
+              <ul>
+                <li><b>#d53880</b></li>
+                <li>$alpha-colour</li>
+              </ul>
+
+              <div class="swatch swatch-beta"></div>
+              <ul>
+                <li><b>#f47738</b></li>
+                <li>$beta-colour</li>
+              </ul>
+
+            </div>
+
+            <div class="swatch-wrapper">
+
+              <h4 class="heading-19">Errors</h4>
+
+              <div class="swatch swatch-error"></div>
+              <ul>
+                <li><b>#df3034</b></li>
+                <li>$error-colour</li>
+              </ul>
+
+              <div class="swatch swatch-error-background"></div>
+              <ul>
+                <li><b>#fef7f7</b></li>
+                <li>$error-background</li>
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+
+        <h3 class="heading-24">Greyscale palette</h3>
+        <div class="example">
+          <div class="inner-block">
+
+            <div class="swatch-wrapper">
+              <div class="swatch swatch-black"></div>
+              <ul>
+                <li><b>#0B0C0C</b></li>
+                <li>$black</li>
+              </ul>
+            </div>
+            <div class="swatch-wrapper">
+              <div class="swatch swatch-grey-1"></div>
+              <ul>
+                <li><b>#6F777B</b></li>
+                <li>$grey-1</li>
+              </ul>
+            </div>
+            <div class="swatch-wrapper">
+              <div class="swatch swatch-grey-2"></div>
+              <ul>
+                <li><b>#BFC1C3</b></li>
+                <li>$grey-2</li>
+              </ul>
+            </div>
+            <div class="swatch-wrapper">
+              <div class="swatch swatch-grey-3"></div>
+              <ul>
+                <li><b>#DEE0E2</b></li>
+                <li>$grey-3</li>
+              </ul>
+            </div>
+            <div class="swatch-wrapper">
+              <div class="swatch swatch-grey-4"></div>
+              <ul>
+                <li><b>#F8F8F8</b></li>
+                <li>$grey-4</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="heading-24">Extended palette</h3>
         <ul class="list-bullet text">
-          <li>for tints of the extended palette use 50% or 25%</li>
-          <li>used for graphs and supporting material</li>
-          <li><a href="https://www.gov.uk/performance/carers-allowance">see an example using the extended colour palette</a></li>
+          <li>For tints of the extended palette use 50% or 25%.</li>
+          <li>Used for graphs and supporting material.</li>
         </ul>
+        <p>
+          <a href="https://www.gov.uk/performance/carers-allowance">See an example of the extended colour palette on GOV.UK</a>
+        </p>
 
         <div class="example">
           <div class="inner-block">
@@ -614,11 +640,16 @@
         <p class="text">
           Avoid unnecessary decoration, only use images and icons if there is a there is a real user need.
         </p>
+        <ul class="text">
+          <li><a href="https://www.gov.uk/government/history">See an example of image usage on GOV.UK</a></li>
+        </ul>
 
         <h3 class="heading-24">Icons</h3>
         <ul class="list-bullet text">
-          <li>if icons are needed ensure they are clear, simple and help to convey information more clearly than text alone could. Don’t hide functionality under icons</li>
-          <li>ensure icons meet contrast ratio requirements</li>
+          <li>If icons are needed ensure they are clear, simple and help to convey information more clearly than text alone could.
+          Don’t hide functionality under icons.
+          </li>
+          <li>Ensure icons meet contrast ratio requirements.</li>
         </ul>
 
         <h3 class="heading-24">Image aspect ratio</h3>
@@ -651,9 +682,10 @@
           Data is recommended as an alternative to using photography. For screen readers, ensure the data value appears first so it makes sense when read aloud.
         </p>
 
-        <p>
-          <a href="https://www.gov.uk/service-manual/user-centered-design/data-visualisation.html">Read more about GOV.UK data visualisation</a>
-        </p>
+        <ul>
+          <li><a href="https://www.gov.uk/service-manual/user-centered-design/data-visualisation.html">Read more about GOV.UK data visualisation</a></li>
+          <li><a href="https://www.gov.uk/government/how-government-works">See an example of data on GOV.UK</a></li>
+        </ul>
 
         <h3 class="heading-24">Large data</h3>
         <div class="example">
@@ -714,7 +746,7 @@
 
         <h2 class="heading-36 heading-with-border">6. Forms</h2>
         <p class="text">
-          Keep forms as simple as possible, only ask what is needed to run your service. All elements use the yellow focus style, it is often a fill or 3px outline. The used is colour is Sass variable <code>$yellow</code>, Hex <code>#FFBF47</code>.
+          Keep forms as simple as possible, only ask what is needed to run your service. All elements use the yellow focus style as a highlight, as either a fill or 3px outline. The focus colour is Sass variable <code>$yellow</code>, Hex <code>#FFBF47</code>.
         </p>
 
         <p><a href="{{ site.baseurl}}/examples/forms/">See an example of GOV.UK form layout</a></p>
@@ -746,18 +778,23 @@
 
         <h3 class="heading-24">Spacing between form elements</h3>
         <p class="text">
-          Use <code>.form-group</code> to create 45px bottom spacing between form rows.
+          Ensure there is sufficient spacing between form elements. <br>
+          Use <code>.form-group</code> to group label and input pairs and create 45px bottom spacing.
         </p>
 
         <div class="example">
           <div class="inner-block">
 
-            <form action="" class="form">
+            <form action="" class="form form-group-example">
               <fieldset>
                 <div class="form-group">
-                  <label class="form-label" for="full-name-2">Full name</label>
+                  <label class="form-label" for="first-name-2">First name</label>
                   <p class="form-hint">As shown on your birth certificate or passport</p>
-                  <input type="text" class="form-control" id="full-name-2">
+                  <input type="text" class="form-control" id="first-name-2">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="last-name-2">Last name</label>
+                  <input type="text" class="form-control" id="last-name-2">
                 </div>
               </fieldset>
             </form>
@@ -767,8 +804,8 @@
 
         <h3 class="heading-24">Hint text and example text</h3>
         <ul class="list-bullet text">
-          <li>use hint text for supporting contextual help, don’t use placeholder text in fields</li>
-          <li>hint text should sit above a form field</li>
+          <li>Use hint text for supporting contextual help, don’t use placeholder text in fields.</li>
+          <li>Hint text should sit above a form field.</li>
         </ul>
         <div class="example">
           <div class="inner-block">
@@ -788,13 +825,11 @@
 
         <h3 class="heading-24">Radio buttons</h3>
         <ul class="list-bullet text">
-          <li>radio buttons let users choose a single option from a list</li>
-          <li>for more than two options, radio buttons or checkboxes should appear stacked</li>
+          <li>Radio buttons let users choose a single option from a list.</li>
+          <li>For more than two options, radio buttons or checkboxes should appear stacked.</li>
+          <li>Radio buttons and checkboxes with large hit areas are easier to select with a mouse and also for touch devices.</li>
         </ul>
 
-        <h4 class="heading-19">
-          Example 1
-        </h4>
         <div class="example">
           <div class="inner-block">
 
@@ -822,12 +857,6 @@
           </div>
         </div>
 
-        <h4 class="heading-19">
-          Example 2
-        </h4>
-        <p class="text">
-          Radio buttons and checkboxes with large hit areas are easier to select with a mouse and also for touch devices.
-        </p>
         <div class="example">
           <div class="inner-block">
 
@@ -835,6 +864,7 @@
               <fieldset>
 
                 <div class="form-group">
+
                   <label for="radio-1" class="block-label">
                     <input id="radio-1" type="radio" name="radio-group" value="1">
                     Northern Ireland
@@ -844,14 +874,14 @@
                     <input id="radio-2" type="radio" name="radio-group" value="2">
                     Isle of Man or the Channel Islands
                   </label>
-                </div>
 
-                <div class="form-group">
-                  <p>or</p>
+                  <p class="form-block">or</p>
+
                   <label for="radio-3" class="block-label">
                     <input id="radio-3" type="radio" name="radio-group" value="2">
                     I am a British citizen living abroad
                   </label>
+
                 </div>
 
               </fieldset>
@@ -860,9 +890,6 @@
           </div>
         </div>
 
-        <h4 class="heading-19">
-          Example 3
-        </h4>
         <div class="example">
           <div class="inner-block">
 
@@ -886,13 +913,11 @@
         </div>
 
         <h3 class="heading-24">Checkboxes</h3>
-        <p>
-          Checkboxes let users select either on/off toggles or multiple selections.
-        </p>
+        <ul>
+          <li>Checkboxes let users select either on/off toggles or multiple selections.</li>
+          <li>Radio buttons and checkboxes with large hit areas are easier to select with a mouse and also for touch devices.</li>
+        </ul>
 
-        <h4 class="heading-19">
-          Example 1
-        </h4>
         <div class="example">
           <div class="inner-block">
 
@@ -915,9 +940,6 @@
           </div>
         </div>
 
-        <h4 class="heading-19">
-          Example 2
-        </h4>
         <div class="example">
           <div class="inner-block">
 
@@ -944,9 +966,6 @@
           </div>
         </div>
 
-        <h4 class="heading-19">
-          Example 3
-        </h4>
         <div class="example">
           <div class="inner-block">
 
@@ -968,9 +987,14 @@
           </div>
         </div>
 
-        <h3 class="heading-24">Indented form content</h3>
+        <h3 class="heading-24">Inset content within forms</h3>
+        <ul class="list-bullet text">
+          <li>Insets can be used within forms to highlight supporting information. </li>
+          <li>Use bordered inset text to draw attention to important content on the page.</li>
+        </ul>
+
         <p class="text">
-          Indents are used within forms to highlight supporting information.
+          Click "Yes" in the example below to see how this works.
         </p>
 
         <div class="example">
@@ -1015,16 +1039,16 @@
 
         <h3 class="heading-24">Button colours</h3>
         <ul class="list-bullet text">
-          <li>buttons use the use the Sass variable, <code>$button-colour</code>, Hex <code>#00823B</code></li>
-          <li>buttons can be created, by passing this a colour variable to the button mixin defined in the <a href="https://github.com/alphagov/govuk_frontend_toolkit#buttons">GOV.UK front end toolkit</a>
-          <li>all buttons use the Sass variable <code>$yellow</code>, Hex <code>#FFBF47</code> as a focus colour, often this is used as a fill or an outline of 3px</li>
+          <li>Buttons use the use the Sass variable, <code>$button-colour</code>, Hex <code>#00823B</code>.</li>
+          <li>Buttons can be created, by passing the above colour variable to the button mixin defined in the <a href="https://github.com/alphagov/govuk_frontend_toolkit#buttons">GOV.UK front end toolkit.</a>
+          <li>All buttons use the Sass variable <code>$yellow</code>, Hex <code>#FFBF47</code> as a focus colour, often this is used as a fill or an outline of 3px.</li>
         </ul>
 
         <h3 class="heading-24">Start now button</h3>
         <div class="example">
           <div class="inner-block">
             <div class="get-started">
-              <a href="https://bluebadge.direct.gov.uk/directgovapply.html" rel="external" class="button" target="_blank">Start now</a>
+              <a href="#" class="button">Start now</a>
               <span class="destination"> on the Blue Badge eligibility tool</span>
             </div>
           </div>
@@ -1037,18 +1061,24 @@
           </div>
         </div>
 
-        <h3 class="heading-24">Disabled primary button</h3>
+        <h3 class="heading-24">Disabled button</h3>
+        <p>
+          Disabled buttons should be set at 50% opacity.
+        </p>
         <div class="example">
           <div class="inner-block">
-            <button class="button disabled">Primary button</button>
+            <button class="button disabled" disabled="disabled">Primary button</button>
           </div>
         </div>
 
         <h3 class="heading-24">Secondary button</h3>
+        <p class="text">
+          Secondary buttons should look like links.
+          There should only ever be one primary button on a page to make it clear how to proceed.
+        </p>
         <div class="example">
           <div class="inner-block">
             <button class="button-link">Secondary button</button>
-            <a class="button-link" href="{{ site.baseurl}}/example/form.html">Link</a>
           </div>
         </div>
 
@@ -1066,9 +1096,9 @@
 
         <h3 class="heading-24">Form validation errors</h3>
         <ul class="list-bullet text">
-          <li>use jump links in the summary box, to reach the errors in the form</li>
-          <li>error copy should be specific to the question and validation should identify all errors</li>
-          <li>errors should not cause pre-filled fields to clear</li>
+          <li>Use jump links in the summary box, to reach the errors in the form.</li>
+          <li>Error copy should be specific to the question and validation should identify all errors.</li>
+          <li>Errors should not cause pre-filled fields to clear.</li>
         </ul>
 
         <div class="example">

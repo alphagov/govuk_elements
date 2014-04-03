@@ -34,6 +34,12 @@ legend {
   margin-bottom: 10px;
 }
 
+// Used for paragraphs i n-between forms
+.form-block {
+  float: left;
+  width: 100%;
+  @include contain-floats;
+}
 
 // Form controls
 
@@ -42,13 +48,13 @@ legend {
 .form-control {
   width: 100%;
   box-sizing: border-box;
-  
+
   font-size: 1em;
-  
+
   padding: 4px;
   background-color: $white;
   border: 1px solid $border-colour;
-  
+
   // Disable webkit appearance and remove rounded corners
   -webkit-appearance: none;
   border-radius: 0;

@@ -2,14 +2,28 @@
 // ==========================================================================
 
 .button {
-	@include button ($green);
+	@include button ($button-colour);
 	margin: 0 $gutter-half $gutter-half 0;
 	padding: 10px 10px 5px 10px;
 	vertical-align: top;
 }
+
 .button:focus {
 	outline: 3px solid $yellow;
 }
+
+
+// Disabled buttons
+
+// Do not change colour
+.disabled:hover {
+	background: $button-colour;
+}
+// Do not have a focus state
+.disabled:focus {
+	outline: none;
+}
+
 
 // Start now buttons
 .get-started {
@@ -26,9 +40,6 @@
 		margin-bottom: 0;
 
 	  // @include ie-lte(6){
-	  //   display: inline;
-	  //   zoom: 1;
-	  //   padding: 14px 41px 10px 16px;
 	  //   background-image: url(https://assets.digital.cabinet-office.gov.uk/static/icon-pointer-indexed-837e19e1ba2d4beb5563d052b044770b.png);
 	  // }
 	}
@@ -36,7 +47,9 @@
 	.button:hover {
 		background-color: $green;
 	}
-
+	.button:focus {
+		outline: 3px solid $yellow;
+	}
 	.destination {
 		@include core-14;
 		color: #2e3133;
