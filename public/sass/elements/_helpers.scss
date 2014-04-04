@@ -14,7 +14,19 @@
   }
 }
 
-// Use the inner block mixin for this project,
+// Add the outer block mixin here,
+// until it is merged into the front end toolkit
+@mixin outer-block {
+  margin: 0 auto;
+  width: auto;
+  max-width: 960 + $gutter*2;
+  @include contain-floats;
+  @include ie-lte(8){
+    width: 1020px;
+  }
+}
+
+// Use the inner block mixin here,
 // until it is merged into the front end toolkit
 @mixin inner-block {
   padding-left: $gutter-half;

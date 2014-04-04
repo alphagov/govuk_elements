@@ -2,26 +2,13 @@
 
   padding-top: 8px;
   padding-bottom: 8px;
+
   padding-left: 0;
   padding-right: 0;
 
-  // Set a max width on .inner-block
-  .inner-block {
-    max-width: 960px;
-    margin: 0 auto;
-  }
-
-  // Don't set a max-width for any content inside .inner-block
+  // Don't set margins or padding on any content inside inner block
   p {
     margin: 0;
-    max-width: none;
-  }
-
-  // Prevent cookie message resizing in IE8 and below
-  @include ie-lte(8) {
-    .inner-block {
-      width: 960px;
-    }
   }
 
 }

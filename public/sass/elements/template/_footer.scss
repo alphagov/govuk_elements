@@ -1,14 +1,13 @@
-#footer {
-  .footer-wrapper {
-    @include inner-block;
-    max-width: 960px;
-    padding-top: 20px;
-    @include media(tablet) {
-      padding-top: 60px;
-    }
-    // Prevent footer resizing in IE8 and below
-    @include ie-lte(8){
-      width: 960px;
-    }
+#footer .footer-wrapper {
+  @include outer-block;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 20px;
+  @include media(tablet) {
+    padding-top: 60px;
   }
+}
+
+#footer .footer-meta {
+  @include inner-block;
 }

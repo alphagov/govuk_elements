@@ -4,7 +4,6 @@
 #wrapper {
   text-align: center;
   padding-bottom: $gutter;
-
   @include media(desktop) {
     padding-bottom: $gutter*3;
   }
@@ -12,20 +11,19 @@
 
 #content {
   text-align: left;
-  margin: 0 auto;
-  width: auto;
-  max-width: 960 + $gutter*2; // 1020px
-  @include contain-floats;
-
-  @include ie-lte(8){
-    width: 1020px;
-  }
-
+  @include outer-block;
 }
 
+// Use .outer-block to create a max width block of 1020px,
+// Use .inner-block to create padding that matches the header and footer
+
+.outer-block {
+  @include outer-block;
+}
 .inner-block {
   @include inner-block;
 }
+
 
 // Grid layout
 .grid-wrapper {
