@@ -1,9 +1,0 @@
-#global-header {
-
-  .header-wrapper {
-    // Prevent header resizing in IE8 and below
-    @include ie-lte(8) {
-      width: 990px;
-    }
-  }
-}
