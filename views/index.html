@@ -1082,32 +1082,39 @@
         <div class="example">
           <div class="inner-block">
 
-            <div class="validation-summary">
-              <h3 class="heading-19">There was a problem submitting the form</h3>
-              <p>Please try the following:</p>
-              <ul>
-                <li><a href="#error-your-name">Enter your name</a></li>
-                <li><a href="#error-your-email">Enter your email address</a></li>
-              </ul>
-            </div>
-
             <form action="" class="form">
+
+              <div class="validation-summary" aria-labelledby="error-heading" role="alert">
+                <h3 class="heading-19">There was a problem submitting the form</h3>
+                <p>Please try the following:</p>
+                <ul>
+                  <li><a href="#error-your-name">Enter your name</a></li>
+                  <li><a href="#error-your-email">Enter your email address</a></li>
+                </ul>
+              </div>
+
               <fieldset>
 
-                <div class="validation">
-                  <p class="validation-message" id="error-your-name">Enter your name</p>
-                  <div class="form-group">
-                    <label for="your-name-1" class="form-label">Your name</label>
+                <div class="validation-error">
+                  <div class="form-group" id="error-your-name">
+                    <label for="your-name-1" class="form-label">
+                      Your name
+                      <span class="validation-message">must be completed</span>
+                    </label>
                     <input type="text" class="form-control" id="your-name-1">
                   </div>
                 </div>
-                <div class="validation">
-                  <div class="form-group">
-                    <p class="validation-message" id="error-your-email">Enter your email address</p>
-                    <label for="your-email-1" class="form-label">Your email</label>
+
+                <div class="validation-error">
+                  <div class="form-group" id="error-your-email">
+                    <label for="your-email-1" class="form-label">
+                      Your email address
+                      <span class="validation-message">must be completed</span>
+                    </label>
                     <input type="text" class="form-control" id="your-email-1">
                   </div>
                 </div>
+
               </fieldset>
             </form>
 

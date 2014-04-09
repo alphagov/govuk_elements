@@ -287,20 +287,6 @@ code {
 // 6. Forms
 // ==========================================================================
 
-.example {
-
-  // Remove margin on form-group within example boxes
-  .form-group {
-    margin-bottom: 0;
-  }
-
-  // Add margin back to form-group to show spacing
-  .form-group-example .form-group {
-    margin-bottom: 45px;
-  }
-
-}
-
 // Hide toggled content
 .js-enabled .toggle-content {
     display: none;
