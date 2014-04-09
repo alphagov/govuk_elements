@@ -8,7 +8,6 @@ Here's a list:
 Guidance
 
 * Lightboxes
-* Progressive disclosure
 
 
 All pages
@@ -23,4 +22,3 @@ Styles
 Examples
 
 * Add horizontal rule styles to show 'easy spacing'
-* Progressive disclosure
