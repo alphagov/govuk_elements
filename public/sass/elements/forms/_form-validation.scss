@@ -39,25 +39,27 @@
 }
 
 
-// Validation message box
-.validation {
+// Validation error message box
+.validation-error {
   @include contain-floats;
   border-left: 3px solid $error-colour;
   background: $error-background;
-  padding-top: $gutter-half;
-  padding-bottom: $gutter;
-  padding-left: $gutter;
-  padding-right: $gutter;
+  padding: $gutter-half $gutter;
   margin-bottom: $gutter-half;
 }
 
-.validation p {
+.validation-error .form-group {
+  margin-bottom: 20px;
+}
+
+.validation-error p {
   margin-bottom: 10px;
 }
 
 
 // Validation message
 .validation-message {
+  display: block;
   @include core-16;
   color: $error-colour;
 }

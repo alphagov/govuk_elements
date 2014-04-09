@@ -56,8 +56,6 @@ $(document).ready(function () {
 
     });
 
-  }
-
   // Example - Details & summary
 
   // Add aria support for details
