@@ -55,6 +55,27 @@ $(document).ready(function () {
       $('#'+target).show();
 
     });
+
+  // Example - Details & summary
+
+  // Add aria support for details
+  $('details').details();
+
+  // If details is not supported, add class to html
+  if (!Modernizr.details) {
+
+    $('html').addClass('no-details');
+
+    $('summary').click(function(e){
+       var $details, $summary;
+      $summary = $(this);
+      $details = $summary.parent();
+      if ($details.attr('open')) {
+        return $details.removeAttr('open');
+      } else {
+        return $details.attr('open', 'open');
+      }
+    });
   }
 
 });
