@@ -24,6 +24,11 @@
   @include inner-block;
 }
 
+// Banners
+.alpha-banner {
+  @include fix-phase-banner(alpha);
+}
+
 
 // Grid layout
 .grid-wrapper {

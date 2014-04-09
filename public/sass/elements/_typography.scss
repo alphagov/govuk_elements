@@ -7,7 +7,7 @@
   -webkit-font-smoothing: antialiased;
 }
 
-// Headings 
+// Headings
 .heading-48 {
   @include bold-48();
   margin-top: $gutter-half;
@@ -52,8 +52,8 @@
   }
 }
 
-// Text 
-p, 
+// Text
+p,
 pre {
   margin-top: 5px;
   margin-bottom: 20px;
@@ -70,7 +70,6 @@ pre {
 
 // Set a max-width for text blocks
 // Less than 75 characters per line of text
-
 .text {
   max-width: 30em;
 }

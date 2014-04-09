@@ -23,14 +23,14 @@
 // Layout
 @import "elements/layout";
 
-// Set up GOV.UK template (TODO: to be moved into govuk_frontend_toolkit & govuk_template)
-// Phase banner
-@import "elements/template/alpha-beta";
+// Adjust alignment for GOV.UK template
+// (TODO: to be moved into govuk_template)
+
 // Global cookie message
 @import "elements/template/cookie-message";
-
-// Template alignment fixes
+// Footer alignment
 @import "elements/template/footer";
+
 
 // Modules
 // ==========================================================================
