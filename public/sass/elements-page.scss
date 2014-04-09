@@ -1,13 +1,13 @@
 @import "main";
 
+// ==========================================================================
 // Service Design Manual styles
 // ==========================================================================
 
-@import "service-design-manual/layouts/gsdm";
 @import "service-design-manual/helpers/page-header";
 @import "service-design-manual/helpers/breadcrumbs";
 
-// Adjust Service Design header to align with content
+// Adjust Service Design Manual header to align with content
 #global-breadcrumb,
 .page-header {
   margin-left: $gutter-half;
@@ -19,13 +19,15 @@
   }
 }
 
+
+// ==========================================================================
 // Elements page styles
 // ==========================================================================
 
 // These are example styles, used only for the Elements page example boxes
 
 // Code styles
-// Match those in the Service Manual
+// Match those in the Service Design Manual
 pre,
 code {
   font-size: 13px;
@@ -37,48 +39,25 @@ code {
 }
 
 // Headings
-
 .heading-with-border {
   border-top: 1px solid $border-colour;
   padding-top: ($gutter*1.5);
 }
 
 // Text
-
 .tight {
   margin-bottom: 0;
 }
 
-// Panels
-.panel-indent {
-  @include contain-floats;
-  clear: both;
-  border-left: 5px solid $grey-3;
-
-  margin: ($gutter $gutter-half $gutter 0);
-  @include media(tablet){
-    margin: ($gutter $gutter-half $gutter*2 0);
-  }
-  padding: 5px 5px 5px $gutter-half;
-  @include media(tablet){
-    padding: 10px $gutter-half 10px $gutter;
-  }
-
-
-}
-
-.panel-indent p,
-.panel-indent ul {
-  margin-bottom: 0;
-}
-
 // Lists
-
 .list-bullet {
   margin-bottom: ($gutter*1.5);
 }
 
-// Example box
+
+// Example boxes
+// ==========================================================================
+
 .example {
 
   @include contain-floats;
@@ -96,37 +75,19 @@ code {
     padding-bottom: $gutter;
   }
 
+  // Blue text for heading sizes
   .highlight {
     font-style: normal;
     color: $hm-government;
   }
 
-  // Reduce top and bottom margins on content in example boxes
-  .panel-indent {
-    margin: 0;
-  }
-
-  .form-group {
-    margin-bottom: 0;
-  }
-
-  // Show form group styles, only for this example
-  .form-group-example .form-group {
-    margin-bottom: 45px;
-  }
-
-  .button,
-  .button-link {
-    margin-bottom: 5px;
-  }
-
-  .heading-24 {
-    margin-top: 0;
-  }
-
 }
 
-// Example box - grids
+
+// 1. Layout
+// ==========================================================================
+
+// Grid layout boxes
 .example-grid {
   background: white;
   padding-top: 15px;
@@ -146,57 +107,25 @@ code {
     min-height: 60px;
   }
   overflow: hidden;
-  text-indent: -99em;
+  text-indent: -999em;
 }
 
 
-// Example box - Images
-.example-images img {
-  max-width: 100%;
-  vertical-align: top;
-}
+// 2. Typography
+// ==========================================================================
 
+// Inset text
+.example {
 
-// Find out more
-.find-out-more {
-  margin-bottom: ($gutter*2);
-  margin-top: ($gutter);
-  padding-bottom: $gutter-half;
-
-  .heading-24 {
-    margin-top: 0;
-    padding-top: $gutter-half;
+  // Reduce top and bottom margins on content in example boxes
+  .panel-indent {
+    margin: 0;
   }
 }
 
 
-// Colour swatch wrapper
-.swatch-wrapper {
-  @include media(tablet) {
-    float: left;
-    width: 20%;
-    text-align: center;
-  }
-}
-
-.swatch-wrapper .heading-19 {
-  margin: $gutter-half 0;
-}
-
-.swatch-wrapper ul {
-  padding-bottom: $gutter-half;
-  @include media(mobile) {
-    min-height: 50px;
-    padding-top: 10px;
-  }
-}
-.swatch-wrapper li {
-  @include core-16;
-}
-.swatch-wrapper b {
-  font-weight: bold;
-  text-transform: uppercase;
-}
+// 3. Colour
+// ==========================================================================
 
 // Colour swatches
 .swatch {
@@ -214,7 +143,6 @@ code {
   }
 }
 
-// Generate swatch classes for each colour in palette list
 @mixin color-swatches {
   @each $color in $palette {
     $color-name: nth($color, 1);
@@ -225,12 +153,13 @@ code {
   }
 }
 
+// Generate swatch classes for each colour in palette list
 @include color-swatches;
 
-// Common colours
 .swatch-alpha {
   background-color: $alpha-colour;
 }
+
 .swatch-beta {
   background-color: $beta-colour;
 }
@@ -238,6 +167,7 @@ code {
 .swatch-error {
   background-color: $error-colour;
 }
+
 .swatch-error-background {
   background-color: $error-background;
 }
@@ -250,34 +180,39 @@ code {
   background-color: $button-colour;
 }
 
-// Create swatch classes for other colours in palette
 .swatch-black {
   background-color: $black;
 }
+
 .swatch-grey-1 {
   background-color: $grey-1;
 }
+
 .swatch-grey-2 {
   background-color: $grey-2;
 }
+
 .swatch-grey-3 {
   background-color: $grey-3;
 }
+
 .swatch-grey-4 {
   background-color: $grey-4;
 }
+
 .swatch-white {
   background-color: $white;
   border: 1px solid $grey-3;
 }
 
-// Swatches for text, links and backgrounds
 .swatch-text-colour {
   background-color: $text-colour;
 }
+
 .swatch-text-secondary {
   background-color: $secondary-text-colour;
 }
+
 .swatch-page-colour {
   background-color: $page-colour;
   border: 1px solid $grey-3;
@@ -286,9 +221,11 @@ code {
 .swatch-link-colour {
  background-color: $link-colour;
 }
+
 .swatch-link-colour-visited {
  background-color: $link-visited-colour;
 }
+
 .swatch-link-colour-hover {
  background-color: $link-hover-colour;
 }
@@ -296,15 +233,97 @@ code {
 .swatch-border-colour {
   background-color: $border-colour;
 }
+
 .swatch-panel-colour {
   background-color: $panel-colour;
 }
+
 .swatch-highlight-colour {
   background-color: $highlight-colour;
 }
 
-// Toggle hidden content
-.js-enabled .toggle-content{
+// Colour swatch layout
+.swatch-wrapper {
+  @include media(tablet) {
+    float: left;
+    width: 20%;
+    text-align: center;
+  }
+
+  .heading-19 {
+    margin: $gutter-half 0;
+  }
+
+  ul {
+    padding-bottom: $gutter-half;
+    @include media(mobile) {
+      min-height: 50px;
+      padding-top: 10px;
+    }
+  }
+  li {
+    @include core-16;
+  }
+  b {
+  font-weight: bold;
+  text-transform: uppercase;
+  }
+}
+
+
+// 4. Images and icons
+// ==========================================================================
+
+.example-images img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+
+// 5. Data
+// ==========================================================================
+
+
+// 6. Forms
+// ==========================================================================
+
+.example {
+
+  // Remove margin on form-group within example boxes
+  .form-group {
+    margin-bottom: 0;
+  }
+
+  // Add margin back to form-group to show spacing
+  .form-group-example .form-group {
+    margin-bottom: 45px;
+  }
+
+}
+
+// Hide toggled content
+.js-enabled .toggle-content {
     display: none;
 }
+
+
+// 7. Buttons
+// ==========================================================================
+
+.example {
+
+  // Create even spacing under buttons
+  .button,
+  .button-link {
+    margin-bottom: 2px;
+  }
+}
+
+
+// 8. Errors and validation
+// ==========================================================================
+
+
+// 9. Tables
+// ==========================================================================
 
