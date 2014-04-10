@@ -80,11 +80,8 @@
 
         <h3 class="heading-24">Grid unit proportions</h3>
         <ul class="list-bullet text">
-          <li>Base column ratios on halves, thirds or quarters of the page width.</li>
-          <li>Set breakpoints for small, medium and large screens using media queries.</li>
-          <li>The media queries for these breakpoints can be found in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_conditionals.scss">_conditionals.scss</a> file.</li>
-
-          <li>Introduce columns as the content requires it.</li>
+          <li>Only introduce columns as the content requires it, base column ratios on halves, thirds or quarters of the page width.</li>
+          <li>Set breakpoints for small, medium and large screens using media queries, these can be found in the GOV.UK front end toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_conditionals.scss">_conditionals.scss</a> file.</li>
         </ul>
 
         <h4 class="heading-19">Halves</h4>
@@ -177,7 +174,7 @@
 
         <ul>
           <li><a href="{{ site.baseurl}}/examples/typography/">See an example of GOV.UK Typography</a></li>
-          <li><a href="https://gds.blog.gov.uk/2012/07/05/a-few-notes-on-typography/">Read a blog post about GOV.UK Typography</a></li>
+          <li><a href="https://gds.blog.gov.uk/2012/07/05/a-few-notes-on-typography/">Read a blog post about developing the GOV.UK typeface</a></li>
         </ul>
 
         <h3 class="heading-24">
@@ -285,6 +282,9 @@
         <p class="text">
           Use bordered inset text to draw attention to important content on the page.
         </p>
+        <p class="text">
+          <a href="https://www.gov.uk/holiday-entitlement-rights">See an example of inset text on GOV.UK</a>
+        </p>
         <div class="example">
           <div class="inner-block">
 
@@ -301,6 +301,9 @@
         <p class="text">
           Use progressive disclosure to make your page easier to scan,
           only showing contextual information when required.
+        </p>
+        <p class="text">
+          Click on the text "How to get this" below, to see how this works.
         </p>
         <div class="example">
           <div class="inner-block">
@@ -320,19 +323,23 @@
 
         <h2 class="heading-36 heading-with-border">3. Colour</h2>
         <p class="text">
-
+          Always use the gov.uk colour palettes and ensure that you meet the required accessibility standards.
         </p>
 
         <h3 class="heading-24">Colour and accessibility</h3>
-        <p class="text">
-          When using colour on text and functional elements (like buttons) make sure difference between the foreground and background has a high enough in contrast to be seen by those with visual impairments. We aim to meet the AA colour contrast standard ratio of 4.5:1 <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">prescribed by W3C</a>, to do this we recommend testing using colour contrast tools.
-        </p>
+        <ul class="list-bullet text">
+          <li>
+            When using colour on text and functional elements (like buttons) make sure the contrast is high enough to be seen by those with visual impairments.
+          </li>
+          <li>
+            We aim to meet the AA colour contrast standard ratio of 4.5:1 recommended by <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">the W3C</a>. Test to meet this standard.
+          </li>
+        </ul>
 
         <h3 class="heading-24">Text, background and button colours</h3>
         <ul class="list-bullet text">
           <li>Use Sass variables below in case colour values need to be updated, the variables are defined in <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss">colours.scss</a> of the GOV.UK front end toolkit.</li>
-          <li>Text should be set in black <code>$text-colour</code> with secondary text in grey <code>$text-secondary</code>.</li>
-          <li>Links should be set in blue <code>$link-colour</code> and buttons or dialog boxes should have text in white.</li>
+          <li>Text should be set in black <code>$text-colour</code> with secondary text in grey <code>$text-secondary</code>, links should be set in blue <code>$link-colour</code> and buttons or dialog boxes should have white text.</li>
         </ul>
 
         <div class="example">
@@ -671,9 +678,8 @@
         <h3 class="heading-24">Icons</h3>
         <ul class="list-bullet text">
           <li>If icons are needed ensure they are clear, simple and help to convey information more clearly than text alone could.
-          Don’t hide functionality under icons.
           </li>
-          <li>Ensure icons meet contrast ratio requirements.</li>
+          <li>Don’t hide functionality under icons.</li>
         </ul>
 
         <h3 class="heading-24">Image aspect ratio</h3>
@@ -709,6 +715,7 @@
         <ul>
           <li><a href="https://www.gov.uk/service-manual/user-centered-design/data-visualisation.html">Read more about GOV.UK data visualisation</a></li>
           <li><a href="https://www.gov.uk/government/how-government-works#how-governement-is-run">See an example of data on GOV.UK</a></li>
+          <li><a href="https://www.gov.uk/performance/tax-disc">See an example of data on the GOV.UK performance platform</a></li>
         </ul>
 
         <h3 class="heading-24">Large data</h3>
@@ -774,11 +781,6 @@
         </p>
 
         <p><a href="{{ site.baseurl}}/examples/forms/">See an example of GOV.UK form layout</a></p>
-
-        <h3 class="heading-24">Dropdowns</h3>
-        <p class="text">
-          Avoid using dropdowns, instead we recommend; radio buttons, using predictive fields (good for long lists like countries) and checkboxes.
-        </p>
 
         <h3 class="heading-24">Form inputs and labels</h3>
         <p class="text">
@@ -855,7 +857,6 @@
               <fieldset>
                 <div class="form-group">
                   <label class="form-label" for="first-name-2">First name</label>
-                  <p class="form-hint">As shown on your birth certificate or passport</p>
                   <input type="text" class="form-control" id="first-name-2">
                 </div>
                 <div class="form-group">
@@ -873,6 +874,7 @@
           <li>Use hint text for supporting contextual help.</li>
           <li>Don’t use placeholder text in fields.</li>
           <li>Hint text should sit above a form field.</li>
+          <li>Ensure hint text can be read correctly by screenreaders.</li>
         </ul>
         <div class="example">
           <div class="inner-block">
@@ -890,10 +892,15 @@
           </div>
         </div>
 
+        <h3 class="heading-24">Dropdowns</h3>
+        <p class="text">
+          Avoid using dropdowns, instead we recommend; radio buttons, using predictive fields (good for long lists like countries) and checkboxes.
+        </p>
+        <!-- TODO: link to blog post to support this statement -->
+
         <h3 class="heading-24">Radio buttons</h3>
         <ul class="list-bullet text">
           <li>Radio buttons let users choose a single option from a list.</li>
-          <li>For two options, these can sit side-by-side.</li>
           <li>For more than two options, radio buttons or checkboxes should be stacked.</li>
           <li>Radio buttons with large hit areas are easier to select with a mouse and also for touch devices.</li>
         </ul>
