@@ -762,7 +762,7 @@
 
         <h2 class="heading-36 heading-with-border">6. Forms</h2>
         <p class="text">
-          Keep forms as simple as possible, only ask what is needed to run your service. All elements use the yellow focus style as a highlight, as either a fill or 3px outline. The focus colour is Sass variable <code>$yellow</code>, Hex <code>#FFBF47</code>.
+          Keep forms as simple as possible, only ask what is needed to run your service.
         </p>
 
         <p><a href="{{ site.baseurl}}/examples/forms/">See an example of GOV.UK form layout</a></p>
@@ -783,11 +783,53 @@
             <form action="" class="form">
               <fieldset>
                 <div class="form-group">
-                  <label for="full-name-1" class="form-label">Full name</label>
-                  <input type="text" class="form-control" id="full-name-1">
+                  <label for="full-name-f1" class="form-label">Full name</label>
+                  <input type="text" class="form-control" id="full-name-f1">
                 </div>
               </fieldset>
             </form>
+
+          </div>
+        </div>
+
+        <h3 class="heading-24">Form focus states</h3>
+        <p class="text">
+          All elements use the yellow focus style as a highlight, as either a fill or 3px outline.
+        </p>
+        <p class="text">
+          Click on either the label "Full name", or inside form field below to show the focus state.
+        </p>
+
+        <div class="example">
+          <div class="grid-wrapper">
+            <div class="grid grid-3-4">
+              <div class="inner-block">
+
+                <form action="" class="form">
+                  <fieldset>
+                    <div class="form-group">
+                      <label for="full-name-f2" class="form-label">Full name</label>
+                      <input type="text" class="form-control" id="full-name-f2">
+                    </div>
+                  </fieldset>
+                </form>
+
+              </div>
+            </div>
+            <div class="grid grid-1-4">
+              <div class="inner-block">
+
+                <div class="swatch-wrapper">
+                  <h4 class="heading-19">Focus</h4>
+                  <div class="swatch swatch-yellow"></div>
+                  <ul>
+                    <li><b>#FFBF47</b></li>
+                    <li>$yellow</li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
 
           </div>
         </div>

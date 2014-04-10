@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
   // Example - Highlight grid
 
@@ -28,7 +28,7 @@ $(document).ready(function () {
 
   if ($('.form').length>0) {
 
-    $(".block-label").each(function(){
+    $(".block-label").each(function() {
 
       // Add focus
       $(".block-label input").focus(function() {
@@ -56,6 +56,8 @@ $(document).ready(function () {
 
     });
 
+  }
+
   // Example - Details & summary
 
   // Add aria support for details
@@ -66,15 +68,18 @@ $(document).ready(function () {
 
     $('html').addClass('no-details');
 
-    $('summary').click(function(e){
-       var $details, $summary;
+    $('summary').click(function() {
+
+      var $details, $summary;
       $summary = $(this);
       $details = $summary.parent();
+
       if ($details.attr('open')) {
         return $details.removeAttr('open');
       } else {
         return $details.attr('open', 'open');
       }
+
     });
   }
 
