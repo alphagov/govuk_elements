@@ -19,6 +19,14 @@
   }
 }
 
+// Alpha banner - this a prototype and this content is likely to change
+.alpha-banner  {
+  @include phase-banner(alpha);
+  strong {
+    font-weight: bold;
+  }
+}
+
 
 // ==========================================================================
 // Elements page styles
