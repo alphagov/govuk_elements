@@ -30,7 +30,7 @@
           <li><a href="#guide-layout">Layout</a></li>
           <li><a href="#guide-typography">Typography</a></li>
           <li><a href="#guide-colour">Colour</a></li>
-          <li><a href="#guide-images-icons">Images and icons</a></li>
+          <li><a href="#guide-icons-images">Icons and images</a></li>
           <li><a href="#guide-data">Data</a></li>
           <li><a href="#guide-forms">Forms</a></li>
           <li><a href="#guide-buttons">Buttons</a></li>
@@ -49,7 +49,10 @@
         <h2 class="heading-36 heading-with-border">1. Layout</h2>
         <div class="text">
           <p>
-            When creating your layouts use white space to create a visual hierarchy on the page, aim to design for small screens first, using a single column layout. Consider how you can optimise your layout for different screen sizes, but don’t make assumptions about what devices people are using (things change.)
+            When creating your layouts use white space to create a visual hierarchy on the page. Aim to design for small screens first using a single column layout.
+          </p>
+          <p>
+            Optimise for different screen sizes, but don’t make assumptions about what devices people are using.
           </p>
         </div>
 
@@ -59,8 +62,8 @@
 
         <h3 class="heading-24">Spacing</h3>
         <ul class="list-bullet text">
-          <li>Spacing between elements is usually 5px, 10px, 15px or multiples of 15px.</li>
-          <li>Gutters are 15px for smaller screens and 30px for larger screens.</li>
+          <li>spacing between elements is usually 5px, 10px, 15px or multiples of 15px</li>
+          <li>gutters are 15px for smaller screens and 30px for larger screens</li>
         </ul>
 
         <div class="example example-images">
@@ -80,8 +83,8 @@
 
         <h3 class="heading-24">Grid unit proportions</h3>
         <ul class="list-bullet text">
-          <li>Only introduce columns as the content requires it, base column ratios on halves, thirds or quarters of the page width.</li>
-          <li>Set breakpoints for small, medium and large screens using media queries, these can be found in the GOV.UK front end toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_conditionals.scss">_conditionals.scss</a> file.</li>
+          <li>introduce columns as the content requires it – base column ratios on halves, thirds or quarters of the page width</li>
+          <li>use media queries to set breakpoints for screen sizes – find these in the GOV.UK front end toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_conditionals.scss">_conditionals.scss</a> file</li>
         </ul>
 
         <h4 class="heading-19">Halves</h4>
@@ -169,7 +172,7 @@
 
         <h2 class="heading-36 heading-with-border">2. Typography</h2>
         <p class="text">
-           Use the GDS Transport Website font in Light and Bold, it is licensed for use on the GOV.UK domains only. Services publicly available on different domains need to use an alternative typeface like Arial. Common font colours can be found in the <a href="#guide-colour">colour palette</a>.
+           Use the GDS Transport Website font in Light and Bold. It's licensed for use on the GOV.UK domains only. For services publicly available on different domains, use an alternative typeface like Arial. You can find common font colours in the <a href="#guide-colour">colour palette</a>.
         </p>
 
         <ul>
@@ -178,68 +181,60 @@
         </ul>
 
         <h3 class="heading-24">
-          Headings <br>
-          <span class="text-secondary">GDS Transport Website Bold</span>
+          Headings
         </h3>
-        <p>
-          Use headings consistently to create a clear hierarchy.
-        </p>
+
+        <ul class="list-bullet text">
+          <li>use GDS Transport Website Bold</li>
+          <li>use headings consistently to create a clear hierarchy</li>
+        </ul>
 
         <div class="example">
-          <div class="grid-wrapper">
-            <div class="grid grid-1-2">
-              <div class="inner-block">
-
-                <h1 class="heading-48">A 48px heading</h1>
-                <h2 class="heading-36">A 36px heading</h2>
-                <h3 class="heading-24">A 24px heading</h3>
-                <h4 class="heading-19">A 19px heading</h4>
-
-              </div>
-            </div>
-            <div class="grid grid-1-2">
-              <div class="inner-block">
-
-                <h1 class="heading-48">Heading <em class="highlight">Bold 48px</em></h1>
-                <h2 class="heading-36">Heading <em class="highlight">Bold 36px</em></h2>
-                <h3 class="heading-24">Heading <em class="highlight">Bold 24px</em></h3>
-                <h4 class="heading-19">Heading <em class="highlight">Bold 19px</em></h4>
-
-              </div>
-            </div>
+          <div class="inner-block">
+            <h1 class="heading-48">A <em class="highlight">48px Bold</em> heading</h1>
+            <h2 class="heading-36">A <em class="highlight">36px Bold</em> heading</h2>
+            <h3 class="heading-24">A <em class="highlight">24px Bold</em> heading</h3>
+            <h4 class="heading-19">A <em class="highlight">19px Bold</em> heading</h4>
           </div>
         </div>
 
         <h3 class="heading-24">
-          Body copy <br>
-          <span class="text-secondary">GDS Transport Website Light</span>
+          Lead paragraph
         </h3>
+        <p>
+          There should only be one lead paragraph per page.
+        </p>
+
+        <div class="example">
+          <div class="inner-block">
+
+            <div class="text">
+              <p class="lead">A <em class="highlight">24px</em> lead paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
+              <p class="copy-19">A <em class="highlight">19px</em> body copy paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <h3 class="heading-24">
+          Body copy
+        </h3>
+
         <ul class="list-bullet text">
-          <li>19px body copy should be the main focus of the page.</li>
-          <li>Copy width should be a maximum 75 characters for legibility.</li>
-          <li>Avoid using bold text inline and italics.</li>
-          <li>For specialist/internal user content smaller text sizes can be used (14px, 12px, 10px), always ensure that there is a real user need.</li>
+          <li>use GDS Transport Website Light</li>
+          <li>avoid using bold and italics</li>
+          <li>19px body copy should be the main focus of the page</li>
+          <li>for larger screens, copy width should be two thirds of the page to make it easier to read</li>
+          <li>you can use smaller text sizes for specialist/internal user content (e.g. 16px, 14px, 12px, 10px) - always ensure there's a user need</li>
         </ul>
         <div class="example">
-          <div class="grid-wrapper">
-            <div class="grid grid-1-2">
-              <div class="inner-block">
+          <div class="inner-block">
 
-                <p class="lead">A 24px lead paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
-                <p class="copy-19">A 19px body copy paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
-                <p class="copy-16">A 16px supporting text paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. </p>
-
-              </div>
+            <div class="text">
+              <p class="copy-19">A <em class="highlight">19px</em> body copy paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
+              <p class="copy-16">A <em class="highlight">16px</em> supporting text paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. </p>
             </div>
-            <div class="grid grid-1-2">
-              <div class="inner-block">
 
-                <p class="lead">Paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. <em class="highlight">Normal 24px</em></p>
-                <p class="copy-19">Paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. <em class="highlight">Normal 19px</em></p>
-                <p class="copy-16">Paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. <em class="highlight">Normal 16px</em></p>
-
-              </div>
-            </div>
           </div>
         </div>
 
@@ -247,12 +242,14 @@
         <div class="example">
           <div class="inner-block">
 
-            <p class="copy-19">
-              <a href="">A 19px body copy link.</a> Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-            </p>
-            <p class="copy-19">
-              <a href="#" rel="external">A 19px body copy external link.</a> Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-            </p>
+            <div class="text">
+              <p class="copy-19">
+                <a href="">A 19px body copy link.</a> Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+              </p>
+              <p class="copy-19">
+                <a href="#" rel="external">A 19px body copy external link.</a> Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+              </p>
+            </div>
 
           </div>
         </div>
@@ -261,18 +258,18 @@
         <div class="example">
           <div class="inner-block">
 
-            <ul class="list-bullet">
-              <li>Here is a bulleted list.</li>
-              <li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
-              <li>Vestibulum id ligula porta felis euismod semper.</li>
-              <li>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+            <ul class="list-bullet text">
+              <li>here is a bulleted list</li>
+              <li>vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor</li>
+              <li>vestibulum id ligula porta felis euismod semper</li>
+              <li>integer posuere erat a ante venenatis dapibus posuere velit aliquet</li>
             </ul>
 
-            <ol class="list-number">
-              <li>Here is a numbered list.</li>
-              <li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
-              <li>Vestibulum id ligula porta felis euismod semper.</li>
-              <li>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+            <ol class="list-number text">
+              <li>here is a numbered list</li>
+              <li>vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor</li>
+              <li>vestibulum id ligula porta felis euismod semper</li>
+              <li>integer posuere erat a ante venenatis dapibus posuere velit aliquet</li>
             </ol>
 
           </div>
@@ -297,13 +294,13 @@
           </div>
         </div>
 
-        <h3 class="heading-24">Hidden text</h3>
+        <h3 class="heading-24">Hidden text (progressive disclosure)</h3>
         <p class="text">
-          Use progressive disclosure to make your page easier to scan,
+          Use this to make your page easier to scan,
           only showing contextual information when required.
         </p>
         <p class="text">
-          Click on the text "How to get this" below, to see how this works.
+          Click on "How to get this" to see how this works.
         </p>
         <div class="example">
           <div class="inner-block">
@@ -323,23 +320,23 @@
 
         <h2 class="heading-36 heading-with-border">3. Colour</h2>
         <p class="text">
-          Always use the gov.uk colour palettes and ensure that you meet the required accessibility standards.
+          Always use the GOV.UK colour palette.
         </p>
 
         <h3 class="heading-24">Colour and accessibility</h3>
         <ul class="list-bullet text">
           <li>
-            When using colour on text and functional elements (like buttons) make sure the contrast is high enough to be seen by those with visual impairments.
+            when using colour on text and functional elements (like buttons) make sure the contrast is high enough for those with visual impairments
           </li>
           <li>
-            We aim to meet the AA colour contrast standard ratio of 4.5:1 recommended by <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">the W3C</a>. Test to meet this standard.
+            we aim to meet the <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" rel="external">AA colour contrast ratio</a> of 4.5:1 recommended by the <acronym title="World Wide Web Consortium (W3C)">W3C</acronym> - test to meet this standard
           </li>
         </ul>
 
         <h3 class="heading-24">Text, background and button colours</h3>
         <ul class="list-bullet text">
-          <li>Use Sass variables below in case colour values need to be updated, the variables are defined in <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss">colours.scss</a> of the GOV.UK front end toolkit.</li>
-          <li>Text should be set in black <code>$text-colour</code> with secondary text in grey <code>$text-secondary</code>, links should be set in blue <code>$link-colour</code> and buttons or dialog boxes should have white text.</li>
+          <li>use Sass variables in case colour values need to be updated – find these in the GOV.UK front end toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss">colours.scss</a> file</li>
+          <li>text should be set in black <code>$text-colour</code> with secondary text in grey <code>$text-secondary</code>, links should be set in blue <code>$link-colour</code> and buttons should have white text</li>
         </ul>
 
         <div class="example">
@@ -527,8 +524,8 @@
 
         <h3 class="heading-24">Extended palette</h3>
         <ul class="list-bullet text">
-          <li>For tints of the extended palette use 50% or 25%.</li>
-          <li>Used for graphs and supporting material.</li>
+          <li>used for graphs and supporting material</li>
+          <li>for tints of the extended palette use 50% or 25%</li>
         </ul>
         <p>
           <a href="https://www.gov.uk/performance/carers-allowance">See an example of the extended colour palette on GOV.UK</a>
@@ -665,11 +662,11 @@
       </div>
       <!-- / #guide-colour -->
 
-      <div id="guide-images-icons">
+      <div id="guide-icons-images">
 
-        <h2 class="heading-36 heading-with-border">4. Images and icons</h2>
+        <h2 class="heading-36 heading-with-border">4. Icons and images</h2>
         <p class="text">
-          Avoid unnecessary decoration, only use images and icons if there is a there is a real user need.
+          Avoid unnecessary decoration - only use icons and images if there's a real user need.
         </p>
         <ul class="text">
           <li><a href="https://www.gov.uk/government/history">See an example of image usage on GOV.UK</a></li>
@@ -677,12 +674,15 @@
 
         <h3 class="heading-24">Icons</h3>
         <ul class="list-bullet text">
-          <li>If icons are needed ensure they are clear, simple and help to convey information more clearly than text alone could.
+          <li>
+            if icons are needed ensure they are clear, simple and accompanied by relevant text
           </li>
-          <li>Don’t hide functionality under icons.</li>
+          <li>
+            don’t hide functionality under icons
+          </li>
         </ul>
 
-        <h3 class="heading-24">Image aspect ratio</h3>
+        <h3 class="heading-24">Images</h3>
         <p>
           If images are needed they should be landscape, 3:2 aspect ratio.
         </p>
@@ -709,7 +709,7 @@
 
         <h2 class="heading-36 heading-with-border">5. Data</h2>
         <p class="text">
-          Data is recommended as an alternative to using photography. For screen readers, ensure the data value appears first so it makes sense when read aloud.
+          Data is recommended as an alternative to using images.
         </p>
 
         <ul>
@@ -718,7 +718,11 @@
           <li><a href="https://www.gov.uk/performance/tax-disc">See an example of data on the GOV.UK performance platform</a></li>
         </ul>
 
-        <h3 class="heading-24">Large data</h3>
+        <h3 class="heading-24">Data visualisation</h3>
+        <p class="text">
+          For screen readers, ensure the data value appears first so it makes sense when read aloud.
+        </p>
+
         <div class="example">
           <div class="grid-wrapper">
             <div class="grid grid-1-2">
@@ -744,7 +748,6 @@
           </div>
         </div>
 
-        <h3 class="heading-24">Small data</h3>
         <div class="example">
           <div class="grid-wrapper">
             <div class="grid grid-1-2">
@@ -777,14 +780,14 @@
 
         <h2 class="heading-36 heading-with-border">6. Forms</h2>
         <p class="text">
-          Keep forms as simple as possible, only ask what is needed to run your service.
+          Keep forms as simple as possible &ndash; only ask what's needed to run your service.
         </p>
 
         <p><a href="{{ site.baseurl}}/examples/forms/">See an example of GOV.UK form layout</a></p>
 
-        <h3 class="heading-24">Form inputs and labels</h3>
+        <h3 class="heading-24">Form fields and labels</h3>
         <p class="text">
-          Labels should be aligned above their controls.
+          Labels should be aligned above form fields.
         </p>
 
         <div class="example">
@@ -807,7 +810,7 @@
           All elements use the yellow focus style as a highlight, as either a fill or 3px outline.
         </p>
         <p class="text">
-          Click on either the label "Full name", or inside the form field below to show the focus state.
+          Click on the label "Full name" or inside the form field to show the focus state.
         </p>
 
         <div class="example">
@@ -846,8 +849,7 @@
 
         <h3 class="heading-24">Spacing between form elements</h3>
         <p class="text">
-          Ensure there is sufficient spacing between form elements. <br>
-          Use <code>.form-group</code> to group label and input pairs and create 45px bottom spacing.
+          Ensure there is sufficient spacing between form elements.
         </p>
 
         <div class="example">
@@ -869,12 +871,12 @@
           </div>
         </div>
 
-        <h3 class="heading-24">Hint text and example text</h3>
+        <h3 class="heading-24">Hint and example text</h3>
         <ul class="list-bullet text">
-          <li>Use hint text for supporting contextual help.</li>
-          <li>Don’t use placeholder text in fields.</li>
-          <li>Hint text should sit above a form field.</li>
-          <li>Ensure hint text can be read correctly by screenreaders.</li>
+          <li>use hint text for supporting contextual help</li>
+          <li>don’t use placeholder text in fields</li>
+          <li>hint text should sit above a form field</li>
+          <li>ensure hint text can be read correctly by screen readers</li>
         </ul>
         <div class="example">
           <div class="inner-block">
@@ -883,7 +885,7 @@
               <fieldset>
                 <div class="form-group">
                   <label class="form-label" for="ni-number-1">National Insurance number</label>
-                  <p class="form-hint">It'll be on your last payslip. For example JH 219 00A.</p>
+                  <p class="form-hint">It'll be on your last payslip. For example JH 21 90 0A.</p>
                   <input type="text" class="form-control" id="ni-number-1">
                 </div>
               </fieldset>
@@ -894,15 +896,15 @@
 
         <h3 class="heading-24">Dropdowns</h3>
         <p class="text">
-          Avoid using dropdowns, instead we recommend; radio buttons, using predictive fields (good for long lists like countries) and checkboxes.
+          Avoid using dropdowns - use radio buttons or checkboxes instead.
         </p>
         <!-- TODO: link to blog post to support this statement -->
 
         <h3 class="heading-24">Radio buttons</h3>
         <ul class="list-bullet text">
-          <li>Radio buttons let users choose a single option from a list.</li>
-          <li>For more than two options, radio buttons or checkboxes should be stacked.</li>
-          <li>Radio buttons with large hit areas are easier to select with a mouse and also for touch devices.</li>
+          <li>use these to let users choose a single option from a list</li>
+          <li>for more than two options, radio buttons should be stacked</li>
+          <li>radio buttons with large hit areas are easier to select with a mouse or touch devices</li>
         </ul>
 
         <div class="example">
@@ -962,31 +964,10 @@
 
         <h3 class="heading-24">Checkboxes</h3>
         <ul class="list-bullet text">
-          <li>Checkboxes let users select either on/off toggles or multiple selections.</li>
-          <li>Checkboxes with large hit areas are easier to select with a mouse and also for touch devices.</li>
+          <li>use these to select either on/off toggles or multiple selections</li>
+          <li>for more than two options, checkboxes should be stacked</li>
+          <li>checkboxes with large hit areas are easier to select with a mouse or touch devices</li>
         </ul>
-
-        <div class="example">
-          <div class="inner-block">
-
-            <form action="" class="form">
-              <fieldset>
-
-                <div class="form-group">
-                  <label for="telephone-number" class="form-label">Enter your telephone number</label>
-                  <input type="text" class="form-control" id="telephone-number">
-
-                  <label for="checkbox-telephone-number" class="form-checkbox">
-                    <input id="checkbox-telephone-number" type="checkbox" value="checkbox-telephone-number">
-                    I need to be contacted using a text phone
-                  </label>
-                </div>
-
-              </fieldset>
-            </form>
-
-          </div>
-        </div>
 
         <div class="example">
           <div class="inner-block">
@@ -1035,14 +1016,39 @@
           </div>
         </div>
 
-        <h3 class="heading-24">Inset content within forms</h3>
+        <div class="text">
+          Large hit area checkboxes aren't always appropriate. Use standard checkboxes for on/off toggles.
+        </div>
+        <div class="example">
+          <div class="inner-block">
+
+            <form action="" class="form">
+              <fieldset>
+
+                <div class="form-group">
+                  <label for="telephone-number" class="form-label">Enter your telephone number</label>
+                  <input type="text" class="form-control" id="telephone-number">
+
+                  <label for="checkbox-telephone-number" class="form-checkbox">
+                    <input id="checkbox-telephone-number" type="checkbox" value="checkbox-telephone-number">
+                    I need to be contacted using a text phone
+                  </label>
+                </div>
+
+              </fieldset>
+            </form>
+
+          </div>
+        </div>
+
+        <h3 class="heading-24">Inset text within forms</h3>
         <ul class="list-bullet text">
-          <li>Insets can be used within forms to highlight supporting information. </li>
-          <li>Use bordered inset text to draw attention to important content on the page.</li>
+          <li>insets can be used within forms to highlight supporting information</li>
+          <li>use bordered inset text to draw attention to important content on the page</li>
         </ul>
 
         <p class="text">
-          Click "Yes" in the example below to see how this works.
+          Click on "Yes" to see how this works.
         </p>
 
         <div class="example">
@@ -1050,7 +1056,7 @@
 
             <form action="" class="form">
 
-              <p>Do you know their national insurance number?</p>
+              <p>Do you know their National Insurance number?</p>
               <fieldset class="inline">
                 <label for="radio-indent-1" class="block-label" data-target="example-ni-number">
                   <input id="radio-indent-1" type="radio" name="radio-indent-group" value="Yes">
@@ -1063,7 +1069,7 @@
               </fieldset>
 
               <div class="panel-indent toggle-content" id="example-ni-number">
-                <label for="national-insurance" class="form-label">National insurance number</label>
+                <label for="national-insurance" class="form-label">National Insurance number</label>
                 <input type="text" class="form-control" id="national-insurance">
               </div>
 
@@ -1082,14 +1088,14 @@
         <h2 class="heading-36 heading-with-border">7. Buttons</h2>
         <p class="text">
           Use buttons to move though a transaction.
-          Don't use them to represent choices, instead use radio buttons, checkboxes or links.
+          Don't use them to represent choices &ndash; use radio buttons, checkboxes or links instead.
         </p>
 
         <h3 class="heading-24">Button colours</h3>
         <ul class="list-bullet text">
-          <li>Buttons use the use the Sass variable, <code>$button-colour</code>, Hex <code>#00823B</code>.</li>
-          <li>Buttons use the Sass variable <code>$yellow</code>, Hex <code>#FFBF47</code> as a focus colour, as an outline of 3px.</li>
-          <li>Button mixins are provided in the <a href="https://github.com/alphagov/govuk_frontend_toolkit#buttons">GOV.UK front end toolkit.</a></li>
+          <li>buttons use the use the Sass variable <code>$button-colour</code>, Hex <code>#00823B</code></li>
+          <li>buttons use the Sass variable <code>$yellow</code>, Hex <code>#FFBF47</code> as a focus colour, as an outline of 3px</li>
+          <li>button mixins are provided in the <a href="https://github.com/alphagov/govuk_frontend_toolkit#buttons">GOV.UK front end toolkit</a></li>
         </ul>
 
         <h3 class="heading-24">Start now button</h3>
@@ -1136,19 +1142,19 @@
 
         <h2 class="heading-36 heading-with-border">8. Errors and validation</h2>
         <p class="text">
-           Have a summary box with anchor links, which jump down to the relevant section of the form where the error is highlighted.
+           Summarise validation errors in a box at the top of your page.
+           Use jump links in the summary box to reach the errors in the form.
+        </p>
+        <p class="text">
+           Ensure error messages make sense when read by screen readers.
         </p>
 
-        <p><a href="https://www.gov.uk/contact/foi">See an example of form validation on GOV.UK</a></p>
-
-        <h3 class="heading-24">Form validation errors</h3>
+        <h3 class="heading-24">Form validation</h3>
         <ul class="list-bullet text">
-          <li>Summarise validation errors in a box at the top of your page.</li>
-          <li>Use a red background and border on the box to visually connect the errors and messages in the form. </li>
-          <li>Apply the same colour to the area of the form where an error has occurred.</li>
-          <li>Use jump links in the summary box, to reach the errors in the form.</li>
-          <li>Error copy should be specific to the question and validation should identify all errors.</li>
-          <li>Errors should not cause pre-filled fields to clear.</li>
+          <li>use a red background and border on the box to visually connect the errors and messages in the form</li>
+          <li>apply the same colour to the area of the form where an error has occurred</li>
+          <li>error copy should be specific to the question and validation should identify all errors</li>
+          <li>errors should not cause pre-filled fields to clear</li>
         </ul>
 
         <div class="example">
