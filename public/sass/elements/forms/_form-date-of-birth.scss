@@ -5,11 +5,11 @@
 
 .date-of-birth label {
   display: block;
-  color: $grey-1;
+  color: $secondary-text-colour;
   margin-bottom: 5px;
 }
 
-.date-of-birth .form-group {  
+.date-of-birth .form-group {
   @include media(tablet){
     width: 50px;
     float: left;
