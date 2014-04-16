@@ -15,6 +15,7 @@ legend {
   width: 100%;
   clear: both;
   @include contain-floats;
+  margin-bottom: $gutter;
   @include media(tablet) {
     margin-bottom: ($gutter*1.5);
   }
@@ -26,6 +27,18 @@ legend {
 
 
 // Labels
+
+// Form title
+.form-section {
+  margin-bottom: 45px;
+}
+
+// Large form labels
+.form-heading {
+  @include bold-24;
+  display: block;
+  margin-bottom: 0;
+}
 
 // Form labels, or for legends styled to look like labels
 .form-label {
@@ -123,6 +136,13 @@ legend {
 .form-checkbox input {
   vertical-align: middle;
   margin: -2px 5px 0 0;
+}
+
+// Buttons
+.form .button {
+  @include media(mobile) {
+    width: 100%;
+  }
 }
 
 

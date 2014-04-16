@@ -14,33 +14,37 @@
 <main id="wrapper" role="main">
   <div id="content">
     <div class="inner-block">
-      
+
        <a href="/" class="example-back-link">Back to GOV.UK elements</a>
-        
-        <h1 class="heading-48">
-          Forms
-        </h1>
 
         <form action="get" class="form">
-          
-          <!-- Fieldset with hint and example text -->
+
+          <!-- Fieldset with example text -->
 
           <fieldset>
-            
-            <legend class="heading-36">
-              Your personal details
+
+            <legend class="heading-36 form-section">
+              Your details
             </legend>
 
             <div class="form-group">
-              <label class="form-label" for="full-name">Full name</label>
+              <label class="form-heading" for="full-name">Full name</label>
               <p class="form-hint">As shown on your birth certificate or passport</p>
               <input type="text" class="form-control" id="full-name">
             </div>
 
+          </fieldset>
+
+          <fieldset>
+
             <div class="form-group">
-              <label class="form-label" for="other-names">Any other last names</label>
-              <input type="text" class="form-control" id="other-names">
-              <p class="form-hint">E.g. your maiden name</p>
+              <label class="form-heading" for="full-name">National Insurance number</label>
+              <p class="form-hint">
+                It's on your National Insurance card, benefit letter, payslip or P60.
+                <br>
+                For example, 'VO 12 34 56 D'.
+              </p>
+              <input type="text" class="form-control" id="full-name">
             </div>
 
           </fieldset>
@@ -49,14 +53,14 @@
 
           <fieldset class="date-of-birth">
 
-            <legend>
-              Date of birth
-            </legend>
-            <div class="form-group">
+            <h3 class="form-heading">Date of birth</h3>
+
+            <p class="form-hint">For example, 08 04 2014</p>
+            <div class="form-group form-group-day">
               <label for="dob-day">Day</label>
               <input type="text" class="form-control" pattern="[0-9]*" id="dob-day">
             </div>
-            <div class="form-group">
+            <div class="form-group form-group-month">
               <label for="dob-month">Month</label>
               <input type="text" class="form-control" id="dob-month">
             </div>
@@ -66,50 +70,23 @@
             </div>
 
           </fieldset>
-          
-          <!-- Compound form controls -->
+
+          <!-- Primary buttons and links -->
 
           <fieldset>
 
-            <legend class="heading-36">
-              Your address
-            </legend>
-
-             <div class="form-group form-group-compound">
-              <label class="form-label" for="address-line-1">Street address</label>
-              <input type="text" class="form-control" id="address-line-1">
-            </div>
-
             <div class="form-group">
-              <label class="form-label" for="address-line-2" class="visuallyhidden">Second line of address</label>
-              <input type="text" class="form-control" id="address-line-2">
-            </div>
-            
-            <div class="form-group">
-              <label class="form-label" for="address-town">Town or City</label>
-              <input type="text" class="form-control form-control-1-4" id="address-town">
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="address-postcode">Postcode</label>
-              <input type="text" class="form-control form-control-1-8" id="address-postcode">
+              <input type="submit" class="button" value="Continue">
+              <ul>
+                <li><a href="#">Skip this section for now</a></li>
+                <li><a href="#">Back</a></li>
+              </ul>
             </div>
 
           </fieldset>
 
-          <!-- Primary and secondary buttons -->
-
-          <fieldset>
-            
-            <div class="form-group">
-              <input type="submit" class="button" value="Next">
-              <button class="button-link">Back</button>
-            </div>
-
-          </fieldset>
-          
         </form>
-        
+
     </div>
   </div>
 </main>
