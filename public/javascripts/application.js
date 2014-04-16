@@ -43,6 +43,10 @@ $(document).ready(function() {
 
     });
 
+    // For pre-checked inputs, show data-toggle content
+    var target = $('input:checked').parent().attr('data-target');
+    $('#'+target).show();
+
     // Add/remove selected class
     $('.block-label').find('input[type=radio], input[type=checkbox]').click(function() {
 
