@@ -295,6 +295,24 @@ code {
 // 6. Forms
 // ==========================================================================
 
+// Remove form group spacing, within examples
+.example .form-group {
+  margin-bottom: 0;
+}
+
+// Show form group spacing, for examples only
+.form-group-example .form-group {
+  margin-bottom: $gutter;
+  @include media(tablet) {
+    margin-bottom: ($gutter*1.5);
+  }
+}
+
+// Add space under legend, for inline radio example
+.example legend.form-label {
+  margin-bottom: 20px;
+}
+
 // Hide toggled content
 .js-enabled .toggle-content {
     display: none;

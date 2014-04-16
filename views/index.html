@@ -329,7 +329,7 @@
             when using colour on text and functional elements (like buttons) make sure the contrast is high enough for those with visual impairments
           </li>
           <li>
-            we aim to meet the <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" rel="external">AA colour contrast ratio</a> of 4.5:1 recommended by the <acronym title="World Wide Web Consortium (W3C)">W3C</acronym> - test to meet this standard
+            we aim to meet the <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" rel="external">AA colour contrast ratio</a> of 4.5:1 recommended by the <abbr title="World Wide Web Consortium (W3C)">W3C</abbr> - test to meet this standard
           </li>
         </ul>
 
@@ -703,7 +703,7 @@
         </div>
 
       </div>
-      <!-- / #guide-images-icons -->
+      <!-- / #guide-icons-images -->
 
       <div id="guide-data">
 
@@ -789,21 +789,28 @@
         <p class="text">
           Labels should be aligned above form fields.
         </p>
+        <p class="text">
+          Labels should be associated with form fields, using the <code>for</code> attribute,
+          so the user can click the label to bring focus to the form field.
+        </p>
 
         <div class="example">
           <div class="inner-block">
 
-            <form action="" class="form">
-              <fieldset>
-                <div class="form-group">
-                  <label for="full-name-f1" class="form-label">Full name</label>
-                  <input type="text" class="form-control" id="full-name-f1">
-                </div>
-              </fieldset>
+            <form action="" method="post" class="form">
+              <div class="form-group">
+                <label for="full-name-f1" class="form-label">Full name</label>
+                <input type="text" class="form-control" id="full-name-f1">
+              </div>
             </form>
 
           </div>
         </div>
+
+        <h3 class="heading-24">Form fieldsets and legends</h3>
+        <p class="text">
+          The <code>fieldset</code> element can be used to group related form controls. The first element inside a fieldset must be a <code>legend</code> element which describes the group.
+        </p>
 
         <h3 class="heading-24">Form focus states</h3>
         <p class="text">
@@ -818,13 +825,11 @@
             <div class="grid grid-3-4">
               <div class="inner-block">
 
-                <form action="" class="form">
-                  <fieldset>
-                    <div class="form-group">
-                      <label for="full-name-f2" class="form-label">Full name</label>
-                      <input type="text" class="form-control" id="full-name-f2">
-                    </div>
-                  </fieldset>
+                <form action="" method="post" class="form">
+                  <div class="form-group">
+                    <label for="full-name-f2" class="form-label">Full name</label>
+                    <input type="text" class="form-control" id="full-name-f2">
+                  </div>
                 </form>
 
               </div>
@@ -855,17 +860,15 @@
         <div class="example">
           <div class="inner-block">
 
-            <form action="" class="form form-group-example">
-              <fieldset>
-                <div class="form-group">
-                  <label class="form-label" for="first-name-2">First name</label>
-                  <input type="text" class="form-control" id="first-name-2">
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="last-name-2">Last name</label>
-                  <input type="text" class="form-control" id="last-name-2">
-                </div>
-              </fieldset>
+            <form action="" method="post" class="form form-group-example">
+              <div class="form-group">
+                <label class="form-label" for="first-name-2">First name</label>
+                <input type="text" class="form-control" id="first-name-2">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="last-name-2">Last name</label>
+                <input type="text" class="form-control" id="last-name-2">
+              </div>
             </form>
 
           </div>
@@ -881,26 +884,24 @@
         <div class="example">
           <div class="inner-block">
 
-            <form action="" class="form">
-              <fieldset>
-                <div class="form-group">
-                  <label class="form-label" for="ni-number-1">National Insurance number</label>
-                  <p class="form-hint">It'll be on your last payslip. For example JH 21 90 0A.</p>
-                  <input type="text" class="form-control" id="ni-number-1">
-                </div>
-              </fieldset>
+            <form action="" method="post" class="form">
+              <div class="form-group">
+                <label class="form-label" for="ni-number-1">National Insurance number</label>
+                <p class="form-hint">It'll be on your last payslip. For example, JH 21 90 0A.</p>
+                <input type="text" class="form-control" id="ni-number-1">
+              </div>
             </form>
 
           </div>
         </div>
 
-        <h3 class="heading-24">Dropdowns</h3>
+        <h3 class="heading-24">Drop-down lists</h3>
         <p class="text">
-          Avoid using dropdowns - use radio buttons or checkboxes instead.
+          Avoid using Drop-down lists - use radio buttons or checkboxes instead.
         </p>
         <!-- TODO: link to blog post to support this statement -->
 
-        <h3 class="heading-24">Radio buttons</h3>
+        <h3 class="heading-24" id="guide-form-radio-buttons">Radio buttons</h3>
         <ul class="list-bullet text">
           <li>use these to let users choose a single option from a list</li>
           <li>for more than two options, radio buttons should be stacked</li>
@@ -910,19 +911,18 @@
         <div class="example">
           <div class="inner-block">
 
-            <form action="" class="form">
+            <form action="" method="post" class="form">
               <fieldset class="inline">
+                <legend></legend>
 
                 <label for="radio-inline-1" class="block-label">
                   <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
                   Yes
                 </label>
-
                 <label for="radio-inline-2" class="block-label">
                   <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
                   No
                 </label>
-
               </fieldset>
             </form>
 
@@ -932,8 +932,9 @@
         <div class="example">
           <div class="inner-block">
 
-            <form action="" class="form">
+            <form action="" method="post" class="form">
               <fieldset>
+                <legend></legend>
 
                 <div class="form-group">
 
@@ -955,14 +956,13 @@
                   </label>
 
                 </div>
-
               </fieldset>
             </form>
 
           </div>
         </div>
 
-        <h3 class="heading-24">Checkboxes</h3>
+        <h3 class="heading-24" id="guide-form-checkboxes">Checkboxes</h3>
         <ul class="list-bullet text">
           <li>use these to select either on/off toggles or multiple selections</li>
           <li>for more than two options, checkboxes should be stacked</li>
@@ -972,8 +972,9 @@
         <div class="example">
           <div class="inner-block">
 
-            <form action="" class="form">
+            <form action="" method="post" class="form">
               <fieldset class="inline">
+                <legend></legend>
 
                 <label for="checkbox-inline-1" class="block-label">
                   <input id="checkbox-inline-1" type="checkbox" value="1">
@@ -983,7 +984,6 @@
                   <input id="checkbox-inline-2" type="checkbox" value="2">
                   Checkbox option 2
                 </label>
-
               </fieldset>
             </form>
 
@@ -993,9 +993,10 @@
         <div class="example">
           <div class="inner-block">
 
-            <form action="" class="form">
+            <form action="" method="post" class="form">
               <fieldset>
-                <h3 class="heading-24">Which types of waste do you transport regularly?</h3>
+                <legend class="form-label-bold">Which types of waste do you transport regularly?</legend>
+
                 <p>Select all that apply</p>
                 <label for="checkbox-1" class="block-label">
                   <input id="checkbox-1" type="checkbox" value="1">
@@ -1009,7 +1010,6 @@
                   <input id="checkbox-3" type="checkbox" value="2">
                   Farm or agricultural waste
                 </label>
-
               </fieldset>
             </form>
 
@@ -1022,20 +1022,17 @@
         <div class="example">
           <div class="inner-block">
 
-            <form action="" class="form">
-              <fieldset>
+            <form action="" method="post" class="form">
+              <div class="form-group">
+                <label for="telephone-number" class="form-label">Enter your telephone number</label>
+                <input type="text" class="form-control" id="telephone-number">
 
-                <div class="form-group">
-                  <label for="telephone-number" class="form-label">Enter your telephone number</label>
-                  <input type="text" class="form-control" id="telephone-number">
+                <label for="checkbox-telephone-number" class="form-checkbox">
+                  <input id="checkbox-telephone-number" type="checkbox" value="checkbox-telephone-number">
+                  I need to be contacted using a text phone
+                </label>
+              </div>
 
-                  <label for="checkbox-telephone-number" class="form-checkbox">
-                    <input id="checkbox-telephone-number" type="checkbox" value="checkbox-telephone-number">
-                    I need to be contacted using a text phone
-                  </label>
-                </div>
-
-              </fieldset>
             </form>
 
           </div>
@@ -1054,10 +1051,11 @@
         <div class="example">
           <div class="inner-block">
 
-            <form action="" class="form">
+            <form action="" method="post" class="form">
 
-              <p>Do you know their National Insurance number?</p>
               <fieldset class="inline">
+                <legend class="form-label">Do you know their National Insurance number?</legend>
+
                 <label for="radio-indent-1" class="block-label" data-target="example-ni-number">
                   <input id="radio-indent-1" type="radio" name="radio-indent-group" value="Yes">
                   Yes
@@ -1160,10 +1158,10 @@
         <div class="example">
           <div class="inner-block">
 
-            <form action="" class="form">
+            <form action="" method="post" class="form">
 
               <div class="validation-summary" aria-labelledby="error-heading" role="alert">
-                <h3 class="heading-19">There was a problem submitting the form</h3>
+                <h3 class="heading-19" id="error-heading">There was a problem submitting the form</h3>
                 <p>Please try the following:</p>
                 <ul>
                   <li><a href="#error-your-name">Enter your name</a></li>

@@ -15,77 +15,61 @@
   <div id="content">
     <div class="inner-block">
 
-       <a href="/" class="example-back-link">Back to GOV.UK elements</a>
+      <a href="/" class="example-back-link">Back to GOV.UK elements</a>
 
-        <form action="get" class="form">
+      <form action="" method="" class="form">
 
-          <!-- Fieldset with example text -->
+        <h1 class="form-title heading-36">
+          Your details
+        </h1>
 
-          <fieldset>
+        <!-- Full name -->
+        <div class="form-group">
+          <label class="form-label-bold" for="full-name">Full name</label>
+          <p class="form-hint">As shown on your birth certificate or passport</p>
+          <input type="text" class="form-control" id="full-name">
+        </div>
 
-            <legend class="heading-36 form-section">
-              Your details
-            </legend>
+        <!-- National Insurance number -->
+        <div class="form-group">
+          <label class="form-label-bold" for="ni-number">National Insurance number</label>
+          <p class="form-hint">
+            It's on your National Insurance card, benefit letter, payslip or P60.
+            <br>
+            For example, 'VO 12 34 56 D'.
+          </p>
+          <input type="text" class="form-control" id="ni-number">
+        </div>
 
-            <div class="form-group">
-              <label class="form-heading" for="full-name">Full name</label>
-              <p class="form-hint">As shown on your birth certificate or passport</p>
-              <input type="text" class="form-control" id="full-name">
-            </div>
+        <!-- Date of birth -->
+        <fieldset class="date-of-birth">
+          <legend class="form-label-bold">Date of birth</legend>
 
-          </fieldset>
+          <p class="form-hint">For example, 08 04 2014</p>
+          <div class="form-group form-group-day">
+            <label for="dob-day">Day</label>
+            <input type="text" class="form-control" pattern="[0-9]*" id="dob-day">
+          </div>
+          <div class="form-group form-group-month">
+            <label for="dob-month">Month</label>
+            <input type="text" class="form-control" id="dob-month">
+          </div>
+          <div class="form-group form-group-year">
+            <label for="dob-year">Year</label>
+            <input type="text" class="form-control" pattern="[0-9]*" id="dob-year">
+          </div>
+        </fieldset>
 
-          <fieldset>
+        <!-- Primary buttons, secondary links -->
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+          <ul>
+            <li><a href="#">Skip this section for now</a></li>
+            <li><a href="#">Back</a></li>
+          </ul>
+        </div>
 
-            <div class="form-group">
-              <label class="form-heading" for="full-name">National Insurance number</label>
-              <p class="form-hint">
-                It's on your National Insurance card, benefit letter, payslip or P60.
-                <br>
-                For example, 'VO 12 34 56 D'.
-              </p>
-              <input type="text" class="form-control" id="full-name">
-            </div>
-
-          </fieldset>
-
-          <!-- Date of birth -->
-
-          <fieldset class="date-of-birth">
-
-            <h3 class="form-heading">Date of birth</h3>
-
-            <p class="form-hint">For example, 08 04 2014</p>
-            <div class="form-group form-group-day">
-              <label for="dob-day">Day</label>
-              <input type="text" class="form-control" pattern="[0-9]*" id="dob-day">
-            </div>
-            <div class="form-group form-group-month">
-              <label for="dob-month">Month</label>
-              <input type="text" class="form-control" id="dob-month">
-            </div>
-            <div class="form-group form-group-year">
-              <label for="dob-year">Year</label>
-              <input type="text" class="form-control" pattern="[0-9]*" id="dob-year">
-            </div>
-
-          </fieldset>
-
-          <!-- Primary buttons and links -->
-
-          <fieldset>
-
-            <div class="form-group">
-              <input type="submit" class="button" value="Continue">
-              <ul>
-                <li><a href="#">Skip this section for now</a></li>
-                <li><a href="#">Back</a></li>
-              </ul>
-            </div>
-
-          </fieldset>
-
-        </form>
+      </form>
 
     </div>
   </div>

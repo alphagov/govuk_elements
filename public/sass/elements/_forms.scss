@@ -1,14 +1,6 @@
 // Forms
 // ==========================================================================
 
-// Form layout
-fieldset,
-legend {
-  width: 100%;
-  float: left;
-  clear: both;
-}
-
 // Form group is used to wrap label and input pairs
 .form-group {
   float: left;
@@ -25,34 +17,58 @@ legend {
   margin-bottom: 10px;
 }
 
+// Fieldset is used to group more than one .form-group
+fieldset {
+  width: 100%;
+  float: left;
+  clear: both;
+}
 
-// Labels
 
 // Form title
-.form-section {
-  margin-bottom: 45px;
+.form-title {
+  margin-bottom: $gutter;
+  @include media(tablet) {
+    margin-bottom: ($gutter*1.5);
+  }
 }
 
-// Large form labels
-.form-heading {
-  @include bold-24;
-  display: block;
-  margin-bottom: 0;
-}
+
+// Labels
 
 // Form labels, or for legends styled to look like labels
 .form-label {
   @include core-19;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
-// Used for paragraphs i n-between forms
+.form-label-bold {
+  @include bold-24;
+  display: block;
+  margin-bottom: 0;
+}
+
+// Used for paragraphs in-between form elements
 .form-block {
   float: left;
   width: 100%;
   @include contain-floats;
 }
+
+
+// Hints
+
+// Form hints & examples are light grey and sit above a form control
+.form-hint {
+  display: block;
+  color: $secondary-text-colour;
+  margin-bottom: 5px;
+  @include media (tablet) {
+    margin-top: 8px;
+  }
+}
+
 
 // Form controls
 
@@ -60,7 +76,7 @@ legend {
 // and 100% width for mobile
 .form-control {
   width: 100%;
-  box-sizing: border-box;
+  @include box-sizing(border-box);
 
   font-size: 1em;
 
@@ -76,6 +92,7 @@ legend {
     width: 50%;
   }
 }
+
 
 // Form control widths
 .form-control-3-4 {
@@ -104,16 +121,6 @@ legend {
   @include media(tablet) {
     width: 12.5%;
   }
-}
-
-// Hints
-
-// Form hints & examples are light grey and sit above a form control
-.form-hint {
-  display: block;
-  color: $secondary-text-colour;
-  margin-top: 8px;
-  margin-bottom: 5px;
 }
 
 
