@@ -22,6 +22,7 @@ $(document).ready(function() {
       }
 
     });
+
   }
 
   // Example - Form focus styles
@@ -36,6 +37,7 @@ $(document).ready(function() {
         }).blur(function() {
         $("label").removeClass("add-focus");
       });
+
       // Add selected class
       $('input:checked').parent().addClass('selected');
 
@@ -58,29 +60,12 @@ $(document).ready(function() {
 
   }
 
-  // Example - Details & summary
+  // Example - Add aria support to details
 
-  // Add aria support for details
+  // Add conditional classname based on support
+  $('html').addClass($.fn.details.support ? 'details' : 'no-details');
+
+  // Emulate <details> where necessary and enable open/close event handlers
   $('details').details();
-
-  // If details is not supported, add class to html
-  if (!Modernizr.details) {
-
-    $('html').addClass('no-details');
-
-    $('summary').click(function() {
-
-      var $details, $summary;
-      $summary = $(this);
-      $details = $summary.parent();
-
-      if ($details.attr('open')) {
-        return $details.removeAttr('open');
-      } else {
-        return $details.attr('open', 'open');
-      }
-
-    });
-  }
 
 });
