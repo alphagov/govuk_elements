@@ -5,7 +5,7 @@
 .panel-indent {
   @include contain-floats;
   clear: both;
-  border-left: 5px solid $grey-3;
+  border-left: 5px solid $panel-colour;
 
   padding-top: 10px;
   padding-left: $gutter-half;
