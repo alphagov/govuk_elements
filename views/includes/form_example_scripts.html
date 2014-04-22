@@ -1,0 +1,28 @@
+<script src="/public/javascripts/vendor/jquery-1.11.0.min.js"></script>
+<script src="/public/javascripts/vendor/modernizr.custom.77028.js"></script>
+<script>
+
+  $(document).ready(function() {
+
+    // For date of birth fields
+    if ($('.date-of-birth').length>0) {
+
+      // Use Modernizr to detect touch devices
+      if (Modernizr.touch) {
+
+        // Hide date of birth fields
+        $('.date-of-birth').hide();
+
+        // For touch devices, show a single input with type="date"
+        $('.js-native-date').removeClass('hidden').show();
+
+      } else {
+
+        // console.log('Not a touch screen');
+
+      }
+
+    }
+  });
+
+</script>

@@ -127,6 +127,12 @@ fieldset {
 }
 
 
+// Set a minimum height for date inputs
+.touch input[type="date"] {
+  min-height: 32px;
+}
+
+
 // Radio buttons
 .form-radio {
   display: block;
