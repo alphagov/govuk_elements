@@ -1,7 +1,4 @@
 // Date of birth
-// .date-of-birth legend {
-//   @extend .form-label;
-// }
 
 .date-of-birth label {
   display: block;
@@ -21,4 +18,23 @@
 
 .date-of-birth .form-group input {
   width: 100%;
+}
+
+
+// Use Modernizr to detect for touch events
+// Build: http://modernizr.com/download/#-touch-cssclasses-teststyles-prefixes
+
+// Hide date of birth
+.touch .date-of-birth {
+  display: none;
+}
+
+// Show native date of birth
+.touch .native-date-of-birth {
+  display: block;
+}
+
+// Set a minimum height for date inputs
+.touch input[type="date"] {
+  min-height: 36px;
 }
