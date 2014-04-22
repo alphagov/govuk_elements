@@ -81,7 +81,7 @@ fieldset {
   width: 100%;
   @include box-sizing(border-box);
 
-  font-size: 1em;
+  font-size: 19px;
 
   padding: 4px;
   background-color: $white;
@@ -124,12 +124,6 @@ fieldset {
   @include media(tablet) {
     width: 12.5%;
   }
-}
-
-
-// Set a minimum height for date inputs
-.touch input[type="date"] {
-  min-height: 32px;
 }
 
 
