@@ -29,6 +29,11 @@
   display: none;
 }
 
+// Hide native date of birth
+.no-touch .native-date-of-birth {
+  display: none;
+}
+
 // Show native date of birth
 .touch .native-date-of-birth {
   display: block;
