@@ -1066,32 +1066,33 @@
         <div class="example">
           <div class="inner-block">
 
-            <form action="" method="post" class="form">
+            <!--
+            .form-group-example is used here to re-add the bottom margin on .form group,
+            the bottom margin is removed in this example page to keep examples compact
+            -->
+
+            <form action="" method="post" class="form form-group-example">
 
               <fieldset class="inline">
                 <legend class="form-label">Do you know their National Insurance number?</legend>
-
-                <label for="radio-indent-1" class="block-label" data-target="example-ni-number">
-                  <input id="radio-indent-1" type="radio" name="radio-indent-group" value="Yes">
-                  Yes
-                </label>
-                <label for="radio-indent-2" class="block-label">
-                  <input id="radio-indent-2" type="radio" name="radio-indent-group" value="No">
-                  No
-                </label>
+                <div class="form-group form-group-related">
+                  <label for="radio-indent-1" class="block-label" data-target="example-ni-number">
+                    <input id="radio-indent-1" type="radio" name="radio-indent-group" value="Yes">
+                    Yes
+                  </label>
+                  <label for="radio-indent-2" class="block-label">
+                    <input id="radio-indent-2" type="radio" name="radio-indent-group" value="No">
+                    No
+                  </label>
+                </div>
+                <div class="panel-indent toggle-content" id="example-ni-number">
+                  <label for="national-insurance" class="form-label">National Insurance number</label>
+                  <input type="text" class="form-control" id="national-insurance">
+                </div>
               </fieldset>
-
-              <div class="panel-indent toggle-content" id="example-ni-number">
-                <label for="national-insurance" class="form-label">National Insurance number</label>
-                <input type="text" class="form-control" id="national-insurance">
-              </div>
-
             </form>
-
           </div>
         </div>
-
-        <!-- TODO: Add progressive disclosure -->
 
       </div>
       <!-- / #guide-forms -->
