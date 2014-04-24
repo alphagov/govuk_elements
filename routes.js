@@ -21,6 +21,10 @@ module.exports = {
       res.render('examples/forms', {'assetPath' : assetPath });
     });
 
+    app.get('/examples/radio-buttons', function (req, res) {
+      res.render('examples/radio_buttons', {'assetPath' : assetPath });
+    });
+
     app.get('/examples/template', function (req, res) {
       res.render('examples/template', {'assetPath' : assetPath });
     });

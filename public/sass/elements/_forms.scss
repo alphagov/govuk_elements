@@ -7,9 +7,16 @@
   width: 100%;
   clear: both;
   @include contain-floats;
-  margin-bottom: $gutter;
+  margin-bottom: $gutter-half;
   @include media(tablet) {
-    margin-bottom: ($gutter*1.5);
+    margin-bottom: $gutter;
+  }
+}
+
+.form-group-related {
+  margin-bottom: 10px;
+  @include media(tablet) {
+    margin-bottom: 20px;
   }
 }
 
@@ -78,11 +85,10 @@ fieldset {
 // By default, form controls are 50% width for desktop,
 // and 100% width for mobile
 .form-control {
+  @include core-19;
+
   width: 100%;
   @include box-sizing(border-box);
-
-  font-size: 19px;
-
   padding: 4px;
   background-color: $white;
   border: 1px solid $border-colour;
@@ -113,17 +119,11 @@ fieldset {
 }
 
 .form-control-1-4 {
-  width: 100%;
-  @include media(tablet) {
-    width: 25%;
-  }
+  width: 25%;
 }
 
 .form-control-1-8 {
-  width: 100%;
-  @include media(tablet) {
-    width: 12.5%;
-  }
+  width: 12.5%;
 }
 
 
@@ -153,6 +153,11 @@ fieldset {
   @include media(mobile) {
     width: 100%;
   }
+}
+
+// Hide toggled content
+.js-enabled .toggle-content {
+    display: none;
 }
 
 

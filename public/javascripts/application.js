@@ -43,24 +43,22 @@ $(document).ready(function() {
 
     });
 
-    // For pre-checked inputs, show data-toggle content
-    var target = $('input:checked').parent().attr('data-target');
-    $('#'+target).show();
-
     // Add/remove selected class
     $('.block-label').find('input[type=radio], input[type=checkbox]').click(function() {
 
       $('input:not(:checked)').parent().removeClass('selected');
       $('input:checked').parent().addClass('selected');
 
-      // Hide open data-toggle content
       $('.toggle-content').hide();
 
-      // Show data-toggle content
-      var target = $(this).parent().attr('data-target');
+      var target = $('input:checked').parent().attr('data-target');
       $('#'+target).show();
 
     });
+
+    // For pre-checked inputs, show toggled content
+    var target = $('input:checked').parent().attr('data-target');
+    $('#'+target).show();
 
   }
 

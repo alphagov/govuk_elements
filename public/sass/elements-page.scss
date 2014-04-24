@@ -307,15 +307,16 @@ code {
     margin-bottom: ($gutter*1.5);
   }
 }
+.form-group-example .form-group-related {
+  margin-bottom: 10px;
+  @include media(tablet) {
+    margin-bottom: 20px !important;
+  }
+}
 
 // Add space under legend, for inline radio example
 .example legend.form-label {
   margin-bottom: 20px;
-}
-
-// Hide toggled content
-.js-enabled .toggle-content {
-    display: none;
 }
 
 
