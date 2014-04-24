@@ -24,9 +24,10 @@
   @include inner-block;
 }
 
-// Banners
+
+// Alpha phase banner
 .alpha-banner {
-  @include fix-phase-banner(alpha);
+  @include phase-banner(alpha);
 }
 
 
