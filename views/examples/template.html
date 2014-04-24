@@ -4,9 +4,9 @@
   {{>head}}
 
   <style type="text/css">
-
     /* The css here is used to highlight the main page sections, to check alignment */
 
+    /*
     #global-header .header-logo,
     .alpha-banner p,
     #global-cookie-message p,
@@ -23,6 +23,7 @@
     .example-show-cookie-message {
       display: block !important;
     }
+    */
   </style>
 
 {{/head}}
@@ -58,9 +59,16 @@
       <div class="grid">
         <div class="inner-block">
 
+          <a href="/" class="example-back-link">Back to GOV.UK elements</a>
+
           <h1 class="heading-48">
-            Grid layout
+            Layout template
           </h1>
+
+          <p class="text">
+            This template shows how content aligns with the header and footer. <br>
+            It also shows how to implement the Alpha phase banner.
+          </p>
 
           <h2 class="heading-36">Full width</h2>
 
@@ -203,18 +211,18 @@
 
     // Turn on grid highlight styles as default
 
-    $(document).ready(function () {
+    // $(document).ready(function () {
 
-      var html = $('html');
-      html.addClass('example-highlight-grid');
+    //   var html = $('html');
+    //   html.addClass('example-highlight-grid');
 
-      if ($('.is-inner-block-highlight').length>0) {
-        // Don't add more than once
-      } else {
-        $('.grid .inner-block').wrapInner('<div class="is-inner-block-highlight"></div>');
-      }
+    //   if ($('.is-inner-block-highlight').length>0) {
+    //     // Don't add more than once
+    //   } else {
+    //     $('.grid .inner-block').wrapInner('<div class="is-inner-block-highlight"></div>');
+    //   }
 
-    });
+    // });
 
     </script>
 {{/bodyEnd}}
