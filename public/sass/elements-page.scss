@@ -286,6 +286,31 @@ code {
   vertical-align: top;
 }
 
+.example-icons .heading-24 {
+  margin-top: 0;
+}
+
+.icon-list li {
+  @include contain-floats;
+  margin-bottom: 5px;
+  position: relative;
+  min-height: 50px;
+}
+
+.icon-list .icon {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+}
+
+.icon-list .icon-text {
+  position: absolute;
+  left: 20%;
+  top: 0;
+  margin-top: 0;
+}
+
+
 
 // 5. Data
 // ==========================================================================
