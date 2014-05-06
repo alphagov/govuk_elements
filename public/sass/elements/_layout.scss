@@ -20,7 +20,7 @@
 
 .outer-block {
   @include outer-block;
-  @include contain-floats; // TODO: awaiting merge into front end toolkit
+  @include contain-floats; // Repeated as %extend placeholder insn't understood
 }
 .inner-block {
   @include inner-block;
