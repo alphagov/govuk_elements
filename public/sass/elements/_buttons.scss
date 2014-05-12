@@ -4,7 +4,7 @@
 .button {
   @include button ($button-colour);
   margin: 0 $gutter-half $gutter-half 0;
-  padding: 10px 10px 5px 10px;
+  padding: 10px $gutter-half 5px $gutter-half;
   vertical-align: top;
 }
 
@@ -12,55 +12,38 @@
   outline: 3px solid $yellow;
 }
 
-
 // Disabled buttons
 
-// Do not change colour
-.disabled:hover {
+.button[disabled="disabled"] {
   background: $button-colour;
 }
-// Do not have a focus state
-.disabled:focus {
+
+.button[disabled="disabled"]:focus {
   outline: none;
 }
 
 
 // Start now buttons
-.get-started {
 
-  .button {
-    @include bold-24;
-    line-height: 0.66667;
-    color: #FFF;
-    background-color: $button-colour;
-    padding: 14px 41px 10px 16px;
-    background-image: url(https://assets.digital.cabinet-office.gov.uk/static/icon-pointer-063838cde108768e30b077e5303783fc.png);
-    background-position: 100% 50%;
-    background-repeat: no-repeat;
-    margin-bottom: 0;
+.button-get-started {
+  @include bold-24;
+  background-image: url("../images/icons/icon-pointer.png");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  padding: 7px 41px 4px 16px;
 
-    // @include ie-lte(6){
-    //   background-image: url(https://assets.digital.cabinet-office.gov.uk/static/icon-pointer-indexed-837e19e1ba2d4beb5563d052b044770b.png);
-    // }
+  @include device-pixel-ratio {
+    background-image: url("../images/icons/icon-pointer-2x.png");
+    background-size: 30px 19px;
   }
 
-  .button:hover {
-    background-color: $green;
+  @include ie(6) {
+    background-image: url("../images/icons/icon-pointer-2x.png");
   }
-  .button:focus {
-    outline: 3px solid $yellow;
-  }
-  .destination {
-    @include core-14;
-    color: #2e3133;
-    display: block;
-    margin-top: 7px;
-    max-width: 182px;
-  }
-
 }
 
 // Link style buttons
+
 .button-link {
   @include core-19;
   background: none;
@@ -96,26 +79,3 @@ details summary:focus {
   outline: 3px solid $yellow;
 }
 
-// Styles for browsers that don't yet natively support details/summary
-// .no-details details p {
-//   display: none;
-// }
-// .no-details details > summary:before {
-//   font-size: 16px;
-//   float: left;
-//   margin-top: 1px;
-//   margin-right: -1px;
-//   width: 20px;
-//   content: '► ';
-// }
-// .no-details .open summary,
-// .no-details details[open="open"] > summary {
-//   outline: 3px solid $yellow;
-// }
-// .no-details details[open="open"] > summary:before {
-//   content: '▼ ';
-// }
-// .no-details .open p,
-// .no-details details[open="open"] p {
-//   display: block;
-// }
