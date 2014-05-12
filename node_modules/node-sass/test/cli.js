@@ -2,15 +2,15 @@ var path   = require('path'),
     assert = require('assert'),
     fs     = require('fs'),
     exec   = require('child_process').exec,
-    cli    = require('../lib/cli'),
+    cli    = process.env.NODESASS_COVERAGE ? require('../lib-coverage/cli') : require('../lib/cli'),
 
     cliPath = path.resolve(__dirname, '../bin/node-sass'),
     sampleFilename = path.resolve(__dirname, 'sample.scss');
 
-var expectedSampleCompressed = '#navbar {width:80%;height:23px;}\
-#navbar ul {list-style-type:none;}\
-#navbar li {float:left;}\
-#navbar li a {font-weight:bold;}';
+var expectedSampleCompressed = '#navbar{width:80%;height:23px;}\
+#navbar ul{list-style-type:none;}\
+#navbar li{float:left;}\
+#navbar li a{font-weight:bold;}';
 
 var expectedSampleNoComments = '#navbar {\n\
   width: 80%;\n\
@@ -23,6 +23,9 @@ var expectedSampleNoComments = '#navbar {\n\
   float: left; }\n\
   #navbar li a {\n\
     font-weight: bold; }\n';
+
+var expectedSampleCustomImagePath = 'body {\n\
+  background-image: url("/path/to/images/image.png"); }\n';
 
 describe('cli', function() {
   it('should print help when run with no arguments', function(done) {
@@ -86,6 +89,15 @@ describe('cli', function() {
     emitter.on('error', done);
     emitter.on('write', function(err, file, css){
       assert.equal(css, expectedSampleNoComments);
+      fs.unlink(file, done);
+    });
+  });
+
+  it('should compile with the --image-path option', function(done){
+    var emitter = cli(['--image-path', '/path/to/images', path.join(__dirname, 'image_path.scss')]);
+    emitter.on('error', done);
+    emitter.on('write', function(err, file, css){
+      assert.equal(css, expectedSampleCustomImagePath);
       fs.unlink(file, done);
     });
   });

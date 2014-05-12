@@ -17,6 +17,10 @@
 #include "source_map.hpp"
 #endif
 
+#ifndef SASS_SUBSET_MAP
+#include "subset_map.hpp"
+#endif
+
 namespace Sass {
   using namespace std;
   class AST_Node;
@@ -53,6 +57,7 @@ namespace Sass {
     KWD_ARG_SET(Data) {
       KWD_ARG(Data, const char*,     source_c_str);
       KWD_ARG(Data, string,          entry_point);
+      KWD_ARG(Data, string,          output_path);
       KWD_ARG(Data, string,          image_path);
       KWD_ARG(Data, const char*,     include_paths_c_str);
       KWD_ARG(Data, const char**,    include_paths_array);
@@ -79,7 +84,7 @@ namespace Sass {
   private:
     string format_source_mapping_url(const string& file) const;
     string get_cwd();
-    
+
     vector<string> included_files;
     string cwd;
 
@@ -88,6 +93,9 @@ namespace Sass {
     // void register_function(Signature sig, Native_Function f, size_t arity, Env* env);
     // void register_overload_stub(string name, Env* env);
 
+  public:
+    multimap<Compound_Selector, Complex_Selector*> extensions;
+    Subset_Map<string, pair<Complex_Selector*, Compound_Selector*> > subset_map;
   };
 
 }
