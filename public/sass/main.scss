@@ -11,6 +11,10 @@
 @import "design-patterns/alpha-beta";
 @import "design-patterns/buttons";
 
+// Shame
+// For changes awaiting merge into the front-end toolkit
+@import "elements/shame";
+
 // Helpers
 @import "elements/helpers";
 
@@ -22,14 +26,6 @@
 
 // Layout
 @import "elements/layout";
-
-// Adjust alignment for GOV.UK template
-// (TODO: to be moved into govuk_template)
-
-// Global cookie message
-@import "elements/template/cookie-message";
-// Footer alignment
-@import "elements/template/footer";
 
 
 // Modules

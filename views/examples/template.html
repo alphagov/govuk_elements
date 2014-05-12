@@ -2,30 +2,6 @@
 
 {{$head}}
   {{>head}}
-
-  <style type="text/css">
-    /* The css here is used to highlight the main page sections, to check alignment */
-
-    /*
-    #global-header .header-logo,
-    .alpha-banner p,
-    #global-cookie-message p,
-    .footer-meta-inner,
-    #footer .copyright {
-      background: yellow;
-    }
-
-    #global-header .header-wrapper,
-    #wrapper {
-      background: orange;
-    }
-
-    .example-show-cookie-message {
-      display: block !important;
-    }
-    */
-  </style>
-
 {{/head}}
 
 {{$propositionHeader}}
@@ -35,11 +11,16 @@
 {{$headerClass}}with-proposition{{/headerClass}}
 
 {{$afterHeader}}
-<div class="alpha-banner">
-  <div class="outer-block">
-    <div class="inner-block">
-      <p><strong>Alpha:</strong> This is a prototype - your <a href="/feedback">feedback</a> will help us to improve it</p>
+<div class="outer-block">
+  <div class="inner-block">
+
+    <div class="phase-banner">
+      <p>
+        <strong class="phase-tag">ALPHA</strong>
+        <span>This is a new service – your <a href="https://designpatterns.hackpad.com/GOV.UK-elements-feedback-sKrDyQxcfA2">feedback</a> will help us to improve it.</span>
+      </p>
     </div>
+
   </div>
 </div>
 {{/afterHeader}}

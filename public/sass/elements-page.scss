@@ -18,12 +18,8 @@
     margin-right: $gutter;
   }
 }
-
-// Alpha banner - this a prototype and this content is likely to change
-.alpha-banner  {
-  strong {
-    font-weight: bold;
-  }
+#global-breadcrumb li {
+  margin-bottom: 0;
 }
 
 

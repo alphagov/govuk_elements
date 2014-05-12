@@ -27,13 +27,18 @@
 }
 
 
-// Alpha phase banner
-.alpha-banner {
+// ==========================================================================
+// Phase banner
+// ==========================================================================
+
+.phase-banner  {
   @include phase-banner(alpha);
 }
 
 
 // Grid layout
+// ==========================================================================
+
 .grid-wrapper {
   @include contain-floats;
   @include media(tablet) {

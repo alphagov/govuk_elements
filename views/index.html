@@ -4,11 +4,16 @@
 
 {{$content}}
 
-<div class="alpha-banner">
-  <div class="outer-block">
-    <div class="inner-block">
-      <p>This website is in <strong>ALPHA</strong> and all content is subject to change. Please, <a href="https://designpatterns.hackpad.com/GOV.UK-elements-feedback-sKrDyQxcfA2">give us your feedback</a>.</p>
+<div class="outer-block">
+  <div class="inner-block">
+
+    <div class="phase-banner">
+      <p>
+        <strong class="phase-tag">ALPHA</strong>
+        <span>This is a new service – your <a href="https://designpatterns.hackpad.com/GOV.UK-elements-feedback-sKrDyQxcfA2">feedback</a> will help us to improve it.</span>
+      </p>
     </div>
+
   </div>
 </div>
 
@@ -1186,9 +1191,7 @@
         <h3 class="heading-24">Start now button</h3>
         <div class="example">
           <div class="inner-block">
-            <div class="get-started">
-              <a href="#" class="button">Start now</a>
-            </div>
+            <a href="#" class="button button-get-started">Start now</a>
           </div>
         </div>
 
@@ -1205,7 +1208,7 @@
         </p>
         <div class="example">
           <div class="inner-block">
-            <button class="button disabled" disabled="disabled">Primary button</button>
+            <button class="button" disabled="disabled">Primary button</button>
           </div>
         </div>
 
@@ -1242,7 +1245,7 @@
           <li>errors should not cause pre-filled fields to clear</li>
         </ul>
 
-        <div class="example">
+        <div class="example form-group-example">
           <div class="inner-block">
 
             <form action="" method="post" class="form">
@@ -1251,7 +1254,7 @@
                 <h3 class="heading-19" id="error-heading">There was a problem submitting the form</h3>
                 <p>Please try the following:</p>
                 <ul>
-                  <li><a href="#error-your-name">Enter your name</a></li>
+                  <li><a href="#error-your-name">Enter your first name</a></li>
                   <li><a href="#error-your-email">Enter your email address</a></li>
                 </ul>
               </div>
@@ -1261,11 +1264,18 @@
                 <div class="validation-error">
                   <div class="form-group" id="error-your-name">
                     <label for="your-name-1" class="form-label">
-                      Your name
+                      First name
                       <span class="validation-message">must be completed</span>
                     </label>
                     <input type="text" class="form-control" id="your-name-1">
                   </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="your-email-1" class="form-label">
+                    Middle name (optional)
+                  </label>
+                  <input type="text" class="form-control" id="your-email-1">
                 </div>
 
                 <div class="validation-error">
