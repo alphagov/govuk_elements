@@ -545,6 +545,8 @@
         <ul class="list-bullet text">
           <li>used for graphs and supporting material</li>
           <li>for tints of the extended palette use 50% or 25%</li>
+          <li>for departmental colours
+           &ndash; find these in the GOV.UK front end toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss">colours.scss file</a></li>
         </ul>
         <p>
           <a href="https://www.gov.uk/performance/carers-allowance">See an example of the extended colour palette on GOV.UK</a>
@@ -874,15 +876,26 @@
 
         <p><a href="{{ site.baseurl}}/examples/forms/">See an example of GOV.UK form layout</a></p>
 
-        <h3 class="heading-24">Form fields and labels</h3>
+        <h3 class="heading-24">Optional and mandatory fields</h3>
+        <ul class="text list-bullet">
+          <li>only ask for the information you absolutely need</li>
+          <li>if you do ask for optional information, mark the labels of optional fields with '(optional)'</li>
+          <li>don't mark mandatory fields with asterisks</li>
+        </ul>
+
+        <h3 class="heading-24">Labels</h3>
+        <ul class="text list-bullet">
+          <li>all form fields should be given labels</li>
+          <li>don't hide labels, unless the surrounding context makes them unnecessary</li>
+          <li>labels should be aligned above their fields</li>
+          <li>label text should be short, direct and in sentence case</li>
+          <li>avoid colons at the end of labels</li>
+          <li>labels should be associated with form fields using the <code>for</code> attribute</li>
+        </ul>
+
         <p class="text">
-          Labels should be aligned above form fields.
-        </p>
-        <p class="text">
-          Labels should be associated with form fields, using the <code>for</code> attribute.
           Click on the label "Full name" to bring focus to the form field.
         </p>
-
         <div class="example">
           <div class="inner-block">
 
@@ -896,9 +909,24 @@
           </div>
         </div>
 
-        <h3 class="heading-24">Form fieldsets and legends</h3>
+        <h3 class="heading-24">Form fields</h3>
+        <div class="text">
+          <p>
+            Make field widths proportional to the input they take.
+          </p>
+          <p>
+            Ensure that users can enter the information they need at smaller screen sizes.
+          </p>
+          <p>
+            Snap form fields to 100% width at smaller screen sizes.
+          </p>
+        </div>
+
+        <!-- TODO: Add postcode example -->
+
+        <h3 class="heading-24">Fieldsets and legends</h3>
         <p class="text">
-          The <code>fieldset</code> element can be used to group related form controls. The first element inside a fieldset must be a <code>legend</code> element which describes the group.
+          Use fieldsets to group related form controls. The first element inside a fieldset must be a <code>legend</code> element which describes the group.
         </p>
 
         <h3 class="heading-24">Form focus states</h3>
@@ -988,8 +1016,9 @@
 
         <h3 class="heading-24">Drop-down lists</h3>
         <p class="text">
-          Avoid using Drop-down lists - use radio buttons or checkboxes instead.
+          Avoid using drop-down lists - use radio buttons or checkboxes instead.
         </p>
+
         <!-- TODO: link to blog post to support this statement -->
 
         <h3 class="heading-24" id="guide-form-radio-buttons">Radio buttons</h3>
@@ -1056,30 +1085,8 @@
         <h3 class="heading-24" id="guide-form-checkboxes">Checkboxes</h3>
         <ul class="list-bullet text">
           <li>use these to select either on/off toggles or multiple selections</li>
-          <li>for more than two options, checkboxes should be stacked</li>
-          <li>checkboxes with large hit areas are easier to select with a mouse or touch devices</li>
+          <li>make it clear with words when users can select one or multiple options</li>
         </ul>
-
-        <div class="example">
-          <div class="inner-block">
-
-            <form action="" method="post" class="form">
-              <fieldset class="inline">
-                <legend></legend>
-
-                <label for="checkbox-inline-1" class="block-label">
-                  <input id="checkbox-inline-1" type="checkbox" value="1">
-                  Checkbox option 1
-                </label>
-                <label for="checkbox-inline-2" class="block-label">
-                  <input id="checkbox-inline-2" type="checkbox" value="2">
-                  Checkbox option 2
-                </label>
-              </fieldset>
-            </form>
-
-          </div>
-        </div>
 
         <div class="example">
           <div class="inner-block">
@@ -1108,11 +1115,11 @@
         </div>
 
         <div class="text">
-          Large hit area checkboxes aren't always appropriate. Use standard checkboxes for on/off toggles.
+          <p>Large hit areas aren't always appropriate.</p>
         </div>
+
         <div class="example">
           <div class="inner-block">
-
             <form action="" method="post" class="form">
               <div class="form-group">
                 <label for="telephone-number" class="form-label">Enter your telephone number</label>
@@ -1125,19 +1132,34 @@
               </div>
 
             </form>
-
           </div>
         </div>
 
-        <h3 class="heading-24">Inset text within forms</h3>
-        <ul class="list-bullet text">
-          <li>insets can be used within forms to highlight supporting information</li>
-          <li>use bordered inset text to draw attention to important content on the page</li>
-        </ul>
+        <div class="text">
+          <p>
+            Only pre-select options if there's a strong, user-centred reason to.
+          </p>
+        </div>
 
-        <p class="text">
-          Click on "Yes" to see how this works.
-        </p>
+        <!-- TODO: Add email as an example -->
+
+        <!--
+        <div class="example">
+          <div class="inner-block">
+
+          </div>
+        </div>
+        -->
+
+        <h3 class="heading-24">Inset form elements</h3>
+        <div class="text">
+          <p>
+            Insets can be used within forms to emphasise supporting information.
+          </p>
+          <p>
+            Click on "Yes" to see how this works.
+          </p>
+        </div>
 
         <div class="example">
           <div class="inner-block">
@@ -1176,10 +1198,49 @@
       <div id="guide-buttons">
 
         <h2 class="heading-36 heading-with-border">7. Buttons</h2>
+
         <p class="text">
           Use buttons to move though a transaction.
-          Don't use them to represent choices &ndash; use radio buttons, checkboxes or links instead.
         </p>
+
+        <h3 class="heading-24">Button text</h3>
+        <p class="text">
+          Button text should be short and describe the action the button performs.
+        </p>
+
+        <div class="example">
+          <div class="inner-block">
+            <button class="button">Save and continue</button>
+          </div>
+        </div>
+
+        <p class="text">
+          Launch your service with a Start now button.
+        </p>
+
+        <div class="example">
+          <div class="inner-block">
+            <a href="#" class="button button-get-started">Start now</a>
+          </div>
+        </div>
+
+        <p class="text">
+          Use one button per page.
+        </p>
+        <div class="example">
+          <div class="inner-block">
+            <button class="button">Save and continue</button>
+            <br><br><!-- TODO: FIX THIS!!-->
+            <ul>
+              <li><a href="#">Back</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="text">
+          Align buttons to the left edge of your form, in the user's line of sight.
+        </p>
+        <!-- TODO: Add example -->
 
         <h3 class="heading-24">Button colours</h3>
         <ul class="list-bullet text">
@@ -1188,38 +1249,13 @@
           <li>buttons are created using a Sass button mixin &ndash; find this in the GOV.UK front end toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/design-patterns/_buttons.scss">buttons.scss</a> file</li>
         </ul>
 
-        <h3 class="heading-24">Start now button</h3>
-        <div class="example">
-          <div class="inner-block">
-            <a href="#" class="button button-get-started">Start now</a>
-          </div>
-        </div>
-
-        <h3 class="heading-24">Primary button</h3>
-        <div class="example">
-          <div class="inner-block">
-            <button class="button">Primary button</button>
-          </div>
-        </div>
-
-        <h3 class="heading-24">Disabled button</h3>
+        <h3 class="heading-24">Disabled buttons</h3>
         <p>
           Disabled buttons should be set at 50% opacity.
         </p>
         <div class="example">
           <div class="inner-block">
             <button class="button" disabled="disabled">Primary button</button>
-          </div>
-        </div>
-
-        <h3 class="heading-24">Secondary button</h3>
-        <p class="text">
-          Secondary buttons should look like links.
-          There should only ever be one primary button on a page to make it clear how to proceed.
-        </p>
-        <div class="example">
-          <div class="inner-block">
-            <button class="button-link">Secondary button</button>
           </div>
         </div>
 
