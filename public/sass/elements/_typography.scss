@@ -7,8 +7,43 @@
   -webkit-font-smoothing: antialiased;
 }
 
+// Core font sizes
+.font-xlarge {
+  @include core-48;
+}
+.font-large {
+  @include core-36;
+}
+.font-medium {
+  @include core-24;
+}
+.font-small {
+  @include core-19;
+}
+
+// Bold font sizes
+.bold-xxlarge {
+  @include bold-80();
+}
+.bold-xlarge {
+  @include bold-48();
+}
+.bold-large {
+  @include bold-36();
+}
+.bold-medium {
+  @include bold-24();
+}
+.bold-small {
+  @include bold-19();
+}
+.bold-xsmall {
+  @include bold-16();
+}
+
 // Headings
-.heading-48 {
+.heading-48,
+.heading-xlarge {
   @include bold-48();
   margin-top: $gutter-half;
   margin-bottom: $gutter;
@@ -23,7 +58,8 @@
   }
 }
 
-.heading-36 {
+.heading-36,
+.heading-large {
   @include bold-36();
   margin-top: 25px;
   margin-bottom: 10px;
@@ -33,7 +69,8 @@
   }
 }
 
-.heading-24 {
+.heading-24,
+.heading-medium {
   @include bold-24();
   margin-top: 25px;
   margin-bottom: 10px;
@@ -43,7 +80,8 @@
   }
 }
 
-.heading-19 {
+.heading-19,
+.heading-small {
   @include bold-19();
   margin-top: 10px;
   margin-bottom: 5px;
@@ -74,17 +112,5 @@ pre {
   max-width: 30em;
 }
 
-// Data
-.data-80 {
-  @include bold-80;
-}
 
-.data-48 {
-  @include bold-48;
-  line-height: 0.9;
-}
-
-.data p {
-  @include bold-16;
-}
 

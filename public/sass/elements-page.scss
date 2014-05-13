@@ -307,9 +307,17 @@ code {
 }
 
 
-
 // 5. Data
 // ==========================================================================
+
+.data .bold-xlarge,
+.data .bold-xxlarge {
+  line-height: 0.8;
+}
+
+.example .data p {
+  margin-bottom: 0;
+}
 
 
 // 6. Forms
