@@ -221,6 +221,10 @@ code {
   border: 1px solid $grey-3;
 }
 
+.swatch-button-colour {
+  background-color: $button-colour;
+}
+
 .swatch-link-colour {
  background-color: $link-colour;
 }
@@ -351,13 +355,20 @@ code {
 // 7. Buttons
 // ==========================================================================
 
-.example {
+.example-button .button {
+  margin-bottom: 15px; // increase spacing for this example
+}
 
-  // Create even spacing under buttons
-  .button,
-  .button-link {
-    margin-bottom: 2px;
-  }
+.example-button .heading-19 {
+  margin-top: 0;
+}
+
+.example-button .swatch-wrapper {
+  width: 100%;
+}
+
+.example-button ul {
+  padding-bottom: 0;
 }
 
 

@@ -1,6 +1,12 @@
 // Helpers
 // ==========================================================================
 
+// Return ems from a pixel value
+// This assumes a base of 19px
+@function em($px, $base: 19) {
+  @return ($px / $base) + em;
+}
+
 // Use the contain floats mixin for this project,
 // as placeholders are not supported by libsass
 @mixin contain-floats {

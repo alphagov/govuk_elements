@@ -4,7 +4,7 @@
 .button {
   @include button ($button-colour);
   margin: 0 $gutter-half $gutter-half 0;
-  padding: 10px $gutter-half 5px $gutter-half;
+  padding: em(10) em(15) em(5) em(15);
   vertical-align: top;
 }
 
@@ -13,7 +13,6 @@
 }
 
 // Disabled buttons
-
 .button[disabled="disabled"] {
   background: $button-colour;
 }
@@ -22,15 +21,13 @@
   outline: none;
 }
 
-
 // Start now buttons
-
 .button-get-started {
   @include bold-24;
   background-image: url("../images/icons/icon-pointer.png");
   background-repeat: no-repeat;
   background-position: 100% 50%;
-  padding: 7px 41px 4px 16px;
+  padding: em(7) em(41) em(4) em(16);
 
   @include device-pixel-ratio {
     background-image: url("../images/icons/icon-pointer-2x.png");
@@ -40,29 +37,6 @@
   @include ie(6) {
     background-image: url("../images/icons/icon-pointer-2x.png");
   }
-}
-
-// Link style buttons
-
-.button-link {
-  @include core-19;
-  background: none;
-  border: none;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  color: $link-colour;
-  line-height: 1.25;
-  text-decoration: underline;
-  cursor: pointer;
-  margin: 0 $gutter-half $gutter-half 0;
-  padding: 10px 10px 5px 10px;
-  vertical-align: top;
-}
-.button-link:hover {
-  color: $link-hover-colour;
-}
-.button-link:focus {
-  outline: 3px solid $yellow;
 }
 
 // Show & hide links

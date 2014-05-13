@@ -1161,20 +1161,33 @@
         <p class="text">
           Use one button per page.
         </p>
-        <div class="example">
+        <div class="example example-button">
           <div class="inner-block">
             <button class="button">Save and continue</button>
-            <br><br><!-- TODO: FIX THIS!!-->
-            <ul>
-              <li><a href="#">Back</a></li>
-            </ul>
+            <p><a href="#">Back</a></p>
           </div>
         </div>
 
         <p class="text">
           Align buttons to the left edge of your form, in the user's line of sight.
         </p>
-        <!-- TODO: Add example -->
+
+        <div class="example example-button form-group-example">
+          <div class="inner-block">
+
+            <form action="" method="post" class="form">
+              <div class="form-group">
+                <label for="form-email-address-1" class="form-label">Email address</label>
+                <input type="text" class="form-control" id="form-email-address-1">
+              </div>
+              <div class="form-group">
+                <button class="button">Save and continue</button>
+                <p><a href="#">Back</a></p>
+              </div>
+            </form>
+
+          </div>
+        </div>
 
         <h3 class="heading-24">Button colours</h3>
         <ul class="list-bullet text">
@@ -1182,6 +1195,44 @@
           <li>buttons use the Sass variable <code>$yellow</code>, Hex <code>#FFBF47</code> as a focus colour, as an outline of 3px</li>
           <li>buttons are created using a Sass button mixin &ndash; find this in the GOV.UK front end toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/design-patterns/_buttons.scss">buttons.scss</a> file</li>
         </ul>
+
+        <div class="example example-button">
+          <div class="grid-wrapper">
+
+            <div class="grid grid-1-3">
+              <div class="inner-block">
+                <button class="button">Save and continue</button>
+              </div>
+            </div>
+
+            <div class="grid grid-1-3">
+              <div class="inner-block">
+                <div class="swatch-wrapper">
+                  <h4 class="heading-19">Button</h4>
+                  <div class="swatch swatch-button-colour"></div>
+                  <ul>
+                    <li><b>#00823B</b></li>
+                    <li>$button-colour</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-1-3">
+              <div class="inner-block">
+                <div class="swatch-wrapper">
+                  <h4 class="heading-19">Focus</h4>
+                  <div class="swatch swatch-yellow"></div>
+                  <ul>
+                    <li><b>#FFBF47</b></li>
+                    <li>$yellow</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
 
         <h3 class="heading-24">Disabled buttons</h3>
         <p>
