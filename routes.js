@@ -7,7 +7,7 @@ module.exports = {
 
     });
 
-    // Elements example pages
+    // GOV.UK elements example pages
 
     app.get('/examples/grid-layout', function (req, res) {
       res.render('examples/grid_layout', {'assetPath' : assetPath });
@@ -25,9 +25,22 @@ module.exports = {
       res.render('examples/radio_buttons', {'assetPath' : assetPath });
     });
 
+    // GOV.UK template example pages
+
     app.get('/examples/template', function (req, res) {
       res.render('examples/template', {'assetPath' : assetPath });
     });
+
+    app.get('/examples/template/header', function (req, res) {
+      res.render('examples/template/header', {'assetPath' : assetPath });
+    });
+    app.get('/examples/template/header-with-title', function (req, res) {
+      res.render('examples/template/header_with_title', {'assetPath' : assetPath });
+    });
+    app.get('/examples/template/header-with-nav', function (req, res) {
+      res.render('examples/template/header_with_nav', {'assetPath' : assetPath });
+    });
+
 
   }
 };
