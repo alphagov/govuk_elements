@@ -42,10 +42,13 @@ code {
 }
 
 // Headings
+// Used with heading-large = 36px
 .heading-with-border {
   border-top: 1px solid $border-colour;
-  padding-top: ($gutter*1.5);
+  padding-top: em(45, 36);
 }
+
+
 
 // Text
 .tight {
@@ -62,7 +65,6 @@ code {
 // ==========================================================================
 
 .example {
-
   @include contain-floats;
   position: relative;
   overflow: hidden;
@@ -257,8 +259,8 @@ code {
     text-align: center;
   }
 
-  .heading-19 {
-    margin: $gutter-half 0;
+  .heading-small {
+    margin-bottom: em(10);
   }
 
   ul {
@@ -286,7 +288,7 @@ code {
   vertical-align: top;
 }
 
-.example-icons .heading-24 {
+.example-icons .heading-medium {
   margin-top: 0;
 }
 
@@ -356,10 +358,10 @@ code {
 // ==========================================================================
 
 .example-button .button {
-  margin-bottom: 15px; // increase spacing for this example
+  margin-bottom: 15px;  // increase spacing for this example
 }
 
-.example-button .heading-19 {
+.example-button .heading-small {
   margin-top: 0;
 }
 
