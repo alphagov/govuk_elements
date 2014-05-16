@@ -124,7 +124,7 @@ p {
 
 }
 
-//
+// Lede, or intro text
 .lede {
   @include core-24;
 }
@@ -135,5 +135,16 @@ p {
   max-width: 30em;
 }
 
+
+// Code styles
+pre,
+code {
+  font-size: 13px;
+  line-height: 19px;
+  color: $black;
+  background-color: $highlight-colour;
+  border: 1px solid $border-colour;
+  padding: 3px 7px;
+}
 
 

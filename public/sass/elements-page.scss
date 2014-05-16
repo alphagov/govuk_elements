@@ -29,26 +29,12 @@
 
 // These are example styles, used only for the Elements page example boxes
 
-// Code styles
-// Match those in the Service Design Manual
-pre,
-code {
-  font-size: 13px;
-  line-height: 19px;
-  color: $black;
-  background-color: $highlight-colour;
-  border: 1px solid $border-colour;
-  padding: 3px 7px;
-}
-
 // Headings
 // Used with heading-large = 36px
 .heading-with-border {
   border-top: 1px solid $border-colour;
   padding-top: em(45, 36);
 }
-
-
 
 // Text
 .tight {
