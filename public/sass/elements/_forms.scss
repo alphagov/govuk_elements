@@ -71,6 +71,7 @@ fieldset {
 
 // Form hints & examples are light grey and sit above a form control
 .form-hint {
+  @include core-16;
   display: block;
   color: $secondary-text-colour;
   margin-bottom: 5px;
