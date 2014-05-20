@@ -9,11 +9,12 @@ table {
 
 table th,
 table td {
-  @include core-14;
+  @include core-16;
+  padding: em(14) em(20) em(10) 0;
+
   text-align: left;
   color: #0b0c0c;
   border-bottom: 1px solid $border-colour;
-  padding: 10px 20px 10px 0;
 }
 
 table th {
