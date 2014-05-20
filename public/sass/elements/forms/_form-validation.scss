@@ -2,63 +2,65 @@
 
 // Validation summary box
 .validation-summary {
-  border: 3px solid $error-colour;
-  padding: $gutter-half $gutter;
-  margin-bottom: $gutter;
+  @include bold-16;
+
+  margin-bottom: em(30);
+  padding: em(15) em(30);
+
+  background: $error-colour;
+  color: white;
 
   @include ie-lte(6){
     zoom: 1;
   }
-}
 
-.validation-summary ul {
-  margin-top: 10px;
-}
-
-.validation-summary li,
-.validation-summary p {
-  @include core-16;
-}
-
-.validation-summary p {
-  margin-top: $gutter-half;
-  margin-bottom: 5px;
-}
-
-.validation-summary a {
-  color: $error-colour;
-  @include ie-lte(6) {
-    color: $error-colour !important;
+  .heading-small {
+    margin-top: em(15);
+    margin-bottom: em(10);
   }
+
+  p {
+    margin-top: $gutter-half;
+    margin-bottom: 5px;
+  }
+
+  a {
+    color: white;
+    @include ie-lte(6) {
+      color: white !important;
+    }
+  }
+
 }
 
-.validation-summary .heading-small {
-  margin-top: $gutter-half;
-}
-
-
-// Validation error message box
-// .validation-error {
-//   clear: both;
-//   @include contain-floats;
-//   border-left: 3px solid $error-colour;
-//   padding: $gutter- $gutter;
-//   margin-bottom: $gutter-half;
-//   margin-left: -($gutter);
-// }
-
-// .validation-error .form-group {
-//   margin-bottom: 20px;
-// }
-
-// .validation-error p {
-//   margin-bottom: 10px;
-// }
-
-
-// Validation message
-.validation-message {
-  display: block;
-  @include core-16;
+// Show error styles for label and input pairs
+.validation-error {
+  clear: both;
+  @include contain-floats;
   color: $error-colour;
+
+  // Make any labels red and bold
+  label {
+    font-weight: bold;
+    color: $error-colour;
+  }
+
+  // Sit error message on a new line
+  .validation-message {
+    @include core-16;
+    display: block;
+  }
+
+  // Add a 3px red border to inputs
+  input {
+   border: 3px solid $error-colour;
+  }
+
+  // Set border colour to match focus
+  input:focus {
+    border-color: $yellow;
+    outline-color: $yellow;
+    outline-width: 2px;
+  }
+
 }
