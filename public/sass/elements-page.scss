@@ -53,16 +53,32 @@
 .example {
   @include inner-block;
   @include contain-floats;
-
   position: relative;
   overflow: hidden;
   border: 1px solid $grey-2;
-  outline: $gutter-half solid $highlight-colour;
-
-  margin: $gutter*1.5 0 $gutter*2 0;
+  margin-top: $gutter-half;
+  margin-bottom: $gutter*1.5;
 
   padding-top: $gutter;
-  padding-bottom: $gutter;
+  padding-bottom: $gutter-half;
+
+  @include media(tablet) {
+    padding-top: $gutter*1.5;
+    padding-bottom: $gutter;
+  }
+  &:before {
+    content: "EXAMPLE";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding: em(4) em(15) em(4) em(15);
+
+    @include core-14;
+    background: $grey-2;
+    color: white;
+  }
 
   // Blue text for heading sizes
   .highlight {
