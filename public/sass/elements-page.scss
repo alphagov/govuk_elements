@@ -51,20 +51,18 @@
 // ==========================================================================
 
 .example {
+  @include inner-block;
   @include contain-floats;
+
   position: relative;
   overflow: hidden;
   border: 1px solid $grey-2;
   outline: $gutter-half solid $highlight-colour;
+
   margin: $gutter*1.5 0 $gutter*2 0;
 
-  padding-top: $gutter-half;
-  padding-bottom: $gutter-half;
-
-  @include media(tablet) {
-    padding-top: $gutter;
-    padding-bottom: $gutter;
-  }
+  padding-top: $gutter;
+  padding-bottom: $gutter;
 
   // Blue text for heading sizes
   .highlight {
@@ -79,21 +77,11 @@
 // ==========================================================================
 
 // Grid layout boxes
-.example-grid {
-  background: white;
-  padding-top: 15px;
-  padding-bottom: 10px;
-  @include media(tablet) {
-    padding-top: 25px;
-    padding-bottom: 20px;
-  }
-}
-
 .example-grid p {
   width: 100%;
   background: url("../../public/images/examples/grid.png") 0 0 repeat;
   min-height: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   @include media(tablet) {
     min-height: 60px;
   }
