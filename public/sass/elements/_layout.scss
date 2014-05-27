@@ -1,12 +1,6 @@
 // Layout
 // ==========================================================================
 
-// Ensure .inner-block doesn't inherit a margin here
-// TODO: Change this in the govuk_template
-#global-header-bar .inner-block {
-  margin: 0;
-}
-
 #wrapper {
   text-align: center;
 
@@ -29,6 +23,13 @@
 
 .inner-block {
   @include inner-block(margin);
+}
+
+// Ensure .inner-block doesn't inherit a margin here
+// TODO: Change this in the govuk_template
+#global-cookie-message .inner-block,
+#global-header-bar .inner-block {
+  margin: 0;
 }
 
 
