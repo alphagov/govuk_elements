@@ -46,7 +46,8 @@ summary {
 }
 
 details summary {
-  @extend .button-link;
+  color: $govuk-blue;
+  text-decoration: underline;
 }
 
 details summary:focus {
