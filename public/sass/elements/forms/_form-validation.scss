@@ -36,29 +36,39 @@
   margin-top: $gutter-half;
 }
 
+// Invalid
 
-// Validation error message box
-// .validation-error {
-//   clear: both;
-//   @include contain-floats;
-//   border-left: 3px solid $error-colour;
-//   padding: $gutter- $gutter;
-//   margin-bottom: $gutter-half;
-//   margin-left: -($gutter);
-// }
-
-// .validation-error .form-group {
-//   margin-bottom: 20px;
-// }
-
-// .validation-error p {
-//   margin-bottom: 10px;
-// }
-
+.invalid,
+.validation-message {
+  border-left: 4px solid $error-colour;
+  margin-left: -($gutter-half);
+  padding-left: 10px;
+  @include media(tablet) {
+    margin-left: -19px;
+    padding-left: $gutter-half;
+  }
+}
 
 // Validation message
 .validation-message {
+  clear: both;
   display: block;
-  @include core-16;
+  @include core-19;
+  border-left: 4px solid $error-colour;
+
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @include media(tablet) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+.validation-message a {
   color: $error-colour;
+  text-decoration: none;
+  font-weight: bold;
 }

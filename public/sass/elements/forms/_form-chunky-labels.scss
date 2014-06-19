@@ -12,17 +12,19 @@
   background: $panel-colour;
   border: 1px solid $panel-colour;
   padding: (18px $gutter $gutter-half $gutter*1.5);
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 15px;
 
   cursor: pointer; // Encourage clicking on block labels
 
   @include media(tablet) {
     float: left;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 20px;
     // width: 25%; - Test : check that text within labels will wrap
   }
+}
+
+fieldset :first-child {
+  margin-top: 0;
 }
 
 .block-label:hover {

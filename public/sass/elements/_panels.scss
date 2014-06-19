@@ -12,9 +12,9 @@
 
   padding-left: $gutter-half;
   @include media(tablet){
-    padding-left: 20px;
+    padding-left: 30px;
   }
-  margin: ($gutter $gutter-half $gutter*1.5 0);
+  margin: (20px $gutter-half $gutter*1.5 0);
 }
 
 .panel-indent legend {
@@ -25,6 +25,20 @@
   margin-bottom: 0;
 }
 
-.panel-indent .form-group:last-child {
+// Remove bottom padding & margin on panels used within forms
+form .panel-indent {
+  width: 100%;
+  float: left;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-right: 15px;
+  @include box-sizing(border-box);
+}
+
+form .panel-indent {
+  @include contain-floats;
+}
+
+form .panel-indent .form-group:last-child {
   margin-bottom: 0;
 }

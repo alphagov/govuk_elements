@@ -1,0 +1,124 @@
+{{<govuk_template}}
+
+{{$cookieMessage}}
+  {{>cookie_message}}
+{{/cookieMessage}}
+
+{{$head}}
+  {{>head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="wrapper" role="main">
+  <div id="content">
+    <div class="inner-block">
+
+      <form action="" method="post" class="form">
+
+        <div class="validation-group-error" id="error-send-new">
+
+          <h1 class="heading-medium error-title">
+            Where should we send your new<br> passport?
+          </h1>
+
+          <div class="form-group invalid">
+            <fieldset>
+
+              <label for="radio-home-address" class="block-label">
+                <input id="radio-home-address" type="radio" name="radio-indent-group" value="Yes">
+                Home address
+              </label>
+
+              <label for="radio-other-address" class="block-label" data-target="example-other-address">
+                <input id="radio-other-address" type="radio" name="radio-indent-group" value="No">
+                Other address
+              </label>
+
+              <div class="panel-indent toggle-content" id="example-other-address">
+
+                <legend class="heading-small">
+                  Your other address
+                </legend>
+
+                 <div class="form-group form-group-compound">
+                  <label class="form-label" for="address-line-1">Street</label>
+                  <input type="text" class="form-control" id="address-line-1">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label visuallyhidden" for="address-line-2">Street</label>
+                  <input type="text" class="form-control" id="address-line-2">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="address-town">Town or City</label>
+                  <input type="text" class="form-control form-control-1-4" id="address-town">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="address-postcode">Postcode</label>
+                  <input type="text" class="form-control form-control-1-8" id="address-postcode">
+                </div>
+
+              </div>
+
+            </fieldset>
+          </div>
+
+          <div class="validation-message">
+            <a href="#">Please answer this question</a>
+          </div>
+
+        </div>
+
+        <!-- <div class="validation-group-error" id="error-send-old">
+          <div class="form-group">
+            <fieldset>
+
+              <legend class="form-title heading-small">How should we send your old passport?</legend>
+
+              <label for="radio-royal-mail" class="block-label">
+                <input id="radio-royal-mail" type="radio" name="radio-send" value="">
+                Royal Mail second class: free
+              </label>
+
+              <label for="radio-secure-delivery" class="block-label" data-target="example-secure-delivery">
+                <input id="radio-secure-delivery" type="radio" name="radio-send" value="">
+                Secure delivery: £3 extra
+              </label>
+
+              <div class="panel-indent toggle-content" id="example-secure-delivery">
+                <p>Your new passport will be sent by secure delivery.</p>
+               </div>
+
+            </fieldset>
+          </div>
+        </div> -->
+
+        <!-- Primary buttons, secondary links -->
+        <div class="form-group">
+          <input type="submit" class="button" value="Save and continue">
+          <ul>
+            <li><a href="#">Skip this section for now</a></li>
+            <li><a href="/">Back</a></li>
+          </ul>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+{{/content}}
+
+{{$bodyEnd}}
+  {{>scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
