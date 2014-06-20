@@ -3,8 +3,11 @@
 
 // Indented panels with a grey left hand border
 .panel-indent {
+  float: left;
+  width: 100%;
+  @include box-sizing(border-box);
+
   @include contain-floats;
-  clear: both;
   border-left: 5px solid $panel-colour;
 
   padding-top: 10px;
@@ -23,20 +26,13 @@
 
 .panel-indent p:only-child {
   margin-bottom: 0;
+  padding-bottom: 10px;
 }
 
 // Remove bottom padding & margin on panels used within forms
 form .panel-indent {
-  width: 100%;
-  float: left;
-  padding-bottom: 0;
   margin-bottom: 0;
-  margin-right: 15px;
-  @include box-sizing(border-box);
-}
-
-form .panel-indent {
-  @include contain-floats;
+  padding-bottom: 0;
 }
 
 form .panel-indent .form-group:last-child {
