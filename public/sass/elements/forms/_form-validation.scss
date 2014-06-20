@@ -1,9 +1,34 @@
 @import "../colours";
 
-// Validation summary box
+// Validation border and alignment
+
+.invalid,
+.validation-message,
 .validation-summary {
-  border: 3px solid $error-colour;
-  padding: $gutter-half $gutter;
+  border-left: 4px solid $error-colour;
+  margin-left: -($gutter-half);
+  padding-left: 10px;
+  @include media(tablet) {
+    margin-left: -19px;
+    padding-left: $gutter-half;
+  }
+}
+
+.form-group.invalid {
+  margin-bottom: 10px;
+  @include media(tablet) {
+    margin-bottom: 15px;
+  }
+  // padding-bottom: 10px;
+  // @include media(tablet) {
+  //   padding-bottom: 15px;
+  // }
+}
+
+// Validation summary box
+
+.validation-summary {
+  border: 4px solid $error-colour;
   margin-bottom: $gutter;
 
   @include ie-lte(6){
@@ -36,35 +61,21 @@
   margin-top: $gutter-half;
 }
 
-// Invalid
-
-.invalid,
-.validation-message {
-  border-left: 4px solid $error-colour;
-  margin-left: -($gutter-half);
-  padding-left: 10px;
-  @include media(tablet) {
-    margin-left: -19px;
-    padding-left: $gutter-half;
-  }
-}
-
 // Validation message
+
 .validation-message {
   clear: both;
   display: block;
-  @include core-19;
+  @include core-16;
   border-left: 4px solid $error-colour;
 
-  margin-top: $gutter-half;
-  margin-bottom: $gutter-half;
+  margin-bottom: 30px;
 
   padding-top: 10px;
   padding-bottom: 10px;
 
   @include media(tablet) {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 45px;
   }
 }
 .validation-message a {
@@ -72,3 +83,5 @@
   text-decoration: none;
   font-weight: bold;
 }
+
+
