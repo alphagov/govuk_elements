@@ -15,17 +15,110 @@
 {{$headerClass}}with-proposition{{/headerClass}}
 
 {{$content}}
+
+<style>
+  /*.validation-message,*/
+  .validation-summary {
+    display: none;
+  }
+</style>
 <main id="wrapper" role="main">
   <div id="content">
     <div class="inner-block">
 
       <form action="" method="post" class="form">
 
-        <div class="validation-group-error" id="error-send-new">
+        <h1 class="form-title heading-large">
+          Your details
+        </h1>
 
-          <h1 class="heading-medium error-title">
-            Where should we send your new<br> passport?
-          </h1>
+        <div class="validation-summary" aria-labelledby="error-heading" role="alert">
+          <h3 class="heading-small" id="error-heading">There was a problem submitting the form</h3>
+          <p>Please try the following:</p>
+          <ul>
+            <li><a href="#error-full-name">Enter your full name</a></li>
+            <li><a href="#error-ni-number">Enter your National Insurance number</a></li>
+          </ul>
+        </div>
+
+        <!-- Full name -->
+        <div class="form-group invalid" id="error-full-name">
+          <label class="form-label-bold" for="full-name">Full name</label>
+          <p class="form-hint">As shown on your birth certificate or passport</p>
+          <input type="text" class="form-control" id="full-name">
+        </div>
+
+        <div class="validation-message">
+          <a href="#error-full-name">Please enter your full name</a>
+        </div>
+
+        <!-- National Insurance number -->
+        <div class="form-group invalid" id="error-ni-number">
+          <label class="form-label-bold" for="ni-number">
+            National Insurance number
+            <span class="form-hint">
+              It's on your National Insurance card, benefit letter, payslip or P60.
+              <br>
+              For example, 'VO 12 34 56 D'.
+            </span>
+          </label>
+          <input type="text" class="form-control" id="ni-number">
+        </div>
+
+        <div class="validation-message">
+          <a href="#error-ni-number">Please enter your National Insurance number</a>
+        </div>
+
+        <!-- Date of birth -->
+        <div class="form-group invalid">
+          <fieldset>
+            <legend class="form-label-bold">Date of birth</legend>
+
+            <div class="date-of-birth">
+              <p class="form-hint">For example, 08 04 2014</p>
+
+              <div class="form-group form-group-day">
+                <label for="dob-day">Day</label>
+                <input type="text" class="form-control" id="dob-day">
+              </div>
+              <div class="form-group form-group-month">
+                <label for="dob-month">Month</label>
+                <input type="text" class="form-control" id="dob-month">
+              </div>
+              <div class="form-group form-group-year">
+                <label for="dob-year">Year</label>
+                <input type="text" class="form-control" id="dob-year">
+              </div>
+            </div>
+
+            <div class="date-of-birth native-date-of-birth">
+              <p class="form-hint">For example, 08 April 2014</p>
+              <input type="date" class="form-control">
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="validation-message">
+          <a href="#error-ni-number">Please enter your date of birth</a>
+        </div>
+
+        <!-- Primary buttons, secondary links -->
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+          <ul>
+            <li><a href="#">Skip this section for now</a></li>
+            <li><a href="/">Back</a></li>
+          </ul>
+        </div>
+
+      </form>
+
+      <form action="" method="post" class="form">
+
+        <h1 class="heading-medium">
+          Where should we send your new<br> passport?
+        </h1>
 
           <div class="form-group invalid">
             <fieldset>
@@ -75,33 +168,32 @@
             <a href="#">Please answer this question</a>
           </div>
 
+        <div class="form-group invalid">
+          <fieldset>
+
+            <legend class="heading-small">How should we send your old passport?</legend>
+
+            <label for="radio-royal-mail" class="block-label">
+              <input id="radio-royal-mail" type="radio" name="radio-send" value="">
+              Royal Mail second class: free
+            </label>
+
+            <label for="radio-secure-delivery" class="block-label" data-target="example-secure-delivery">
+              <input id="radio-secure-delivery" type="radio" name="radio-send" value="">
+              Secure delivery: £3 extra
+            </label>
+
+            <div class="panel-indent toggle-content" id="example-secure-delivery">
+              <p>Your new passport will be sent by secure delivery.</p>
+             </div>
+
+          </fieldset>
         </div>
 
-        <!-- <div class="validation-group-error" id="error-send-old">
-          <div class="form-group">
-            <fieldset>
+        <div class="validation-message">
+          <a href="#">Please answer this question</a>
+        </div>
 
-              <legend class="form-title heading-small">How should we send your old passport?</legend>
-
-              <label for="radio-royal-mail" class="block-label">
-                <input id="radio-royal-mail" type="radio" name="radio-send" value="">
-                Royal Mail second class: free
-              </label>
-
-              <label for="radio-secure-delivery" class="block-label" data-target="example-secure-delivery">
-                <input id="radio-secure-delivery" type="radio" name="radio-send" value="">
-                Secure delivery: £3 extra
-              </label>
-
-              <div class="panel-indent toggle-content" id="example-secure-delivery">
-                <p>Your new passport will be sent by secure delivery.</p>
-               </div>
-
-            </fieldset>
-          </div>
-        </div> -->
-
-        <!-- Primary buttons, secondary links -->
         <div class="form-group">
           <input type="submit" class="button" value="Save and continue">
           <ul>
