@@ -63,25 +63,6 @@ $(document).ready(function() {
   }
 
   // Example - Add aria support to details
-
-  // Check for native browser support
-  //  console.log($.fn.details.support ? 'Native support' : 'No native support');
-
-  // Add conditional classname based on support
-  $('html').addClass($.fn.details.support ? 'details' : 'no-details');
-
-  // Emulate <details> where necessary and enable open/close event handlers
-  $('details').details();
-
-  // Add fallback for browsers which don't support details
-  if ($('.no-details')) {
-    $("summary").click(function() {
-      if ($(this).parent().attr("open")) {
-        $(this).parent().removeAttr("open");
-      } else {
-        $(this).parent().attr("open", "open");
-      }
-    });
-  }
+  // See /javascripts/vendor/details.polyfill.js
 
 });

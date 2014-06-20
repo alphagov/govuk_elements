@@ -21,6 +21,10 @@ module.exports = {
       res.render('examples/forms', {'assetPath' : assetPath });
     });
 
+    app.get('/examples/details-summary', function (req, res) {
+      res.render('examples/details_summary', {'assetPath' : assetPath });
+    });
+
     // GOV.UK template example pages
 
     app.get('/examples/template', function (req, res) {

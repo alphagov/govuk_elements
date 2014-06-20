@@ -1,0 +1,56 @@
+
+{{<govuk_template}}
+
+{{$cookieMessage}}
+  {{>cookie_message}}
+{{/cookieMessage}}
+
+{{$head}}
+  {{>head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="wrapper" role="main">
+  <div id="content">
+    <div class="inner-block">
+      <a href="/" class="example-back-link">Back to GOV.UK elements</a>
+      <h1 class="heading-xlarge">Details test page</h1>
+      <p> Support for HTML5's &lt;details&gt; and &lt;summary&gt;</p>
+
+      <details>
+        <summary><span class="summary">Help with nationality</span></summary>
+        <div class="panel-indent">
+          <p>
+            If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+          </p>
+          <p>
+            We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="summary">Why aren't all prisons available?</span></summary>
+        <div>
+          <p>
+            You can’t make an online visit request for all prisons (eg high-security and private prisons). If you can’t enter the prison you're visiting, contact the prison to find out how to book.
+          </p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</main>
+{{/content}}
+
+{{$bodyEnd}}
+  {{>scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
