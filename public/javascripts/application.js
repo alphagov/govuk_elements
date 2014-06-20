@@ -27,7 +27,7 @@ $(document).ready(function() {
 
   // Example - Form focus styles
 
-  if ($('.form').length>0) {
+  if ($('.block-label').length>0) {
 
     $(".block-label").each(function() {
 
@@ -49,18 +49,26 @@ $(document).ready(function() {
       $('input:not(:checked)').parent().removeClass('selected');
       $('input:checked').parent().addClass('selected');
 
-      $('.toggle-content').hide();
+    });
 
-      var target = $('input:checked').parent().attr('data-target');
-      $('#'+target).show();
+    // For radio buttons
+    $('.block-label input[type=radio]').click(function(){
+
+      var data_target = $(this).parent().attr('data-target');
+      // console.log(data_target);
+
+      $(this).parent().siblings('.toggle-content').hide();
+
+      $('#'+data_target).show();
 
     });
 
-    // For pre-checked inputs, show toggled content
-    var target = $('input:checked').parent().attr('data-target');
-    $('#'+target).show();
-
   }
+
+  // For pre-checked inputs, show toggled content
+  var target = $('input:checked').parent().attr('data-target');
+  $('#'+target).show();
+
 
   // Example - Add aria support to details
 
