@@ -3,3 +3,5 @@
 .start.pid
 # Ignore compiled stylesheets
 public/stylesheets/
+# Ignore WIP form examples
+views/examples/forms
