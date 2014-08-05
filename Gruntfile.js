@@ -44,14 +44,21 @@ module.exports = function(grunt){
         ]
       },
 
-      govuk_frontend_toolkit: {
+      govuk_frontend_toolkit_scss: {
         expand: true,
         src: '**',
         cwd: 'node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets/',
         dest: 'govuk/public/sass/'
       },
 
-      govuk_frontend_toolkit_assets: {
+      govuk_frontend_toolkit_js: {
+        expand: true,
+        src: '**',
+        cwd: 'node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/javascripts/',
+        dest: 'govuk/public/javascripts/'
+      },
+
+      govuk_frontend_toolkit_img: {
         expand: true,
         src: '**',
         cwd: 'node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/images/',
@@ -127,8 +134,9 @@ module.exports = function(grunt){
     'copy:govuk_template',
     'copy:govuk_assets',
     'convert_template',
-    'copy:govuk_frontend_toolkit',
-    'copy:govuk_frontend_toolkit_assets',
+    'copy:govuk_frontend_toolkit_scss',
+    'copy:govuk_frontend_toolkit_js',
+    'copy:govuk_frontend_toolkit_img',
     'replace',
     'sass',
     'concurrent:target'
