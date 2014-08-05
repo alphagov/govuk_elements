@@ -25,6 +25,10 @@ module.exports = {
       res.render('examples/details_summary', {'assetPath' : assetPath });
     });
 
+    app.get('/examples/radios-checkboxes', function (req, res) {
+      res.render('examples/radios_checkboxes', {'assetPath' : assetPath });
+    });
+
     // GOV.UK template example pages
 
     app.get('/examples/template', function (req, res) {
