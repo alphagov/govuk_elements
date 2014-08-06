@@ -32,4 +32,36 @@ $(document).ready(function() {
   var $blockLabels = $(".block-label input[type='radio'], .block-label input[type='checkbox']");
   GOVUK.selectionButtons($blockLabels);
 
+  // Reveal hidden content
+  // Checkboxes
+  $(".block-label input[type='checkbox']").click(function() {
+
+    var $checkboxLabel = $(this).parent();
+    var $dataTarget = $checkboxLabel.attr('data-target');
+
+    if (typeof $dataTarget === "undefined") {
+      $('#'+$dataTarget).toggle();
+    }
+
+  });
+
+  // Radio buttons
+  $(".block-label input[type='radio']").click(function() {
+
+    var $radioGroupName = $(this).attr('name');
+    var $radioLabel = $(this).parent();
+    var $dataTarget = $radioLabel.attr('data-target');
+
+    if (typeof $dataTarget === "undefined") {
+      $(".block-label input[name=" + $radioGroupName + "]").each(function() {
+        var groupDataTarget = $(this).parent().attr('data-target');
+        $('#'+groupDataTarget).hide();
+      });
+    }
+    else {
+      $('#'+$dataTarget).show();
+    }
+
+  });
+
 });
