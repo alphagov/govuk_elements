@@ -110,19 +110,18 @@
               Royal Mail second class: free
             </label>
 
-            <label for="radio-secure-delivery" class="block-label" data-target="example-other-address">
+            <label for="radio-secure-delivery" class="block-label" data-target="panel-secure-delivery">
               <input id="radio-secure-delivery" type="radio" name="radio-send" value="">
               Secure delivery: £3 extra
             </label>
 
           </fieldset>
+          <div class="panel-indent js-hidden" id="panel-secure-delivery">
+            <p>Your new passport will be sent by secure delivery.</p>
+          </div>
+
         </div>
 
-        <div class="panel-indent">
-          <p>Your new passport will be sent by secure delivery.</p>
-        </div>
-
-        <!-- Primary buttons, secondary links -->
         <div class="form-group">
           <input type="submit" class="button" value="Continue">
           <ul>
