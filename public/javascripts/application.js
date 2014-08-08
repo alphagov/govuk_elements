@@ -71,13 +71,27 @@ $(document).ready(function() {
   var showText = 'Press to reveal';
   var hideText = 'Press to hide';
 
+
+
    $('details').each(function() {
       
       // Add role=button attribute and screenreader text
-      $(this).find('summary').append('<span class="visuallyhidden">' +showText+ '</span>').attr('role', 'button');
+      $(this).find('summary').append('<span class="visuallyhidden"></span>').attr('role', 'button');
+
+      // Detect open/closed state
+      if($(this).attr("open") ) {
+        $(this).find('summary span.visuallyhidden').text(hideText);
+        $(this).find('summary').attr('aria-expanded', 'true');
+        $(this).find('.panel-indent').attr('aria-expanded', 'true');
+      }else{
+        $(this).find('summary span.visuallyhidden').text(showText);
+        $(this).find('summary').attr('aria-expanded', 'false');
+        $(this).find('.panel-indent').attr('aria-expanded', 'false');
+      }
       
       // Toggle aria-expanded and screenreader text on click
       $(this).find('summary').click(function() {
+        
         if ($(this).parent().attr("open") ) {
           $(this).attr('aria-expanded', 'false');
           $(this).children('span.visuallyhidden').html(showText);
