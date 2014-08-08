@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+  // Hide jQuery animation
+  jQuery.fx.off = true;
+
   // Example - Highlight grid
 
   if ($('.js-highlight-grid').length>0) {
@@ -36,11 +39,33 @@ $(document).ready(function() {
   // Checkboxes
   $(".block-label input[type='checkbox']").click(function() {
 
+    var $checkbox = $(this);
     var $checkboxLabel = $(this).parent();
-    var $dataTarget = $checkboxLabel.attr('data-target');
 
-    if (typeof $dataTarget === "undefined") {
-      $('#'+$dataTarget).toggle();
+    var $dataTarget = $checkboxLabel.attr('data-target');
+    console.log($dataTarget);
+
+    // Set aria-controls
+    $checkbox.attr('aria-controls', $dataTarget);
+
+    // Show or hide, set aria-expanded and aria-hidden
+    if (typeof $dataTarget !== typeof undefined && $dataTarget !== false) {
+
+      $('#'+$dataTarget).toggle(function() {
+        if ($(this).css('display')==='none') {
+          $(this).removeAttr('aria-hidden','false');
+          $(this).removeAttr('aria-expanded','true');
+          $(this).attr('aria-hidden', 'true');
+          $(this).attr('aria-expanded', 'false');
+        }
+        else {
+          $(this).removeAttr('aria-hidden','true');
+          $(this).removeAttr('aria-expanded','false');
+          $(this).prop('aria-hidden', 'false');
+          $(this).prop('aria-expanded', 'true');
+        }
+      });
+
     }
 
   });
@@ -48,20 +73,27 @@ $(document).ready(function() {
   // Radio buttons
   $(".block-label input[type='radio']").click(function() {
 
+    var $radio = $(this);
     var $radioGroupName = $(this).attr('name');
     var $radioLabel = $(this).parent();
+
     var $dataTarget = $radioLabel.attr('data-target');
 
-    if (typeof $dataTarget === "undefined") {
-      $(".block-label input[name=" + $radioGroupName + "]").each(function() {
-        var groupDataTarget = $(this).parent().attr('data-target');
-        $('#'+groupDataTarget).hide();
-      });
+    // Set aria-controls
+    $radio.attr('aria-controls', $dataTarget);
+
+    // Show or hide, set aria-expanded and aria-hidden
+    if (typeof $dataTarget !== "undefined") {
+      $('#'+$dataTarget).attr('aria-hidden','false').attr('aria-expanded','true').show();
     }
     else {
-      $('#'+$dataTarget).show();
+      $(".block-label input[name=" + $radioGroupName + "]").each(function() {
+        var groupDataTarget = $(this).parent().attr('data-target');
+        $('#'+groupDataTarget).attr('aria-hidden','true').attr('aria-expanded','false').hide();
+      });
     }
 
   });
+
 
 });

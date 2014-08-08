@@ -21,11 +21,20 @@
 
       <a href="/" class="example-back-link">Back to GOV.UK elements</a>
 
+      <p class="text">
+        This example page demonstrates the new JavaScript in the govuk frontend toolkit,
+        to set a 'focused' and 'selected' states for large hit area labels, wrapping checkboxes and radio buttons.
+      </p>
+      <p class="text">
+        It also also demonstrates showing and hiding additional content and setting ARIA attributes.
+      </p>
+
       <form action="" method="post" class="form">
 
-        <h1 class="form-title heading-large">
+        <h1 class="heading-large">
           What is your nationality?
         </h1>
+
         <p>If you have dual nationality, select all options that are relevant to you.</p>
 
         <div class="form-group">
@@ -41,10 +50,18 @@
               Irish
             </label>
 
-            <label for="nationality_other" class="block-label">
+            <label for="nationality_other" class="block-label" data-target="example_nationality_other">
               <input type="checkbox" name="nationality_other" value="Wales" id="nationality_other">
               Citizen of another country
             </label>
+
+            <div class="panel-indent js-hidden" id="example_nationality_other">
+              <label for="nationality_other_countries" class="form-label">
+                Country name
+              </label>
+              <input type="text" id="nationality_other_countries">
+            </div>
+
 
           </fieldset>
         </div>
@@ -73,7 +90,7 @@
           </fieldset>
         </div>
 
-        <div class="panel-indent toggle-content" id="example-other-address">
+        <div class="panel-indent js-hidden" id="example-other-address">
 
           <legend class="heading-medium">
             Your other address
@@ -97,27 +114,6 @@
           <div class="form-group">
             <label class="form-label" for="address-postcode">Postcode</label>
             <input type="text" class="form-control form-control-1-8" id="address-postcode">
-          </div>
-
-        </div>
-
-        <div class="form-group">
-          <fieldset>
-            <legend class="form-label">How should we send your old passport?</legend>
-
-            <label for="radio-royal-mail" class="block-label">
-              <input id="radio-royal-mail" type="radio" name="radio-send" value="">
-              Royal Mail second class: free
-            </label>
-
-            <label for="radio-secure-delivery" class="block-label" data-target="panel-secure-delivery">
-              <input id="radio-secure-delivery" type="radio" name="radio-send" value="">
-              Secure delivery: £3 extra
-            </label>
-
-          </fieldset>
-          <div class="panel-indent js-hidden" id="panel-secure-delivery">
-            <p>Your new passport will be sent by secure delivery.</p>
           </div>
 
         </div>
