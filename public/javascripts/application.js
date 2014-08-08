@@ -43,7 +43,6 @@ $(document).ready(function() {
     var $checkboxLabel = $(this).parent();
 
     var $dataTarget = $checkboxLabel.attr('data-target');
-    console.log($dataTarget);
 
     // Set aria-controls
     $checkbox.attr('aria-controls', $dataTarget);
