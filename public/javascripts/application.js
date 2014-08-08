@@ -71,7 +71,6 @@ function showHideRadioToggledContent() {
         // Update aria-expanded and aria-hidden attributes
         $(this).attr('aria-expanded', state);
         $('#'+$dataTarget).attr('aria-hidden', !state);
-
       });
     }
 
