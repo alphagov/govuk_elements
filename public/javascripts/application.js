@@ -65,4 +65,28 @@ $(document).ready(function() {
   // Example - Add aria support to details
   // See /javascripts/vendor/details.polyfill.js
 
+  // Accessibility enhancements for details element 
+
+  // Screenreader text vars
+  var showText = 'Press to reveal';
+  var hideText = 'Press to hide';
+
+   $('details').each(function() {
+      
+      // Add role=button attribute and screenreader text
+      $(this).find('summary').append('<span class="visuallyhidden">' +showText+ '</span>').attr('role', 'button');
+      
+      // Toggle aria-expanded and screenreader text on click
+      $(this).find('summary').click(function() {
+        if ($(this).parent().attr("open") ) {
+          $(this).attr('aria-expanded', 'false');
+          $(this).children('span.visuallyhidden').html(showText);
+        } else {
+          $(this).attr('aria-expanded', 'true');
+          $(this).children('span.visuallyhidden').html(hideText);
+        }
+      });
+  });
+
+
 });
