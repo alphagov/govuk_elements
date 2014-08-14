@@ -35,7 +35,6 @@ $(document).ready(function() {
   var $blockLabels = $(".block-label input[type='radio'], .block-label input[type='checkbox']");
   GOVUK.selectionButtons($blockLabels);
 
-  // Reveal hidden content
   // Checkboxes
   $(".block-label input[type='checkbox']").click(function() {
 
@@ -52,16 +51,10 @@ $(document).ready(function() {
 
       $('#'+$dataTarget).toggle(function() {
         if ($(this).css('display')==='none') {
-          $(this).removeAttr('aria-hidden','false');
-          $(this).removeAttr('aria-expanded','true');
-          $(this).attr('aria-hidden', 'true');
-          $(this).attr('aria-expanded', 'false');
+          $(this).attr('aria-hidden','true').attr('aria-expanded','false')
         }
         else {
-          $(this).removeAttr('aria-hidden','true');
-          $(this).removeAttr('aria-expanded','false');
-          $(this).prop('aria-hidden', 'false');
-          $(this).prop('aria-expanded', 'true');
+          $(this).attr('aria-hidden','false').attr('aria-expanded','true');
         }
       });
 
