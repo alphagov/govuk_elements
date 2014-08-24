@@ -111,10 +111,12 @@
       if (typeof detailsAttr !== typeof undefined && detailsAttr !== false) {
         // console.log('open');
         details.__summary.setAttribute('aria-expanded', 'true');
+        details.__content.setAttribute('aria-hidden', 'false');
       }
       else {
         // console.log('closed');
         details.__summary.setAttribute('aria-expanded', 'false');
+        details.__content.setAttribute('aria-hidden', 'true');
         details.__content.style.display = 'none';
       }
 
@@ -138,9 +140,11 @@
 
       // Update aria-expanded attribute on click
       var expanded = summary.__details.__summary.getAttribute('aria-expanded') == 'true';
+      var hidden = summary.__details.__content.getAttribute('aria-hidden') == 'true';
       // console.log(expanded);
 
       summary.__details.__summary.setAttribute('aria-expanded', (expanded ? 'false' : 'true'));
+      summary.__details.__content.setAttribute('aria-hidden', (hidden ? 'false' : 'true'));
       summary.__details.__content.style.display = (expanded ? 'none' : 'block');
 
       if(summary.__twisty) {
