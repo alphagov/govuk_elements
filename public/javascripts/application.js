@@ -1,69 +1,46 @@
-$(document).ready(function() {
+function showHideCheckboxToggledContent() {
 
-  // Hide jQuery animation
-  jQuery.fx.off = true;
-
-  // Example - Highlight grid
-
-  if ($('.js-highlight-grid').length>0) {
-
-    $('.js-highlight-grid').click(function(e) {
-
-      e.preventDefault();
-      var html = $('html');
-
-      if ($('.is-inner-block-highlight').length>0) {
-        // Don't add more than once
-      } else {
-        $('.grid .inner-block').wrapInner('<div class="is-inner-block-highlight"></div>');
-      }
-
-      if (html.hasClass('example-highlight-grid')) {
-          html.removeClass('example-highlight-grid');
-      } else {
-          html.addClass('example-highlight-grid');
-      }
-
-    });
-
-  }
-
-  // Example - Add aria support to details
-  // See /javascripts/vendor/details.polyfill.js
-
-  // govuk_frontend_tookit selection-buttons.js
-  var $blockLabels = $(".block-label input[type='radio'], .block-label input[type='checkbox']");
-  GOVUK.selectionButtons($blockLabels);
-
-  // Checkboxes
-  $(".block-label input[type='checkbox']").click(function() {
+  $(".block-label input[type='checkbox']").each(function() {
 
     var $checkbox = $(this);
     var $checkboxLabel = $(this).parent();
 
     var $dataTarget = $checkboxLabel.attr('data-target');
 
-    // Set aria-controls
-    $checkbox.attr('aria-controls', $dataTarget);
+    // Add ARIA attributes
 
-    // Show or hide, set aria-expanded and aria-hidden
+    // If the data-target attribute is defined
     if (typeof $dataTarget !== typeof undefined && $dataTarget !== false) {
 
-      $('#'+$dataTarget).toggle(function() {
-        if ($(this).css('display')==='none') {
-          $(this).attr('aria-hidden','true').attr('aria-expanded','false')
-        }
-        else {
-          $(this).attr('aria-hidden','false').attr('aria-expanded','true');
-        }
-      });
+      // Set aria-controls
+      $checkbox.attr('aria-controls', $dataTarget);
 
+      // Set aria-expanded and aria-hidden
+      $checkbox.attr('aria-expanded', 'false');
+      $('#'+$dataTarget).attr('aria-hidden', 'true');
+
+      // For checkboxes revealing hidden content
+      $checkbox.on('click', function() {
+
+        var state = $(this).attr('aria-expanded') === 'false' ? true : false;
+
+        // Toggle hidden content
+        $('#'+$dataTarget).toggle();
+
+        // Update aria-expanded and aria-hidden attributes
+        $(this).attr('aria-expanded', state);
+        $('#'+$dataTarget).attr('aria-hidden', !state);
+
+      });
     }
 
   });
 
-  // Radio buttons
-  $(".block-label input[type='radio']").click(function() {
+}
+
+function showHideRadioToggledContent() {
+
+  $(".block-label input[type='radio']").each(function() {
 
     var $radio = $(this);
     var $radioGroupName = $(this).attr('name');
@@ -71,21 +48,78 @@ $(document).ready(function() {
 
     var $dataTarget = $radioLabel.attr('data-target');
 
-    // Set aria-controls
-    $radio.attr('aria-controls', $dataTarget);
+    // Add ARIA attributes
 
-    // Show or hide, set aria-expanded and aria-hidden
-    if (typeof $dataTarget !== "undefined") {
-      $('#'+$dataTarget).attr('aria-hidden','false').attr('aria-expanded','true').show();
+    // If the data-target attribute is defined
+    if (typeof $dataTarget !== typeof undefined && $dataTarget !== false) {
+
+      // Set aria-controls
+      $radio.attr('aria-controls', $dataTarget);
+
+      // Set aria-expanded and aria-hidden
+      $radio.attr('aria-expanded', 'false');
+      $('#'+$dataTarget).attr('aria-hidden', 'true');
+
+      // For radio buttons revealing hidden content
+      $radio.on('click', function() {
+
+        var state = $(this).attr('aria-expanded') === 'false' ? true : false;
+
+        // Toggle hidden content
+        $('#'+$dataTarget).toggle();
+
+        // Update aria-expanded and aria-hidden attributes
+        $(this).attr('aria-expanded', state);
+        $('#'+$dataTarget).attr('aria-hidden', !state);
+
+      });
     }
+
+    // If the data-target attribute is undefined for a radio button,
+    // hide visible data-target content for radio buttons in the same group
     else {
-      $(".block-label input[name=" + $radioGroupName + "]").each(function() {
-        var groupDataTarget = $(this).parent().attr('data-target');
-        $('#'+groupDataTarget).attr('aria-hidden','true').attr('aria-expanded','false').hide();
+
+      $radio.on('click', function() {
+
+        // Select radio buttons in the same group
+        $(".block-label input[name=" + $radioGroupName + "]").each(function() {
+
+          var groupDataTarget = $(this).parent().attr('data-target');
+
+          // Hide toggled content
+          $('#'+groupDataTarget).hide();
+
+          // Update aria-expanded and aria-hidden attributes
+          if ($(this).attr('aria-controls')) {
+            $(this).attr('aria-expanded', 'false');
+          }
+          $('#'+groupDataTarget).attr('aria-hidden', 'true');
+
+        });
+
       });
     }
 
   });
 
+}
+
+$(document).ready(function() {
+
+  // Turn off jQuery animation
+  jQuery.fx.off = true;
+
+  // Use GOV.UK selection-buttons.js to set selected
+  // and focused states for block labels
+  var $blockLabels = $(".block-label input[type='radio'], .block-label input[type='checkbox']");
+
+  GOVUK.selectionButtons($blockLabels);
+
+  // Where .block-label uses the data-target attribute
+  // to toggle hidden content
+
+  showHideCheckboxToggledContent();
+
+  showHideRadioToggledContent();
 
 });
