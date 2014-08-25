@@ -62,7 +62,7 @@ $(document).ready(function() {
 
   }
 
-  // Example - Add aria support to details
+  // Details/summary polyfill
   // See /javascripts/vendor/details.polyfill.js
 
 });
