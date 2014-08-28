@@ -10,7 +10,7 @@ function showHideCheckboxToggledContent() {
     // Add ARIA attributes
 
     // If the data-target attribute is defined
-    if (typeof $dataTarget !== typeof undefined && $dataTarget !== false) {
+    if (typeof $dataTarget !== 'undefined' && $dataTarget !== false) {
 
       // Set aria-controls
       $checkbox.attr('aria-controls', $dataTarget);
@@ -51,7 +51,7 @@ function showHideRadioToggledContent() {
     // Add ARIA attributes
 
     // If the data-target attribute is defined
-    if (typeof $dataTarget !== typeof undefined && $dataTarget !== false) {
+    if (typeof $dataTarget !== 'undefined' && $dataTarget !== false) {
 
       // Set aria-controls
       $radio.attr('aria-controls', $dataTarget);
