@@ -23,40 +23,41 @@
     margin-bottom: 5px;
     // width: 25%; - Test : check that text within labels will wrap
   }
+
+  // Absolutely position inputs within label, to allow text to wrap
+  input {
+    position: absolute;
+    top: 18px;
+    left: $gutter-half;
+    cursor: pointer;
+  }
+
+  // Change border on hover
+  &:hover {
+    border-color: $black;
+  }
 }
 
-.block-label:hover {
-  border-color: $black;
-}
-
-// Position checkbox within label, to allow text to wrap
-.block-label input {
-  position: absolute;
-  top: 18px;
-  left: $gutter-half;
-  cursor: pointer;
-}
-
-// Use inline, to sit block labels next to each other
+// To stack horizontally, use .inline on parent, to sit block labels next to each other
 .inline .block-label {
   clear: none;
   margin-right: $gutter-half;
 }
 
-// Only if JavaScript is enabled
+// Selected and focused states
 
-// Add focus styles to block labels
-.js-enabled .add-focus {
-  outline: 3px solid $yellow;
-}
-
-// Remove focus styles from radio and checkbox inputs
-.js-enabled .block-label input:focus {
-  outline: none;
-}
-
-// Add selected state to block labels
+// Add selected state
 .js-enabled .selected {
   background: $white;
   border-color: $black;
+}
+
+// Add focus to block labels
+.js-enabled label.focused {
+  outline: 3px solid $yellow;
+}
+
+// Remove focus from radio/checkboxes
+.js-enabled .focused input:focus {
+  outline: none;
 }
