@@ -1,6 +1,10 @@
 // Buttons
 // ==========================================================================
 
+@import "design-patterns/_buttons.scss";
+@import "_measurements.scss";
+@import "_typography.scss";
+
 .button {
   @include button ($button-colour);
   margin: 0 $gutter-half $gutter-half 0;

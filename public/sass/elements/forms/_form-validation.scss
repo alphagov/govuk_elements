@@ -1,4 +1,10 @@
 // Validation summary box
+
+@import "colours";
+@import "measurements";
+@import "conditionals";
+@import "typography";
+
 .validation-summary {
   border: 3px solid $error-colour;
   padding: $gutter-half $gutter;
