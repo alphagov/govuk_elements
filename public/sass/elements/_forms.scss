@@ -155,11 +155,6 @@ fieldset {
   }
 }
 
-// Hide toggled content
-.js-enabled .toggle-content {
-    display: none;
-}
-
 
 // Form validation
 @import "forms/form-validation";
@@ -167,5 +162,4 @@ fieldset {
 
 // Form patterns
 @import "forms/form-date-of-birth";
-
-@import "forms/form-chunky-labels";
+@import "forms/form-block-labels";
