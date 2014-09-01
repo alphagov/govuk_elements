@@ -6,23 +6,17 @@
 
 // http://www.sitepoint.com/fixing-the-details-element/
 
-(function(){
+(function () {
 
   // Add event construct for modern browsers or IE
   // which fires the callback with a pre-converted target reference
   function addEvent(node, type, callback) {
-    if(node.addEventListener)
-    {
-      node.addEventListener(type, function(e)
-      {
+    if (node.addEventListener) {
+      node.addEventListener(type, function (e) {
         callback(e, e.target);
-
       }, false);
-    }
-    else if(node.attachEvent)
-    {
-      node.attachEvent('on' + type, function(e)
-      {
+    } else if (node.attachEvent) {
+      node.attachEvent('on' + type, function (e) {
         callback(e, e.srcElement);
       });
     }
@@ -31,31 +25,25 @@
   // Handle cross-modal click events
   function addClickEvent(node, callback) {
     var keydown = false;
-    addEvent(node, 'keydown', function()
-    {
+    addEvent(node, 'keydown', function () {
       keydown = true;
     });
-    addEvent(node, 'keyup', function(e, target)
-    {
+    addEvent(node, 'keyup', function (e, target) {
       keydown = false;
-      if(e.keyCode == 13) { callback(e, target); }
+      if (e.keyCode === 13) { callback(e, target); }
     });
-    addEvent(node, 'click', function(e, target)
-    {
-      if(!keydown) { callback(e, target); }
+    addEvent(node, 'click', function (e, target) {
+      if (!keydown) { callback(e, target); }
     });
   }
 
   // Get the nearest ancestor element of a node that matches a given tag name
   function getAncestor(node, match) {
-    do
-    {
-      if(!node || node.nodeName.toLowerCase() == match)
-      {
+    do {
+      if (!node || node.nodeName.toLowerCase() === match) {
         break;
       }
-    }
-    while(node = node.parentNode);
+    } while (node = node.parentNode);
 
     return node;
   }
@@ -76,12 +64,13 @@
 
     // Get the collection of details elements, but if that's empty
     // then we don't need to bother with the rest of the scripting
-    if ((list = document.getElementsByTagName('details')).length == 0) {
+    if ((list = document.getElementsByTagName('details')).length === 0) {
       return;
     }
 
     // else iterate through them to apply their initial state
-    for(var n = list.length, i = 0; i < n; i ++) {
+    var n = list.length, i = 0;
+    for (n; i < n; i++) {
       var details = list[i];
 
       // Detect native implementations
@@ -108,11 +97,10 @@
 
       // Detect initial open/closed state
       var detailsAttr = details.hasAttribute('open');
-      if (typeof detailsAttr !== typeof undefined && detailsAttr !== false) {
+      if (typeof detailsAttr !== 'undefined' && detailsAttr !== false) {
         details.__summary.setAttribute('aria-expanded', 'true');
         details.__content.setAttribute('aria-hidden', 'false');
-      }
-      else {
+      } else {
         details.__summary.setAttribute('aria-expanded', 'false');
         details.__content.setAttribute('aria-hidden', 'true');
         details.__content.style.display = 'none';
@@ -124,7 +112,7 @@
 
       // If this is not a native implementation, create an arrow
       // inside the summary, saving its reference as a summary property
-      if(!details.__native) {
+      if (!details.__native) {
         var twisty = document.createElement('i');
         twisty.className = 'arrow arrow-closed';
         twisty.appendChild(document.createTextNode('\u25ba'));
@@ -144,7 +132,7 @@
       summary.__details.__content.setAttribute('aria-hidden', (hidden ? 'false' : 'true'));
       summary.__details.__content.style.display = (expanded ? 'none' : 'block');
 
-      if(summary.__twisty) {
+      if (summary.__twisty) {
         summary.__twisty.firstChild.nodeValue = (expanded ? '\u25ba' : '\u25bc');
         summary.__twisty.setAttribute('class', (expanded ? 'arrow arrow-closed' : 'arrow arrow-open'));
       }
