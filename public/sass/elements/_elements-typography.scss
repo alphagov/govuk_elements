@@ -69,7 +69,7 @@
   }
 
   .heading-secondary {
-    @include core-27();
+    @include heading-27();
 
     display: block;
     color: $secondary-text-colour;
@@ -89,7 +89,7 @@
   }
 
   .heading-secondary {
-    @include core-24();
+    @include heading-24();
 
     display: block;
     color: $secondary-text-colour;
