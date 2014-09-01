@@ -115,11 +115,13 @@ $(document).ready(function() {
 
   GOVUK.selectionButtons($blockLabels);
 
+  // Details/summary polyfill
+  // See /javascripts/vendor/details.polyfill.js
+
   // Where .block-label uses the data-target attribute
   // to toggle hidden content
 
   showHideCheckboxToggledContent();
-
   showHideRadioToggledContent();
 
 });
