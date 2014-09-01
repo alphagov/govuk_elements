@@ -1,9 +1,9 @@
 // Buttons
 // ==========================================================================
 
-@import "design-patterns/_buttons.scss";
-@import "_measurements.scss";
-@import "_typography.scss";
+@import "design-patterns/buttons";
+@import "measurements";
+@import "typography";
 
 .button {
   @include button ($button-colour);
