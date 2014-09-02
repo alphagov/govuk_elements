@@ -29,6 +29,13 @@ module.exports = {
       res.render('examples/radios_checkboxes', {'assetPath' : assetPath });
     });
 
+    // GOV.UK elements test pages
+
+    // Date pattern
+    app.get('/patterns/form-date', function (req, res) {
+      res.render('patterns/form_date', {'assetPath' : assetPath });
+    });
+
     // GOV.UK template example pages
 
     app.get('/examples/template', function (req, res) {
