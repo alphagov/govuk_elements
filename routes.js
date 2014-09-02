@@ -21,19 +21,21 @@ module.exports = {
       res.render('examples/forms', {'assetPath' : assetPath });
     });
 
-    app.get('/examples/details-summary', function (req, res) {
-      res.render('examples/details_summary', {'assetPath' : assetPath });
-    });
-
-    app.get('/examples/radios-checkboxes', function (req, res) {
-      res.render('examples/radios_checkboxes', {'assetPath' : assetPath });
-    });
-
     // GOV.UK elements test pages
+
+    // Progressive disclosure pattern
+    app.get('/patterns/details-summary', function (req, res) {
+      res.render('patterns/details_summary', {'assetPath' : assetPath });
+    });
 
     // Date pattern
     app.get('/patterns/form-date', function (req, res) {
       res.render('patterns/form_date', {'assetPath' : assetPath });
+    });
+
+    // Radio and checkbox pattern
+    app.get('/patterns/radios-checkboxes', function (req, res) {
+      res.render('patterns/radios_checkboxes', {'assetPath' : assetPath });
     });
 
     // GOV.UK template example pages
