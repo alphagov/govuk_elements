@@ -1,0 +1,296 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>elements_head}}
+  {{>snippets_head}}
+  {{>snippets_scripts}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="wrapper" role="main">
+<div id="content">
+<div class="inner-block">
+
+<a href="/" class="example-back-link">Back to GOV.UK elements</a>
+
+<h1 class="heading-large">GOV.UK elements snippets</h1>
+<p class="text">
+  GOV.UK elements HTML snippets can be used to help with prototyping.
+</p>
+<p class="text text-secondary font-xsmall">
+  There are no snippets for Colour or Icons and images.
+</p>
+
+<ol class="list-number">
+  <li><a href="#guide-layout">Layout</a></li>
+  <li><a href="#guide-typography">Typography</a></li>
+  <li>Colour</li>
+  <li>Icons and images</li>
+  <li><a href="#guide-data">Data</a></li>
+  <li><a href="#guide-forms">Forms</a></li>
+  <li><a href="#guide-buttons">Buttons</a></li>
+</ol>
+
+<!-- 1. Layout -->
+<h2 class="heading-medium" id="guide-layout">1. Layout</h2>
+
+<h3 class="heading-medium">Grid unit proportions</h3>
+
+<h4 class="heading-small">Halves</h4>
+<div class="example example-grid">
+  {{> layout_grid_halves }}
+</div>
+<pre>
+<code class="language-markup">
+  {{> layout_grid_halves }}
+</code>
+</pre>
+
+<h4 class="heading-small">Thirds</h4>
+<div class="example example-grid">
+  {{> layout_grid_thirds }}
+</div>
+<pre>
+<code class="language-markup">
+  {{> layout_grid_thirds }}
+</code>
+</pre>
+
+<div class="example example-grid">
+  {{> layout_grid_thirds_reversed }}
+</div>
+<pre>
+<code class="language-markup">
+  {{> layout_grid_thirds_reversed }}
+</code>
+</pre>
+
+<h4 class="heading-small">Quarters</h4>
+<div class="example example-grid">
+  {{> layout_grid_quarters }}
+</div>
+<pre>
+<code class="language-markup">
+  {{> layout_grid_quarters }}
+</code>
+</pre>
+
+<!-- 2. Typography -->
+
+<h2 class="heading-medium" id="guide-typography">2. Typography</h2>
+
+<h3 class="heading-small">Headings</h3>
+<div class="example">
+  {{> typography_headings }}
+</div>
+<pre>
+<code class="language-markup">
+  {{> typography_headings }}
+</code>
+</pre>
+
+<h3 class="heading-small">
+  Lead paragraph and body copy
+</h3>
+<div class="example">
+  <div class="text">
+    {{> typography_body_copy }}
+  </div>
+</div>
+<pre>
+<code class="language-markup">
+  {{> typography_body_copy }}
+</code>
+</pre>
+
+<h3 class="heading-small">Lists</h3>
+<div class="example">
+  {{> typography_lists }}
+</div>
+<pre>
+<code class="language-markup">
+  {{> typography_lists }}
+</code>
+</pre>
+
+<h3 class="heading-small">Inset text</h3>
+<div class="example">
+  <div class="text">
+    {{> typography_inset_text }}
+  </div>
+</div>
+<pre>
+<code class="language-markup">
+  {{> typography_inset_text }}
+</code>
+</pre>
+
+<h3 class="heading-small">Hidden text (progressive disclosure)</h3>
+<div class="example">
+  {{> typography_progressive_disclosure }}
+</div>
+
+<pre>
+<code class="language-markup">
+  {{> typography_progressive_disclosure }}
+</code>
+</pre>
+
+<!--
+  <h2 class="heading-medium">3. Colour</h2>
+  <h2 class="heading-medium">4. Icons and images</h2>
+-->
+
+<!-- 5. Data -->
+
+<h2 class="heading-medium" id="guide-data">5. Data</h2>
+
+<h3 class="heading-small">Data in a table</h3>
+
+<div class="example">
+  {{> data_table }}
+</div>
+<pre>
+<code class="language-markup">
+  {{> data_table }}
+</code>
+</pre>
+
+<!-- 6. Forms -->
+
+<h2 class="heading-medium" id="guide-forms">6. Forms</h2>
+
+<h3 class="heading-small">Form labels</h3>
+<div class="example">
+  {{> form_labels }}
+</div>
+<pre>
+<code class="language-markup">
+  {{> form_labels }}
+</code>
+</pre>
+
+<h3 class="heading-small">Form spacing</h3>
+<div class="example">
+  {{> form_spacing }}
+</div>
+<pre>
+<code class="language-markup">
+  {{> form_spacing }}
+</code>
+</pre>
+
+<h3 class="heading-small">Hint text</h3>
+<div class="example">
+  {{> form_hint_text }}
+</div>
+<pre>
+<code class="language-markup">
+  {{> form_hint_text }}
+</code>
+</pre>
+
+<h3 class="heading-small">Radio buttons</h3>
+
+<div class="example">
+  {{> form_radio_buttons_inline }}
+</div>
+<pre>
+<code class="language-markup">
+  {{> form_radio_buttons_inline }}
+</code>
+</pre>
+
+<div class="example">
+  {{> form_radio_buttons }}
+</div>
+<pre>
+<code class="language-markup">
+  {{> form_radio_buttons }}
+</code>
+</pre>
+
+<div class="example">
+  {{> form_checkboxes }}
+</div>
+<pre>
+<code class="language-markup">
+  {{> form_checkboxes }}
+</code>
+</pre>
+
+<div class="example">
+  {{> form_checkbox_native }}
+</div>
+<pre>
+<code class="language-markup">
+  {{> form_checkbox_native }}
+</code>
+</pre>
+
+<h3 class="heading-small">Inset form elements</h3>
+
+<div class="example">
+  {{> form_inset_content }}
+</div>
+<pre>
+<code class="language-markup">
+  {{> form_inset_content }}
+</code>
+</pre>
+
+<!-- 7. Buttons -->
+
+<h2 class="heading-medium" id="guide-buttons">7. Buttons</h2>
+
+<div class="example">
+  {{> buttons_button }}
+</div>
+<pre>
+<code class="language-markup">
+  {{> buttons_button }}
+</code>
+</pre>
+
+<div class="example">
+  {{> buttons_button_disabled }}
+</div>
+<pre>
+<code class="language-markup">
+  {{> buttons_button_disabled }}
+</code>
+</pre>
+
+<div class="example">
+  {{> buttons_button_start_now }}
+</div>
+<pre>
+<code class="language-markup">
+  {{> buttons_button_start_now }}
+</code>
+</pre>
+
+<!-- 8. Errors and validation -->
+<!-- TODO :
+<h2 class="heading-medium" id="guide-errors">8. Errors and validation</h2>
+
+<pre><code class="language-markup">
+</code></pre>
+-->
+
+</div><!-- /.inner-block -->
+</div><!-- /#content -->
+</main><!-- /#wrapper -->
+{{/content}}
+
+{{$bodyEnd}}
+  {{>scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

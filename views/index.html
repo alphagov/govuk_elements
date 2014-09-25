@@ -40,9 +40,13 @@
 
         <h2 class="heading-medium">Looking for the styles?</h2>
         <p>
-           The Sass files for <a href="https://github.com/alphagov/govuk_elements/tree/master/public/sass">all the examples in this page can be found on GitHub</a>.
+           The Sass files for <a href="https://github.com/alphagov/govuk_elements/tree/master/public/sass" rel="external">all the examples in this page can be found on GitHub</a>.
         </p>
 
+        <h2 class="heading-medium">Looking for the HTML?</h2>
+        <p>
+          The HTML snippets can be found in the <a href="{{ site.baseurl}}/snippets/">GOV.UK elements snippets page</a>.
+        </p>
       </div>
 
       <div id="guide-layout">
@@ -71,18 +75,7 @@
         </ul>
 
         <div class="example example-images">
-          <div class="grid-wrapper">
-            <div class="grid grid-1-2">
-              <div class="inner-block">
-                <img src="/public/images/examples/15px-gutter-example.png" alt="15px gutter example">
-              </div>
-            </div>
-            <div class="grid grid-1-2">
-              <div class="inner-block">
-                <img src="/public/images/examples/30px-gutter-example.png" alt="30px gutter example">
-              </div>
-            </div>
-          </div>
+          {{> layout_spacing }}
         </div>
 
         <h3 class="heading-medium">Grid unit proportions</h3>
@@ -93,80 +86,20 @@
 
         <h4 class="heading-small">Halves</h4>
         <div class="example example-grid">
-          <div class="grid-wrapper">
-            <div class="grid grid-1-2">
-              <div class="inner-block">
-                <p>Content</p>
-              </div>
-            </div>
-            <div class="grid grid-1-2">
-              <div class="inner-block">
-                <p>Content</p>
-              </div>
-            </div>
-          </div>
+          {{> layout_grid_halves }}
         </div>
 
         <h4 class="heading-small">Thirds</h4>
         <div class="example example-grid">
-          <div class="grid-wrapper">
-            <div class="grid grid-1-3">
-              <div class="inner-block">
-                <p>Content</p>
-              </div>
-            </div>
-            <div class="grid grid-1-3">
-              <div class="inner-block">
-                <p>Content</p>
-              </div>
-            </div>
-            <div class="grid grid-1-3">
-              <div class="inner-block">
-                <p>Content</p>
-              </div>
-            </div>
-          </div>
+          {{> layout_grid_thirds }}
         </div>
-
         <div class="example example-grid">
-          <div class="grid-wrapper">
-            <div class="grid grid-2-3">
-              <div class="inner-block">
-                <p>Content</p>
-              </div>
-            </div>
-            <div class="grid grid-1-3">
-              <div class="inner-block">
-                <p>Content</p>
-              </div>
-            </div>
-          </div>
+          {{> layout_grid_thirds_reversed }}
         </div>
 
         <h4 class="heading-small">Quarters</h4>
         <div class="example example-grid">
-          <div class="grid-wrapper">
-            <div class="grid grid-1-4">
-              <div class="inner-block">
-                <p>Content</p>
-              </div>
-            </div>
-            <div class="grid grid-1-4">
-              <div class="inner-block">
-                <p>Content</p>
-              </div>
-            </div>
-            <div class="grid grid-1-4">
-              <div class="inner-block">
-                <p>Content</p>
-              </div>
-            </div>
-            <div class="grid grid-1-4">
-              <div class="inner-block">
-                <p>Content</p>
-              </div>
-            </div>
-          </div>
+          {{> layout_grid_quarters }}
         </div>
 
         <p>
@@ -199,10 +132,7 @@
         </ul>
 
         <div class="example">
-          <h1 class="heading-xlarge">A <em class="highlight">48px Bold</em> heading</h1>
-          <h2 class="heading-large">A <em class="highlight">36px Bold</em> heading</h2>
-          <h3 class="heading-medium">A <em class="highlight">24px Bold</em> heading</h3>
-          <h4 class="heading-small">A <em class="highlight">19px Bold</em> heading</h4>
+          {{> typography_headings }}
         </div>
 
         <h3 class="heading-medium">
@@ -214,8 +144,7 @@
 
         <div class="example">
           <div class="text">
-            <p class="lede">A <em class="highlight">24px</em> lead paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
-            <p>A <em class="highlight">19px</em> body copy paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
+            {{> typography_lead_paragraph }}
           </div>
         </div>
 
@@ -229,15 +158,12 @@
           <li>use 19px for body copy &ndash; 16px for smaller screens</li>
           <li>use smaller sizes only if there's a user need (eg 16px, 14px, 12px)</li>
           <li>make sure lines of text don't exceed 75 characters, as they become harder to read beyond that point</li>
-          <li>
-            for example, on this page &ndash; text blocks are two-thirds of the page width
-          </li>
+          <li>for example, on this page &ndash; text blocks are two-thirds of the page width</li>
         </ul>
 
         <div class="example">
           <div class="text">
-            <p>A <em class="highlight">19px</em> body copy paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
-            <p class="font-xsmall">A <em class="highlight">16px</em> supporting text paragraph. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. </p>
+            {{> typography_paragraphs }}
           </div>
         </div>
 
@@ -250,15 +176,7 @@
 
         <div class="example">
           <div class="text">
-            <p>
-              <a href="#">A 19px link without surrounding text</a>
-            </p>
-            <p>
-              <a href="#">A 19px body copy link</a>. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-            </p>
-            <p>
-              <a href="#" rel="external">A 19px body copy external link.</a> Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-            </p>
+            {{> typography_links }}
           </div>
         </div>
 
@@ -267,19 +185,7 @@
           List items start with a lowercase letter and have no full stop at the end.
         </p>
         <div class="example">
-          <ul class="list-bullet">
-            <li>here is a bulleted list</li>
-            <li>vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor</li>
-            <li>vestibulum id ligula porta felis euismod semper</li>
-            <li>integer posuere erat a ante venenatis dapibus posuere velit aliquet</li>
-          </ul>
-
-          <ol class="list-number text">
-            <li>here is a numbered list</li>
-            <li>vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor</li>
-            <li>vestibulum id ligula porta felis euismod semper</li>
-            <li>integer posuere erat a ante venenatis dapibus posuere velit aliquet</li>
-          </ol>
+          {{> typography_lists }}
         </div>
 
         <h3 class="heading-medium">Inset text</h3>
@@ -290,10 +196,8 @@
           <a href="https://www.gov.uk/holiday-entitlement-rights">See an example of inset text on GOV.UK</a>
         </p>
         <div class="example">
-          <div class="text panel-indent">
-            <p>
-              It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
-            </p>
+          <div class="text">
+            {{> typography_inset_text }}
           </div>
         </div>
 
@@ -306,17 +210,7 @@
           Click on "Help with nationality" to see how this works.
         </p>
         <div class="example">
-          <details>
-            <summary><span class="summary">Help with nationality</span></summary>
-            <div class="panel-indent">
-              <p>
-                If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
-              </p>
-              <p>
-                We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
-              </p>
-            </div>
-          </details>
+          {{> typography_progressive_disclosure }}
         </div>
 
         <p>
@@ -785,37 +679,7 @@
         </p>
 
         <div class="example">
-          <table>
-            <thead>
-              <tr>
-                <th></th>
-                <th scope="col">Business Plan</th>
-                <th scope="col">Actual</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Vehicle volumes</td>
-                <td>103,672,000</td>
-                <td>97,424,000</td>
-              </tr>
-              <tr>
-                <td>Driver volumes</td>
-                <td>16,891,000</td>
-                <td>15,197,000</td>
-              </tr>
-              <tr>
-               <td>Electronic take-up target</td>
-                <td>54%</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td>Electronic take-up (actual)</td>
-                <td>-</td>
-                <td>50.3%</td>
-              </tr>
-            </tbody>
-          </table>
+          {{> data_table }}
         </div>
 
         <p>
@@ -855,12 +719,7 @@
           Click on the label "Full name" to bring focus to the form field.
         </p>
         <div class="example">
-          <form action="/" method="post" class="form">
-            <div class="form-group">
-              <label for="full-name-f1" class="form-label">Full name</label>
-              <input type="text" class="form-control" id="full-name-f1">
-            </div>
-          </form>
+          {{> form_labels }}
         </div>
 
         <h3 class="heading-medium">Form fields</h3>
@@ -892,35 +751,7 @@
         </p>
 
         <div class="example">
-          <div class="grid-wrapper">
-            <div class="grid grid-3-4">
-              <div class="inner-block">
-
-                <form action="/" method="post" class="form">
-                  <div class="form-group">
-                    <label for="full-name-f2" class="form-label">Full name</label>
-                    <input type="text" class="form-control" id="full-name-f2">
-                  </div>
-                </form>
-
-              </div>
-            </div>
-            <div class="grid grid-1-4">
-              <div class="inner-block">
-
-                <div class="swatch-wrapper">
-                  <h4 class="heading-small">Focus</h4>
-                  <div class="swatch swatch-yellow"></div>
-                  <ul>
-                    <li><b>#FFBF47</b></li>
-                    <li>$yellow</li>
-                  </ul>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
+          {{> form_focus }}
         </div>
 
         <h3 class="heading-medium">Spacing between form elements</h3>
@@ -929,18 +760,7 @@
         </p>
 
         <div class="example">
-
-          <form action="/" method="post" class="form form-group-example">
-            <div class="form-group">
-              <label class="form-label" for="first-name-2">First name</label>
-              <input type="text" class="form-control" id="first-name-2">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="last-name-2">Last name</label>
-              <input type="text" class="form-control" id="last-name-2">
-            </div>
-          </form>
-
+          {{> form_spacing }}
         </div>
 
         <h3 class="heading-medium">Hint text</h3>
@@ -952,25 +772,13 @@
         </ul>
 
         <div class="example">
-
-          <form action="/" method="post" class="form">
-            <div class="form-group">
-              <label class="form-label" for="ni-number-1">
-                National Insurance number
-                <span class="form-hint">It'll be on your last payslip. For example, JH 21 90 0A.</span>
-              </label>
-              <input type="text" class="form-control" id="ni-number-1">
-            </div>
-          </form>
-
+          {{> form_hint_text }}
         </div>
 
         <h3 class="heading-medium">Drop-down lists</h3>
         <p class="text">
           Avoid using drop-down lists - use radio buttons or checkboxes instead.
         </p>
-
-        <!-- TODO: link to blog post to support this statement -->
 
         <h3 class="heading-medium" id="guide-form-radio-buttons">Radio buttons</h3>
         <ul class="list-bullet text">
@@ -980,53 +788,11 @@
         </ul>
 
         <div class="example">
-
-          <form action="/" method="post" class="form">
-            <fieldset class="inline">
-              <legend></legend>
-
-              <label for="radio-inline-1" class="block-label">
-                <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
-                Yes
-              </label>
-              <label for="radio-inline-2" class="block-label">
-                <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
-                No
-              </label>
-            </fieldset>
-          </form>
-
+          {{> form_radio_buttons_inline }}
         </div>
 
         <div class="example">
-
-          <form action="/" method="post" class="form">
-            <fieldset>
-              <legend></legend>
-
-              <div class="form-group">
-
-                <label for="radio-1" class="block-label">
-                  <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-                  Northern Ireland
-                </label>
-
-                <label for="radio-2" class="block-label">
-                  <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
-                  Isle of Man or the Channel Islands
-                </label>
-
-                <p class="form-block">or</p>
-
-                <label for="radio-3" class="block-label">
-                  <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
-                  I am a British citizen living abroad
-                </label>
-
-              </div>
-            </fieldset>
-          </form>
-
+          {{> form_radio_buttons }}
         </div>
 
         <h3 class="heading-medium" id="guide-form-checkboxes">Checkboxes</h3>
@@ -1036,27 +802,7 @@
         </ul>
 
         <div class="example">
-
-          <form action="/" method="post" class="form">
-            <fieldset>
-              <legend class="form-label-bold">Which types of waste do you transport regularly?</legend>
-
-              <p>Select all that apply</p>
-              <label for="checkbox-1" class="block-label">
-                <input id="checkbox-1" type="checkbox" value="Waste from animal carcasses">
-                Waste from animal carcasses
-              </label>
-              <label for="checkbox-2" class="block-label">
-                <input id="checkbox-2" type="checkbox" value="Waste from mines or quarries">
-                Waste from mines or quarries
-              </label>
-              <label for="checkbox-3" class="block-label">
-                <input id="checkbox-3" type="checkbox" value="Farm or agricultural waste">
-                Farm or agricultural waste
-              </label>
-            </fieldset>
-          </form>
-
+          {{> form_checkboxes }}
         </div>
 
         <div class="text">
@@ -1064,20 +810,7 @@
         </div>
 
         <div class="example">
-
-          <form action="/" method="post" class="form">
-            <div class="form-group">
-              <label for="telephone-number" class="form-label">Enter your telephone number</label>
-              <input type="text" class="form-control" id="telephone-number">
-
-              <label for="checkbox-telephone-number" class="form-checkbox">
-                <input id="checkbox-telephone-number" type="checkbox" value="checkbox-telephone-number">
-                I need to be contacted using a text phone
-              </label>
-            </div>
-
-          </form>
-
+          {{> form_checkbox_native }}
         </div>
 
         <div class="text">
@@ -1085,14 +818,6 @@
             Only pre-select options if there's a strong, user-centred reason to.
           </p>
         </div>
-
-        <!-- TODO: Add email as an example -->
-
-        <!--
-        <div class="example">
-
-        </div>
-        -->
 
         <h3 class="heading-medium">Inset form elements</h3>
         <div class="text">
@@ -1105,33 +830,7 @@
         </div>
 
         <div class="example">
-
-          <!--
-          .form-group-example is used here to re-add the bottom margin on .form group,
-          the bottom margin is removed in this example page to keep examples compact
-          -->
-
-          <form action="/" method="post" class="form form-group-example">
-
-            <fieldset class="inline">
-              <legend class="form-label">Do you know their National Insurance number?</legend>
-              <div class="form-group form-group-related">
-                <label for="radio-indent-1" class="block-label" data-target="example-ni-number">
-                  <input id="radio-indent-1" type="radio" name="radio-indent-group" value="Yes">
-                  Yes
-                </label>
-                <label for="radio-indent-2" class="block-label">
-                  <input id="radio-indent-2" type="radio" name="radio-indent-group" value="No">
-                  No
-                </label>
-              </div>
-              <div class="panel-indent js-hidden" id="example-ni-number">
-                <label for="national-insurance" class="form-label">National Insurance number</label>
-                <input type="text" class="form-control" id="national-insurance">
-              </div>
-            </fieldset>
-          </form>
-
+          {{> form_inset_content }}
         </div>
 
         <p>
@@ -1155,7 +854,7 @@
         </p>
 
         <div class="example">
-          <button class="button">Save and continue</button>
+          {{> buttons_button }}
         </div>
 
         <p class="text">
@@ -1163,7 +862,7 @@
         </p>
 
         <div class="example">
-          <a href="#" class="button button-get-started">Start now</a>
+          {{> buttons_button_start_now }}
         </div>
 
         <p class="text">
