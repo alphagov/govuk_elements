@@ -1,53 +1,54 @@
 GOV.UK elements
 ===============
 
-This guide explains how to make your service look consistent with the rest of GOV.UK.
+### What is it?
 
-View the guide here:
-[http://govuk-elements.herokuapp.com/](http://govuk-elements.herokuapp.com/)
+GOV.UK Elements is two things:
 
+1. an example of how to use the code in the [GOV.UK template](https://github.com/alphagov/govuk_template) and the [GOV.UK front end toolkit](https://github.com/alphagov/govuk_frontend_toolkit)
+2. a collection of HTML and CSS, to show common patterns across GOV.UK and services
+
+
+[View GOV.UK Elements here](http://govuk-elements.herokuapp.com/).
+
+
+### How can it be used?
+
+GOV.UK Elements is still in alpha so the CSS might change but you're welcome to use whatever form of it you feel fits your project. Please use [GitHub's watch feature](https://help.github.com/articles/watching-repositories) to keep an eye on what may change.
+
+It can be used as a sensible base of front end code. Choose the Sass files you need to build on top of those provided by the front end toolkit. For example, add grids, typography and additional modules as you need them.
+
+As you get a better understanding of your user's needs, you should be iterating this code so it best fits your project.
+
+####  How to we want people to contribute and improve elements.
+
+GOV.UK Elements builds on top of the GOV.UK front end toolkit.
+Any code to be shared between GOV.UK projects should exist there.
 
 ### Navigating this repository
 
-You'll most likely be looking for the Sass files.
-You can find these in
+#### To view the Sass files:
+
+You can find the Sass files here:
 
 ```
-/public/sass/elements
+/public/sass/
 ```
 
 ```
 /public/sass/main.scss
 ```
- shows how to import the elements styles.
 
+The main.scss files shows how to import the Elements Sass files.
 
-### GOV.UK elements Sass files
-
-If you use these in your own project, please be aware these files may well change.
-Please use [GitHub's watch feature](https://help.github.com/articles/watching-repositories) to keep an eye on what may change.
-
-
-### About this repository
+#### To view this site locally:
 
 If you would like to clone the repository and run it locally,
 you will need [Node.js](http://nodejs.org/).
 
-You may already have it, try: ```
-node --version
+1. clone this repository
+2. run the app
 ```
-
-To get up and running:
-
-- clone this repository
-- run the app ```
 node start.js
 ```
-- go to [localhost:3000](http://localhost:3000) in your browser.
-
-
-### About the Express prototyping tool
-
-This project uses Tom's [Express prototyping tool](https://github.com/tombye/express_prototype).
-
-[Read the wiki](https://github.com/tombye/express_prototype/wiki) to find out more.
+3. go to [localhost:3000](http://localhost:3000) in your browser.
