@@ -6,6 +6,17 @@
 
 {{$head}}
   {{>head}}
+  <style>
+  .highlight-grid .grid-section {
+    background: #bfc1c3;
+  }
+  .highlight-grid .grid {
+    background: #dee0e2;
+  }
+  .highlight-grid .grid-inner {
+    background: #f8f8f8;
+  }
+</style>
 {{/head}}
 
 {{$propositionHeader}}
@@ -18,9 +29,9 @@
 <main id="wrapper" role="main">
   <div id="content">
 
-    <div class="grid-wrapper">
+    <div class="grid-section">
       <div class="grid">
-        <div class="inner-block">
+        <div class="grid-inner">
 
           <a href="/" class="example-back-link">Back to GOV.UK elements</a>
 
@@ -37,9 +48,9 @@
       </div>
     </div>
 
-    <div class="grid-wrapper">
+    <div class="grid-section">
       <div class="grid grid-2-3">
-        <div class="inner-block">
+        <div class="grid-inner">
 
           <h2 class="bold-small">Two thirds</h2>
           <div class="text">
@@ -49,70 +60,70 @@
         </div>
       </div>
       <div class="grid grid-1-3">
-        <div class="inner-block">
+        <div class="grid-inner">
           <h2 class="bold-small">One third</h2>
           <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus.</p>
         </div>
       </div>
     </div>
 
-    <div class="grid-wrapper">
+    <div class="grid-section">
       <div class="grid grid-1-2">
-        <div class="inner-block">
+        <div class="grid-inner">
           <h2 class="bold-small">One half</h2>
           <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
         </div>
       </div>
       <div class="grid grid-1-2">
-        <div class="inner-block">
+        <div class="grid-inner">
           <h2 class="bold-small">One half</h2>
           <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
         </div>
       </div>
     </div>
 
-    <div class="grid-wrapper">
+    <div class="grid-section">
       <div class="grid grid-1-3">
-        <div class="inner-block">
+        <div class="grid-inner">
           <h2 class="bold-small">One third</h2>
           <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
         </div>
       </div>
       <div class="grid grid-1-3">
-        <div class="inner-block">
+        <div class="grid-inner">
           <h2 class="bold-small">One third</h2>
           <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
         </div>
       </div>
       <div class="grid grid-1-3">
-        <div class="inner-block">
+        <div class="grid-inner">
           <h2 class="bold-small">One third</h2>
           <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
         </div>
       </div>
     </div>
 
-    <div class="grid-wrapper">
+    <div class="grid-section">
       <div class="grid grid-1-4">
-        <div class="inner-block">
+        <div class="grid-inner">
           <h2 class="bold-small">One quarter</h2>
           <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
       </div>
       <div class="grid grid-1-4">
-        <div class="inner-block">
+        <div class="grid-inner">
           <h2 class="bold-small">One quarter</h2>
           <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
       </div>
       <div class="grid grid-1-4">
-        <div class="inner-block">
+        <div class="grid-inner">
           <h2 class="bold-small">One quarter</h2>
           <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
       </div>
       <div class="grid grid-1-4">
-        <div class="inner-block">
+        <div class="grid-inner">
           <h2 class="bold-small">One quarter</h2>
           <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
@@ -121,14 +132,14 @@
 
     <div class="grid-divider"></div>
 
-    <div class="grid-wrapper">
+    <div class="grid-section">
       <div class="grid grid-2-3">
-        <div class="inner-block">
+        <div class="grid-inner">
 
-          <h2 class="bold-small">Dividing the grid</h2>
+          <h2 class="heading-medium">Dividing the grid</h2>
           <div class="text">
             <p>
-              To set dividers between grid sections, use <code>.grid-divider</code>.
+              To set dividers between grid sections, use the class <code>.grid-divider</code>.
             </p>
           </div>
 
@@ -138,148 +149,60 @@
 
     <div class="grid-divider"></div>
 
-    <div class="inner-block">
-      <h2 class="heading-medium">
-        You won't always need a grid&hellip;
-      </h2>
-      <p>
-        For full-width layout, a grid isn't required.
-      </p>
-      <p>
-        Use <code>.outer-block</code> to set a max-width of 1020px and within it <code>.inner-block</code> to set left and right padding.<br> Find these mixins in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_grid_layout.scss">grid_layout.scss</a> file.
-      </p>
-      <p>
-        <a href="/" class="example-back-link">Back to GOV.UK elements</a>
-      </p>
-    </div><!-- /.inner-block -->
+    <h2 class="heading-medium">
+      You won't always need a grid&hellip;
+    </h2>
+    <p>
+      For a full-width layout, a grid isn't required.
+    </p>
+    <p>
+      Use <code>.outer-block</code> to set a max-width of 1020px and within it <code>.inner-block</code> to set left and right padding.
+    </p>
+    <p>
+      In this page, .outer-block is set on <code>main</code> and .inner-block set on <code>.content</code>.
+    </p>
+    <p>
+      Find these mixins in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_grid_layout.scss">grid_layout.scss</a> file.
+    </p>
+    <p>
+      <a href="/" class="example-back-link">Back to GOV.UK elements</a>
+    </p>
 
-    <!-- Hi there, the code below is not recommended -->
-    <!-- It's here for testing but feel free to ignore it -->
-
-    <!--
-    <div class="inner-block">
-      <div class="grid-wrapper">
-        <div class="grid">
-          <div class="inner-block">
-
-            <a href="/" class="example-back-link">Back to GOV.UK elements</a>
-
-            <h1 class="heading-xlarge">
-              Grid layout
-            </h1>
-
-            <h2 class="heading-small">Full width</h2>
-            <p>
-              <a href="#" class="js-highlight-grid">Toggle background colours</a> to see the size of each of the grid cells.
-            </p>
-
-          </div>
-        </div>
-      </div>
-      <div class="grid-wrapper">
-        <div class="grid grid-2-3">
-          <div class="inner-block">
-
-            <h2 class="bold-small">Two thirds</h2>
-            <div class="text">
-              <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-
-          </div>
-        </div>
-        <div class="grid grid-1-3">
-          <div class="inner-block">
-            <h2 class="bold-small">One third</h2>
-            <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus.</p>
-          </div>
-        </div>
-      </div>
-      <div class="grid-wrapper">
-        <div class="grid grid-1-2">
-          <div class="inner-block">
-            <h2 class="bold-small">One half</h2>
-            <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-          </div>
-        </div>
-        <div class="grid grid-1-2">
-          <div class="inner-block">
-            <h2 class="bold-small">One half</h2>
-            <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-          </div>
-        </div>
-      </div>
-      <div class="grid-wrapper">
-        <div class="grid grid-1-3">
-          <div class="inner-block">
-            <h2 class="bold-small">One third</h2>
-            <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-          </div>
-        </div>
-        <div class="grid grid-1-3">
-          <div class="inner-block">
-            <h2 class="bold-small">One third</h2>
-            <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-          </div>
-        </div>
-        <div class="grid grid-1-3">
-          <div class="inner-block">
-            <h2 class="bold-small">One third</h2>
-            <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-          </div>
-        </div>
-      </div>
-      <div class="grid-wrapper">
-        <div class="grid grid-1-4">
-          <div class="inner-block">
-            <h2 class="bold-small">One quarter</h2>
-            <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </div>
-        <div class="grid grid-1-4">
-          <div class="inner-block">
-            <h2 class="bold-small">One quarter</h2>
-            <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </div>
-        <div class="grid grid-1-4">
-          <div class="inner-block">
-            <h2 class="bold-small">One quarter</h2>
-            <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </div>
-        <div class="grid grid-1-4">
-          <div class="inner-block">
-            <h2 class="bold-small">One quarter</h2>
-            <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </div>
-      </div>
-      <div class="grid-divider">
-      </div>
-      <div class="grid-wrapper">
-        <div class="grid grid-2-3">
-          <div class="inner-block">
-
-            <h2 class="bold-small">Dividing the grid</h2>
-            <div class="text">
-              <p>
-                To set dividers between grid sections, use <code>.grid-divider</code>.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-    -->
-
-  </div><!-- /#content (.outer-block) -->
-</main>
+  </div><!-- /#content (.inner-block) -->
+</main><!-- /#main (.outer-block) -->
 
 {{/content}}
 
 {{$bodyEnd}}
   {{>scripts}}
+  <script>
+
+    // Add highlight for grid cells
+    $(document).ready(function() {
+      if ($('.js-highlight-grid').length>0) {
+
+        $('.js-highlight-grid').click(function(e) {
+
+          e.preventDefault();
+          var $html = $('html');
+
+          if ($('.grid-inner-highlight').length>0) {
+            // Don't add more than once
+          } else {
+            $('.grid .inner-block').wrapInner('<div class="grid-inner-highlight"></div>');
+          }
+
+          if ($html.hasClass('highlight-grid')) {
+            $html.removeClass('highlight-grid');
+          } else {
+            $html.addClass('highlight-grid');
+          }
+
+        });
+
+      }
+    });
+  </script>
 {{/bodyEnd}}
 
 {{/govuk_template}}

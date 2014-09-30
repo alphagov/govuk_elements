@@ -7,16 +7,11 @@
 @import "service-design-manual/helpers/page-header";
 @import "service-design-manual/helpers/breadcrumbs";
 
-// Adjust Service Design Manual header to align with content
+// Override Service Design Manual header to align with content
 #global-breadcrumb,
 .page-header {
-  margin-left: $gutter-half;
-  margin-right: $gutter-half;
-
-  @include media(tablet) {
-    margin-left: $gutter;
-    margin-right: $gutter;
-  }
+  margin-left: 0;
+  margin-right: 0;
 }
 #global-breadcrumb li {
   margin-bottom: 0;
