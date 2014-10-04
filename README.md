@@ -44,7 +44,7 @@ The main.scss file shows how to import the Elements Sass files.
 #### To view this site locally:
 
 If you would like to clone the repository and run it locally,
-you will need [Node.js](http://nodejs.org/).
+you will need [Node.js](http://nodejs.org/) (at least version v0.10.0).
 
 1. clone this repository
 2. run the app
