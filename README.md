@@ -39,7 +39,7 @@ You can find the Sass files here:
 /public/sass/main.scss
 ```
 
-The main.scss files shows how to import the Elements Sass files.
+The main.scss file shows how to import the Elements Sass files.
 
 #### To view this site locally:
 
