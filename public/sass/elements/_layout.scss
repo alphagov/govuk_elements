@@ -7,27 +7,20 @@
 @import "helpers";
 @import "design-patterns/alpha-beta";
 
+// Use .outer-block to create a max width block of 1020px
 #wrapper {
   text-align: center;
-
+  @include outer-block;
+  @include contain-floats; // Repeated as %extend placeholder isn't supported
   padding-bottom: $gutter;
   @include media(desktop) {
     padding-bottom: $gutter*3;
   }
 }
 
-// Use .outer-block to create a max width block of 1020px,
 // Use .inner-block to create padding that matches the header and footer
-
-// .outer-block,
 #content {
   text-align: left;
-
-  @include outer-block;
-  @include contain-floats; // Repeated as %extend placeholder isn't supported
-}
-
-.inner-block {
   @include inner-block(margin);
 }
 
@@ -54,25 +47,25 @@
 // Usage:
 // For two equal columns
 
-// <div class="grid-wrapper">
+// <div class="grid-section">
 //   <div class="grid grid-1-2">
-//     <div class="inner-block">
+//     <div class="grid-inner">
 
 //     </div>
 //   </div>
 //   <div class="grid grid-1-2">
-//     <div class="inner-block">
+//     <div class="grid-inner">
 
 //     </div>
 //   </div>
 // </div>
 
-// Use .grid-wrapper to wrap and clear grid sections
-.grid-wrapper {
+// Use .grid-section to wrap and clear grid sections
+.grid-section {
   @include contain-floats;
   @include media(tablet){
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: -$gutter-half;
+    margin-right: -$gutter-half;
   }
 }
 
@@ -80,14 +73,8 @@
 .grid-divider {
   @include contain-floats;
   border-bottom: 1px solid $border-colour;
-  margin-bottom: 20px;
-  margin-left: 15px;
-  margin-right: 15px;
-
-  @include media(tablet){
-    margin-left: 30px;
-    margin-right: 30px;
-  }
+  margin-bottom: $gutter-half;
+  margin-top: $gutter-half;
 }
 
 // 2. Grid units take 100% width, unless a .grid-width class is applied
@@ -127,31 +114,10 @@
   }
 }
 
-// Grid 'inner-block' sets spacing between grid cells
-.grid .inner-block {
-  padding: 0;
+// 3. Grid inner sets gutters within grid cells
+// This sets 15px left and right spacing
+.grid-inner {
   @include media(tablet) {
     margin: 0 $gutter-half;
   }
-}
-
-
-// Don't put .grid-wrapper inside .inner block
-// There's no need for the extra containing div
-// ** These styles are here in case you do, so we don't break the grid **
-
-.inner-block {
-
-  .grid-wrapper {
-    padding: 0;
-
-    margin-left: -15px;
-    margin-right: -15px;
-  }
-
-  .grid-divider {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
 }
