@@ -28,9 +28,9 @@ https://designpatterns.hackpad.com/GOV.UK-elements-feedback-sKrDyQxcfA2
 
 #### Code
 
-The code in GOV.UK Elements is built on top of the [GOV.UK front end toolkit](https://github.com/alphagov/govuk_frontend_toolkit). 
+The code in GOV.UK Elements is built on top of the [GOV.UK front end toolkit](https://github.com/alphagov/govuk_frontend_toolkit).
 
-If you want to suggest changes or raise bugs on code from the toolkit, please do so through its repository, not his one.
+If you want to suggest changes or raise bugs on code from the toolkit, please do so through its repository, not this one.
 
 GOV.UK Elements code in use across live projects but not already in the toolkit should eventually be added to it. All contributions towards this goal are welcome and should be in the form of pull requests on the toolkit repository.
 
