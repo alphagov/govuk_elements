@@ -63,12 +63,17 @@
   margin-bottom: $gutter*1.5;
 
   padding-top: $gutter;
+  padding-right: $gutter-half;
   padding-bottom: $gutter-half;
+  padding-left: $gutter-half;
 
   @include media(tablet) {
     padding-top: $gutter*1.5;
+    padding-right: $gutter;
     padding-bottom: $gutter;
+    padding-left: $gutter;
   }
+
   &:before {
     content: "EXAMPLE";
 
