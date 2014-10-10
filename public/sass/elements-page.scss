@@ -51,7 +51,6 @@
 // ==========================================================================
 
 .example {
-  @include inner-block;
   @include contain-floats;
   position: relative;
   overflow: hidden;
