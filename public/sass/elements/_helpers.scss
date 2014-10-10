@@ -26,6 +26,28 @@
   }
 }
 
+// Use the site-container mixin for this project,
+// as placeholders are not supported by libsass
+@mixin site-width-container {
+  max-width: $site-width;
+  @include ie-lte(8){
+    width: $site-width;
+  }
+
+  margin: 0 $gutter-half;
+  @include media(tablet){
+    margin: 0 $gutter;
+  }
+  @include media($min-width: ($site-width + $gutter * 2), $ignore-for-ie: true){
+    margin: 0 auto;
+  }
+}
+
+@mixin grid-row {
+  @extend %contain-floats;
+  margin: 0 (-$gutter-half);
+}
+
 // Want to see how the grid works?
 // add this class to the body to see how grid padding is set
 .example-highlight-grid {
