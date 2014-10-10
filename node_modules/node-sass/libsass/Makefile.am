@@ -26,10 +26,13 @@ libsass_la_SOURCES = \
 	prelexer.cpp \
 	sass.cpp \
 	sass_interface.cpp \
+	sass2scss/sass2scss.cpp \
 	source_map.cpp \
 	to_c.cpp \
 	to_string.cpp \
-	units.cpp
+	units.cpp \
+	utf8_string.cpp \
+	util.cpp
 
 libsass_la_LDFLAGS = -no-undefined -version-info 0:0:0
 
@@ -57,18 +60,19 @@ AM_LOG_FLAGS = -c ./sass-tester
 SASS_SASSC_PATH ?= sassc
 SASS_SPEC_PATH ?= sass-spec
 SASSC_BIN = $(SASS_SASSC_PATH)/bin/sassc
+RUBY_BIN = ruby
 
 $(SASSC_BIN): libsass.la
-	cd $(SASS_SASSC_PATH) && make
+	cd $(SASS_SASSC_PATH) && $(MAKE)
 
 test: $(SASSC_BIN) libsass.la
-	ruby $(SASS_SPEC_PATH)/sass-spec.rb -c $(SASSC_BIN) -s $(LOG_FLAGS) $(SASS_SPEC_PATH)
+	$(RUBY_BIN) $(SASS_SPEC_PATH)/sass-spec.rb -c $(SASSC_BIN) -s $(LOG_FLAGS) $(SASS_SPEC_PATH)
 
 test_build: $(SASSC_BIN) libsass.la
-	ruby $(SASS_SPEC_PATH)/sass-spec.rb -c $(SASSC_BIN) -s --ignore-todo $(LOG_FLAGS) $(SASS_SPEC_PATH)
+	$(RUBY_BIN) $(SASS_SPEC_PATH)/sass-spec.rb -c $(SASSC_BIN) -s --ignore-todo $(LOG_FLAGS) $(SASS_SPEC_PATH)
 
 test_issues: $(SASSC_BIN) libsass.la
-	ruby $(SASS_SPEC_PATH)/sass-spec.rb -c $(SASSC_BIN) $(LOG_FLAGS) $(SASS_SPEC_PATH)/spec/issues
+	$(RUBY_BIN) $(SASS_SPEC_PATH)/sass-spec.rb -c $(SASSC_BIN) $(LOG_FLAGS) $(SASS_SPEC_PATH)/spec/issues
 
 endif
 
