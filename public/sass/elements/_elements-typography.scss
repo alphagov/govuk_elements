@@ -1,13 +1,14 @@
 // Typography
 // ==========================================================================
 
-// Increase the base font size to 19px
-// Using the core-19 mixin from the govuk_toolkit _typography.scss file
-
+// GOV.UK front end toolkit dependencies
 @import "typography";
 @import "colours";
 
-#content {
+// Increase the base font size to 19px for the main content area
+// Using the core-19 mixin from the govuk_toolkit _typography.scss file
+
+main {
   @include core-19;
   -webkit-font-smoothing: antialiased;
 }
