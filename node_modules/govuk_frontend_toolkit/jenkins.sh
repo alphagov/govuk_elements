@@ -31,7 +31,7 @@ if [ "$PINNED_SUBMODULE_VERSION" != "$NEW_SUBMODULE_VERSION" ]; then
   git reset --soft HEAD~2
 
   # Commit the updated submodule and version bump and push it to origin
-  git commit -am "Bump to version $PINNED_SUBMODULE_VERSION"
+  git commit -am "Bump to version $NEW_SUBMODULE_VERSION"
 
   git push origin master
 fi
