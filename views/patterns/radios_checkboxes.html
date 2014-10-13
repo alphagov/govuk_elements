@@ -15,123 +15,119 @@
 {{$headerClass}}with-proposition{{/headerClass}}
 
 {{$content}}
-<main id="wrapper" role="main">
-  <div id="content">
-    <div class="inner-block">
+<main id="page-container" role="main">
 
-      <a href="/" class="example-back-link">Back to GOV.UK elements</a>
+  <a href="/" class="example-back-link">Back to GOV.UK elements</a>
 
-      <h1 class="heading-xlarge">Radio button and checkbox<br> test page</h1>
-      <p class="text">
-        This test page demonstrates selection-buttons.js from the govuk frontend toolkit, which
-        sets 'focused' and 'selected' states for the large hit area labels that wrap checkboxes and radio buttons.
-      </p>
-      <p class="text">
-        It also demonstrates setting ARIA attributes when showing and hiding additional content.
-      </p>
+  <h1 class="heading-xlarge">Radio button and checkbox<br> test page</h1>
+  <p class="text">
+    This test page demonstrates selection-buttons.js from the govuk frontend toolkit, which
+    sets 'focused' and 'selected' states for the large hit area labels that wrap checkboxes and radio buttons.
+  </p>
+  <p class="text">
+    It also demonstrates setting ARIA attributes when showing and hiding additional content.
+  </p>
 
-      <form action="/" method="post" class="form">
+  <form action="/" method="post" class="form">
 
-        <h1 class="heading-large">
-          What is your nationality?
-        </h1>
+    <h1 class="heading-large">
+      What is your nationality?
+    </h1>
 
-        <p>If you have dual nationality, select all options that are relevant to you.</p>
+    <p>If you have dual nationality, select all options that are relevant to you.</p>
 
-        <div class="form-group">
-          <fieldset>
+    <div class="form-group">
+      <fieldset>
 
-            <label for="nationality_british" class="block-label">
-              <input type="checkbox" name="nationality_british" value="British" id="nationality_british">
-              British
-            </label>
+        <label for="nationality_british" class="block-label">
+          <input type="checkbox" name="nationality_british" value="British" id="nationality_british">
+          British
+        </label>
 
-            <label for="nationality_irish" class="block-label">
-              <input type="checkbox" name="nationality_irish" value="Irish" id="nationality_irish">
-              Irish
-            </label>
+        <label for="nationality_irish" class="block-label">
+          <input type="checkbox" name="nationality_irish" value="Irish" id="nationality_irish">
+          Irish
+        </label>
 
-            <label for="nationality_other" class="block-label" data-target="example_nationality_other">
-              <input type="checkbox" name="nationality_other" value="Wales" id="nationality_other">
-              Citizen of another country
-            </label>
+        <label for="nationality_other" class="block-label" data-target="example_nationality_other">
+          <input type="checkbox" name="nationality_other" value="Wales" id="nationality_other">
+          Citizen of another country
+        </label>
 
-            <div class="panel-indent js-hidden" id="example_nationality_other">
-              <label for="nationality_other_countries" class="form-label">
-                Country name
-              </label>
-              <input type="text" id="nationality_other_countries">
-            </div>
-
-
-          </fieldset>
+        <div class="panel-indent js-hidden" id="example_nationality_other">
+          <label for="nationality_other_countries" class="form-label">
+            Country name
+          </label>
+          <input type="text" id="nationality_other_countries">
         </div>
 
-        <h1 class="form-title heading-large">
-          Where should we send your new<br> passport?
-        </h1>
 
-        <div class="form-group">
-          <fieldset>
+      </fieldset>
+    </div>
 
-            <legend class="visuallyhidden">
-              Choose the address to send your new passport to
-            </legend>
+    <h1 class="form-title heading-large">
+      Where should we send your new<br> passport?
+    </h1>
 
-            <label for="radio-home-address" class="block-label">
-              <input id="radio-home-address" type="radio" name="radio-indent-group" value="Yes">
-              Home address
-            </label>
+    <div class="form-group">
+      <fieldset>
 
-            <label for="radio-other-address" class="block-label" data-target="example-other-address">
-              <input id="radio-other-address" type="radio" name="radio-indent-group" value="No">
-              Other address
-            </label>
+        <legend class="visuallyhidden">
+          Choose the address to send your new passport to
+        </legend>
 
-          </fieldset>
-        </div>
+        <label for="radio-home-address" class="block-label">
+          <input id="radio-home-address" type="radio" name="radio-indent-group" value="Yes">
+          Home address
+        </label>
 
-        <div class="panel-indent js-hidden" id="example-other-address">
+        <label for="radio-other-address" class="block-label" data-target="example-other-address">
+          <input id="radio-other-address" type="radio" name="radio-indent-group" value="No">
+          Other address
+        </label>
 
-          <legend class="heading-medium">
-            Your other address
-          </legend>
+      </fieldset>
+    </div>
 
-           <div class="form-group form-group-compound">
-            <label class="form-label" for="address-line-1">Street</label>
-            <input type="text" class="form-control" id="address-line-1">
-          </div>
+    <div class="panel-indent js-hidden" id="example-other-address">
 
-          <div class="form-group">
-            <label class="form-label visuallyhidden" for="address-line-2">Street</label>
-            <input type="text" class="form-control" id="address-line-2">
-          </div>
+      <legend class="heading-medium">
+        Your other address
+      </legend>
 
-          <div class="form-group">
-            <label class="form-label" for="address-town">Town or City</label>
-            <input type="text" class="form-control form-control-1-4" id="address-town">
-          </div>
+       <div class="form-group form-group-compound">
+        <label class="form-label" for="address-line-1">Street</label>
+        <input type="text" class="form-control" id="address-line-1">
+      </div>
 
-          <div class="form-group">
-            <label class="form-label" for="address-postcode">Postcode</label>
-            <input type="text" class="form-control form-control-1-8" id="address-postcode">
-          </div>
+      <div class="form-group">
+        <label class="form-label visuallyhidden" for="address-line-2">Street</label>
+        <input type="text" class="form-control" id="address-line-2">
+      </div>
 
-        </div>
+      <div class="form-group">
+        <label class="form-label" for="address-town">Town or City</label>
+        <input type="text" class="form-control form-control-1-4" id="address-town">
+      </div>
 
-        <div class="form-group">
-          <input type="submit" class="button" value="Continue">
-          <ul>
-            <li><a href="#">Skip this section for now</a></li>
-            <li><a href="/">Back</a></li>
-          </ul>
-        </div>
-
-      </form>
+      <div class="form-group">
+        <label class="form-label" for="address-postcode">Postcode</label>
+        <input type="text" class="form-control form-control-1-8" id="address-postcode">
+      </div>
 
     </div>
-  </div>
-</main>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+      <ul>
+        <li><a href="#">Skip this section for now</a></li>
+        <li><a href="/">Back</a></li>
+      </ul>
+    </div>
+
+  </form>
+
+</main><!-- /#page-container -->
 {{/content}}
 
 {{$bodyEnd}}

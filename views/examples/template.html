@@ -18,49 +18,42 @@
 {{/afterHeader}}
 
 {{$content}}
-<main id="wrapper" role="main">
-  <div id="content">
+<main id="page-container" role="main">
 
-    <div class="inner-block">
+  <div class="phase-banner">
+    <p>
+      <strong class="phase-tag">ALPHA</strong>
+      <span>This is a new service – your <a href="https://designpatterns.hackpad.com/GOV.UK-elements-feedback-sKrDyQxcfA2">feedback</a> will help us to improve it.</span>
+    </p>
+  </div>
+  <!-- /.phase-banner -->
 
-      <div class="phase-banner">
-        <p>
-          <strong class="phase-tag">ALPHA</strong>
-          <span>This is a new service – your <a href="https://designpatterns.hackpad.com/GOV.UK-elements-feedback-sKrDyQxcfA2">feedback</a> will help us to improve it.</span>
-        </p>
-      </div>
-      <!-- /.phase-banner -->
+  <a href="/" class="example-back-link">Back to GOV.UK elements</a>
 
-      <a href="/" class="example-back-link">Back to GOV.UK elements</a>
+  <div class="text">
 
-      <div class="text">
+    <h1 class="heading-xlarge">
+      <span class="heading-secondary">Examples</span>
+      GOV.UK template
+    </h1>
+    <p>
+      This page links to the the three variants of the GOV.UK template.
+    </p>
 
-        <h1 class="heading-xlarge">
-          <span class="heading-secondary">Examples</span>
-          GOV.UK template
-        </h1>
-        <p>
-          This page links to the the three variants of the GOV.UK template.
-        </p>
+    <h2 class="heading-medium"><a href="/examples/template/header">GOV.UK standard header</a></h2>
+    <p>
+      The standard header for information pages on GOV.UK.
+    </p>
 
-        <h2 class="heading-medium"><a href="/examples/template/header">GOV.UK standard header</a></h2>
-        <p>
-          The standard header for information pages on GOV.UK.
-        </p>
+    <h2 class="heading-medium"><a href="/examples/template/header-with-title">GOV.UK standard header – with service title</a></h2>
+    <p>
+      If your service is more than a few pages long, you can help users understand where they are by adding the service title.
+    </p>
 
-        <h2 class="heading-medium"><a href="/examples/template/header-with-title">GOV.UK standard header – with service title</a></h2>
-        <p>
-          If your service is more than a few pages long, you can help users understand where they are by adding the service title.
-        </p>
-
-        <h2 class="heading-medium"><a href="/examples/template/header-with-nav">GOV.UK standard header – with propositional navigation</a></h2>
-        <p>
-          If you need to include contact or account management links, use this example.
-        </p>
-
-      </div>
-
-    </div><!-- /.inner-block -->
+    <h2 class="heading-medium"><a href="/examples/template/header-with-nav">GOV.UK standard header – with propositional navigation</a></h2>
+    <p>
+      If you need to include contact or account management links, use this example.
+    </p>
 
   </div>
 </main>
@@ -68,24 +61,6 @@
 
 {{$bodyEnd}}
   {{>scripts}}
-  <script>
-
-    // Turn on grid highlight styles as default
-
-    // $(document).ready(function () {
-
-    //   var html = $('html');
-    //   html.addClass('example-highlight-grid');
-
-    //   if ($('.is-inner-block-highlight').length>0) {
-    //     // Don't add more than once
-    //   } else {
-    //     $('.grid .inner-block').wrapInner('<div class="is-inner-block-highlight"></div>');
-    //   }
-
-    // });
-
-    </script>
 {{/bodyEnd}}
 
 {{/govuk_template}}
