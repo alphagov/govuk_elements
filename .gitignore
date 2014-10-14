@@ -1,6 +1,8 @@
 .sass-cache
 .DS_Store
 .start.pid
+# Ignore node modules
++node_modules
 # Ignore compiled stylesheets
 public/stylesheets/
 # Ignore WIP form examples
