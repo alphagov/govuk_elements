@@ -13,8 +13,8 @@
   @return ($px / $base) + em;
 }
 
-// Use the contain floats mixin for this project,
-// as placeholders are not supported by libsass
+// Create a contain floats mixin for this project,
+// as placeholders are not yet supported by libsass
 @mixin contain-floats {
   &:after {
     content: "";
@@ -26,16 +26,38 @@
   }
 }
 
+// Create a site-container mixin for this project,
+// as placeholders are not yet supported by libsass
+@mixin site-width-container {
+  max-width: $site-width;
+  @include ie-lte(8){
+    width: $site-width;
+  }
+
+  margin: 0 $gutter-half;
+  @include media(tablet){
+    margin: 0 $gutter;
+  }
+  @include media($min-width: ($site-width + $gutter * 2), $ignore-for-ie: true){
+    margin: 0 auto;
+  }
+}
+
+// Create a grid-row mixin for this project,
+// as placeholders are not yet supported by libsass
+@mixin grid-row {
+  @include contain-floats;
+  margin: 0 (-$gutter-half);
+}
+
+
 // Want to see how the grid works?
 // add this class to the body to see how grid padding is set
 .example-highlight-grid {
-  .grid-wrapper {
+  .grid-row {
     background:  $grey-2;
   }
-  .grid {
-    background: $grey-4;
-  }
-  .is-inner-block-highlight {
+  .column-highlight {
     background: $grey-3;
     width: 100%;
   }

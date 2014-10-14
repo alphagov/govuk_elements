@@ -16,46 +16,43 @@
 {{$headerClass}}with-proposition{{/headerClass}}
 
 {{$content}}
-<main id="wrapper" role="main">
-  <div id="content">
-    <div class="inner-block">
-      <a href="/" class="example-back-link">Back to GOV.UK elements</a>
+<main id="page-container" role="main">
 
-      <h1 class="heading-xlarge">Form date test page</h1>
+  <a href="/" class="example-back-link">Back to GOV.UK elements</a>
 
-      <!-- Date of birth -->
-      <div class="form-group">
-        <fieldset>
-          <legend class="form-label-bold">Date of birth</legend>
+  <h1 class="heading-xlarge">Form date test page</h1>
 
-          <div class="form-date">
-            <p class="form-hint">For example, 08 04 2014</p>
+  <!-- Date of birth -->
+  <div class="form-group">
+    <fieldset>
+      <legend class="form-label-bold">Date of birth</legend>
 
-            <div class="form-group form-group-day">
-              <label for="dob-day">Day</label>
-              <input type="text" class="form-control" id="dob-day">
-            </div>
-            <div class="form-group form-group-month">
-              <label for="dob-month">Month</label>
-              <input type="text" class="form-control" id="dob-month">
-            </div>
-            <div class="form-group form-group-year">
-              <label for="dob-year">Year</label>
-              <input type="text" class="form-control" id="dob-year">
-            </div>
-          </div>
+      <div class="form-date">
+        <p class="form-hint">For example, 08 04 2014</p>
 
-          <div class="form-date native-date-picker">
-            <p class="form-hint">For example, 08 April 2014</p>
-            <input type="date" class="form-control">
-          </div>
-
-        </fieldset>
+        <div class="form-group form-group-day">
+          <label for="dob-day">Day</label>
+          <input type="text" class="form-control" id="dob-day">
+        </div>
+        <div class="form-group form-group-month">
+          <label for="dob-month">Month</label>
+          <input type="text" class="form-control" id="dob-month">
+        </div>
+        <div class="form-group form-group-year">
+          <label for="dob-year">Year</label>
+          <input type="text" class="form-control" id="dob-year">
+        </div>
       </div>
 
-    </div>
+      <div class="form-date native-date-picker">
+        <p class="form-hint">For example, 08 April 2014</p>
+        <input type="date" class="form-control">
+      </div>
+
+    </fieldset>
   </div>
-</main>
+
+</main><!-- /#page-container -->
 {{/content}}
 
 {{$bodyEnd}}

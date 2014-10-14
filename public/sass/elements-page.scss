@@ -1,27 +1,31 @@
 @import "main";
 
 // ==========================================================================
+// GOV.UK template styles
+// ==========================================================================
+// Override here until updated in the GOV.UK template
+
+#global-header-bar {
+  @include site-width-container;
+}
+#global-header-bar .inner-block {
+  padding: 0;
+}
+
+
+// ==========================================================================
 // Service Design Manual styles
 // ==========================================================================
 
 @import "service-design-manual/helpers/page-header";
 @import "service-design-manual/helpers/breadcrumbs";
 
-// Adjust Service Design Manual header to align with content
+// Remove margins set by Service Design Manual header
 #global-breadcrumb,
 .page-header {
-  margin-left: $gutter-half;
-  margin-right: $gutter-half;
-
-  @include media(tablet) {
-    margin-left: $gutter;
-    margin-right: $gutter;
-  }
+  margin-left: 0;
+  margin-right: 0;
 }
-#global-breadcrumb li {
-  margin-bottom: 0;
-}
-
 
 // ==========================================================================
 // Elements page styles
@@ -51,7 +55,6 @@
 // ==========================================================================
 
 .example {
-  @include inner-block;
   @include contain-floats;
   position: relative;
   overflow: hidden;
@@ -60,12 +63,17 @@
   margin-bottom: $gutter*1.5;
 
   padding-top: $gutter;
+  padding-right: $gutter-half;
   padding-bottom: $gutter-half;
+  padding-left: $gutter-half;
 
   @include media(tablet) {
     padding-top: $gutter*1.5;
+    padding-right: $gutter;
     padding-bottom: $gutter;
+    padding-left: $gutter;
   }
+
   &:before {
     content: "EXAMPLE";
 

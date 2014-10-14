@@ -15,82 +15,78 @@
 {{$headerClass}}with-proposition{{/headerClass}}
 
 {{$content}}
-<main id="wrapper" role="main">
-  <div id="content">
-    <div class="inner-block">
+<main id="page-container" role="main">
 
-      <a href="/" class="example-back-link">Back to GOV.UK elements</a>
+  <a href="/" class="example-back-link">Back to GOV.UK elements</a>
 
-      <form action="/" method="post" class="form">
+  <form action="/" method="post" class="form">
 
-        <h1 class="form-title heading-large">
-          Your details
-        </h1>
+    <h1 class="form-title heading-large">
+      Your details
+    </h1>
 
-        <!-- Full name -->
-        <div class="form-group">
-          <label class="form-label-bold" for="full-name">Full name</label>
-          <p class="form-hint">As shown on your birth certificate or passport</p>
-          <input type="text" class="form-control" id="full-name">
-        </div>
-
-        <!-- National Insurance number -->
-        <div class="form-group">
-          <label class="form-label-bold" for="ni-number">
-            National Insurance number
-            <span class="form-hint">
-              It's on your National Insurance card, benefit letter, payslip or P60.
-              <br>
-              For example, 'VO 12 34 56 D'.
-            </span>
-          </label>
-          <input type="text" class="form-control" id="ni-number">
-        </div>
-
-        <!-- Date of birth -->
-        <div class="form-group">
-          <fieldset>
-            <legend class="form-label-bold">Date of birth</legend>
-
-            <div class="form-date">
-              <p class="form-hint">For example, 08 04 2014</p>
-
-              <div class="form-group form-group-day">
-                <label for="dob-day">Day</label>
-                <input type="text" class="form-control" id="dob-day">
-              </div>
-              <div class="form-group form-group-month">
-                <label for="dob-month">Month</label>
-                <input type="text" class="form-control" id="dob-month">
-              </div>
-              <div class="form-group form-group-year">
-                <label for="dob-year">Year</label>
-                <input type="text" class="form-control" id="dob-year">
-              </div>
-            </div>
-
-            <div class="form-date native-date-picker">
-              <p class="form-hint">For example, 08 April 2014</p>
-              <input type="date" class="form-control">
-            </div>
-
-          </fieldset>
-        </div>
-
-        <!-- Primary buttons, secondary links -->
-        <div class="form-group">
-          <input type="submit" class="button" value="Continue">
-          <ul>
-            <li><a href="#">Skip this section for now</a></li>
-            <li><a href="/">Back</a></li>
-          </ul>
-        </div>
-
-      </form>
-
+    <!-- Full name -->
+    <div class="form-group">
+      <label class="form-label-bold" for="full-name">Full name</label>
+      <p class="form-hint">As shown on your birth certificate or passport</p>
+      <input type="text" class="form-control" id="full-name">
     </div>
-  </div>
-</main>
+
+    <!-- National Insurance number -->
+    <div class="form-group">
+      <label class="form-label-bold" for="ni-number">
+        National Insurance number
+        <span class="form-hint">
+          It's on your National Insurance card, benefit letter, payslip or P60.
+          <br>
+          For example, 'VO 12 34 56 D'.
+        </span>
+      </label>
+      <input type="text" class="form-control" id="ni-number">
+    </div>
+
+    <!-- Date of birth -->
+    <div class="form-group">
+      <fieldset>
+        <legend class="form-label-bold">Date of birth</legend>
+
+        <div class="form-date">
+          <p class="form-hint">For example, 08 04 2014</p>
+
+          <div class="form-group form-group-day">
+            <label for="dob-day">Day</label>
+            <input type="text" class="form-control" id="dob-day">
+          </div>
+          <div class="form-group form-group-month">
+            <label for="dob-month">Month</label>
+            <input type="text" class="form-control" id="dob-month">
+          </div>
+          <div class="form-group form-group-year">
+            <label for="dob-year">Year</label>
+            <input type="text" class="form-control" id="dob-year">
+          </div>
+        </div>
+
+        <div class="form-date native-date-picker">
+          <p class="form-hint">For example, 08 April 2014</p>
+          <input type="date" class="form-control">
+        </div>
+
+      </fieldset>
+    </div>
+
+    <!-- Primary buttons, secondary links -->
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue">
+      <ul>
+        <li><a href="#">Skip this section for now</a></li>
+        <li><a href="/">Back</a></li>
+      </ul>
+    </div>
+
+  </form>
+
+</main><!-- / #page-container -->
 {{/content}}
 
 {{$bodyEnd}}
