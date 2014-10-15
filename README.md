@@ -60,13 +60,13 @@ The main.scss file shows how to import the Elements Sass files.
 If you would like to clone the repository and run it locally,
 you will need [Node.js](http://nodejs.org/) (at least version v0.10.0).
 
-1. clone this repository
-2. install the required node modules
+* clone this repository
+* install the required node modules
 ```
 npm install --production
 ```
-3. run the app
+* run the app
 ```
 foreman start -p 3000
 ```
-4. go to [localhost:3000](http://localhost:3000) in your browser.
+* go to [localhost:3000](http://localhost:3000) in your browser.
