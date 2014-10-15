@@ -15,6 +15,7 @@
 // Page container wraps the entire site content block
 #page-container {
   @include site-width-container;
+  @include contain-floats;
   padding-bottom: $gutter;
   @include media(desktop) {
     padding-bottom: $gutter*3;
