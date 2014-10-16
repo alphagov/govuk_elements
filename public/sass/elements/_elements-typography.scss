@@ -150,6 +150,21 @@ p {
   color: $secondary-text-colour;
 }
 
+// Link styles
+.link {
+  color: $link-colour;
+  text-decoration: underline;
+}
+.link:visited {
+  color: $link-visited-colour;
+}
+.link:hover {
+  color: $link-hover-colour;
+}
+.link:active {
+  color: $link-colour;
+}
+
 // Code styles
 pre,
 code {
