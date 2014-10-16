@@ -18,6 +18,14 @@ It can be used as a sensible base of front end code. Choose the Sass files you n
 
 As you get a better understanding of the user needs for your project you should be iterating this code so it best fits the resulting requirements.
 
+### How are people building with GOV.UK Elements?
+
+Here are examples of service-specific pattern libraries using GOV.UK Elements.
+
+* [Rural Payments style guide](http://capd-styleguide.herokuapp.com/)
+* [SFA Pattern Library](http://sfa-prototype.azurewebsites.net/pattern-library.html)
+* [Land Registry style guide](http://styleguide.landregistryconcept.co.uk/)
+
 ###  How to we want people to contribute and improve elements.
 
 #### Design
