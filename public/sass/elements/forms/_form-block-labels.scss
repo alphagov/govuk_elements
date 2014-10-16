@@ -51,7 +51,7 @@
 // Selected and focused states
 
 // Add selected state
-.js-enabled .selected {
+.js-enabled label.selected {
   background: $white;
   border-color: $black;
 }
