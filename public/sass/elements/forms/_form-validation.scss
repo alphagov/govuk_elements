@@ -44,7 +44,7 @@
 // Validation error message box
 // .validation-error {
 //   clear: both;
-//   @extend %contain-floats;
+//   @include contain-floats;
 //   border-left: 3px solid $error-colour;
 //   padding: $gutter- $gutter;
 //   margin-bottom: $gutter-half;
