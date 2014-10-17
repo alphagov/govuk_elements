@@ -6,7 +6,7 @@
 // Override here until updated in the GOV.UK template
 
 #global-header-bar {
-  @include site-width-container;
+  @extend %site-width-container;
 }
 #global-header-bar .inner-block {
   padding: 0;
@@ -55,7 +55,7 @@
 // ==========================================================================
 
 .example {
-  @include contain-floats;
+  @extend %contain-floats;
   position: relative;
   overflow: hidden;
   border: 1px solid $grey-2;
