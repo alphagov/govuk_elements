@@ -33,12 +33,11 @@
   @include ie-lte(8){
     width: $site-width;
   }
-
   margin: 0 $gutter-half;
   @include media(tablet){
     margin: 0 $gutter;
   }
-  @include media($min-width: ($site-width + $gutter * 2), $ignore-for-ie: true){
+  @include media($min-width: ($site-width + $gutter * 2)){
     margin: 0 auto;
   }
 }
