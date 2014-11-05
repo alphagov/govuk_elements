@@ -14,8 +14,6 @@
 
 // Page container wraps the entire site content block
 #page-container {
-  // Todo - remove this once govuk_template is updated to 2.0.1
-  display: block;
   @extend %site-width-container;
   @extend %contain-floats;
   padding-bottom: $gutter;
