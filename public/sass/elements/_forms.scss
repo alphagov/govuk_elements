@@ -9,7 +9,7 @@
   float: left;
   width: 100%;
   clear: both;
-  @include contain-floats;
+  @extend %contain-floats;
   margin-bottom: $gutter-half;
   @include media(tablet) {
     margin-bottom: $gutter;
@@ -66,7 +66,7 @@ fieldset {
 .form-block {
   float: left;
   width: 100%;
-  @include contain-floats;
+  @extend %contain-floats;
 }
 
 
