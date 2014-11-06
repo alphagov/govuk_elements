@@ -4,11 +4,16 @@
 @import "helpers";
 @import "colours";
 
+// Fieldset is used to group more than one .form-group
+fieldset {
+  width: 100%;
+  @extend %contain-floats;
+}
+
 // Form group is used to wrap label and input pairs
 .form-group {
   float: left;
   width: 100%;
-  clear: both;
   @extend %contain-floats;
   margin-bottom: $gutter-half;
   @include media(tablet) {
@@ -25,11 +30,6 @@
 
 .form-group-compound {
   margin-bottom: 10px;
-}
-
-// Fieldset is used to group more than one .form-group
-fieldset {
-  width: 100%;
 }
 
 
