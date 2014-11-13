@@ -18,7 +18,8 @@ module.exports = function(grunt){
         },
         options: {
           includePaths: ['govuk/public/sass'],
-          outputStyle: 'expanded'
+          outputStyle: 'expanded',
+          imagePath: '../images'
         }
       }
     },
@@ -142,7 +143,5 @@ module.exports = function(grunt){
     'sass',
     'concurrent:target'
   ]);
-
-
 
 };

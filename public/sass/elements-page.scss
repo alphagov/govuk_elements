@@ -103,7 +103,7 @@
 // Grid layout boxes
 .example-grid p {
   width: 100%;
-  background: url("../../public/images/examples/grid.png") 0 0 repeat;
+  background: file-url("examples/grid.png") 0 0 repeat;
   min-height: 30px;
   margin-bottom: 0;
   @include media(tablet) {
