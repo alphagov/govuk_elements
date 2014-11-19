@@ -43,22 +43,5 @@ module.exports = {
       res.render('patterns/radios_checkboxes', {'assetPath' : assetPath });
     });
 
-    // GOV.UK template example pages
-
-    app.get('/examples/template', function (req, res) {
-      res.render('examples/template', {'assetPath' : assetPath });
-    });
-
-    app.get('/examples/template/header', function (req, res) {
-      res.render('examples/template/header', {'assetPath' : assetPath });
-    });
-    app.get('/examples/template/header-with-title', function (req, res) {
-      res.render('examples/template/header_with_title', {'assetPath' : assetPath });
-    });
-    app.get('/examples/template/header-with-nav', function (req, res) {
-      res.render('examples/template/header_with_nav', {'assetPath' : assetPath });
-    });
-
-
   }
 };
