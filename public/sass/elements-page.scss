@@ -94,20 +94,51 @@
     color: $hm-government;
   }
 
+  // Fix grid layout within example boxes for IE7 and below
+  // where box-sizing isn't supported: http://caniuse.com/#search=box-sizing
+  @mixin example-box-column($width) {
+    width: (($site-width - $gutter) * $width) - $gutter;
+  }
+
+  @include ie-lte(7){
+
+    // Set example box width to 900px (removing left and right padding)
+    $example-box-width: $site-width - ($gutter * 2);
+    width: $example-box-width;
+
+    // Recalculate grid column widths
+    .column-quarter {
+      @include example-box-column( 1/4 );
+    }
+    .column-half {
+      @include example-box-column( 1/2 );
+    }
+    .column-third {
+      @include example-box-column( 1/3 );
+    }
+    .column-two-thirds {
+      @include example-box-column( 2/3 );
+    }
+
+    // Scale images to fit grid columns
+    img {
+      width: 100%;
+    }
+  }
+
 }
 
 
 // 1. Layout
 // ==========================================================================
 
-// Grid layout boxes
 .example-grid p {
   width: 100%;
   background: file-url("examples/grid.png") 0 0 repeat;
-  min-height: 30px;
   margin-bottom: 0;
+  height: 30px;
   @include media(tablet) {
-    min-height: 60px;
+    height: 60px;
   }
   overflow: hidden;
   text-indent: -999em;
