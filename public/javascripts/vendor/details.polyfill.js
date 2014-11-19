@@ -96,8 +96,8 @@
       details.__summary.setAttribute('tabindex', '0');
 
       // Detect initial open/closed state
-      var detailsAttr = details.hasAttribute('open');
-      if (typeof detailsAttr !== 'undefined' && detailsAttr !== false) {
+      var detailsAttr = details.getAttribute("open");
+      if (detailsAttr == "null" ) {
         details.__summary.setAttribute('aria-expanded', 'true');
         details.__content.setAttribute('aria-hidden', 'false');
       } else {
