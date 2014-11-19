@@ -45,15 +45,19 @@ fieldset {
 // Labels
 
 // Form labels, or for legends styled to look like labels
+.form-label,
+.form-label-bold {
+  display: block;
+  color: $text-colour;
+}
+
 .form-label {
   @include core-19;
-  display: block;
   margin-bottom: 5px;
 }
 
 .form-label-bold {
   @include bold-24;
-  display: block;
   margin-bottom: 0;
   .form-hint {
     @include core-19;
