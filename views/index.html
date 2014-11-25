@@ -656,10 +656,23 @@
     <p class="text">
       Consider putting content into tables to make it easier to scan.
     </p>
-    <p>
-      <a href="https://www.gov.uk/government/publications/dvlas-annual-report-and-accounts-2012-to-2013/dvlas-annual-report-and-accounts-2012-to-2013#directors-report">See an example of table usage on GOV.UK</a>
-    </p>
 
+    <ul class="text list-bullet">
+      <li>when comparing rows of numbers, align numbers to the right in table cells</li>
+      <li>don't right-align dates</li>
+      <li>use <a href="https://github.com/alphagov/govuk_frontend_toolkit#tabular-numbers">tabular numbers</a> to allow numbers of the same width to be more easily compared</li>
+    </ul>
+
+    <p class="text">
+      <a href="https://www.gov.uk/performance/carers-allowance/volumetrics">See an example of numerical table usage on GOV.UK</a>
+    </p>
+    <div class="example">
+      {{> data_table_numerical }}
+    </div>
+
+    <p>
+      Not all content in tables should be right aligned.
+    </p>
     <div class="example">
       {{> data_table }}
     </div>
