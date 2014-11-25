@@ -13,8 +13,8 @@ table {
 
 table th,
 table td {
-  @include core-16;
-  padding: em(14) em(20) em(10) 0;
+  @include core-16($tabular-numbers: true);
+  padding: em(12, 16) em(20, 16) em(9, 16) 0;
 
   text-align: left;
   color: #0b0c0c;
