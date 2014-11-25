@@ -49,21 +49,21 @@ module.exports = function(grunt){
       govuk_frontend_toolkit_scss: {
         expand: true,
         src: '**',
-        cwd: 'node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets/',
+        cwd: 'node_modules/govuk_frontend_toolkit/stylesheets/',
         dest: 'govuk/public/sass/'
       },
 
       govuk_frontend_toolkit_js: {
         expand: true,
         src: '**',
-        cwd: 'node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/javascripts/',
+        cwd: 'node_modules/govuk_frontend_toolkit/javascripts/',
         dest: 'govuk/public/javascripts/'
       },
 
       govuk_frontend_toolkit_img: {
         expand: true,
         src: '**',
-        cwd: 'node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/images/',
+        cwd: 'node_modules/govuk_frontend_toolkit/images/',
         dest: 'govuk/public/images/icons/'
       },
 
