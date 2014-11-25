@@ -27,10 +27,11 @@ table th {
 
 // Right align headings for numerical content
 table th.numerical {
-  text-align: right
+  text-align: right;
 }
 
 // Use tabular numbers for numerical table cells
 table td.numerical {
   @include core-16($tabular-numbers: true);
+  text-align: right;
 }
