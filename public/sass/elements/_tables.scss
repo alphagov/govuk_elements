@@ -26,6 +26,6 @@ table th {
 }
 
 // Use tabular numbers for numerical table cells
-.numerical {
+td.numerical {
   @include core-16($tabular-numbers: true);
 }
