@@ -12,6 +12,12 @@
   vertical-align: top;
 }
 
+// Fix unwanted button padding in Firefox
+.button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
 .button:focus {
   outline: 3px solid $yellow;
 }
