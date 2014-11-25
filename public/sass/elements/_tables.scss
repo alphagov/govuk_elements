@@ -25,7 +25,12 @@ table th {
   font-weight: 700;
 }
 
+// Right align headings for numerical content
+table th.numerical {
+  text-align: right
+}
+
 // Use tabular numbers for numerical table cells
-td.numerical {
+table td.numerical {
   @include core-16($tabular-numbers: true);
 }
