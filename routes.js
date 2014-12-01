@@ -34,8 +34,8 @@ module.exports = {
     });
 
     // Date pattern
-    app.get('/patterns/form-date', function (req, res) {
-      res.render('patterns/form_date', {'assetPath' : assetPath });
+    app.get('/patterns/date', function (req, res) {
+      res.render('patterns/date', {'assetPath' : assetPath });
     });
 
     // Radio and checkbox pattern
