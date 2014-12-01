@@ -9,11 +9,11 @@
 @import "design-patterns/alpha-beta";
 
 
-// Page container
+// Content
 // ==========================================================================
 
-// Page container wraps the entire site content block
-#page-container {
+// Content wraps the entire site content block
+#content {
   @extend %site-width-container;
   @extend %contain-floats;
   padding-bottom: $gutter;
