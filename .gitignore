@@ -6,3 +6,5 @@ node_modules
 public/stylesheets/
 # Ignore WIP form examples
 views/examples/forms
+# Ignore test files
+dist/*.html
