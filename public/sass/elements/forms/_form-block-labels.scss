@@ -45,7 +45,7 @@
 // To stack horizontally, use .inline on parent, to sit block labels next to each other
 .inline .block-label {
   clear: none;
-  margin-right: $gutter-half;
+  margin-right: 10px;
 }
 
 // Selected and focused states
