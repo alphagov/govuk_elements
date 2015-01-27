@@ -96,14 +96,52 @@
       details.__summary.setAttribute('tabindex', '0');
 
       // Detect initial open/closed state
-      var detailsAttr = details.getAttribute("open");
-      if (detailsAttr == "null" ) {
+
+      // Native support - has 'open' attribute
+      if (details.open === true) {
+
+        console.log("Has open attribute - native open");
+
         details.__summary.setAttribute('aria-expanded', 'true');
         details.__content.setAttribute('aria-hidden', 'false');
-      } else {
+      }
+
+      // Native support - doesn't have 'open' attribute
+      if (details.open === false) {
+
+        console.log("Doesn't have open attribute -  native closed ");
+
         details.__summary.setAttribute('aria-expanded', 'false');
         details.__content.setAttribute('aria-hidden', 'true');
         details.__content.style.display = 'none';
+      }
+
+      // If this is not a native implementation
+      if (!details.__native) {
+
+        // Add an arrow
+        var twisty = document.createElement('i');
+
+        // Check for the 'open' attribute
+        // If open exists, but isn't supported it won't have a value
+        if (details.getAttribute('open') === "") {
+
+          console.log("Has open attribute - NOT native open");
+
+          details.__summary.setAttribute('aria-expanded', 'true');
+          details.__content.setAttribute('aria-hidden', 'false');
+        }
+
+        // If doesn't exist - it will be null or undefined
+        if (details.getAttribute('open') == null || details.getAttribute('open') == "undefined" ) {
+
+          console.log("Doesn't have open attribute - NOT native closed");
+
+          details.__summary.setAttribute('aria-expanded', 'false');
+          details.__content.setAttribute('aria-hidden', 'true');
+          details.__content.style.display = 'none';
+        }
+
       }
 
       // Create a circular reference from the summary back to its
@@ -113,10 +151,21 @@
       // If this is not a native implementation, create an arrow
       // inside the summary, saving its reference as a summary property
       if (!details.__native) {
+
         var twisty = document.createElement('i');
-        twisty.className = 'arrow arrow-closed';
-        twisty.appendChild(document.createTextNode('\u25ba'));
-        details.__summary.__twisty = details.__summary.insertBefore(twisty, details.__summary.firstChild);
+
+        if (details.getAttribute('open') === "") {
+          twisty.className = 'arrow arrow-open';
+          twisty.appendChild(document.createTextNode('\u25bc'));
+          details.__summary.__twisty = details.__summary.insertBefore(twisty, details.__summary.firstChild);
+
+        } else {
+          twisty.className = 'arrow arrow-closed';
+          twisty.appendChild(document.createTextNode('\u25ba'));
+          details.__summary.__twisty = details.__summary.insertBefore(twisty, details.__summary.firstChild);
+
+        }
+
       }
     }
 
