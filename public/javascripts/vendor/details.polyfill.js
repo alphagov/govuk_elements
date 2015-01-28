@@ -92,7 +92,9 @@
       details.__summary.setAttribute('aria-controls', details.__content.id);
 
       // Set tabindex so the summary is keyboard accessible
-      details.__summary.setAttribute('tabindex', '0');
+      // details.__summary.setAttribute('tabindex', 0);
+      // http://www.saliences.com/browserBugs/tabIndex.html
+      details.__summary.tabIndex = 0;
 
       // Detect initial open/closed state
 
