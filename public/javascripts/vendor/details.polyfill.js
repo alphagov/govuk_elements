@@ -103,7 +103,6 @@
 
         details.__summary.setAttribute('aria-expanded', 'true');
         details.__content.setAttribute('aria-hidden', 'false');
-
         details.__content.style.display = 'block';
       }
 
@@ -158,14 +157,13 @@
         if (details.getAttribute('open') === "") {
           twisty.className = 'arrow arrow-open';
           twisty.appendChild(document.createTextNode('\u25bc'));
-          details.__summary.__twisty = details.__summary.insertBefore(twisty, details.__summary.firstChild);
-
         } else {
           twisty.className = 'arrow arrow-closed';
           twisty.appendChild(document.createTextNode('\u25ba'));
-          details.__summary.__twisty = details.__summary.insertBefore(twisty, details.__summary.firstChild);
-
         }
+
+        details.__summary.__twisty = details.__summary.insertBefore(twisty, details.__summary.firstChild);
+        details.__summary.__twisty.setAttribute('aria-hidden', 'true');
 
       }
     }
@@ -177,6 +175,7 @@
       // Update aria-expanded attribute on click
       var expanded = summary.__details.__summary.getAttribute('aria-expanded') == 'true';
       // console.log("get aria expanded " +expanded);
+
       var hidden = summary.__details.__content.getAttribute('aria-hidden') == 'true';
       //console.log("get aria hidden " +hidden);
 
