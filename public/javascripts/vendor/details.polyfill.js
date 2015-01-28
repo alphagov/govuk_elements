@@ -24,16 +24,12 @@
 
   // Handle cross-modal click events
   function addClickEvent(node, callback) {
-    var keydown = false;
-    addEvent(node, 'keydown', function () {
-      keydown = true;
-    });
+    // When the key comes up - check if it is enter(13) or space(32)
     addEvent(node, 'keyup', function (e, target) {
-      keydown = false;
-      if (e.keyCode === 13) { callback(e, target); }
+      if (e.keyCode === 13 || e.keyCode === 32) { callback(e, target); }
     });
-    addEvent(node, 'click', function (e, target) {
-      if (!keydown) { callback(e, target); }
+    addEvent(node, 'mouseup', function (e, target) {
+      callback(e, target);
     });
   }
 
@@ -86,6 +82,9 @@
         details.__content.id = 'details-content-' + i;
       }
 
+      // Add ARIA role="group" to details
+      details.setAttribute('role', 'group');
+
       // Add role=button to summary
       details.__summary.setAttribute('role', 'button');
 
@@ -100,16 +99,18 @@
       // Native support - has 'open' attribute
       if (details.open === true) {
 
-        console.log("Has open attribute - native open");
+        // console.log("Has open attribute - native open");
 
         details.__summary.setAttribute('aria-expanded', 'true');
         details.__content.setAttribute('aria-hidden', 'false');
+
+        details.__content.style.display = 'block';
       }
 
       // Native support - doesn't have 'open' attribute
       if (details.open === false) {
 
-        console.log("Doesn't have open attribute -  native closed ");
+        // console.log("Doesn't have open attribute -  native closed ");
 
         details.__summary.setAttribute('aria-expanded', 'false');
         details.__content.setAttribute('aria-hidden', 'true');
@@ -126,7 +127,7 @@
         // If open exists, but isn't supported it won't have a value
         if (details.getAttribute('open') === "") {
 
-          console.log("Has open attribute - NOT native open");
+          // console.log("Has open attribute - NOT native open");
 
           details.__summary.setAttribute('aria-expanded', 'true');
           details.__content.setAttribute('aria-hidden', 'false');
@@ -135,7 +136,7 @@
         // If doesn't exist - it will be null or undefined
         if (details.getAttribute('open') == null || details.getAttribute('open') == "undefined" ) {
 
-          console.log("Doesn't have open attribute - NOT native closed");
+          // console.log("Doesn't have open attribute - NOT native closed");
 
           details.__summary.setAttribute('aria-expanded', 'false');
           details.__content.setAttribute('aria-hidden', 'true');
@@ -175,7 +176,9 @@
 
       // Update aria-expanded attribute on click
       var expanded = summary.__details.__summary.getAttribute('aria-expanded') == 'true';
+      // console.log("get aria expanded " +expanded);
       var hidden = summary.__details.__content.getAttribute('aria-hidden') == 'true';
+      //console.log("get aria hidden " +hidden);
 
       summary.__details.__summary.setAttribute('aria-expanded', (expanded ? 'false' : 'true'));
       summary.__details.__content.setAttribute('aria-hidden', (hidden ? 'false' : 'true'));
