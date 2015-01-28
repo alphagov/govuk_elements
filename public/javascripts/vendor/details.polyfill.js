@@ -100,9 +100,6 @@
 
       // Native support - has 'open' attribute
       if (details.open === true) {
-
-        // console.log("Has open attribute - native open");
-
         details.__summary.setAttribute('aria-expanded', 'true');
         details.__content.setAttribute('aria-hidden', 'false');
         details.__content.style.display = 'block';
@@ -110,9 +107,6 @@
 
       // Native support - doesn't have 'open' attribute
       if (details.open === false) {
-
-        // console.log("Doesn't have open attribute -  native closed ");
-
         details.__summary.setAttribute('aria-expanded', 'false');
         details.__content.setAttribute('aria-hidden', 'true');
         details.__content.style.display = 'none';
@@ -127,18 +121,12 @@
         // Check for the 'open' attribute
         // If open exists, but isn't supported it won't have a value
         if (details.getAttribute('open') === "") {
-
-          // console.log("Has open attribute - NOT native open");
-
           details.__summary.setAttribute('aria-expanded', 'true');
           details.__content.setAttribute('aria-hidden', 'false');
         }
 
-        // If doesn't exist - it will be null or undefined
+        // If open doesn't exist - it will be null or undefined
         if (details.getAttribute('open') == null || details.getAttribute('open') == "undefined" ) {
-
-          // console.log("Doesn't have open attribute - NOT native closed");
-
           details.__summary.setAttribute('aria-expanded', 'false');
           details.__content.setAttribute('aria-hidden', 'true');
           details.__content.style.display = 'none';
@@ -151,7 +139,7 @@
       details.__summary.__details = details;
 
       // If this is not a native implementation, create an arrow
-      // inside the summary, saving its reference as a summary property
+      // inside the summary
       if (!details.__native) {
 
         var twisty = document.createElement('i');
@@ -174,12 +162,8 @@
     // Also update the arrow position
     function statechange(summary) {
 
-      // Update aria-expanded attribute on click
       var expanded = summary.__details.__summary.getAttribute('aria-expanded') == 'true';
-      // console.log("get aria expanded " +expanded);
-
       var hidden = summary.__details.__content.getAttribute('aria-hidden') == 'true';
-      //console.log("get aria hidden " +hidden);
 
       summary.__details.__summary.setAttribute('aria-expanded', (expanded ? 'false' : 'true'));
       summary.__details.__content.setAttribute('aria-hidden', (hidden ? 'false' : 'true'));
