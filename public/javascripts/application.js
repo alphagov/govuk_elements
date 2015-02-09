@@ -1,5 +1,11 @@
 function ShowHideContent() {
   var self = this;
+
+
+  self.escapeElementName = function(str) {
+    str.replace('[', '\\[').replace(']', '\\]')
+  };
+
   self.showHideRadioToggledContent = function () {
     $(".block-label input[type='radio']").each(function () {
 
@@ -20,7 +26,7 @@ function ShowHideContent() {
         $radio.on('click', function () {
 
           // Select radio buttons in the same group
-          $radio.closest('form').find(".block-label input[name=" + $radioGroupName + "]").each(function () {
+          $radio.closest('form').find(".block-label input[name=" + self.escapeElementName($radioGroupName) + "]").each(function () {
             var $this = $(this);
 
             var groupDataTarget = $this.parent('label').attr('data-target');
@@ -48,7 +54,7 @@ function ShowHideContent() {
         $radio.on('click', function () {
 
           // Select radio buttons in the same group
-          $(".block-label input[name=" + $radioGroupName + "]").each(function () {
+          $(".block-label input[name=" + self.escapeElementName($radioGroupName) + "]").each(function () {
 
             var groupDataTarget = $(this).parent('label').attr('data-target');
             var $groupDataTarget = $('#' + groupDataTarget);
