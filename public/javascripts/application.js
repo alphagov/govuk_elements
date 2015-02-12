@@ -3,7 +3,8 @@ function ShowHideContent() {
 
 
   self.escapeElementName = function(str) {
-    str.replace('[', '\\[').replace(']', '\\]')
+    result = str.replace('[', '\\[').replace(']', '\\]')
+    return(result);
   };
 
   self.showHideRadioToggledContent = function () {
