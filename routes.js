@@ -26,6 +26,18 @@ module.exports = {
       res.render('examples/forms', {'assetPath' : assetPath });
     });
 
+    app.get('/examples/form-validation-single-question', function (req, res) {
+      res.render('examples/form-validation-single-question', {'assetPath' : assetPath });
+    });
+
+    app.get('/examples/form-validation-single-question-radio', function (req, res) {
+      res.render('examples/form-validation-single-question-radio', {'assetPath' : assetPath });
+    });
+
+    app.get('/examples/form-validation-multiple-questions', function (req, res) {
+      res.render('examples/form-validation-multiple-questions', {'assetPath' : assetPath });
+    });
+
     // GOV.UK elements test pages
 
     // Progressive disclosure pattern

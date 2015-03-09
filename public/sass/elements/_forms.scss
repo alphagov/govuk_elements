@@ -12,6 +12,7 @@ fieldset {
 
 // Form group is used to wrap label and input pairs
 .form-group {
+  @include box-sizing(border-box);
   float: left;
   width: 100%;
   @extend %contain-floats;
