@@ -975,19 +975,126 @@
 
     <h2 class="heading-large heading-with-border">8. Errors and validation</h2>
     <p class="text">
-       Summarise validation errors in a box at the top of your page.
-       Use jump links in the summary box to reach the errors in the form.
-    </p>
-    <p class="text">
-       Ensure error messages make sense when read by screen readers.
+      Form validation should identify all errors, ensuring error copy is specific to the question.
     </p>
 
-    <h3 class="heading-medium" id="error-form-validation">Form validation</h3>
+    <h3 class="heading-medium" id="error-messages">Error messages</h3>
     <ul class="list-bullet text">
       <li>use a red border on the box to visually connect the errors and messages in the form</li>
       <li>apply the same colour to the area of the form where an error has occurred</li>
-      <li>error copy should be specific to the question and validation should identify all errors</li>
       <li>errors should not cause pre-filled fields to clear</li>
+    </ul>
+
+    <div class="example example-error">
+
+      <div class="form-group error">
+        <label class="form-label-bold" for="ni-number">
+          What is your National Insurance number?
+          <span class="form-hint">
+            It's on your National Insurance card, benefit letter, payslip or P60.
+            <br>
+            For example, 'VO 12 34 56 D'.
+          </span>
+          <span class="error-message">Enter your National Insurance number</span>
+        </label>
+        <input type="text" class="form-control" id="ni-number">
+      </div>
+      <input class="button" type="submit" value="Continue">
+
+    </div>
+
+    <div class="example example-error">
+
+      <div class="form-group error">
+        <fieldset class="inline">
+          <legend class="form-label-bold">
+            Are you 19 or over?
+            <span class="error-message">Please answer the question</span>
+          </legend>
+          <label class="block-label" for="age-yes">
+            <input id="age-yes" name="age19YearsOrOver" value="true" type="radio">
+              <span></span>Yes
+          </label>
+          <label class="block-label" for="age-no">
+            <input id="age-no" name="age19YearsOrOver" value="false" type="radio">
+              <span></span>No
+          </label>
+        </fieldset>
+      </div>
+      <input class="button" type="submit" value="Continue">
+
+    </div>
+
+    <h3 class="heading-medium">Error summary</h3>
+    <p class="text">
+      An error summary is recommended if your form has more than one question per page. This summary should contain a heading - indicating there are errors and also a list of all the errors, each of which is a link to the corresponding field.
+    </p>
+    <p class="text">
+      The error summary should appear at the top of the page, so it is visible when the page is refreshed and is immediately read out by assistive technology.
+    </p>
+
+    <div class="example example-error">
+
+      <div class="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1" style="">
+        <h3 class="heading-medium error-summary-heading" id="error-summary-heading">There was a problem submitting the form</h3>
+        <p>Please try the following:</p>
+        <ul class="error-summary-list">
+          <li><a href="#full-name">Enter your full name</a></li>
+          <li><a href="#ni-number">Enter your National Insurance number</a></li>
+        </ul>
+      </div>
+
+      <h1 class="form-title heading-large">
+        Your details
+      </h1>
+
+      <div class="form-group error">
+        <label class="form-label-bold" for="full-name">
+          Full name
+          <span class="form-hint">As shown on your birth certificate or passport</span>
+        </label>
+        <p class="error-message" id="error-full-name">Enter your
+          Full name
+        </p>
+        <input type="text" class="form-control" id="full-name" aria-describedby="error-full-name">
+      </div>
+
+      <div class="form-group error">
+        <label class="form-label-bold" for="ni-number">
+          National Insurance number
+          <span class="form-hint">
+            It's on your National Insurance card, benefit letter, payslip or P60.
+            <br>
+            For example, 'VO 12 34 56 D'.
+          </span>
+        </label>
+        <p class="error-message" id="error-ni-number">Enter your
+          National Insurance number
+        </p>
+        <input type="text" class="form-control" id="ni-number" aria-describedby="error-ni-number">
+      </div>
+
+      <input class="button" type="submit" value="Continue">
+
+    </div>
+
+    <h3 class="heading-medium" id="error-message-examples">Error message examples</h3>
+    <ul class="list-bullet text">
+      <li>
+        <a href="{{ site.baseurl}}/examples/form-validation-single-question">
+          An example form with a single text input
+        </a>
+      </li>
+      <li>
+        <a href="{{ site.baseurl}}/examples/form-validation-single-question-radio">
+          An example form with a radio button
+        </a>
+      </li>
+      <li>
+        <a href="{{ site.baseurl}}/examples/form-validation-multiple-questions">
+          An example with an error summary at the top of the page
+        </a>
+      </li>
     </ul>
 
     <p>

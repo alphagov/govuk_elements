@@ -1,0 +1,44 @@
+{{<govuk_template}}
+
+{{$cookieMessage}}
+  {{>cookie_message}}
+{{/cookieMessage}}
+
+{{$head}}
+  {{>head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+  <a href="/" class="example-back-link">Back to GOV.UK elements</a>
+
+  <h1 class="heading-large">Error example</h1>
+
+  <form method="post" action="/examples/form-validation-multiple-questions">
+    {{> form_error_multiple_questions }}
+  </form>
+
+  <h2 class="heading-medium">When an error occurs:</h2>
+  <ul class="list-bullet">
+    <li>show an error summary at the top of the page</li>
+    <li>use a heading in the summary, which is associated with the summary container using <code>aria-labelledby</code></li>
+    <li>link from the error list in the summary to the fields with errors</li>
+    <li>an error message should be shown before each field with an error</li>
+    <li>add an ID to each error message and associate this with the field using <code>aria-describedby</code></li>
+  </ul>
+
+</main>
+{{/content}}
+
+{{$bodyEnd}}
+  {{>scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

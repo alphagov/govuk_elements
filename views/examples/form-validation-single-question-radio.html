@@ -1,0 +1,43 @@
+{{<govuk_template}}
+
+{{$cookieMessage}}
+  {{>cookie_message}}
+{{/cookieMessage}}
+
+{{$head}}
+  {{>head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+  <a href="/" class="example-back-link">Back to GOV.UK elements</a>
+
+  <h1 class="heading-large">Error example</h1>
+
+  <form method="post" action="/examples/form-validation-single-question-radio">
+    {{> form_error_single_question_radio }}
+  </form>
+
+  <h2 class="heading-medium">When an error occurs:</h2>
+  <ul class="list-bullet">
+    <li>add a red left border to the field with the error</li>
+    <li>the label should be red and bold</li>
+    <li>the error message should appear above the field</li>
+    <li>the error message should appear inside the <code>&lt;legend&gt;</code></li>
+  </ul>
+
+</main>
+{{/content}}
+
+{{$bodyEnd}}
+  {{>scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
