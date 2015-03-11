@@ -1,23 +1,29 @@
+
+{{#error}}
 <div class="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1">
   <h3 class="heading-medium error-summary-heading" id="error-summary-heading">There was a problem submitting the form</h3>
   <p>Please try the following:</p>
   <ul class="error-summary-list">
+    {{^fullName}}<li><a href='#"+inputID+"'>Enter your full name</a></li>{{/fullName}}
+    {{^niNo}}<li><a href='#"+inputID+"'>Enter your National Insurance number</a></li>{{/niNo}}
   </ul>
 </div>
+{{/error}}
 
 <h1 class="form-title heading-large">
   Your details
 </h1>
 
-<div class="form-group">
+<div class="form-group {{#error}}{{^fullName}}error{{/fullName}}{{/error}}">
   <label class="form-label-bold" for="full-name">
     Full name
     <span class="form-hint">As shown on your birth certificate or passport</span>
+    {{#error}}{{^fullName}}<span class="error-message">Enter your full name</span>{{/fullName}}{{/error}}
   </label>
-  <input type="text" class="form-control" id="full-name">
+  <input type="text" class="form-control" id="full-name" name="fullName" value="{{fullName}}">
 </div>
 
-<div class="form-group">
+<div class="form-group {{#error}}{{^niNo}}error{{/niNo}}{{/error}}">
   <label class="form-label-bold" for="ni-number">
     National Insurance number
     <span class="form-hint">
@@ -25,8 +31,9 @@
       <br>
       For example, 'VO 12 34 56 D'.
     </span>
+    {{#error}}{{^niNo}}<span class="error-message">Enter your National Insurance number</span>{{/niNo}}{{/error}}
   </label>
-  <input type="text" class="form-control" id="ni-number">
+  <input type="text" class="form-control" id="ni-number" name="niNo" value="{{niNo}}">
 </div>
 
 <input class="button" type="submit" value="Continue">

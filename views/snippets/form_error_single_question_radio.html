@@ -2,10 +2,11 @@
   These questions will help you choose a certified company
 </h1>
 
-<div class="form-group">
+<div class="form-group {{#error}}error{{/error}}">
   <fieldset class="inline">
     <legend class="form-label-bold">
       Are you 19 or over?
+      {{#error}}<span class="error-message">Please answer the question</span>{{/error}}
     </legend>
     <label class="block-label" for="age-yes">
       <input id="age-yes" name="age19YearsOrOver" value="true" type="radio">
