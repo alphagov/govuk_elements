@@ -27,10 +27,14 @@
 
   <h2 class="heading-medium">When an error occurs:</h2>
   <ul class="list-bullet">
-    <li>add a red left border to the field with the error</li>
-    <li>the label should be red and bold</li>
-    <li>the error message should appear above the field</li>
-    <li>the error message should appear inside the <code>&lt;label&gt;</code></li>
+    <li>add a 5px red left border to the field with the error</li>
+    <li>the <code>label</code> should be red and bold</li>
+    <li>the error message be red and bold and appear above the field</li>
+    <li>the error message should sit inside the <code>&lt;label&gt;</code></li>
+    <li>keyboard focus should be moved to the input</li>
+    <li>consider using <code>aria-invalid</code> attribute to programmatically indicate that a field has an error</li>
+    <li>the value of the <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-invalid">aria-invalid attribute</a> will vary depending on the type of error</a></li>
+  </ul>
   </ul>
 
 </main>

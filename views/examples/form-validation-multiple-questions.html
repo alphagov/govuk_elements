@@ -28,10 +28,16 @@
   <h2 class="heading-medium">When an error occurs:</h2>
   <ul class="list-bullet">
     <li>show an error summary at the top of the page</li>
-    <li>use a heading in the summary, which is associated with the summary container using <code>aria-labelledby</code></li>
+    <li>keyboard focus should be moved to the start of the summary</li>
+    <li>to move keyboard focus to the summary, put tabindex="-1" on the containing div and use <code>obj.focus()</code></li>
+    <li>to indicate to screen readers that the containing div represents a collection of related information, put <code>role="group"</code> on the containing <code>div</code></li>
+    <li>use a heading in the summary</li>
+    <li>use <code>aria-labelledby</code> to associate the heading with the containing div, so that screen readers will automatically announce the heading as soon as focus is moved to the div</li>
     <li>link from the error list in the summary to the fields with errors</li>
     <li>an error message should be shown before each field with an error</li>
     <li>add an ID to each error message and associate this with the field using <code>aria-describedby</code></li>
+    <li>consider using <code>aria-invalid</code>attribute to programmatically indicate that a field has an error</li>
+    <li>the value of the <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-invalid">aria-invalid attribute</a> will vary depending on the type of error</a></li>
   </ul>
 
 </main>
