@@ -112,6 +112,24 @@ function ShowHideContent() {
   }
 }
 
+function setFocus() {
+  var self = this;
+  self.exampleSetFocus = function () {
+
+    // Only set focus for the error example pages
+    if ($(".error-example").length) {
+      // If there is an error summary, set focus to the summary
+      if ($(".error-summary").length) {
+        $(".error-summary").focus();
+      }
+      // Otherwise, set focus to the field with the error
+      else {
+        $(".error input:first").focus();
+      }
+    }
+  }
+}
+
 $(document).ready(function() {
 
   // Turn off jQuery animation
@@ -130,5 +148,8 @@ $(document).ready(function() {
   var toggleContent = new ShowHideContent();
   toggleContent.showHideRadioToggledContent();
   toggleContent.showHideCheckboxToggledContent();
+
+  var focusContent = new setFocus();
+  focusContent.exampleSetFocus();
 
 });
