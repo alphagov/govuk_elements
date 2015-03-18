@@ -988,7 +988,7 @@
     <div class="example example-error">
 
       <div class="form-group error">
-        <label class="form-label-bold" for="ni-number">
+        <label class="form-label-bold" for="ni-no">
           What is your National Insurance number?
           <span class="form-hint">
             It's on your National Insurance card, benefit letter, payslip or P60.
@@ -997,7 +997,7 @@
           </span>
           <span class="error-message">Enter your National Insurance number</span>
         </label>
-        <input type="text" class="form-control" id="ni-number">
+        <input type="text" class="form-control" id="ni-no">
       </div>
       <input class="button" type="submit" value="Continue">
 
@@ -1060,7 +1060,7 @@
       </div>
 
       <div class="form-group error">
-        <label class="form-label-bold" for="ni-number">
+        <label class="form-label-bold" for="ni-no-example">
           National Insurance number
           <span class="form-hint">
             It's on your National Insurance card, benefit letter, payslip or P60.
@@ -1068,10 +1068,10 @@
             For example, 'VO 12 34 56 D'.
           </span>
         </label>
-        <p class="error-message" id="error-ni-number">
+        <p class="error-message" id="error-ni-no-example">
           Enter your National Insurance number
         </p>
-        <input type="text" class="form-control" id="ni-number" aria-describedby="error-ni-number">
+        <input type="text" class="form-control" id="ni-no-example" aria-describedby="error-ni-no-example">
       </div>
 
       <input class="button" type="submit" value="Continue">
@@ -1111,7 +1111,7 @@
       You have to use an alpha banner if your thing is in alpha, and a beta banner if it’s in beta.
     </p>
 
-    <h3 class="heading-medium" id="error-form-validation">Things on the service.gov.uk subdomain</h3>
+    <h3 class="heading-medium" id="guide-alpha-beta-service-govuk">Things on the service.gov.uk subdomain</h3>
     <p class="text">
       If your service is in beta or alpha, you must show the relevant banner in the header.
       It should sit directly underneath the black GOV.UK header and colour bar.
@@ -1125,7 +1125,7 @@
       {{> phase_banner_beta }}
     </div>
 
-    <h3 class="heading-medium" id="error-form-validation">Things on GOV.UK</h3>
+    <h3 class="heading-medium" id="guide-alpha-beta-govuk">Things on GOV.UK</h3>
     <p class="text">
       If your GOV.UK content is in beta or alpha, show the relevant banner below the page title, but above the body content. You can see what they should look like in <a href="https://designnotes.blog.gov.uk/2014/03/26/betas-on-gov-uk/">this blog post</a>.
     </p>
