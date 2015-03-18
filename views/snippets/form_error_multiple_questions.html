@@ -1,11 +1,11 @@
 
 {{#error}}
 <div class="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1">
-  <h3 class="heading-medium error-summary-heading" id="error-summary-heading">There was a problem submitting the form</h3>
-  <p>Please try the following:</p>
+  <h3 class="heading-medium error-summary-heading" id="error-summary-heading">There's a problem</h3>
+  <p>Check your information. You must:</p>
   <ul class="error-summary-list">
-    {{^fullName}}<li><a href='#full-name'>Enter your full name</a></li>{{/fullName}}
-    {{^niNo}}<li><a href='#ni-number'>Enter your National Insurance number</a></li>{{/niNo}}
+    {{^fullName}}<li><a href='#full-name'>enter your full name</a></li>{{/fullName}}
+    {{^niNo}}<li><a href='#ni-number'>enter your National Insurance number</a></li>{{/niNo}}
   </ul>
 </div>
 {{/error}}
