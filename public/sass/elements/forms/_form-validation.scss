@@ -12,8 +12,7 @@ $error-colour: #b10e1e;
   margin-right: 15px;
 
   // Form labels should be red and bold
-  .form-label,
-  .form-label-bold,
+  .error-label,
   .error-message {
     color: $error-colour;
     font-weight: bold;
@@ -53,6 +52,23 @@ legend .error-message {
   padding-bottom: 10px;
   @include media(tablet) {
     padding-bottom: 15px;
+  }
+}
+
+// Duplicate error messages for longer forms
+.error-message-repeat {
+  color: $error-colour !important;
+  font-weight: bold;
+  display: block;
+  clear: both;
+  text-decoration: none;
+  padding-top: 10px;
+  @include media(tablet) {
+    padding-top: 15px;
+  }
+  margin-bottom: 0;
+  &:hover {
+    text-decoration: underline;
   }
 }
 
@@ -98,5 +114,13 @@ legend .error-message {
       text-decoration: underline;
     }
   }
+}
 
+// Show additional messages when JS is enabled
+.js-error {
+  display: none;
+}
+
+.js-enabled .js-error {
+  display: block;
 }
