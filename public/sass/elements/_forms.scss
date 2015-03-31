@@ -70,6 +70,7 @@ fieldset {
   float: left;
   width: 100%;
   @extend %contain-floats;
+  margin: 10px 0 0 0;
 }
 
 
