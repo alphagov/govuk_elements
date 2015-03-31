@@ -19,7 +19,7 @@
 
   <a href="/" class="example-back-link">Back to GOV.UK elements</a>
 
-  <h1 class="heading-large">Error example</h1>
+  <h1 class="heading-large">Example: one question per page</h1>
 
   <form method="post" action="/examples/form-validation-single-question">
     {{> form_error_single_question }}
@@ -28,14 +28,15 @@
   <h2 class="heading-medium">When an error occurs:</h2>
   <ul class="list-bullet">
     <li>add a 5px red left border to the field with the error</li>
-    <li>the <code>label</code> should be red and bold</li>
-    <li>the error message be red and bold and appear above the field</li>
-    <li>the error message should sit inside the <code>&lt;label&gt;</code></li>
-    <li>keyboard focus should be moved to the input</li>
-    <li>consider using <code>aria-invalid</code> attribute to programmatically indicate that a field has an error</li>
-    <li>the value of the <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-invalid">aria-invalid attribute</a> will vary depending on the type of error</a></li>
+    <li>the <code>&lt;label&gt;</code> must be red and bold</li>
+    <li>the error message must be red and bold and appear above the field</li>
+    <li>the error message must sit inside the <code>&lt;label&gt;</code></li>
+    <li>keyboard focus must be moved to the input</li>
   </ul>
-  </ul>
+  
+  <p class="text">
+    Also consider using the <code>aria-invalid</code> attribute to programmatically indicate that a field has an error. The value of the <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-invalid">aria-invalid attribute</a> will vary depending on the type of error.
+  </p>
 
 </main>
 {{/content}}
