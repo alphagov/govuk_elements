@@ -5,8 +5,8 @@
 <div class="form-group {{#error}}error{{/error}}">
   <fieldset class="inline">
     <legend class="form-label-bold">
+      {{#error}}<span class="error-message">Please select if you are 19 or over</span>{{/error}}
       Are you 19 or over?
-      {{#error}}<span class="error-message">Please answer the question</span>{{/error}}
     </legend>
     <label class="block-label" for="age-yes">
       <input id="age-yes" name="age19YearsOrOver" value="true" type="radio">
