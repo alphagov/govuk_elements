@@ -1,20 +1,31 @@
-<h1 class="heading-medium">
-  These questions will help you choose a certified company
-</h1>
-
 <div class="form-group {{#error}}error{{/error}}">
-  <fieldset class="inline">
-    <legend class="form-label-bold">
-      {{#error}}<span class="error-message">Please select if you are 19 or over</span>{{/error}}
-      Are you 19 or over?
+  <fieldset>
+    <legend class="heading-large {{#error}}error-label{{/error}}">
+      {{#error}}<span class="error-message">Please choose where you live</span>{{/error}}
+      Where do you live?
     </legend>
-    <label class="block-label" for="age-yes">
-      <input id="age-yes" name="age19YearsOrOver" value="true" type="radio">
-        <span></span>Yes
+    <label class="block-label" for="country_residence_england">
+      <input id="country_residence_england" name="country" value="England" type="radio">
+      <span></span> England
     </label>
-    <label class="block-label" for="age-no">
-      <input id="age-no" name="age19YearsOrOver" value="false" type="radio">
-        <span></span>No
+    <label class="block-label" for="">
+      <input id="country_residence_scotland" name="country" value="Scotland" type="radio">
+      <span></span> Scotland
+    </label>
+    <label class="block-label" for="country_residence_wales">
+      <input id="country_residence_wales" name="country" value="Wales" type="radio">
+        <span></span> Wales
+    </label>
+    <label class="block-label" for="country_residence_northern_ireland">
+      <input id="country_residence_northern_ireland" name="country" value="Northern Ireland" type="radio">
+      <span></span> Northern Ireland
+    </label>
+    <p class="form-block">
+      or
+    </p>
+    <label class="block-label text" for="country_residence_abroad">
+      <input id="country_residence_abroad" name="country" value="Abroad" type="radio">
+      <span></span> British citizen living in another country (including the Channel Islands or Isle of Man)
     </label>
   </fieldset>
 </div>

@@ -46,14 +46,14 @@ module.exports = {
     });
 
     app.post('/examples/form-validation-single-question-radio', function (req, res) {
-      var age = req.body.age19YearsOrOver;
+      var country = req.body.country;
       var error = false;
-      if (!age) {
+      if (!country) {
         error = true;
       } else {
         error = false;
       }
-      res.render('examples/form-validation-single-question-radio', {'assetPath' : assetPath, 'age': age, 'error': error});
+      res.render('examples/form-validation-single-question-radio', {'assetPath' : assetPath, 'country': country, 'error': error});
     });
 
     app.get('/examples/form-validation-multiple-questions', function (req, res) {

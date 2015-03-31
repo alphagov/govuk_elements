@@ -18,24 +18,29 @@
 <main class="error-example" id="content" role="main">
 
   <a href="/" class="example-back-link">Back to GOV.UK elements</a>
-
-  <h1 class="heading-large">Error example</h1>
-
+  
   <form method="post" action="/examples/form-validation-single-question-radio">
     {{> form_error_single_question_radio }}
   </form>
-
-  <h2 class="heading-medium">When an error occurs</h2>
+  
+  <h2 class="heading-medium">Server-side validation</h2>
+  <h3 class="heading-small">When an error occurs</h3>
   <ul class="list-bullet">
-    <li>the <code>&lt;label&gt;</code> should be red and bold</li>
+    <li>the <code>&lt;label&gt;</code> must be red and bold</li>
     <li>add a 5px red left border to the field with the error</li>
-    <li>the error message be red and bold and appear above the field</li>
+    <li>the error message be red and bold and appear above the question</li>
     <li>the error message must sit inside the <code>&lt;legend&gt;</code></li>
-    <li>keyboard focus must be moved to the first radio button</li>
+    <li>keyboard focus must be moved to the first radio button in the fieldset</li>
   </ul>
   <p class="text">
     Also consider using the <code>aria-invalid</code> attribute to programmatically indicate that a field has an error. The value of the <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-invalid">aria-invalid attribute</a> will vary depending on the type of error.
   </p>
+  
+  <h2 class="heading-medium">Additional client-side validation</h2>
+  <p class="text">
+    For longer sets of questions, if the page isn't refreshed - consider adding a duplicate error message, which sits above the continue button.
+  </p>
+
 </main>
 {{/content}}
 
