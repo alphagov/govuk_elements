@@ -974,93 +974,102 @@
   <div id="guide-errors">
 
     <h2 class="heading-large heading-with-border">8. Errors and validation</h2>
-    <p class="text">
-      Form validation should identify all errors, ensuring error copy is specific to the question.
-    </p>
+    <div class="text">
+      <p>
+         Form validation must identify all errors. 
+      </p>
+      <h3 class="heading-medium">If the page has just one question, and that question has an error</h3>
+      <p class="lead-in">
+        You must:
+      </p>
+      <ul class="list-bullet">
+        <li>write a message that helps the user to understand why the error occurred and what to do about it</li>
+        <li>put the message in the <code>&lt;label&gt;</code> for the question, before the question text, in red</li>
+        <li>use a red border to visually connect the message and the question it belongs to</li>
+        <li>apply the same colour to the area of the form where an error has occurred</li>
+      </ul>
+    </div>
 
-    <h3 class="heading-medium" id="error-messages">Error messages</h3>
-    <ul class="list-bullet text">
-      <li>use a red border on the box to visually connect the errors and messages in the form</li>
-      <li>apply the same colour to the area of the form where an error has occurred</li>
-      <li>errors should not cause pre-filled fields to clear</li>
-    </ul>
-
-    <!-- <div class="example example-error">
-
+    <!-- Single question example -->
+    <div class="example example-error">
       <div class="form-group error">
-        <label class="form-label-bold" for="ni-no">
+        <label class="form-label-bold" for="error-example-ni-number">
+          <span class="error-message">Error message goes here</span>
+          
           What is your National Insurance number?
           <span class="form-hint">
             It's on your National Insurance card, benefit letter, payslip or P60.
             <br>
             For example, 'VO 12 34 56 D'.
           </span>
-          <span class="error-message">Enter your National Insurance number</span>
+          
         </label>
-        <input type="text" class="form-control" id="ni-no">
+        <input type="text" class="form-control" id="error-example-ni-number" name="niNumber" value="">
       </div>
       <input class="button" type="submit" value="Continue">
-
-    </div> -->
-
-    <!-- <div class="example example-error">
-
-      <div class="form-group error">
-        <fieldset class="inline">
-          <legend class="form-label-bold">
-            Are you 19 or over?
-            <span class="error-message">Please answer the question</span>
-          </legend>
-          <label class="block-label" for="age-yes">
-            <input id="age-yes" name="age19YearsOrOver" value="true" type="radio">
-              <span></span>Yes
-          </label>
-          <label class="block-label" for="age-no">
-            <input id="age-no" name="age19YearsOrOver" value="false" type="radio">
-              <span></span>No
-          </label>
-        </fieldset>
-      </div>
-      <input class="button" type="submit" value="Continue">
-
-    </div> -->
-
-    <h3 class="heading-medium">Error summary</h3>
+    </div>
+    
     <p class="text">
-      An error summary is recommended if your form has more than one question per page. This summary should contain a heading - indicating there are errors and also a list of all the errors, each of which is a link to the corresponding field.
-    </p>
-    <p class="text">
-      The error summary should appear at the top of the page, so it is visible when the page is refreshed and is immediately read out by assistive technology.
+    Use the <code>$error-colour</code> Sass variable &ndash; find this in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss">colours.scss</a> file
     </p>
 
-    <!-- <div class="example example-error">
+    <!-- Single question radio example -->
+    
+    <div class="text">
+      <h3 class="heading-medium">If the page has more than one question, and one question has an error</h3>
+      <p class="lead-in">You need both:</p>
+      <ul class="list-bullet">
+        <li>an error message for the problematic question, as described above</li>
+        <li>an error summary</li>
+      </ul>
 
-      <div class="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1" style="">
-        <h3 class="heading-medium error-summary-heading" id="error-summary-heading">There's a problem</h3>
-        <p>Check your information. You must:</p>
+      <h4 class="heading-small panel-indent">
+        The error summary must appear at the top of the page, so it is visible when the page is refreshed and is immediately read out by assistive technology.
+      </h4>
+      
+      <p class="lead-in">The error summary must include:</p>
+      <ul class="list-bullet">
+        <li>a heading to alert the user to the error</li>
+        <li>a list of all the errors, each of which is a link to the corresponding question</li>
+      </ul>
+    
+      <h3 class="heading-medium">If the page has more than one question, and more than one question has an error</h3>
+      <p class="lead-in">You need to add to the error summary:</p>
+      <ul class="list-bullet">
+        <li>a message to alert the user to all the errors</li>
+        <li>a link to each of the problematic questions</li>
+      </ul>
+    </div>
+
+    <!-- Multiple questions and summary example -->
+    <div class="example example-error">
+      
+      <div class="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1">
+        <h3 class="heading-medium error-summary-heading" id="error-summary-heading">
+          Message to alert the user to a problem goes here
+        </h3>
         <ul class="error-summary-list">
-          <li><a href="#full-name">enter your full name</a></li>
-          <li><a href="#ni-number">enter your National Insurance number</a></li>
+          <li><a href="#full-name">A link to a question with a problem</a></li>
+          <li><a href="#ni-number">A link to the second question with a problem</a></li>
         </ul>
       </div>
-
+      
       <h1 class="form-title heading-large">
         Your details
       </h1>
 
       <div class="form-group error">
         <label class="form-label-bold" for="full-name">
+          <span class="error-message" id="error-full-name">Error message for first question goes here</span>
           Full name
           <span class="form-hint">As shown on your birth certificate or passport</span>
         </label>
-        <p class="error-message" id="error-full-name">
-          Enter your full name
-        </p>
-        <input type="text" class="form-control" id="full-name" aria-describedby="error-full-name">
+        <input type="text" class="form-control" id="full-name" name="fullName" value="" aria-describedby="error-full-name">
       </div>
 
       <div class="form-group error">
-        <label class="form-label-bold" for="ni-no-example">
+        <label class="form-label-bold" for="error-example-ni-number-2">
+          <span class="error-message" id="error-ni-number">Error message for second question goes here</span>
           National Insurance number
           <span class="form-hint">
             It's on your National Insurance card, benefit letter, payslip or P60.
@@ -1068,34 +1077,32 @@
             For example, 'VO 12 34 56 D'.
           </span>
         </label>
-        <p class="error-message" id="error-ni-no-example">
-          Enter your National Insurance number
-        </p>
-        <input type="text" class="form-control" id="ni-no-example" aria-describedby="error-ni-no-example">
+        <input type="text" class="form-control" id="error-example-ni-number-2" name="niNo" value="" aria-describedby="error-ni-number">
       </div>
 
       <input class="button" type="submit" value="Continue">
-
-    </div> -->
-
-    <h3 class="heading-medium" id="error-message-examples">Error message examples</h3>
+    </div>
+    
+    <!--
+    <h3 class="heading-medium" id="error-message-examples">Examples</h3>
     <ul class="list-bullet text">
       <li>
         <a href="{{ site.baseurl}}/examples/form-validation-single-question">
-          An example form with a single text input
+          Example with one question, a single text input
         </a>
       </li>
       <li>
         <a href="{{ site.baseurl}}/examples/form-validation-single-question-radio">
-          An example form with a radio button
+          Example with one question, a group of radio buttons
         </a>
       </li>
       <li>
         <a href="{{ site.baseurl}}/examples/form-validation-multiple-questions">
-          An example form with an error summary at the top of the page
+          Example with multiple questions, with an error summary at the top of the page
         </a>
       </li>
     </ul>
+    -->
 
     <p>
       <a href="https://designpatterns.hackpad.com/Error-messaging-and-validation-HiGXPZ7XiG0" rel="external">Discuss errors on our Hackpad</a>
