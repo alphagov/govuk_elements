@@ -27,7 +27,6 @@ $error-colour: #b10e1e;
 
 .error,
 .error-summary {
-
   // Add a red border to the left of the field
   border-left: 5px solid $error-colour;
   padding-left: 10px;
@@ -42,6 +41,7 @@ $error-colour: #b10e1e;
   // Add spacing below error message
   display: block;
   clear: both;
+  margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 5px;
 }
@@ -49,10 +49,10 @@ $error-colour: #b10e1e;
 label .error-message,
 legend .error-message {
 
-  // Add spacing above error message
-  padding-top: 5px;
+  // Add spacing below error message
+  padding-bottom: 10px;
   @include media(tablet) {
-    padding-top: 10px;
+    padding-bottom: 15px;
   }
 }
 
@@ -86,6 +86,7 @@ legend .error-message {
   }
 
   .error-summary-list {
+    padding-left: 0;
     li {
       @include media(tablet) {
         margin-bottom: 5px;
