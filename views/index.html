@@ -975,9 +975,6 @@
 
     <h2 class="heading-large heading-with-border">8. Errors and validation</h2>
     <div class="text">
-      <p>
-         Form validation must identify all errors. 
-      </p>
       <h3 class="heading-medium">If the page has one question with an error</h3>
       <p class="lead-in">
         You must:
@@ -1010,14 +1007,14 @@
     </div>
     
     <p class="text">
-    Use the <code>$error-colour</code> Sass variable &ndash; find this in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss">colours.scss</a> file
+      For red, use the <code>$error-colour</code> Sass variable &ndash; find this in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss">colours.scss</a> file
     </p>
 
     <!-- Single question radio example -->
     
     <div class="text">
-      <h3 class="heading-medium">If the page has more than one question with errors</h3>
-      <p class="lead-in">You need to:</p>
+      <h3 class="heading-medium">If the page has more than one question</h3>
+      <p class="lead-in">You must:</p>
       <ul class="list-bullet">
         <li>show an error summary at the top of the page</li>
         <li>include a heading to alert the user to the error</li>
@@ -1068,6 +1065,13 @@
       </div>
 
       <input class="button" type="submit" value="Continue">
+    </div>
+
+    <div class="text">
+      <h3 class="heading-medium">If the page has more than one error</h3>
+      <p>
+        If users are making more than one error on a page, this is a strong indication that your page has too many questions. Iterate the page to make it simpler. 
+      </p>
     </div>
 
     <!--
