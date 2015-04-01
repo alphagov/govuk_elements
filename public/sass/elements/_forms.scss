@@ -54,7 +54,7 @@ fieldset {
 
 .form-label {
   @include core-19;
-  margin-bottom: 5px;
+  // margin-bottom: 5px;
 }
 
 .form-label-bold {
@@ -70,7 +70,10 @@ fieldset {
   float: left;
   width: 100%;
   @extend %contain-floats;
-  margin: 10px 0 0 0;
+  margin-bottom: 5px;
+  @include media(tablet) {
+    margin-top: 10px;
+  }
 }
 
 
@@ -80,6 +83,7 @@ fieldset {
 .form-hint {
   display: block;
   color: $secondary-text-colour;
+  font-weight: normal;
   margin-bottom: 5px;
   @include media (tablet) {
     margin-top: 8px;
