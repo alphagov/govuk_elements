@@ -72,6 +72,7 @@ function ShowHideContent() {
 
     });
   }
+
   self.showHideCheckboxToggledContent = function () {
 
     $(".block-label input[type='checkbox']").each(function() {
@@ -154,7 +155,9 @@ $(document).ready(function() {
   toggleContent.showHideRadioToggledContent();
   toggleContent.showHideCheckboxToggledContent();
 
-  var focusContent = new setFocus();
-  focusContent.exampleSetFocus();
-
+  // $(window).load(function() { 
+  //   var focusContent = new setFocus();
+  //   focusContent.exampleSetFocus();
+  // });
+  
 });
