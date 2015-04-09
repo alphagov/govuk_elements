@@ -54,15 +54,14 @@ fieldset {
 
 .form-label {
   @include core-19;
-  // margin-bottom: 5px;
 }
 
 .form-label-bold {
-  @include bold-24;
-  margin-bottom: 0;
-  .form-hint {
-    @include core-19;
-  }
+  @include bold-19;
+}
+
+.form-hint {
+  @include core-19;
 }
 
 // Used for paragraphs in-between form elements
@@ -85,9 +84,6 @@ fieldset {
   color: $secondary-text-colour;
   font-weight: normal;
   margin-bottom: 5px;
-  @include media (tablet) {
-    margin-top: 8px;
-  }
 }
 
 
