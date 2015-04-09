@@ -1,9 +1,11 @@
 <div class="form-group {{#error}}error{{/error}}">
   <fieldset>
-    <legend class="heading-large {{#error}}error-label{{/error}}">
-      {{#error}}<span class="error-message">Please choose where you live</span>{{/error}}
+    
+    <legend class="heading-large">
+      {{#error}}<span class="error-message" aria-hidden="true">Error message goes here</span>{{/error}}
       Where do you live?
     </legend>
+    
     <label class="block-label" for="country_residence_england">
       <input id="country_residence_england" name="country" value="England" type="radio">
       <span></span> England
@@ -27,6 +29,9 @@
       <input id="country_residence_abroad" name="country" value="Abroad" type="radio">
       <span></span> British citizen living in another country (including the Channel Islands or Isle of Man)
     </label>
+    
+    {{#error}}<span class="error-message visuallyhidden">Error message goes here</span>{{/error}}
+
   </fieldset>
 </div>
 
