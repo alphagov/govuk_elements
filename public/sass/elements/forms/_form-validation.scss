@@ -11,8 +11,7 @@ $error-colour: #b10e1e;
   // @include box-sizing(border-box);
   margin-right: 15px;
 
-  // Form labels should be red and bold
-  .error-label,
+  // Error messages should be red and bold
   .error-message {
     color: $error-colour;
     font-weight: bold;
