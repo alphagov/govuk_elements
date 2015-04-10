@@ -1,0 +1,22 @@
+<div class="form-group {{#error}}error{{/error}}">
+
+  <label class="form-label-bold" for="ni-number">
+    
+    {{#error}}<span class="error-message" aria-hidden="true">Error message goes here</span>{{/error}}
+    
+    What is your National Insurance number?
+    <span class="form-hint">
+      It's on your National Insurance card, benefit letter, payslip or P60.
+      <br>
+      For example, 'VO 12 34 56 D'.
+    </span>
+    
+    <input type="text" class="form-control" id="ni-number" name="niNumber" value="{{niNumber}}">
+
+    {{#error}}<span class="error-message visuallyhidden">Error message goes here</span>{{/error}}
+
+  </label>
+
+</div>
+
+<input class="button" type="submit" value="Continue">
