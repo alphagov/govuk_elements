@@ -29,6 +29,7 @@
 .example-back-link {
   @include inline-block;
   margin-top: $gutter;
+  margin-bottom: $gutter*2;
 }
 
 // Hide, but not for screenreaders

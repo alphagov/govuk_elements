@@ -12,6 +12,7 @@ fieldset {
 
 // Form group is used to wrap label and input pairs
 .form-group {
+  @include box-sizing(border-box);
   float: left;
   width: 100%;
   @extend %contain-floats;
@@ -53,15 +54,14 @@ fieldset {
 
 .form-label {
   @include core-19;
-  margin-bottom: 5px;
 }
 
 .form-label-bold {
-  @include bold-24;
-  margin-bottom: 0;
-  .form-hint {
-    @include core-19;
-  }
+  @include bold-19;
+}
+
+.form-hint {
+  @include core-19;
 }
 
 // Used for paragraphs in-between form elements
@@ -69,6 +69,10 @@ fieldset {
   float: left;
   width: 100%;
   @extend %contain-floats;
+  margin-bottom: 5px;
+  @include media(tablet) {
+    margin-top: 10px;
+  }
 }
 
 
@@ -78,10 +82,8 @@ fieldset {
 .form-hint {
   display: block;
   color: $secondary-text-colour;
+  font-weight: normal;
   margin-bottom: 5px;
-  @include media (tablet) {
-    margin-top: 8px;
-  }
 }
 
 
@@ -151,13 +153,6 @@ fieldset {
 .form-checkbox input {
   vertical-align: middle;
   margin: -2px 5px 0 0;
-}
-
-// Buttons
-.form .button {
-  @include media(mobile) {
-    width: 100%;
-  }
 }
 
 

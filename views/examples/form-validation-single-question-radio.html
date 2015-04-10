@@ -1,0 +1,44 @@
+{{<govuk_template}}
+
+{{$cookieMessage}}
+  {{>cookie_message}}
+{{/cookieMessage}}
+
+{{$head}}
+  {{>head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main class="js-error-example" id="content" role="main">
+
+  <a href="/" class="example-back-link">Back to GOV.UK elements</a>
+  
+  <form method="post" action="/examples/form-validation-single-question-radio">
+    {{> form_error_single_question_radio }}
+  </form>
+  
+  <h2 class="heading-small">When an error occurs:</h2>
+  <ul class="list-bullet">
+    <li>add a 5px red left border to the field with the error</li>
+    <li>the error message be red and bold and appear above the question</li>
+    <li>the error message must sit inside the <code>&lt;legend&gt;</code></li>
+    <li>keyboard focus must be moved to the first radio button in the fieldset</li>
+  </ul>
+  <p class="text">
+    Also consider using the <code>aria-invalid</code> attribute to programmatically indicate that a field has an error. The value of the <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-invalid">aria-invalid attribute</a> will vary depending on the type of error.
+  </p>
+  
+</main>
+{{/content}}
+
+{{$bodyEnd}}
+  {{>scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

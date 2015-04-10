@@ -307,12 +307,39 @@
 </pre>
 
 <!-- 8. Errors and validation -->
-<!-- TODO :
+
 <h2 class="heading-medium" id="guide-errors">8. Errors and validation</h2>
 
-<pre><code class="language-markup">
-</code></pre>
--->
+<h3 class="heading-medium" id="error-form-single">One question per page</h3>
+
+<div class="example">
+  {{> form_error_single_question }}
+</div>
+<pre>
+<code class="language-markup">
+  {{> form_error_single_question }}
+</code>
+</pre>
+
+<div class="example">
+  {{> form_error_single_question_radio }}
+</div>
+<pre>
+<code class="language-markup">
+ {{> form_error_single_question_radio }}
+</code>
+</pre>
+
+<h3 class="heading-medium" id="error-form-multiple">Multiple questions per page</h3>
+
+<div class="example">
+  {{> form_error_multiple_questions }}
+</div>
+<pre>
+<code class="language-markup">
+  {{> form_error_multiple_questions }}
+</code>
+</pre>
 
 <!-- 9. Alpha beta banners -->
 
