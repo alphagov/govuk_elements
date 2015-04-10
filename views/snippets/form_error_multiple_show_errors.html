@@ -1,0 +1,42 @@
+<div class="error-summary" role="group" tabindex="-1" aria-labelledby="error-summary-heading">
+  <h3 class="heading-medium error-summary-heading" id="error-summary-heading">
+    Message to alert the user to a problem goes here
+  </h3>
+  <p>
+    Description of the errors and how to correct them
+  </p>
+  <ul class="error-summary-list">
+    <li><a href='#full-name'>Error message goes here</a></li>
+    <li><a href='#ni-number'>Error message goes here</a></li>
+  </ul>
+</div>
+
+<h1 class="heading-large form-title">
+  Your details
+</h1>
+
+<div class="form-group error">
+  <label class="form-label-bold" for="full-name">
+    <span class="error-message" id="error-full-name" aria-hidden="true">Error message goes here</span>
+    Full name
+    <span class="form-hint">As shown on your birth certificate or passport</span>
+    <span class="error-message visuallyhidden">Error message goes here</span>
+  </label>
+  <input type="text" class="form-control" id="full-name" name="fullName" value="" aria-describedby="error-full-name">
+</div>
+
+<div class="form-group error">
+  <label class="form-label-bold" for="ni-number">
+    <span class="error-message" id="error-ni-number" aria-hidden="true">Error message goes here</span>
+    National Insurance number
+    <span class="form-hint">
+      It's on your National Insurance card, benefit letter, payslip or P60.
+      <br>
+      For example, 'VO 12 34 56 D'.
+    </span>
+    <span class="error-message visuallyhidden">Error message goes here</span>
+  </label>
+  <input type="text" class="form-control" id="ni-number" name="niNo" value="" aria-describedby="error-ni-number">
+</div>
+
+<input class="button" type="submit" value="Continue">
