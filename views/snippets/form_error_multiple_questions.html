@@ -20,22 +20,24 @@
 
 <div class="form-group {{#error}}{{^fullName}}error{{/fullName}}{{/error}}">
   <label class="form-label-bold" for="full-name">
-    {{#error}}{{^fullName}}<span class="error-message" id="error-full-name">Error message goes here</span>{{/fullName}}{{/error}}
+    {{#error}}{{^fullName}}<span class="error-message" id="error-full-name" aria-hidden="true">Error message goes here</span>{{/fullName}}{{/error}}
     Full name
     <span class="form-hint">As shown on your birth certificate or passport</span>
+    {{#error}}{{^fullName}}<span class="error-message visuallyhidden">Error message goes here</span>{{/fullName}}{{/error}}
   </label>
   <input type="text" class="form-control" id="full-name" name="fullName" value="{{fullName}}" {{#error}}{{^fullName}}aria-describedby="error-full-name"{{/fullName}}{{/error}}>
 </div>
 
 <div class="form-group {{#error}}{{^niNo}}error{{/niNo}}{{/error}}">
   <label class="form-label-bold" for="ni-number">
-    {{#error}}{{^niNo}}<span class="error-message" id="error-ni-number">Error message goes here</span>{{/niNo}}{{/error}}
+    {{#error}}{{^niNo}}<span class="error-message" id="error-ni-number" aria-hidden="true">Error message goes here</span>{{/niNo}}{{/error}}
     National Insurance number
     <span class="form-hint">
       It's on your National Insurance card, benefit letter, payslip or P60.
       <br>
       For example, 'VO 12 34 56 D'.
     </span>
+    {{#error}}{{^niNo}}<span class="error-message visuallyhidden">Error message goes here</span>{{/niNo}}{{/error}}
   </label>
   <input type="text" class="form-control" id="ni-number" name="niNo" value="{{niNo}}" {{#error}}{{^niNo}}aria-describedby="error-ni-number"{{/niNo}}{{/error}}>
 </div>
