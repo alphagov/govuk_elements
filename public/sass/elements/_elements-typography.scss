@@ -17,18 +17,23 @@ main {
 .font-xxlarge {
   @include core-80;
 }
+
 .font-xlarge {
   @include core-48;
 }
+
 .font-large {
   @include core-36;
 }
+
 .font-medium {
   @include core-24;
 }
+
 .font-small {
   @include core-19;
 }
+
 .font-xsmall {
   @include core-16;
 }
@@ -37,18 +42,23 @@ main {
 .bold-xxlarge {
   @include bold-80();
 }
+
 .bold-xlarge {
   @include bold-48();
 }
+
 .bold-large {
   @include bold-36();
 }
+
 .bold-medium {
   @include bold-24();
 }
+
 .bold-small {
   @include bold-19();
 }
+
 .bold-xsmall {
   @include bold-16();
 }
@@ -85,7 +95,7 @@ main {
   margin-bottom: em(10, 24);
 
   @include media(tablet) {
-    margin-top: em(45, 36 );
+    margin-top: em(45, 36);
     margin-bottom: em(20, 36);
   }
 
@@ -125,7 +135,7 @@ main {
 
 // Text
 p {
-  margin-top: em(5, 16 );
+  margin-top: em(5, 16);
   margin-bottom: em(20, 16);
 
   @include media(tablet) {
@@ -155,12 +165,15 @@ p {
   color: $link-colour;
   text-decoration: underline;
 }
+
 .link:visited {
   color: $link-visited-colour;
 }
+
 .link:hover {
   color: $link-hover-colour;
 }
+
 .link:active {
   color: $link-colour;
 }
