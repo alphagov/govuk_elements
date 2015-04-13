@@ -6,16 +6,17 @@
 
 // Fieldset is used to group more than one .form-group
 fieldset {
-  width: 100%;
   @extend %contain-floats;
+  width: 100%;
 }
 
 // Form group is used to wrap label and input pairs
 .form-group {
+  @extend %contain-floats;
   float: left;
   width: 100%;
-  @extend %contain-floats;
   margin-bottom: $gutter-half;
+
   @include media(tablet) {
     margin-bottom: $gutter;
   }
@@ -23,6 +24,7 @@ fieldset {
 
 .form-group-related {
   margin-bottom: 10px;
+
   @include media(tablet) {
     margin-bottom: 20px;
   }
@@ -36,6 +38,7 @@ fieldset {
 // Form title
 .form-title {
   margin-bottom: $gutter;
+
   @include media(tablet) {
     margin-bottom: ($gutter*1.5);
   }
@@ -59,6 +62,7 @@ fieldset {
 .form-label-bold {
   @include bold-24;
   margin-bottom: 0;
+
   .form-hint {
     @include core-19;
   }
@@ -66,9 +70,9 @@ fieldset {
 
 // Used for paragraphs in-between form elements
 .form-block {
+  @extend %contain-floats;
   float: left;
   width: 100%;
-  @extend %contain-floats;
 }
 
 
@@ -79,21 +83,21 @@ fieldset {
   display: block;
   color: $secondary-text-colour;
   margin-bottom: 5px;
+
   @include media (tablet) {
     margin-top: 8px;
   }
 }
-
 
 // Form controls
 
 // By default, form controls are 50% width for desktop,
 // and 100% width for mobile
 .form-control {
-  @include core-19;
-
-  width: 100%;
   @include box-sizing(border-box);
+  @include core-19;
+  width: 100%;
+  
   padding: 4px;
   background-color: $white;
   border: 1px solid $border-colour;
@@ -111,6 +115,7 @@ fieldset {
 // Form control widths
 .form-control-3-4 {
   width: 100%;
+
   @include media(tablet) {
     width: 75%;
   }
@@ -118,6 +123,7 @@ fieldset {
 
 .form-control-1-2 {
   width: 100%;
+
   @include media(tablet) {
     width: 50%;
   }
@@ -136,10 +142,11 @@ fieldset {
 .form-radio {
   display: block;
   margin: 10px 0;
-}
-.form-radio input {
-  vertical-align: middle;
-  margin: -4px 5px 0 0;
+
+  input {
+    vertical-align: middle;
+    margin: -4px 5px 0 0;
+  }
 }
 
 
@@ -147,11 +154,13 @@ fieldset {
 .form-checkbox {
   display: block;
   margin: $gutter-half 0;
+  
+  input {
+    vertical-align: middle;
+    margin: -2px 5px 0 0;
+  }
 }
-.form-checkbox input {
-  vertical-align: middle;
-  margin: -2px 5px 0 0;
-}
+
 
 // Buttons
 .form .button {
