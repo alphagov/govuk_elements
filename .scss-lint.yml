@@ -5,5 +5,7 @@ linters:
     enabled: false
   PropertySortOrder:
     enabled: false
+  IdSelector:
+    enabled: false
 exclude: public/sass/elements/_reset.scss
   
