@@ -7,5 +7,7 @@ linters:
     enabled: false
   IdSelector:
     enabled: false
+  QualifyingElement:
+    enabled: false
 exclude: public/sass/elements/_reset.scss
   
