@@ -1,0 +1,7 @@
+linters:
+  StringQuotes:
+    enabled: false
+  Shorthand:
+    enabled: false
+  PropertySortOrder:
+    enabled: false
