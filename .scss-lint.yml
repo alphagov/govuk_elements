@@ -9,5 +9,7 @@ linters:
     enabled: false
   QualifyingElement:
     enabled: false
+  ImportantRule:
+    enabled: false
 exclude: public/sass/elements/_reset.scss
   
