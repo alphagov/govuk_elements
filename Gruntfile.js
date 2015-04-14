@@ -119,6 +119,7 @@ module.exports = function (grunt) {
         bundleExec: false,
         colorizeOutput: true,
         config: '.scss-lint.yml',
+        force: true,
         reporterOutput: null
       },
     }
