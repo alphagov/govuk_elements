@@ -1,4 +1,4 @@
-module.exports = function(grunt){
+module.exports = function (grunt) {
 
   grunt.initConfig({
 
@@ -101,18 +101,19 @@ module.exports = function(grunt){
     },
 
     concurrent: {
-        target: {
-            tasks: ['watch', 'nodemon'],
-            options: {
-                logConcurrentOutput: true
-            }
+      target: {
+        tasks: ['watch', 'nodemon'],
+        options: {
+          logConcurrentOutput: true
         }
+      }
     },
 
     // Lint scss files
     scsslint: {
       allFiles: [
         'public/sass/elements/*.scss',
+        'public/sass/elements/forms/*.scss'
       ],
       options: {
         bundleExec: false,
