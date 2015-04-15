@@ -58,7 +58,7 @@
 
 // Add focus to block labels
 .js-enabled label.focused {
-  outline: 3px solid $yellow;
+  outline: 3px solid $focus-colour;
 }
 
 // Remove focus from radio/checkboxes
