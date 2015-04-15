@@ -1,4 +1,4 @@
-module.exports = function(grunt){
+module.exports = function (grunt) {
 
   grunt.initConfig({
 
@@ -101,13 +101,29 @@ module.exports = function(grunt){
     },
 
     concurrent: {
-        target: {
-            tasks: ['watch', 'nodemon'],
-            options: {
-                logConcurrentOutput: true
-            }
+      target: {
+        tasks: ['watch', 'nodemon'],
+        options: {
+          logConcurrentOutput: true
         }
+      }
+    },
+
+    // Lint scss files
+    scsslint: {
+      allFiles: [
+        'public/sass/elements/*.scss',
+        'public/sass/elements/forms/*.scss'
+      ],
+      options: {
+        bundleExec: false,
+        colorizeOutput: true,
+        config: '.scss-lint.yml',
+        force: true,
+        reporterOutput: null
+      },
     }
+
   });
 
   [
@@ -116,7 +132,8 @@ module.exports = function(grunt){
     'grunt-sass',
     'grunt-nodemon',
     'grunt-text-replace',
-    'grunt-concurrent'
+    'grunt-concurrent',
+    'grunt-scss-lint'
   ].forEach(function (task) {
     grunt.loadNpmTasks(task);
   });
@@ -141,6 +158,7 @@ module.exports = function(grunt){
     'copy:govuk_frontend_toolkit_img',
     'replace',
     'sass',
+    'scsslint',
     'concurrent:target'
   ]);
 

@@ -1,0 +1,15 @@
+linters:
+  StringQuotes:
+    enabled: false
+  Shorthand:
+    enabled: false
+  PropertySortOrder:
+    enabled: false
+  IdSelector:
+    enabled: false
+  QualifyingElement:
+    enabled: false
+  ImportantRule:
+    enabled: false
+exclude: public/sass/elements/_reset.scss
+  
