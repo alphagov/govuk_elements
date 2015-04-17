@@ -63,16 +63,13 @@ fieldset {
   @include bold-19;
 }
 
-.form-hint {
-  @include core-19;
-}
-
 // Used for paragraphs in-between form elements
 .form-block {
   @extend %contain-floats;
   float: left;
   width: 100%;
   margin-bottom: 5px;
+
   @include media(tablet) {
     margin-top: 10px;
   }
@@ -83,6 +80,7 @@ fieldset {
 
 // Form hints & examples are light grey and sit above a form control
 .form-hint {
+  @include core-19;
   display: block;
   color: $secondary-text-colour;
   font-weight: normal;

@@ -26,9 +26,12 @@ $error-colour: #b10e1e;
 
 .error,
 .error-summary {
+
   // Add a red border to the left of the field
   border-left: 5px solid $error-colour;
+
   padding-left: 10px;
+
   @include media(tablet) {
     padding-left: $gutter-half;
   }
@@ -39,10 +42,13 @@ $error-colour: #b10e1e;
 
   display: block;
   clear: both;
+
   margin-top: 0;
   margin-bottom: 0;
+
   // Add spacing below error message
   padding-bottom: 10px;
+
   @include media(tablet) {
     padding-bottom: 15px;
   }
@@ -50,22 +56,25 @@ $error-colour: #b10e1e;
 
 // Summary of multiple error messages
 .error-summary {
-
-  // Use the GOV.UK outline focus style
-  &:focus {
-    outline: 3px solid $yellow;
-  }
-
+  
   // Error summary has a border on all sides
   border: 5px solid $error-colour;
 
   margin-top: $gutter-half;
   margin-bottom: $gutter-half;
+
   padding: 10px;
-  @include media (tablet) {
+
+  @include media(tablet) {
     margin-top: $gutter;
     margin-bottom: $gutter;
+    
     padding: $gutter-half;
+  }
+  
+  // Use the GOV.UK outline focus style
+  &:focus {
+    outline: 3px solid $focus-colour;
   }
 
   .error-summary-heading {
@@ -79,11 +88,14 @@ $error-colour: #b10e1e;
 
   .error-summary-list {
     padding-left: 0;
+
     li {
+
       @include media(tablet) {
         margin-bottom: 5px;
       }
     }
+
     a {
       color: $error-colour;
       font-weight: bold;
