@@ -26,11 +26,14 @@
   function addClickEvent(node, callback) {
     // Prevent space(32) from scrolling the page
     addEvent(node, 'keypress', function (e, target) {
-      if (e.keyCode === 32) {
-        if (e.preventDefault) {
-          e.preventDefault();
+      if (target.nodeName === "SUMMARY") {
+        if (e.keyCode === 32) {
+          if (e.preventDefault) {
+            e.preventDefault();
+          } else {
+            e.returnValue = false;
+          }
         }
-        else { e.returnValue = false; }
       }
     });
     // When the key comes up - check if it is enter(13) or space(32)
