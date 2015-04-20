@@ -47,16 +47,16 @@ $error-colour: #b10e1e;
   margin-bottom: 0;
 
   // Add spacing below error message
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 
   @include media(tablet) {
-    padding-bottom: 15px;
+    padding-bottom: 10px;
   }
 }
 
 // Summary of multiple error messages
 .error-summary {
-  
+
   // Error summary has a border on all sides
   border: 5px solid $error-colour;
 
@@ -68,10 +68,10 @@ $error-colour: #b10e1e;
   @include media(tablet) {
     margin-top: $gutter;
     margin-bottom: $gutter;
-    
+
     padding: $gutter-half;
   }
-  
+
   // Use the GOV.UK outline focus style
   &:focus {
     outline: 3px solid $focus-colour;
