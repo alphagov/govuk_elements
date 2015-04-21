@@ -23,7 +23,6 @@ As you get a better understanding of the user needs for your project you should 
 Here are examples of service-specific pattern libraries using GOV.UK Elements.
 
 * [Rural Payments style guide](http://rural-payments-styleguide.herokuapp.com)
-* [SFA Pattern Library](http://sfa-prototype.azurewebsites.net/pattern-library.html)
 * [Land Registry style guide](http://styleguide.landregistryconcept.co.uk/)
 
 ###  How to we want people to contribute and improve elements.
