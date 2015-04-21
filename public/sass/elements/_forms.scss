@@ -97,7 +97,7 @@ fieldset {
   @include box-sizing(border-box);
   @include core-19;
   width: 100%;
-  
+
   padding: 4px;
   background-color: $white;
   border: 1px solid $border-colour;
@@ -138,6 +138,28 @@ fieldset {
 }
 
 
+// Select boxes
+.form-control-select {
+  @include box-sizing(border-box);
+  @include core-19;
+
+  text-transform: none;
+  background-color: $white;
+  border: 1px solid $grey-2;
+
+  width: 100%;
+
+  @include media(tablet) {
+    width: 50%;
+  }
+
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 $black;
+  }
+}
+
+
 // Radio buttons
 .form-radio {
   display: block;
@@ -154,7 +176,7 @@ fieldset {
 .form-checkbox {
   display: block;
   margin: $gutter-half 0;
-  
+
   input {
     vertical-align: middle;
     margin: -2px 5px 0 0;
