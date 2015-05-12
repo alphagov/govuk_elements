@@ -6,6 +6,15 @@
 
 {{$head}}
   {{>head}}
+  <style>
+  .list-bullet .panel-indent {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background: #F5F2F0;
+    padding-right: 15px;
+  }
+</style>
 {{/head}}
 
 {{$propositionHeader}}
@@ -15,16 +24,6 @@
 {{$headerClass}}with-proposition{{/headerClass}}
 
 {{$content}}
-
-<style>
-  .list-bullet .panel-indent {
-    display: block;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    background: #F5F2F0;
-    padding-right: 15px;
-  }
-</style>
 <main class="js-error-example" id="content" role="main">
 
   <a href="/" class="example-back-link">Back to GOV.UK elements</a>
@@ -76,7 +75,7 @@
     </li>
   </ul>
 
-  <p class="text"> 
+  <p class="text">
     Also consider using the <code>aria-invalid</code> attribute to programmatically indicate that a field has an error. The value of the <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-invalid">aria-invalid attribute</a> will vary depending on the type of error.
   </p>
 
