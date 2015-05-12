@@ -1,23 +1,39 @@
+<div class="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1">
+  <h3 class="heading-medium error-summary-heading" id="error-summary-heading">
+    Message to alert the user to a problem goes here
+  </h3>
+  <p>
+    Description of the errors and how to correct them
+  </p>
+  <ul class="error-summary-list">
+    <li><a href='#error-country-residence'>Error message goes here</a></li>
+  </ul>
+</div>
+
 <div class="form-group error">
   <fieldset>
 
     <legend class="heading-medium">
-      <span class="error-message" aria-hidden="true">Error message goes here</span>
       Where do you live?
+
+      <span class="error-message">Error message goes here</span>
     </legend>
 
     <label class="block-label" for="country_residence_england">
       <input id="country_residence_england" name="country" value="England" type="radio">
       <span></span> England
     </label>
+
     <label class="block-label" for="country_residence_scotland">
       <input id="country_residence_scotland" name="country" value="Scotland" type="radio">
       <span></span> Scotland
     </label>
+
     <label class="block-label" for="country_residence_wales">
       <input id="country_residence_wales" name="country" value="Wales" type="radio">
         <span></span> Wales
     </label>
+
     <label class="block-label" for="country_residence_northern_ireland">
       <input id="country_residence_northern_ireland" name="country" value="Northern Ireland" type="radio">
       <span></span> Northern Ireland
@@ -25,12 +41,11 @@
     <p class="form-block">
       or
     </p>
+
     <label class="block-label" for="country_residence_abroad">
       <input id="country_residence_abroad" name="country" value="Abroad" type="radio">
       <span></span> British citizen living in another country<br>(including the Channel Islands or Isle of Man)
     </label>
-
-    <span class="error-message visuallyhidden">Error message goes here</span>
 
   </fieldset>
 </div>

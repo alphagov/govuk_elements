@@ -1,14 +1,29 @@
+<div class="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1">
+  <h3 class="heading-medium error-summary-heading" id="error-summary-heading">
+    Message to alert the user to a problem goes here
+  </h3>
+  <p>
+    Description of the errors and how to correct them
+  </p>
+  <ul class="error-summary-list">
+    {{^niNo}}<li><a href='#ni-number'>Error message goes here</a></li>{{/niNo}}
+  </ul>
+</div>
+
 <div class="form-group error">
+
   <label class="form-label-bold" for="error-example-ni-no">
-    <span class="error-message" aria-hidden="true">Error message goes here</span>
     What is your National Insurance number?
     <span class="form-hint">
       It's on your National Insurance card, benefit letter, payslip or P60.
       <br>
       For example, 'VO 12 34 56 D'.
     </span>
+    <span class="error-message">Error message goes here</span>
+
     <input type="text" class="form-control" id="error-example-ni-no" name="niNumber" value="{{niNumber}}">
-    <span class="error-message visuallyhidden">Error message goes here</span>
+
   </label>
 </div>
+
 <input class="button" type="submit" value="Continue">
