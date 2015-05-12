@@ -1,5 +1,5 @@
-<div class="error-summary" role="group" tabindex="-1" aria-labelledby="error-summary-heading">
-  <h3 class="heading-medium error-summary-heading" id="error-summary-heading">
+<div class="error-summary" role="group" tabindex="-1" aria-labelledby="error-summary-heading-1">
+  <h3 class="heading-medium error-summary-heading" id="error-summary-heading-1">
     Message to alert the user to a problem goes here
   </h3>
   <p>
@@ -16,11 +16,15 @@
 </h1>
 
 <div class="form-group error">
+
   <label class="form-label-bold" for="error-example-full-name">
+
     Full name
     <span class="form-hint">As shown on your birth certificate or passport</span>
-    <span class="error-message">Error message goes here</span>
+
+    <span class="error-message" id="error-full-name">Error message goes here</span>
   </label>
+
   <input type="text" class="form-control" id="error-example-full-name" name="fullName" value="" aria-describedby="error-full-name">
 </div>
 
@@ -36,7 +40,7 @@
       For example, 'VO 12 34 56 D'.
     </span>
 
-    <span class="error-message">Error message goes here</span>
+    <span class="error-message" id="error-ni-number">Error message goes here</span>
 
   </label>
 
