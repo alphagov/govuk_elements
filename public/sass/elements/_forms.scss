@@ -31,6 +31,7 @@ fieldset {
   }
 }
 
+// Form group compound is used to reduce the space between label and input pairs
 .form-group-compound {
   margin-bottom: 10px;
 }
@@ -61,6 +62,21 @@ fieldset {
 
 .form-label-bold {
   @include bold-19;
+}
+
+legend {
+  .form-label,
+  .form-label-bold {
+    @include inline-block;
+    margin-bottom: 10px;
+  }
+}
+
+.error legend {
+  .form-label,
+  .form-label-bold {
+    margin-bottom: 0;
+  }
 }
 
 // Used for paragraphs in-between form elements
@@ -95,7 +111,7 @@ fieldset {
   @include box-sizing(border-box);
   @include core-19;
   width: 100%;
-  
+
   padding: 4px;
   background-color: $white;
   border: 1px solid $border-colour;
@@ -152,7 +168,7 @@ fieldset {
 .form-checkbox {
   display: block;
   margin: $gutter-half 0;
-  
+
   input {
     vertical-align: middle;
     margin: -2px 5px 0 0;
