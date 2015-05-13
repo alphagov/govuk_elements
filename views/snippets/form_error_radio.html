@@ -1,52 +1,51 @@
 {{#error}}
-<div class="error-summary" role="group" aria-labelledby="error-summary-heading-2" tabindex="-1">
-  <h3 class="heading-medium error-summary-heading" id="error-summary-heading-2">
+<div class="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1">
+
+  <h1 class="heading-medium error-summary-heading" id="error-summary-heading">
     Message to alert the user to a problem goes here
-  </h3>
+  </h1>
+
   <p>
-    Description of the errors and how to correct them
+    Optional description of the error(s) and how to correct them
   </p>
+
   <ul class="error-summary-list">
-    {{^niNo}}<li><a href='#error-country-residence'>Error message goes here</a></li>{{/niNo}}
+    <li><a href="#error-personal-details">Descriptive link to the question with an error</a></li>
   </ul>
+
 </div>
 {{/error}}
+
+<h1 class="heading-large">
+  Check your personal details
+</h1>
+
+<p class="lede">
+  Look at your name, signature and other details.
+</p>
 
 <div class="form-group {{#error}}error{{/error}}">
   <fieldset>
 
-    <legend class="heading-medium" {{#error}}id="error-country-residence"{{/error}}>
-      Where do you live?
-       {{#error}}<span class="error-message">Error message goes here</span>{{/error}}
+    <legend {{#error}}id="error-personal-details"{{/error}}>
+      <span class="form-label-bold">
+        Are your personal details correct and up-to-date?
+      </span>
+      {{#error}}
+        <span class="error-message">
+          Error message about personal details goes here
+        </span>
+      {{/error}}
     </legend>
 
-    <label class="block-label" for="country_residence_england">
-      <input id="country_residence_england" name="country" value="England" type="radio">
-      <span></span> England
+    <label class="block-label" for="personal_details_yes">
+      <input id="personal_details_yes" name="personal_details" value="Yes" type="radio">
+      <span></span> Yes, my personal details are correct
     </label>
 
-    <label class="block-label" for="country_residence_scotland">
-      <input id="country_residence_scotland" name="country" value="Scotland" type="radio">
-      <span></span> Scotland
-    </label>
-
-    <label class="block-label" for="country_residence_wales">
-      <input id="country_residence_wales" name="country" value="Wales" type="radio">
-        <span></span> Wales
-    </label>
-
-    <label class="block-label" for="country_residence_northern_ireland">
-      <input id="country_residence_northern_ireland" name="country" value="Northern Ireland" type="radio">
-      <span></span> Northern Ireland
-    </label>
-
-    <p class="form-block">
-      or
-    </p>
-
-    <label class="block-label" for="country_residence_abroad">
-      <input id="country_residence_abroad" name="country" value="Abroad" type="radio">
-      <span></span> British citizen living in another country<br>(including the Channel Islands or Isle of Man)
+    <label class="block-label" for="personal_details_no">
+      <input id="personal_details_no" name="personal_details" value="No" type="radio">
+      <span></span> No, some details are wrong or have changed
     </label>
 
   </fieldset>
