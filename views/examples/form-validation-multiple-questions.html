@@ -14,6 +14,15 @@
     background: #F5F2F0;
     padding-right: 15px;
   }
+
+  .implementation-advice {
+    border-top: 1px solid #bfc1c3;
+    padding-top: 1.25em;
+  }
+
+  .lead-in {
+    margin-bottom: 0;
+  }
 </style>
 {{/head}}
 
@@ -32,7 +41,8 @@
     {{> form_error_multiple }}
   </form>
 
-  <h2 class="heading-small">When an error occurs:</h2>
+  <h2 class="heading-medium implementation-advice">Implementation advice</h2>
+  <p class="lead-in">When an error occurs:</p>
   <ul class="list-bullet text">
     <li>
       add a 5px red left border to the field with the error
