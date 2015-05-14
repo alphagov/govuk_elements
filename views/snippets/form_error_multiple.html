@@ -31,7 +31,7 @@
     <span class="form-hint">As shown on your birth certificate or passport</span>
     {{#error}}{{^fullName}}<span class="error-message">Error message about full name goes here</span>{{/fullName}}{{/error}}
   </label>
-  <input type="text" class="form-control" id="full-name" name="fullName" value="{{fullName}}" {{#error}}{{^fullName}}aria-describedby="error-full-name"{{/fullName}}{{/error}}>
+  <input class="form-control" id="full-name" type="text" name="fullName" value="{{fullName}}" {{#error}}{{^fullName}}aria-describedby="error-full-name"{{/fullName}}{{/error}}>
 </div>
 
 <div class="form-group {{#error}}{{^niNo}}error{{/niNo}}{{/error}}">
@@ -44,7 +44,7 @@
     </span>
     {{#error}}{{^niNo}}<span class="error-message">Error message about National Insurance number goes here</span>{{/niNo}}{{/error}}
   </label>
-  <input type="text" class="form-control" id="ni-number" name="niNo" value="{{niNo}}" {{#error}}{{^niNo}}aria-describedby="error-ni-number"{{/niNo}}{{/error}}>
+  <input class="form-control" id="ni-number" type="text" name="niNo" value="{{niNo}}" {{#error}}{{^niNo}}aria-describedby="error-ni-number"{{/niNo}}{{/error}}>
 </div>
 
 <input class="button" type="submit" value="Continue">

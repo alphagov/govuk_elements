@@ -1,6 +1,6 @@
-<div class="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1">
+<div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
 
-  <h1 class="heading-medium error-summary-heading" id="error-summary-heading">
+  <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
     Message to alert the user to a problem goes here
   </h1>
 
@@ -21,27 +21,29 @@
   Look at your name, signature and other details.
 </p>
 
-<div class="form-group error">
-  <fieldset>
+<form>
+  <div class="form-group error">
+    <fieldset>
 
-    <legend class="form-label-bold" id="error-personal-details">
-      Are your personal details correct and up-to-date?
-      <span class="error-message">
-        Error message about personal details goes here
-      </span>
-    </legend>
+      <legend class="form-label-bold" id="error-personal-details">
+        Are your personal details correct and up-to-date?
+        <span class="error-message">
+          Error message about personal details goes here
+        </span>
+      </legend>
 
-    <label class="block-label" for="personal_details_yes">
-      <input id="personal_details_yes" name="personal_details" value="Yes" type="radio">
-      <span></span> Yes, my personal details are correct
-    </label>
+      <label class="block-label" for="personal_details_yes">
+        <input id="personal_details_yes" type="radio" name="personal_details" value="Yes">
+        <span></span> Yes, my personal details are correct
+      </label>
 
-    <label class="block-label" for="personal_details_no">
-      <input id="personal_details_no" name="personal_details" value="No" type="radio">
-      <span></span> No, some details are wrong or have changed
-    </label>
+      <label class="block-label" for="personal_details_no">
+        <input id="personal_details_no" type="radio" name="personal_details" value="No">
+        <span></span> No, some details are wrong or have changed
+      </label>
 
-  </fieldset>
-</div>
+    </fieldset>
+  </div>
 
-<input class="button" type="submit" value="Continue">
+  <input class="button" type="submit" value="Continue">
+</form>
