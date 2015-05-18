@@ -29,14 +29,17 @@
   <fieldset>
 
     <legend {{#error}}id="error-personal-details"{{/error}}>
+
       <span class="form-label-bold">
         Are your personal details correct and up-to-date?
       </span>
+
       {{#error}}
         <span class="error-message">
           Error message about personal details goes here
         </span>
       {{/error}}
+
     </legend>
 
     <label class="block-label" for="personal_details_yes">
