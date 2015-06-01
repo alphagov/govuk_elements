@@ -8,8 +8,10 @@
 @import "css3";
 @import "url-helpers";
 
-// Path to assets for use with file-url()
-$path: "/public/images/";
+// Path to assets for use with file-url() is not already defined
+@if ($path == false) {
+    $path: "/public/images/";
+}
 
 // Return ems from a pixel value
 // This assumes a base of 19px
