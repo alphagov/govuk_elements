@@ -22,7 +22,7 @@ As you get a better understanding of the user needs for your project you should 
 
 Here are examples of service-specific pattern libraries using GOV.UK Elements.
 
-* [Rural Payments style guide](http://rural-payments-styleguide.herokuapp.com)
+* [Rural Payments style guide](http://rural-payments-styleguide.herokuapp.com) | [Source Code](https://github.com/Defra/rural-payments-styleguide/)
 * [Land Registry style guide](http://styleguide.landregistryconcept.co.uk/)
 
 ###  How to we want people to contribute and improve elements.
