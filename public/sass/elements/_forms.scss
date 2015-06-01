@@ -10,9 +10,17 @@ fieldset {
   width: 100%;
 }
 
+// Fix left hand gap in IE7 and below
+@include ie-lte(7) {
+  legend {
+    margin-left: -7px;
+  }
+}
+
 // Form group is used to wrap label and input pairs
 .form-group {
   @extend %contain-floats;
+  @include box-sizing(border-box);
   float: left;
   width: 100%;
   margin-bottom: $gutter-half;
@@ -30,6 +38,7 @@ fieldset {
   }
 }
 
+// Form group compound is used to reduce the space between label and input pairs
 .form-group-compound {
   margin-bottom: 10px;
 }
@@ -56,15 +65,25 @@ fieldset {
 
 .form-label {
   @include core-19;
-  margin-bottom: 5px;
 }
 
 .form-label-bold {
-  @include bold-24;
-  margin-bottom: 0;
+  @include bold-19;
+}
 
-  .form-hint {
-    @include core-19;
+// Add spacing under spans within labels
+legend {
+  .form-label,
+  .form-label-bold {
+    padding-bottom: 7px;
+  }
+}
+
+// Remove spacing when error messages are shown
+.error legend {
+  .form-label,
+  .form-label-bold {
+    padding-bottom: 0;
   }
 }
 
@@ -73,6 +92,12 @@ fieldset {
   @extend %contain-floats;
   float: left;
   width: 100%;
+
+  margin-bottom: 5px;
+
+  @include media(tablet) {
+    margin-top: 10px;
+  }
 }
 
 
@@ -80,13 +105,11 @@ fieldset {
 
 // Form hints & examples are light grey and sit above a form control
 .form-hint {
+  @include core-19;
   display: block;
   color: $secondary-text-colour;
+  font-weight: normal;
   margin-bottom: 5px;
-
-  @include media (tablet) {
-    margin-top: 8px;
-  }
 }
 
 // Form controls
@@ -97,7 +120,7 @@ fieldset {
   @include box-sizing(border-box);
   @include core-19;
   width: 100%;
-  
+
   padding: 4px;
   background-color: $white;
   border: 1px solid $border-colour;
@@ -154,7 +177,7 @@ fieldset {
 .form-checkbox {
   display: block;
   margin: $gutter-half 0;
-  
+
   input {
     vertical-align: middle;
     margin: -2px 5px 0 0;

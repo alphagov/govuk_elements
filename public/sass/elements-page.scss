@@ -31,7 +31,7 @@
 // Elements page styles
 // ==========================================================================
 
-// These are example styles, used only for the Elements page example boxes
+// These are example styles, used only for the Elements index page
 
 // Headings
 // Used with heading-large = 36px
@@ -40,8 +40,8 @@
   padding-top: em(45, 36);
 }
 
-// Text
-.tight {
+// Use for paragraphs before lists
+.lead-in {
   margin-bottom: 0;
 }
 

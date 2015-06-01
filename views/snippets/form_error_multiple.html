@@ -1,0 +1,69 @@
+{{#error}}
+<div class="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1">
+
+  <h1 class="heading-medium error-summary-heading" id="error-summary-heading">
+    Message to alert the user to a problem goes here
+  </h1>
+
+  <p>
+    Optional description of the error(s) and how to correct them
+  </p>
+
+  <ul class="error-summary-list">
+    {{^fullName}}
+    <li><a href="#example-full-name">Descriptive link to the question with an error</a></li>
+    {{/fullName}}
+    {{^niNo}}
+    <li><a href="#example-ni-number">Descriptive link to the question with an error</a></li>
+    {{/niNo}}
+  </ul>
+
+</div>
+{{/error}}
+
+<h1 class="heading-large">
+  Your personal details
+</h1>
+
+<div class="form-group {{#error}}{{^fullName}}error{{/fullName}}{{/error}}">
+
+  <label for="example-full-name" {{#error}}{{^fullName}}id="error-full-name"{{/fullName}}{{/error}}>
+
+    <span class="form-label-bold">Full name</span>
+    <span class="form-hint">As shown on your birth certificate or passport</span>
+    {{#error}}
+      {{^fullName}}
+      <span class="error-message" id="error-message-full-name">Error message about full name goes here</span>
+      {{/fullName}}
+    {{/error}}
+
+  </label>
+
+  <input class="form-control" id="example-full-name" type="text" name="fullName" value="{{fullName}}" {{#error}}{{^fullName}}aria-describedby="error-message-full-name"{{/fullName}}{{/error}}>
+</div>
+
+<div class="form-group {{#error}}{{^niNo}}error{{/niNo}}{{/error}}">
+
+  <label for="example-ni-number" {{#error}}{{^niNo}}id="error-full-name"{{/niNo}}{{/error}}>
+
+    <span class="form-label-bold">National Insurance number</span>
+    <span class="form-hint">
+      It's on your National Insurance card, benefit letter, payslip or P60.
+      <br>
+      For example, 'VO 12 34 56 D'.
+    </span>
+    {{#error}}
+      {{^niNo}}
+      <span class="error-message" id="error-message-ni-number">
+        Error message about National Insurance number goes here
+      </span>
+      {{/niNo}}
+    {{/error}}
+
+  </label>
+
+  <input class="form-control" id="example-ni-number" type="text" name="niNo" value="{{niNo}}" {{#error}}{{^niNo}}aria-describedby="error-message-ni-number"{{/niNo}}{{/error}}>
+
+</div>
+
+<input class="button" type="submit" value="Continue">

@@ -1,0 +1,99 @@
+{{<govuk_template}}
+
+{{$cookieMessage}}
+  {{>cookie_message}}
+{{/cookieMessage}}
+
+{{$head}}
+  {{>head}}
+  <style>
+  .list-bullet .panel-indent {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background: #F5F2F0;
+    padding-right: 15px;
+  }
+
+  .implementation-advice {
+    border-top: 1px solid #bfc1c3;
+    padding-top: 1.25em;
+  }
+
+  .lead-in {
+    margin-bottom: 0;
+  }
+</style>
+{{/head}}
+
+{{$propositionHeader}}
+  {{>propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main class="js-error-example" id="content" role="main">
+
+  <a href="/" class="example-back-link">Back to GOV.UK elements</a>
+
+  <form method="post" action="/examples/form-validation-multiple-questions">
+    {{> form_error_multiple }}
+  </form>
+
+  <h2 class="heading-medium implementation-advice">Implementation advice</h2>
+  <p class="lead-in">When an error occurs:</p>
+  <ul class="list-bullet text">
+    <li>
+      add a 5px red left border to the field with the error
+    </li>
+    <li>
+      show an error summary at the top of the page
+    </li>
+    <li>
+      move keyboard focus to the start of the summary
+      <span class="panel-indent">
+        to move keyboard focus, put <code>tabindex="-1"</code> on the containing div and use <code>obj.focus()</code>
+      </span>
+    </li>
+    <li>
+      indicate to screenreaders that the summary represents a collection of information
+      <span class="panel-indent">
+        add the ARIA <code>role="group"</code> to the containing <code>div</code>
+      </span>
+    </li>
+    <li>
+      use a heading at the top of the summary
+    </li>
+    <li>
+      associate the heading with the summary box
+      <span class="panel-indent">
+        use the ARIA attribute <code>aria-labelledby</code> on the containing <code>div</code>, so that screen readers will automatically announce the heading as soon as focus is moved to the div
+      </span>
+    </li>
+    <li>
+      link from the error list in the summary to the fields with errors
+    </li>
+    <li>
+      show an error message before each field with an error
+    </li>
+    <li>
+      associate each error message with the corresponding field
+      <span class="panel-indent">
+         add an ID to each error message and associate this with the field using <code>aria-describedby</code>
+      </span>
+    </li>
+  </ul>
+
+  <p class="text">
+    Also consider using the <code>aria-invalid</code> attribute to programmatically indicate that a field has an error. The value of the <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-invalid">aria-invalid attribute</a> will vary depending on the type of error.
+  </p>
+
+</main>
+{{/content}}
+
+{{$bodyEnd}}
+  {{>scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

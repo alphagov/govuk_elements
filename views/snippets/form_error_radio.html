@@ -1,0 +1,57 @@
+{{#error}}
+<div class="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1">
+
+  <h1 class="heading-medium error-summary-heading" id="error-summary-heading">
+    Message to alert the user to a problem goes here
+  </h1>
+
+  <p>
+    Optional description of the error(s) and how to correct them
+  </p>
+
+  <ul class="error-summary-list">
+    <li><a href="#example-personal-details">Descriptive link to the question with an error</a></li>
+  </ul>
+
+</div>
+{{/error}}
+
+<h1 class="heading-large">
+  Check your personal details
+</h1>
+
+<p class="lede">
+  Look at your name, signature and other details.
+</p>
+
+
+<div class="form-group {{#error}}error{{/error}}">
+  <fieldset>
+
+    <legend {{#error}}id="example-personal-details"{{/error}}>
+
+      <span class="form-label-bold">
+        Are your personal details correct and up-to-date?
+      </span>
+      {{#error}}
+        <span class="error-message">
+          Error message about personal details goes here
+        </span>
+      {{/error}}
+
+    </legend>
+
+    <label class="block-label" for="personal_details_yes">
+      <input id="personal_details_yes" type="radio" name="personal_details" value="Yes">
+      <span></span> Yes, my personal details are correct
+    </label>
+
+    <label class="block-label" for="personal_details_no">
+      <input id="personal_details_no" type="radio" name="personal_details" value="No">
+      <span></span> No, some details are wrong or have changed
+    </label>
+
+  </fieldset>
+</div>
+
+<input class="button" type="submit" value="Continue">

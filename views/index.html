@@ -992,20 +992,83 @@
   <div id="guide-errors">
 
     <h2 class="heading-large heading-with-border">8. Errors and validation</h2>
+
+    <h3 class="heading-medium">Minimise the number of errors on a page</h3>
+
     <p class="text">
-       Summarise validation errors in a box at the top of your page.
-       Use jump links in the summary box to reach the errors in the form.
-    </p>
-    <p class="text">
-       Ensure error messages make sense when read by screen readers.
+      Recovering from errors can be hard for users, especially if a page contains multiple errors.
+      Avoid this by splitting long forms across multiple pages, with each page asking a single question.
     </p>
 
-    <h3 class="heading-medium" id="error-form-validation">Form validation</h3>
+    <h3 class="heading-medium">
+      Summarise errors at the top of the page
+    </h3>
+
+    <p class="text lead-in">
+      You must:
+    </p>
+
+    <ul class="text list-bullet">
+      <li>show an error summary at the top of the page</li>
+      <li>include a heading to alert the user to the error</li>
+      <li>link to each of the problematic questions</li>
+    </ul>
+
+    <div class="example example-error">
+      {{> form_error_radio_show_errors }}
+    </div>
+
+    <h4 class="text heading-small panel-indent">
+      The error summary must appear at the top of the page, so it is visible when the page is refreshed and is immediately read out by assistive technology.
+    </h4>
+
+    <div class="text">
+
+      <h3 class="heading-medium">Highlight errors in forms</h3>
+
+      <p class="lead-in">
+        For each error:
+      </p>
+
+      <ul class="list-bullet">
+        <li>write a message that helps the user to understand why the error occurred and what to do about it</li>
+        <li>put the message in the <code>&lt;label&gt;</code> or <code>&lt;legend&gt;</code> for the question,
+        after the question text, in red</li>
+        <li>use a red border to visually connect the message and the question it belongs to</li>
+        <li>if the error relates to specific text fields within the question, give these a red border as well</li>
+      </ul>
+
+    </div>
+
+    <p class="text">
+      For red, use the <code>$error-colour</code> Sass variable &ndash; find this in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss">colours.scss</a> file
+    </p>
+
+    <div class="example example-error">
+      {{> form_error_multiple_show_errors }}
+    </div>
+
+    <p class="text">
+      If users are regularly making multiple errors on a page this indicates that your page has either too many questions, or that the question needs to be rewritten in plain English.
+    </p>
+
+    <p class="text">
+      Simplify the page by rewriting and where possible, removing questions or splitting questions across multiple pages.
+    </p>
+
+    <h3 class="heading-medium" id="error-message-examples">Implementation examples</h3>
+
     <ul class="list-bullet text">
-      <li>use a red border on the box to visually connect the errors and messages in the form</li>
-      <li>apply the same colour to the area of the form where an error has occurred</li>
-      <li>error copy should be specific to the question and validation should identify all errors</li>
-      <li>errors should not cause pre-filled fields to clear</li>
+      <li>
+        <a href="{{ site.baseurl}}/examples/form-validation-single-question-radio">
+          Example with one question, a group of radio buttons
+        </a>
+      </li>
+      <li>
+        <a href="{{ site.baseurl}}/examples/form-validation-multiple-questions">
+          Example with multiple questions
+        </a>
+      </li>
     </ul>
 
     <p>
@@ -1022,7 +1085,7 @@
       You have to use an alpha banner if your thing is in alpha, and a beta banner if it’s in beta.
     </p>
 
-    <h3 class="heading-medium" id="error-form-validation">Things on the service.gov.uk subdomain</h3>
+    <h3 class="heading-medium" id="guide-alpha-beta-subdomain">Things on the service.gov.uk subdomain</h3>
     <p class="text">
       If your service is in beta or alpha, you must show the relevant banner in the header.
       It should sit directly underneath the black GOV.UK header and colour bar.
@@ -1036,7 +1099,7 @@
       {{> phase_banner_beta }}
     </div>
 
-    <h3 class="heading-medium" id="error-form-validation">Things on GOV.UK</h3>
+    <h3 class="heading-medium" id="guide-alpha-beta-govuk">Things on GOV.UK</h3>
     <p class="text">
       If your GOV.UK content is in beta or alpha, show the relevant banner below the page title, but above the body content. You can see what they should look like in <a href="https://designnotes.blog.gov.uk/2014/03/26/betas-on-gov-uk/">this blog post</a>.
     </p>
