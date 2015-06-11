@@ -16,6 +16,11 @@
   legend {
     margin-top: 0;
   }
+
+  // Remove top margin on first element
+  & > * {
+    margin-top: 0;
+  }
   
   // Remove bottom margin on last paragraph
   p:only-child,
