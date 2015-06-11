@@ -43,6 +43,15 @@ fieldset {
   margin-bottom: 10px;
 }
 
+.inline-form-groups {
+  @extend %contain-floats;
+  .form-group {
+    width: auto;
+    margin-right: $gutter-one-third;
+    clear: none;
+  }
+}
+
 
 // Form title
 .form-title {
