@@ -17,6 +17,18 @@ fieldset {
   }
 }
 
+// Hide the 'spinner' for webkit
+// and also for Firefox
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 // Form group is used to wrap label and input pairs
 .form-group {
   @extend %contain-floats;
@@ -226,5 +238,4 @@ legend {
 
 
 // Form patterns
-@import "forms/form-date";
 @import "forms/form-block-labels";
