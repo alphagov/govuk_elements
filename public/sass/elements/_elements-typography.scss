@@ -189,4 +189,13 @@ code {
   padding: 3px 7px;
 }
 
+// Horizontal rule style
+hr{
+  background: $border-colour;
+  border: 0 solid;
+  height: 1px;
+  margin-top: $gutter;
+  margin-bottom: $gutter;
+}
+
 
