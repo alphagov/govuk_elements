@@ -179,7 +179,10 @@ legend {
 }
 
 .form-control-1-8 {
-  width: 12.5%;
+  width: 100%;
+  @include media(tablet) {
+    width: 12.5%;
+  }
 }
 
 
