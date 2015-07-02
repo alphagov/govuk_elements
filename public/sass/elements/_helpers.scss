@@ -10,7 +10,7 @@
 
 // Path to assets for use with file-url() is not already defined
 @if ($path == false) {
-    $path: "/public/images/";
+  $path: "/public/images/";
 }
 
 // Return ems from a pixel value
