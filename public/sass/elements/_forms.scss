@@ -149,6 +149,43 @@ legend {
 // 6. Form controls
 // ==========================================================================
 
+// NEW form control widths
+// These make use of the gutter multiplier function
+// to give multiples of either 30px ($gutter) or 15px ($gutter-half)
+
+@function gutter-multiplier($gutter, $multiplier) {
+  @return $gutter * $multiplier
+}
+
+// Usage:
+// .my-form-control-width {
+//    width: gutter-multiplier($gutter, 2);
+// }
+
+// TODO: Decide on naming convention for gutter-based widths
+.form-control-1 {
+  width: gutter-multiplier($gutter, 1);
+}
+
+.form-control-2 {
+  width: gutter-multiplier($gutter, 2);
+}
+
+.form-control-4 {
+  width: gutter-multiplier($gutter, 4);
+}
+
+.form-control-8 {
+  width: gutter-multiplier($gutter, 8);
+}
+
+.form-control-16 {
+  width: gutter-multiplier($gutter, 16);
+}
+
+// OLD form control percentage widths
+// Use the fixed widths above in future
+
 // By default, form controls are 50% width for desktop,
 // and 100% width for mobile
 .form-control {
