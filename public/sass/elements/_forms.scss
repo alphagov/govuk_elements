@@ -1,8 +1,31 @@
 // Forms
 // ==========================================================================
-// GOV.UK front end toolkit dependencies
+
+// Contents:
+//
+// 1. GOV.UK front end toolkit dependencies
+// 2. Helpers
+// 3. Form wrappers
+// 4. Form labels
+// 5. Form hints
+// 6. Form controls
+// 7. Form control widths
+
+// 8. Errors and validation styles
+// 9. Form design patterns
+//     - Date of birth
+//     - "Chunky" radio buttons and checkboxes
+
+
+// 1. GOV.UK front end toolkit dependencies
+// ==========================================================================
+
 @import "helpers";
 @import "colours";
+
+
+// 2. Helpers
+// ==========================================================================
 
 // Fieldset is used to group more than one .form-group
 fieldset {
@@ -17,12 +40,18 @@ fieldset {
   }
 }
 
+
+// 3. Form wrappers
+// ==========================================================================
+
 // Form group is used to wrap label and input pairs
 .form-group {
   @extend %contain-floats;
   @include box-sizing(border-box);
+
   float: left;
   width: 100%;
+
   margin-bottom: $gutter-half;
 
   @include media(tablet) {
@@ -30,6 +59,7 @@ fieldset {
   }
 }
 
+// Form group related is used to reduce the space between label and input pairs
 .form-group-related {
   margin-bottom: 10px;
 
@@ -43,8 +73,8 @@ fieldset {
   margin-bottom: 10px;
 }
 
-
 // Form title
+// TODO: Remove this (duplication of existing heading styles)
 .form-title {
   margin-bottom: $gutter;
 
@@ -54,9 +84,11 @@ fieldset {
 }
 
 
-// Labels
+// 4. Form labels
+// ==========================================================================
 
 // Form labels, or for legends styled to look like labels
+// TODO: Amend so there is only one label style
 .form-label,
 .form-label-bold {
   display: block;
@@ -80,6 +112,7 @@ legend {
 }
 
 // Remove spacing when error messages are shown
+// TODO: Move into /forms/_form-validation.scss
 .error legend {
   .form-label,
   .form-label-bold {
@@ -100,10 +133,10 @@ legend {
   }
 }
 
+// 5. Form hints
+// ==========================================================================
 
-// Hints
-
-// Form hints & examples are light grey and sit above a form control
+// Form hints and example text are light grey and sit above a form control
 .form-hint {
   @include core-19;
   display: block;
@@ -112,7 +145,9 @@ legend {
   margin-bottom: 5px;
 }
 
-// Form controls
+
+// 6. Form controls
+// ==========================================================================
 
 // By default, form controls are 50% width for desktop,
 // and 100% width for mobile
@@ -129,17 +164,50 @@ legend {
   -webkit-appearance: none;
   border-radius: 0;
 
+  // TODO: Remove 50% width set for tablet and up
+  // !! BREAKING CHANGE !!
   @include media(tablet) {
     width: 50%;
+  }
+
+}
+
+// Radio buttons
+.form-radio {
+  display: block;
+  margin: 10px 0;
+
+  input {
+    vertical-align: middle;
+    margin: -4px 5px 0 0;
+  }
+}
+
+// Checkboxes
+.form-checkbox {
+  display: block;
+  margin: $gutter-half 0;
+
+  input {
+    vertical-align: middle;
+    margin: -2px 5px 0 0;
+  }
+}
+
+// Buttons
+// Ensure buttons are full-width for smaller screens
+form .button {
+  @include media(mobile) {
+    width: 100%;
   }
 }
 
 
-// Form control widths
+// 7. Form control widths
+// ==========================================================================
 
-.form-control-1-1 {
-  width: 100%;
-}
+// TODO: Update these
+// Form control widths
 
 .form-control-3-4 {
   width: 100%;
@@ -186,42 +254,18 @@ legend {
 }
 
 
-// Radio buttons
-.form-radio {
-  display: block;
-  margin: 10px 0;
-
-  input {
-    vertical-align: middle;
-    margin: -4px 5px 0 0;
-  }
-}
-
-
-// Checkboxes
-.form-checkbox {
-  display: block;
-  margin: $gutter-half 0;
-
-  input {
-    vertical-align: middle;
-    margin: -2px 5px 0 0;
-  }
-}
-
-
-// Buttons
-.form .button {
-  @include media(mobile) {
-    width: 100%;
-  }
-}
-
-
-// Form validation
+// 8. Errors and validation styles
+// ==========================================================================
 @import "forms/form-validation";
 
 
-// Form patterns
+// 9. Form design patterns
+//    - Date of birth
+//    - "Chunky" radio buttons and checkboxes
+// ==========================================================================
+
+// Date of birth
 @import "forms/form-date";
+
+// "Chunky" radios and checkboxes
 @import "forms/form-block-labels";
