@@ -23,8 +23,10 @@ input[type=number] {
     clear: none;
 
     label {
+      @include core-19;
       display: block;
-      margin-bottom: 5px;
+      color: $text-colour;
+      margin-bottom: 3px; // This gives 10px spacing under form labels
     }
 
     input {
