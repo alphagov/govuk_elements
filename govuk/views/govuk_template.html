@@ -63,7 +63,7 @@
 
     <div id="skiplink-container">
       <div>
-        <a href="#content" class="skiplink"></a>
+        <a href="#content" class="skiplink">{{$skipLinkMessage}}Skip to main content{{/skipLinkMessage}}</a>
       </div>
     </div>
 
@@ -79,7 +79,7 @@
       <div class="header-wrapper">
         <div class="header-global">
           <div class="header-logo">
-            <a href="{{$homepageUrl}}https://www.gov.uk{{/homepageUrl}}" title="" id="logo" class="content">
+            <a href="{{$homepageUrl}}https://www.gov.uk{{/homepageUrl}}" title="{{$logoLinkTitle}}Go to the GOV.UK homepage{{/logoLinkTitle}}" id="logo" class="content">
               <img src="{{assetPath}}images/gov.uk_logotype_crown.png?0.14.0" width="35" height="31" alt=""> {{$globalHeaderText}}GOV.UK{{/globalHeaderText}}
             </a>
           </div>
@@ -110,13 +110,13 @@
             <div class="open-government-licence">
               <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
               
-                
+                {{$licenceMessage}}<p>All content is available under the <a href='https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/' rel='license'>Open Government Licence v3.0</a>, except where otherwise stated</p>{{/licenceMessage}}
               
             </div>
           </div>
 
           <div class="copyright">
-            <a href="http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/"></a>
+            <a href="http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">{{$crownCopyrightMessage}}© Crown copyright{{/crownCopyrightMessage}}</a>
           </div>
         </div>
       </div>
