@@ -24,6 +24,7 @@ Here are examples of service-specific pattern libraries using GOV.UK Elements.
 
 * [Rural Payments style guide](http://rural-payments-styleguide.herokuapp.com) | [Source Code](https://github.com/Defra/rural-payments-styleguide/)
 * [Land Registry style guide](http://styleguide.landregistryconcept.co.uk/)
+* [Digital Marketplace front end toolkit](http://alphagov.github.io/digitalmarketplace-frontend-toolkit/)
 
 ###  How to we want people to contribute and improve elements.
 
