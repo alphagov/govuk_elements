@@ -20,21 +20,95 @@
   <div class="grid-row">
 
     <div class="column-two-thirds">
-
       <a href="/" class="example-back-link">Back to GOV.UK elements</a>
 
+      <h1 class="heading-xlarge">
+        Form elements<br>
+        test page
+      </h1>
 
-        <h1 class="heading-xlarge">
-          Form elements<br>
-          test page
-        </h1>
-        <p class="text">
-          This test page demonstrates GOV.UK elements form styles and is used to check the spacing between elements is consistent.
-        </p>
+      <p class="text">
+        This test page demonstrates new GOV.UK elements form styles and is used to check the spacing between elements is consistent.
+      </p>
 
-        <form action="/" method="post">
+    </div>
 
-        </form>
+  </div>
+
+  <!--
+  TODO: Link to contents
+  <div class="grid-row section">
+
+    <div class="column-third">
+      <ul class="list">
+        <li><a href="#label-and-control">Form labels and form controls</a></li>
+        <li><a href="#compound-control">Compound form controls</a></li>
+        <li><a href="#inline-control">Inline form controls</a></li>
+        <li><a href="#fixed-character-width-control">Fixed character width controls</a></li>
+      </ul>
+    </div>
+    <div class="column-third">
+      <ul class="list">
+        <li><a href="#chunky-checkboxes">"Chunky" checkboxes</a></li>
+        <li><a href="#checkboxes">Regular checkboxes</a></li>
+        <li><a href="#chunky-radio-buttons">"Chunky" radio buttons</a></li>
+        <li><a href="#textareas">Textareas</a></li>
+        <li><a href="#select-boxes">Select boxes</a></li>
+        <li><a href="#conditional-reveal">Conditionally revealing content</a></li>
+      </ul>
+    </div>
+
+  </div> -->
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+
+      {{> form_labels }}
+
+      {{> form_spacing }}
+
+      <div class="form-section">
+        {{> form_hint_text }}
+      </div>
+
+      <form>
+        <div class="form-section">
+          {{> form_radio_buttons_inline }}
+        </div>
+      </form>
+
+      <form>
+        <div class="form-section" id="chunky-checkboxes">
+        <h2 class="form-section-title">Preferred method of contact</h2>
+          {{> form_radio_buttons }}
+        </div>
+      </form>
+
+      <form>
+        <div class="form-section">
+          {{> form_checkboxes }}
+        </div>
+      </form>
+
+      <form>
+        <div class="form-section">
+          {{> form_checkbox_native }}
+        </div>
+      </form>
+
+      <form>
+        <div class="form-section">
+          {{> form_inset_radios }}
+        </div>
+      </form>
+
+      <form>
+        <div class="form-section">
+          {{> form_inset_checkboxes }}
+        </div>
+      </form>
 
     </div>
 
