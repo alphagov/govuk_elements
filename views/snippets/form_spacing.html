@@ -1,9 +1,35 @@
-<!-- Use .form-group to create spacing when wrapping label and input pairs -->
-<div class="form-group">
-  <label class="form-label" for="first-name-2">First name</label>
-  <input class="form-control" id="first-name-2" type="text">
-</div>
-<div class="form-group">
-  <label class="form-label" for="last-name-2">Last name</label>
-  <input class="form-control" id="last-name-2" type="text">
+<!-- Use .form-section to create 60px spacing -->
+<div class="form-section">
+
+  <h2 class="form-section-title">Address</h2>
+
+  <!-- Use .form-group to create 30px spacing when wrapping label and input pairs -->
+  <div class="form-group form-group-compound">
+    <label class="form-label" for="address">Building and street</label>
+    <input class="form-control form-control-large" type="text" id="address">
+  </div>
+  <div class="form-group form-group-compound">
+    <label class="form-label hidden" for="address-2">Address line 2</label>
+    <input class="form-control form-control-large" type="text" id="address-2">
+  </div>
+  <div class="form-group">
+    <label class="form-label hidden" for="address-3">Address line 3</label>
+    <input class="form-control form-control-large" type="text" id="address-3">
+  </div>
+
+  <div class="form-group">
+    <label class="form-label" for="town-or-city">Town or city</label>
+    <input class="form-control form-control-medium" type="text" id="town-or-city">
+  </div>
+
+  <div class="form-group">
+    <label class="form-label" for="county">County (optional)</label>
+    <input class="form-control form-control-medium" type="text" id="county">
+  </div>
+
+  <div class="form-group">
+    <label class="form-label" for="postcode">Postcode</label>
+    <input class="form-control form-control-small" type="text" id="postcode">
+  </div>
+
 </div>
