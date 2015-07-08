@@ -19,9 +19,10 @@
     border: 4px solid $error-colour;
   }
 
-  .form-hint {
-    margin-bottom: 0;
-  }
+  // TODO: Fix this
+  // .form-hint {
+  //   margin-bottom: 0;
+  // }
 
 }
 
@@ -45,7 +46,7 @@
   clear: both;
 
   margin: 0;
-  padding: 5px 0 7px 0;
+  padding: 0px 0 7px 0;
 }
 
 // Summary of multiple error messages
