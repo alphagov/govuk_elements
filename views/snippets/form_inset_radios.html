@@ -1,21 +1,28 @@
-<fieldset class="inline">
-  <legend>
-    <span class="form-label">
-      Do you know their National Insurance number?
-    </span>
-  </legend>
-  <div class="form-group form-group-compound">
-    <label class="block-label" data-target="example-ni-no" for="radio-indent-1">
-      <input id="radio-indent-1" type="radio" name="radio-indent-group" value="Yes">
-      Yes
-    </label>
-    <label class="block-label" for="radio-indent-2">
-      <input id="radio-indent-2" type="radio" name="radio-indent-group" value="No">
-      No
-    </label>
+<div class="form-section">
+  <h2 class="form-section-title">National Insurance number</h2>
+
+  <div class="form-group">
+    <fieldset class="inline">
+      <legend>
+        <span class="form-label">
+          Do you know their National Insurance number?
+        </span>
+      </legend>
+      <div class="form-group form-group-compound">
+        <label class="block-label" data-target="example-ni-no" for="radio-indent-1">
+          <input id="radio-indent-1" type="radio" name="radio-indent-group" value="Yes">
+          Yes
+        </label>
+        <label class="block-label" for="radio-indent-2">
+          <input id="radio-indent-2" type="radio" name="radio-indent-group" value="No">
+          No
+        </label>
+      </div>
+      <div class="panel-indent js-hidden" id="example-ni-no">
+        <label class="form-label" for="national-insurance">National Insurance number</label>
+        <input class="form-control" type="text" id="national-insurance">
+      </div>
+    </fieldset>
   </div>
-  <div class="panel-indent js-hidden" id="example-ni-no">
-    <label class="form-label" for="national-insurance">National Insurance number</label>
-    <input class="form-control" type="text" id="national-insurance">
-  </div>
-</fieldset>
+
+</div>
