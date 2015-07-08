@@ -17,18 +17,20 @@ ol {
 .list-number {
   list-style-type: decimal;
   padding-left: 20px;
-  
+
   @include ie-lte(7) {
     padding-left: 28px;
   }
 }
 
+.list,
 .list-bullet,
 .list-number {
   margin-top: 5px;
   margin-bottom: 20px;
 }
 
+.list li,
 .list-bullet li,
 .list-number li {
   margin-bottom: 5px;
