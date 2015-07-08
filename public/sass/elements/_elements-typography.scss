@@ -190,12 +190,15 @@ code {
 }
 
 // Horizontal rule style
-hr{
+hr {
+  display: block;
   background: $border-colour;
-  border: 0 solid;
+  border: 0;
   height: 1px;
   margin-top: $gutter;
   margin-bottom: $gutter;
+  padding: 0;
+  @include ie-lte(7) {
+    color: $border-colour;
+  }
 }
-
-
