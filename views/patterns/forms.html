@@ -1,0 +1,54 @@
+{{<govuk_template}}
+
+{{$cookieMessage}}
+  {{>cookie_message}}
+{{/cookieMessage}}
+
+{{$head}}
+  {{>head}}
+{{/head}}
+
+{{$propositionHeader}}
+  {{>propositional_navigation}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+{{$content}}
+<main id="content" role="main">
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <a href="/" class="example-back-link">Back to GOV.UK elements</a>
+
+
+        <h1 class="heading-xlarge">
+          Form elements<br>
+          test page
+        </h1>
+        <p class="text">
+          This test page demonstrates GOV.UK elements form styles and is used to check the spacing between elements is consistent.
+        </p>
+
+        <form action="/" method="post">
+
+        </form>
+
+    </div>
+
+    <div class="column-third">
+
+    </div>
+
+  </div>
+
+</main><!-- /#content-->
+{{/content}}
+
+{{$bodyEnd}}
+  {{>scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

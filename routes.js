@@ -70,6 +70,11 @@ module.exports = {
       res.render('patterns/date', {'assetPath' : assetPath });
     });
 
+    // Form elements test page
+    app.get('/patterns/forms', function (req, res) {
+      res.render('patterns/forms', {'assetPath' : assetPath });
+    });
+
     // Radio and checkbox pattern
     app.get('/patterns/radios-checkboxes', function (req, res) {
       res.render('patterns/radios_checkboxes', {'assetPath' : assetPath });
