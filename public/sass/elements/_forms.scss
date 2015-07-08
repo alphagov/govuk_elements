@@ -194,14 +194,6 @@ legend {
   }
 }
 
-// Buttons
-// Ensure buttons are full-width for smaller screens
-form .button {
-  @include media(mobile) {
-    width: 100%;
-  }
-}
-
 
 // 7. Form control widths
 // ==========================================================================
