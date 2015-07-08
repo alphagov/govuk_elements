@@ -6,6 +6,8 @@
 // 1. GOV.UK front end toolkit dependencies
 // 2. Helpers
 // 3. Form wrappers
+//    - Form sections
+//    - Form label and input wrappers
 // 4. Form labels
 // 5. Form hints
 // 6. Form controls
@@ -49,6 +51,26 @@ textarea{
 // 3. Form wrappers
 // ==========================================================================
 
+// Form section
+.form-section {
+  @extend %contain-floats;
+  margin-bottom: $gutter;
+}
+
+
+// Form section title
+.form-section-title {
+  @include bold-24;
+  display: block;
+  clear: both;
+  margin-bottom: 20px;
+}
+
+legend .form-section-title {
+  padding-bottom: 20px;
+}
+
+
 // Form group is used to wrap label and input pairs
 .form-group {
   @extend %contain-floats;
@@ -61,15 +83,6 @@ textarea{
 
   @include media(tablet) {
     margin-bottom: $gutter;
-  }
-}
-
-// Form group related is used to reduce the space between label and input pairs
-.form-group-related {
-  margin-bottom: 10px;
-
-  @include media(tablet) {
-    margin-bottom: 20px;
   }
 }
 
@@ -94,24 +107,34 @@ textarea{
 
 // Form labels, or for legends styled to look like labels
 // TODO: Amend so there is only one label style
-.form-label,
-.form-label-bold {
-  display: block;
-  color: $text-colour;
-}
-
 .form-label {
   @include core-19;
+  line-height: 1;
+  display: block;
+  color: $text-colour;
+  margin-bottom: 5px; // This gives 10px spacing under form labels
 }
 
-.form-label-bold {
-  @include bold-19;
+.form-label + .form-hint {
+  margin-top: 10px;
+}
+
+// .form-label {
+//
+// }
+
+// .form-label {
+//   @include bold-19;
+// }
+
+// Hidden form labels
+.form-label.hidden {
+  display: none;
 }
 
 // Add spacing under spans within labels
 legend {
-  .form-label,
-  .form-label-bold {
+  .form-label {
     padding-bottom: 7px;
   }
 }
@@ -120,34 +143,35 @@ legend {
 // TODO: Move into /forms/_form-validation.scss
 .error legend {
   .form-label,
-  .form-label-bold {
+  .form-label {
     padding-bottom: 0;
   }
 }
 
+// TODO: Remove this
 // Used for paragraphs in-between form elements
-.form-block {
-  @extend %contain-floats;
-  float: left;
-  width: 100%;
+// .form-block {
+//   @extend %contain-floats;
+//   float: left;
+//   width: 100%;
 
-  margin-bottom: 5px;
+//   margin-bottom: 5px;
 
-  @include media(tablet) {
-    margin-top: 10px;
-  }
-}
+//   @include media(tablet) {
+//     margin-top: 10px;
+//   }
+// }
 
 // 5. Form hints
 // ==========================================================================
 
-// Form hints and example text are light grey and sit above a form control
+// Form hints sit above a form control
 .form-hint {
   @include core-19;
   display: block;
-  color: $secondary-text-colour;
   font-weight: normal;
-  margin-bottom: 5px;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 
@@ -163,7 +187,7 @@ legend {
 
   padding: 4px;
   background-color: $white;
-  border: 1px solid $border-colour;
+  border: 2px solid $border-colour;
 
   // Disable webkit appearance and remove rounded corners
   -webkit-appearance: none;
@@ -172,7 +196,8 @@ legend {
   // TODO: Remove 50% width set for tablet and up
   // !! BREAKING CHANGE !!
   @include media(tablet) {
-    width: 50%;
+    // width: 50%;
+    width: 480px;
   }
 
 }
@@ -191,17 +216,38 @@ legend {
 // Checkboxes
 .form-checkbox {
   display: block;
-  margin: $gutter-half 0;
+  margin: 10px 0;
 
   input {
     vertical-align: middle;
-    margin: -2px 5px 0 0;
+    margin: -3px 5px 0 0;
   }
 }
 
 
 // 7. Form control widths
 // ==========================================================================
+
+.form-control-large {
+  width: 100%;
+  @include media(tablet) {
+    width: 480px
+  }
+}
+
+.form-control-medium {
+  width: 100%;
+  @include media(tablet) {
+    width: 320px;
+  }
+}
+
+.form-control-small {
+  width: 100%;
+  @include media(tablet) {
+    width: 130px;
+  }
+}
 
 // TODO: Update these
 // Form control widths
