@@ -1,3 +1,6 @@
+// OLD This has been deprecated in favour of a more generic .inline-form-groups wrapper.
+// See forms.scss line
+
 // Date pattern
 
 // Hide the 'spinner' for webkit
@@ -23,10 +26,8 @@ input[type=number] {
     clear: none;
 
     label {
-      @include core-19;
       display: block;
-      color: $text-colour;
-      margin-bottom: 3px; // This gives 10px spacing under form labels
+      margin-bottom: 5px;
     }
 
     input {

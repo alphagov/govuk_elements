@@ -17,9 +17,9 @@
 {{$content}}
 <main id="content" role="main">
 
-  <div class="grid-row">
-
+  <div class="grid-row section">
     <div class="column-two-thirds">
+
       <a href="/" class="example-back-link">Back to GOV.UK elements</a>
 
       <h1 class="heading-xlarge">
@@ -32,90 +32,296 @@
       </p>
 
     </div>
-
   </div>
 
-  <!--
-  TODO: Link to contents
   <div class="grid-row section">
+    <div class="column-two-thirds">
+      <form action="">
 
-    <div class="column-third">
-      <ul class="list">
-        <li><a href="#label-and-control">Form labels and form controls</a></li>
-        <li><a href="#compound-control">Compound form controls</a></li>
-        <li><a href="#inline-control">Inline form controls</a></li>
-        <li><a href="#fixed-character-width-control">Fixed character width controls</a></li>
-      </ul>
+        <!-- Form labels and controls -->
+        {{> form_labels }}
+
+        <!--Spacing between labels and controls -->
+        {{> form_spacing }}
+
+        <!-- Inline form controls (Date of birth - Day / Month / Year) -->
+        {{> form_date }}
+
+        <!-- Inline form controls (Employment - Month / Year) -->
+        {{> form_inline_form_group }}
+
+        <!-- Inline form controls (Expiry date - Month / Year) -->
+        {{> form_card_details }}
+
+        <!-- Inline button -->
+        {{> form_inline_button }}
+
+        <!-- Form with inline radio buttons -->
+        {{> form_radio_buttons_inline }}
+
+        <!-- Form with checkboxes -->
+        {{> form_checkboxes }}
+
+        <!-- Form with native checkboxes -->
+        {{> form_checkbox_native }}
+
+        <!-- Form with radio buttons -->
+        {{> form_radio_buttons }}
+
+        <!-- Inset checkboxes -->
+        {{> form_inset_checkboxes }}
+
+        <!-- Inset radio buttons -->
+        {{> form_inset_radios }}
+
+        <!-- Form with textarea -->
+        {{> form_texarea }}
+
+        <!-- Form buttons -->
+        <div class="form-section">
+          <!-- Primary buttons, secondary links -->
+          <div class="form-group">
+            <input type="submit" class="button" value="Continue">
+            <ul>
+              <li><a href="#">Skip this section for now</a></li>
+              <li><a href="/">Back</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </form>
     </div>
-    <div class="column-third">
-      <ul class="list">
-        <li><a href="#chunky-checkboxes">"Chunky" checkboxes</a></li>
-        <li><a href="#checkboxes">Regular checkboxes</a></li>
-        <li><a href="#chunky-radio-buttons">"Chunky" radio buttons</a></li>
-        <li><a href="#textareas">Textareas</a></li>
-        <li><a href="#select-boxes">Select boxes</a></li>
-        <li><a href="#conditional-reveal">Conditionally revealing content</a></li>
-      </ul>
-    </div>
+  </div>
 
-  </div> -->
-
-  <div class="grid-row">
-
+  <!-- Form widths -->
+  <div class="grid-row section">
     <div class="column-two-thirds">
 
+      <h2 class="heading-large">Form widths</h2>
+      <p>
+        Use the classnames below to set widths from 40px to 480px for tablet and up.
+        For smaller screens, form widths are 100% width.
+      </p>
+      <p>
+        Examples of with expected content are shown to the right.
+      </p>
 
-      {{> form_labels }}
+    </div>
+  </div>
 
-      {{> form_spacing }}
+  <div class="grid-row section">
+    <div class="column-full">
 
-      <div class="form-section">
-        {{> form_hint_text }}
+      <div class="inline-form-groups">
+        <div class="form-group">
+          <label class="form-label" for="form-xxsmall"><code>.xxsmall</code><span class="font-xxsmall"> - 40px</span></label>
+          <input class="form-control form-control-xxsmall" type="text" id="form-xxsmall">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="form-xxsmall-month">Month</label>
+          <input class="form-control form-control-xxsmall" type="text" id="form-xxsmall-month" value="12">
+        </div>
       </div>
 
-      <form>
-        <div class="form-section">
-          {{> form_radio_buttons_inline }}
+     <div class="inline-form-groups">
+        <div class="form-group">
+          <label class="form-label" for="form-xsmall"><code>.xsmall</code> - 80px</label>
+          <input class="form-control form-control-xsmall" type="text" id="form-xsmall">
         </div>
-      </form>
+         <div class="form-group">
+          <label class="form-label" for="form-xsmall-year">Year</label>
+          <input class="form-control form-control-xsmall" type="text" id="form-xsmall-year" value="2015">
+        </div>
+      </div>
 
-      <form>
-        <div class="form-section" id="chunky-checkboxes">
-        <h2 class="form-section-title">Preferred method of contact</h2>
-          {{> form_radio_buttons }}
+      <div class="inline-form-groups">
+        <div class="form-group">
+          <label class="form-label" for="form-small"><code>.small</code> - 130px</label>
+          <input class="form-control form-control-small" type="text" id="form-small">
         </div>
-      </form>
+        <div class="form-group">
+          <label class="form-label" for="form-small-postcode">Postcode</label>
+          <input class="form-control form-control-small" type="text" id="form-small-postcode" value="WC5 6NH">
+        </div>
+      </div>
 
-      <form>
-        <div class="form-section">
-          {{> form_checkboxes }}
+      <div class="inline-form-groups">
+        <div class="form-group">
+          <label class="form-label" for="form-medium"><code>.medium</code> - 180px</label>
+          <input class="form-control form-control-medium" type="text" id="form-medium">
         </div>
-      </form>
+        <div class="form-group">
+          <label class="form-label" for="form-medium-home-phome">Home phone number</label>
+          <input class="form-control form-control-medium" type="text" id="form-medium-home-phone" value="020 7496 0000">
+        </div>
+      </div>
 
-      <form>
-        <div class="form-section">
-          {{> form_checkbox_native }}
+      <div class="inline-form-groups">
+        <div class="form-group">
+          <label class="form-label" for="form-medium"><code>.medium</code> - 180px</label>
+          <input class="form-control form-control-medium" type="text" id="form-medium">
         </div>
-      </form>
+        <div class="form-group">
+          <label class="form-label" for="form-medium-complex-phone">Complex phone number</label>
+          <input class="form-control form-control-medium" type="text" id="form-medium-complex-phone" value="+1-1-800-275-2273">
+        </div>
+      </div>
 
-      <form>
-        <div class="form-section">
-          {{> form_inset_radios }}
+      <div class="inline-form-groups">
+        <div class="form-group">
+          <label class="form-label" for="form-medium"><code>.medium</code> - 180px</label>
+          <input class="form-control form-control-medium" type="text" id="form-medium">
         </div>
-      </form>
+        <div class="form-group">
+          <label class="form-label" for="form-medium-ni-number">National Insurance number (medium)</label>
+          <input class="form-control form-control-medium" type="text" id="form-medium-ni-number" value="VO 12 34 56 D">
+        </div>
+      </div>
 
-      <form>
-        <div class="form-section">
-          {{> form_inset_checkboxes }}
+      <div class="inline-form-groups">
+        <div class="form-group">
+          <label class="form-label" for="form-large"><code>.large</code> - 220px</label>
+          <input class="form-control form-control-large" type="text" id="form-large">
         </div>
-      </form>
+      </div>
+
+      <div class="inline-form-groups">
+        <div class="form-group">
+          <label class="form-label" for="form-xlarge"><code>.xlarge</code> - 320px</label>
+          <input class="form-control form-control-xlarge" type="text" id="form-xlarge">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="town-or-city">Town or city</label>
+          <input class="form-control form-control-xlarge" type="text" id="town-or-city">
+        </div>
+      </div>
+
+      <div class="inline-form-groups">
+        <div class="form-group">
+          <label class="form-label" for="form-default">default - 480px</label>
+          <input class="form-control" type="text" id="form-default">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="form-default">Address</label>
+          <input class="form-control" type="text" id="form-default">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="form-full">full width - 100% width</label>
+        <input class="form-control form-control-full" type="text" id="form-full">
+      </div>
 
     </div>
+  </div>
 
-    <div class="column-third">
+  <!-- Form widths -->
+  <div class="grid-row section">
+    <div class="column-two-thirds">
+
+      <h2 class="heading-large">Inline form elements</h2>
+      <p>
+        The <code>.inline-form-groups</code> class is used on the parent container to float each <code>.form-group</code>
+        left, with a 10px right margin.
+      </p>
+
+      <div class="inline-form-groups">
+        <div class="form-group">
+          <label class="form-label" for="form-xxsmall">40px</label>
+          <input class="form-control form-control-xxsmall" type="text" id="form-xxsmall">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="form-xsmall">80px</label>
+          <input class="form-control form-control-xsmall" type="text" id="form-xsmall">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="form-small">130px</label>
+        <input class="form-control form-control-small" type="text" id="form-small">
+      </div>
+
+      <div class="inline-form-groups">
+        <div class="form-group">
+          <label class="form-label" for="form-small">130px</label>
+          <input class="form-control form-control-small" type="text" id="form-small">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="form-xxsmall">40px</label>
+          <input class="form-control form-control-xxsmall" type="text" id="form-xxsmall">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="form-medium">180px</label>
+        <input class="form-control form-control-medium" type="text" id="form-medium">
+      </div>
+
+      <div class="inline-form-groups">
+        <div class="form-group">
+          <label class="form-label" for="form-small">130px</label>
+          <input class="form-control form-control-small" type="text" id="form-small">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="form-xsmall">80px</label>
+          <input class="form-control form-control-xsmall" type="text" id="form-xsmall">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="form-large">220px</label>
+        <input class="form-control form-control-large" type="text" id="form-large">
+      </div>
+
+      <div class="inline-form-groups">
+        <div class="form-group">
+          <label class="form-label" for="form-large">220px</label>
+          <input class="form-control form-control-large" type="text" id="form-large">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="form-xxsmall">40px</label>
+          <input class="form-control form-control-xxsmall" type="text" id="form-xxsmall">
+        </div>
+      </div>
+
+      <div class="inline-form-groups">
+        <div class="form-group">
+          <label class="form-label" for="form-large">220px</label>
+          <input class="form-control form-control-large" type="text" id="form-large">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="form-xsmall">80px</label>
+          <input class="form-control form-control-xsmall" type="text" id="form-xsmall">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="form-xlarge">320px</label>
+        <input class="form-control form-control-xlarge" type="text" id="form-xlarge">
+      </div>
+
+      <div class="inline-form-groups">
+        <div class="form-group">
+          <label class="form-label" for="form-xlarge">320px</label>
+          <input class="form-control form-control-xlarge" type="text" id="form-xlarge">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="form-xsmall">80px</label>
+          <input class="form-control form-control-xsmall" type="text" id="form-xsmall">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="form-default">480px</label>
+        <input class="form-control" type="text" id="form-default">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="form-full">100%</label>
+        <input class="form-control form-control-full" type="text" id="form-full">
+      </div>
 
     </div>
-
   </div>
 
 </main><!-- /#content-->

@@ -86,19 +86,31 @@ legend .form-section-title {
   }
 }
 
-// Form group compound is used to reduce the space between label and input pairs
-.form-group-compound {
+.form-group-title {
+  @include bold-19;
+  display: block;
+  clear: both;
+  margin-top: 0;
   margin-bottom: 10px;
 }
 
-// Form title
-// TODO: Remove this (duplication of existing heading styles)
-.form-title {
-  margin-bottom: $gutter;
-
-  @include media(tablet) {
-    margin-bottom: ($gutter*1.5);
+// Inline form groups is used to float form group wrappers next to each other
+.inline-form-groups {
+  @extend %contain-floats;
+  .form-group {
+    float: left;
+    margin-right: 10px;
+    clear: none;
+    width: 100%;
+    @include media (tablet) {
+      width: auto;
+    }
   }
+}
+
+// Form group compound is used to reduce the space between label and input pairs
+.form-group-compound {
+  margin-bottom: 10px;
 }
 
 
@@ -114,18 +126,6 @@ legend .form-section-title {
   color: $text-colour;
   margin-bottom: 5px; // This gives 10px spacing under form labels
 }
-
-.form-label + .form-hint {
-  margin-top: 10px;
-}
-
-// .form-label {
-//
-// }
-
-// .form-label {
-//   @include bold-19;
-// }
 
 // Hidden form labels
 .form-label.hidden {
@@ -148,30 +148,18 @@ legend {
   }
 }
 
-// TODO: Remove this
-// Used for paragraphs in-between form elements
-// .form-block {
-//   @extend %contain-floats;
-//   float: left;
-//   width: 100%;
 
-//   margin-bottom: 5px;
-
-//   @include media(tablet) {
-//     margin-top: 10px;
-//   }
-// }
-
-// 5. Form hints
+// 5. Form text
 // ==========================================================================
 
-// Form hints sit above a form control
-.form-hint {
+// Form text sits inside a label
+.form-hint,
+.form-text {
   @include core-19;
   display: block;
   font-weight: normal;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 
@@ -184,7 +172,6 @@ legend {
   @include box-sizing(border-box);
   @include core-19;
   width: 100%;
-
   padding: 4px;
   background-color: $white;
   border: 2px solid $border-colour;
@@ -228,17 +215,40 @@ legend {
 // 7. Form control widths
 // ==========================================================================
 
+// xxsmall (40px)
+// xsmall (80px)
+// small (130px)
+// medium (180px)
+// large (230px)
+// xlarge (320px)
+
+// full (100%)
+
+.form-control-full {
+  width: 100%;
+  @include media(tablet) {
+    width: 100%;
+  }
+}
+
+.form-control-xlarge {
+  width: 100%;
+  @include media(tablet) {
+    width: 320px;
+  }
+}
+
 .form-control-large {
   width: 100%;
   @include media(tablet) {
-    width: 480px
+    width: 220px;
   }
 }
 
 .form-control-medium {
   width: 100%;
   @include media(tablet) {
-    width: 320px;
+    width: 180px;
   }
 }
 
@@ -249,7 +259,21 @@ legend {
   }
 }
 
-// TODO: Update these
+.form-control-xsmall {
+  width: 100%;
+  @include media(tablet) {
+    width: 80px;
+  }
+}
+
+.form-control-xxsmall {
+  width: 100%;
+  @include media(tablet) {
+    width: 40px;
+  }
+}
+
+
 // Form control widths
 
 .form-control-3-4 {
@@ -312,3 +336,10 @@ legend {
 
 // "Chunky" radios and checkboxes
 @import "forms/form-block-labels";
+
+// Inline buttons
+.button-inline {
+  position: relative;
+  top: 23px;
+}
+
