@@ -202,10 +202,6 @@ p {
   text-decoration: none;
   border-bottom: 1px solid $black;
 
-  // Test that arrows are identical:
-  // background: file-url("icon-arrow-left.png") no-repeat 0 4px;
-  // opacity: 0.5;
-
   // Back arrow - left pointing black arrow
   &::before {
     content: '';
