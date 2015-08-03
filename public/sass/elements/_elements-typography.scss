@@ -178,6 +178,69 @@ p {
   color: $link-colour;
 }
 
+// Back link styles - with left pointing arrow
+
+.link-back {
+  @include inline-block;
+  position: relative;
+
+  @include core-16;
+
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
+  padding-left: 14px;
+
+  color: $black;
+
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: $black;
+  }
+
+  text-decoration: none;
+  border-bottom: 1px solid $black;
+
+  // Test that arrows are identical:
+  // background: file-url("icon-arrow-left.png") no-repeat 0 4px;
+  // opacity: 0.5;
+
+  // Back arrow - left pointing black arrow
+  &::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+
+    border-top: 5px solid transparent;
+    border-right: 6px solid #0b0c0c;
+    border-bottom: 5px solid transparent;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -6px;
+  }
+
+  // Improve arrow shape in Firefox
+  @-moz-document url-prefix() {
+    &::before {
+      border-top: 5px dotted rgba(255, 0, 0, 0);
+      border-bottom: 5px dotted rgba(255, 0, 0, 0);
+    }
+  }
+
+  // Fallback
+  // IE8 doesn't support rgba and only supports the single colon syntax for :before
+  // IE7 doesn't support pseudo-elements, let's fallback to an image instead.
+  // Ref: http://caniuse.com/#search=%3Abefore, http://caniuse.com/#search=rgba
+  @include ie-lte(8) {
+   background: file-url("icon-arrow-left.png") no-repeat 0 4px;
+  }
+
+}
+
 // Code styles
 pre,
 code {
