@@ -33,12 +33,6 @@
 
 }
 
-// Used to space the "back" link on example pages
-.example-back-link {
-  @include inline-block;
-  margin-top: $gutter;
-}
-
 // Hide, but not for screenreaders
 .visuallyhidden {
   position: absolute;
