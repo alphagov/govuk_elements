@@ -22,7 +22,7 @@
 
   margin-bottom: 10px;
   cursor: pointer; // Encourage clicking on block labels
-  min-width: 200px;
+  // min-width: 200px;
 
   @include media(tablet) {
     float: left;
