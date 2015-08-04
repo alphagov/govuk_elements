@@ -55,6 +55,10 @@ textarea{
 .form-section {
   @extend %contain-floats;
   margin-bottom: $gutter;
+  @include media(tablet) {
+    margin-bottom: $gutter*2;
+  }
+  background: #B7D3FB // light blue
 }
 
 
@@ -63,11 +67,26 @@ textarea{
   @include bold-24;
   display: block;
   clear: both;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  @include media(tablet) {
+    margin-bottom: 20px;
+  }
+
+  background: #FFEAB7; // light peach
+
+}
+
+legend {
+  @extend %contain-floats;
 }
 
 legend .form-section-title {
-  padding-bottom: 20px;
+  // float: left;
+  width: 100%;
+  margin-bottom: 10px;
+  @include media(tablet) {
+    margin-bottom: 20px;
+  }
 }
 
 
@@ -84,6 +103,8 @@ legend .form-section-title {
   @include media(tablet) {
     margin-bottom: $gutter;
   }
+
+  background: #FFEAB7; // light peach
 }
 
 .form-group-title {
@@ -91,7 +112,7 @@ legend .form-section-title {
   display: block;
   clear: both;
   margin-top: 0;
-  margin-bottom: 10px;
+  border-bottom: 10px solid white;
 }
 
 // Inline form groups is used to float form group wrappers next to each other
@@ -100,6 +121,7 @@ legend .form-section-title {
   .form-group {
     float: left;
     margin-right: 10px;
+    margin-bottom: 0;
     clear: none;
     width: 100%;
     @include media (tablet) {
@@ -125,6 +147,7 @@ legend .form-section-title {
   display: block;
   color: $text-colour;
   margin-bottom: 5px; // This gives 10px spacing under form labels
+  background: #A3D671; // light green
 }
 
 // Hidden form labels
@@ -155,11 +178,21 @@ legend {
 // Form text sits inside a label
 .form-hint,
 .form-text {
+  @extend %contain-floats;
   @include core-19;
   display: block;
   font-weight: normal;
   margin-top: 0;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  @include media(tablet) {
+    margin-bottom: 20px;
+  }
+  background-color: #EAA8FF; // light purple
+
+  // Remove margins on lists within hint text
+  .list-bullet {
+    margin-bottom: 0;
+  }
 }
 
 
@@ -215,13 +248,13 @@ legend {
 // 7. Form control widths
 // ==========================================================================
 
-// xxsmall (40px)
-// xsmall (80px)
-// small (130px)
-// medium (180px)
-// large (230px)
-// xlarge (320px)
-
+// xxsmall   40px
+// xsmall    80px
+// small     130px
+// medium    180px
+// large     230px
+// xlarge    360px
+// default - 480px
 // full (100%)
 
 .form-control-full {
@@ -234,14 +267,14 @@ legend {
 .form-control-xlarge {
   width: 100%;
   @include media(tablet) {
-    width: 320px;
+    width: 360px;
   }
 }
 
 .form-control-large {
   width: 100%;
   @include media(tablet) {
-    width: 220px;
+    width: 230px;
   }
 }
 
@@ -255,7 +288,7 @@ legend {
 .form-control-small {
   width: 100%;
   @include media(tablet) {
-    width: 130px;
+    width: 120px;
   }
 }
 
@@ -340,6 +373,11 @@ legend {
 // Inline buttons
 .button-inline {
   position: relative;
-  top: 23px;
+  top: 10px;
+  /* TODO FIX THIS SPACING */
+  @include media(tablet) {
+    position: relative;
+    top: 23px;
+  }
 }
 
