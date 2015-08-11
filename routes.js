@@ -7,11 +7,6 @@ module.exports = {
 
     });
 
-    // GOV.UK elements snippets
-    app.get('/snippets', function (req, res) {
-      res.render('snippets', {'assetPath' : assetPath });
-    });
-
     // GOV.UK elements example pages
 
     app.get('/examples/grid-layout', function (req, res) {
