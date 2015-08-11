@@ -110,19 +110,19 @@ module.exports = function (grunt) {
     },
 
     // Lint scss files
-    // scsslint: {
-    //   allFiles: [
-    //     'public/sass/elements/*.scss',
-    //     'public/sass/elements/forms/*.scss'
-    //   ],
-    //   options: {
-    //     bundleExec: false,
-    //     colorizeOutput: true,
-    //     config: '.scss-lint.yml',
-    //     force: true,
-    //     reporterOutput: null
-    //   },
-    // }
+    scsslint: {
+      allFiles: [
+        'public/sass/elements/*.scss',
+        'public/sass/elements/forms/*.scss'
+      ],
+      options: {
+        bundleExec: false,
+        colorizeOutput: true,
+        config: '.scss-lint.yml',
+        force: true,
+        reporterOutput: null
+      },
+    }
 
   });
 
@@ -132,8 +132,8 @@ module.exports = function (grunt) {
     'grunt-sass',
     'grunt-nodemon',
     'grunt-text-replace',
-    'grunt-concurrent'
-    //'grunt-scss-lint'
+    'grunt-concurrent',
+    'grunt-scss-lint'
   ].forEach(function (task) {
     grunt.loadNpmTasks(task);
   });
@@ -158,8 +158,12 @@ module.exports = function (grunt) {
     'copy:govuk_frontend_toolkit_img',
     'replace',
     'sass',
-    //'scsslint',
     'concurrent:target'
   ]);
+
+  grunt.registerTask(
+    'lint',
+    'scsslint'
+  );
 
 };
