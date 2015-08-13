@@ -14,31 +14,17 @@
 
 
 // ==========================================================================
-// Service Design Manual styles
+// Service Design Manual breadcrumb
 // ==========================================================================
 
-@import "service-design-manual/helpers/page-header";
 @import "service-design-manual/helpers/breadcrumbs";
 
-// Remove margins set by Service Design Manual header
-#global-breadcrumb,
-.page-header {
-  margin-left: 0;
-  margin-right: 0;
-}
 
 // ==========================================================================
 // Elements page styles
 // ==========================================================================
 
-// These are example styles, used only for the Elements index page
-
-// Headings
-// Used with heading-large = 36px
-.heading-with-border {
-  border-top: 1px solid $border-colour;
-  padding-top: em(45, 36);
-}
+// These are example styles, used only for the elements pages
 
 // Use for paragraphs before lists
 .lead-in {
