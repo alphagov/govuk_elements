@@ -26,6 +26,13 @@
 
 // These are example styles, used only for the elements pages
 
+// Increase spacing above headings
+.heading-xlarge {
+  @include media(tablet) {
+    margin-top: em(60, 48);
+  }
+}
+
 // Use for paragraphs before lists
 .lead-in {
   margin-bottom: 0;
