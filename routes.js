@@ -7,8 +7,43 @@ module.exports = {
 
     });
 
-    // GOV.UK elements example pages
+    // GOV.UK elements guide pages
+    app.get('/layout', function (req, res) {
+      res.render('guide-layout', {'assetPath' : assetPath });
+    });
 
+    app.get('/typography', function (req, res) {
+      res.render('guide-typography', {'assetPath' : assetPath });
+    });
+
+    app.get('/colour', function (req, res) {
+      res.render('guide-colour', {'assetPath' : assetPath });
+    });
+
+    app.get('/icons-images', function (req, res) {
+      res.render('guide-icons-images', {'assetPath' : assetPath });
+    });
+
+    app.get('/data', function (req, res) {
+      res.render('guide-data', {'assetPath' : assetPath });
+    });
+
+    app.get('/buttons', function (req, res) {
+      res.render('guide-buttons', {'assetPath' : assetPath });
+    });
+    app.get('/forms', function (req, res) {
+      res.render('guide-forms', {'assetPath' : assetPath });
+    });
+
+    app.get('/errors', function (req, res) {
+      res.render('guide-errors', {'assetPath' : assetPath });
+    });
+
+    app.get('/alpha-beta', function (req, res) {
+      res.render('guide-alpha-beta', {'assetPath' : assetPath });
+    });
+
+    // GOV.UK elements example pages
     app.get('/examples/grid-layout', function (req, res) {
       res.render('examples/grid_layout', {'assetPath' : assetPath });
     });
