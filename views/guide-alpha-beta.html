@@ -1,0 +1,88 @@
+{{<layout}}
+
+{{$pageTitle}}GOV.UK elements{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+
+  {{>phase_banner}}
+  {{>service_manual_breadcrumb}}
+
+  <h1 class="heading-xlarge">
+    <span class="heading-secondary">GOV.UK elements</span>
+    Alpha and beta banners
+  </h1>
+
+  <p class="lede text">
+    You have to use an alpha banner if your thing is in alpha, and a beta banner if it’s in beta.
+  </p>
+
+  <h2 class="heading-medium lead-in">Contents</h2>
+  <div class="grid-row">
+    <div class="column-third">
+      <ul class="list">
+        <li><a href="#alpha-banner">Alpha banner</a></li>
+        <li><a href="#beta-banner">Beta banner</a></li>
+      </ul>
+    </div>
+    <div class="column-third">
+      <ul class="list">
+        <li><a href="#creating-phase-banners">Creating phase banners</a></li>
+        <li><a href="#further-reading">Further reading</a></li>
+      </ul>
+    </div>
+  </div>
+
+<h3 class="heading-medium" id="alpha-banner">Alpha banner</h3>
+<div class="example">
+  {{> phase_banner_alpha }}
+</div>
+
+<pre>
+<code class="language-markup">
+  {{> phase_banner_alpha }}
+</code>
+</pre>
+
+<h3 class="heading-medium" id="beta-banner">Beta banner</h3>
+<div class="example">
+  {{> phase_banner_beta }}
+</div>
+
+<pre>
+<code class="language-markup">
+  {{> phase_banner_beta }}
+</code>
+</pre>
+
+  <h3 class="heading-medium" id="creating-phase-banners">Creating alpha and beta banners</h3>
+  <p class="text">
+    Use the GOV.UK Sass phase banner mixin &ndash; find this in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/design-patterns/_alpha-beta.scss">alpha-beta.scss</a> file
+  </p>
+
+  <h3 class="heading-medium" id="further-reading">Further reading</h3>
+  <ul class="list">
+    <li>
+      <a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/alpha-beta.html">When and how to use the GOV.UK alpha and beta banners</a>
+    </li>
+    <li>
+      <a href="https://designnotes.blog.gov.uk/2014/03/26/betas-on-gov-uk/" rel="external">
+        Read about beta content on GOV.UK in this blog post
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/docs/mixins.md#alpha-beta" rel="external">
+        GOV.UK frontend toolkit - Phase banner
+      </a>
+    </li>
+  </ul>
+
+</main><!-- / #content -->
+{{/content}}
+
+{{$bodyEnd}}
+  {{>scripts}}
+{{/bodyEnd}}
+
+{{/layout}}
