@@ -68,7 +68,8 @@ select {
   #global-header a:after {
     content: ""; }
   #global-header img {
-    display: none; }
+    border: 0;
+    vertical-align: middle; }
 
 /* hide the unnecessary page elements */
 body footer,
