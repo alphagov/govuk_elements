@@ -41,7 +41,7 @@
 
     <h2 class="heading-medium">Looking for the HTML?</h2>
     <p>
-      The HTML snippets can be found in the <a href="{{ site.baseurl}}/snippets/">GOV.UK elements snippets page</a>.
+      Code snippets can be found under each example, these can be used to help with prototyping.
     </p>
 
   </div>
@@ -86,18 +86,43 @@
       {{> layout_grid_halves }}
     </div>
 
+<pre>
+<code class="language-markup">
+  {{> layout_grid_halves }}
+</code>
+</pre>
+
     <h4 class="heading-small">Thirds</h4>
     <div class="example example-grid">
       {{> layout_grid_thirds }}
     </div>
+
+<pre>
+<code class="language-markup">
+  {{> layout_grid_thirds }}
+</code>
+</pre>
+
     <div class="example example-grid">
       {{> layout_grid_thirds_reversed }}
     </div>
+
+<pre>
+<code class="language-markup">
+  {{> layout_grid_thirds_reversed }}
+</code>
+</pre>
 
     <h4 class="heading-small">Quarters</h4>
     <div class="example example-grid">
       {{> layout_grid_quarters }}
     </div>
+
+<pre>
+<code class="language-markup">
+  {{> layout_grid_quarters }}
+</code>
+</pre>
 
     <p>
       <a href="https://designpatterns.hackpad.com/GOV.UK-elements-feedback-sKrDyQxcfA2#:h=Layout" rel="external">Discuss layout on our Hackpad</a>
@@ -132,6 +157,12 @@
       {{> typography_headings }}
     </div>
 
+<pre>
+<code class="language-markup">
+  {{> typography_headings }}
+</code>
+</pre>
+
     <h3 class="heading-medium" id="typography-lead-paragraph">
       Lead paragraph
     </h3>
@@ -144,6 +175,12 @@
         {{> typography_lead_paragraph }}
       </div>
     </div>
+
+<pre>
+<code class="language-markup">
+  {{> typography_lead_paragraph }}
+</code>
+</pre>
 
     <h3 class="heading-medium" id="typography-body-copy">
       Body copy
@@ -164,6 +201,12 @@
       </div>
     </div>
 
+<pre>
+<code class="language-markup">
+  {{> typography_paragraphs }}
+</code>
+</pre>
+
     <h3 class="heading-medium" id="typography-links">Links</h3>
     <ul class="list-bullet text">
       <li>links within body copy should be blue and underlined</li>
@@ -177,6 +220,12 @@
       </div>
     </div>
 
+<pre>
+<code class="language-markup">
+  {{> typography_links }}
+</code>
+</pre>
+
     <h3 class="heading-medium" id="typography-lists">Lists</h3>
     <p class="text">
       List items start with a lowercase letter and have no full stop at the end.
@@ -184,6 +233,12 @@
     <div class="example">
       {{> typography_lists }}
     </div>
+
+<pre>
+<code class="language-markup">
+  {{> typography_lists }}
+</code>
+</pre>
 
     <h3 class="heading-medium" id="typography-inset-text">Inset text</h3>
     <p class="text">
@@ -197,6 +252,12 @@
         {{> typography_inset_text }}
       </div>
     </div>
+
+<pre>
+<code class="language-markup">
+  {{> typography_inset_text }}
+</code>
+</pre>
 
     <p>
       <a href="https://designpatterns.hackpad.com/GOV.UK-elements-feedback-sKrDyQxcfA2#:h=Typography" rel="external">Discuss typography on our Hackpad</a>
@@ -213,6 +274,13 @@
     <div class="example">
       {{> typography_progressive_disclosure }}
     </div>
+
+<pre>
+<code class="language-markup">
+  {{> typography_progressive_disclosure }}
+</code>
+</pre>
+
     <p>
       <a href="https://designpatterns.hackpad.com/Progressive-disclosure-mi03xhbZQpu" rel="external">Discuss progressive disclosure on our Hackpad</a>
     </p>
@@ -690,6 +758,12 @@
       {{> data_table_numeric }}
     </div>
 
+<pre>
+<code class="language-markup">
+  {{> data_table_numeric }}
+</code>
+</pre>
+
     <p>
       Not all content in tables should be right aligned.
     </p>
@@ -699,6 +773,12 @@
     <div class="example">
       {{> data_table }}
     </div>
+
+<pre>
+<code class="language-markup">
+  {{> data_table }}
+</code>
+</pre>
 
     <p>
       <a href="https://designpatterns.hackpad.com/Tables-AXM1FinduJR" rel="external">Discuss tables on our Hackpad</a>
@@ -739,6 +819,12 @@
     <div class="example">
       {{> form_labels }}
     </div>
+
+<pre>
+<code class="language-markup">
+  {{> form_labels }}
+</code>
+</pre>
 
     <h3 class="heading-medium" id="form-fields">Form fields</h3>
     <div class="text">
@@ -782,6 +868,12 @@
       {{> form_spacing }}
     </div>
 
+<pre>
+<code class="language-markup">
+  {{> form_spacing }}
+</code>
+</pre>
+
     <h3 class="heading-medium"  id="form-hint-text">Hint text</h3>
     <ul class="list-bullet text">
       <li>don't use placeholder text in form fields, as this will disappear once content is entered into the form field</li>
@@ -793,6 +885,12 @@
     <div class="example">
       {{> form_hint_text }}
     </div>
+
+<pre>
+<code class="language-markup">
+  {{> form_hint_text }}
+</code>
+</pre>
 
     <h3 class="heading-medium" id="form-select-boxes">Drop-down lists</h3>
     <div class="text">
@@ -820,11 +918,23 @@
       </form>
     </div>
 
+<pre>
+<code class="language-markup">
+  {{> form_radio_buttons_inline }}
+</code>
+</pre>
+
     <div class="example">
       <form>
         {{> form_radio_buttons }}
       </form>
     </div>
+
+<pre>
+<code class="language-markup">
+  {{> form_radio_buttons }}
+</code>
+</pre>
 
     <h3 class="heading-medium" id="form-checkboxes">Checkboxes</h3>
     <ul class="list-bullet text">
@@ -838,6 +948,12 @@
       </form>
     </div>
 
+<pre>
+<code class="language-markup">
+  {{> form_checkboxes }}
+</code>
+</pre>
+
     <div class="text">
       <p>Large hit areas aren't always appropriate.</p>
     </div>
@@ -847,6 +963,12 @@
         {{> form_checkbox_native }}
       </form>
     </div>
+
+<pre>
+<code class="language-markup">
+  {{> form_checkbox_native }}
+</code>
+</pre>
 
     <div class="text">
       <p>
@@ -874,6 +996,12 @@
       </form>
     </div>
 
+<pre>
+<code class="language-markup">
+  {{> form_inset_radios }}
+</code>
+</pre>
+
     <p>
       Click on "Citizen of a different country" to see how this works.
     </p>
@@ -882,6 +1010,12 @@
         {{> form_inset_checkboxes }}
       </form>
     </div>
+
+<pre>
+<code class="language-markup">
+  {{> form_inset_checkboxes }}
+</code>
+</pre>
 
     <p>
       <a href="https://designpatterns.hackpad.com/GOV.UK-elements-feedback-sKrDyQxcfA2#:h=Forms" rel="external">Discuss forms on our Hackpad</a>
@@ -907,6 +1041,12 @@
       {{> buttons_button }}
     </div>
 
+<pre>
+<code class="language-markup">
+  {{> buttons_button }}
+</code>
+</pre>
+
     <p class="text">
       Launch your service with a Start now button.
     </p>
@@ -914,6 +1054,12 @@
     <div class="example">
       {{> buttons_button_start_now }}
     </div>
+
+<pre>
+<code class="language-markup">
+  {{> buttons_button_start_now }}
+</code>
+</pre>
 
     <p class="text">
       Align the primary action button to the left edge of your form, in the user's line of sight.
@@ -982,6 +1128,12 @@
       <button class="button" disabled="disabled">Primary button</button>
     </div>
 
+<pre>
+<code class="language-markup">
+  {{> buttons_button_disabled }}
+</code>
+</pre>
+
     <p>
       <a href="https://designpatterns.hackpad.com/Navigation-buttons-continue-next-previous-zoP1sKiW3y4" rel="external">Discuss buttons on our Hackpad</a>
     </p>
@@ -1018,6 +1170,12 @@
       {{> form_error_radio_show_errors }}
     </div>
 
+<pre>
+<code class="language-markup">
+  {{> form_error_radio_show_errors }}
+</code>
+</pre>
+
     <h4 class="text heading-small panel-indent">
       The error summary must appear at the top of the page, so it is visible when the page is refreshed and is immediately read out by assistive technology.
     </h4>
@@ -1047,6 +1205,12 @@
     <div class="example example-error">
       {{> form_error_multiple_show_errors }}
     </div>
+
+<pre>
+<code class="language-markup">
+  {{> form_error_multiple_show_errors }}
+</code>
+</pre>
 
     <p class="text">
       If users are regularly making multiple errors on a page this indicates that your page has either too many questions, or that the question needs to be rewritten in plain English.
@@ -1095,9 +1259,21 @@
       {{> phase_banner_alpha }}
     </div>
 
+<pre>
+<code class="language-markup">
+  {{> phase_banner_alpha }}
+</code>
+</pre>
+
     <div class="example">
       {{> phase_banner_beta }}
     </div>
+
+<pre>
+<code class="language-markup">
+  {{> phase_banner_beta }}
+</code>
+</pre>
 
     <h3 class="heading-medium" id="guide-alpha-beta-govuk">Things on GOV.UK</h3>
     <p class="text">
