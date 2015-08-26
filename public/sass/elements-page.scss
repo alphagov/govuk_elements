@@ -43,7 +43,7 @@
   margin-bottom: ($gutter*1.5);
 }
 
-// Increase size of number
+// Index page - large numbers
 .list-elements-index {
   font-size: 200%;
   font-weight: bold;
@@ -52,6 +52,11 @@
 
 .list-elements-index li {
   font-size: 50%;
+}
+
+// Page contents
+.list-contents li {
+  @include core-16;
 }
 
 
