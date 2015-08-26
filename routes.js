@@ -75,5 +75,10 @@ module.exports = {
       res.render('patterns/radios_checkboxes', {'assetPath' : assetPath });
     });
 
+    // Form element test page
+    app.get('/test/form-elements', function (req, res) {
+      res.render('test/form_elements', {'assetPath' : assetPath });
+    });
+
   }
 };
