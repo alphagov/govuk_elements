@@ -43,6 +43,17 @@
   margin-bottom: ($gutter*1.5);
 }
 
+// Increase size of number
+.list-elements-index {
+  font-size: 200%;
+  font-weight: bold;
+  padding-left: 27px;
+}
+
+.list-elements-index li {
+  font-size: 50%;
+}
+
 
 // Example boxes
 // ==========================================================================
