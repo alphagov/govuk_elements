@@ -136,11 +136,11 @@ a:active {
   color: #2e8aca; }
 
 a[rel="external"]:after {
-  background-image: url(external-links/external-link.png?0.14.3);
+  background-image: url(external-links/external-link.png?0.15.0);
   background-repeat: no-repeat; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     a[rel="external"]:after {
-      background-image: url(external-links/external-link-24x24.png?0.14.3);
+      background-image: url(external-links/external-link-24x24.png?0.15.0);
       background-size: 12px 400px; } }
 a[rel="external"]:after {
   content: "\A0\A0\A0\A0";
@@ -154,11 +154,11 @@ a[rel="external"]:hover:after {
 .external-link:hover:after {
   background-position: right 0px; }
 .external-link:after {
-  background-image: url(external-links/external-link-black-12x12.png?0.14.3);
+  background-image: url(external-links/external-link-black-12x12.png?0.15.0);
   background-repeat: no-repeat; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     .external-link:after {
-      background-image: url(external-links/external-link-black-24x24.png?0.14.3);
+      background-image: url(external-links/external-link-black-24x24.png?0.15.0);
       background-size: 12px 400px; } }
 
 /*
@@ -365,10 +365,10 @@ button:focus,
     margin-bottom: -3px;
     padding-top: 2px;
     border-bottom: 1px solid transparent;
-    background: url(images/gov.uk_logotype_crown.png?0.14.3) no-repeat;
+    background: url(images/gov.uk_logotype_crown.png?0.15.0) no-repeat;
     background-size: 35px 31px;
     background-position: 0 0;
-    background-image: url(images/gov.uk_logotype_crown-1x.png?0.14.3); }
+    background-image: url(images/gov.uk_logotype_crown-1x.png?0.15.0); }
     #global-header #logo img {
       position: relative;
       top: -2px;
@@ -611,10 +611,10 @@ button:focus,
             height: 17px;
             overflow: hidden;
             text-indent: -999em;
-            background: url(images/open-government-licence.png?0.14.3) 0 0 no-repeat; }
+            background: url(images/open-government-licence.png?0.15.0) 0 0 no-repeat; }
             @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
               #footer .footer-meta .footer-meta-inner .open-government-licence .logo a {
-                background-image: url(images/open-government-licence_2x.png?0.14.3);
+                background-image: url(images/open-government-licence_2x.png?0.15.0);
                 background-size: 41px 17px; } }
         #footer .footer-meta .footer-meta-inner .open-government-licence p {
           font-family: "nta", Arial, sans-serif;
@@ -648,7 +648,7 @@ button:focus,
           line-height: 1.14286; } }
       #footer .footer-meta .copyright a {
         display: block;
-        background-image: url(images/govuk-crest.png?0.14.3);
+        background-image: url(images/govuk-crest.png?0.15.0);
         background-repeat: no-repeat;
         background-position: 50% 0%;
         background-position: 100% 0%;
@@ -658,5 +658,5 @@ button:focus,
         padding: 115px 0 0 0; }
         @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
           #footer .footer-meta .copyright a {
-            background-image: url(images/govuk-crest-2x.png?0.14.3);
+            background-image: url(images/govuk-crest-2x.png?0.15.0);
             background-size: 125px 102px; } }

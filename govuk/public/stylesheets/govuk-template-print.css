@@ -61,6 +61,25 @@ select {
   font-weight: bold;
   font-size: 24px;
   margin-bottom: 1em; }
+  #global-header #logo {
+    font-family: sans-serif;
+    font-size: 18pt;
+    line-height: 1.04167;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 28pt;
+    font-weight: bold;
+    text-rendering: optimizeLegibility; }
+    @media (max-width: 640px) {
+      #global-header #logo {
+        font-size: 32px;
+        line-height: 1.09375; } }
+    #global-header #logo img {
+      width: 46px;
+      height: 40px;
+      padding-right: 6px;
+      display: block;
+      float: left; }
   #global-header .content {
     margin: 0 !important; }
   #global-header a, #global-header a:visited {

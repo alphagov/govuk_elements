@@ -11,7 +11,7 @@
     "express": "^3.18.4",
     "express-writer": "0.0.4",
     "govuk_frontend_toolkit": "^4.2.1",
-    "govuk_template_mustache": "^0.14.3",
+    "govuk_template_mustache": "^0.15.0",
     "grunt": "^0.4.2",
     "grunt-concurrent": "^0.4.3",
     "grunt-contrib-clean": "^0.5.0",
