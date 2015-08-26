@@ -1,0 +1,213 @@
+{{<layout}}
+
+{{$pageTitle}}Typography — GOV.UK elements{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+
+  {{>phase_banner}}
+  {{>service_manual_breadcrumb}}
+
+  <h1 class="heading-xlarge">
+    <span class="heading-secondary">GOV.UK elements</span>
+    Typography
+  </h1>
+
+  <div class="text">
+    <p class="lede">
+      Use the GDS Transport Website font in Light and Bold.
+    </p>
+    <p>
+      It's licensed for use on the GOV.UK domains only.
+    </p>
+    <p>
+      For services publicly available on different domains, use an alternative typeface like Arial. You can find common font colours in the <a href="{{site.baseurl}}/colour">colour palette</a>.
+    </p>
+  </div>
+
+  <h2 class="heading-medium lead-in">Contents</h2>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <ul class="list">
+        <li><a href="#typography-headings">Headings</a></li>
+        <li><a href="#typography-lead-paragraph">Lead paragraph</a></li>
+        <li><a href="#typography-body-copy">Body copy</a></li>
+        <li><a href="#typography-links">Links</a></li>
+        <li><a href="#typography-lists">Lists</a></li>
+        <li><a href="#typography-inset-text">Inset text</a></li>
+        <li><a href="#typography-hidden-text">Hidden text</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#discussion">Discussion</a></li>
+        <li><a href="#further-reading">Further reading</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="heading-medium" id="typography-headings">
+    Headings
+  </h3>
+
+  <ul class="list-bullet text">
+    <li>use GDS Transport Website Bold</li>
+    <li>use sentence case for headings</li>
+    <li>use headings consistently to create a clear hierarchy</li>
+  </ul>
+
+<div class="example">
+  {{> typography_headings_example }}
+</div>
+
+<pre>
+<code class="language-markup">
+  {{> typography_headings }}
+</code>
+</pre>
+
+  <h3 class="heading-medium" id="typography-lead-paragraph">
+    Lead paragraph
+  </h3>
+
+  <ul class="list-bullet">
+    <li>use 24px for a lead paragraph</li>
+    <li>there should only be one lead paragraph per page</li>
+  </ul>
+
+<div class="example">
+  <div class="text">
+    {{> typography_lead_paragraph_example }}
+  </div>
+</div>
+
+<pre>
+<code class="language-markup">
+  {{> typography_lead_paragraph }}
+</code>
+</pre>
+
+  <h3 class="heading-medium" id="typography-body-copy">
+    Body copy
+  </h3>
+
+  <ul class="list-bullet text">
+    <li>use GDS Transport Website Light</li>
+    <li>avoid using bold and italics</li>
+    <li>use 19px for body copy &ndash; 16px for smaller screens</li>
+    <li>use smaller sizes only if there's a user need (eg 16px, 14px, 12px)</li>
+    <li>make sure lines of text don't exceed 75 characters, as they become harder to read beyond that point</li>
+  </ul>
+
+<div class="example">
+  <div class="text">
+    {{> typography_paragraphs_example }}
+  </div>
+</div>
+
+<pre>
+<code class="language-markup">
+  {{> typography_paragraphs }}
+</code>
+</pre>
+
+  <h3 class="heading-medium" id="typography-links">Links</h3>
+  <ul class="list-bullet text">
+    <li>links within body copy should be blue and underlined</li>
+    <li>links without surrounding text should not have a full stop at the end</li>
+    <li>link colours can be found in the <a href="{{site.baseurl}}/colour">colour palette</a></li>
+  </ul>
+
+<div class="example">
+  <div class="text">
+    {{> typography_links }}
+  </div>
+</div>
+
+<pre>
+<code class="language-markup">
+  {{> typography_links }}
+</code>
+</pre>
+
+  <h3 class="heading-medium" id="typography-lists">Lists</h3>
+  <p class="text">
+    List items start with a lowercase letter and have no full stop at the end.
+  </p>
+
+<div class="example">
+  {{> typography_lists }}
+</div>
+
+<pre>
+<code class="language-markup">
+  {{> typography_lists }}
+</code>
+</pre>
+
+  <h3 class="heading-medium" id="typography-inset-text">Inset text</h3>
+  <p class="text">
+    Use bordered inset text to draw attention to important content on the page.
+  </p>
+
+<div class="example">
+  <div class="text">
+    {{> typography_inset_text }}
+  </div>
+</div>
+
+<pre>
+<code class="language-markup">
+  {{> typography_inset_text }}
+</code>
+</pre>
+
+  <h3 class="heading-medium" id="typography-hidden-text">Hidden text (progressive disclosure)</h3>
+  <p class="text">
+    Use this to make your page easier to scan,
+    only showing contextual information when required.
+  </p>
+  <p class="text">
+    Click on "Help with nationality" to see how this works.
+  </p>
+
+<div class="example">
+  {{> typography_progressive_disclosure }}
+</div>
+
+<pre>
+<code class="language-markup">
+  {{> typography_progressive_disclosure }}
+</code>
+</pre>
+
+
+  <h3 class="heading-medium" id="examples">Examples</h3>
+  <p>
+    <a href="{{ site.baseurl}}/examples/typography/">
+      View the typography example page
+    </a>
+  </p>
+
+  <h3 class="heading-medium" id="discussion">Discussion</h3>
+  <ul class="list">
+    <li><a href="https://designpatterns.hackpad.com/GOV.UK-elements-feedback-sKrDyQxcfA2#:h=Typography" rel="external">Discuss typography on the GOV.UK design patterns hackpad</a></li>
+    <li><a href="https://designpatterns.hackpad.com/Progressive-disclosure-mi03xhbZQpu" rel="external">Discuss progressive disclosure on the GOV.UK design patterns hackpad</a></li>
+  </ul>
+
+  <h3 class="heading-medium" id="further-reading">Further reading</h3>
+  <ul class="list">
+    <li>
+      <a href="https://gds.blog.gov.uk/2012/07/05/a-few-notes-on-typography/" rel="external">
+        Read a blog post about developing the GOV.UK typeface
+      </a>
+    </li>
+    <li><a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/docs/mixins.md#typography" rel="external">GOV.UK frontend toolkit - Typography</a></li>
+  </ul>
+
+</main><!-- / #content -->
+{{/content}}
+
+{{$bodyEnd}}
+  {{>scripts}}
+{{/bodyEnd}}
+
+{{/layout}}

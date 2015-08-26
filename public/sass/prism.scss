@@ -5,22 +5,19 @@
 //  @author Lea Verou
 //
 
-// Create extra spacing under snippets
-.example {
-  margin-bottom: 20px;
-}
 
 code[class*="language-"],
 pre[class*="language-"] {
   color: black;
   text-shadow: 0 1px white;
-  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 14px;
   direction: ltr;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
-
+  line-height: 1.5;
 
   -moz-tab-size: 4;
   -o-tab-size: 4;
@@ -69,16 +66,6 @@ pre[class*="language-"] {
   border-radius: .3em;
 }
 
-// Undo GOV.UK elements styles being inherited here
-pre,
-code {
-  font-size: 14px;
-  border: 0;
-  background: none;
-  line-height: inherit;
-  padding: 0;
-}
-
 .token.comment,
 .token.prolog,
 .token.doctype,
@@ -99,14 +86,17 @@ code {
 .token.boolean,
 .token.number,
 .token.constant,
-.token.symbol {
+.token.symbol,
+.token.deleted {
   color: #905;
 }
 
 .token.selector,
 .token.attr-name,
 .token.string,
-.token.builtin {
+.token.char,
+.token.builtin,
+.token.inserted {
   color: #690;
 }
 
@@ -114,10 +104,9 @@ code {
 .token.entity,
 .token.url,
 .language-css .token.string,
-.style .token.string,
-.token.variable {
+.style .token.string {
   color: #a67f59;
-  background: hsla(0,0%,100%,.5);
+  background: hsla(0, 0%, 100%, .5);
 }
 
 .token.atrule,
@@ -131,12 +120,17 @@ code {
 }
 
 .token.regex,
-.token.important {
+.token.important,
+.token.variable {
   color: #e90;
 }
 
-.token.important {
+.token.important,
+.token.bold {
   font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
 }
 
 .token.entity {

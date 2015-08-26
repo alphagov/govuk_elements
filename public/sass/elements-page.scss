@@ -14,30 +14,23 @@
 
 
 // ==========================================================================
-// Service Design Manual styles
+// Service Design Manual breadcrumb
 // ==========================================================================
 
-@import "service-design-manual/helpers/page-header";
 @import "service-design-manual/helpers/breadcrumbs";
 
-// Remove margins set by Service Design Manual header
-#global-breadcrumb,
-.page-header {
-  margin-left: 0;
-  margin-right: 0;
-}
 
 // ==========================================================================
 // Elements page styles
 // ==========================================================================
 
-// These are example styles, used only for the Elements index page
+// These are example styles, used only for the elements pages
 
-// Headings
-// Used with heading-large = 36px
-.heading-with-border {
-  border-top: 1px solid $border-colour;
-  padding-top: em(45, 36);
+// Increase spacing above headings
+.heading-xlarge {
+  @include media(tablet) {
+    margin-top: em(60, 48);
+  }
 }
 
 // Use for paragraphs before lists
@@ -50,6 +43,17 @@
   margin-bottom: ($gutter*1.5);
 }
 
+// Increase size of number
+.list-elements-index {
+  font-size: 200%;
+  font-weight: bold;
+  padding-left: 27px;
+}
+
+.list-elements-index li {
+  font-size: 50%;
+}
+
 
 // Example boxes
 // ==========================================================================
@@ -60,7 +64,7 @@
   overflow: hidden;
   border: 1px solid $grey-2;
   margin-top: $gutter-half;
-  margin-bottom: $gutter*1.5;
+  margin-bottom: $gutter-half;
 
   padding-top: $gutter;
   padding-right: $gutter-half;

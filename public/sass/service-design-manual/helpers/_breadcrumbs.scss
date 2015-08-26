@@ -17,15 +17,9 @@
 
 #global-breadcrumb {
   padding: 0.75em 0;
-  margin: 0 1em;
   z-index: 50;
 
   background-color: #fff;
-  border-bottom: 1px solid $border-colour;
-
-  @include media(desktop) {
-    margin: 0 2em;
-  }
 
   nav {
     max-width: 960px;
