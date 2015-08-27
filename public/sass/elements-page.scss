@@ -26,11 +26,32 @@
 
 // These are example styles, used only for the elements pages
 
+.elements-index {
+  // Reduce top and bottom margins
+  .heading-medium {
+    margin: 0.75em 0;
+  }
+  // Add spacing above hr
+  .hr {
+    margin-top: 4em;
+  }
+}
+
 // Increase spacing above headings
 .heading-xlarge {
   @include media(tablet) {
     margin-top: em(60, 48);
+    margin-bottom: em(30, 48);
   }
+}
+
+// Page contents
+.heading-contents {
+  margin-top: 3em;
+}
+
+.list-contents li {
+  @include core-16;
 }
 
 // Use for paragraphs before lists
@@ -41,22 +62,6 @@
 // Lists
 .list-bullet {
   margin-bottom: ($gutter*1.5);
-}
-
-// Index page - large numbers
-.list-elements-index {
-  font-size: 200%;
-  font-weight: bold;
-  padding-left: 27px;
-}
-
-.list-elements-index li {
-  font-size: 50%;
-}
-
-// Page contents
-.list-contents li {
-  @include core-16;
 }
 
 
