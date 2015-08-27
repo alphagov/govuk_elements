@@ -1,27 +1,14 @@
-{{<govuk_template}}
-
-{{$cookieMessage}}
-  {{>cookie_message}}
-{{/cookieMessage}}
-
-{{$head}}
-  {{>head}}
-{{/head}}
-
-{{$propositionHeader}}
-  {{>propositional_navigation}}
-{{/propositionHeader}}
-
-{{$headerClass}}with-proposition{{/headerClass}}
+{{<layout_example}}
 
 {{$content}}
 <main id="content" role="main">
 
-  <a href="{{site.baseurl}}/forms/" class="link-back">Back to Forms</a>
+  {{>service_manual_breadcrumb}}
 
   <form action="/" method="post" class="form">
 
     <h1 class="form-title heading-large">
+      <span class="heading-secondary">GOV.UK elements</span>
       Example: Your details
     </h1>
 
@@ -66,4 +53,4 @@
   {{>scripts}}
 {{/bodyEnd}}
 
-{{/govuk_template}}
+{{/layout_example}}

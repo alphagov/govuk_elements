@@ -1,25 +1,12 @@
-{{<govuk_template}}
-
-{{$cookieMessage}}
-  {{>cookie_message}}
-{{/cookieMessage}}
-
-{{$head}}
-  {{>head}}
-{{/head}}
-
-{{$propositionHeader}}
-  {{>propositional_navigation}}
-{{/propositionHeader}}
-
-{{$headerClass}}with-proposition{{/headerClass}}
+{{<layout_example}}
 
 {{$content}}
 <main id="content" role="main">
 
-  <a href="{{site.baseurl}}/typography/" class="link-back">Back to Typography</a>
+  {{>service_manual_breadcrumb}}
 
   <h1 class="heading-xlarge">
+    <span class="heading-secondary">GOV.UK elements</span>
     Example: Typography
   </h1>
 
@@ -75,4 +62,4 @@
 </main><!-- / #content -->
 {{/content}}
 
-{{/govuk_template}}
+{{/layout_example}}

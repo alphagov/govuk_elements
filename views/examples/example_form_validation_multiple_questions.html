@@ -1,44 +1,12 @@
-{{<govuk_template}}
-
-{{$cookieMessage}}
-  {{>cookie_message}}
-{{/cookieMessage}}
-
-{{$head}}
-  {{>head}}
-  <style>
-  .list-bullet .panel-indent {
-    display: block;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    background: #F5F2F0;
-    padding-right: 15px;
-  }
-
-  .implementation-advice {
-    border-top: 1px solid #bfc1c3;
-    padding-top: 1.25em;
-  }
-
-  .lead-in {
-    margin-bottom: 0;
-  }
-  </style>
-{{/head}}
-
-{{$propositionHeader}}
-  {{>propositional_navigation}}
-{{/propositionHeader}}
-
-{{$headerClass}}with-proposition{{/headerClass}}
+{{<layout_example}}
 
 {{$content}}
 <main class="js-error-example" id="content" role="main">
 
-  <a href="{{site.baseurl}}/errors/" class="link-back">Back to Errors and validation</a>
+  {{>service_manual_breadcrumb}}
 
-  <form method="post" action="/examples/form-validation-single-question-radio">
-    {{> form_error_radio }}
+  <form method="post" action="/examples/form-validation-multiple-questions">
+    {{> form_error_multiple }}
   </form>
 
   <h2 class="heading-medium implementation-advice">Implementation advice</h2>
@@ -46,12 +14,6 @@
   <ul class="list-bullet text">
     <li>
       add a 5px red left border to the field with the error
-    </li>
-    <li>
-      the error message be red and bold and appear after the question
-    </li>
-    <li>
-      the error message must sit inside the <code class="code">&lt;legend&gt;</code>
     </li>
     <li>
       show an error summary at the top of the page
@@ -102,4 +64,4 @@
   {{>scripts}}
 {{/bodyEnd}}
 
-{{/govuk_template}}
+{{/layout_example}}
