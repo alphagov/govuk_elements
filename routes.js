@@ -1,31 +1,147 @@
 module.exports = {
   bind : function (app, assetPath) {
+
+    app.use(function (req, res, next) {
+
+      // Get the path
+      var path = req.path;
+
+      // Replace any slash at the end of a line with nothing
+      var path_parts = path.replace(/\/\s*$/, '').split('/');
+
+      if (path_parts.length === "3") {
+
+        var section = path_parts[1];
+        var page = path_parts[2];
+
+        res.locals({
+          "section": section,
+          "page": page
+        });
+
+
+      } else if (path_parts.length === "2") {
+
+        var page = path_parts[1];
+
+        res.locals({
+          "page": page
+        });
+      }
+      next();
+    });
+
     app.get('/', function (req, res) {
-
-      res.render('index',
-                {'assetPath' : assetPath});
-
+      res.render('index', {'assetPath' : assetPath });
     });
 
-    // GOV.UK elements example pages
-
-    app.get('/examples/grid-layout', function (req, res) {
-      res.render('examples/grid_layout', {'assetPath' : assetPath });
+    // Layout
+    app.get('/layout', function (req, res) {
+      var page_name = "Layout";
+      res.render('guide_layout', {'assetPath' : assetPath, 'page_name' : page_name });
     });
 
-    app.get('/examples/typography', function (req, res) {
-      res.render('examples/typography', {'assetPath' : assetPath });
+    // Example page: Grid layout
+    app.get('/layout/example-grid-layout', function (req, res) {
+      var section_name = "Layout";
+      var page_name = "Example: Grid layout";
+      res.render('layout/example_grid_layout', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name });
     });
 
-    app.get('/examples/forms', function (req, res) {
-      res.render('examples/forms', {'assetPath' : assetPath });
+    // Typography
+    app.get('/typography', function (req, res) {
+      var page_name = "Typography";
+      res.render('guide_typography', {'assetPath' : assetPath, 'page_name' : page_name });
     });
 
-    app.get('/examples/form-validation-single-question-radio', function (req, res) {
-      res.render('examples/form-validation-single-question-radio', {'assetPath' : assetPath});
+    // Example page: Typography
+    app.get('/typography/example-typography', function (req, res) {
+      var section_name = "Typography";
+      var page_name = "Example: Typography";
+      res.render('typography/example_typography', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name });
     });
 
-    app.post('/examples/form-validation-single-question-radio', function (req, res) {
+    // Example page: Progressive disclosure
+    app.get('/typography/example-details-summary', function (req, res) {
+      var section_name = "Typography";
+      var page_name = "Example: Details summary";
+      res.render('typography/example_details_summary', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name });
+    });
+
+    // Colour
+    app.get('/colour', function (req, res) {
+      var page_name = "Colour";
+      res.render('guide_colour', {'assetPath' : assetPath, 'page_name' : page_name });
+    });
+
+    // Icons and images
+    app.get('/icons-images', function (req, res) {
+      var page_name = "Icons and images";
+      res.render('guide_icons_images', {'assetPath' : assetPath, 'page_name' : page_name });
+    });
+
+    // Data
+    app.get('/data', function (req, res) {
+      var page_name = "Data";
+      res.render('guide_data', {'assetPath' : assetPath, 'page_name' : page_name });
+    });
+
+    // Buttons
+    app.get('/buttons', function (req, res) {
+      var page_name = "Buttons";
+      res.render('guide_buttons', {'assetPath' : assetPath, 'page_name' : page_name });
+    });
+
+    // Forms
+    app.get('/forms', function (req, res) {
+      var page_name = "Forms";
+      res.render('guide_forms', {'assetPath' : assetPath, 'page_name' : page_name });
+    });
+
+    // Example page: Basic form
+    app.get('/forms/example-forms', function (req, res) {
+      var section_name = "Forms";
+      var page_name = "Example: Forms";
+      res.render('forms/example_forms', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name });
+    });
+
+    // Example page: Date pattern
+    app.get('/forms/date', function (req, res) {
+      var section_name = "Forms";
+      var page_name = "Example: Date";
+      res.render('forms/date', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name });
+    });
+
+    // Example page: Radio buttons and checkboxes
+    app.get('/forms/radios-checkboxes', function (req, res) {
+      var section_name = "Forms";
+      var page_name = "Example: Radio buttons and checkboxes";
+      res.render('patterns/radios_checkboxes', {'assetPath' : assetPath, 'page_name' : page_name, 'section_name' : section_name });
+    });
+
+    // Example page: Form elements
+    app.get('/forms/form-elements', function (req, res) {
+      var section_name = "Forms";
+      var page_name = "Example: Form elements";
+      res.render('forms/form_elements', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name });
+    });
+
+    // Errors and validation
+    app.get('/errors', function (req, res) {
+      var page_name = "Errors and validation";
+      res.render('guide_errors', {'assetPath' : assetPath, 'page_name' : page_name });
+    });
+
+    // Example page: Form validation
+    app.get('/errors/example-form-validation-single-question-radio', function (req, res) {
+      var section_name = "Errors";
+      var page_name = "Example: Form validation - single question";
+      res.render('errors/example_form_validation_single_question_radio', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name });
+    });
+
+    app.post('/errors/example-form-validation-single-question-radio', function (req, res) {
+      var section_name = "Forms";
+      var page_name = "Example: Form validation - single question";
       var personal_details = req.body.personal_details;
       var error = false;
       if (!personal_details) {
@@ -33,46 +149,33 @@ module.exports = {
       } else {
         error = false;
       }
-      res.render('examples/form-validation-single-question-radio', {'assetPath' : assetPath, 'personal_details': personal_details, 'error': error});
+      res.render('errors/example_form_validation_single_question_radio', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name, 'personal_details': personal_details, 'error': error});
     });
 
-    app.get('/examples/form-validation-multiple-questions', function (req, res) {
-      res.render('examples/form-validation-multiple-questions', {'assetPath' : assetPath });
+    app.get('/errors/example-form-validation-multiple-questions', function (req, res) {
+      var section_name = "Errors and validation";
+      var page_name = "Example: Form validation - multiple questions";
+      res.render('errors/example_form_validation_multiple_questions', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name });
     });
 
-    app.post('/examples/form-validation-multiple-questions', function(req, res) {
+    app.post('/errors/example-form-validation-multiple-questions', function (req, res) {
+      var section_name = "Errors and validation";
+      var page_name = "Example: Form validation - multiple questions";
       var fullName = req.body.fullName;
       var niNo = req.body.niNo;
       var error = false;
       if (!fullName || !niNo) {
         error = true;
-      }
-      else {
+      } else {
         error = false;
       }
-      res.render('examples/form-validation-multiple-questions', {'assetPath' : assetPath, 'fullName': fullName, 'niNo': niNo, 'error': error});
+      res.render('errors/example_form_validation_multiple_questions', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name, 'fullName': fullName, 'niNo': niNo, 'error': error});
     });
 
-    // GOV.UK elements test pages
-
-    // Progressive disclosure pattern
-    app.get('/patterns/details-summary', function (req, res) {
-      res.render('patterns/details_summary', {'assetPath' : assetPath });
-    });
-
-    // Date pattern
-    app.get('/patterns/date', function (req, res) {
-      res.render('patterns/date', {'assetPath' : assetPath });
-    });
-
-    // Radio and checkbox pattern
-    app.get('/patterns/radios-checkboxes', function (req, res) {
-      res.render('patterns/radios_checkboxes', {'assetPath' : assetPath });
-    });
-
-    // Form element test page
-    app.get('/test/form-elements', function (req, res) {
-      res.render('test/form_elements', {'assetPath' : assetPath });
+    // Alpha and beta banners
+    app.get('/alpha-beta', function (req, res) {
+      var page_name = "Alpha and beta banners";
+      res.render('guide_alpha_beta', {'assetPath' : assetPath, 'page_name' : page_name });
     });
 
   }
