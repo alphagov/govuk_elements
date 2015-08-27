@@ -1,0 +1,35 @@
+{{<layout}}
+
+{{$pageTitle}}GOV.UK elements{{/pageTitle}}
+
+{{$content}}
+
+<main class="elements-index" id="content" role="main">
+
+  {{>phase_banner}}
+  {{>service_manual_breadcrumb}}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge">
+        <span class="heading-secondary">GOV.UK elements</span>
+        Examples
+      </h1>
+      <ul class="list-bullet">
+        <li><a href="{{site.baseurl}}/examples/grid-layout/">Layout</a></li>
+        <li><a href="{{site.baseurl}}/examples/typography/">Typography</a></li>
+        <li><a href="{{site.baseurl}}/forms/">Forms</a></li>
+        <li><a href="{{site.baseurl}}/examples/form-validation-multiple-questions/">Errors and validation - multiple questions</a></li>
+        <li><a href="{{site.baseurl}}/examples/form-validation-single-question-radio/">Errors and validation - single question</a></li>
+      </ul>
+    </div>
+  </div>
+
+</main><!-- / #content -->
+{{/content}}
+
+{{$bodyEnd}}
+  {{>scripts}}
+{{/bodyEnd}}
+
+{{/layout}}
