@@ -1,12 +1,16 @@
 <div id="global-breadcrumb" class="header-context">
   <nav role="navigation">
     <ol class="group">
-      <li><a href="https://www.gov.uk/service-manual">Home</a></li>
-      <li><a href="https://www.gov.uk/service-manual/user-centred-design">User-centred design</a></li>
       <li><a href="{{site.baseurl}}/">GOV.UK elements</a></li>
-      {{#pageName}}
-      <li>{{pageName}}</li>
-      {{/pageName}}
+
+      {{#section}}
+      <li><a href="{{site.baseurl}}/{{section}}/">{{#section_name}}{{section_name}}{{/section_name}}</a></li>
+      {{/section}}
+
+      {{#page_name}}
+      <li>{{page_name}}</li>
+      {{/page_name}}
+
     </ol>
   </nav>
 </div>
