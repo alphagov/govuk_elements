@@ -45,7 +45,7 @@ module.exports = {
     app.get('/layout/example-grid-layout', function (req, res) {
       var section_name = "Layout";
       var page_name = "Example: Grid layout";
-      res.render('layout/example_grid_layout', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name });
+      res.render('examples/example_grid_layout', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name });
     });
 
     // Typography
@@ -58,14 +58,14 @@ module.exports = {
     app.get('/typography/example-typography', function (req, res) {
       var section_name = "Typography";
       var page_name = "Example: Typography";
-      res.render('typography/example_typography', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name });
+      res.render('examples/example_typography', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name });
     });
 
     // Example page: Progressive disclosure
     app.get('/typography/example-details-summary', function (req, res) {
       var section_name = "Typography";
       var page_name = "Example: Details summary";
-      res.render('typography/example_details_summary', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name });
+      res.render('examples/example_details_summary', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name });
     });
 
     // Colour
@@ -102,28 +102,28 @@ module.exports = {
     app.get('/forms/example-forms', function (req, res) {
       var section_name = "Forms";
       var page_name = "Example: Forms";
-      res.render('forms/example_forms', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name });
+      res.render('examples/example_forms', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name });
     });
 
     // Example page: Date pattern
     app.get('/forms/date', function (req, res) {
       var section_name = "Forms";
       var page_name = "Example: Date";
-      res.render('forms/date', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name });
+      res.render('examples/example_date', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name });
     });
 
     // Example page: Radio buttons and checkboxes
     app.get('/forms/radios-checkboxes', function (req, res) {
       var section_name = "Forms";
       var page_name = "Example: Radio buttons and checkboxes";
-      res.render('patterns/radios_checkboxes', {'assetPath' : assetPath, 'page_name' : page_name, 'section_name' : section_name });
+      res.render('examples/example_radios_checkboxes', {'assetPath' : assetPath, 'page_name' : page_name, 'section_name' : section_name });
     });
 
     // Example page: Form elements
     app.get('/forms/form-elements', function (req, res) {
       var section_name = "Forms";
       var page_name = "Example: Form elements";
-      res.render('forms/form_elements', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name });
+      res.render('examples/example_form_elements', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name });
     });
 
     // Errors and validation
@@ -136,7 +136,7 @@ module.exports = {
     app.get('/errors/example-form-validation-single-question-radio', function (req, res) {
       var section_name = "Errors";
       var page_name = "Example: Form validation - single question";
-      res.render('errors/example_form_validation_single_question_radio', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name });
+      res.render('examples/example_form_validation_single_question_radio', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name });
     });
 
     app.post('/errors/example-form-validation-single-question-radio', function (req, res) {
@@ -149,13 +149,13 @@ module.exports = {
       } else {
         error = false;
       }
-      res.render('errors/example_form_validation_single_question_radio', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name, 'personal_details': personal_details, 'error': error});
+      res.render('examples/example_form_validation_single_question_radio', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name, 'personal_details': personal_details, 'error': error});
     });
 
     app.get('/errors/example-form-validation-multiple-questions', function (req, res) {
       var section_name = "Errors and validation";
       var page_name = "Example: Form validation - multiple questions";
-      res.render('errors/example_form_validation_multiple_questions', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name });
+      res.render('examples/example_form_validation_multiple_questions', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name });
     });
 
     app.post('/errors/example-form-validation-multiple-questions', function (req, res) {
@@ -169,7 +169,7 @@ module.exports = {
       } else {
         error = false;
       }
-      res.render('errors/example_form_validation_multiple_questions', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name, 'fullName': fullName, 'niNo': niNo, 'error': error});
+      res.render('examples/example_form_validation_multiple_questions', {'assetPath' : assetPath, 'section_name' : section_name, 'page_name' : page_name, 'fullName': fullName, 'niNo': niNo, 'error': error});
     });
 
     // Alpha and beta banners

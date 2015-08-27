@@ -1,25 +1,12 @@
-{{<govuk_template}}
-
-{{$cookieMessage}}
-  {{>cookie_message}}
-{{/cookieMessage}}
-
-{{$head}}
-  {{>head}}
-{{/head}}
-
-{{$propositionHeader}}
-  {{>propositional_navigation}}
-{{/propositionHeader}}
-
-{{$headerClass}}with-proposition{{/headerClass}}
+{{<layout_example}}
 
 {{$content}}
 <main id="content" role="main">
 
-  <a href="/" class="link-back">Back to GOV.UK elements</a>
+  {{>service_manual_breadcrumb}}
 
   <h1 class="heading-xlarge">
+    <span class="heading-secondary">GOV.UK elements</span>
     Example: Grid layout
   </h1>
 
@@ -165,4 +152,4 @@
     </script>
 {{/bodyEnd}}
 
-{{/govuk_template}}
+{{/layout_example}}

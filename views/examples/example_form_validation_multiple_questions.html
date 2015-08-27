@@ -1,41 +1,9 @@
-{{<govuk_template}}
-
-{{$cookieMessage}}
-  {{>cookie_message}}
-{{/cookieMessage}}
-
-{{$head}}
-  {{>head}}
-  <style>
-  .list-bullet .panel-indent {
-    display: block;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    background: #F5F2F0;
-    padding-right: 15px;
-  }
-
-  .implementation-advice {
-    border-top: 1px solid #bfc1c3;
-    padding-top: 1.25em;
-  }
-
-  .lead-in {
-    margin-bottom: 0;
-  }
-</style>
-{{/head}}
-
-{{$propositionHeader}}
-  {{>propositional_navigation}}
-{{/propositionHeader}}
-
-{{$headerClass}}with-proposition{{/headerClass}}
+{{<layout_example}}
 
 {{$content}}
 <main class="js-error-example" id="content" role="main">
 
-  <a href="/" class="link-back">Back to GOV.UK elements</a>
+  {{>service_manual_breadcrumb}}
 
   <form method="post" action="/examples/form-validation-multiple-questions">
     {{> form_error_multiple }}
@@ -96,4 +64,4 @@
   {{>scripts}}
 {{/bodyEnd}}
 
-{{/govuk_template}}
+{{/layout_example}}
