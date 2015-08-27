@@ -4,93 +4,124 @@
 
 {{$content}}
 
-<main id="content" role="main">
+<main class="elements-index" id="content" role="main">
 
   {{>phase_banner}}
   {{>service_manual_breadcrumb}}
 
-  <h1 class="heading-xlarge">
-    GOV.UK elements
-  </h1>
+  <div class="grid-row">
+    <div class="column-two-thirds">
 
-  <div class="text">
+      <h1 class="heading-xlarge">
+        GOV.UK elements
+      </h1>
 
-    <p class="lede">
-      This guide shows how to make your service look consistent with the rest of GOV.UK.
-    </p>
+      <p class="lede">
+        This guide shows how to make your service look consistent with the rest of GOV.UK.
+      </p>
 
-    <ol class="list-number list-elements-index">
-      <li>
-        <a href="{{site.baseurl}}/layout/">Layout</a>
-        <p class="font-xsmall">
-          Grid unit proportions, gutters and spacing.
-        </p>
-      </li>
-      <li>
-        <a href="{{site.baseurl}}/typography/">Typography</a>
-        <p class="font-xsmall">
-          Headings, body text, links, lists, inset text, hidden text.
-        </p>
-      </li>
-      <li>
-        <a href="{{site.baseurl}}/colour/">Colour</a>
-        <p class="font-xsmall">
-          Colour contrast, sass variables, status colours, greyscale palette, extended palette.
-        </p>
-      </li>
-      <li>
-        <a href="{{site.baseurl}}/icons-images/">Icons and images</a>
-        <p class="font-xsmall">
-          Icons and image ratios.
-        </p>
-      </li>
-      <li>
-        <a href="{{site.baseurl}}/data/">Data</a>
-        <p class="font-xsmall">
-          Data in a table, numeric tabular data, data visualisation.
-        </p>
-      </li>
-      <li>
-        <a href="{{site.baseurl}}/buttons/">Buttons</a>
-        <p class="font-xsmall">
-          Button text, start now button, button alignment, disabled buttons, creating buttons.
-        </p>
-      </li>
-      <li>
-        <a href="{{site.baseurl}}/forms/">Forms</a>
-        <p class="font-xsmall">
-          Optional and mandatory fields, labels, fields, focus states, hint text, form spacing, fieldsets, select boxes, radio buttons, checkboxes, conditionally revealing content.
-        </p>
-      </li>
-      <li>
-        <a href="{{site.baseurl}}/errors/">Errors and validation</a>
-        <p class="font-xsmall">
-          Summary boxes, highlighting errors in forms, implementation examples.
-        </p>
-      </li>
-      <li>
-        <a href="{{site.baseurl}}/alpha-beta/">Alpha and beta banners</a>
-        <p class="font-xsmall">
-          How to create alpha and beta banners using the front-end toolkit.
-        </p>
-      </li>
-    </ol>
+    </div>
+  </div>
 
-    <h2 class="heading-medium">Looking for the styles?</h2>
-    <p>
-       The Sass files for <a href="https://github.com/alphagov/govuk_elements/tree/master/public/sass" rel="external">all the examples can be found on GitHub</a>.
-    </p>
+  <div class="grid-row">
+    <div class="column-third">
 
-    <h2 class="heading-medium">Looking for the HTML?</h2>
-    <p>
-      Code snippets can be found under each example, these can be used to help with prototyping.
-    </p>
+      <h2 class="heading-medium"><a href="{{site.baseurl}}/layout/">Layout</a></h2>
+      <p>
+        Grid unit proportions, gutters and spacing.
+      </p>
 
-    <h2 class="heading-medium">Want to discuss these patterns?</h2>
-    <p>
-      <a href="https://designpatterns.hackpad.com/" rel="external">Discuss design patterns for GOV.UK services on our hackpad</a>
-    </p>
+    </div>
+    <div class="column-third">
 
+      <h2 class="heading-medium"><a href="{{site.baseurl}}/typography/">Typography</a></h2>
+      <p>
+        Headings, body text, links, lists, inset text, hidden text.
+      </p>
+
+    </div>
+    <div class="column-third">
+
+      <h2 class="heading-medium"><a href="{{site.baseurl}}/colour/">Colour</a></h2>
+      <p>
+        Colour contrast, Sass variables, colour palettes.
+      </p>
+
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-third">
+
+      <h2 class="heading-medium"><a href="{{site.baseurl}}/icons-images/">Icons and images</a></h2>
+      <p>
+        Icons and image ratios.
+      </p>
+
+    </div>
+    <div class="column-third">
+
+      <h2 class="heading-medium"><a href="{{site.baseurl}}/data/">Data</a></h2>
+      <p>
+        Data in a table, numeric tabular data, data visualisation.
+      </p>
+
+    </div>
+    <div class="column-third">
+
+      <h2 class="heading-medium"><a href="{{site.baseurl}}/buttons/">Buttons</a></h2>
+      <p>
+        Button text, button alignment, creating buttons.
+      </p>
+
+    </div>
+  </div>
+  <div class="grid-row">
+    <div class="column-third">
+
+      <h2 class="heading-medium"><a href="{{site.baseurl}}/forms/">Forms</a></h2>
+      <p>
+        Form fields, labels, focus states, radio buttons, checkboxes.
+      </p>
+    </div>
+    <div class="column-third">
+
+      <h2 class="heading-medium"><a href="{{site.baseurl}}/errors/">Errors and validation</a></h2>
+      <p>
+        Summary boxes, highlighting errors in forms.
+      </p>
+
+    </div>
+    <div class="column-third">
+
+      <h2 class="heading-medium"><a href="{{site.baseurl}}/alpha-beta/">Alpha and beta banners</a></h2>
+      <p>
+        How to create alpha and beta banners using the front-end toolkit.
+      </p>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <hr class="hr">
+
+      <h3 class="heading-small">Looking for the styles?</h3>
+      <p>
+         The Sass files for <a href="https://github.com/alphagov/govuk_elements/tree/master/public/sass" rel="external">all the examples can be found on GitHub</a>.
+      </p>
+
+      <h3 class="heading-small">Looking for the HTML?</h3>
+      <p>
+        Code snippets can be found under each example, these can be used to help with prototyping.
+      </p>
+
+      <h3 class="heading-small">Want to discuss these patterns?</h3>
+      <p>
+        <a href="https://designpatterns.hackpad.com/" rel="external">Discuss design patterns for GOV.UK services on our hackpad</a>
+      </p>
+
+    </div>
   </div>
 
 </main><!-- / #content -->
