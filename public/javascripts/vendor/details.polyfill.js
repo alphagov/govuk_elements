@@ -79,7 +79,7 @@
 
     // else iterate through them to apply their initial state
     var n = list.length, i = 0;
-    for (n; i < n; i++) {
+    for (i; i < n; i++) {
       var details = list[i];
 
       // Detect native implementations
