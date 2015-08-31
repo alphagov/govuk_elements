@@ -7,6 +7,7 @@
 // http://www.sitepoint.com/fixing-the-details-element/
 
 (function () {
+  'use strict';
 
   // Add event construct for modern browsers or IE
   // which fires the callback with a pre-converted target reference
