@@ -7,6 +7,9 @@
 // http://www.sitepoint.com/fixing-the-details-element/
 
 (function () {
+  'use strict';
+
+  var NATIVE_DETAILS = typeof document.createElement('details').open === 'boolean';
 
   // Add event construct for modern browsers or IE
   // which fires the callback with a pre-converted target reference
@@ -26,7 +29,7 @@
   function addClickEvent(node, callback) {
     // Prevent space(32) from scrolling the page
     addEvent(node, 'keypress', function (e, target) {
-      if (target.nodeName === "SUMMARY") {
+      if (target.nodeName === 'SUMMARY') {
         if (e.keyCode === 32) {
           if (e.preventDefault) {
             e.preventDefault();
@@ -78,11 +81,8 @@
 
     // else iterate through them to apply their initial state
     var n = list.length, i = 0;
-    for (n; i < n; i++) {
+    for (i; i < n; i++) {
       var details = list[i];
-
-      // Detect native implementations
-      details.__native = typeof(details.open) == 'boolean';
 
       // Save shortcuts to the inner summary and content elements
       details.__summary = details.getElementsByTagName('summary').item(0);
@@ -103,47 +103,23 @@
       // Add aria-controls
       details.__summary.setAttribute('aria-controls', details.__content.id);
 
-      // Set tabindex so the summary is keyboard accessible
-      // details.__summary.setAttribute('tabindex', 0);
+      // Set tabIndex so the summary is keyboard accessible for non-native elements
       // http://www.saliences.com/browserBugs/tabIndex.html
-      details.__summary.tabIndex = 0;
+      if (!NATIVE_DETAILS) {
+        details.__summary.tabIndex = 0;
+      }
 
-      // Detect initial open/closed state
-
-      // Native support - has 'open' attribute
-      if (details.open === true) {
+      // Detect initial open state
+      var openAttr = details.getAttribute('open') !== null;
+      if (openAttr === true) {
         details.__summary.setAttribute('aria-expanded', 'true');
         details.__content.setAttribute('aria-hidden', 'false');
-        details.__content.style.display = 'block';
-      }
-
-      // Native support - doesn't have 'open' attribute
-      if (details.open === false) {
+      } else {
         details.__summary.setAttribute('aria-expanded', 'false');
         details.__content.setAttribute('aria-hidden', 'true');
-        details.__content.style.display = 'none';
-      }
-
-      // If this is not a native implementation
-      if (!details.__native) {
-
-        // Add an arrow
-        var twisty = document.createElement('i');
-
-        // Check for the 'open' attribute
-        // If open exists, but isn't supported it won't have a value
-        if (details.getAttribute('open') === "") {
-          details.__summary.setAttribute('aria-expanded', 'true');
-          details.__content.setAttribute('aria-hidden', 'false');
-        }
-
-        // If open doesn't exist - it will be null or undefined
-        if (details.getAttribute('open') == null || details.getAttribute('open') == "undefined" ) {
-          details.__summary.setAttribute('aria-expanded', 'false');
-          details.__content.setAttribute('aria-hidden', 'true');
+        if (!NATIVE_DETAILS) {
           details.__content.style.display = 'none';
         }
-
       }
 
       // Create a circular reference from the summary back to its
@@ -152,11 +128,11 @@
 
       // If this is not a native implementation, create an arrow
       // inside the summary
-      if (!details.__native) {
+      if (!NATIVE_DETAILS) {
 
         var twisty = document.createElement('i');
 
-        if (details.getAttribute('open') === "") {
+        if (openAttr === true) {
           twisty.className = 'arrow arrow-open';
           twisty.appendChild(document.createTextNode('\u25bc'));
         } else {
@@ -174,12 +150,14 @@
     // Also update the arrow position
     function statechange(summary) {
 
-      var expanded = summary.__details.__summary.getAttribute('aria-expanded') == 'true';
-      var hidden = summary.__details.__content.getAttribute('aria-hidden') == 'true';
+      var expanded = summary.__details.__summary.getAttribute('aria-expanded') === 'true';
+      var hidden = summary.__details.__content.getAttribute('aria-hidden') === 'true';
 
       summary.__details.__summary.setAttribute('aria-expanded', (expanded ? 'false' : 'true'));
       summary.__details.__content.setAttribute('aria-hidden', (hidden ? 'false' : 'true'));
-      summary.__details.__content.style.display = (expanded ? 'none' : 'block');
+      if (!NATIVE_DETAILS) {
+        summary.__details.__content.style.display = (expanded ? 'none' : '');
+      }
 
       if (summary.__twisty) {
         summary.__twisty.firstChild.nodeValue = (expanded ? '\u25ba' : '\u25bc');
