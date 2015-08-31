@@ -9,6 +9,8 @@
 (function () {
   'use strict';
 
+  var NATIVE_DETAILS = typeof document.createElement('details').open === 'boolean';
+
   // Add event construct for modern browsers or IE
   // which fires the callback with a pre-converted target reference
   function addEvent(node, type, callback) {
@@ -82,9 +84,6 @@
     for (i; i < n; i++) {
       var details = list[i];
 
-      // Detect native implementations
-      details.__native = typeof(details.open) == 'boolean';
-
       // Save shortcuts to the inner summary and content elements
       details.__summary = details.getElementsByTagName('summary').item(0);
       details.__content = details.getElementsByTagName('div').item(0);
@@ -104,12 +103,11 @@
       // Add aria-controls
       details.__summary.setAttribute('aria-controls', details.__content.id);
 
-      // Set tabindex so the summary is keyboard accessible
-      // details.__summary.setAttribute('tabindex', 0);
+      // Set tabIndex so the summary is keyboard accessible for non-native elements
       // http://www.saliences.com/browserBugs/tabIndex.html
-      details.__summary.tabIndex = 0;
-
-      // Detect initial open/closed state
+      if (!NATIVE_DETAILS) {
+        details.__summary.tabIndex = 0;
+      }
 
       // Detect initial open state
       var openAttr = details.getAttribute('open') !== null;
@@ -119,7 +117,9 @@
       } else {
         details.__summary.setAttribute('aria-expanded', 'false');
         details.__content.setAttribute('aria-hidden', 'true');
-        details.__content.style.display = 'none';
+        if (!NATIVE_DETAILS) {
+          details.__content.style.display = 'none';
+        }
       }
 
       // Create a circular reference from the summary back to its
@@ -128,7 +128,7 @@
 
       // If this is not a native implementation, create an arrow
       // inside the summary
-      if (!details.__native) {
+      if (!NATIVE_DETAILS) {
 
         var twisty = document.createElement('i');
 
@@ -155,7 +155,9 @@
 
       summary.__details.__summary.setAttribute('aria-expanded', (expanded ? 'false' : 'true'));
       summary.__details.__content.setAttribute('aria-hidden', (hidden ? 'false' : 'true'));
-      summary.__details.__content.style.display = (expanded ? 'none' : '');
+      if (!NATIVE_DETAILS) {
+        summary.__details.__content.style.display = (expanded ? 'none' : '');
+      }
 
       if (summary.__twisty) {
         summary.__twisty.firstChild.nodeValue = (expanded ? '\u25ba' : '\u25bc');
