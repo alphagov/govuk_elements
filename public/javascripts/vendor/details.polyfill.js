@@ -111,40 +111,15 @@
 
       // Detect initial open/closed state
 
-      // Native support - has 'open' attribute
-      if (details.open === true) {
+      // Detect initial open state
+      var openAttr = details.getAttribute('open') !== null;
+      if (openAttr === true) {
         details.__summary.setAttribute('aria-expanded', 'true');
         details.__content.setAttribute('aria-hidden', 'false');
-        details.__content.style.display = 'block';
-      }
-
-      // Native support - doesn't have 'open' attribute
-      if (details.open === false) {
+      } else {
         details.__summary.setAttribute('aria-expanded', 'false');
         details.__content.setAttribute('aria-hidden', 'true');
         details.__content.style.display = 'none';
-      }
-
-      // If this is not a native implementation
-      if (!details.__native) {
-
-        // Add an arrow
-        var twisty = document.createElement('i');
-
-        // Check for the 'open' attribute
-        // If open exists, but isn't supported it won't have a value
-        if (details.getAttribute('open') === "") {
-          details.__summary.setAttribute('aria-expanded', 'true');
-          details.__content.setAttribute('aria-hidden', 'false');
-        }
-
-        // If open doesn't exist - it will be null or undefined
-        if (details.getAttribute('open') == null || details.getAttribute('open') == "undefined" ) {
-          details.__summary.setAttribute('aria-expanded', 'false');
-          details.__content.setAttribute('aria-hidden', 'true');
-          details.__content.style.display = 'none';
-        }
-
       }
 
       // Create a circular reference from the summary back to its
@@ -157,7 +132,7 @@
 
         var twisty = document.createElement('i');
 
-        if (details.getAttribute('open') === "") {
+        if (openAttr === true) {
           twisty.className = 'arrow arrow-open';
           twisty.appendChild(document.createTextNode('\u25bc'));
         } else {
@@ -180,7 +155,7 @@
 
       summary.__details.__summary.setAttribute('aria-expanded', (expanded ? 'false' : 'true'));
       summary.__details.__content.setAttribute('aria-hidden', (hidden ? 'false' : 'true'));
-      summary.__details.__content.style.display = (expanded ? 'none' : 'block');
+      summary.__details.__content.style.display = (expanded ? 'none' : '');
 
       if (summary.__twisty) {
         summary.__twisty.firstChild.nodeValue = (expanded ? '\u25ba' : '\u25bc');
