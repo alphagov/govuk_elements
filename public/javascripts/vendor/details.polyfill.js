@@ -155,8 +155,16 @@
 
       summary.__details.__summary.setAttribute('aria-expanded', (expanded ? 'false' : 'true'));
       summary.__details.__content.setAttribute('aria-hidden', (hidden ? 'false' : 'true'));
+
       if (!NATIVE_DETAILS) {
         summary.__details.__content.style.display = (expanded ? 'none' : '');
+
+        var hasOpenAttr = summary.__details.getAttribute('open') !== null;
+        if (!hasOpenAttr) {
+          summary.__details.setAttribute('open', 'open');
+        } else {
+          summary.__details.removeAttribute('open');
+        }
       }
 
       if (summary.__twisty) {
