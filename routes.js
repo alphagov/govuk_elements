@@ -5,6 +5,11 @@ module.exports = {
       res.render('index', {'assetPath' : assetPath });
     });
 
+    // Redirect snippets page to the index page
+    app.get('/snippets', function (req, res) {
+      res.redirect('/');
+    });
+
     // Layout
     app.get('/layout', function (req, res) {
       var page_name = "Layout";
