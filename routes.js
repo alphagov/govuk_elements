@@ -71,39 +71,39 @@ module.exports = {
     });
 
     // Forms
-    app.get('/forms', function (req, res) {
-      var page_name = "Forms";
-      res.render('guide_forms', {'assetPath' : assetPath, 'page_name' : page_name });
+    app.get('/form-elements', function (req, res) {
+      var page_name = "Form elements";
+      res.render('guide_form_elements', {'assetPath' : assetPath, 'page_name' : page_name });
     });
 
     // Example page: Basic form
-    app.get('/forms/example-forms', function (req, res) {
-      var section = "forms";
-      var section_name = "Forms";
+    app.get('/form-elements/example-forms', function (req, res) {
+      var section = "form-elements";
+      var section_name = "Form elements";
       var page_name = "Example: Form";
       res.render('examples/example_forms', {'assetPath' : assetPath, 'section': section, 'section_name' : section_name, 'page_name' : page_name });
     });
 
     // Example page: Date pattern
-    app.get('/forms/example-date', function (req, res) {
-      var section = "forms";
-      var section_name = "Forms";
+    app.get('/form-elements/example-date', function (req, res) {
+      var section = "form-elements";
+      var section_name = "Form elements";
       var page_name = "Example: Date";
       res.render('examples/example_date', {'assetPath' : assetPath, 'section': section, 'section_name' : section_name, 'page_name' : page_name });
     });
 
     // Example page: Radio buttons and checkboxes
-    app.get('/forms/example-radios-checkboxes', function (req, res) {
-      var section = "forms";
-      var section_name = "Forms";
+    app.get('/form-elements/example-radios-checkboxes', function (req, res) {
+      var section = "form-elements";
+      var section_name = "Form elements";
       var page_name = "Example: Radio buttons and checkboxes";
       res.render('examples/example_radios_checkboxes', {'assetPath' : assetPath, 'section': section, 'section_name' : section_name, 'page_name' : page_name });
     });
 
     // Example page: Form elements
-    app.get('/forms/example-form-elements', function (req, res) {
-      var section = "forms";
-      var section_name = "Forms";
+    app.get('/form-elements/example-form-elements', function (req, res) {
+      var section = "form-elements";
+      var section_name = "Form elements";
       var page_name = "Example: Form elements";
       res.render('examples/example_form_elements', {'assetPath' : assetPath, 'section': section, 'section_name' : section_name, 'page_name' : page_name });
     });
