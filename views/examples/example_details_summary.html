@@ -1,25 +1,17 @@
+{{<layout_example}}
 
-{{<govuk_template}}
-
-{{$cookieMessage}}
-  {{>cookie_message}}
-{{/cookieMessage}}
-
-{{$head}}
-  {{>head}}
-{{/head}}
-
-{{$propositionHeader}}
-  {{>propositional_navigation}}
-{{/propositionHeader}}
-
-{{$headerClass}}with-proposition{{/headerClass}}
+{{$pageTitle}}Example: Details summary — Typography — GOV.UK elements{{/pageTitle}}
 
 {{$content}}
 <main id="content" role="main">
 
-  <a href="/" class="link-back">Back to GOV.UK elements</a>
-  <h1 class="heading-xlarge">Details test page</h1>
+  {{>breadcrumb}}
+
+  <h1 class="heading-xlarge">
+    <span class="heading-secondary">Typography</span>
+    Example: Details summary
+  </h1>
+
   <p>
     Support for HTML5's &lt;details&gt; and &lt;summary&gt;
   </p>
@@ -71,8 +63,4 @@
 </main><!-- /#content -->
 {{/content}}
 
-{{$bodyEnd}}
-  {{>scripts}}
-{{/bodyEnd}}
-
-{{/govuk_template}}
+{{/layout_example}}

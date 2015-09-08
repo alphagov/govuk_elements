@@ -1,0 +1,72 @@
+{{<layout}}
+
+{{$pageTitle}}Alpha and beta banners — GOV.UK elements{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+
+  {{>phase_banner}}
+  {{>breadcrumb}}
+
+  <h1 class="heading-xlarge">
+    <span class="heading-secondary">GOV.UK elements</span>
+    Alpha and beta banners
+  </h1>
+
+  <p class="lede text">
+    You have to use an alpha banner if your thing is in alpha, and a beta banner if it’s in beta.
+  </p>
+
+  <h2 class="heading-small heading-contents">Contents:</h2>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <ul class="list list-contents">
+        <li><a href="#alpha-banner">Alpha banner</a></li>
+        <li><a href="#beta-banner">Beta banner</a></li>
+        <li><a href="#creating-phase-banners">Creating phase banners</a></li>
+      </ul>
+    </div>
+  </div>
+
+<h3 class="heading-medium" id="alpha-banner">Alpha banner</h3>
+<div class="example">
+  {{> phase_banner_alpha }}
+</div>
+
+<pre>
+<code class="language-markup">
+  {{> phase_banner_alpha }}
+</code>
+</pre>
+
+<h3 class="heading-medium" id="beta-banner">Beta banner</h3>
+<div class="example">
+  {{> phase_banner_beta }}
+</div>
+
+<pre>
+<code class="language-markup">
+  {{> phase_banner_beta }}
+</code>
+</pre>
+
+  <h3 class="heading-medium" id="creating-phase-banners">Creating alpha and beta banners</h3>
+  <p class="text">
+    Use the GOV.UK Sass phase banner mixin &ndash; find this in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/design-patterns/_alpha-beta.scss">alpha-beta.scss</a> file.
+  </p>
+
+  <p>
+    <a href="https://designpatterns.hackpad.com/Alpha-and-beta-banners-HpbaBjaYRSJ" rel="external">
+      Discuss alpha and beta banners on the design patterns Hackpad
+    </a>
+  </p>
+
+</main><!-- / #content -->
+{{/content}}
+
+{{$bodyEnd}}
+  {{>scripts}}
+{{/bodyEnd}}
+
+{{/layout}}

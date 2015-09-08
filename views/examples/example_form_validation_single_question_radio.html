@@ -1,43 +1,13 @@
-{{<govuk_template}}
+{{<layout_example}}
 
-{{$cookieMessage}}
-  {{>cookie_message}}
-{{/cookieMessage}}
-
-{{$head}}
-  {{>head}}
-  <style>
-  .list-bullet .panel-indent {
-    display: block;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    background: #F5F2F0;
-    padding-right: 15px;
-  }
-
-  .implementation-advice {
-    border-top: 1px solid #bfc1c3;
-    padding-top: 1.25em;
-  }
-
-  .lead-in {
-    margin-bottom: 0;
-  }
-  </style>
-{{/head}}
-
-{{$propositionHeader}}
-  {{>propositional_navigation}}
-{{/propositionHeader}}
-
-{{$headerClass}}with-proposition{{/headerClass}}
+{{$pageTitle}}Example: Form validation — Errors — GOV.UK elements{{/pageTitle}}
 
 {{$content}}
 <main class="js-error-example" id="content" role="main">
 
-  <a href="/" class="link-back">Back to GOV.UK elements</a>
+  {{>breadcrumb}}
 
-  <form method="post" action="/examples/form-validation-single-question-radio">
+  <form method="post" action="/errors/example-form-validation-single-question-radio">
     {{> form_error_radio }}
   </form>
 
@@ -98,8 +68,4 @@
 </main>
 {{/content}}
 
-{{$bodyEnd}}
-  {{>scripts}}
-{{/bodyEnd}}
-
-{{/govuk_template}}
+{{/layout_example}}

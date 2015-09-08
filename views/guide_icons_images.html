@@ -1,0 +1,69 @@
+{{<layout}}
+
+{{$pageTitle}}Icons and images — GOV.UK elements{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+
+  {{>phase_banner}}
+  {{>breadcrumb}}
+
+  <h1 class="heading-xlarge">
+    <span class="heading-secondary">GOV.UK elements</span>
+    Icons and images
+  </h1>
+
+  <p class="lede text">
+    Avoid unnecessary decoration - only use icons and images if there's a real user need.
+  </p>
+
+  <h2 class="heading-small heading-contents">Contents:</h2>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <ul class="list list-contents">
+        <li><a href="#icons">Icons</a></li>
+        <li><a href="#images">Images</a></li>
+        <li><a href="#examples">Examples</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="heading-medium" id="icons">Icons</h3>
+  <ul class="list-bullet text">
+    <li>
+      if icons are needed ensure they are clear, simple and accompanied by relevant text
+    </li>
+    <li>
+      don’t hide functionality under icons
+    </li>
+  </ul>
+
+  <p class="text">
+    GOV.UK standard icons are provided, as well as organisation crests and media player icons &ndash; find these in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/tree/master/images" rel="external">images folder</a>.
+  </p>
+
+  <h3 class="heading-medium" id="images">Images</h3>
+  <p>
+    If images are needed they should be landscape, 3:2 aspect ratio.
+  </p>
+
+  <div class="example example-images">
+    <div class="grid-row">
+      <div class="column-half">
+        <img src="/public/images/examples/3by2.jpg" alt="3:2">
+      </div>
+      <div class="column-half">
+        <img src="/public/images/examples/pm.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+</main><!-- / #content -->
+{{/content}}
+
+{{$bodyEnd}}
+  {{>scripts}}
+{{/bodyEnd}}
+
+{{/layout}}

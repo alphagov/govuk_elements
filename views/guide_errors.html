@@ -1,0 +1,127 @@
+{{<layout}}
+
+{{$pageTitle}}Errors and validation — GOV.UK elements{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+
+  {{>phase_banner}}
+  {{>breadcrumb}}
+
+  <h1 class="heading-xlarge">
+    <span class="heading-secondary">GOV.UK elements</span>
+    Errors and validation
+  </h1>
+
+  <p class="lede text">
+    Minimise the number of errors on a page.
+  </p>
+
+  <h2 class="heading-small heading-contents">Contents:</h2>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <ul class="list list-contents">
+        <li><a href="#one-question-per-page">Ask one question per page</a></li>
+        <li><a href="#summarise-errors">Summarise errors</a></li>
+        <li><a href="#highlight-errors">Highlight errors in forms</a></li>
+        <li><a href="#examples">Examples</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="heading-medium" id="one-question-per-page">Ask one question per page</h3>
+  <div class="text">
+  <p>
+    Recovering from errors can be hard for users, especially if a page contains multiple errors.
+  </p>
+  <p>
+    Simplify forms by rewriting and where possible, splitting long forms across multiple pages - with each page asking a single question.
+  </p>
+  </div>
+
+  <h3 class="heading-medium" id="summarise-errors">
+    Summarise errors at the top of the page
+  </h3>
+
+  <p class="text lead-in">
+    You must:
+  </p>
+
+  <ul class="text list-bullet">
+    <li>show an error summary at the top of the page</li>
+    <li>include a heading to alert the user to the error</li>
+    <li>link to each of the problematic questions</li>
+  </ul>
+
+  <h4 class="heading-small">Error message and summary box</h4>
+<div class="example example-error">
+  {{> form_error_radio_show_errors }}
+</div>
+
+<pre>
+<code class="language-markup">
+  {{> form_error_radio_show_errors }}
+</code>
+</pre>
+
+  <h3 class="heading-small panel-indent text">
+    The error summary must appear at the top of the page, so it is visible when the page is refreshed and is immediately read out by assistive technology.
+  </h3>
+
+  <h3 class="heading-medium" id="highlight-errors">Highlight errors in forms</h3>
+
+  <p class="lead-in">
+    For each error:
+  </p>
+
+  <ul class="list-bullet text">
+    <li>write a message that helps the user to understand why the error occurred and what to do about it</li>
+    <li>put the message in the <code class="code">&lt;label&gt;</code> or <code class="code">&lt;legend&gt;</code> for the question,
+    after the question text, in red</li>
+    <li>use a red border to visually connect the message and the question it belongs to</li>
+    <li>if the error relates to specific text fields within the question, give these a red border as well</li>
+  </ul>
+
+  <p class="text">
+    For red, use the <code class="code">$error-colour</code> Sass variable &ndash; find this in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss" rel="external">colours.scss</a> file.
+  </p>
+
+<div class="example example-error">
+  {{> form_error_multiple_show_errors }}
+</div>
+
+<pre>
+<code class="language-markup">
+  {{> form_error_multiple_show_errors }}
+</code>
+</pre>
+
+  <h3 class="heading-medium" id="examples">Examples</h3>
+  <ul class="list-bullet">
+    <li>
+      <a href="{{ site.baseurl}}/errors/example-form-validation-single-question-radio">
+        form validation - single question
+      </a>
+    </li>
+    <li>
+      <a href="{{ site.baseurl}}/errors/example-form-validation-multiple-questions">
+        form validation - multiple questions
+      </a>
+    </li>
+  </ul>
+
+  <p>
+    <a href="https://designpatterns.hackpad.com/Error-messages-and-validation-IWrPNxjRthP" rel="external">
+      Discuss error messages and validation on the design patterns Hackpad
+    </a>
+  </p>
+
+</main><!-- / #content -->
+{{/content}}
+
+{{$bodyEnd}}
+  {{>scripts}}
+{{/bodyEnd}}
+
+{{/layout}}
