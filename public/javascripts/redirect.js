@@ -4,7 +4,7 @@
 
 
   var getNewRouteFor = function (fragment) {
-    var baseURL = 'http://govuk-elements.herokuapp.com';
+    var baseURL = window.location.protocol + '//' +window.location.host;
     var newRoutes = {
       '#guide-layout': '/layout',
       '#layout-spacing': '/layout/#layout-spacing',
