@@ -125,16 +125,18 @@ legend {
   }
 }
 
-// Used for paragraphs in-between form elements
+// Used for the 'or' in between block label options
 .form-block {
   @extend %contain-floats;
   float: left;
   width: 100%;
 
+  margin-top: -5px;
   margin-bottom: 5px;
 
   @include media(tablet) {
-    margin-top: 10px;
+    margin-top: 0;
+    margin-bottom: 10px;
   }
 }
 
