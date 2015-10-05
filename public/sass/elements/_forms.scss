@@ -141,11 +141,11 @@ legend {
 // 5. Form hints
 // ==========================================================================
 
-// Form hints and example text are light grey and sit above a form control
+// Form hints and example text sit within form labels, above a form control
 .form-hint {
   @include core-19;
   display: block;
-  color: $secondary-text-colour;
+  color: $text-colour;
   font-weight: normal;
   margin-bottom: 5px;
 }
