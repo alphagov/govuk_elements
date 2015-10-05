@@ -125,27 +125,29 @@ legend {
   }
 }
 
-// Used for paragraphs in-between form elements
+// Used for the 'or' in between block label options
 .form-block {
   @extend %contain-floats;
   float: left;
   width: 100%;
 
+  margin-top: -5px;
   margin-bottom: 5px;
 
   @include media(tablet) {
-    margin-top: 10px;
+    margin-top: 0;
+    margin-bottom: 10px;
   }
 }
 
 // 5. Form hints
 // ==========================================================================
 
-// Form hints and example text are light grey and sit above a form control
+// Form hints and example text sit within form labels, above a form control
 .form-hint {
   @include core-19;
   display: block;
-  color: $secondary-text-colour;
+  color: $text-colour;
   font-weight: normal;
   margin-bottom: 5px;
 }
@@ -163,7 +165,7 @@ legend {
 
   padding: 4px;
   background-color: $white;
-  border: 1px solid $border-colour;
+  border: 2px solid $black;
 
   // TODO: Remove 50% width set for tablet and up
   // !! BREAKING CHANGE !!
