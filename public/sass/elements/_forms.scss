@@ -78,16 +78,6 @@ textarea{
   margin-bottom: 10px;
 }
 
-// Form title
-// TODO: Remove this (duplication of existing heading styles)
-.form-title {
-  margin-bottom: $gutter;
-
-  @include media(tablet) {
-    margin-bottom: ($gutter*1.5);
-  }
-}
-
 
 // 4. Form labels
 // ==========================================================================
