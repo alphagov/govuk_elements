@@ -13,19 +13,15 @@
   padding: em(15,19);
   margin-bottom: em(15,19);
 
-  legend {
+  :first-child {
     margin-top: 0;
   }
 
-  // Remove bottom margin on last paragraph
-  p:only-child,
-  p:last-child {
+  :only-child,
+  :last-child {
     margin-bottom: 0;
   }
 
-  .form-group:last-child {
-    margin-bottom: 0;
-  }
 }
 
 .panel-indent-info {
