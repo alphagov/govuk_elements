@@ -35,6 +35,8 @@
         <div class="form-group">
           <fieldset>
 
+            <legend class="visuallyhidden">What is your nationality?</legend>
+
             <label for="nationality_british" class="block-label">
               <input type="checkbox" name="nationality_british" value="British" id="nationality_british">
               British
@@ -68,7 +70,7 @@
           <fieldset>
 
             <legend class="visuallyhidden">
-              Choose the address to send your new passport to
+              Where should we send your new passport?
             </legend>
 
             <label for="radio-home-address" class="block-label">
@@ -87,25 +89,34 @@
                 Your other address
               </h2>
 
-              <div class="form-group form-group-compound">
-                <label class="form-label" for="address-line-1">Street</label>
-                <input type="text" class="form-control" id="address-line-1">
-              </div>
+              <fieldset>
 
-              <div class="form-group">
-                <label class="form-label visuallyhidden" for="address-line-2">Street</label>
-                <input type="text" class="form-control" id="address-line-2">
-              </div>
+                <legend class="visuallyhidden">
+                  Your other address
+                </legend>
 
-              <div class="form-group">
-                <label class="form-label" for="address-town">Town or City</label>
-                <input type="text" class="form-control form-control-1-4" id="address-town">
-              </div>
+                <div class="form-group form-group-compound">
+                  <label class="form-label" for="address-line-1">Street</label>
+                  <input type="text" class="form-control" id="address-line-1">
+                </div>
 
-              <div class="form-group">
-                <label class="form-label" for="address-postcode">Postcode</label>
-                <input type="text" class="form-control form-control-1-8" id="address-postcode">
-              </div>
+                <div class="form-group">
+                  <label class="form-label visuallyhidden" for="address-line-2">Street</label>
+                  <input type="text" class="form-control" id="address-line-2">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="address-town">Town or City</label>
+                  <input type="text" class="form-control form-control-1-4" id="address-town">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="address-postcode">Postcode</label>
+                  <input type="text" class="form-control form-control-1-8" id="address-postcode">
+                </div>
+
+              </fieldset>
+
             </div>
           </fieldset>
         </div>
@@ -114,11 +125,15 @@
           Which part of the Housing Act was your licence isued under?
         </h1>
 
+        <p>
+          Select one of the options below.
+        </p>
+
         <div class="form-group">
           <fieldset>
 
             <legend class="visuallyhidden">
-              Select one of the options below
+              Which part of the Housing Act was your licence isued under?
             </legend>
 
             <label for="radio-part-2" class="block-label">
