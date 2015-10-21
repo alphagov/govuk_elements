@@ -204,5 +204,19 @@ module.exports = {
       res.render('guide_alpha_beta', {'assetPath' : assetPath, 'page_name' : page_name });
     });
 
+    // Patterns
+    app.get('/patterns', function (req, res) {
+      var page_name = "Patterns";
+      res.render('patterns', {'assetPath' : assetPath, 'page_name' : page_name });
+    });
+
+    // Pattern page: Confirmation page
+    app.get('/patterns/confirmation-page', function (req, res) {
+      var section = "patterns";
+      var section_name = "Patterns";
+      var page_name = "Confirmation page";
+      res.render('patterns/pattern_confirmation_page', {'assetPath' : assetPath, 'section': section, 'section_name' : section_name, 'page_name' : page_name });
+    });
+
   }
 };
