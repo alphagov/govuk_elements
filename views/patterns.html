@@ -1,0 +1,63 @@
+{{<layout}}
+
+{{$pageTitle}}Patterns — GOV.UK elements{{/pageTitle}}
+
+{{$content}}
+
+<main class="elements-index" id="content" role="main">
+
+  {{>phase_banner}}
+  {{>breadcrumb}}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        <span class="heading-secondary">GOV.UK elements</span>
+        Patterns
+      </h1>
+
+      <p class="lede">
+        Pattern pages using GOV.UK elements.
+      </p>
+
+      <div class="divider">
+        <h2 class="heading-small">Confirmation pages</h2>
+        <p>
+          All new and redesigned services should provide <a href="{{ site.baseurl}}/patterns/confirmation-page/">transaction end pages</a>.
+        </p>
+
+        <details>
+          <summary>
+            <span class="summary">Find out more about confirmation pages</span>
+          </summary>
+          <div class="panel-indent">
+            <p class="lead-in">Transaction end pages: </p>
+            <ul class="list-bullet">
+              <li>tell the user that their transaction has finished OR</li>
+              <li>tell the user what they have to do next (if they're not finished)</li>
+              <li>prompt the user to give feedback on the service – to measure user satisfaction</li>
+              <li>count completed transactions – to measure completion rate</li>
+            </ul>
+            <p>
+              Transaction end pages are hosted by the service.
+            </p>
+            <p>
+              Discuss <a href="https://designpatterns.hackpad.com/Transaction-end-pages-xkOPGx6R1iM" rel="external">transaction end pages on the Design Patterns Hackpad</a>.
+            </p>
+          </div>
+        </details>
+
+      </div>
+
+    </div>
+  </div>
+
+</main><!-- / #content -->
+{{/content}}
+
+{{$bodyEnd}}
+  {{>scripts}}
+{{/bodyEnd}}
+
+{{/layout}}
