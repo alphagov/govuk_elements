@@ -23,12 +23,14 @@ ol {
   }
 }
 
+.list,
 .list-bullet,
 .list-number {
   margin-top: 5px;
   margin-bottom: 20px;
 }
 
+.list li,
 .list-bullet li,
 .list-number li {
   margin-bottom: 5px;
