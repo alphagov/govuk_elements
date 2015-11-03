@@ -1,8 +1,10 @@
 // GOV.UK icons
 
 .icon {
+  display: block;
   background-position: 0 0;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .icon-calendar {
@@ -28,8 +30,8 @@
 }
 
 .icon-important {
-  width: 34px;
-  height: 34px;
+  width: 35px;
+  height: 35px;
   background-image: file-url("icons/icon-important.png");
 
   @include device-pixel-ratio() {
