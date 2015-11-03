@@ -14,3 +14,14 @@ Remember to:
 * [write helpful commit messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 * [check the GDS style guide](https://www.gov.uk/design-principles/style-guide) for tips on how to write to our standard
 * [check the service manual](https://www.gov.uk/service-manual/design-and-content) for tips on how to create content
+
+## Versioning
+
+Follow the guidelines on [semver.org](http://semver.org/) for assigning version
+numbers.
+
+Versions should only be changed in a commit of their own, in a pull request of
+their own. This alerts team members to the new version and allows for
+last-minute scrutiny before the new version is released. Also, by raising a
+separate pull request, we avoid version number conflicts between feature
+branches.
