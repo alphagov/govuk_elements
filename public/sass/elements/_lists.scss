@@ -28,3 +28,12 @@
     padding-left: 28px;
   }
 }
+
+// Lists of links
+.list-links {
+  @include core-16;
+}
+
+.list-links li {
+  margin-bottom: 10px;
+}
