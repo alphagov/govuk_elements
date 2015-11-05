@@ -274,3 +274,19 @@ hr {
     color: $border-colour;
   }
 }
+
+// Notice, text with an icon to the left
+.notice {
+  @extend %contain-floats;
+  position: relative;
+  .icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -17px; // Half the height of the important icon
+  }
+  p {
+    padding-left: (35 + 30)+px;
+    margin-left: -$gutter-half;
+  }
+}
