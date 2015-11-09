@@ -48,6 +48,17 @@ textarea{
 
 // 3. Form wrappers
 // ==========================================================================
+// Hide the 'spinner' for webkit
+// and also for Firefox
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 // Form group is used to wrap label and input pairs
 .form-group {
@@ -274,12 +285,6 @@ legend {
 
 
 // 9. Form design patterns
-//    - Date of birth
 //    - "Chunky" radio buttons and checkboxes
 // ==========================================================================
-
-// Date of birth
-@import "forms/form-date";
-
-// "Chunky" radios and checkboxes
 @import "forms/form-block-labels";
