@@ -1,6 +1,4 @@
 // GOV.UK icons
-// GOV.UK front end toolkit dependencies
-@import "device-pixels";
 
 .icon {
   background-position: 0 0;
@@ -26,7 +24,7 @@
   @include device-pixel-ratio() {
     background-image: file-url("icons/icon-file-download-2x.png");
     background-size: 100%;
-  } 
+  }
 }
 
 .icon-important {
@@ -150,7 +148,7 @@
   width: 23px;
   height: 23px;
   background-image: file-url("icons/icon-steps/icon-step-5.png");
-  
+
   @include device-pixel-ratio() {
     background-image: file-url("icons/icon-steps/icon-step-5-2x.png");
     background-size: 100%;
