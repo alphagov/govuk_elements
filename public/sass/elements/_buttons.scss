@@ -1,9 +1,5 @@
 // Buttons
 // ==========================================================================
-// GOV.UK front end toolkit dependencies
-@import "design-patterns/buttons";
-@import "measurements";
-@import "typography";
 
 .button {
   @include button ($button-colour);
