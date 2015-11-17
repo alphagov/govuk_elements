@@ -2,9 +2,17 @@
 .DS_Store
 .start.pid
 node_modules
+govuk_modules
+
 # Ignore compiled stylesheets
 public/stylesheets/
+
 # Ignore WIP form examples
 views/examples/forms
+
 # Ignore test files
 dist/*.html
+
+# Wraith
+shots
+shots_history

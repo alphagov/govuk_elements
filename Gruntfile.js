@@ -17,7 +17,7 @@ module.exports = function (grunt) {
           'public/stylesheets/prism.css': 'public/sass/prism.scss',
         },
         options: {
-          includePaths: ['govuk/public/sass'],
+          includePaths: ['govuk_modules/public/sass'],
           outputStyle: 'expanded',
           imagePath: '../images'
         }
@@ -29,7 +29,7 @@ module.exports = function (grunt) {
 
       govuk_template: {
         src: 'node_modules/govuk_template_mustache/views/layouts/govuk_template.html',
-        dest: 'govuk/views/',
+        dest: 'govuk_modules/views/',
         expand: true,
         flatten: true,
         filter: 'isFile'
@@ -41,7 +41,7 @@ module.exports = function (grunt) {
             expand: true,
             src: '**',
             cwd: 'node_modules/govuk_template_mustache/assets',
-            dest: 'govuk/public/'
+            dest: 'govuk_modules/public/'
           }
         ]
       },
@@ -50,21 +50,21 @@ module.exports = function (grunt) {
         expand: true,
         src: '**',
         cwd: 'node_modules/govuk_frontend_toolkit/stylesheets/',
-        dest: 'govuk/public/sass/'
+        dest: 'govuk_modules/public/sass/'
       },
 
       govuk_frontend_toolkit_js: {
         expand: true,
         src: '**',
         cwd: 'node_modules/govuk_frontend_toolkit/javascripts/',
-        dest: 'govuk/public/javascripts/'
+        dest: 'govuk_modules/public/javascripts/'
       },
 
       govuk_frontend_toolkit_img: {
         expand: true,
         src: '**',
         cwd: 'node_modules/govuk_frontend_toolkit/images/',
-        dest: 'govuk/public/images/icons/'
+        dest: 'govuk_modules/public/images/icons/'
       },
 
     },
@@ -72,7 +72,7 @@ module.exports = function (grunt) {
     // workaround for libsass
     replace: {
       fixSass: {
-        src: ['govuk/public/sass/**/*.scss'],
+        src: ['govuk_modules/public/sass/**/*.scss'],
         overwrite: true,
         replacements: [{
           from: /filter:chroma(.*);/g,

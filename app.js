@@ -6,12 +6,12 @@ var express = require('express'),
 // Application settings
 app.engine('html', require(__dirname + '/lib/template-engine.js').__express);
 app.set('view engine', 'html');
-app.set('vendorViews', __dirname + '/govuk/views');
+app.set('vendorViews', __dirname + '/govuk_modules/views');
 app.set('views', __dirname + '/views');
 
 // Middleware to serve static assets
 app.use('/public', express.static(__dirname + '/public'));
-app.use('/public', express.static(__dirname + '/govuk/public'));
+app.use('/public', express.static(__dirname + '/govuk_modules/public'));
 app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded()); // to support URL-encoded bodies
 
