@@ -72,18 +72,22 @@ Ignore the `/public/sass/elements-page.scss` files, these exist to style the pag
 If you would like to clone the repository and run it locally,
 you will need [Node.js](http://nodejs.org/) (at least version v0.10.0).
 
-* clone this repository
-* install the required node modules
+Clone this repository
+
+    git clone git@github.com:alphagov/govuk_elements.git
+
+
+Install the required node modules
 
     npm install
 
 
-* run the app
+Run the app
 
     node start.js
 
 
-* go to [localhost:3000](http://localhost:3000) in your browser.
+Go to [localhost:3000](http://localhost:3000) in your browser.
 
 ### Running wraith to compare changes
 
