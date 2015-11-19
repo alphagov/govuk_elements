@@ -96,6 +96,8 @@ Runs against all the main elements pages and some of the examples.
 
 #### Usage
 
+This needs to be run from the Wraith directory and some dependencies need to be installed on the local machine first.
+
 On master run:
 
     wraith history config.yaml
