@@ -108,21 +108,6 @@ On local branch run
     wraith latest config.yaml
 
 
-##  How to we want people to contribute and improve elements.
-
-### Code
-
-The code in GOV.UK elements is built on top of the [GOV.UK template](https://github.com/alphagov/govuk_template)
-and the [GOV.UK front end toolkit](https://github.com/alphagov/govuk_frontend_toolkit).
-
-If you find an issue with GOV.UK elements, please raise an issue via this repository.
-
-If you want to suggest changes or raise bugs on code from the toolkit, please do so through its repository, not this one.
-
-### Design
-
-There is a Hackpad for [Design Patterns for GOV.UK services](https://designpatterns.hackpad.com/).
-
 ## How are people building with GOV.UK elements?
 
 Here are examples of service-specific pattern libraries using GOV.UK elements.
