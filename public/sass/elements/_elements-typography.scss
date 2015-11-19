@@ -215,14 +215,6 @@ p {
     margin-top: -6px;
   }
 
-  // Improve arrow shape in Firefox
-  @-moz-document url-prefix() {
-    &::before {
-      border-top: 5px dotted rgba(255, 0, 0, 0);
-      border-bottom: 5px dotted rgba(255, 0, 0, 0);
-    }
-  }
-
   // Fallback
   // IE8 doesn't support rgba and only supports the single colon syntax for :before
   // IE7 doesn't support pseudo-elements, let's fallback to an image instead.
