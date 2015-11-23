@@ -85,19 +85,27 @@ you will need [Node.js](http://nodejs.org/) (at least version v0.10.0).
 
 * go to [localhost:3000](http://localhost:3000) in your browser.
 
-### Running wraith to compare changes
+## Running Wraith to compare changes
 
 GOV.UK elements uses Wraith so that regressions can be easily spotted.
 Runs against all the main elements pages and some of the examples.
 
+### Install Wraith and its dependencies
+
+    gem install wraith
+    brew install phantomjs
+    brew install imagemagick
+
 #### Usage
 
+Take a baseline of the current version.
 On master run:
 
     wraith history config.yaml
 
 
-On local branch run
+Switch to your feature branch and make changes.
+On feature branch run:
 
     wraith latest config.yaml
 
