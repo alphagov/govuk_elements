@@ -4,7 +4,6 @@
 .button {
   @include button ($button-colour);
   @include box-sizing (border-box);
-  margin: 0 $gutter-half $gutter-half 0;
   padding: em(10) em(15) em(5) em(15);
   vertical-align: top;
   @include media (mobile) {
