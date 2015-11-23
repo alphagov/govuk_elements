@@ -72,23 +72,28 @@ Ignore the `/public/sass/elements-page.scss` files, these exist to style the pag
 If you would like to clone the repository and run it locally,
 you will need [Node.js](http://nodejs.org/) (at least version v0.10.0).
 
-* clone this repository
-* install the required node modules
+Clone this repository
+
+    git clone git@github.com:alphagov/govuk_elements.git
+
+
+Install the required node modules
 
     npm install
 
 
-* run the app
+Run the app
 
     node start.js
 
 
-* go to [localhost:3000](http://localhost:3000) in your browser.
+Go to [localhost:3000](http://localhost:3000) in your browser.
 
 ## Running Wraith to compare changes
 
 GOV.UK elements uses Wraith so that regressions can be easily spotted.
-Runs against all the main elements pages and some of the examples.
+
+This needs to be run from the Wraith directory `/tests/wraith` and some dependencies need to be installed on the local machine first.
 
 ### Install Wraith and its dependencies
 
@@ -96,7 +101,7 @@ Runs against all the main elements pages and some of the examples.
     brew install phantomjs
     brew install imagemagick
 
-#### Usage
+### Usage
 
 Take a baseline of the current version.
 On master run:
@@ -109,21 +114,6 @@ On feature branch run:
 
     wraith latest config.yaml
 
-
-##  How to we want people to contribute and improve elements.
-
-### Code
-
-The code in GOV.UK elements is built on top of the [GOV.UK template](https://github.com/alphagov/govuk_template)
-and the [GOV.UK front end toolkit](https://github.com/alphagov/govuk_frontend_toolkit).
-
-If you find an issue with GOV.UK elements, please raise an issue via this repository.
-
-If you want to suggest changes or raise bugs on code from the toolkit, please do so through its repository, not this one.
-
-### Design
-
-There is a Hackpad for [Design Patterns for GOV.UK services](https://designpatterns.hackpad.com/).
 
 ## How are people building with GOV.UK elements?
 

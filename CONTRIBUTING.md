@@ -1,19 +1,11 @@
-# Guidelines
+# Contribution Guidelines
 
-In the spirit of open source, we welcome contributions. These can be as trivial as fixing typos or grammatical errors, to suggesting new areas of guidance in the style guide.
+We welcome patches to GOV.UK elements, as long as you follow these
+guidelines:
 
-We will review your submission and may suggest amendments via the comments system. However, we are not obliged to accept all contributions and will maintain editorial control.
+## Indentation and whitespace
 
-## Process
-Submissions should be made as pull requests. Each piece will be reviewed by a content specialist, who will make sure it stays true to the GOV.UK style as well as the spirit of the manual.
-
-Once a change has been submitted it will stay open as a pull request for a few days so that teams throughout GDS and beyond get a chance to review and comment.
-
-Remember to:
-
-* [write helpful commit messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-* [check the GDS style guide](https://www.gov.uk/design-principles/style-guide) for tips on how to write to our standard
-* [check the service manual](https://www.gov.uk/service-manual/design-and-content) for tips on how to create content
+2-space, soft-tabs only. No trailing whitespace.
 
 ## Versioning
 
@@ -25,3 +17,21 @@ their own. This alerts team members to the new version and allows for
 last-minute scrutiny before the new version is released. Also, by raising a
 separate pull request, we avoid version number conflicts between feature
 branches.
+
+## Commit hygiene
+
+Please see our [git style guide](https://github.com/alphagov/styleguides/blob/master/git.md)
+which describes how we prefer git history and commit messages to read.
+
+## Code
+
+The code in GOV.UK elements is built on top of the [GOV.UK template](https://github.com/alphagov/govuk_template)
+and the [GOV.UK front end toolkit](https://github.com/alphagov/govuk_frontend_toolkit).
+
+If you find an issue with GOV.UK elements, please raise an issue via this repository.
+
+If you want to suggest changes or raise bugs on code from the toolkit, please do so through its repository, not this one.
+
+## Design
+
+There is a Hackpad for [Design Patterns for GOV.UK services](https://designpatterns.hackpad.com/).
