@@ -345,12 +345,7 @@ $palette: (
 // 7. Buttons
 // ==========================================================================
 
-// Increase spacing under buttons in example boxes
-.example-button .button {
-  margin-bottom: 15px;
-}
-
-// Remove top margin from "Creating buttons" example
+// Remove top margin from headings in the "Creating buttons" example
 .example-button .heading-small {
   margin-top: 0;
 }
@@ -358,11 +353,6 @@ $palette: (
 // Make swatch wrapper full width for "Creating buttons" example
 .example-button .swatch-wrapper {
   width: 100%;
-}
-
-// Remove bottom padding to keep "Creating buttons" example
-.example-button ul {
-  padding-bottom: 0;
 }
 
 
