@@ -54,7 +54,8 @@
   @include grid-column(1/2);
 }
 
-.column-third {
+.column-third,
+.column-one-third {
   @include grid-column(1/3);
 }
 
