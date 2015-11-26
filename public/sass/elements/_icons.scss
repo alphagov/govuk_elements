@@ -76,7 +76,7 @@
 // Propose replacing step icons with circles
 .circle {
   display: inline-block;
-  @include border-radius(100%);
+  @include border-radius(50%);
 
   background: $black;
   color: $white;
