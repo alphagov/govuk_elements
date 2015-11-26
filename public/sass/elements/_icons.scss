@@ -72,3 +72,31 @@
     @include icon(icon-step-#{$i}, 23, 23, icon-steps);
   }
 }
+
+// Propose replacing step icons with circles
+.circle {
+  display: inline-block;
+  @include border-radius(100%);
+
+  background: $black;
+  color: $white;
+
+  font-family: $NTA-Light-Tabular;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+// All step circles are 24px x 24px
+.circle-step {
+  min-width: 24px;
+  min-height: 24px;
+  line-height: 24px;
+}
+
+.circle-step-large {
+  font-size: 19px;
+  min-width: 38px;
+  min-height: 38px;
+  line-height: 38px;
+}
