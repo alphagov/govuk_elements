@@ -1,11 +1,7 @@
 // Typography
 // ==========================================================================
 
-// Increase the base font size to 19px for the main content area
-// Using the core-19 mixin from the govuk_toolkit _typography.scss file
-
 main {
-  @include core-19;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -120,8 +116,8 @@ main {
 .heading-small {
   @include bold-19();
 
-  margin-top: em(10, 16);
-  margin-bottom: em(5, 16);
+  margin-top: em(10);
+  margin-bottom: em(5);
 
   @include media(tablet) {
     margin-top: em(20, 19);
@@ -131,14 +127,15 @@ main {
 
 // Text
 p {
-  margin-top: em(5, 16);
-  margin-bottom: em(20, 16);
+  @include core-19;
+
+  margin-top: em(5);
+  margin-bottom: em(20);
 
   @include media(tablet) {
-    margin-top: em(5);
-    margin-bottom: em(20);
+    margin-top: em(5, 19);
+    margin-bottom: em(20, 19);
   }
-
 }
 
 // Lede, or intro text
