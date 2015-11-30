@@ -258,18 +258,6 @@ a:focus {
 input:focus,
 textarea:focus,
 select:focus,
-button:focus,
-#global-header input:focus {
+button:focus {
   outline: 3px solid $focus-colour;
-}
-
-#global-header {
-  h1 a:focus {
-    background-color: transparent;
-    outline: none;
-  }
-
-  a:focus {
-    color: $black;
-  }
 }
