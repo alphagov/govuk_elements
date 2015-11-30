@@ -147,33 +147,6 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* Hide for both screenreaders and browsers */
-.hidden {
-  display: none;
-  visibility: hidden;
-}
-
-/* Hide only visually, but have it available for screenreaders */
-.visually-hidden,
-.visuallyhidden {
-  position: absolute;
-  left: -9999em;
-
-  /*
-   * Extends the .visuallyhidden class to allow the element to be
-   * focusable when navigated to via the keyboard
-   */
-  &.focusable:active,
-  &.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-  }
-}
-
 /* Give a strong clear visual idea as to what is currently in focus */
 a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
