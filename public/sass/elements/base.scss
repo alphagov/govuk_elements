@@ -12,31 +12,6 @@ main {
   display: block;
 }
 
-// self clearing floats
-.group:before,
-.group:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden;
- }
-
-.group:after {
-    clear: both;
-}
-.group {
-    zoom: 1;
-}
-
-// make elements stick at top of viewport when scrolling
-.content-fixed {
-  top: 0;
-  position: fixed;
-}
-.shim {
-  display: block;
-}
-
 /*
  * 1. Prevents iOS text size adjust after orientation change, without disabling
  *    user zoom.
@@ -172,20 +147,6 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* For image replacement */
-.ir {
-  display: block;
-  text-indent: -999em;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  text-align: left;
-  direction: ltr;
-
-  br {
-    display: none;
-  }
-}
-
 /* Hide for both screenreaders and browsers */
 .hidden {
   display: none;
@@ -213,11 +174,6 @@ input[type="search"]::-webkit-search-decoration {
   }
 }
 
-/* Hide visually and from screenreaders, but maintain layout */
-.invisible {
-  visibility: hidden;
-}
-
 /* Give a strong clear visual idea as to what is currently in focus */
 a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
@@ -226,33 +182,6 @@ a {
 a:focus {
   background-color: $focus-colour;
   outline: 3px solid $focus-colour;
-}
-
-/* Make skiplinks visible when they are tabbed to */
-
-.skiplink {
-  position: absolute;
-  left: -9999em;
-}
-
-.skiplink:focus {
-  position: static;
-}
-
-#skiplink-container {
-  text-align: center;
-  background: $black;
-
-  div {
-    text-align: left;
-    margin: 0 auto;
-    max-width: 1020px;
-  }
-
-  .skiplink {
-    @include inline-block;
-    margin: 0.75em 0 0 30px;
-  }
 }
 
 input:focus,
