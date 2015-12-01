@@ -8,65 +8,64 @@
 
   {{>phase_banner}}
   {{>breadcrumb}}
-
-  <h1 class="heading-xlarge">
-    <span class="heading-secondary">GOV.UK elements</span>
-    Form elements
-  </h1>
-
-  <p class="lede text">
-    Keep forms as simple as possible &ndash; only ask what's needed to run your service.
-  </p>
-
-  <h2 class="heading-small heading-contents">Contents:</h2>
-  <div class="grid-row">
-    <div class="column-two-thirds">
-      <ul class="list list-contents">
-        <li><a href="#form-optional-fields">Optional and mandatory fields</a></li>
-        <li><a href="#form-labels">Labels</a></li>
-        <li><a href="#form-fields">Form fields</a></li>
-        <li><a href="#form-focus-states">Form focus states</a></li>
-        <li><a href="#form-hint-text">Hint text</a></li>
-        <li><a href="#form-spacing">Spacing</a></li>
-        <li><a href="#form-fieldsets">Fieldsets</a></li>
-        <li><a href="#form-select-boxes">Select boxes</a></li>
-        <li><a href="#form-radio-buttons">Radio buttons</a></li>
-        <li><a href="#form-checkboxes">Checkboxes</a></li>
-        <li><a href="#form-toggle-content">Conditionally revealing content</a></li>
-        <li><a href="#examples">Examples</a></li>
-      </ul>
-    </div>
-  </div>
-
-
-  <h3 class="heading-medium" id="form-optional-fields">Optional and mandatory fields</h3>
-  <ul class="text list list-bullet">
-    <li>only ask for the information you absolutely need</li>
-    <li>if you do ask for optional information, mark the labels of optional fields with '(optional)'</li>
-    <li>don't mark mandatory fields with asterisks</li>
-  </ul>
-
-  <h3 class="heading-medium" id="form-labels">Labels</h3>
-  <ul class="text list list-bullet">
-    <li>all form fields should be given labels</li>
-    <li>don't hide labels, unless the surrounding context makes them unnecessary</li>
-    <li>labels should be aligned above their fields</li>
-    <li>label text should be short, direct and in sentence case</li>
-    <li>avoid colons at the end of labels</li>
-    <li>labels should be associated with form fields using the <code class="code">for</code> attribute</li>
-  </ul>
-  <div class="example">
-    {{> form_labels }}
-  </div>
-
-<pre>
-<code class="language-markup">
-  {{> form_labels }}
-</code>
-</pre>
-
-  <h3 class="heading-medium" id="form-fields">Form fields</h3>
   <div class="text">
+
+    <h1 class="heading-xlarge">
+      <span class="heading-secondary">GOV.UK elements</span>
+      Form elements
+    </h1>
+
+    <p class="lede">
+      Keep forms as simple as possible &ndash; only ask what's needed to run your service.
+    </p>
+
+    <h2 class="heading-small heading-contents">Contents:</h2>
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <ul class="list list-contents">
+          <li><a href="#form-optional-fields">Optional and mandatory fields</a></li>
+          <li><a href="#form-labels">Labels</a></li>
+          <li><a href="#form-fields">Form fields</a></li>
+          <li><a href="#form-focus-states">Form focus states</a></li>
+          <li><a href="#form-hint-text">Hint text</a></li>
+          <li><a href="#form-spacing">Spacing</a></li>
+          <li><a href="#form-fieldsets">Fieldsets</a></li>
+          <li><a href="#form-select-boxes">Select boxes</a></li>
+          <li><a href="#form-radio-buttons">Radio buttons</a></li>
+          <li><a href="#form-checkboxes">Checkboxes</a></li>
+          <li><a href="#form-toggle-content">Conditionally revealing content</a></li>
+          <li><a href="#examples">Examples</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="heading-medium" id="form-optional-fields">Optional and mandatory fields</h3>
+    <ul class="list list-bullet">
+      <li>only ask for the information you absolutely need</li>
+      <li>if you do ask for optional information, mark the labels of optional fields with '(optional)'</li>
+      <li>don't mark mandatory fields with asterisks</li>
+    </ul>
+
+    <h3 class="heading-medium" id="form-labels">Labels</h3>
+    <ul class="list list-bullet">
+      <li>all form fields should be given labels</li>
+      <li>don't hide labels, unless the surrounding context makes them unnecessary</li>
+      <li>labels should be aligned above their fields</li>
+      <li>label text should be short, direct and in sentence case</li>
+      <li>avoid colons at the end of labels</li>
+      <li>labels should be associated with form fields using the <code class="code">for</code> attribute</li>
+    </ul>
+    <div class="example">
+      {{> form_labels }}
+    </div>
+
+    <pre>
+    <code class="language-markup">
+      {{> form_labels }}
+    </code>
+    </pre>
+
+    <h3 class="heading-medium" id="form-fields">Form fields</h3>
     <p>
       Make field widths proportional to the input they take.
     </p>
@@ -76,210 +75,207 @@
     <p>
       Snap form fields to 100% width at smaller screen sizes.
     </p>
-  </div>
+    <p>
+      <a href="https://designpatterns.hackpad.com/Text-boxes-imgij2JcsHO" rel="external">
+        Discuss form fields on the design patterns Hackpad
+      </a>
+    </p>
 
-  <p>
-    <a href="https://designpatterns.hackpad.com/Text-boxes-imgij2JcsHO" rel="external">
-      Discuss form fields on the design patterns Hackpad
-    </a>
-  </p>
-
-  <h3 class="heading-medium" id="form-focus-states">Form focus states</h3>
-  <div class="text">
+    <h3 class="heading-medium" id="form-focus-states">Form focus states</h3>
     <p>
       All elements use the yellow focus style as a highlight, as either a fill or 3px outline.
     </p>
     <p>
       Click on the label "Full name" or inside the form field to show the focus state.
     </p>
-  </div>
 
-  <div class="example">
-    {{> form_focus }}
-  </div>
+    <div class="example">
+      {{> form_focus }}
+    </div>
 
-  <h3 class="heading-medium"  id="form-hint-text">Hint text</h3>
-  <ul class="list list-bullet text">
-    <li>don't use placeholder text in form fields, as this will disappear once content is entered into the form field</li>
-    <li>use hint text for supporting contextual help, this will always be shown</li>
-    <li>hint text should sit above a form field</li>
-    <li>ensure hint text can be read correctly by screen readers</li>
-  </ul>
+    <h3 class="heading-medium"  id="form-hint-text">Hint text</h3>
+    <ul class="list list-bullet">
+      <li>don't use placeholder text in form fields, as this will disappear once content is entered into the form field</li>
+      <li>use hint text for supporting contextual help, this will always be shown</li>
+      <li>hint text should sit above a form field</li>
+      <li>ensure hint text can be read correctly by screen readers</li>
+    </ul>
 
-  <div class="example">
-    {{> form_hint_text }}
-  </div>
+    <div class="example">
+      {{> form_hint_text }}
+    </div>
 
-<pre>
-<code class="language-markup">
-  {{> form_hint_text }}
-</code>
-</pre>
+    <pre>
+    <code class="language-markup">
+      {{> form_hint_text }}
+    </code>
+    </pre>
 
-  <h3 class="heading-medium" id="form-spacing">Spacing between form elements</h3>
-  <p class="text">
-    Ensure there is sufficient spacing between form elements.
-  </p>
+    <h3 class="heading-medium" id="form-spacing">Spacing between form elements</h3>
+    <p class="text">
+      Ensure there is sufficient spacing between form elements.
+    </p>
 
-  <div class="example">
-    {{> form_spacing }}
-  </div>
+    <div class="example">
+      {{> form_spacing }}
+    </div>
 
-<pre>
-<code class="language-markup">
-  {{> form_spacing }}
-</code>
-</pre>
+    <pre>
+    <code class="language-markup">
+      {{> form_spacing }}
+    </code>
+    </pre>
 
-  <h3 class="heading-medium" id="form-fieldsets">Fieldsets and legends</h3>
-  <p class="text">
-    Use fieldsets to group related form controls. The first element inside a fieldset must be a <code class="code">legend</code> element which describes the group.
-  </p>
+    <h3 class="heading-medium" id="form-fieldsets">Fieldsets and legends</h3>
+    <p>
+      Use fieldsets to group related form controls. The first element inside a fieldset must be a <code class="code">legend</code> element which describes the group.
+    </p>
 
-  <h3 class="heading-medium" id="form-select-boxes">Select boxes</h3>
-  <p class="text">
-    Avoid using select boxes (drop-down lists) - use radio buttons or checkboxes instead.
-  </p>
+    <h3 class="heading-medium" id="form-select-boxes">Select boxes</h3>
+    <p>
+      Avoid using select boxes (drop-down lists) - use radio buttons or checkboxes instead.
+    </p>
 
-  <p>
-    <a href="https://designpatterns.hackpad.com/Select-boxes-KzQ1IRd07HL" rel="external">
-      Discuss select boxes on the design patterns Hackpad
-    </a>
-  </p>
+    <p>
+      <a href="https://designpatterns.hackpad.com/Select-boxes-KzQ1IRd07HL" rel="external">
+        Discuss select boxes on the design patterns Hackpad
+      </a>
+    </p>
 
-  <h3 class="heading-medium" id="form-radio-buttons">Radio buttons</h3>
-  <ul class="list list-bullet text">
-    <li>use these to let users choose a single option from a list</li>
-    <li>for more than two options, radio buttons should be stacked</li>
-    <li>radio buttons with large hit areas are easier to select with a mouse or touch devices</li>
-  </ul>
+    <h3 class="heading-medium" id="form-radio-buttons">Radio buttons</h3>
+    <ul class="list list-bullet">
+      <li>use these to let users choose a single option from a list</li>
+      <li>for more than two options, radio buttons should be stacked</li>
+      <li>radio buttons with large hit areas are easier to select with a mouse or touch devices</li>
+    </ul>
 
-  <h4 class="heading-small">Inline radio buttons</h4>
-  <div class="example">
-    <form>
+    <h4 class="heading-small">Inline radio buttons</h4>
+    <div class="example">
+      <form>
+        {{> form_radio_buttons_inline }}
+      </form>
+    </div>
+
+    <pre>
+    <code class="language-markup">
       {{> form_radio_buttons_inline }}
-    </form>
-  </div>
+    </code>
+    </pre>
 
-<pre>
-<code class="language-markup">
-  {{> form_radio_buttons_inline }}
-</code>
-</pre>
+    <h4 class="heading-small">Stacked radio buttons</h4>
+    <div class="example">
+      <form>
+        {{> form_radio_buttons }}
+      </form>
+    </div>
 
-  <h4 class="heading-small">Stacked radio buttons</h4>
-  <div class="example">
-    <form>
+    <pre>
+    <code class="language-markup">
       {{> form_radio_buttons }}
-    </form>
-  </div>
+    </code>
+    </pre>
 
-<pre>
-<code class="language-markup">
-  {{> form_radio_buttons }}
-</code>
-</pre>
+    <h3 class="heading-medium" id="form-checkboxes">Checkboxes</h3>
+    <ul class="list list-bullet">
+      <li>use these to select either on/off toggles or multiple selections</li>
+      <li>make it clear with words when users can select one or multiple options</li>
+    </ul>
 
-  <h3 class="heading-medium" id="form-checkboxes">Checkboxes</h3>
-  <ul class="list list-bullet text">
-    <li>use these to select either on/off toggles or multiple selections</li>
-    <li>make it clear with words when users can select one or multiple options</li>
-  </ul>
+    <h4 class="heading-small">Stacked checkboxes</h4>
+    <div class="example">
+      <form>
+        {{> form_checkboxes }}
+      </form>
+    </div>
 
-  <h4 class="heading-small">Stacked checkboxes</h4>
-  <div class="example">
-    <form>
+    <pre>
+    <code class="language-markup">
       {{> form_checkboxes }}
-    </form>
-  </div>
+    </code>
+    </pre>
 
-<pre>
-<code class="language-markup">
-  {{> form_checkboxes }}
-</code>
-</pre>
+    <h4 class="heading-small">Inline checkboxes</h4>
+    <ul class="list list-bullet">
+      <li>large hit areas aren't always appropriate</li>
+      <li>only pre-select options if there's a strong, user-centred reason to</li>
+    </ul>
 
-  <h4 class="heading-small">Inline checkboxes</h4>
-  <ul class="list list-bullet text">
-    <li>large hit areas aren't always appropriate</li>
-    <li>only pre-select options if there's a strong, user-centred reason to</li>
-  </ul>
+    <div class="example">
+      <form>
+        {{> form_checkbox_native }}
+      </form>
+    </div>
 
-  <div class="example">
-    <form>
+    <pre>
+    <code class="language-markup">
       {{> form_checkbox_native }}
-    </form>
-  </div>
+    </code>
+    </pre>
 
-<pre>
-<code class="language-markup">
-  {{> form_checkbox_native }}
-</code>
-</pre>
+    <p>
+      <a href="https://designpatterns.hackpad.com/Radio-buttons-and-checkboxes-8eBuLm9eRaz" rel="external">
+        Discuss radio buttons and checkboxes on the design patterns Hackpad
+      </a>
+    </p>
 
-<p>
-  <a href="https://designpatterns.hackpad.com/Radio-buttons-and-checkboxes-8eBuLm9eRaz" rel="external">
-    Discuss radio buttons and checkboxes on the design patterns Hackpad
-  </a>
-</p>
+    <h3 class="heading-medium" id="form-toggle-content">
+      Conditionally revealing content
+    </h3>
+    <ul class="list list-bullet">
+      <li>reveal additional questions, depending on the context</li>
+      <li>insets are used to emphasise this supporting information</li>
+    </ul>
 
-  <h3 class="heading-medium" id="form-toggle-content">
-    Conditionally revealing content
-  </h3>
-  <ul class="list list-bullet text">
-    <li>reveal additional questions, depending on the context</li>
-    <li>insets are used to emphasise this supporting information</li>
-  </ul>
+    <p>
+      <a href="https://designpatterns.hackpad.com/Conditional-form-fields-powy4GQmLIx" rel="external">
+        Discuss conditional form fields on the design patterns Hackpad
+      </a>
+    </p>
 
-  <p>
-    <a href="https://designpatterns.hackpad.com/Conditional-form-fields-powy4GQmLIx" rel="external">
-      Discuss conditional form fields on the design patterns Hackpad
-    </a>
-  </p>
+    <h4 class="heading-small" id="form-toggle-content-radios">
+      Radio buttons
+    </h4>
+    <p>
+      Click on "Yes" to see how this works.
+    </p>
+    <div class="example">
+      <form>
+        {{> form_inset_radios }}
+      </form>
+    </div>
 
-  <h4 class="heading-small" id="form-toggle-content-radios">
-    Radio buttons
-  </h4>
-  <p>
-    Click on "Yes" to see how this works.
-  </p>
-  <div class="example">
-    <form>
+    <pre>
+    <code class="language-markup">
       {{> form_inset_radios }}
-    </form>
-  </div>
+    </code>
+    </pre>
 
-<pre>
-<code class="language-markup">
-  {{> form_inset_radios }}
-</code>
-</pre>
+    <h4 class="heading-small" id="form-toggle-content-checkboxes">
+      Checkboxes
+    </h4>
+    <p>
+      Click on "Citizen of a different country" to see how this works.
+    </p>
+    <div class="example">
+      <form>
+        {{> form_inset_checkboxes }}
+      </form>
+    </div>
 
-  <h4 class="heading-small" id="form-toggle-content-checkboxes">
-    Checkboxes
-  </h4>
-  <p>
-    Click on "Citizen of a different country" to see how this works.
-  </p>
-  <div class="example">
-    <form>
+    <pre>
+    <code class="language-markup">
       {{> form_inset_checkboxes }}
-    </form>
-  </div>
+    </code>
+    </pre>
 
-<pre>
-<code class="language-markup">
-  {{> form_inset_checkboxes }}
-</code>
-</pre>
+    <h3 class="heading-medium" id="examples">Examples</h3>
+    <ul class="list list-bullet">
+      <li><a href="{{site.baseurl}}/form-elements/example-form-elements/">form elements</a></li>
+      <li><a href="{{site.baseurl}}/form-elements/example-date/">date pattern</a></li>
+      <li><a href="{{site.baseurl}}/form-elements/example-radios-checkboxes/">radio buttons and checkboxes</a></li>
+    </ul>
 
-  <h3 class="heading-medium" id="examples">Examples</h3>
-  <ul class="list list-bullet">
-    <li><a href="{{site.baseurl}}/form-elements/example-form-elements/">form elements</a></li>
-    <li><a href="{{site.baseurl}}/form-elements/example-date/">date pattern</a></li>
-    <li><a href="{{site.baseurl}}/form-elements/example-radios-checkboxes/">radio buttons and checkboxes</a></li>
-  </ul>
-
+  </div><!-- /.text -->
 </main><!-- / #content -->
 {{/content}}
 

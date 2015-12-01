@@ -126,27 +126,27 @@ main {
 }
 
 // Text
-p {
-  @include core-19;
+// Scope all paragraphs to the parent class '.text'
+.text {
+  p {
+    @include core-19;
+    // Set a max-width for body copy
+    // Aim for less than 75 characters per line of text
+    max-width: 30em;
 
-  margin-top: em(5);
-  margin-bottom: em(20);
+    margin-top: em(5);
+    margin-bottom: em(20);
 
-  @include media(tablet) {
-    margin-top: em(5, 19);
-    margin-bottom: em(20, 19);
+    @include media(tablet) {
+      margin-top: em(5, 19);
+      margin-bottom: em(20, 19);
+    }
   }
 }
 
 // Lede, or intro text
 .lede {
   @include core-24;
-}
-
-// Set a max-width for text blocks
-// Less than 75 characters per line of text
-.text {
-  max-width: 30em;
 }
 
 .text-secondary {

@@ -44,6 +44,14 @@
   margin-bottom: ($gutter*1.5);
 }
 
+// Scope text styles
+.text {
+  // Set a max-width for list items
+  .list li {
+    max-width: 30em;
+  }
+}
+
 
 // Example boxes
 // ==========================================================================
