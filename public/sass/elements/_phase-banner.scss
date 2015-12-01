@@ -1,0 +1,18 @@
+// Phase banners and tags
+// ==========================================================================
+
+.phase-banner-alpha {
+  @include phase-banner($state: alpha);
+}
+
+.phase-banner-beta {
+  @include phase-banner($state: beta);
+}
+
+.phase-tag-alpha {
+  @include phase-tag($state: alpha);
+}
+
+.phase-tag-beta {
+  @include phase-tag($state: beta);
+}

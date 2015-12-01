@@ -44,6 +44,14 @@
   margin-bottom: ($gutter*1.5);
 }
 
+// Scope text styles
+.text {
+  // Set a max-width for list items
+  .list li {
+    max-width: 30em;
+  }
+}
+
 
 // Example boxes
 // ==========================================================================
@@ -360,12 +368,3 @@ $palette: (
 // 9. Alpha beta banners
 // ==========================================================================
 
-// Alpha
-.phase-banner-alpha {
-  @include phase-banner($state: alpha);
-}
-
-// Beta
-.phase-banner-beta {
-  @include phase-banner($state: beta);
-}

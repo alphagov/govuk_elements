@@ -1,11 +1,7 @@
 // Typography
 // ==========================================================================
 
-// Increase the base font size to 19px for the main content area
-// Using the core-19 mixin from the govuk_toolkit _typography.scss file
-
 main {
-  @include core-19;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -120,8 +116,8 @@ main {
 .heading-small {
   @include bold-19();
 
-  margin-top: em(10, 16);
-  margin-bottom: em(5, 16);
+  margin-top: em(10);
+  margin-bottom: em(5);
 
   @include media(tablet) {
     margin-top: em(20, 19);
@@ -130,26 +126,27 @@ main {
 }
 
 // Text
-p {
-  margin-top: em(5, 16);
-  margin-bottom: em(20, 16);
+// Scope all paragraphs to the parent class '.text'
+.text {
+  p {
+    @include core-19;
+    // Set a max-width for body copy
+    // Aim for less than 75 characters per line of text
+    max-width: 30em;
 
-  @include media(tablet) {
     margin-top: em(5);
     margin-bottom: em(20);
-  }
 
+    @include media(tablet) {
+      margin-top: em(5, 19);
+      margin-bottom: em(20, 19);
+    }
+  }
 }
 
 // Lede, or intro text
 .lede {
   @include core-24;
-}
-
-// Set a max-width for text blocks
-// Less than 75 characters per line of text
-.text {
-  max-width: 30em;
 }
 
 .text-secondary {
@@ -225,36 +222,8 @@ p {
 
 }
 
-// Code styles
-.code {
-  color: black;
-  text-shadow: 0 1px white;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  font-size: 14px;
-  direction: ltr;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  line-height: 1.5;
-
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-
-  color: $black;
-  background-color: $highlight-colour;
-  border: 1px solid $border-colour;
-  padding: 4px 4px 2px 4px;
-}
-
 // Horizontal rule style
-hr {
+.hr {
   display: block;
   background: $border-colour;
   border: 0;
