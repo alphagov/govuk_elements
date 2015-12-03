@@ -1,5 +1,6 @@
 $is-ie: true;
 $ie-version: 6;
 $mobile-ie6: false;
- 
-@import "elements-page";
+
+// GOV.UK elements
+@import "govuk-elements";
