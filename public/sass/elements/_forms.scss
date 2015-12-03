@@ -7,7 +7,6 @@
 // 2. Form labels
 // 3. Form hints
 // 4. Form controls
-// 5. Form control widths
 
 // 1. Form wrappers
 // ==========================================================================
@@ -166,56 +165,5 @@ textarea.form-control {
   input {
     vertical-align: middle;
     margin: -2px 5px 0 0;
-  }
-}
-
-
-// 6. Form control widths
-// ==========================================================================
-
-// TODO: Update these
-// Form control widths
-
-.form-control-3-4 {
-  width: 100%;
-
-  @include media(tablet) {
-    width: 75%;
-  }
-}
-
-.form-control-2-3 {
-  width: 100%;
-  @include media(tablet) {
-    width: 66.66%;
-  }
-}
-
-.form-control-1-2 {
-  width: 100%;
-
-  @include media(tablet) {
-    width: 50%;
-  }
-}
-
-.form-control-1-3 {
-  width: 100%;
-  @include media(tablet) {
-    width: 33.33%;
-  }
-}
-
-.form-control-1-4 {
-  width: 100%;
-  @include media(tablet) {
-    width: 25%;
-  }
-}
-
-.form-control-1-8 {
-  width: 100%;
-  @include media(tablet) {
-    width: 12.5%;
   }
 }
