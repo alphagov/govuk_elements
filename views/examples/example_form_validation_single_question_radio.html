@@ -6,13 +6,11 @@
 <main class="js-error-example" id="content" role="main">
 
   {{>breadcrumb}}
-
-  <form method="post" action="/errors/example-form-validation-single-question-radio">
-    {{> form_error_radio }}
-  </form>
-
   <div class="text">
 
+    <form method="post" action="/errors/example-form-validation-single-question-radio">
+      {{> form_error_radio }}
+    </form>
     <h2 class="heading-medium implementation-advice">Implementation advice</h2>
 
     <p class="lead-in">When an error occurs:</p>
@@ -69,7 +67,7 @@
       Also consider using the <code>aria-invalid</code> attribute to programmatically indicate that a field has an error. The value of the <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-invalid">aria-invalid attribute</a> will vary depending on the type of error.
     </p>
 
-  </div>
+  </div><!-- /.text-->
 
 </main>
 {{/content}}

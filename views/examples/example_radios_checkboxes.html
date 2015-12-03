@@ -6,11 +6,10 @@
 <main id="content" role="main">
 
   {{>breadcrumb}}
+  <div class="text">
 
-  <div class="grid-row">
-    <div class="column-two-thirds">
-
-      <div class="text">
+    <div class="grid-row">
+      <div class="column-two-thirds">
 
         <h1 class="heading-xlarge">
           <span class="heading-secondary">Form elements</span>
@@ -26,137 +25,134 @@
           It also demonstrates setting ARIA attributes when showing and hiding additional content.
         </p>
 
-      </div>
+        <form action="/" method="post" class="form">
 
-      <form action="/" method="post" class="form">
+          <h1 class="heading-large">
+            What is your nationality?
+          </h1>
+          <p>If you have dual nationality, select all options that are relevant to you.</p>
 
-        <h1 class="heading-large">
-          What is your nationality?
-        </h1>
-        <p>If you have dual nationality, select all options that are relevant to you.</p>
+          <div class="form-group">
+            <fieldset class="fieldset">
 
-        <div class="form-group">
-          <fieldset class="fieldset">
+              <legend class="visuallyhidden">What is your nationality?</legend>
 
-            <legend class="visuallyhidden">What is your nationality?</legend>
-
-            <label for="nationality_british" class="block-label">
-              <input type="checkbox" name="nationality_british" value="British" id="nationality_british">
-              British
-            </label>
-
-            <label for="nationality_irish" class="block-label">
-              <input type="checkbox" name="nationality_irish" value="Irish" id="nationality_irish">
-              Irish
-            </label>
-
-            <label for="nationality_other" class="block-label" data-target="example_nationality_other">
-              <input type="checkbox" name="nationality_other" value="Wales" id="nationality_other">
-              Citizen of another country
-            </label>
-
-            <div class="panel panel-border-narrow js-hidden" id="example_nationality_other">
-              <label for="nationality_other_countries" class="form-label">
-                Country name
+              <label for="nationality_british" class="block-label">
+                <input type="checkbox" name="nationality_british" value="British" id="nationality_british">
+                British
               </label>
-              <input type="text" id="nationality_other_countries">
-            </div>
 
-          </fieldset>
-        </div>
+              <label for="nationality_irish" class="block-label">
+                <input type="checkbox" name="nationality_irish" value="Irish" id="nationality_irish">
+                Irish
+              </label>
 
-        <h1 class="heading-large">
-          Where should we send your new<br> passport?
-        </h1>
+              <label for="nationality_other" class="block-label" data-target="example_nationality_other">
+                <input type="checkbox" name="nationality_other" value="Wales" id="nationality_other">
+                Citizen of another country
+              </label>
 
-        <div class="form-group">
-          <fieldset class="fieldset">
+              <div class="panel panel-border-narrow js-hidden" id="example_nationality_other">
+                <label for="nationality_other_countries" class="form-label">
+                  Country name
+                </label>
+                <input type="text" id="nationality_other_countries">
+              </div>
 
-            <legend class="visuallyhidden">
-              Where should we send your new passport?
-            </legend>
+            </fieldset>
+          </div>
 
-            <label for="radio-home-address" class="block-label">
-              <input id="radio-home-address" type="radio" name="radio-indent-group" value="Yes">
-              Home address
-            </label>
+          <h1 class="heading-large">
+            Where should we send your new<br> passport?
+          </h1>
 
-            <label for="radio-other-address" class="block-label" data-target="example-other-address">
-              <input id="radio-other-address" type="radio" name="radio-indent-group" value="No">
-              Other address
-            </label>
+          <div class="form-group">
+            <fieldset class="fieldset">
 
-            <div class="panel panel-border-narrow js-hidden" id="example-other-address">
+              <legend class="visuallyhidden">
+                Where should we send your new passport?
+              </legend>
 
-              <h2 class="heading-medium">
-                Your other address
-              </h2>
+              <label for="radio-home-address" class="block-label">
+                <input id="radio-home-address" type="radio" name="radio-indent-group" value="Yes">
+                Home address
+              </label>
 
-              <fieldset class="fieldset">
+              <label for="radio-other-address" class="block-label" data-target="example-other-address">
+                <input id="radio-other-address" type="radio" name="radio-indent-group" value="No">
+                Other address
+              </label>
 
-                <legend class="visuallyhidden">
+              <div class="panel panel-border-narrow js-hidden" id="example-other-address">
+
+                <h2 class="heading-medium">
                   Your other address
-                </legend>
+                </h2>
 
-                <div class="form-group form-group-compound">
-                  <label class="form-label" for="address-line-1">Street</label>
-                  <input type="text" class="form-control" id="address-line-1">
-                </div>
+                <fieldset class="fieldset">
 
-                <div class="form-group">
-                  <label class="form-label visuallyhidden" for="address-line-2">Street</label>
-                  <input type="text" class="form-control" id="address-line-2">
-                </div>
+                  <legend class="visuallyhidden">
+                    Your other address
+                  </legend>
 
-                <div class="form-group">
-                  <label class="form-label" for="address-town">Town or City</label>
-                  <input type="text" class="form-control form-control-1-4" id="address-town">
-                </div>
+                  <div class="form-group form-group-compound">
+                    <label class="form-label" for="address-line-1">Street</label>
+                    <input type="text" class="form-control" id="address-line-1">
+                  </div>
 
-                <div class="form-group">
-                  <label class="form-label" for="address-postcode">Postcode</label>
-                  <input type="text" class="form-control form-control-1-8" id="address-postcode">
-                </div>
+                  <div class="form-group">
+                    <label class="form-label visuallyhidden" for="address-line-2">Street</label>
+                    <input type="text" class="form-control" id="address-line-2">
+                  </div>
 
-              </fieldset>
+                  <div class="form-group">
+                    <label class="form-label" for="address-town">Town or City</label>
+                    <input type="text" class="form-control form-control-1-4" id="address-town">
+                  </div>
 
-            </div>
-          </fieldset>
-        </div>
+                  <div class="form-group">
+                    <label class="form-label" for="address-postcode">Postcode</label>
+                    <input type="text" class="form-control form-control-1-8" id="address-postcode">
+                  </div>
 
-        <h1 class="heading-large">
-          Which part of the Housing Act was your licence isued under?
-        </h1>
-        <p>
-          Select one of the options below.
-        </p>
+                </fieldset>
 
-        <div class="form-group">
-          <fieldset class="fieldset">
+              </div>
+            </fieldset>
+          </div>
 
-            <legend class="visuallyhidden">
-              Which part of the Housing Act was your licence isued under?
-            </legend>
+          <h1 class="heading-large">
+            Which part of the Housing Act was your licence isued under?
+          </h1>
+          <p>
+            Select one of the options below.
+          </p>
 
-            <label for="radio-part-2" class="block-label">
-              <input id="radio-part-2" type="radio" name="housing-act" value="Part 2">
-              <span class="heading-small">Part 2 of the Housing Act 2004</span><br>
-              For properties that are 3 or more stories high and occupied by 5 or more people
-            </label>
+          <div class="form-group">
+            <fieldset class="fieldset">
 
-            <label for="radio-part-3" class="block-label">
-              <input id="radio-part-3" type="radio" name="housing-act" value="Part 3">
-              <span class="heading-small">Part 3 of the Housing Act 2004</span><br>
-              For properties that are within a geographical area defined by a local council
-            </label>
+              <legend class="visuallyhidden">
+                Which part of the Housing Act was your licence isued under?
+              </legend>
 
-          </fieldset>
-        </div>
+              <label for="radio-part-2" class="block-label">
+                <input id="radio-part-2" type="radio" name="housing-act" value="Part 2">
+                <span class="heading-small">Part 2 of the Housing Act 2004</span><br>
+                For properties that are 3 or more stories high and occupied by 5 or more people
+              </label>
 
-      </form>
+              <label for="radio-part-3" class="block-label">
+                <input id="radio-part-3" type="radio" name="housing-act" value="Part 3">
+                <span class="heading-small">Part 3 of the Housing Act 2004</span><br>
+                For properties that are within a geographical area defined by a local council
+              </label>
+
+            </fieldset>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
-
+  </div><!-- /.text-->
 </main><!-- /#content-->
 {{/content}}
 

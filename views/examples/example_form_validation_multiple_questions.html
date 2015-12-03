@@ -6,12 +6,11 @@
 <main class="js-error-example" id="content" role="main">
 
   {{>breadcrumb}}
-
-  <form method="post" action="/errors/example-form-validation-multiple-questions">
-    {{> form_error_multiple }}
-  </form>
-
   <div class="text">
+
+    <form method="post" action="/errors/example-form-validation-multiple-questions">
+      {{> form_error_multiple }}
+    </form>
 
     <h2 class="heading-medium implementation-advice">Implementation advice</h2>
 
@@ -63,7 +62,7 @@
       Also consider using the <code>aria-invalid</code> attribute to programmatically indicate that a field has an error. The value of the <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-invalid">aria-invalid attribute</a> will vary depending on the type of error.
     </p>
 
-  </div>
+  </div><!-- /.text -->
 
 </main>
 {{/content}}
