@@ -4,8 +4,13 @@
 .list {
   list-style-type: none;
   padding: 0;
-  margin-top: 5px;
-  margin-bottom: 20px;
+
+  margin-top: em(5);
+  margin-bottom: em(20);
+  @include media(tablet) {
+    margin-top: em(5, 19);
+    margin-bottom: em(20, 19);
+  }
 }
 
 .list li {
@@ -22,14 +27,7 @@
 .list-number {
   list-style-type: decimal;
   padding-left: 20px;
-
   @include ie-lte(7) {
     padding-left: 28px;
   }
 }
-
-// Lists of related links
-.list-links li {
-  margin-bottom: 10px;
-}
-
