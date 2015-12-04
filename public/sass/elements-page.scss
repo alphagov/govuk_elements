@@ -301,6 +301,7 @@ $palette: (
   }
 
   ul {
+    list-style-type: none;
     padding-bottom: $gutter-half;
     @include media(mobile) {
       min-height: 50px;
