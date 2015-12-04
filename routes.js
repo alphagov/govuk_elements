@@ -73,6 +73,14 @@ module.exports = {
       res.render('guide_icons_images', {'assetPath' : assetPath, 'page_name' : page_name });
     });
 
+    // Example page: Icons
+    app.get('/icons-images/example-icons', function (req, res) {
+      var section = "Icons and images";
+      var section_name = "Icons";
+      var page_name = "Example: Icons";
+      res.render('examples/example_icons', {'assetPath' : assetPath, 'section': section, 'section_name' : section_name, 'page_name' : page_name });
+    });
+
     // Data
     app.get('/data', function (req, res) {
       var page_name = "Data";
