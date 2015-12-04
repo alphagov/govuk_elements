@@ -16,6 +16,11 @@
 
 // GOV.UK elements
 @import "elements/helpers";
+
+// Base styles, predefined by govuk_template
+// If you're not using govuk_template, uncomment the line below.
+// @import "elements/base";
+
 @import "elements/reset";
 @import "elements/elements-typography";
 @import "elements/layout";
