@@ -1,0 +1,11 @@
+// Return ems from a pixel value
+// This assumes a base of 16px
+@function em($px, $base: 16) {
+  @return ($px / $base) + em;
+}
+
+// Path to use for assets if file-url() is not already defined
+// https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_url-helpers.scss
+@if ($path == false) {
+  $path: "/public/images/";
+}
