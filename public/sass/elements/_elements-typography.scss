@@ -1,10 +1,6 @@
 // Typography
 // ==========================================================================
 
-main {
-  -webkit-font-smoothing: antialiased;
-}
-
 // Core font sizes
 .font-xxlarge {
   @include core-80;
@@ -125,14 +121,16 @@ main {
 
 }
 
+
 // Text
-// Scope all paragraphs to the parent class '.text'
+// Scope all common text styles to the parent class '.text'
 .text {
   p {
     @include core-19;
     // Set a max-width for body copy
     // Aim for less than 75 characters per line of text
     max-width: 30em;
+
 
     margin-top: em(5);
     margin-bottom: em(20);
@@ -142,16 +140,24 @@ main {
       margin-bottom: em(20, 19);
     }
   }
+
+  // Lede, or intro text
+  .lede {
+    @include core-24;
+  }
+
+  // Use for paragraphs before lists
+  .lead-in {
+    margin-bottom: 0;
+  }
+
+  // Form elements
+  .form-radio,
+  .form-checkbox {
+    @include core-19;
+  }
 }
 
-// Lede, or intro text
-.lede {
-  @include core-24;
-}
-
-.text-secondary {
-  color: $secondary-text-colour;
-}
 
 // Link styles
 .link {
