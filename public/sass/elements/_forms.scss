@@ -13,7 +13,7 @@
 // ==========================================================================
 
 // .fieldset is used to apply styling to fieldsets and to group more than one .form-group
-.fieldset {
+fieldset.fieldset {
   @extend %contain-floats;
   width: 100%;
 }
