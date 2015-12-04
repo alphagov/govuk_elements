@@ -4,9 +4,6 @@ $ie-version: 7;
 // GOV.UK elements
 @import "govuk-elements";
 
-// Prism for code snippets underneath examples
-@import "prism";
-
 // Extra styles for GOV.UK elements
-// (Example boxes, colour swatches, non-GOV.UK styles)
-@import "govuk-elements-example-styles";
+// (Example boxes, code snippets underneath examples, colour swatches, non-GOV.UK styles)
+@import "elements-example-styles";
