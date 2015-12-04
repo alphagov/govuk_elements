@@ -4,7 +4,7 @@
 .panel {
   @extend %contain-floats;
   clear: both;
-  border-style: solid;
+  border-left-style: solid;
   border-color: $border-colour;
 
   padding: em(13);
