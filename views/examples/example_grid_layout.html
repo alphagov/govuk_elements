@@ -152,32 +152,6 @@
 
 {{$bodyEnd}}
   {{>scripts}}
-  <script>
-
-    // Toggle grid background colours
-
-    $(document).ready(function () {
-
-      var $html = $('html');
-      var $toggle = $('.js-highlight-grid')
-
-      $toggle.on( "click", function(e) {
-
-        e.preventDefault();
-
-        $html.toggleClass('example-highlight-grid');
-
-        if ($('.column-highlight').length>0) {
-          // Don't add more than once
-        } else {
-          $('.grid-row div').wrapInner('<div class="column-highlight"></div>');
-        }
-
-      });
-
-    });
-
-    </script>
 {{/bodyEnd}}
 
 {{/layout_example}}
