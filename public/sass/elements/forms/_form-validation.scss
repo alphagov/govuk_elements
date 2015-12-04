@@ -86,6 +86,8 @@
   }
 
   .error-summary-list {
+    @include core-19;
+    list-style-type: none;
     padding-left: 0;
 
     li {
