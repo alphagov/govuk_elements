@@ -7,85 +7,88 @@
 
   {{>breadcrumb}}
 
-  <h1 class="heading-xlarge">
-    <span class="heading-secondary">Typography</span>
-    Example: Details summary
-  </h1>
+  <div class="text">
 
-  <div class="grid-row">
-    <div class="column-two-thirds">
+    <h1 class="heading-xlarge">
+      <span class="heading-secondary">Typography</span>
+      Example: Details summary
+    </h1>
 
-      <p>
-      This example page demonstrates conditionally revealing information, using the HTML5 <code class="code">details</code> and <code class="code">summary</code> elements, <a href="http://html5doctor.com/the-details-and-summary-elements/" rel="external">they are described here</a>.
-      </p>
+    <div class="grid-row">
+      <div class="column-two-thirds">
 
-      <p>
-        These elements are only supported by <a href="http://caniuse.com/#feat=details" rel="external">a few modern browsers</a> at the moment so you'll need a JavaScript polyfill to make them work in other browsers. <a href="https://github.com/alphagov/govuk_elements/blob/master/public/javascripts/vendor/details.polyfill.js" rel="external">Here's the polyfill used by GOV.UK elements</a>.
-      </p>
+        <p>
+        This example page demonstrates conditionally revealing information, using the HTML5 <code class="code">details</code> and <code class="code">summary</code> elements, <a href="http://html5doctor.com/the-details-and-summary-elements/" rel="external">they are described here</a>.
+        </p>
 
-      <p>
-        The polyfill uses the <code class="code">aria-controls</code> attribute on the controlling element to associate it with the section it shows/hides. This is combined with the <code class="code">aria-expanded</code> attribute on the section to inform the <a href="http://www.w3.org/TR/html-aapi/#introduction-accessibility-apis" rel="external">accessibility API</a> of the changes to the document.
-      </p>
+        <p>
+          These elements are only supported by <a href="http://caniuse.com/#feat=details" rel="external">a few modern browsers</a> at the moment so you'll need a JavaScript polyfill to make them work in other browsers. <a href="https://github.com/alphagov/govuk_elements/blob/master/public/javascripts/vendor/details.polyfill.js" rel="external">Here's the polyfill used by GOV.UK elements</a>.
+        </p>
 
-      <h2 class="heading-medium">Example 1: Summary content is visible, details content is hidden</h2>
+        <p>
+          The polyfill uses the <code class="code">aria-controls</code> attribute on the controlling element to associate it with the section it shows/hides. This is combined with the <code class="code">aria-expanded</code> attribute on the section to inform the <a href="http://www.w3.org/TR/html-aapi/#introduction-accessibility-apis" rel="external">accessibility API</a> of the changes to the document.
+        </p>
 
-      <div class="form-group">
-        <label class="form-label-bold" for="driving-licence">
-          Driving licence number
-          <span class="form-hint">For example, NORGA657054SM91J</span>
-        </label>
-        <input class="form-control" id="driving-licence" type="text">
+        <h2 class="heading-medium">Example 1: Summary content is visible, details content is hidden</h2>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="driving-licence">
+            Driving licence number
+            <span class="form-hint">For example, NORGA657054SM91J</span>
+          </label>
+          <input class="form-control" id="driving-licence" type="text">
+        </div>
+
+        <details class="details">
+          <summary class="details-summary">
+            <span class="details-summary-text">Where to find your driving licence number</span>
+          </summary>
+          <div class="panel-indent">
+            <p>
+              Your driving licence number can be found in section 5<br>
+              of your driving licence photocard.
+            </p>
+          </div>
+        </details>
+
+        <h2 class="heading-medium">Example 2: Summary content is visible, details content is visible</h2>
+        <p>
+          The inital state is set to be open, by setting the boolean <code class="code">open</code> attribute.
+        </p>
+
+        <details class="details" open>
+          <summary class="details-summary">
+            <span class="details-summary-text">Where to find your driving licence number</span>
+          </summary>
+          <div class="panel-indent">
+            <p>
+              Your driving licence number can be found in section 5<br>
+              of your driving licence photocard.
+            </p>
+          </div>
+        </details>
+
+        <h2 class="heading-medium">Example 3: Summary content is visible, details content is visible</h2>
+        <p>
+          The inital state is set to be open, by setting the value of the <code class="code">open</code> attribute to open.
+        </p>
+
+        <details class="details" open="open">
+          <summary class="details-summary">
+            <span class="details-summary-text">Where to find your driving licence number</span>
+          </summary>
+          <div class="panel-indent">
+            <p>
+              Your driving licence number can be found in section 5<br>
+              of your driving licence photocard.
+            </p>
+          </div>
+        </details>
+
       </div>
-
-      <details class="details">
-        <summary class="details-summary">
-          <span class="details-summary-text">Where to find your driving licence number</span>
-        </summary>
-        <div class="panel panel-border-narrow">
-          <p>
-            Your driving licence number can be found in section 5<br>
-            of your driving licence photocard.
-          </p>
-        </div>
-      </details>
-
-      <h2 class="heading-medium">Example 2: Summary content is visible, details content is visible</h2>
-      <p>
-        The inital state is set to be open, by setting the boolean <code class="code">open</code> attribute.
-      </p>
-
-      <details class="details" open>
-        <summary class="details-summary">
-          <span class="details-summary-text">Where to find your driving licence number</span>
-        </summary>
-        <div class="panel panel-border-narrow">
-          <p>
-            Your driving licence number can be found in section 5<br>
-            of your driving licence photocard.
-          </p>
-        </div>
-      </details>
-
-      <h2 class="heading-medium">Example 3: Summary content is visible, details content is visible</h2>
-      <p>
-        The inital state is set to be open, by setting the value of the <code class="code">open</code> attribute to open.
-      </p>
-
-      <details class="details" open="open">
-        <summary class="details-summary">
-          <span class="details-summary-text">Where to find your driving licence number</span>
-        </summary>
-        <div class="panel panel-border-narrow">
-          <p>
-            Your driving licence number can be found in section 5<br>
-            of your driving licence photocard.
-          </p>
-        </div>
-      </details>
-
     </div>
-  </div>
 
+  </div><!-- /.text -->
 </main><!-- /#content -->
 {{/content}}
 

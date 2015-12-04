@@ -9,73 +9,74 @@
   {{>phase_banner}}
   {{>breadcrumb}}
 
-  <h1 class="heading-xlarge">
-    <span class="heading-secondary">GOV.UK elements</span>
-    Icons and images
-  </h1>
-
-  <p class="lede text">
-    Avoid unnecessary decoration - only use icons and images if there's a real user need.
-  </p>
-
-  <h2 class="heading-small heading-contents">Contents:</h2>
-  <div class="grid-row">
-    <div class="column-two-thirds">
-      <ul class="list list-contents">
-        <li><a href="#icons">Icons</a></li>
-        <li><a href="#images">Images</a></li>
-        <li><a href="#examples">Examples</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <h3 class="heading-medium" id="icons">Icons</h3>
-  <ul class="list list-bullet text">
-    <li>
-      if icons are needed ensure they are clear, simple and accompanied by relevant text
-    </li>
-    <li>
-      don’t hide functionality under icons
-    </li>
-  </ul>
-
-  <p class="text">
-    GOV.UK standard icons are provided, as well as organisation crests and media player icons &ndash; find these in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/tree/master/images" rel="external">images folder</a>.
-  </p>
-
-  <h4 class="heading-small">Legal text</h4>
-  <p class="text">
-    Use bold text with an exclamation icon if there are legal consequences - for example, a fine or prison sentence.
-  </p>
-
-<div class="example">
   <div class="text">
-    {{> typography_legal_text }}
-  </div>
-</div>
 
-<pre>
-<code class="language-markup">
-  {{> typography_legal_text }}
-</code>
-</pre>
+    <h1 class="heading-xlarge">
+      <span class="heading-secondary">GOV.UK elements</span>
+      Icons and images
+    </h1>
 
-  <h3 class="heading-medium" id="images">Images</h3>
-  <p>
-    If images are needed they should be landscape, 3:2 aspect ratio.
-  </p>
+    <p class="lede">
+      Avoid unnecessary decoration - only use icons and images if there's a real user need.
+    </p>
 
-  <div class="example example-images">
+    <h2 class="heading-small heading-contents">Contents:</h2>
     <div class="grid-row">
-      <div class="column-one-half">
-        <img src="/public/images/examples/3by2.jpg" alt="3:2">
-      </div>
-      <div class="column-one-half">
-        <img src="/public/images/examples/pm.jpg" alt="">
+      <div class="column-two-thirds">
+        <ul class="list list-contents">
+          <li><a href="#icons">Icons</a></li>
+          <li><a href="#images">Images</a></li>
+          <li><a href="#examples">Examples</a></li>
+        </ul>
       </div>
     </div>
-  </div>
 
+    <h3 class="heading-medium" id="icons">Icons</h3>
+    <ul class="list-bullet">
+      <li>
+        if icons are needed ensure they are clear, simple and accompanied by relevant text
+      </li>
+      <li>
+        don’t hide functionality under icons
+      </li>
+    </ul>
+
+    <p>
+      GOV.UK standard icons are provided, as well as organisation crests and media player icons &ndash; find these in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/tree/master/images" rel="external">images folder</a>.
+    </p>
+
+    <h4 class="heading-small">Legal text</h4>
+    <p>
+      Use bold text with an exclamation icon if there are legal consequences - for example, a fine or prison sentence.
+    </p>
+
+    <div class="example">
+      {{> typography_legal_text }}
+    </div>
+
+    <pre>
+    <code class="language-markup">
+      {{> typography_legal_text }}
+    </code>
+    </pre>
+
+    <h3 class="heading-medium" id="images">Images</h3>
+    <p>
+      If images are needed they should be landscape, 3:2 aspect ratio.
+    </p>
+
+    <div class="example example-images">
+      <div class="grid-row">
+        <div class="column-one-half">
+          <img src="/public/images/examples/3by2.jpg" alt="3:2">
+        </div>
+        <div class="column-one-half">
+          <img src="/public/images/examples/pm.jpg" alt="">
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /.text -->
 </main><!-- / #content -->
 {{/content}}
 

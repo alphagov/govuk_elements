@@ -9,138 +9,141 @@
   {{>phase_banner}}
   {{>breadcrumb}}
 
-  <h1 class="heading-xlarge">
-    <span class="heading-secondary">GOV.UK elements</span>
-    Buttons
-  </h1>
+  <div class="text">
 
-  <p class="lede text">
-    Use buttons to move though a transaction, aim to use only one button per page.
-  </p>
+    <h1 class="heading-xlarge">
+      <span class="heading-secondary">GOV.UK elements</span>
+      Buttons
+    </h1>
 
-  <h2 class="heading-small heading-contents">Contents:</h2>
-  <div class="grid-row">
-    <div class="column-two-thirds">
-      <ul class="list list-contents">
-        <li><a href="#button-text">Button text</a></li>
-        <li><a href="#button-start-now">Start now button</a></li>
-        <li><a href="#button-alignment">Button alignment</a></li>
-        <li><a href="#button-disabled">Disabled buttons</a></li>
-        <li><a href="#creating-buttons">Creating buttons</a></li>
-      </ul>
-    </div>
-  </div>
+    <p class="lede">
+      Use buttons to move though a transaction, aim to use only one button per page.
+    </p>
 
-  <h3 class="heading-medium" id="button-text">Button text</h3>
-  <p class="text">
-    Button text should be short and describe the action the button performs.
-  </p>
-
-<div class="example">
-  {{> buttons_button }}
-</div>
-
-<pre>
-<code class="language-markup">
-  {{> buttons_button }}
-</code>
-</pre>
-
-  <h3 class="heading-medium" id="button-start-now">Start now button</h3>
-  <p class="text">
-    Launch your service with a Start now button.
-  </p>
-
-<div class="example">
-  {{> buttons_button_start_now }}
-</div>
-
-<pre>
-<code class="language-markup">
-  {{> buttons_button_start_now }}
-</code>
-</pre>
-
-  <h3 class="heading-medium" id="button-alignment">Button alignment</h3>
-  <p class="text">
-    Align the primary action button to the left edge of your form, in the user's line of sight.
-  </p>
-
-  <div class="example example-button">
-
-    <form action="/" method="post" class="form">
-      <div class="form-group">
-        <label for="form-email-address-1" class="form-label">Email address</label>
-        <input type="text" class="form-control" id="form-email-address-1">
-      </div>
-      <div class="form-group">
-        <button class="button">Save and continue</button>
-      </div>
-    </form>
-
-  </div>
-
-  <h3 class="heading-medium" id="button-disabled">Disabled buttons</h3>
-  <p>
-    Disabled buttons should be set at 50% opacity.
-  </p>
-
-<div class="example">
-  <button class="button" disabled="disabled">Primary button</button>
-</div>
-
-<pre>
-<code class="language-markup">
-  {{> buttons_button_disabled }}
-</code>
-</pre>
-
-  <h3 class="heading-medium" id="creating-buttons">Creating buttons</h3>
-  <p class="text">
-    Use the GOV.UK Sass button mixin &ndash; find this in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/design-patterns/_buttons.scss" rel="external">buttons.scss</a> file.
-  </p>
-
-  <div class="example example-button">
+    <h2 class="heading-small heading-contents">Contents:</h2>
     <div class="grid-row">
-      <div class="column-one-third">
-
-        <button class="button">Save and continue</button>
-
+      <div class="column-two-thirds">
+        <ul class="list list-contents">
+          <li><a href="#button-text">Button text</a></li>
+          <li><a href="#button-start-now">Start now button</a></li>
+          <li><a href="#button-alignment">Button alignment</a></li>
+          <li><a href="#button-disabled">Disabled buttons</a></li>
+          <li><a href="#creating-buttons">Creating buttons</a></li>
+        </ul>
       </div>
-      <div class="column-one-third">
+    </div>
 
-        <div class="swatch-wrapper">
-          <h4 class="heading-small">Button</h4>
-          <div class="swatch swatch-button-colour"></div>
-          <ul>
-            <li><b>#00823B</b></li>
-            <li>$button-colour</li>
-          </ul>
+    <h3 class="heading-medium" id="button-text">Button text</h3>
+    <p>
+      Button text should be short and describe the action the button performs.
+    </p>
+
+    <div class="example">
+      {{> buttons_button }}
+    </div>
+
+    <pre>
+    <code class="language-markup">
+      {{> buttons_button }}
+    </code>
+    </pre>
+
+    <h3 class="heading-medium" id="button-start-now">Start now button</h3>
+    <p>
+      Launch your service with a Start now button.
+    </p>
+
+    <div class="example">
+      {{> buttons_button_start_now }}
+    </div>
+
+    <pre>
+    <code class="language-markup">
+      {{> buttons_button_start_now }}
+    </code>
+    </pre>
+
+    <h3 class="heading-medium" id="button-alignment">Button alignment</h3>
+    <p>
+      Align the primary action button to the left edge of your form, in the user's line of sight.
+    </p>
+
+    <div class="example example-button">
+
+      <form action="/" method="post" class="form">
+        <div class="form-group">
+          <label for="form-email-address-1" class="form-label">Email address</label>
+          <input type="text" class="form-control" id="form-email-address-1">
         </div>
-
-      </div>
-      <div class="column-one-third">
-
-        <div class="swatch-wrapper">
-          <h4 class="heading-small">Focus</h4>
-          <div class="swatch swatch-yellow"></div>
-          <ul>
-            <li><b>#FFBF47</b></li>
-            <li>$focus-colour</li>
-          </ul>
+        <div class="form-group">
+          <button class="button">Save and continue</button>
         </div>
-
-      </div>
+      </form>
 
     </div>
-  </div>
 
-  <p>
-    <a href="https://designpatterns.hackpad.com/Navigation-buttons-continue-next-previous-zoP1sKiW3y4" rel="external">
-      Discuss navigation buttons on the design patterns Hackpad
-    </a>
-  </p>
+    <h3 class="heading-medium" id="button-disabled">Disabled buttons</h3>
+    <p>
+      Disabled buttons should be set at 50% opacity.
+    </p>
 
+    <div class="example">
+      <button class="button" disabled="disabled">Primary button</button>
+    </div>
+
+    <pre>
+    <code class="language-markup">
+      {{> buttons_button_disabled }}
+    </code>
+    </pre>
+
+    <h3 class="heading-medium" id="creating-buttons">Creating buttons</h3>
+    <p>
+      Use the GOV.UK Sass button mixin &ndash; find this in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/design-patterns/_buttons.scss" rel="external">buttons.scss</a> file.
+    </p>
+
+    <div class="example example-button">
+      <div class="grid-row">
+        <div class="column-one-third">
+
+          <button class="button">Save and continue</button>
+
+        </div>
+        <div class="column-one-third">
+
+          <div class="swatch-wrapper">
+            <h4 class="heading-small">Button</h4>
+            <div class="swatch swatch-button-colour"></div>
+            <ul>
+              <li><b>#00823B</b></li>
+              <li>$button-colour</li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="column-one-third">
+
+          <div class="swatch-wrapper">
+            <h4 class="heading-small">Focus</h4>
+            <div class="swatch swatch-yellow"></div>
+            <ul>
+              <li><b>#FFBF47</b></li>
+              <li>$focus-colour</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <p>
+      <a href="https://designpatterns.hackpad.com/Navigation-buttons-continue-next-previous-zoP1sKiW3y4" rel="external">
+        Discuss navigation buttons on the design patterns Hackpad
+      </a>
+    </p>
+
+  </div><!-- /.text -->
 </main><!-- / #content -->
 {{/content}}
 
