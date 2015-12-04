@@ -1,0 +1,498 @@
+// ==========================================================================
+// Elements page styles
+// ==========================================================================
+
+//  http://prismjs.com/download.html?themes=prism&languages=markup+css+scss
+//
+//  prism.js default theme for JavaScript, CSS and HTML
+//  Based on dabblet (http://dabblet.com)
+//  @author Lea Verou
+//
+
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: black;
+  text-shadow: 0 1px white;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+@media print {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 0 0 30px 0;
+  overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray;
+}
+
+.token.punctuation {
+  color: #999;
+}
+
+.namespace {
+  opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+  background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a;
+}
+
+.token.function {
+  color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #e90;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+// These are example styles, used only for the elements pages
+
+.elements-index {
+  // Reduce top and bottom margins
+  .heading-medium {
+    margin: 1em 0 0 0;
+  }
+  // Add spacing above
+  .divider {
+    margin-top: 4em;
+  }
+}
+
+// Increase spacing above headings
+.heading-xlarge {
+  @include media(tablet) {
+    margin-top: em(60, 48);
+    margin-bottom: em(30, 48);
+  }
+}
+
+// Page contents
+.heading-contents {
+  margin-top: 3em;
+}
+
+.list-contents li {
+  @include core-16;
+}
+
+// Use for paragraphs before lists
+.lead-in {
+  margin-bottom: 0;
+}
+
+// Lists
+.list-bullet {
+  margin-bottom: ($gutter*1.5);
+}
+
+
+// Example boxes
+// ==========================================================================
+
+.example {
+  @extend %contain-floats;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid $grey-2;
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
+
+  padding-top: $gutter;
+  padding-right: $gutter-half;
+  padding-bottom: $gutter-half;
+  padding-left: $gutter-half;
+
+  @include media(tablet) {
+    padding-top: $gutter*1.5;
+    padding-right: $gutter;
+    padding-bottom: $gutter;
+    padding-left: $gutter;
+  }
+
+  &:before {
+    content: "EXAMPLE";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding: em(4) em(15) em(4) em(15);
+
+    @include core-14;
+    background: $grey-2;
+    color: white;
+  }
+
+  // Blue text for heading sizes
+  .highlight {
+    font-style: normal;
+    color: $hm-government;
+  }
+
+  // Fix grid layout within example boxes for IE7 and below
+  // where box-sizing isn't supported: http://caniuse.com/#search=box-sizing
+  @mixin example-box-column($width) {
+    width: (($site-width - $gutter) * $width) - $gutter;
+  }
+
+  @include ie-lte(7){
+
+    // Set example box width to 900px (removing left and right padding)
+    $example-box-width: $site-width - ($gutter * 2);
+    width: $example-box-width;
+
+    // Recalculate grid column widths
+    .column-quarter {
+      @include example-box-column( 1/4 );
+    }
+    .column-half {
+      @include example-box-column( 1/2 );
+    }
+    .column-third {
+      @include example-box-column( 1/3 );
+    }
+    .column-two-thirds {
+      @include example-box-column( 2/3 );
+    }
+
+    // Scale images to fit grid columns
+    img {
+      width: 100%;
+    }
+  }
+
+}
+
+
+// 1. Layout
+// ==========================================================================
+
+.example-grid p {
+  width: 100%;
+  background: file-url("examples/grid.png") 0 0 repeat;
+  margin-bottom: 0;
+  height: 30px;
+  @include media(tablet) {
+    height: 60px;
+  }
+  overflow: hidden;
+  text-indent: -999em;
+}
+
+
+// 2. Typography
+// ==========================================================================
+
+
+// 3. Colour
+// ==========================================================================
+
+// Colour swatches
+.swatch {
+  width: 60px;
+  height: 60px;
+  @include border-radius(100%);
+  @include media(mobile) {
+    clear: both;
+    float: left;
+    margin-right: $gutter-half;
+    margin-bottom: $gutter-half;
+  }
+  @include media(tablet) {
+    margin: 0 auto $gutter-half auto;
+  }
+}
+
+// Sass list for colour palette
+$palette: (
+  ("purple", $purple),
+  ("mauve", $mauve),
+  ("fuschia", $fuschia),
+  ("pink", $pink),
+  ("baby-pink", $baby-pink),
+  ("red", $red),
+  ("mellow-red", $mellow-red),
+  ("orange", $orange),
+  ("brown", $brown),
+  ("yellow", $yellow),
+  ("green", $green),
+  ("grass-green", $grass-green),
+  ("turquoise", $turquoise),
+  ("light-blue", $light-blue),
+  ("govuk-blue", $govuk-blue)
+);
+
+@mixin color-swatches {
+  @each $color in $palette {
+    $color-name: nth($color, 1);
+    $color-var: nth($color, 2);
+    .swatch-#{$color-name} {
+      background-color: $color-var;
+    }
+  }
+}
+
+// Generate swatch classes for each colour in palette list
+@include color-swatches;
+
+.swatch-alpha {
+  background-color: $alpha-colour;
+}
+
+.swatch-beta {
+  background-color: $beta-colour;
+}
+
+.swatch-discovery {
+  background-color: $discovery-colour;
+}
+
+.swatch-live {
+  background-color: $live-colour;
+}
+
+.swatch-error {
+  background-color: $error-colour;
+}
+
+.swatch-focus {
+  background-color: $focus-colour;
+}
+
+.swatch-button-colour {
+  background-color: $button-colour;
+}
+
+.swatch-black {
+  background-color: $black;
+}
+
+.swatch-grey-1 {
+  background-color: $grey-1;
+}
+
+.swatch-grey-2 {
+  background-color: $grey-2;
+}
+
+.swatch-grey-3 {
+  background-color: $grey-3;
+}
+
+.swatch-grey-4 {
+  background-color: $grey-4;
+}
+
+.swatch-white {
+  background-color: $white;
+  border: 1px solid $grey-3;
+}
+
+.swatch-text-colour {
+  background-color: $text-colour;
+}
+
+.swatch-text-secondary {
+  background-color: $secondary-text-colour;
+}
+
+.swatch-page-colour {
+  background-color: $page-colour;
+  border: 1px solid $grey-3;
+}
+
+.swatch-button-colour {
+  background-color: $button-colour;
+}
+
+.swatch-link-colour {
+ background-color: $link-colour;
+}
+
+.swatch-link-colour-visited {
+ background-color: $link-visited-colour;
+}
+
+.swatch-link-colour-hover {
+ background-color: $link-hover-colour;
+}
+
+.swatch-border-colour {
+  background-color: $border-colour;
+}
+
+.swatch-panel-colour {
+  background-color: $panel-colour;
+}
+
+.swatch-highlight-colour {
+  background-color: $highlight-colour;
+}
+
+// Colour swatch layout
+.swatch-wrapper {
+  @include media(tablet) {
+    float: left;
+    width: 20%;
+    text-align: center;
+  }
+
+  .heading-small {
+    margin-bottom: em(10);
+  }
+
+  ul {
+    padding-bottom: $gutter-half;
+    @include media(mobile) {
+      min-height: 50px;
+      padding-top: 10px;
+    }
+  }
+  li {
+    @include core-16;
+  }
+  b {
+  font-weight: bold;
+  text-transform: uppercase;
+  }
+}
+
+
+// 4. Images and icons
+// ==========================================================================
+
+.example-images img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+
+// 5. Data
+// ==========================================================================
+
+.data .bold-xlarge,
+.data .bold-xxlarge {
+  line-height: 0.8;
+}
+
+.example .data p {
+  margin-bottom: 0;
+}
+
+
+// 6. Forms
+// ==========================================================================
+
+
+// 7. Buttons
+// ==========================================================================
+
+// Remove top margin from headings in the "Creating buttons" example
+.example-button .heading-small {
+  margin-top: 0;
+}
+
+// Make swatch wrapper full width for "Creating buttons" example
+.example-button .swatch-wrapper {
+  width: 100%;
+}
+
+
+// 9. Alpha beta banners
+// ==========================================================================
