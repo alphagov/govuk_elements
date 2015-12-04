@@ -6,6 +6,15 @@
 
 // These are example styles, used only for the elements pages
 
+// Set a max-width for scoped text elements
+.text {
+  ul,
+  ol {
+    // Aim for less than 75 characters per line of text
+    max-width: 30em;
+  }
+}
+
 .elements-index {
   // Reduce top and bottom margins
   .heading-medium {

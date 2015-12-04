@@ -7,8 +7,8 @@
 }
 
 // Return ems from a pixel value
-// This assumes a base of 19px
-@function em($px, $base: 19) {
+// This assumes a base of 16px
+@function em($px, $base: 16) {
   @return ($px / $base) + em;
 }
 
