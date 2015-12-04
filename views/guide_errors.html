@@ -48,7 +48,7 @@
     You must:
   </p>
 
-  <ul class="text list-bullet">
+  <ul class="text list list-bullet">
     <li>show an error summary at the top of the page</li>
     <li>include a heading to alert the user to the error</li>
     <li>link to each of the problematic questions</li>
@@ -65,9 +65,11 @@
 </code>
 </pre>
 
-  <h3 class="heading-small panel-indent text">
-    The error summary must appear at the top of the page, so it is visible when the page is refreshed and is immediately read out by assistive technology.
-  </h3>
+  <div class="panel panel-border-narrow">
+    <h3 class="heading-small">
+      The error summary must appear at the top of the page, so it is visible when the page is refreshed and is immediately read out by assistive technology.
+    </h3>
+  </div>
 
   <h3 class="heading-medium" id="highlight-errors">Highlight errors in forms</h3>
 
@@ -75,7 +77,7 @@
     For each error:
   </p>
 
-  <ul class="list-bullet text">
+  <ul class="list list-bullet text">
     <li>write a message that helps the user to understand why the error occurred and what to do about it</li>
     <li>put the message in the <code class="code">&lt;label&gt;</code> or <code class="code">&lt;legend&gt;</code> for the question,
     after the question text, in red</li>
@@ -98,7 +100,7 @@
 </pre>
 
   <h3 class="heading-medium" id="examples">Examples</h3>
-  <ul class="list-bullet">
+  <ul class="list list-bullet">
     <li>
       <a href="{{ site.baseurl}}/errors/example-form-validation-single-question-radio">
         form validation - single question
