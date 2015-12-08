@@ -88,6 +88,12 @@
     color: $hm-government;
   }
 
+  // Remove default list style within examples
+  ol,
+  ul {
+    list-style-type: none;
+  }
+
   // Fix grid layout within example boxes for IE7 and below
   // where box-sizing isn't supported: http://caniuse.com/#search=box-sizing
   @mixin example-box-column($width) {
