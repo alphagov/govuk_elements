@@ -278,6 +278,7 @@ hr {
     margin-top: -17px; // Half the height of the important icon
   }
   strong {
+    display: block;
     padding-left: (35 + 30)+px;
     margin-left: -$gutter-half;
   }
