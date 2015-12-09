@@ -1,6 +1,6 @@
 {
-  "name": "govuk-elements",
-  "description": "GOVUK prototyping app in Express",
+  "name": "govuk_elements",
+  "description": "A style guide for GOV.UK services",
   "version": "0.0.1",
   "private": true,
   "engines": {
