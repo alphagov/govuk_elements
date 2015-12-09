@@ -88,10 +88,9 @@
     color: $hm-government;
   }
 
-  // Remove default list style within examples
-  ol,
-  ul {
-    list-style-type: none;
+  // Lists (reset this to elements default)
+  .list-bullet {
+    margin-bottom: 20px;
   }
 
   // Fix grid layout within example boxes for IE7 and below
