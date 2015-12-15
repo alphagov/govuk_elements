@@ -193,7 +193,7 @@ p {
   // IE7 doesn't support pseudo-elements, let's fallback to an image instead.
   // Ref: http://caniuse.com/#search=%3Abefore, http://caniuse.com/#search=rgba
   @include ie-lte(8) {
-   background: file-url("icon-arrow-left.png") no-repeat 0 4px;
+    background: file-url("icon-arrow-left.png") no-repeat 0 4px;
   }
 
   &:link,
