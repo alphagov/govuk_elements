@@ -178,15 +178,15 @@ p {
 
 .link-back {
   @include inline-block;
-  position: relative;
-
   @include core-16;
-
+  position: relative;
   margin-top: $gutter-half;
   margin-bottom: $gutter-half;
   padding-left: 14px;
 
   color: $black;
+  text-decoration: none;
+  border-bottom: 1px solid $black;
 
   &:link,
   &:visited,
@@ -194,9 +194,6 @@ p {
   &:active {
     color: $black;
   }
-
-  text-decoration: none;
-  border-bottom: 1px solid $black;
 
   // Back arrow - left pointing black arrow
   &::before {
