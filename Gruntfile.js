@@ -119,8 +119,8 @@ module.exports = function (grunt) {
         bundleExec: false,
         colorizeOutput: true,
         config: '.scss-lint.yml',
-        force: true,
-        reporterOutput: null
+        force: false,
+        reporterOutput: 'scss-lint-report.xml'
       },
     }
 
@@ -161,9 +161,6 @@ module.exports = function (grunt) {
     'concurrent:target'
   ]);
 
-  grunt.registerTask(
-    'lint',
-    'scsslint'
-  );
+  grunt.registerTask( 'lint', ['scsslint']);
 
 };
