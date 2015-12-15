@@ -188,6 +188,14 @@ p {
   text-decoration: none;
   border-bottom: 1px solid $black;
 
+  // Fallback
+  // IE8 doesn't support rgba and only supports the single colon syntax for :before
+  // IE7 doesn't support pseudo-elements, let's fallback to an image instead.
+  // Ref: http://caniuse.com/#search=%3Abefore, http://caniuse.com/#search=rgba
+  @include ie-lte(8) {
+   background: file-url("icon-arrow-left.png") no-repeat 0 4px;
+  }
+
   &:link,
   &:visited,
   &:hover,
@@ -210,14 +218,6 @@ p {
     left: 0;
     top: 50%;
     margin-top: -6px;
-  }
-
-  // Fallback
-  // IE8 doesn't support rgba and only supports the single colon syntax for :before
-  // IE7 doesn't support pseudo-elements, let's fallback to an image instead.
-  // Ref: http://caniuse.com/#search=%3Abefore, http://caniuse.com/#search=rgba
-  @include ie-lte(8) {
-   background: file-url("icon-arrow-left.png") no-repeat 0 4px;
   }
 
 }
