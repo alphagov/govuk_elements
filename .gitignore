@@ -3,6 +3,7 @@
 .start.pid
 node_modules
 govuk_modules
+scss-lint-report.xml
 
 # Ignore compiled stylesheets
 public/stylesheets/
