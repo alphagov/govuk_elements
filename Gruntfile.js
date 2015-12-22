@@ -162,6 +162,14 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask(
+    'test',
+    'default',
+    function () {
+      grunt.log.writeln('Test that the app runs');
+    }
+  );
+
+  grunt.registerTask(
     'lint',
     'scsslint'
   );

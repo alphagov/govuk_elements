@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - 0.1
+before_install:
+  - npm install -g grunt-cli
+install:
+  - npm install
+script:
+  - grunt test
+
+notifications:
+  email: false
+
+deploy:
+  provider: heroku
+  app: govuk-elements-test
+  api_key:
+    secure: MSMzniJpxcjP1jbsjqaAR/bU/FtGRrYYrrIekzaXNXtUiwNOsnd2MMMiBiuwzRaqHlEZzUkh70jyCuAoztnMzr5vAlwy9IW5BnGhacbDZsyFZ8AS1Z0Glq0l7q0nh1akCEVYhdGyABrc2NMaAqtaVovEbAfZYCrSX8Uu0CRbPfY=
+  on: master
+
+sudo: false
