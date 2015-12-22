@@ -1,3 +1,15 @@
+# 1.0.0
+
+- Use .list class required in (#135) for all list examples (#140)
+- Make the list of files govuk elements imports a partial (#139)
+- Fix: Update the Hex value for error colour, above $error-colour variable (#138)
+- Fix: Update the selector used by the notice styles (#137)
+- Fix: set only a left border for panels (#136)
+- Use a common naming convention for lists, panels and icons and grid columns (#135)
+- Update cookie message to match govuk template default (#132)
+- Copy base styles from govuk template (#131)
+- Show icons in the govuk frontend toolkit, add new .circle class to replace step icons (#129)
+
 # 0.1.1
 
 - Add a .column-one-third class to match the corresponding .column-two-thirds classname for layout (#127)
