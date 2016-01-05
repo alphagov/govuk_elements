@@ -6,7 +6,8 @@ before_install:
 install:
   - npm install
 script:
-  - grunt test
+  # Reference the locally-installed version of Grunt
+  - ./node_modules/grunt-cli/bin/grunt test
 
 notifications:
   email: false
