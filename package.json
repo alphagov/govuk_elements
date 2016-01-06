@@ -28,5 +28,8 @@
     "hogan.js": "3.0.2",
     "node-sass": "^3.2.0",
     "readdir": "0.0.6"
+  },
+  "scripts": {
+    "test": "./node_modules/grunt-cli/bin/grunt test"
   }
 }
