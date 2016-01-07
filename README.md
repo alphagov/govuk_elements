@@ -3,12 +3,18 @@ GOV.UK elements
 
 ## What is it?
 
-GOV.UK elements is two things:
+GOV.UK elements is three things:
 
 1. an online design guide, explaining how to make your service look consistent with the rest of GOV.UK
 2. an example of how to use the code in the [GOV.UK template](https://github.com/alphagov/govuk_template) and the [GOV.UK front end toolkit](https://github.com/alphagov/govuk_frontend_toolkit)
+3. an npm package, only including the Sass files
 
 The guide can be seen here: http://govuk-elements.herokuapp.com/.
+This is the most recent tagged version of govuk elements.
+
+There is also a staging app, to preview what is currently in master:
+http://govuk-elements-test.herokuapp.com/
+
 
 ## How can it be used?
 
@@ -83,6 +89,51 @@ Take a look at `/public/sass/_govuk-elements.scss` to see how the Sass files wit
 
 
 Ignore the `/public/sass/elements-page.scss` files, these exist to style the page furniture of GOV.UK elements (for example, the HTML example boxes and colour swatches).
+
+## Using the govuk-elements-sass package
+
+If you would like to import the govuk elements Sass files into your project, you can do so using:
+
+    `npm install govuk-elements-sass`
+
+This will install the files within `public/sass` to `node_modules/govuk-elements-sass`.
+
+These Sass files have the variables, mixins and functions defined by the govuk frontend toolkit as a dependency.
+
+These files are listed at the top of the `_govuk_elements.scss` partial, shown below:
+
+    // GOV.UK front end toolkit
+    // Sass variables, mixins and functions
+    // https://github.com/alphagov/govuk_frontend_toolkit/tree/master/stylesheets
+
+    // Settings (variables)
+    @import "colours";                                // Colour variables
+    @import "font_stack";                             // Font family variables
+    @import "measurements";                           // Widths and gutter variables
+
+    // Mixins
+    @import "conditionals";                           // Media query mixin
+    @import "device-pixels";                          // Retina image mixin
+    @import "grid_layout";                            // Basic grid layout mixin
+    @import "typography";                             // Core bold and heading mixins, also external links
+    @import "shims";                                  // Inline block mixin, clearfix placeholder
+
+    // Mixins to generate components (chunks of UI)
+    @import "design-patterns/alpha-beta";
+    @import "design-patterns/buttons";
+
+    // Functions
+    // @import "url-helpers";                         // Function to output image-url, or prefixed path (Rails and Compass only)
+
+
+These files must be imported before the govuk elements Sass files.
+
+Either copy these files your Sass directory, or configure the `includeFiles` path if you’re using a task runner like Grunt.
+
+If you're not using the govuk template, you'll also need to uncomment the base partial in `_govuk_elements.scss`, or create your own.
+
+    // @import "elements/base";                       // HTML elements, set by the GOV.UK template
+
 
 ## Running this site locally
 
