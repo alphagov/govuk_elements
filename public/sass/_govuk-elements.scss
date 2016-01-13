@@ -17,6 +17,7 @@
 // Mixins to generate components (chunks of UI)
 @import "design-patterns/alpha-beta";
 @import "design-patterns/buttons";
+@import "design-patterns/breadcrumbs";
 
 // Functions
 // @import "url-helpers";                         // Function to output image-url, or prefixed path (Rails and Compass only)
@@ -48,6 +49,6 @@
 @import "elements/forms/form-block-labels";       // Chunky labels for radios and checkboxes
 @import "elements/forms/form-date";               // Date of birth pattern
 @import "elements/forms/form-validation";         // Errors and validation
-@import "elements/breadcrumb";                    // Breadcrumb
+@import "elements/breadcrumbs";                   // Breadcrumbs
 @import "elements/phase-banner";                  // Alpha and beta banners and tags
 @import "elements/components";                    // GOV.UK prefixed styles - blue highlighted box
