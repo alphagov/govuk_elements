@@ -1,3 +1,7 @@
+# 1.1.0
+
+- Bump the govuk frontend toolkit to 4.6.0 and use the new breadcrumbs partial (#157)
+
 # 1.0.0
 
 - Use .list class required in (#135) for all list examples (#140)
