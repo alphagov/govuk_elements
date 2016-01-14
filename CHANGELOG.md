@@ -1,3 +1,8 @@
+# 1.1.1
+
+- Update package json to publish govuk-elements-sass (#156)
+- Bump govuk template to 0.16.1 (#160)
+
 # 1.1.0
 
 - Bump the govuk frontend toolkit to 4.6.0 and use the new breadcrumbs partial (#157)
