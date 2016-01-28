@@ -92,6 +92,14 @@ legend {
   }
 }
 
+// In Webkit, the bottom margin of a legend and the top margin 
+// of the next element don't overlap, which they should. This 
+// addresses that by discarding the top margin of the next element
+
+legend + * {
+    -webkit-margin-top-collapse : discard;
+}
+
 // Remove spacing when error messages are shown
 // TODO: Move into /forms/_form-validation.scss
 .error legend {
