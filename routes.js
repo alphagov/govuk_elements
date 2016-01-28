@@ -75,8 +75,8 @@ module.exports = {
 
     // Example page: Icons
     app.get('/icons-images/example-icons', function (req, res) {
-      var section = "Icons and images";
-      var section_name = "Icons";
+      var section = "icons-images";
+      var section_name = "Icons and images";
       var page_name = "Example: Icons";
       res.render('examples/example_icons', {'assetPath' : assetPath, 'section': section, 'section_name' : section_name, 'page_name' : page_name });
     });
