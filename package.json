@@ -6,9 +6,6 @@
   "engines": {
     "node": "4.0"
   },
-  "files": [
-    "public/sass/"
-  ],
   "dependencies": {
     "govuk_frontend_toolkit": "^4.6.0"
   },
