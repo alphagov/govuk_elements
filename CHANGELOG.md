@@ -1,3 +1,13 @@
+# 1.1.2
+
+- Add missing 2/3 width grid wrappers to example pages (#173)
+- Update max for date pattern to 2016 (#175)
+- Fix warning for the npm engine field (#171)
+- Bump the govuk frontend toolkit to 4.6.1, update the $link-hover-colour swatch. (#170)
+- Remove 'files' from package.json and amend .npmignore (#169)
+- Fix the breadcrumbs for the 'Icons and images' section (#168)
+- Make error messages plural rather than using (s) (#167)
+
 # 1.1.1
 
 - Update package json to publish govuk-elements-sass (#156)
