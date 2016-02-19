@@ -6,6 +6,14 @@ table {
   border-spacing: 0;
   width: 100%;
 
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
+
+  @include media(tablet) {
+    margin-top: $gutter-two-thirds;
+    margin-bottom: $gutter-two-thirds;
+  }
+
   th,
   td {
     @include core-16;
