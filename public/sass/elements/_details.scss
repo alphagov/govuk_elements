@@ -4,6 +4,14 @@
 details {
   display: block;
 
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
+
+  @include media(tablet) {
+    margin-top: $gutter-two-thirds;
+    margin-bottom: $gutter-two-thirds;
+  }
+
   summary {
     display: inline-block;
     color: $govuk-blue;

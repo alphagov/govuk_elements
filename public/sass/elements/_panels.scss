@@ -8,7 +8,14 @@
   border-color: $border-colour;
 
   padding: em(15,19);
-  margin-bottom: em(15,19);
+
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
+
+  @include media(tablet) {
+    margin-top: $gutter-two-thirds;
+    margin-bottom: $gutter-two-thirds;
+  }
 
   :first-child {
     margin-top: 0;

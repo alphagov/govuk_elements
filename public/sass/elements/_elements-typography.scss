@@ -131,14 +131,13 @@ main {
 
 // Text
 p {
-  margin-top: em(5, 16);
-  margin-bottom: em(20, 16);
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
 
   @include media(tablet) {
-    margin-top: em(5);
-    margin-bottom: em(20);
+    margin-top: $gutter-two-thirds;
+    margin-bottom: $gutter-two-thirds;
   }
-
 }
 
 // Lede, or intro text
@@ -259,8 +258,15 @@ hr {
   background: $border-colour;
   border: 0;
   height: 1px;
-  margin-top: $gutter;
-  margin-bottom: $gutter;
+
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
+
+  @include media(tablet) {
+    margin-top: $gutter-two-thirds;
+    margin-bottom: $gutter-two-thirds;
+  }
+
   padding: 0;
   @include ie-lte(7) {
     color: $border-colour;
