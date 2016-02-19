@@ -48,6 +48,14 @@ module.exports = {
       res.redirect('/typography/example-typography');
     });
 
+    // Example page: Margins and spacing
+    app.get('/typography/example-margins-spacing', function (req, res) {
+      var section = "typography";
+      var section_name = "Typography";
+      var page_name = "Example: Margins and spacing";
+      res.render('examples/example_margins_spacing', {'assetPath' : assetPath, 'section': section, 'section_name' : section_name, 'page_name' : page_name });
+    });
+
     // Example page: Progressive disclosure
     app.get('/typography/example-details-summary', function (req, res) {
       var section = "typography";
