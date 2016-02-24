@@ -272,12 +272,14 @@ hr {
 .notice {
   @extend %contain-floats;
   position: relative;
+
   .icon {
     position: absolute;
     left: 0;
     top: 50%;
     margin-top: -17px; // Half the height of the important icon
   }
+
   strong {
     display: block;
     padding-left: (35 + 30)+px;
