@@ -45,7 +45,7 @@
   clear: both;
 
   margin: 0;
-  padding: 5px 0 7px 0;
+  padding: 5px 0 7px;
 }
 
 // Summary of multiple error messages
@@ -65,7 +65,7 @@
     margin-top: $gutter;
     margin-bottom: $gutter;
 
-    padding: 20px $gutter-half $gutter-half $gutter-half;
+    padding: $gutter-two-thirds $gutter-half $gutter-half;
   }
 
   @include ie-lte(6) {

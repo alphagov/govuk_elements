@@ -206,7 +206,7 @@ p {
     height: 0;
 
     border-top: 5px solid transparent;
-    border-right: 6px solid #0b0c0c;
+    border-right: 6px solid $text-colour;
     border-bottom: 5px solid transparent;
 
     position: absolute;
@@ -220,15 +220,17 @@ p {
   // IE7 doesn't support pseudo-elements, let's fallback to an image instead.
   // Ref: http://caniuse.com/#search=%3Abefore, http://caniuse.com/#search=rgba
   @include ie-lte(8) {
-   background: file-url("icon-arrow-left.png") no-repeat 0 4px;
+    background: file-url("icon-arrow-left.png") no-repeat 0 4px;
   }
 
 }
 
 // Code styles
 .code {
-  color: black;
-  text-shadow: 0 1px white;
+  color: $text-colour;
+  background-color: $highlight-colour;
+
+  text-shadow: 0 1px $page-colour;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: 14px;
   direction: ltr;
@@ -247,10 +249,8 @@ p {
   -ms-hyphens: none;
   hyphens: none;
 
-  color: $black;
-  background-color: $highlight-colour;
   border: 1px solid $border-colour;
-  padding: 4px 4px 2px 4px;
+  padding: 4px 4px 2px;
 }
 
 // Horizontal rule style
@@ -262,6 +262,7 @@ hr {
   margin-top: $gutter;
   margin-bottom: $gutter;
   padding: 0;
+
   @include ie-lte(7) {
     color: $border-colour;
   }

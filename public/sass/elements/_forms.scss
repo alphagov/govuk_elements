@@ -27,7 +27,7 @@ fieldset {
 }
 
 // Remove margin under textarea in Chrome and FF
-textarea{
+textarea {
   display: block;
 }
 
@@ -190,6 +190,7 @@ legend {
 
 .form-control-2-3 {
   width: 100%;
+
   @include media(tablet) {
     width: 66.66%;
   }
@@ -205,6 +206,7 @@ legend {
 
 .form-control-1-3 {
   width: 100%;
+
   @include media(tablet) {
     width: 33.33%;
   }
@@ -212,6 +214,7 @@ legend {
 
 .form-control-1-4 {
   width: 100%;
+
   @include media(tablet) {
     width: 25%;
   }
@@ -219,6 +222,7 @@ legend {
 
 .form-control-1-8 {
   width: 100%;
+
   @include media(tablet) {
     width: 12.5%;
   }

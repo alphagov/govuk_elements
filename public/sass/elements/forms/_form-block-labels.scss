@@ -30,6 +30,7 @@
     margin: 0;
     width: 29px;
     height: 29px;
+
     @include ie(8) {
       top: 12px;
     }
@@ -39,6 +40,7 @@
   &:hover {
     border-color: $black;
   }
+
 }
 
 .block-label:last-child {
