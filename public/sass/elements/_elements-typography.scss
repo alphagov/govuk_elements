@@ -67,12 +67,12 @@ main {
 .heading-xlarge {
   @include bold-48();
 
-  margin-top: em(15, 32);
-  margin-bottom: em(30, 32);
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
 
   @include media(tablet) {
-    margin-top: em(30, 48);
-    margin-bottom: em(60, 48);
+    margin-top: $gutter * 1.5;
+    margin-bottom: $gutter * 1.5;
   }
 
   .heading-secondary {
@@ -87,12 +87,12 @@ main {
 .heading-large {
   @include bold-36();
 
-  margin-top: em(25, 24);
-  margin-bottom: em(10, 24);
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
 
   @include media(tablet) {
-    margin-top: em(45, 36);
-    margin-bottom: em(20, 36);
+    margin-top: $gutter * 1.5;
+    margin-bottom: $gutter * 1.5;
   }
 
   .heading-secondary {
@@ -107,12 +107,12 @@ main {
 .heading-medium {
   @include bold-24();
 
-  margin-top: em(25, 20);
-  margin-bottom: em(10, 20);
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
 
   @include media(tablet) {
-    margin-top: em(45, 24);
-    margin-bottom: em(20, 24);
+    margin-top: $gutter;
+    margin-bottom: $gutter;
   }
 
 }
@@ -120,30 +120,39 @@ main {
 .heading-small {
   @include bold-19();
 
-  margin-top: em(10, 16);
-  margin-bottom: em(5, 16);
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
 
   @include media(tablet) {
-    margin-top: em(20, 19);
+    margin-top: $gutter-two-thirds;
+    margin-bottom: $gutter-two-thirds;
   }
 
 }
 
 // Text
 p {
-  margin-top: em(5, 16);
-  margin-bottom: em(20, 16);
+  @include core-19;
+
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
 
   @include media(tablet) {
-    margin-top: em(5);
-    margin-bottom: em(20);
+    margin-top: $gutter-two-thirds;
+    margin-bottom: $gutter-two-thirds;
   }
-
 }
 
 // Lede, or intro text
 .lede {
   @include core-24;
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
+
+  @include media(tablet) {
+    margin-top: $gutter;
+    margin-bottom: $gutter;
+  }
 }
 
 // Set a max-width for text blocks
@@ -259,8 +268,15 @@ hr {
   background: $border-colour;
   border: 0;
   height: 1px;
-  margin-top: $gutter;
-  margin-bottom: $gutter;
+
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
+
+  @include media(tablet) {
+    margin-top: $gutter-two-thirds;
+    margin-bottom: $gutter-two-thirds;
+  }
+
   padding: 0;
   @include ie-lte(7) {
     color: $border-colour;
@@ -271,6 +287,15 @@ hr {
 .notice {
   @extend %contain-floats;
   position: relative;
+
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
+
+  @include media(tablet) {
+    margin-top: $gutter;
+    margin-bottom: $gutter;
+  }
+
   .icon {
     position: absolute;
     left: 0;
