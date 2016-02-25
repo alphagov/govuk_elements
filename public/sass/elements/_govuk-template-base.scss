@@ -1,7 +1,22 @@
 // https://github.com/alphagov/govuk_template/blob/master/source/assets/stylesheets/_basic.scss
 
 // basic styles for HTML5 and other elements
-html, body, div, h1, h2, h3, h4, h5, h6, article, aside, footer, header, hgroup, nav, section {
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+article,
+aside,
+footer,
+header,
+hgroup,
+nav,
+section {
   margin: 0;
   padding: 0;
   vertical-align: baseline;
@@ -12,7 +27,6 @@ main {
   display: block;
 }
 
-// (Normalize.css)
 // 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
 //    http://clagnut.com/blog/348/#c790
 //    note - font-size reduced to 62.5% to allow simple rem/px font-sizing and fallback
@@ -26,13 +40,13 @@ main {
 html {
   font-size: 62.5%; // 1
   overflow-y: scroll; // 2
-  -webkit-tap-highlight-color: rgba(0,0,0,0); // 3
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // 3
   -webkit-text-size-adjust: 100%; // 4
   -ms-text-size-adjust: 100%; // 4
   -ms-overflow-style: scrollbar; // 5
+  background-color: $white;
 }
 
-// (Normalize.css)
 // 1. Font-size increased to compensate for change to html element font-size in
 //    order to support beta typography which was set in ems
 //    (62.5% * 160% = 100%)
@@ -41,9 +55,7 @@ html {
 body {
   font-size: 160%; // 1
   margin: 0; // 2
-}
 
-body {
   background: $white;
   color: $text-colour;
   line-height: 1.5;
@@ -52,7 +64,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-ol, ul, nav ol, nav ul {
+ol,
+ul,
+nav ol,
+nav ul {
   list-style: inherit;
 }
 
@@ -61,7 +76,6 @@ fieldset {
   padding: 0;
 }
 
-// (Normalize.css)
 b,
 strong {
   font-weight: 600;
@@ -73,7 +87,7 @@ img {
 
 @include ie-lte(7) {
   button {
-    overflow:visible;
+    overflow: visible;
   }
 }
 
@@ -101,13 +115,31 @@ a:active {
 // External link styles
 a[rel="external"] {
   @include external-link-default;
-  @include external-link-19;
-  @include media-down(mobile) {
-    @include external-link-16;
+  @include external-link-16;
+
+  @include media(tablet) {
+    @include external-link-19;
   }
 }
 
 .external-link {
   @include external-link-12-no-hover;
   @include external-link-heading;
+}
+
+// Set focus styles
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+}
+
+a:focus {
+  background-color: $focus-colour;
+  outline: 3px solid $focus-colour;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: 3px solid $focus-colour;
 }
