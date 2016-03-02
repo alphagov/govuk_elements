@@ -22,7 +22,6 @@
     "grunt-contrib-watch": "^0.5.3",
     "grunt-nodemon": "^0.3.0",
     "grunt-sass": "^1.0.0",
-    "grunt-scss-lint": "^0.3.8",
     "grunt-text-replace": "^0.3.12",
     "hogan.js": "3.0.2",
     "node-sass": "^3.2.0",
