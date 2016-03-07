@@ -7,7 +7,7 @@
     "node": ">=4.0.0"
   },
   "dependencies": {
-    "govuk_frontend_toolkit": "^4.6.1"
+    "govuk_frontend_toolkit": "^4.9.0"
   },
   "devDependencies": {
     "consolidate": "^0.10.0",
