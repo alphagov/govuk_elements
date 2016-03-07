@@ -1,4 +1,14 @@
-// https://github.com/alphagov/govuk_template/blob/master/source/assets/stylesheets/_basic.scss
+html,
+body,
+button,
+input,
+table,
+td,
+th {
+  // Allow uppercase letters in font stack variable names
+  // scss-lint:disable NameFormat
+  font-family: $NTA-Light;
+}
 
 // basic styles for HTML5 and other elements
 html,
