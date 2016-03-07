@@ -50,6 +50,8 @@ main {
 html {
   font-size: 62.5%; // 1
   overflow-y: scroll; // 2
+  // Allow RGBA here, this line has been copied from govuk_template
+  // scss-lint:disable ColorVariable
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // 3
   -webkit-text-size-adjust: 100%; // 4
   -ms-text-size-adjust: 100%; // 4
@@ -139,6 +141,8 @@ a[rel="external"] {
 
 // Set focus styles
 a {
+  // Allow RGBA here, this line has been copied from govuk_template
+  // scss-lint:disable ColorVariable
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
 }
 
