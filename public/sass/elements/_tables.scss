@@ -24,7 +24,8 @@ table {
     }
   }
 
-  // Use tabular numbers for numeric table cells
+  // Allow a qualifying element, only table data cells should use tabular numbers
+  // scss-lint:disable QualifyingElement
   td.numeric {
     @include core-16($tabular-numbers: true);
     text-align: right;
