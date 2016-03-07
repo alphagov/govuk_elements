@@ -110,18 +110,13 @@ module.exports = function (grunt) {
     },
 
     // Lint scss files
-    scsslint: {
-      allFiles: [
-        'public/sass/elements/*.scss',
-        'public/sass/elements/forms/*.scss'
-      ],
-      options: {
-        bundleExec: false,
-        colorizeOutput: true,
-        config: '.scss-lint.yml',
-        force: true,
-        reporterOutput: null
-      },
+    shell: {
+      multiple: {
+        command: [
+          'bundle',
+          'bundle exec govuk-lint-sass public/sass/elements/'
+        ].join('&&')
+      }
     }
 
   });
@@ -133,7 +128,7 @@ module.exports = function (grunt) {
     'grunt-nodemon',
     'grunt-text-replace',
     'grunt-concurrent',
-    'grunt-scss-lint'
+    'grunt-shell'
   ].forEach(function (task) {
     grunt.loadNpmTasks(task);
   });
@@ -169,9 +164,6 @@ module.exports = function (grunt) {
     }
   );
 
-  grunt.registerTask(
-    'lint',
-    'scsslint'
-  );
+  grunt.registerTask('lint', 'shell');
 
 };
