@@ -6,89 +6,30 @@ GOV.UK elements
 GOV.UK elements is three things:
 
 1. an online design guide, explaining how to make your service look consistent with the rest of GOV.UK
-2. an example of how to use the code in the [GOV.UK template](https://github.com/alphagov/govuk_template) and the [GOV.UK front end toolkit](https://github.com/alphagov/govuk_frontend_toolkit)
-3. an npm package, only including the Sass files
+2. an example of how to use the code in the [GOV.UK template](https://github.com/alphagov/govuk_template) and the [GOV.UK frontend toolkit](https://github.com/alphagov/govuk_frontend_toolkit)
+3. an npm package of the Sass files
 
-The guide can be seen here: http://govuk-elements.herokuapp.com/.
-This is the most recent tagged version of govuk elements.
+The guide can be seen here: [http://govuk-elements.herokuapp.com](http://govuk-elements.herokuapp.com/).
+This is the most recent tagged version.
 
-There is also a staging app, to preview what is currently in master:
+There is a staging app, to preview what is currently in master:
 http://govuk-elements-test.herokuapp.com/
 
 
 ## How can it be used?
 
-It can be used as a base of front end code.
+It can be used as a base of frontend code.
 
-GOV.UK elements has the [GOV.UK front end toolkit](https://github.com/alphagov/govuk_frontend_toolkit) and the [GOV.UK template](https://github.com/alphagov/govuk_template) as dependencies.
+GOV.UK elements has the [GOV.UK frontend toolkit](https://github.com/alphagov/govuk_frontend_toolkit) and the [GOV.UK template](https://github.com/alphagov/govuk_template) as dependencies.
 
-The toolkit provides Sass variables, functions and mixins - in order to use these - they must be imported before any of the elements Sass files.
+The toolkit provides Sass variables, functions and mixins, they *must be imported* before any of the GOV.UK elements Sass files.
 
-Take a look at `/public/sass/_govuk-elements.scss` to see how the GOV.UK front end toolkit's Sass files are imported.
+Take a look at the top of `/public/sass/_govuk-elements.scss` to see how the GOV.UK frontend toolkit's Sass files are imported.
 
-
-    // GOV.UK front end toolkit
-    // Sass variables, mixins and functions
-    // https://github.com/alphagov/govuk_frontend_toolkit/tree/master/stylesheets
-
-    // Settings (variables)
-    @import "colours";                                // Colour variables
-    @import "font_stack";                             // Font family variables
-    @import "measurements";                           // Widths and gutter variables
-
-    // Mixins
-    @import "conditionals";                           // Media query mixin
-    @import "device-pixels";                          // Retina image mixin
-    @import "grid_layout";                            // Basic grid layout mixin
-    @import "typography";                             // Core bold and heading mixins, also external links
-    @import "shims";                                  // Inline block mixin, clearfix placeholder
-
-    // Mixins to generate components (chunks of UI)
-    @import "design-patterns/alpha-beta";
-    @import "design-patterns/buttons";
-
-    // Functions
-    // @import "url-helpers";                         // Function to output image-url, or prefixed path (Rails and Compass only)
-
-
-Choose the Sass files you need to build on top of those provided by the front end toolkit.
-
-Take a look at `/public/sass/_govuk-elements.scss` to see how the Sass files within `/public/sass/elements` are imported.
-
-
-    // GOV.UK elements
-
-    @import "elements/helpers";                       // Helper functions and classes
-
-    // Generic (normalize/reset.css)
-    @import "elements/reset";
-
-    // Base (unclassed HTML elements)
-    // These are predefined by govuk_template
-    // If you're not using govuk_template, uncomment the line below.
-    // @import "elements/base";                       // HTML elements, set by the GOV.UK template
-
-    // Objects (unstyled design patterns)
-    @import "elements/layout";                        // Main content container. Grid layout - rows and column widths
-
-    // Components (chunks of UI)
-    @import "elements/elements-typography";           // Typography
-    @import "elements/buttons";                       // Buttons
-    @import "elements/icons";                         // Icons - numbered steps, calendar, search
-    @import "elements/lists";                         // Lists - numbered, bulleted
-    @import "elements/tables";                        // Tables - regular, numeric
-    @import "elements/details";                       // Details summary
-    @import "elements/panels";                        // Panels with a left grey border
-    @import "elements/forms";                         // Form - wrappers, inputs, labels
-    @import "elements/forms/form-block-labels";       // Chunky labels for radios and checkboxes
-    @import "elements/forms/form-date";               // Date of birth pattern
-    @import "elements/forms/form-validation";         // Errors and validation
-    @import "elements/breadcrumb";                    // Breadcrumb
-    @import "elements/phase-banner";                  // Alpha and beta banners and tags
-    @import "elements/components";                    // GOV.UK prefixed styles - blue highlighted box
-
+Choose the Sass files you need to build on top of those provided by the frontend toolkit.
 
 Ignore the `/public/sass/elements-page.scss` files, these exist to style the page furniture of GOV.UK elements (for example, the HTML example boxes and colour swatches).
+
 
 ## Using the govuk-elements-sass package
 
@@ -98,11 +39,9 @@ If you would like to import the govuk elements Sass files into your project, you
 
 This will install the files within `public/sass` to `node_modules/govuk-elements-sass`.
 
-These Sass files have the variables, mixins and functions defined by the govuk frontend toolkit as a dependency.
+The GOV.UK frontend toolkit dependencies are listed at the top of the `_govuk_elements.scss` partial, shown below:
 
-These files are listed at the top of the `_govuk_elements.scss` partial, shown below:
-
-    // GOV.UK front end toolkit
+    // GOV.UK frontend toolkit
     // Sass variables, mixins and functions
     // https://github.com/alphagov/govuk_frontend_toolkit/tree/master/stylesheets
 
@@ -126,11 +65,9 @@ These files are listed at the top of the `_govuk_elements.scss` partial, shown b
     // @import "url-helpers";                         // Function to output image-url, or prefixed path (Rails and Compass only)
 
 
-These files must be imported before the govuk elements Sass files.
-
 Either copy these files your Sass directory, or configure the `includeFiles` path if you’re using a task runner like Grunt.
 
-If you're not using the govuk template, you'll also need to uncomment the base partial in `_govuk_elements.scss`, or create your own.
+If you're not using the [GOV.UK template](https://github.com/alphagov/govuk_template), you'll also need to uncomment the base partial in `_govuk_elements.scss`, or create your own.
 
     // @import "elements/base";                       // HTML elements, set by the GOV.UK template
 
@@ -154,8 +91,8 @@ Run the app
 
     node start.js
 
-
 Go to [localhost:3000](http://localhost:3000) in your browser.
+
 
 ## Running Wraith to compare changes
 
@@ -189,4 +126,4 @@ Here are examples of service-specific pattern libraries using GOV.UK elements.
 
 * [Rural Payments style guide](http://rural-payments-styleguide.herokuapp.com) | [Source Code](https://github.com/Defra/rural-payments-styleguide/)
 * [Land Registry pattern library](http://land-registry-elements.herokuapp.com) | [Source Code](https://github.com/LandRegistry/land-registry-elements)
-* [Digital Marketplace front end toolkit](http://alphagov.github.io/digitalmarketplace-frontend-toolkit/) | [Source Code](https://github.com/alphagov/digitalmarketplace-frontend-toolkit)
+* [Digital Marketplace frontend toolkit](http://alphagov.github.io/digitalmarketplace-frontend-toolkit/) | [Source Code](https://github.com/alphagov/digitalmarketplace-frontend-toolkit)
