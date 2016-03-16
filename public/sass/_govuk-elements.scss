@@ -32,7 +32,7 @@
 // Base (unclassed HTML elements)
 // These are predefined by govuk_template
 // If you're not using govuk_template, uncomment the line below.
-// @import "elements/base";                       // HTML elements, set by the GOV.UK template
+@import "elements/govuk-template-base";           // Base styles set by GOV.UK template
 
 // Objects (unstyled design patterns)
 @import "elements/layout";                        // Main content container. Grid layout - rows and column widths
