@@ -1,7 +1,4 @@
-// Large hit area
-// Radio buttons & checkboxes
-
-// By default, block labels stack vertically
+// Custom radio buttons & checkboxes
 .block-label {
 
   display: block;
@@ -18,33 +15,140 @@
 
   @include media(tablet) {
     float: left;
-    // width: 25%; - Test : check that text within labels will wrap
   }
 
-  // Absolutely position inputs within label, to allow text to wrap
-  input {
-    position: absolute;
-    top: 15px;
-    left: $gutter-half;
-    cursor: pointer;
-    margin: 0;
-    width: 29px;
-    height: 29px;
+  background: transparent;
+  width: 50%;
+  border: 2px solid #6f777b;
 
-    @include ie(8) {
-      top: 12px;
+  &:hover {
+    background-color: $panel-colour;
+  }
+
+  [type="checkbox"],
+  [type="radio"] {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    right: 50px;
+    width: 1px;
+  }
+
+  [type="checkbox"] + span,
+  [type="radio"] + span {
+    position: absolute;
+    left: 17px;
+    top: 14px;
+    background: $white;
+    display: inline-block;
+    border: 2px solid #6f777b;
+    @include border-radius(20px);
+    @include media(tablet) {
+      width: 25px;
+      height: 25px;
+      left: 14px;
+      top: 16px;
+    }
+
+    .inner {
+      display: inherit;
+      @include border-radius(20px);
+      border: 3px solid $white;
+      width: 16px;
+      height: 16px;
+      @include media(tablet) {
+        width: 19px;
+        height: 19px;
+      }
     }
   }
 
-  // Change border on hover
-  &:hover {
+  [type="checkbox"] + span {
+    @include border-radius(0);
+    .inner {
+      @include border-radius(0);
+    }
+  }
+
+  [type="radio"]:focus + span,
+  [type="checkbox"]:focus + span {
+    .inner {
+      border-color: $yellow;
+    }
+  }
+
+  &.selected [type="radio"] + span,
+  [type="radio"]:checked + span {
+    background: $black;
     border-color: $black;
+  }
+
+  &.selected [type="checkbox"] + span,
+  [type="checkbox"]:checked + span {
+    border-color: $black;
+    .inner {
+      background: file-url('icons/checkbox-tick-mobile.png') 0 0 no-repeat;
+
+      @include media(tablet) {
+        background: file-url('icons/checkbox-tick.png') 0 0 no-repeat;
+      }
+    }
+  }
+
+  // Undo <span> styles here
+  [type="checkbox"] + span.heading-small,
+  [type="radio"] + span.heading-small {
+    display: block;
+    position: static;
+    border: none;
   }
 
 }
 
-.block-label:last-child {
-  margin-bottom: 0;
+
+// manage images for IE 6-9 radios and checkboxes
+@include ie-lte(9) {
+  .block-label {
+
+    input {
+      position: absolute;
+      top: 16px;
+      left: -1000px;
+      cursor: pointer;
+    }
+
+    input[type="radio"] + span,
+    input[type="checkbox"] + span {
+      border: none;
+      width: 25px;
+      height: 25px;
+      .inner {
+        display: none;
+      }
+    }
+
+    [type="radio"] + span {
+      background: image-url('icons/radio-buttons.png') 0 -50px no-repeat;
+    }
+
+    [type="checkbox"] + span {
+      background: image-url('icons/checkboxes.png') 0 -25px no-repeat;
+    }
+
+    &.selected {
+      [type="radio"] + span {
+        background: image-url('icons/radio-buttons.png') 0 -75px no-repeat;
+      }
+
+      [type="checkbox"] + span {
+        background: image-url('icons/checkboxes.png') 0 0 no-repeat;
+      }
+    }
+  }
 }
 
 // To stack horizontally, use .inline on parent, to sit block labels next to each other
@@ -54,16 +158,27 @@
 }
 
 // Selected and focused states
+.js-enabled label.selected {
+  background: $panel-colour !important;
+  border-color: $black;
+  font-weight: 800;
+}
 
 // Add selected state
-.js-enabled label.selected {
-  background: $white;
-  border-color: $black;
+.js-enabled label.selected:hover {
+  background-color: $focus-colour;
 }
 
 // Add focus to block labels
 .js-enabled label.focused {
   outline: 3px solid $focus-colour;
+
+  [type="radio"]:focus + span,
+  [type="checkbox"]:focus + span {
+    .inner {
+      border-color: $white;
+    }
+  }
 }
 
 // Remove focus from radio/checkboxes
