@@ -1,3 +1,13 @@
+# 1.1.3
+
+- Bump govuk frontend toolki to 4.9.1 (PR #195)
+- Use the GOV.UK lint gem for scss linting (PR #191)
+- Use aria-describedby to associate a form hint with a form fields (PR #187)
+- Bump govuk template to 0.17.0 (PR #186)
+- Use 19px as the default font size for tabular data (PR #185)
+- Remove invalid ARIA "breadcrumbs" role from the breadcrumb (PR #182)
+- Copy base styles set by govuk template (PR #176)
+
 # 1.1.2
 
 - Add missing 2/3 width grid wrappers to example pages (#173)
