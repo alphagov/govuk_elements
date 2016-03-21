@@ -26,12 +26,6 @@
 
 }
 
-// Hide for both screenreaders and browsers
-.hidden {
-  display: none;
-  visibility: hidden;
-}
-
 // Hide, but not for screenreaders
 .visually-hidden,
 .visuallyhidden {
@@ -43,9 +37,4 @@
   margin: -1px;
   padding: 0;
   border: 0;
-}
-
-// Hide, only when JavaScript is enabled
-.js-enabled .js-hidden {
-  display: none;
 }
