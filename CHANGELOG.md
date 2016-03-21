@@ -1,3 +1,10 @@
+# 1.1.4
+
+- Fix issue #197, toggled content not displaying
+  PR (#198)
+  - Instead of using show() and hide(), add and remove the .js-hidden class
+  - The govuk_template sets .js-hidden, remove duplicate in helpers.scss
+
 # 1.1.3
 
 - Bump govuk frontend toolki to 4.9.1 (PR #195)
