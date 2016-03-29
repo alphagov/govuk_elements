@@ -99,7 +99,7 @@ function ShowHideContent() {
           var state = $(this).attr('aria-expanded') === 'false' ? true : false;
 
           // Toggle hidden content
-          $('#'+$dataTarget).toggle();
+          $('#'+$dataTarget).toggleClass('js-hidden');
 
           // Update aria-expanded and aria-hidden attributes
           $(this).attr('aria-expanded', state);
