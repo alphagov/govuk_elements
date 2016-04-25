@@ -13,7 +13,7 @@
     "consolidate": "^0.10.0",
     "express": "^3.18.4",
     "express-writer": "0.0.4",
-    "govuk_template_mustache": "^0.17.0",
+    "govuk_template_mustache": "^0.17.1",
     "grunt": "^0.4.2",
     "grunt-cli": "0.1.13",
     "grunt-concurrent": "^0.4.3",
