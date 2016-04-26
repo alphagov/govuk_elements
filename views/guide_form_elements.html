@@ -228,25 +228,38 @@
   </h3>
   <ul class="list list-bullet text">
     <li>reveal additional questions, depending on the context</li>
-    <li>insets are used to emphasise this supporting information</li>
+    <li>a left border is used to emphasise this supporting information</li>
   </ul>
-
-  <p>
-    <a href="https://designpatterns.hackpad.com/Conditional-form-fields-powy4GQmLIx" rel="external">
-      Discuss conditional form fields on the design patterns Hackpad
-    </a>
-  </p>
 
   <h4 class="heading-small" id="form-toggle-content-radios">
     Radio buttons
   </h4>
-  <p>
-    Click on "Yes" to see how this works.
-  </p>
+  <div class="text">
+    <p>Choose an option below to see how this works.</p>
+  </div>
+
   <div class="example">
     <form>
       {{> form_inset_radios }}
     </form>
+  </div>
+
+  <div class="panel panel-border-wide text">
+    <p>
+      A grey left hand border is used to visually connect the revealed content with the question above.
+    </p>
+  </div>
+
+<pre>
+<code class="language-markup">
+  <div class="panel panel-border-narrow"></div>
+</code>
+</pre>
+
+  <div class="text">
+    <p>
+      The <a href="/typography/#typography-inset-text">inset text section</a> has more information on where and how to use panels (content with a grey left hand border).
+    </p>
   </div>
 
 <pre>
@@ -254,6 +267,10 @@
   {{> form_inset_radios }}
 </code>
 </pre>
+
+  <p class="text">
+     In the code snippet above, the <code class="language-markup">data-target=""</code> attribute is present on every label, as each option reveals an extra field.
+  </p>
 
   <h4 class="heading-small" id="form-toggle-content-checkboxes">
     Checkboxes
@@ -272,6 +289,12 @@
   {{> form_inset_checkboxes }}
 </code>
 </pre>
+
+  <p>
+    <a href="https://designpatterns.hackpad.com/Conditional-form-fields-powy4GQmLIx" rel="external">
+      Discuss conditional form fields on the design patterns Hackpad
+    </a>
+  </p>
 
   <h3 class="heading-medium" id="examples">Examples</h3>
   <ul class="list list-bullet">
