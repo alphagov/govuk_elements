@@ -4,38 +4,33 @@ node_js:
  - "4.0"
  - "4"
 before_install:
-  - npm install -g grunt-cli
+- npm install -g grunt-cli
 install:
-  - npm install
+- npm install
 script:
-  # Reference the locally-installed version of Grunt
-  - ./node_modules/grunt-cli/bin/grunt test
-
+- "./node_modules/grunt-cli/bin/grunt test"
 notifications:
   email: false
-
+before_deploy:
+- test $TRAVIS_TEST_RESULT = 0 \# check that build passed
 deploy:
-  # Deploy master to production (govuk-elements.herokuapp.com)
   - provider: heroku
     api_key:
-      secure: MSMzniJpxcjP1jbsjqaAR/bU/FtGRrYYrrIekzaXNXtUiwNOsnd2MMMiBiuwzRaqHlEZzUkh70jyCuAoztnMzr5vAlwy9IW5BnGhacbDZsyFZ8AS1Z0Glq0l7q0nh1akCEVYhdGyABrc2NMaAqtaVovEbAfZYCrSX8Uu0CRbPfY=
+      secure: nQCOBk2EnuJ0yaC0cO2RabfLlF+3WiZ4MrLLBPt3l+fNQO69KcJZu59Npbt45f/ip6Dv8cEGxdzSqzNsPu/XB+fmyAZd1bml0u7JMKWNQeVLKddoM+A1ETFSyXHoM/Ra3Qw8+2XS/ZJNTAD7BGibSh8SvzYdg9fy9kCN77Sn9Ro=
     app: govuk-elements
     on: master
-  # Deploy tagged build to latest release (govuk-elements-sass-release.herokuapp.com)
   - provider: heroku
     api_key:
-      secure: fkx8QA6Huf6P4ZVWomAsJh+z432g8AErWnzF7tAKQt0nweGlv47/nYeIfVjVsptN66W9ByeTVQXVrClQtl2fkHC4h+ELKfNTW+blDHVZMigpk+wsl7sr51jDPepdAZWZyMebdZOJ2U2qQxiGKnzuVEQNbBso343a+wIz2SavPho=
+      secure: nQCOBk2EnuJ0yaC0cO2RabfLlF+3WiZ4MrLLBPt3l+fNQO69KcJZu59Npbt45f/ip6Dv8cEGxdzSqzNsPu/XB+fmyAZd1bml0u7JMKWNQeVLKddoM+A1ETFSyXHoM/Ra3Qw8+2XS/ZJNTAD7BGibSh8SvzYdg9fy9kCN77Sn9Ro=
     app: govuk-elements-sass-release
     on:
-      all_branches: true
       tags: true
-  # Release tagged commits to npm
+      all_branches: true
   - provider: npm
     api_key:
       secure: VAHPK3W0YVWqx03j659FbKjvEwd+UIDfb1x55to9u+PzyVqQp1CXalsYuKQSavxqInaV3gzNJpbANo6SIXlpAUxZPChiTk0rJwUhz7u1fRY0Lshb+aDOMnXSfjSqiIGThNRpjYdxBiJsnrYP1T6unHuo2A1K8mXjwdFtxhadh+w=
     email: govuk-dev@digital.cabinet-office.gov.uk
     on:
-      all_branches: true
       tags: true
-
+      all_branches: true
 sudo: false
