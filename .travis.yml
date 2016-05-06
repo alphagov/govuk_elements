@@ -12,7 +12,7 @@ script:
 notifications:
   email: false
 before_deploy:
-- test $TRAVIS_TEST_RESULT = 0 \# check that build passed
+- test $TRAVIS_TEST_RESULT = 0
 deploy:
   - provider: heroku
     api_key:
