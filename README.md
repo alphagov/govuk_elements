@@ -10,11 +10,10 @@ GOV.UK elements is three things:
 3. an npm package of the Sass files
 
 The guide can be seen here: [http://govuk-elements.herokuapp.com](http://govuk-elements.herokuapp.com/).
+
+To preview the latest relase of govuk-elements-sass:
+[http://govuk-elements-sass-release.herokuapp.com/](http://govuk-elements-sass-release.herokuapp.com/)
 This is the most recent tagged version.
-
-There is a staging app, to preview what is currently in master:
-http://govuk-elements-test.herokuapp.com/
-
 
 ## How can it be used?
 
