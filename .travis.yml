@@ -13,17 +13,17 @@ notifications:
   email: false
 
 deploy:
-  # Deploy master to staging (govuk-elements-test.herokuapp.com)
-  - provider: heroku
-    api_key:
-      secure: MSMzniJpxcjP1jbsjqaAR/bU/FtGRrYYrrIekzaXNXtUiwNOsnd2MMMiBiuwzRaqHlEZzUkh70jyCuAoztnMzr5vAlwy9IW5BnGhacbDZsyFZ8AS1Z0Glq0l7q0nh1akCEVYhdGyABrc2NMaAqtaVovEbAfZYCrSX8Uu0CRbPfY=
-    app: govuk-elements-test
-    on: master
-  # Deploy tagged build to production (govuk-elements.herokuapp.com)
+  # Deploy master to production (govuk-elements.herokuapp.com)
   - provider: heroku
     api_key:
       secure: MSMzniJpxcjP1jbsjqaAR/bU/FtGRrYYrrIekzaXNXtUiwNOsnd2MMMiBiuwzRaqHlEZzUkh70jyCuAoztnMzr5vAlwy9IW5BnGhacbDZsyFZ8AS1Z0Glq0l7q0nh1akCEVYhdGyABrc2NMaAqtaVovEbAfZYCrSX8Uu0CRbPfY=
     app: govuk-elements
+    on: master
+  # Deploy tagged build to latest release (govuk-elements-sass-release.herokuapp.com)
+  - provider: heroku
+    api_key:
+      secure: fkx8QA6Huf6P4ZVWomAsJh+z432g8AErWnzF7tAKQt0nweGlv47/nYeIfVjVsptN66W9ByeTVQXVrClQtl2fkHC4h+ELKfNTW+blDHVZMigpk+wsl7sr51jDPepdAZWZyMebdZOJ2U2qQxiGKnzuVEQNbBso343a+wIz2SavPho=
+    app: govuk-elements-sass-release
     on:
       all_branches: true
       tags: true
