@@ -8,18 +8,18 @@
   height: #{$icon-height}px;
 
   @if $icon-sub-folder {
-    background-image: file-url("icons/#{$icon-sub-folder}/#{$icon-name}.png");
+    background-image: file-url("#{$icon-sub-folder}/#{$icon-name}.png");
 
     @include device-pixel-ratio() {
-      background-image: file-url("icons/#{$icon-sub-folder}/#{$icon-name}-2x.png");
+      background-image: file-url("#{$icon-sub-folder}/#{$icon-name}-2x.png");
       background-size: 100%;
     }
 
   } @else {
-    background-image: file-url("icons/#{$icon-name}.png");
+    background-image: file-url("#{$icon-name}.png");
 
     @include device-pixel-ratio() {
-      background-image: file-url("icons/#{$icon-name}-2x.png");
+      background-image: file-url("#{$icon-name}-2x.png");
       background-size: 100%;
     }
   }

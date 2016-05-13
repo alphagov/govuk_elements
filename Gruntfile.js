@@ -64,7 +64,7 @@ module.exports = function (grunt) {
         expand: true,
         src: '**',
         cwd: 'node_modules/govuk_frontend_toolkit/images/',
-        dest: 'govuk_modules/public/images/icons/'
+        dest: 'govuk_modules/public/images/'
       },
 
     },
