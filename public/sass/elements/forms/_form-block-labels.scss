@@ -41,16 +41,19 @@
     border-color: $black;
   }
 
-}
-
-.block-label:last-child {
-  margin-bottom: 0;
+  &:last-child,
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 // To stack horizontally, use .inline on parent, to sit block labels next to each other
 .inline .block-label {
   clear: none;
-  margin-right: 10px;
+  @include media (tablet) {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
 }
 
 // Selected and focused states
