@@ -1,8 +1,9 @@
 // Helpers
 // ==========================================================================
 
-// Path to assets for use with file-url() is not already defined
-@if ($path == false) {
+// If image-url is not defined (if we are not in a Rails environment)
+// Set a path to /public/images
+@if not(function-exists(image-url)) {
   $path: "/public/images/";
 }
 
