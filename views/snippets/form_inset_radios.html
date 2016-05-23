@@ -1,27 +1,39 @@
 <h1 class="heading-medium">
-  Do you know their National Insurance number?
+  How do you want to be contacted?
 </h1>
 
 <form>
-  <fieldset class="inline">
+  <fieldset>
 
-    <legend class="visuallyhidden">Do you know their National Insurance number?</legend>
+    <legend class="visuallyhidden">How do you want to be contacted?</legend>
 
     <div class="form-group">
 
-      <label class="block-label" data-target="example-ni-no" for="radio-indent-1">
-        <input id="radio-indent-1" type="radio" name="radio-indent-group" value="Yes">
-        Yes
+      <label class="block-label" data-target="contact-by-email" for="example-contact-by-email">
+        <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes">
+        Email
       </label>
+      <div class="panel panel-border-narrow js-hidden" id="contact-by-email">
+        <label class="form-label" for="contact-email">Email address</label>
+        <input class="form-control" name="contact-email" type="text" id="contact-email">
+      </div>
 
-      <label class="block-label" for="radio-indent-2">
-        <input id="radio-indent-2" type="radio" name="radio-indent-group" value="No">
-        No
+      <label class="block-label" data-target="contact-by-phone" for="example-contact-by-phone">
+        <input id="example-contact-by-phone" type="radio" name="radio-contact-group" value="No">
+        Phone
       </label>
+      <div class="panel panel-border-narrow js-hidden" id="contact-by-phone">
+        <label class="form-label" for="contact-phone">Phone number</label>
+        <input class="form-control" name="contact-phone" type="text" id="contact-phone">
+      </div>
 
-      <div class="panel panel-border-narrow js-hidden" id="example-ni-no">
-        <label class="form-label" for="national-insurance">National Insurance number</label>
-        <input class="form-control" name="national-insurance" type="text" id="national-insurance">
+      <label class="block-label" data-target="contact-by-text" for="example-contact-by-text">
+        <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No">
+        Text message
+      </label>
+      <div class="panel panel-border-narrow js-hidden" id="contact-by-text">
+        <label class="form-label" for="contact-text-message">Mobile phone number</label>
+        <input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
       </div>
 
     </div>
