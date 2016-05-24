@@ -4,7 +4,6 @@
 .button {
   @include button ($button-colour);
   @include box-sizing (border-box);
-  padding: em(10) em(15) em(5);
   vertical-align: top;
 
   @include media (mobile) {
