@@ -4,6 +4,13 @@
 // Elements page styles
 // ==========================================================================
 
+// Pressing enter when focus is on the skiplink sets focus on the #content area
+// Remove the blue outline
+
+#content {
+  outline: none;
+}
+
 // These are example styles, used only for the elements pages
 
 .elements-index {
