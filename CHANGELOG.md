@@ -1,3 +1,16 @@
+# 1.2.0
+
+- Add MIT License (PR #236)
+- Create latest release branch as an alias of the latest release (PR #232)
+- Create new app to preview govuk elements sass releases (PR #219)
+- Fix the summary arrow in recent Firefox (PR #227)
+- Remove button padding overriding the govuk_frontend_toolkit (PR #230)
+- Don't copy the govuk_frontend_toolkit's images into an icons folder (PR #223)
+- Fix path for rails and node environments (PR #234)
+  - Import the govuk_frontend_toolkit url-helpers partial
+  - If image-url is not defined (if we are not in a Rails environment), then set a path to /public/images
+- Fix the skip link in Safari (PR #225)
+
 # 1.1.4
 
 - Fix issue #197, toggled content not displaying
