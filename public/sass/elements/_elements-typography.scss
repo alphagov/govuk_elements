@@ -72,7 +72,7 @@ main {
 // Spacing is set in em, using the px to em function in the elements _helpers.scss file
 
 // Headings
-.heading-xlarge {
+.heading-xxlarge {
   @include bold-48();
 
   margin-top: em(15, 32);
@@ -92,7 +92,7 @@ main {
 
 }
 
-.heading-large {
+.heading-xlarge {
   @include bold-36();
 
   margin-top: em(25, 24);
@@ -102,6 +102,18 @@ main {
     margin-top: em(45, 36);
     margin-bottom: em(20, 36);
   }
+
+  .heading-secondary {
+    @include heading-24();
+
+    display: block;
+    color: $secondary-text-colour;
+  }
+
+}
+
+.heading-large {
+  @include bold-27();
 
   .heading-secondary {
     @include heading-24();
