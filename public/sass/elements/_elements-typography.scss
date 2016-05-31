@@ -10,16 +10,20 @@ main {
 }
 
 // Core font sizes
-.font-xxlarge {
+.font-xxxlarge {
   @include core-80;
 }
 
-.font-xlarge {
+.font-xxlarge {
   @include core-48;
 }
 
-.font-large {
+.font-xlarge {
   @include core-36;
+}
+
+.font-large {
+  @include core-27;
 }
 
 .font-medium {
@@ -35,16 +39,20 @@ main {
 }
 
 // Bold font sizes
-.bold-xxlarge {
+.bold-xxxlarge {
   @include bold-80();
 }
 
-.bold-xlarge {
+.bold-xxlarge {
   @include bold-48();
 }
 
-.bold-large {
+.bold-xlarge {
   @include bold-36();
+}
+
+.bold-large {
+  @include bold-27();
 }
 
 .bold-medium {
