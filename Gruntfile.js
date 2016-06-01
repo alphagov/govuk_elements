@@ -157,13 +157,17 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask(
-    'test',
-    'default',
+    'test', ['lint','default'],
     function () {
-      grunt.log.writeln('Test that the app runs');
+      grunt.log.writeln('scss lint complete and the app runs, without error');
     }
   );
 
-  grunt.registerTask('lint', 'shell');
+  grunt.registerTask('lint', [
+    'shell'
+  ],
+  function () {
+    grunt.log.writeln('scss lint complete without error.');
+  });
 
 };
