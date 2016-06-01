@@ -157,13 +157,49 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask(
-    'test',
-    'default',
-    function () {
-      grunt.log.writeln('Test that the app runs');
+    'test_default',
+    'Test that the default task runs the app',
+    [
+      'copy:govuk_template',
+      'copy:govuk_assets',
+      'convert_template',
+      'copy:govuk_frontend_toolkit_scss',
+      'copy:govuk_frontend_toolkit_js',
+      'copy:govuk_frontend_toolkit_img',
+      'replace',
+      'sass'
+    ]
+  );
+
+  grunt.registerTask(
+    'lint',
+    'Use govuk-scss-lint to lint the sass files',
+    function() {
+      grunt.task.run('shell', 'lint_message');
     }
   );
 
-  grunt.registerTask('lint', 'shell');
+   grunt.registerTask(
+    'lint_message',
+    'Output a message once linting is complete',
+    function() {
+      grunt.log.write("scss lint is complete, without errors.");
+    }
+  );
 
+  grunt.registerTask(
+    'test',
+    'Lint the Sass files, then check the app runs',
+    function() {
+      grunt.task.run('lint', 'test_default', 'test_message');
+    }
+  );
+
+  grunt.registerTask(
+    'test_message',
+    'Output a message once the tests are complete',
+    function() {
+      grunt.log.write("scss lint is complete and the app runs, without errors.");
+    }
+  );
 };
