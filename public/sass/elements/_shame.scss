@@ -8,6 +8,8 @@
 // If Mozilla add display: revert and remove list-item from summary then this will fall through.
 @-moz-document regexp('.*') {
   details summary:not([tabindex]) {
+    // Allow duplicate properties, override the summary display property
+    // scss-lint:disable DuplicateProperty
     display: list-item;
     display: revert;
   }
