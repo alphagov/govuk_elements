@@ -228,32 +228,53 @@
   </h3>
   <ul class="list list-bullet text">
     <li>reveal additional questions, depending on the context</li>
-    <li>insets are used to emphasise this supporting information</li>
+    <li>a left border is used to emphasise this supporting information</li>
   </ul>
 
-  <p>
-    <a href="https://designpatterns.hackpad.com/Conditional-form-fields-powy4GQmLIx" rel="external">
-      Discuss conditional form fields on the design patterns Hackpad
-    </a>
-  </p>
 
   <h4 class="heading-small" id="form-toggle-content-radios">
     Radio buttons
   </h4>
-  <p>
-    Click on "Yes" to see how this works.
-  </p>
+  <div class="text">
+    <p>
+      In the example below, clicking "Yes" reveals the additional field.
+    </p>
+    <p>
+      If you know the National Insurance number, you can enter it and if you don't, you aren't then asked to fill in an additional field.
+    </p>
+  </div>
+
   <div class="example">
     <form>
       {{> form_inset_radios }}
     </form>
   </div>
 
+  <div class="panel panel-border-wide text">
+    <p>
+      A grey left hand border is used to visually connect the revealed content with the question above.
+    </p>
+  </div>
+
+<pre>
+<code class="language-markup">
+  <div class="panel panel-border-narrow"></div>
+</code>
+</pre>
+
+  <p>
+    The <a href="/typography/#typography-inset-text">inset text section</a> has more information on where and how to use panels (content with a grey left hand border).
+  </p>
+
 <pre>
 <code class="language-markup">
   {{> form_inset_radios }}
 </code>
 </pre>
+
+  <p class="text">
+     In the code snippet above, the <code class="language-markup">data-target="example-ni-no"</code> attribute is only present on the "Yes" label, as only this option reveals the extra field.
+  </p>
 
   <h4 class="heading-small" id="form-toggle-content-checkboxes">
     Checkboxes
@@ -272,6 +293,12 @@
   {{> form_inset_checkboxes }}
 </code>
 </pre>
+
+  <p>
+    <a href="https://designpatterns.hackpad.com/Conditional-form-fields-powy4GQmLIx" rel="external">
+      Discuss conditional form fields on the design patterns Hackpad
+    </a>
+  </p>
 
   <h3 class="heading-medium" id="examples">Examples</h3>
   <ul class="list list-bullet">
