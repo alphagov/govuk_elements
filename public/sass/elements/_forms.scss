@@ -46,7 +46,7 @@ textarea {
   margin-bottom: $gutter;
 
   @include media(tablet) {
-    margin-bottom: $gutter*2;
+    margin-bottom: $gutter * 2;
   }
 }
 
