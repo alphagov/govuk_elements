@@ -2,6 +2,7 @@
 // ==========================================================================
 
 .panel {
+  @include box-sizing(border-box);
   @extend %contain-floats;
   clear: both;
   border-left-style: solid;
@@ -30,7 +31,31 @@
 }
 
 // Panels within form groups
-// Remove the bottom padding as .form-group sets a bottom margin
+// By default, panels have 15px bottom margin
 .form-group .panel-border-narrow {
+  float: left;
+  width: 100%;
+  // Remove the bottom padding as .form-group sets a bottom margin
   padding-bottom: 0;
+  // Don't remove the bottom margin for all panels, assume they are often within stacked groups
 }
+
+// Note: This is incredibly fragile, and needs rebuilding.
+
+// The first panel in a group
+.form-group .panel-border-narrow:first-child {
+  margin-top: 10px;
+}
+
+// The last panel in a group
+.form-group .panel-border-narrow:last-child {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+// For inline panels
+.inline .form-group .panel-border-narrow {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+

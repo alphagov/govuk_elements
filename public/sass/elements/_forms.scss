@@ -35,6 +35,21 @@ textarea {
 // 2. Form wrappers
 // ==========================================================================
 
+// Form section is used to wrap .form-group and has twice its margin
+.form-section {
+  @extend %contain-floats;
+  @include box-sizing(border-box);
+
+  float: left;
+  width: 100%;
+
+  margin-bottom: $gutter;
+
+  @include media(tablet) {
+    margin-bottom: $gutter * 2;
+  }
+}
+
 // Form group is used to wrap label and input pairs
 .form-group {
   @extend %contain-floats;
@@ -74,6 +89,7 @@ textarea {
 .form-label-bold {
   display: block;
   color: $text-colour;
+  padding-bottom: 2px;
 }
 
 .form-label {
@@ -82,23 +98,6 @@ textarea {
 
 .form-label-bold {
   @include bold-19;
-}
-
-// Add spacing under spans within labels
-legend {
-  .form-label,
-  .form-label-bold {
-    padding-bottom: 7px;
-  }
-}
-
-// Remove spacing when error messages are shown
-// TODO: Move into /forms/_form-validation.scss
-.error legend {
-  .form-label,
-  .form-label-bold {
-    padding-bottom: 0;
-  }
 }
 
 // Used for the 'or' in between block label options
@@ -125,9 +124,16 @@ legend {
   display: block;
   color: $secondary-text-colour;
   font-weight: normal;
-  margin-bottom: 5px;
+
+  margin-top: -2px;
+  padding-bottom: 2px;
 }
 
+.form-label .form-hint,
+.form-label-bold .form-hint {
+  margin-top: 0;
+  padding-bottom: 0;
+}
 
 // 5. Form controls
 // ==========================================================================

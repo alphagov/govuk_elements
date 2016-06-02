@@ -10,78 +10,524 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
+      <h1 class="heading-large">
+        <span class="heading-secondary">Form elements</span>
+        Example: Form elements
+      </h1>
+
       <form action="/" method="post" class="form">
 
-        <h1 class="heading-large">
-          <span class="heading-secondary">Form elements</span>
-          Example: Form elements
-        </h1>
+        <h2 class="heading-medium">
+          The examples below show the spacing between form labels, hint text and error messages
+        </h2>
 
-        <!-- Input type="text" -->
-        <div class="form-group">
-          <label class="form-label" for="input-text">Single line text fields</label>
-          <input class="form-control" id="input-text" type="text">
+        <div class="form-section">
+          <p>
+            There should be 10px under the label or legend and the input
+          </p>
+          <!-- Text inside a label -->
+          <div class="form-group">
+            <label class="form-label-bold" for="example-form-label">
+              This is the label text in bold
+            </label>
+            <input class="form-control" id="example-form-label" type="text">
+          </div>
+          <!-- Text inside a legend -->
+          <div class="form-group">
+            <fieldset>
+              <legend>
+                <span class="form-label-bold">
+                  This is the label text in bold
+                </span>
+              </legend>
+              <label class="block-label" for="example-radio-yes-no-yes">
+                <input id="example-radio-yes-no-yes" type="radio" name="example-yes-no-group" value="Yes">
+                  Yes
+              </label>
+            </fieldset>
+          </div>
         </div>
 
-        <!-- Textarea -->
-        <div class="form-group">
-          <label class="form-label" for="textarea">Multi-line text fields</label>
-          <textarea class="form-control" id="textarea" cols="30" rows="10"></textarea>
+        <div class="form-section">
+          <p>
+            There should be 10px under the label or legend and the input (when hint text is shown)
+          </p>
+
+          <!-- Hint text inside a label -->
+          <div class="form-group">
+            <label class="form-label-bold" for="example-form-label-bold">
+              This is the label text in bold
+              <span class="form-hint">
+                This is hint text
+              </span>
+            </label>
+            <input class="form-control" id="example-form-label-bold" type="text">
+          </div>
+
+          <!-- Hint text outside a label (preference is inside, to be read by AT) -->
+          <div class="form-group">
+            <label class="form-label-bold" for="example-form-label-bold">
+              This is the label text in bold
+            </label>
+            <span class="form-hint">
+              This is hint text
+            </span>
+            <input class="form-control" id="example-form-label-bold" type="text">
+          </div>
+
+          <!-- Text inside a legend -->
+          <div class="form-group">
+            <fieldset>
+              <legend>
+                <span class="form-label-bold">
+                  This is the label text in bold
+                </span>
+                <span class="form-hint">
+                  This is hint text
+                </span>
+              </legend>
+              <label class="block-label" for="radio-yes-no-yes-b">
+                <input id="radio-yes-no-yes-b" type="radio" name="yes-no-group-b" value="Yes">
+                  Yes
+              </label>
+            </fieldset>
+          </div>
+
+          <!-- Date of birth -->
+          <div class="form-group">
+            <fieldset>
+              <legend>
+                <span class="form-label-bold">This is the label text in bold</span>
+                <span class="form-hint" id="dob-hint">This is hint text</span>
+              </legend>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label class="form-label" for="dob-day">Day</label>
+                  <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="dob-hint">
+                </div>
+                <div class="form-group form-group-month">
+                  <label class="form-label" for="dob-month">Month</label>
+                  <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                </div>
+                <div class="form-group form-group-year">
+                  <label class="form-label" for="dob-year">Year</label>
+                  <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                </div>
+              </div>
+            </fieldset>
+          </div>
         </div>
 
-        <!-- Select box -->
-        <div class="form-group">
-          <label class="form-label" for="select-box">Drop down content</label>
-          <select class="form-control" id="select-box">
-            <option>Banana</option>
-            <option>Cherry</option>
-            <option>Lemon</option>
-          </select>
+        <div class="form-section">
+          <p>
+            There should be 10px under the label or legend and the input (when an error message is shown) and 15px above the error message.
+          </p>
+
+          <!-- Text inside a label - error -->
+          <div class="form-group error">
+            <label class="form-label-bold" for="example-form-control">
+              This is the label text
+              <span class="form-hint">
+                This is hint text
+              </span>
+              <span class="error-message">
+                Error message goes here
+              </span>
+            </label>
+            <input class="form-control" id="example-form-control" type="text">
+          </div>
+
+          <!-- Hint text outside a label (preference is inside, to be read by AT) - error -->
+          <div class="form-group error">
+            <label class="form-label-bold" for="example-form-control">
+              This is the label text
+            </label>
+            <span class="form-hint">
+              This is hint text
+            </span>
+            <span class="error-message">
+              Error message goes here
+            </span>
+            <input class="form-control" id="example-form-control" type="text">
+          </div>
+
+          <!-- Text inside a legend - error -->
+          <div class="form-group error">
+            <fieldset>
+
+              <legend>
+                <span class="form-label-bold">
+                  Do you have a National Insurance number?
+                </span>
+                <span class="form-hint">
+                  This is hint text
+                </span>
+                <span class="error-message">
+                  Error message goes here
+                </span>
+              </legend>
+              <label class="block-label" for="radio-yes-no-yes-c">
+                <input id="radio-yes-no-yes-c" type="radio" name="yes-no-group-c" value="Yes">
+                  Yes
+              </label>
+            </fieldset>
+          </div>
+
+          <!-- Date of birth -->
+          <div class="form-group error">
+            <fieldset>
+              <legend>
+                <span class="form-label-bold">Date of birth</span>
+                <span class="form-hint" id="example-dob-hint">For example, 31 3 1980</span>
+                <span class="error-message">Error message goes here</span>
+              </legend>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label class="form-label" for="example-dob-day">Day</label>
+                  <input class="form-control" id="example-dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="example-dob-hint">
+                </div>
+                <div class="form-group form-group-month">
+                  <label class="form-label" for="example-dob-month">Month</label>
+                  <input class="form-control" id="example-dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                </div>
+                <div class="form-group form-group-year">
+                  <label class="form-label" for="example-dob-year">Year</label>
+                  <input class="form-control" id="example-dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                </div>
+              </div>
+            </fieldset>
+          </div>
         </div>
 
-        <!-- Check box -->
-        <div class="form-group">
-          <label class="form-checkbox" for="checkbox-telephone-number" >
-            <input id="checkbox-telephone-number" type="checkbox" value="checkbox-telephone-number">
-            Native check box
-          </label>
+        <div class="form-section">
+          <h3 class="heading-medium">
+            These examples show legend text styled to look like a label
+          </h3>
+
+          <!-- Yes or No question (without revealed content ) -->
+          <fieldset class="inline">
+            <legend>
+              <span class="form-label-bold">
+                Do you already have a personal user account?
+              </span>
+            </legend>
+            <label class="block-label" for="radio-inline-1a">
+              <input id="radio-inline-1a" type="radio" name="radio-inline-group" value="Yes">
+              Yes
+            </label>
+            <label class="block-label" for="radio-inline-2a">
+              <input id="radio-inline-2a" type="radio" name="radio-inline-group" value="No">
+              No
+            </label>
+          </fieldset>
         </div>
 
-        <!-- Chunky check box -->
-
-        <div class="form-group">
-          <label class="block-label" for="checkbox-1">
-            <input id="checkbox-1" type="checkbox" value="waste-animal">
-            Checkbox
-          </label>
-          <label class="block-label" for="checkbox-2">
-            <input id="checkbox-2" type="checkbox" value="waste-mines">
-            Checkbox
-          </label>
-          <label class="block-label" for="checkbox-3">
-            <input id="checkbox-3" type="checkbox" value="farm-agricultural">
-            Checkbox
-          </label>
+        <div class="form-section">
+          <!-- Yes or No question (select one option to reveal content) -->
+          <fieldset class="inline">
+            <legend>
+              <span class="form-label-bold">
+                This is the label text
+              </span>
+              <span class="form-hint">
+                This is the hint text
+              </span>
+            </legend>
+            <div class="form-group">
+              <label class="block-label" data-target="yes-and-do-next" for="radio-yes-no-yes-a">
+                <input id="radio-yes-no-yes-a" type="radio" name="yes-no-group-a" value="Yes">
+                Yes
+              </label>
+              <label class="block-label" data-target="no-and-do-next" for="radio-yes-no-no-a">
+                <input id="radio-yes-no-no-a" type="radio" name="yes-no-group-a" value="No">
+                No
+              </label>
+              <div class="panel panel-border-narrow js-hidden" id="yes-and-do-next-a">
+                <label class="form-label" for="yes-next-a">Yes, this next</label>
+                <input class="form-control" name="yes-next" type="text" id="yes-next-a">
+              </div>
+              <div class="panel panel-border-narrow js-hidden" id="no-and-do-next-a">
+                <label class="form-label" for="no-next-a">No, this next</label>
+                <input class="form-control" name="no-next" type="text" id="no-next-a">
+              </div>
+            </div>
+          </fieldset>
         </div>
 
-        <!-- Radio button -->
+        <div class="form-section">
 
-        <div class="form-group">
-          <label class="block-label" for="radio-1">
-            <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-            Radio
-          </label>
-          <label class="block-label" for="radio-2">
-            <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
-            Radio
-          </label>
-          <label class="block-label" for="radio-3">
-            <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
-            Radio
-          </label>
+          <h2 class="heading-medium">
+            Example: input type="text" and error
+          </h2>
+
+          <!-- Input type="text" -->
+          <div class="form-group">
+            <label class="form-label" for="input-text-a">
+              This is the label text
+            </label>
+            <input class="form-control" id="input-text-a" type="text">
+          </div>
+
+          <!-- Input type="text" - error -->
+          <div class="form-group error">
+            <label class="form-label" for="input-text-b">
+              This is the label text
+              <span class="error-message">
+                Error message goes here
+              </span>
+            </label>
+            <input class="form-control" id="input-text-b" type="text">
+          </div>
+
+          <!-- Input type="text" (bold label) -->
+          <div class="form-group">
+            <label class="form-label-bold" for="input-text-c">
+              This is the label text in bold
+            </label>
+            <input class="form-control" id="input-text-c" type="text">
+          </div>
+
+          <!-- Input type="text" - error (bold label) -->
+          <div class="form-group error">
+            <label class="form-label-bold" for="input-text-d">
+              This is the label text in bold
+              <span class="error-message">
+                Error message goes here
+              </span>
+            </label>
+            <input class="form-control" id="input-text-d" type="text">
+          </div>
+
+          <!-- Input type="text" (bold label with hint text) -->
+          <div class="form-group">
+            <label class="form-label-bold" for="input-text-g">
+              This is the label text
+              <span class="form-hint">
+                This is hint text
+              </span>
+            </label>
+            <input class="form-control" id="input-text-g" type="text">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label-bold" for="input-text-g">
+              This is the label text
+            </label>
+            <span class="form-hint">
+              This is hint text
+            </span>
+            <input class="form-control" id="input-text-g" type="text">
+          </div>
+
+          <!-- Input type="text" - error (bold label with hint text) -->
+          <div class="form-group error">
+            <label class="form-label-bold" for="input-text-h">
+              This is the label text
+              <span class="form-hint">
+                This is hint text
+              </span>
+              <span class="error-message">
+                Error message goes here
+              </span>
+            </label>
+            <input class="form-control" id="input-text-h" type="text">
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2 class="heading-medium">
+            Example: textarea and error
+          </h2>
+
+          <!-- Textarea -->
+          <div class="form-group">
+            <label class="form-label" for="textarea-a">
+              This is the label text
+            </label>
+            <textarea class="form-control" id="textarea-a" cols="30" rows="10"></textarea>
+          </div>
+
+          <!-- Textarea - error -->
+          <div class="form-group error">
+            <label class="form-label" for="textarea-b">
+              This is the label text
+              <span class="error-message">
+                Error message goes here
+              </span>
+            </label>
+            <textarea class="form-control" id="textarea-b" cols="30" rows="10"></textarea>
+          </div>
+
+          <!-- Textarea (bold label) -->
+          <div class="form-group">
+            <label class="form-label-bold" for="textarea-c">
+              This is the label text in bold
+            </label>
+            <textarea class="form-control" id="textarea-c" cols="30" rows="10"></textarea>
+          </div>
+
+          <!-- Textarea - error (bold label) -->
+          <div class="form-group error">
+            <label class="form-label-bold" for="textarea-d">
+              This is the label text in bold
+              <span class="error-message">
+                Error message goes here
+              </span>
+            </label>
+            <textarea class="form-control" id="textarea-d" cols="30" rows="10"></textarea>
+          </div>
+
+          <!-- Textarea (bold label, with hint text) -->
+          <div class="form-group">
+            <label class="form-label-bold" for="textarea-e">
+              This is the label text
+              <span class="form-hint">This is hint text</span>
+            </label>
+            <textarea class="form-control" id="textarea-e" cols="30" rows="10"></textarea>
+          </div>
+
+          <!-- Textarea - error (bold label, with hint text) -->
+          <div class="form-group error">
+            <label class="form-label-bold" for="textarea-f">
+              This is the label text
+              <span class="form-hint">This is hint text</span>
+              <span class="error-message">
+                Error message goes here
+              </span>
+            </label>
+            <textarea class="form-control" id="textarea-f" cols="30" rows="10"></textarea>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2 class="heading-medium">
+            Example: select boxes and error
+          </h2>
+
+          <!-- Select box -->
+          <div class="form-group">
+            <label class="form-label" for="select-box-a">This is the label text</label>
+            <select class="form-control" id="select-box-a">
+              <option>GOV.UK elements option 1</option>
+              <option>GOV.UK elements option 2</option>
+              <option>GOV.UK elements option 3</option>
+            </select>
+          </div>
+
+          <!-- Select box - error -->
+          <div class="form-group error">
+            <label class="form-label" for="select-box-b">
+              This is the label text
+              <span class="error-message">
+                Error message goes here
+              </span>
+            </label>
+            <select class="form-control" id="select-box-b">
+              <option>GOV.UK elements option 1</option>
+              <option>GOV.UK elements option 2</option>
+              <option>GOV.UK elements option 3</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <!-- Select box (with bold text) -->
+          <div class="form-group">
+            <label class="form-label-bold" for="select-box-c">
+              This is the label text
+            </label>
+            <select class="form-control" id="select-box-c">
+              <option>GOV.UK elements option 1</option>
+              <option>GOV.UK elements option 2</option>
+              <option>GOV.UK elements option 3</option>
+            </select>
+          </div>
+
+          <!-- Select box - error (with bold text) -->
+          <div class="form-group error">
+            <label class="form-label-bold" for="select-box-d">
+              This is the label text
+              <span class="error-message">
+                Error message goes here
+              </span>
+            </label>
+            <select class="form-control" id="select-box-d">
+              <option>GOV.UK elements option 1</option>
+              <option>GOV.UK elements option 2</option>
+              <option>GOV.UK elements option 3</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <!-- Select box (with bold text and hint text) -->
+          <div class="form-group">
+            <label class="form-label-bold" for="select-box-g">
+              This is the label text
+              <span class="form-hint">
+                This the hint text
+              </span>
+            </label>
+            <select class="form-control" id="select-box-g">
+              <option>GOV.UK elements option 1</option>
+              <option>GOV.UK elements option 2</option>
+              <option>GOV.UK elements option 3</option>
+            </select>
+          </div>
+
+          <!-- Select box - error (with bold text and hint text) -->
+          <div class="form-group error">
+            <label class="form-label-bold" for="select-box-h">
+              This is the label text
+              <span class="form-hint">
+                This is the hint text
+              </span>
+              <span class="error-message">
+                Error message goes here
+              </span>
+            </label>
+            <select class="form-control" id="select-box-h">
+              <option>GOV.UK elements option 1</option>
+              <option>GOV.UK elements option 2</option>
+              <option>GOV.UK elements option 3</option>
+            </select>
+          </div>
         </div>
 
       </form>
+
+      <div class="form-section">
+        <h3 class="heading-medium">
+          These examples are one-question-per-page examples and use a heading for the question, with a visually hidden legend inside a fieldset.
+        </h3>
+        <!-- "Chunky" Radio buttons, stacked -->
+        {{> form_radio_buttons }}
+      </div>
+
+      <div class="form-section">
+        <!-- "Chunky" Checkboxes, stacked -->
+        {{> form_checkboxes }}
+      </div>
+
+      <div class="form-section">
+        <!-- Yes or No question (without revealed content ) -->
+        {{> form_radio_buttons_inline }}
+      </div>
+
+      <div class="form-section">
+        <!-- Yes or No question (select one option to reveal content) -->
+        {{> form_radio_inline_yes_no }}
+      </div>
+
+      <div class="form-section">
+        <!-- Radio buttons (select one option to reveal content) -->
+        {{> form_inset_radios }}
+      </div>
+
+      <div class="form-section">
+        <!-- Checkboxes (select more than option to reveal content) -->
+        {{> form_inset_checkboxes }}
+      </div>
 
     </div>
   </div>

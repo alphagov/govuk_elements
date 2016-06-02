@@ -1,0 +1,32 @@
+<h1 class="heading-medium">
+  Do you yes/no ?
+</h1>
+
+<form>
+  <fieldset class="inline">
+  <legend class="visuallyhidden">Do you yes/no?</legend>
+
+  <div class="form-group">
+
+    <label class="block-label" data-target="yes-and-do-next" for="radio-yes-no-yes">
+      <input id="radio-yes-no-yes" type="radio" name="yes-no-group" value="Yes">
+      Yes
+    </label>
+    <label class="block-label" data-target="no-and-do-next" for="radio-yes-no-no">
+      <input id="radio-yes-no-no" type="radio" name="yes-no-group" value="No">
+      No
+    </label>
+
+    <div class="panel panel-border-narrow js-hidden" id="yes-and-do-next">
+      <label class="form-label" for="yes-next">Yes, this next</label>
+      <input class="form-control" name="yes-next" type="text" id="yes-next">
+    </div>
+    <div class="panel panel-border-narrow js-hidden" id="no-and-do-next">
+      <label class="form-label" for="no-next">No, this next</label>
+      <input class="form-control" name="no-next" type="text" id="no-next">
+    </div>
+
+  </div>
+
+  </fieldset>
+</form>
