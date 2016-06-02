@@ -35,7 +35,7 @@ textarea {
 // 2. Form wrappers
 // ==========================================================================
 
-// Form section is used to create spacing between form sections
+// Form section is used to wrap .form-group and has twice its margin
 .form-section {
   @extend %contain-floats;
   @include box-sizing(border-box);
