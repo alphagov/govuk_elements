@@ -1,3 +1,8 @@
+# 1.2.1
+
+- Consistent spacing underneath block labels and toggled content (PR #229)
+- Remove underlines from abbreviations in Firefox (PR #241)
+
 # 1.2.0
 
 - Add MIT License (PR #236)
