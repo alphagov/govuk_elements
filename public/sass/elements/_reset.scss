@@ -122,3 +122,15 @@ abbr[title],
 acronym[title] {
   text-decoration: none;
 }
+
+// Legend --------------------------------
+// Fix legend text wrapping in Edge and IE
+// ---------------------------------------
+// 1. IE9-11 & Edge 12-13
+// 2. IE8-11
+
+legend {
+  box-sizing: border-box; // [1]
+  max-width: 100%;        // [1]
+  display: table;         // [2]
+}
