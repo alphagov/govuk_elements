@@ -13,7 +13,7 @@ module.exports = {
     // Layout
     app.get('/layout', function (req, res) {
       var page_name = "Layout";
-      res.render('guide_layout', {'assetPath' : assetPath, 'page_name' : page_name });
+      res.render('guide_layout', { 'page_name' : page_name });
     });
 
     // Example page: Grid layout
@@ -21,7 +21,7 @@ module.exports = {
       var section = "layout";
       var section_name = "Layout";
       var page_name = "Example: Grid layout";
-      res.render('examples/example_grid_layout', {'assetPath' : assetPath, 'section': section, 'section_name' : section_name, 'page_name' : page_name });
+      res.render('examples/example_grid_layout', { 'section': section, 'section_name' : section_name, 'page_name' : page_name });
     });
 
     // Redirect examples from /examples/ to /section/example-name-of-example
@@ -32,7 +32,7 @@ module.exports = {
     // Typography
     app.get('/typography', function (req, res) {
       var page_name = "Typography";
-      res.render('guide_typography', {'assetPath' : assetPath, 'page_name' : page_name });
+      res.render('guide_typography', { 'page_name' : page_name });
     });
 
     // Example page: Typography
@@ -40,7 +40,7 @@ module.exports = {
       var section = "typography";
       var section_name = "Typography";
       var page_name = "Example: Typography";
-      res.render('examples/example_typography', {'assetPath' : assetPath, 'section': section, 'section_name' : section_name, 'page_name' : page_name });
+      res.render('examples/example_typography', { 'section': section, 'section_name' : section_name, 'page_name' : page_name });
     });
 
     // Redirect examples from /examples/ to /section/example-name-of-example
@@ -53,7 +53,7 @@ module.exports = {
       var section = "typography";
       var section_name = "Typography";
       var page_name = "Example: Details summary";
-      res.render('examples/example_details_summary', {'assetPath' : assetPath, 'section': section, 'section_name' : section_name, 'page_name' : page_name });
+      res.render('examples/example_details_summary', { 'section': section, 'section_name' : section_name, 'page_name' : page_name });
     });
 
     // Redirect examples from /patterns/ to /section/example-name-of-example
@@ -64,13 +64,13 @@ module.exports = {
     // Colour
     app.get('/colour', function (req, res) {
       var page_name = "Colour";
-      res.render('guide_colour', {'assetPath' : assetPath, 'page_name' : page_name });
+      res.render('guide_colour', { 'page_name' : page_name });
     });
 
     // Icons and images
     app.get('/icons-images', function (req, res) {
       var page_name = "Icons and images";
-      res.render('guide_icons_images', {'assetPath' : assetPath, 'page_name' : page_name });
+      res.render('guide_icons_images', { 'page_name' : page_name });
     });
 
     // Example page: Icons
@@ -78,25 +78,25 @@ module.exports = {
       var section = "icons-images";
       var section_name = "Icons and images";
       var page_name = "Example: Icons";
-      res.render('examples/example_icons', {'assetPath' : assetPath, 'section': section, 'section_name' : section_name, 'page_name' : page_name });
+      res.render('examples/example_icons', { 'section': section, 'section_name' : section_name, 'page_name' : page_name });
     });
 
     // Data
     app.get('/data', function (req, res) {
       var page_name = "Data";
-      res.render('guide_data', {'assetPath' : assetPath, 'page_name' : page_name });
+      res.render('guide_data', { 'page_name' : page_name });
     });
 
     // Buttons
     app.get('/buttons', function (req, res) {
       var page_name = "Buttons";
-      res.render('guide_buttons', {'assetPath' : assetPath, 'page_name' : page_name });
+      res.render('guide_buttons', { 'page_name' : page_name });
     });
 
     // Forms
     app.get('/form-elements', function (req, res) {
       var page_name = "Form elements";
-      res.render('guide_form_elements', {'assetPath' : assetPath, 'page_name' : page_name });
+      res.render('guide_form_elements', { 'page_name' : page_name });
     });
 
     // Example page: Basic form
@@ -104,7 +104,7 @@ module.exports = {
       var section = "form-elements";
       var section_name = "Form elements";
       var page_name = "Example: Form";
-      res.render('examples/example_forms', {'assetPath' : assetPath, 'section': section, 'section_name' : section_name, 'page_name' : page_name });
+      res.render('examples/example_forms', { 'section': section, 'section_name' : section_name, 'page_name' : page_name });
     });
 
     // Redirect examples from /examples/ to /section/example-name-of-example
@@ -117,7 +117,7 @@ module.exports = {
       var section = "form-elements";
       var section_name = "Form elements";
       var page_name = "Example: Date";
-      res.render('examples/example_date', {'assetPath' : assetPath, 'section': section, 'section_name' : section_name, 'page_name' : page_name });
+      res.render('examples/example_date', { 'section': section, 'section_name' : section_name, 'page_name' : page_name });
     });
 
     // Redirect examples from /patterns/ to /section/example-name-of-example
@@ -130,7 +130,7 @@ module.exports = {
       var section = "form-elements";
       var section_name = "Form elements";
       var page_name = "Example: Radio buttons and checkboxes";
-      res.render('examples/example_radios_checkboxes', {'assetPath' : assetPath, 'section': section, 'section_name' : section_name, 'page_name' : page_name });
+      res.render('examples/example_radios_checkboxes', { 'section': section, 'section_name' : section_name, 'page_name' : page_name });
     });
 
     // Redirect examples from /patterns/ to /section/example-name-of-example
@@ -143,13 +143,13 @@ module.exports = {
       var section = "form-elements";
       var section_name = "Form elements";
       var page_name = "Example: Form elements";
-      res.render('examples/example_form_elements', {'assetPath' : assetPath, 'section': section, 'section_name' : section_name, 'page_name' : page_name });
+      res.render('examples/example_form_elements', { 'section': section, 'section_name' : section_name, 'page_name' : page_name });
     });
 
     // Errors and validation
     app.get('/errors', function (req, res) {
       var page_name = "Errors and validation";
-      res.render('guide_errors', {'assetPath' : assetPath, 'page_name' : page_name });
+      res.render('guide_errors', { 'page_name' : page_name });
     });
 
     // Example page: Form validation
@@ -157,7 +157,7 @@ module.exports = {
       var section = "errors";
       var section_name = "Errors and validation";
       var page_name = "Example: Form validation - single question";
-      res.render('examples/example_form_validation_single_question_radio', {'assetPath' : assetPath, 'section': section, 'section_name' : section_name, 'page_name' : page_name });
+      res.render('examples/example_form_validation_single_question_radio', { 'section': section, 'section_name' : section_name, 'page_name' : page_name });
     });
 
     app.post('/errors/example-form-validation-single-question-radio', function (req, res) {
@@ -171,7 +171,7 @@ module.exports = {
       } else {
         error = false;
       }
-      res.render('examples/example_form_validation_single_question_radio', {'assetPath' : assetPath, 'section': section, 'section_name' : section_name, 'page_name' : page_name, 'personal_details': personal_details, 'error': error});
+      res.render('examples/example_form_validation_single_question_radio', { 'section': section, 'section_name' : section_name, 'page_name' : page_name, 'personal_details': personal_details, 'error': error});
     });
 
     // Redirect examples from /examples/ to /section/example-name-of-example
@@ -183,7 +183,7 @@ module.exports = {
       var section = "errors";
       var section_name = "Errors and validation";
       var page_name = "Example: Form validation - multiple questions";
-      res.render('examples/example_form_validation_multiple_questions', {'assetPath' : assetPath, 'section': section, 'section_name' : section_name, 'page_name' : page_name });
+      res.render('examples/example_form_validation_multiple_questions', { 'section': section, 'section_name' : section_name, 'page_name' : page_name });
     });
 
     app.post('/errors/example-form-validation-multiple-questions', function (req, res) {
@@ -198,7 +198,7 @@ module.exports = {
       } else {
         error = false;
       }
-      res.render('examples/example_form_validation_multiple_questions', {'assetPath' : assetPath, 'section': section, 'section_name' : section_name, 'page_name' : page_name, 'fullName': fullName, 'niNo': niNo, 'error': error});
+      res.render('examples/example_form_validation_multiple_questions', { 'section': section, 'section_name' : section_name, 'page_name' : page_name, 'fullName': fullName, 'niNo': niNo, 'error': error});
     });
 
     // Redirect examples from /examples/ to /section/example-name-of-example
@@ -209,7 +209,7 @@ module.exports = {
     // Alpha and beta banners
     app.get('/alpha-beta-banners', function (req, res) {
       var page_name = "Alpha and beta banners";
-      res.render('guide_alpha_beta', {'assetPath' : assetPath, 'page_name' : page_name });
+      res.render('guide_alpha_beta', { 'page_name' : page_name });
     });
 
   }
