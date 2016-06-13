@@ -59,7 +59,8 @@ module.exports = function (grunt) {
             dest: 'lib/'
           }]
       },
-    }
+    },
+
     // workaround for libsass
     replace: {
       fixSass: {
@@ -146,7 +147,7 @@ module.exports = function (grunt) {
     }
   );
 
-   grunt.registerTask(
+  grunt.registerTask(
     'lint_message',
     'Output a message once linting is complete',
     function() {
