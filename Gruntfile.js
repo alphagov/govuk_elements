@@ -93,7 +93,7 @@ module.exports = function (grunt) {
     // nodemon watches for changes and restarts app
     nodemon: {
       dev: {
-        script: 'app.js',
+        script: 'server.js',
         options: {
           ext: 'html, js'
         }
