@@ -1,6 +1,6 @@
 {{<layout}}
 
-{{$pageTitle}}Form elements — GOV.UK elements{{/pageTitle}}
+{% block page_title %}Form elements — GOV.UK elements{% endblock %}
 
 {{$content}}
 
@@ -306,8 +306,8 @@
 </main><!-- / #content -->
 {{/content}}
 
-{{$bodyEnd}}
+{% block body_end %}
   {{>scripts}}
-{{/bodyEnd}}
+{% endblock %}
 
 {{/layout}}

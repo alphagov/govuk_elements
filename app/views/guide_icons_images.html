@@ -1,6 +1,6 @@
 {{<layout}}
 
-{{$pageTitle}}Icons and images — GOV.UK elements{{/pageTitle}}
+{% block page_title %}Icons and images — GOV.UK elements{% endblock %}
 
 {{$content}}
 
@@ -84,8 +84,8 @@
 </main><!-- / #content -->
 {{/content}}
 
-{{$bodyEnd}}
+{% block body_end %}
   {{>scripts}}
-{{/bodyEnd}}
+{% endblock %}
 
 {{/layout}}

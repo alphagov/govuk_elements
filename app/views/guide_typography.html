@@ -1,6 +1,6 @@
 {{<layout}}
 
-{{$pageTitle}}Typography — GOV.UK elements{{/pageTitle}}
+{% block page_title %}Typography — GOV.UK elements{% endblock %}
 
 {{$content}}
 
@@ -218,8 +218,8 @@
 </main><!-- / #content -->
 {{/content}}
 
-{{$bodyEnd}}
+{% block body_end %}
   {{>scripts}}
-{{/bodyEnd}}
+{% endblock %}
 
 {{/layout}}

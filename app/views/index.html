@@ -1,6 +1,6 @@
 {{<layout}}
 
-{{$pageTitle}}GOV.UK elements{{/pageTitle}}
+{% block page_title %}GOV.UK elements{% endblock %}
 
 {{$content}}
 
@@ -123,10 +123,10 @@
 </main><!-- / #content -->
 {{/content}}
 
-{{$bodyEnd}}
+{% block body_end %}
   <!-- GOV.UK elements redirect -->
   <script src="/public/javascripts/redirect.js"></script>
   {{>scripts}}
-{{/bodyEnd}}
+{% endblock %}
 
 {{/layout}}

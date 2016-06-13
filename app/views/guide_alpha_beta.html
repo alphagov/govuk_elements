@@ -1,6 +1,6 @@
 {{<layout}}
 
-{{$pageTitle}}Alpha and beta banners — GOV.UK elements{{/pageTitle}}
+{% block page_title %}Alpha and beta banners — GOV.UK elements{% endblock %}
 
 {{$content}}
 
@@ -65,8 +65,8 @@
 </main><!-- / #content -->
 {{/content}}
 
-{{$bodyEnd}}
+{% block body_end %}
   {{>scripts}}
-{{/bodyEnd}}
+{% endblock %}
 
 {{/layout}}

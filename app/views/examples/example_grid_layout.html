@@ -1,6 +1,6 @@
 {{<layout_example}}
 
-{{$pageTitle}}Example: Grid layout — Layout — GOV.UK elements{{/pageTitle}}
+{% block page_title %}Example: Grid layout — Layout — GOV.UK elements{% endblock %}
 
 {{$content}}
 <main id="content" role="main" tabindex="-1">
@@ -130,7 +130,7 @@
 
 {{/content}}
 
-{{$bodyEnd}}
+{% block body_end %}
   {{>scripts}}
   <script>
 
@@ -158,6 +158,6 @@
     });
 
     </script>
-{{/bodyEnd}}
+{% endblock %}
 
 {{/layout_example}}

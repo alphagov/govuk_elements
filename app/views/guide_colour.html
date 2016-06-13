@@ -1,6 +1,6 @@
 {{<layout}}
 
-{{$pageTitle}}Colour — GOV.UK elements{{/pageTitle}}
+{% block page_title %}Colour — GOV.UK elements{% endblock %}
 
 {{$content}}
 
@@ -421,8 +421,8 @@
 </main><!-- / #content -->
 {{/content}}
 
-{{$bodyEnd}}
+{% block body_end %}
   {{>scripts}}
-{{/bodyEnd}}
+{% endblock %}
 
 {{/layout}}
