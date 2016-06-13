@@ -1,17 +1,17 @@
-{{<layout_example}}
+{% extends "layout_example.html" %}
 
 {% block page_title %}Example: Form validation — Errors — GOV.UK elements{% endblock %}
 
-{{$content}}
+{% block content %}
 <main class="js-error-example" id="content" role="main" tabindex="-1">
 
-  {{>breadcrumb}}
+  {% include "includes/breadcrumb.html" %}
 
   <div class="grid-row">
     <div class="column-two-thirds">
 
       <form method="post" action="/errors/example-form-validation-multiple-questions">
-        {{> form_error_multiple }}
+        {% include "snippets/form_error_multiple.html" %}
       </form>
 
       <h2 class="heading-medium implementation-advice">Implementation advice</h2>
@@ -65,6 +65,4 @@
     </div>
   </div>
 </main>
-{{/content}}
-
-{{/layout_example}}
+{% endblock %}

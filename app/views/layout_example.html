@@ -1,7 +1,7 @@
 {% extends "govuk_template.html" %}
 
-{{$head}}
-  {{>head}}
+{% block head %}
+  {% include "head.html" %}
   <style>
 
     /* Styles for this example page */
@@ -29,15 +29,17 @@
      /* End: Styles for this example page */
 
   </style>
-  {{>elements_tracking}}
-{{/head}}
+  {% include "includes/elements_tracking.html" %}
+{% endblock %}
 
-{{$propositionHeader}}
-  {{>service_manual_navigation}}
-{{/propositionHeader}}
+{% block proposition_header %}
+  {% include "includes/service_manual_navigation.html" %}
+{% endblock %}
 
-{{$headerClass}}with-proposition{{/headerClass}}
+{% block header_class %}
+  with-proposition
+{% endblock %}
 
 {% block body_end %}
-  {{>scripts}}
+  {% include "includes/scripts.html" %}
 {% endblock %}

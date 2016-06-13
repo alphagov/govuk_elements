@@ -1,13 +1,15 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{% block page_title %}GOV.UK elements{% endblock %}
+{% block page_title %}
+  GOV.UK elements
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main class="elements-index" id="content" role="main" tabindex="-1">
 
-  {{>phase_banner}}
-  {{>breadcrumb}}
+  {% include "includes/phase_banner.html" %}
+  {% include "includes/breadcrumb.html" %}
 
   <div class="grid-row">
     <div class="column-two-thirds">
@@ -26,7 +28,7 @@
   <div class="grid-row">
     <div class="column-one-third">
 
-      <h2 class="heading-medium"><a href="{{site.baseurl}}/layout/">Layout</a></h2>
+      <h2 class="heading-medium"><a href="/layout/">Layout</a></h2>
       <p>
         Grid unit proportions, gutters and spacing.
       </p>
@@ -34,7 +36,7 @@
     </div>
     <div class="column-one-third">
 
-      <h2 class="heading-medium"><a href="{{site.baseurl}}/typography/">Typography</a></h2>
+      <h2 class="heading-medium"><a href="/typography/">Typography</a></h2>
       <p>
         Headings, body text, links, lists, inset text, hidden text.
       </p>
@@ -42,7 +44,7 @@
     </div>
     <div class="column-one-third">
 
-      <h2 class="heading-medium"><a href="{{site.baseurl}}/colour/">Colour</a></h2>
+      <h2 class="heading-medium"><a href="/colour/">Colour</a></h2>
       <p>
         Colour contrast, Sass variables, colour palettes.
       </p>
@@ -53,7 +55,7 @@
   <div class="grid-row">
     <div class="column-one-third">
 
-      <h2 class="heading-medium"><a href="{{site.baseurl}}/icons-images/">Icons and images</a></h2>
+      <h2 class="heading-medium"><a href="/icons-images/">Icons and images</a></h2>
       <p>
         Icons and image ratios.
       </p>
@@ -61,7 +63,7 @@
     </div>
     <div class="column-one-third">
 
-      <h2 class="heading-medium"><a href="{{site.baseurl}}/data/">Data</a></h2>
+      <h2 class="heading-medium"><a href="/data/">Data</a></h2>
       <p>
         Data in a table, numeric tabular data, data visualisation.
       </p>
@@ -69,7 +71,7 @@
     </div>
     <div class="column-one-third">
 
-      <h2 class="heading-medium"><a href="{{site.baseurl}}/buttons/">Buttons</a></h2>
+      <h2 class="heading-medium"><a href="/buttons/">Buttons</a></h2>
       <p>
         Button text, button alignment, creating buttons.
       </p>
@@ -80,7 +82,7 @@
   <div class="grid-row">
     <div class="column-one-third">
 
-      <h2 class="heading-medium"><a href="{{site.baseurl}}/form-elements/">Form elements</a></h2>
+      <h2 class="heading-medium"><a href="/form-elements/">Form elements</a></h2>
       <p>
         Form fields, labels, focus states, radio buttons, checkboxes.
       </p>
@@ -88,7 +90,7 @@
     </div>
     <div class="column-one-third">
 
-      <h2 class="heading-medium"><a href="{{site.baseurl}}/errors/">Errors and validation</a></h2>
+      <h2 class="heading-medium"><a href="/errors/">Errors and validation</a></h2>
       <p>
         Summary boxes, highlighting errors in forms.
       </p>
@@ -96,7 +98,7 @@
     </div>
     <div class="column-one-third">
 
-      <h2 class="heading-medium"><a href="{{site.baseurl}}/alpha-beta-banners/">Alpha and beta banners</a></h2>
+      <h2 class="heading-medium"><a href="/alpha-beta-banners/">Alpha and beta banners</a></h2>
       <p>
         How to create alpha and beta banners using the front-end toolkit.
       </p>
@@ -121,12 +123,11 @@
   </div>
 
 </main><!-- / #content -->
-{{/content}}
+{% endblock %}
 
 {% block body_end %}
   <!-- GOV.UK elements redirect -->
   <script src="/public/javascripts/redirect.js"></script>
-  {{>scripts}}
+  {% include "scripts.html" %}
 {% endblock %}
 
-{{/layout}}

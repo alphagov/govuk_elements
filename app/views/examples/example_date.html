@@ -1,11 +1,11 @@
-{{<layout_example}}
+{% extends "layout_example.html" %}
 
 {% block page_title %}Example: Date — Form elements — GOV.UK elements{% endblock %}
 
-{{$content}}
+{% block content %}
 <main id="content" role="main" tabindex="-1">
 
-  {{>breadcrumb}}
+  {% include "includes/breadcrumb.html" %}
 
   <div class="grid-row">
     <div class="column-two-thirds">
@@ -15,12 +15,10 @@
         Example: Date
       </h1>
       <!-- Date of birth -->
-      {{> form_date }}
+      {% include "snippets/form_date.html" %}
 
     </div>
   </div>
 
 </main><!-- /#content -->
-{{/content}}
-
-{{/layout_example}}
+{% endblock %}

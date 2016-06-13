@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
 {% block page_title %}Form elements — GOV.UK elements{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main" tabindex="-1">
 
-  {{>phase_banner}}
-  {{>breadcrumb}}
+  {% include "includes/phase_banner.html" %}
+  {% include "includes/breadcrumb.html" %}
 
   <h1 class="heading-xlarge">
     <span class="heading-secondary">GOV.UK elements</span>
@@ -56,12 +56,12 @@
     <li>labels should be associated with form fields using the <code class="code">for</code> attribute</li>
   </ul>
   <div class="example">
-    {{> form_labels }}
+    {% include "form_labels.html" %}
   </div>
 
 <pre>
 <code class="language-markup">
-  {{> form_labels }}
+  {% include "snippets/form_labels.html" %}
 </code>
 </pre>
 
@@ -95,7 +95,7 @@
   </div>
 
   <div class="example">
-    {{> form_focus }}
+    {% include "form_focus.html" %}
   </div>
 
   <h3 class="heading-medium"  id="form-hint-text">Hint text</h3>
@@ -107,12 +107,12 @@
   </ul>
 
   <div class="example">
-    {{> form_hint_text }}
+    {% include "form_hint_text.html" %}
   </div>
 
 <pre>
 <code class="language-markup">
-  {{> form_hint_text }}
+  {% include "snippets/form_hint_text.html" %}
 </code>
 </pre>
 
@@ -122,12 +122,12 @@
   </p>
 
   <div class="example">
-    {{> form_spacing }}
+    {% include "form_spacing.html" %}
   </div>
 
 <pre>
 <code class="language-markup">
-  {{> form_spacing }}
+  {% include "snippets/form_spacing.html" %}
 </code>
 </pre>
 
@@ -157,26 +157,26 @@
   <h4 class="heading-small">Inline radio buttons</h4>
   <div class="example">
     <form>
-      {{> form_radio_buttons_inline }}
+      {% include "form_radio_buttons_inline.html" %}
     </form>
   </div>
 
 <pre>
 <code class="language-markup">
-  {{> form_radio_buttons_inline }}
+  {% include "snippets/form_radio_buttons_inline.html" %}
 </code>
 </pre>
 
   <h4 class="heading-small">Stacked radio buttons</h4>
   <div class="example">
     <form>
-      {{> form_radio_buttons }}
+      {% include "form_radio_buttons.html" %}
     </form>
   </div>
 
 <pre>
 <code class="language-markup">
-  {{> form_radio_buttons }}
+  {% include "snippets/form_radio_buttons.html" %}
 </code>
 </pre>
 
@@ -189,13 +189,13 @@
   <h4 class="heading-small">Stacked checkboxes</h4>
   <div class="example">
     <form>
-      {{> form_checkboxes }}
+      {% include "form_checkboxes.html" %}
     </form>
   </div>
 
 <pre>
 <code class="language-markup">
-  {{> form_checkboxes }}
+  {% include "snippets/form_checkboxes.html" %}
 </code>
 </pre>
 
@@ -207,13 +207,13 @@
 
   <div class="example">
     <form>
-      {{> form_checkbox_native }}
+      {% include "form_checkbox_native.html" %}
     </form>
   </div>
 
 <pre>
 <code class="language-markup">
-  {{> form_checkbox_native }}
+  {% include "snippets/form_checkbox_native.html" %}
 </code>
 </pre>
 
@@ -240,7 +240,7 @@
 
   <div class="example">
     <form>
-      {{> form_inset_radios }}
+      {% include "form_inset_radios.html" %}
     </form>
   </div>
 
@@ -264,7 +264,7 @@
 
 <pre>
 <code class="language-markup">
-  {{> form_inset_radios }}
+  {% include "snippets/form_inset_radios.html" %}
 </code>
 </pre>
 
@@ -280,13 +280,13 @@
   </p>
   <div class="example">
     <form>
-      {{> form_inset_checkboxes }}
+      {% include "form_inset_checkboxes.html" %}
     </form>
   </div>
 
 <pre>
 <code class="language-markup">
-  {{> form_inset_checkboxes }}
+  {% include "snippets/form_inset_checkboxes.html" %}
 </code>
 </pre>
 
@@ -298,16 +298,10 @@
 
   <h3 class="heading-medium" id="examples">Examples</h3>
   <ul class="list list-bullet">
-    <li><a href="{{site.baseurl}}/form-elements/example-form-elements/">form elements</a></li>
-    <li><a href="{{site.baseurl}}/form-elements/example-date/">date pattern</a></li>
-    <li><a href="{{site.baseurl}}/form-elements/example-radios-checkboxes/">radio buttons and checkboxes</a></li>
+    <li><a href="/form-elements/example-form-elements/">form elements</a></li>
+    <li><a href="/form-elements/example-date/">date pattern</a></li>
+    <li><a href="/form-elements/example-radios-checkboxes/">radio buttons and checkboxes</a></li>
   </ul>
 
 </main><!-- / #content -->
-{{/content}}
-
-{% block body_end %}
-  {{>scripts}}
 {% endblock %}
-
-{{/layout}}

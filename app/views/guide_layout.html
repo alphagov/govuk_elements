@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
 {% block page_title %}Layout — GOV.UK elements{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main" tabindex="-1">
 
-  {{>phase_banner}}
-  {{>breadcrumb}}
+  {% include "includes/phase_banner.html" %}
+  {% include "includes/breadcrumb.html" %}
 
   <h1 class="heading-xlarge">
     <span class="heading-secondary">GOV.UK elements</span>
@@ -63,7 +63,7 @@
   </ul>
 
   <div class="example example-images">
-    {{> layout_spacing }}
+    {% include "snippets/layout_spacing.html" %}
   </div>
 
   <h3 class="heading-medium" id="layout-grid-unit-proportions">Grid unit proportions</h3>
@@ -74,73 +74,67 @@
 
 <h4 class="heading-medium">Halves</h4>
 <div class="example example-grid">
-  {{> layout_grid_halves }}
+  {% include "snippets/layout_grid_halves.html" %}
 </div>
 
 <pre>
 <code class="language-markup">
-  {{> layout_grid_halves }}
+  {% include "snippets/layout_grid_halves.html" %}
 </code>
 </pre>
 
 <h4 class="heading-medium">Thirds</h4>
 <div class="example example-grid">
-  {{> layout_grid_thirds }}
+  {% include "snippets/layout_grid_thirds.html" %}
 </div>
 
 <pre>
 <code class="language-markup">
-  {{> layout_grid_thirds }}
+  {% include "snippets/layout_grid_thirds.html" %}
 </code>
 </pre>
 
 <h4 class="heading-medium">Two thirds / One third</h4>
 <div class="example example-grid">
-  {{> layout_grid_thirds_two_thirds_one_third }}
+  {% include "snippets/layout_grid_thirds_two_thirds_one_third.html" %}
 </div>
 
 <pre>
 <code class="language-markup">
-  {{> layout_grid_thirds_two_thirds_one_third }}
+  {% include "snippets/layout_grid_thirds_two_thirds_one_third.html" %}
 </code>
 </pre>
 
 <h4 class="heading-medium">One third / Two thirds</h4>
 <div class="example example-grid">
-  {{> layout_grid_thirds_one_third_two_thirds }}
+  {% include "snippets/layout_grid_thirds_one_third_two_thirds.html" %}
 </div>
 
 <pre>
 <code class="language-markup">
-  {{> layout_grid_thirds_one_third_two_thirds }}
+  {% include "snippets/layout_grid_thirds_one_third_two_thirds.html" %}
 </code>
 </pre>
 
 <h4 class="heading-medium">Quarters</h4>
 <div class="example example-grid">
-  {{> layout_grid_quarters }}
+  {% include "snippets/layout_grid_quarters.html" %}
 </div>
 
 <pre>
 <code class="language-markup">
-  {{> layout_grid_quarters }}
+  {% include "snippets/layout_grid_quarters.html" %}
 </code>
 </pre>
 
   <h3 class="heading-medium" id="examples">Examples</h3>
   <ul class="list list-bullet">
     <li>
-      <a href="{{ site.baseurl}}/layout/example-grid-layout/">
+      <a href="/layout/example-grid-layout/">
         an example grid layout page
       </a>
     </li>
   </ul>
 
 </main><!-- / #content -->
-{{/content}}
-
-{% block body_end %}
-  {{>scripts}}
 {% endblock %}
-
-{{/layout}}

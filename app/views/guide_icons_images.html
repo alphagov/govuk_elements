@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
 {% block page_title %}Icons and images — GOV.UK elements{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main" tabindex="-1">
 
-  {{>phase_banner}}
-  {{>breadcrumb}}
+  {% include "includes/phase_banner.html" %}
+  {% include "includes/breadcrumb.html" %}
 
   <h1 class="heading-xlarge">
     <span class="heading-secondary">GOV.UK elements</span>
@@ -50,13 +50,13 @@
 
 <div class="example">
   <div class="text">
-    {{> typography_legal_text }}
+    {% include "snippets/typography_legal_text.html" %}
   </div>
 </div>
 
 <pre>
 <code class="language-markup">
-  {{> typography_legal_text }}
+  {% include "snippets/typography_legal_text.html" %}
 </code>
 </pre>
 
@@ -78,14 +78,8 @@
 
   <h3 class="heading-medium" id="examples">Examples</h3>
   <ul class="list list-bullet">
-    <li><a href="{{site.baseurl}}/icons-images/example-icons/">Example page: Icons in the GOV.UK frontend toolkit</a></li>
+    <li><a href="/icons-images/example-icons/">Example page: Icons in the GOV.UK frontend toolkit</a></li>
   </ul>
 
 </main><!-- / #content -->
-{{/content}}
-
-{% block body_end %}
-  {{>scripts}}
 {% endblock %}
-
-{{/layout}}

@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
 {% block page_title %}Typography — GOV.UK elements{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main" tabindex="-1">
 
-  {{>phase_banner}}
-  {{>breadcrumb}}
+  {% include "includes/phase_banner.html" %}
+  {% include "includes/breadcrumb.html" %}
 
   <h1 class="heading-xlarge">
     <span class="heading-secondary">GOV.UK elements</span>
@@ -59,12 +59,12 @@
   </ul>
 
 <div class="example">
-  {{> typography_headings_example }}
+  {% include "snippets/typography_headings_example.html" %}
 </div>
 
 <pre>
 <code class="language-markup">
-  {{> typography_headings }}
+  {% include "snippets/typography_headings.html" %}
 </code>
 </pre>
 
@@ -79,13 +79,13 @@
 
 <div class="example">
   <div class="text">
-    {{> typography_lead_paragraph_example }}
+    {% include "snippets/typography_lead_paragraph_example.html" %}
   </div>
 </div>
 
 <pre>
 <code class="language-markup">
-  {{> typography_lead_paragraph }}
+  {% include "snippets/typography_lead_paragraph.html" %}
 </code>
 </pre>
 
@@ -103,13 +103,13 @@
 
 <div class="example">
   <div class="text">
-    {{> typography_paragraphs_example }}
+    {% include "snippets/typography_paragraphs_example.html" %}
   </div>
 </div>
 
 <pre>
 <code class="language-markup">
-  {{> typography_paragraphs }}
+  {% include "snippets/typography_paragraphs.html" %}
 </code>
 </pre>
 
@@ -117,18 +117,18 @@
   <ul class="list list-bullet text">
     <li>links within body copy should be blue and underlined</li>
     <li>links without surrounding text should not have a full stop at the end</li>
-    <li>link colours can be found in the <a href="{{site.baseurl}}/colour">colour palette</a></li>
+    <li>link colours can be found in the <a href="/colour">colour palette</a></li>
   </ul>
 
 <div class="example">
   <div class="text">
-    {{> typography_links }}
+    {% include "snippets/typography_links.html" %}
   </div>
 </div>
 
 <pre>
 <code class="language-markup">
-  {{> typography_links }}
+  {% include "snippets/typography_links.html" %}
 </code>
 </pre>
 
@@ -138,12 +138,12 @@
   </p>
 
 <div class="example">
-  {{> typography_lists }}
+  {% include "snippets/typography_lists.html" %}
 </div>
 
 <pre>
 <code class="language-markup">
-  {{> typography_lists }}
+  {% include "snippets/typography_lists.html" %}
 </code>
 </pre>
 
@@ -154,13 +154,13 @@
 
 <div class="example">
   <div class="text">
-    {{> typography_inset_text }}
+    {% include "snippets/typography_inset_text.html" %}
   </div>
 </div>
 
 <pre>
 <code class="language-markup">
-  {{> typography_inset_text }}
+  {% include "snippets/typography_inset_text.html" %}
 </code>
 </pre>
 
@@ -171,13 +171,13 @@
 
 <div class="example">
   <div class="text">
-    {{> typography_legal_text }}
+    {% include "snippets/typography_legal_text.html" %}
   </div>
 </div>
 
 <pre>
 <code class="language-markup">
-  {{> typography_legal_text }}
+  {% include "snippets/typography_legal_text.html" %}
 </code>
 </pre>
 
@@ -191,12 +191,12 @@
   </p>
 
 <div class="example">
-  {{> typography_progressive_disclosure }}
+  {% include "snippets/typography_progressive_disclosure.html" %}
 </div>
 
 <pre>
 <code class="language-markup">
-  {{> typography_progressive_disclosure }}
+  {% include "snippets/typography_progressive_disclosure.html" %}
 </code>
 </pre>
 
@@ -216,10 +216,4 @@
   </ul>
 
 </main><!-- / #content -->
-{{/content}}
-
-{% block body_end %}
-  {{>scripts}}
 {% endblock %}
-
-{{/layout}}
