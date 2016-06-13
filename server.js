@@ -13,6 +13,8 @@ app.set('views', __dirname + '/app/views');
 // Middleware to serve static assets
 app.use('/public', express.static(__dirname + '/public'));
 app.use('/public', express.static(__dirname + '/govuk_modules/public'));
+app.use('/public', express.static(__dirname + '/govuk_modules/govuk_template/assets'));
+app.use('/public', express.static(__dirname + '/govuk_modules/govuk_frontend_toolkit'));
 
 // Support for parsing data in POSTs
 app.use(bodyParser.json());
