@@ -51,8 +51,15 @@ module.exports = function (grunt) {
           dest: 'govuk_modules/govuk_template/'
         }]
       },
-    },
-
+      govuk_template_jinja: {
+        files: [{
+          expand: true,
+            cwd: 'govuk_modules/govuk_template/views/layouts/',
+            src: '**',
+            dest: 'lib/'
+          }]
+      },
+    }
     // workaround for libsass
     replace: {
       fixSass: {
