@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({
 
 // send assetPath to all views
 app.use(function (req, res, next) {
-  res.locals.assetPath="/public/";
+  res.locals.asset_path="/public/";
   next();
 });
 
