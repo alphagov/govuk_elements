@@ -1,4 +1,5 @@
 var express = require('express'),
+    bodyParser = require('body-parser'),
     routes = require(__dirname + '/routes.js'),
     app = express(),
     port = (process.env.PORT || 3000);
@@ -12,8 +13,12 @@ app.set('views', __dirname + '/views');
 // Middleware to serve static assets
 app.use('/public', express.static(__dirname + '/public'));
 app.use('/public', express.static(__dirname + '/govuk_modules/public'));
-app.use(express.json());       // to support JSON-encoded bodies
-app.use(express.urlencoded()); // to support URL-encoded bodies
+
+// Support for parsing data in POSTs
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+	extended: true
+}));
 
 // routes (found in routes.js)
 
