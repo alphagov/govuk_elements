@@ -1,8 +1,8 @@
 module.exports = {
-  bind : function (app, assetPath) {
+  bind : function (app, asset_path) {
 
     app.get('/', function (req, res) {
-      res.render('index', {'assetPath' : assetPath });
+      res.render('index', {'asset_path' : asset_path });
     });
 
     // Redirect snippets page to the index page
