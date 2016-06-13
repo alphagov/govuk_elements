@@ -110,28 +110,14 @@ module.exports = function (grunt) {
     'grunt-contrib-watch',
     'grunt-sass',
     'grunt-nodemon',
-    'grunt-text-replace',
     'grunt-concurrent',
     'grunt-shell'
   ].forEach(function (task) {
     grunt.loadNpmTasks(task);
   });
 
-  grunt.registerTask(
-    'convert_template',
-    'Converts the govuk_template to use mustache inheritance',
-    function () {
-      var script = require(__dirname + '/lib/template-conversion.js');
-
-      script.convert();
-      grunt.log.writeln('govuk_template converted');
-    }
-  );
-
   grunt.registerTask('default', [
     'copy',
-    'convert_template',
-    'replace',
     'sass',
     'concurrent:target'
   ]);
@@ -141,8 +127,6 @@ module.exports = function (grunt) {
     'Test that the default task runs the app',
     [
       'copy',
-      'convert_template',
-      'replace',
       'sass'
     ]
   );
