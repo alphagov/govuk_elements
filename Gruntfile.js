@@ -17,7 +17,10 @@ module.exports = function (grunt) {
           'public/stylesheets/prism.css': 'public/sass/prism.scss',
         },
         options: {
-          includePaths: ['govuk_modules/public/sass'],
+          includePaths: [
+            'govuk_modules/govuk_template/assets/stylesheets',
+            'govuk_modules/govuk_frontend_toolkit/stylesheets'
+          ],
           outputStyle: 'expanded',
           imagePath: '../images'
         }
