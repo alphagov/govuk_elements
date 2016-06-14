@@ -1,4 +1,4 @@
-{{#error}}
+{% if error %}
 <div class="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1">
 
   <h1 class="heading-medium error-summary-heading" id="error-summary-heading">
@@ -10,41 +10,41 @@
   </p>
 
   <ul class="error-summary-list">
-    {{^fullName}}
+    {% if not fullName %}
     <li><a href="#example-full-name">Descriptive link to the question with an error</a></li>
-    {{/fullName}}
-    {{^niNo}}
+    {% endif %}
+    {% if not niNo %}
     <li><a href="#example-ni-number">Descriptive link to the question with an error</a></li>
-    {{/niNo}}
+    {% endif %}
   </ul>
 
 </div>
-{{/error}}
+{% endif %}
 
 <h1 class="heading-large">
   Your personal details
 </h1>
 
-<div class="form-group {{#error}}{{^fullName}}error{{/fullName}}{{/error}}">
+<div class="form-group {% if error %}{% if not fullName %} error{% endif %}{% endif %}">
 
-  <label for="example-full-name" {{#error}}{{^fullName}}id="error-full-name"{{/fullName}}{{/error}}>
+  <label for="example-full-name" {% if error %}{% if not fullName %} id="error-full-name"{% endif %}{% endif %}>
 
     <span class="form-label-bold">Full name</span>
     <span class="form-hint">As shown on your birth certificate or passport</span>
-    {{#error}}
-      {{^fullName}}
+    {% if error %}
+      {% if not fullName %}
       <span class="error-message" id="error-message-full-name">Error message about full name goes here</span>
-      {{/fullName}}
-    {{/error}}
+      {% endif %}
+    {% endif %}
 
   </label>
 
-  <input class="form-control" id="example-full-name" type="text" name="fullName" value="{{fullName}}" {{#error}}{{^fullName}}aria-describedby="error-message-full-name"{{/fullName}}{{/error}}>
+  <input class="form-control" id="example-full-name" type="text" name="fullName" value="{{fullName}}" {% if error %}{% if not fullName %} aria-describedby="error-message-full-name"{% endif %}{% endif %}>
 </div>
 
-<div class="form-group {{#error}}{{^niNo}}error{{/niNo}}{{/error}}">
+<div class="form-group {% if error %}{% if not niNo %} error{% endif %}{% endif %}">
 
-  <label for="example-ni-number" {{#error}}{{^niNo}}id="error-full-name"{{/niNo}}{{/error}}>
+  <label for="example-ni-number" {% if error %}{% if not niNo %} id="error-full-name"{% endif %}{% endif %}>
 
     <span class="form-label-bold">National Insurance number</span>
     <span class="form-hint">
@@ -52,17 +52,16 @@
       <br>
       For example, 'VO 12 34 56 D'.
     </span>
-    {{#error}}
-      {{^niNo}}
+    {% if error %}
+      {% if not niNo %}
       <span class="error-message" id="error-message-ni-number">
         Error message about National Insurance number goes here
       </span>
-      {{/niNo}}
-    {{/error}}
-
+      {% endif %}
+    {% endif %}
   </label>
 
-  <input class="form-control" id="example-ni-number" type="text" name="niNo" value="{{niNo}}" {{#error}}{{^niNo}}aria-describedby="error-message-ni-number"{{/niNo}}{{/error}}>
+  <input class="form-control" id="example-ni-number" type="text" name="niNo" value="{{niNo}}" {% if error %}{% if not niNo %} aria-describedby="error-message-ni-number"{% endif %}{% endif %}>
 
 </div>
 
