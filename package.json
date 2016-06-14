@@ -16,7 +16,7 @@
     "express": "4.13.3",
     "express-nunjucks": "^0.9.3",
     "express-writer": "0.0.4",
-    "govuk_template_jinja": "https://github.com/alphagov/govuk_template/releases/download/v0.17.2/jinja_govuk_template-0.17.2.tgz",
+    "govuk_template_jinja": "https://github.com/alphagov/govuk_template/releases/download/v0.17.3/jinja_govuk_template-0.17.3.tgz",
     "grunt": "^0.4.2",
     "grunt-cli": "0.1.13",
     "grunt-concurrent": "^0.4.3",
