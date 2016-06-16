@@ -1,11 +1,11 @@
-{{<layout_example}}
+{% extends "layout_example.html" %}
 
-{{$pageTitle}}Example: Grid layout — Layout — GOV.UK elements{{/pageTitle}}
+{% block page_title %}Example: Grid layout — Layout — GOV.UK elements{% endblock %}
 
-{{$content}}
+{% block content %}
 <main id="content" role="main" tabindex="-1">
 
-  {{>breadcrumb}}
+  {% include "includes/breadcrumb.html" %}
 
   <div class="grid-row">
     <div class="column-two-thirds">
@@ -128,10 +128,10 @@
 
 </main>
 
-{{/content}}
+{% endblock %}
 
-{{$bodyEnd}}
-  {{>scripts}}
+{% block body_end %}
+  {% include "includes/scripts.html" %}
   <script>
 
     // Toggle grid background colours
@@ -158,6 +158,4 @@
     });
 
     </script>
-{{/bodyEnd}}
-
-{{/layout_example}}
+{% endblock %}

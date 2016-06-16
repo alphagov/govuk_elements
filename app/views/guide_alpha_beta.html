@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}Alpha and beta banners — GOV.UK elements{{/pageTitle}}
+{% block page_title %}Alpha and beta banners — GOV.UK elements{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main" tabindex="-1">
 
-  {{>phase_banner}}
-  {{>breadcrumb}}
+  {% include "includes/phase_banner.html" %}
+  {% include "includes/breadcrumb.html" %}
 
   <h1 class="heading-xlarge">
     <span class="heading-secondary">GOV.UK elements</span>
@@ -31,23 +31,23 @@
 
 <h3 class="heading-medium" id="alpha-banner">Alpha banner</h3>
 <div class="example">
-  {{> phase_banner_alpha }}
+  {% include "snippets/phase_banner_alpha.html" %}
 </div>
 
 <pre>
 <code class="language-markup">
-  {{> phase_banner_alpha }}
+  {% include "snippets/phase_banner_alpha.html" %}
 </code>
 </pre>
 
 <h3 class="heading-medium" id="beta-banner">Beta banner</h3>
 <div class="example">
-  {{> phase_banner_beta }}
+  {% include "snippets/phase_banner_beta.html" %}
 </div>
 
 <pre>
 <code class="language-markup">
-  {{> phase_banner_beta }}
+  {% include "snippets/phase_banner_beta.html" %}
 </code>
 </pre>
 
@@ -63,10 +63,4 @@
   </p>
 
 </main><!-- / #content -->
-{{/content}}
-
-{{$bodyEnd}}
-  {{>scripts}}
-{{/bodyEnd}}
-
-{{/layout}}
+{% endblock %}

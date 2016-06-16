@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}Data — GOV.UK elements{{/pageTitle}}
+{% block page_title %}Data — GOV.UK elements{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main" tabindex="-1">
 
-  {{>phase_banner}}
-  {{>breadcrumb}}
+  {% include "includes/phase_banner.html" %}
+  {% include "includes/breadcrumb.html" %}
 
   <h1 class="heading-xlarge">
     <span class="heading-secondary">GOV.UK elements</span>
@@ -37,12 +37,12 @@
   </ul>
 
 <div class="example">
-  {{> data_table_numeric }}
+  {% include "snippets/data_table_numeric.html" %}
 </div>
 
 <pre>
 <code class="language-markup">
-  {{> data_table_numeric }}
+  {% include "snippets/data_table_numeric.html" %}
 </code>
 </pre>
 
@@ -52,12 +52,12 @@
   </p>
 
 <div class="example">
-  {{> data_table }}
+  {% include "snippets/data_table.html" %}
 </div>
 
 <pre>
 <code class="language-markup">
-  {{> data_table }}
+  {% include "snippets/data_table.html" %}
 </code>
 </pre>
 
@@ -130,10 +130,4 @@
   </ul>
 
 </main><!-- / #content -->
-{{/content}}
-
-{{$bodyEnd}}
-  {{>scripts}}
-{{/bodyEnd}}
-
-{{/layout}}
+{% endblock %}

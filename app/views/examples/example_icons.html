@@ -1,11 +1,11 @@
-{{<layout_example}}
+{% extends "layout_example.html" %}
 
-{{$pageTitle}}Example: Icons — Icons and images — GOV.UK elements{{/pageTitle}}
+{% block page_title %}Example: Icons — Icons and images — GOV.UK elements{% endblock %}
 
-{{$content}}
+{% block content %}
 <main id="content" role="main" tabindex="-1">
 
-  {{>breadcrumb}}
+  {% include "includes/breadcrumb.html" %}
 
   <style>
   .example-icon-list p { display: inline-block; font-size: 16px; padding-left: 1em; vertical-align: middle; margin-bottom: 0;}
@@ -118,6 +118,4 @@
   </div>
 
 </main><!-- /#content-->
-{{/content}}
-
-{{/layout_example}}
+{% endblock %}

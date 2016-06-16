@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}Colour — GOV.UK elements{{/pageTitle}}
+{% block page_title %}Colour — GOV.UK elements{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main" tabindex="-1">
 
-  {{>phase_banner}}
-  {{>breadcrumb}}
+  {% include "includes/phase_banner.html" %}
+  {% include "includes/breadcrumb.html" %}
 
   <h1 class="heading-xlarge">
     <span class="heading-secondary">GOV.UK elements</span>
@@ -419,10 +419,4 @@
   </div>
 
 </main><!-- / #content -->
-{{/content}}
-
-{{$bodyEnd}}
-  {{>scripts}}
-{{/bodyEnd}}
-
-{{/layout}}
+{% endblock %}

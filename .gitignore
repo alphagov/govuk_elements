@@ -3,6 +3,7 @@
 .start.pid
 node_modules
 govuk_modules
+lib/govuk_template.html
 
 # Ignore compiled stylesheets
 public/stylesheets/

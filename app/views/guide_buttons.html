@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}Buttons — GOV.UK elements{{/pageTitle}}
+{% block page_title %}Buttons — GOV.UK elements{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main" tabindex="-1">
 
-  {{>phase_banner}}
-  {{>breadcrumb}}
+  {% include "includes/phase_banner.html" %}
+  {% include "includes/breadcrumb.html" %}
 
   <h1 class="heading-xlarge">
     <span class="heading-secondary">GOV.UK elements</span>
@@ -37,12 +37,12 @@
   </p>
 
 <div class="example">
-  {{> buttons_button }}
+  {% include "snippets/buttons_button.html" %}
 </div>
 
 <pre>
 <code class="language-markup">
-  {{> buttons_button }}
+  {% include "snippets/buttons_button.html" %}
 </code>
 </pre>
 
@@ -52,12 +52,12 @@
   </p>
 
 <div class="example">
-  {{> buttons_button_start_now }}
+  {% include "snippets/buttons_button_start_now.html" %}
 </div>
 
 <pre>
 <code class="language-markup">
-  {{> buttons_button_start_now }}
+  {% include "snippets/buttons_button_start_now.html" %}
 </code>
 </pre>
 
@@ -91,7 +91,7 @@
 
 <pre>
 <code class="language-markup">
-  {{> buttons_button_disabled }}
+  {% include "snippets/buttons_button_disabled.html" %}
 </code>
 </pre>
 
@@ -142,10 +142,4 @@
   </p>
 
 </main><!-- / #content -->
-{{/content}}
-
-{{$bodyEnd}}
-  {{>scripts}}
-{{/bodyEnd}}
-
-{{/layout}}
+{% endblock %}

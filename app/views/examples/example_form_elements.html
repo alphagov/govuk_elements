@@ -1,11 +1,11 @@
-{{<layout_example}}
+{% extends "layout_example.html" %}
 
-{{$pageTitle}}Example: Form elements — Form elements — GOV.UK elements{{/pageTitle}}
+{% block page_title %}Example: Form elements — Form elements — GOV.UK elements{% endblock %}
 
-{{$content}}
+{% block content %}
 <main id="content" role="main" tabindex="-1">
 
-  {{>breadcrumb}}
+  {% include "includes/breadcrumb.html" %}
 
   <div class="grid-row">
     <div class="column-two-thirds">
@@ -501,37 +501,35 @@
           These examples are one-question-per-page examples and use a heading for the question, with a visually hidden legend inside a fieldset.
         </h3>
         <!-- "Chunky" Radio buttons, stacked -->
-        {{> form_radio_buttons }}
+        {% include "snippets/form_radio_buttons.html" %}
       </div>
 
       <div class="form-section">
         <!-- "Chunky" Checkboxes, stacked -->
-        {{> form_checkboxes }}
+        {% include "snippets/form_checkboxes.html" %}
       </div>
 
       <div class="form-section">
         <!-- Yes or No question (without revealed content ) -->
-        {{> form_radio_buttons_inline }}
+        {% include "snippets/form_radio_buttons_inline.html" %}
       </div>
 
       <div class="form-section">
         <!-- Yes or No question (select one option to reveal content) -->
-        {{> form_radio_inline_yes_no }}
+        {% include "snippets/form_radio_inline_yes_no.html" %}
       </div>
 
       <div class="form-section">
         <!-- Radio buttons (select one option to reveal content) -->
-        {{> form_inset_radios }}
+        {% include "snippets/form_inset_radios.html" %}
       </div>
 
       <div class="form-section">
         <!-- Checkboxes (select more than option to reveal content) -->
-        {{> form_inset_checkboxes }}
+        {% include "snippets/form_inset_checkboxes.html" %}
       </div>
 
     </div>
   </div>
 </main><!-- / #content -->
-{{/content}}
-
-{{/layout_example}}
+{% endblock %}

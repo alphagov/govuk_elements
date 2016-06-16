@@ -46,10 +46,18 @@ module.exports = function (grunt) {
         },
         {
           expand: true,
-          cwd: 'node_modules/govuk_template_mustache/',
+          cwd: 'node_modules/govuk_template_jinja/',
           src: '**',
           dest: 'govuk_modules/govuk_template/'
         }]
+      },
+      govuk_template_jinja: {
+        files: [{
+          expand: true,
+            cwd: 'govuk_modules/govuk_template/views/layouts/',
+            src: '**',
+            dest: 'lib/'
+          }]
       },
     },
 
@@ -110,28 +118,14 @@ module.exports = function (grunt) {
     'grunt-contrib-watch',
     'grunt-sass',
     'grunt-nodemon',
-    'grunt-text-replace',
     'grunt-concurrent',
     'grunt-shell'
   ].forEach(function (task) {
     grunt.loadNpmTasks(task);
   });
 
-  grunt.registerTask(
-    'convert_template',
-    'Converts the govuk_template to use mustache inheritance',
-    function () {
-      var script = require(__dirname + '/lib/template-conversion.js');
-
-      script.convert();
-      grunt.log.writeln('govuk_template converted');
-    }
-  );
-
   grunt.registerTask('default', [
     'copy',
-    'convert_template',
-    'replace',
     'sass',
     'concurrent:target'
   ]);
@@ -141,8 +135,6 @@ module.exports = function (grunt) {
     'Test that the default task runs the app',
     [
       'copy',
-      'convert_template',
-      'replace',
       'sass'
     ]
   );
@@ -155,7 +147,7 @@ module.exports = function (grunt) {
     }
   );
 
-   grunt.registerTask(
+  grunt.registerTask(
     'lint_message',
     'Output a message once linting is complete',
     function() {

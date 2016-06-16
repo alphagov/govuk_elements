@@ -1,13 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}Errors and validation — GOV.UK elements{{/pageTitle}}
+{% block page_title %}Errors and validation — GOV.UK elements{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main" tabindex="-1">
 
-  {{>phase_banner}}
-  {{>breadcrumb}}
+  {% include "includes/phase_banner.html" %}
+  {% include "includes/breadcrumb.html" %}
 
   <h1 class="heading-xlarge">
     <span class="heading-secondary">GOV.UK elements</span>
@@ -56,12 +56,12 @@
 
   <h4 class="heading-small">Error message and summary box</h4>
 <div class="example example-error">
-  {{> form_error_radio_show_errors }}
+  {% include "snippets/form_error_radio_show_errors.html" %}
 </div>
 
 <pre>
 <code class="language-markup">
-  {{> form_error_radio_show_errors }}
+  {% include "snippets/form_error_radio_show_errors.html" %}
 </code>
 </pre>
 
@@ -90,24 +90,24 @@
   </p>
 
 <div class="example example-error">
-  {{> form_error_multiple_show_errors }}
+  {% include "snippets/form_error_multiple_show_errors.html" %}
 </div>
 
 <pre>
 <code class="language-markup">
-  {{> form_error_multiple_show_errors }}
+  {% include "snippets/form_error_multiple_show_errors.html" %}
 </code>
 </pre>
 
   <h3 class="heading-medium" id="examples">Examples</h3>
   <ul class="list list-bullet">
     <li>
-      <a href="{{ site.baseurl}}/errors/example-form-validation-single-question-radio">
+      <a href="/errors/example-form-validation-single-question-radio">
         form validation - single question
       </a>
     </li>
     <li>
-      <a href="{{ site.baseurl}}/errors/example-form-validation-multiple-questions">
+      <a href="/errors/example-form-validation-multiple-questions">
         form validation - multiple questions
       </a>
     </li>
@@ -120,10 +120,4 @@
   </p>
 
 </main><!-- / #content -->
-{{/content}}
-
-{{$bodyEnd}}
-  {{>scripts}}
-{{/bodyEnd}}
-
-{{/layout}}
+{% endblock %}
