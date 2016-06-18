@@ -32,6 +32,10 @@
   {% include "includes/elements_tracking.html" %}
 {% endblock %}
 
+{% block cookie_message %}
+  <p>{{cookieText | safe }}</p>
+{% endblock %}
+
 {% block proposition_header %}
   {% include "includes/service_manual_navigation.html" %}
 {% endblock %}
