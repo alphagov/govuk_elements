@@ -1,4 +1,5 @@
 var bodyParser = require('body-parser'),
+    config = require(__dirname + '/app/config.js'),
     express = require('express'),
     nunjucks = require('express-nunjucks'),
     path = require('path'),
@@ -31,6 +32,12 @@ app.use(bodyParser.urlencoded({
 // send assetPath to all views
 app.use(function (req, res, next) {
   res.locals.asset_path="/public/";
+  next();
+});
+
+// Add variables that are available in all views
+app.use(function (req, res, next) {
+  res.locals.cookieText=config.cookieText;
   next();
 });
 
