@@ -1,6 +1,28 @@
 GOV.UK elements
 ===============
 
+---
+
+### Want to help us improve [GOV.UK](https://www.gov.uk/)?
+
+Hi all,
+
+We’ve been doing some research at GDS on the design patterns and tools that we offer to service teams around government. Things like design patterns, front-end code libraries and style guides.
+
+So far we’ve spoken to over 40 of you in person and we’re developing a pretty good idea of what we can do to improve these resources.
+
+We’d now like to get some good data on the kinds of front-end technologies used by service teams, so we can assess the potential impact of any technology choices we make.
+
+If you work with code in any capacity on your service, whether that’s as a developer or a designer, prototyping or production, you could help us enormously by completing this short 5 minute survey.
+
+[Complete the GDS front end survey](https://www.surveymonkey.co.uk/r/2MZRS9H)
+
+Thanks in advance
+
+The GDS Design Patterns and Tools Team
+
+---
+
 ## What is it?
 
 GOV.UK elements is three things:
