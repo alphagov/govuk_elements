@@ -14,6 +14,9 @@
   @include media(desktop) {
     padding-bottom: $gutter * 3;
   }
+  // Pressing enter when focus is on the skiplink sets focus on the #content area
+  // Remove the blue outline
+  outline: none;
 }
 
 
