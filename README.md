@@ -1,6 +1,12 @@
 GOV.UK elements
 ===============
 
+---
+
+#### You can help us improve this app by completing our [5 minute survey](https://www.surveymonkey.co.uk/r/2MZRS9H).
+
+---
+
 ## What is it?
 
 GOV.UK elements is three things:
