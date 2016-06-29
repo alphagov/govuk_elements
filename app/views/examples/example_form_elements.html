@@ -494,6 +494,21 @@
           </div>
         </div>
 
+        <div class="form-section">
+          <!--File upload -->
+          <div class="form-group">
+            {% include "snippets/form_file_upload.html" %}
+          </div>
+
+          <!--File upload with error -->
+          <div class="form-group error">
+            <span class="error-message">
+              Error message goes here
+            </span>
+            {% include "snippets/form_file_upload.html" %}
+          </div>
+        </div>
+
       </form>
 
       <div class="form-section">
