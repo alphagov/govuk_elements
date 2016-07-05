@@ -2,9 +2,12 @@
 
 {% block head %}
   {% include "includes/elements_head.html" %}
-  {% include "includes/elements_tracking.html" %}
   {% include "includes/snippets_head.html" %}
   {% include "includes/snippets_scripts.html" %}
+{% endblock %}
+
+{% block body_start %}
+  {% include "includes/elements_tracking.html" %}
 {% endblock %}
 
 {% block cookie_message %}
