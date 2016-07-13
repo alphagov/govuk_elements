@@ -81,7 +81,7 @@ You can pick and chosoe partials from the govuk-elements-sass package.
     @import "conditionals";                           // Media query mixin
     @import "device-pixels";                          // Retina image mixin
     @import "grid_layout";                            // Basic grid layout mixin
-    @import "typography";                             // Core bold and heading mixins, also external links
+    @import "typography";                             // Core bold and heading mixins
     @import "shims";                                  // Inline block mixin, clearfix placeholder
 
     // Mixins to generate components (chunks of UI)
