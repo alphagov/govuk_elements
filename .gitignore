@@ -4,12 +4,10 @@
 node_modules
 govuk_modules
 lib/govuk_template.html
-
+# Ignore generated snippets
+app/views/snippets/encoded/*.html
 # Ignore compiled stylesheets
 public/stylesheets/
-
-# Ignore WIP form examples
-views/examples/forms
 
 # Ignore test files
 dist/*.html
