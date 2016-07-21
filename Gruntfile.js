@@ -61,6 +61,14 @@ module.exports = function (grunt) {
       },
     },
 
+    // Encode HTML snippets
+    htmlentities: {
+      files: {
+        src: ['app/views/snippets/*'],
+        dest: 'app/views/snippets/encoded/'
+      },
+    },
+
     // workaround for libsass
     replace: {
       fixSass: {
@@ -119,7 +127,8 @@ module.exports = function (grunt) {
     'grunt-sass',
     'grunt-nodemon',
     'grunt-concurrent',
-    'grunt-shell'
+    'grunt-shell',
+    'grunt-htmlentities'
   ].forEach(function (task) {
     grunt.loadNpmTasks(task);
   });
@@ -137,6 +146,14 @@ module.exports = function (grunt) {
       'copy',
       'sass'
     ]
+  );
+
+  grunt.registerTask(
+    'encode_snippets',
+    'Encode HTML snippets',
+    function() {
+      grunt.task.run('htmlentities');
+    }
   );
 
   grunt.registerTask(
