@@ -27,6 +27,11 @@ module.exports = function (grunt) {
       }
     },
 
+    // Empty encoded snippets folder
+    clean: {
+      contents: ['app/views/snippets/encoded/*'],
+    },
+
     // Copies templates and assets from external modules and dirs
     copy: {
       assets: {
@@ -64,7 +69,7 @@ module.exports = function (grunt) {
     // Encode HTML snippets
     htmlentities: {
       files: {
-        src: ['app/views/snippets/*'],
+        src: ['app/views/snippets/*.html'],
         dest: 'app/views/snippets/encoded/'
       },
     },
@@ -122,6 +127,7 @@ module.exports = function (grunt) {
   });
 
   [
+    'grunt-contrib-clean',
     'grunt-contrib-copy',
     'grunt-contrib-watch',
     'grunt-sass',
@@ -134,7 +140,9 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('default', [
+    'clean',
     'copy',
+    'encode_snippets',
     'sass',
     'concurrent:target'
   ]);
