@@ -69,7 +69,7 @@ module.exports = function (grunt) {
     // Encode HTML snippets
     htmlentities: {
       files: {
-        src: ['app/views/snippets/*'],
+        src: ['app/views/snippets/*.html'],
         dest: 'app/views/snippets/encoded/'
       },
     },
@@ -142,6 +142,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'clean',
     'copy',
+    'encode_snippets',
     'sass',
     'concurrent:target'
   ]);
