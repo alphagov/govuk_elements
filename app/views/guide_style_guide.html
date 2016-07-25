@@ -157,7 +157,15 @@
       </ul>
 
       <div class="example example-images">
-        {% include "snippets/layout_spacing.html" %}
+        {# include "snippets/layout_spacing.html" #}
+        <div class="govuk-o-grid-row">
+          <div class="govuk-o-column-one-half">
+            <img src="/public/images/examples/15px-gutter-example.png" alt="15px gutter example">
+          </div>
+          <div class="govuk-o-column-one-half">
+            <img src="/public/images/examples/30px-gutter-example.png" alt="30px gutter example">
+          </div>
+        </div>
       </div>
 
       <h3 class="govuk-heading-medium" id="layout-grid-unit-proportions">Grid unit proportions</h3>
@@ -167,57 +175,154 @@
       </ul>
 
       <h4 class="govuk-heading-medium">Halves</h4>
-      <div class="example example-grid">
-        {% include "snippets/layout_grid_halves.html" %}
+      <div class="example">
+        {# include "snippets/layout_grid_halves.html" #}
+        <div class="govuk-o-grid-row">
+          <div class="govuk-o-column-one-half">
+            <p class="example__grid-background">Content</p>
+          </div>
+          <div class="govuk-o-column-one-half">
+            <p class="example__grid-background">Content</p>
+          </div>
+        </div>
       </div>
 
       <pre>
         <code class="language-markup">
-          {% include "snippets/layout_grid_halves.html" %}
+          {# include "snippets/layout_grid_halves.html #}
+          <div class="govuk-o-grid-row">
+            <div class="govuk-o-column-one-half">
+              <p>Content</p>
+            </div>
+            <div class="govuk-o-column-one-half">
+              <p>Content</p>
+            </div>
+          </div>
         </code>
       </pre>
 
       <h4 class="govuk-heading-medium">Thirds</h4>
       <div class="example example-grid">
-        {% include "snippets/layout_grid_thirds.html" %}
+        {# include "snippets/layout_grid_thirds.html" #}
+        <div class="govuk-o-grid-row">
+          <div class="govuk-o-column-one-third">
+            <p class="example__grid-background">Content</p>
+          </div>
+          <div class="govuk-o-column-one-third">
+            <p class="example__grid-background">Content</p>
+          </div>
+          <div class="govuk-o-column-one-third">
+            <p class="example__grid-background">Content</p>
+          </div>
+        </div>
       </div>
 
       <pre>
         <code class="language-markup">
-          {% include "snippets/layout_grid_thirds.html" %}
+          <div class="govuk-o-grid-row">
+            <div class="govuk-o-column-one-third">
+              <p>Content</p>
+            </div>
+            <div class="govuk-o-column-one-third">
+              <p>Content</p>
+            </div>
+            <div class="govuk-o-column-one-third">
+              <p>Content</p>
+            </div>
+          </div>
         </code>
       </pre>
 
       <h4 class="govuk-heading-medium">Two thirds / One third</h4>
       <div class="example example-grid">
-        {% include "snippets/layout_grid_thirds_two_thirds_one_third.html" %}
+        {# include "snippets/layout_grid_thirds_two_thirds_one_third.html" #}
+        <div class="govuk-o-grid-row">
+          <div class="govuk-o-column-two-thirds">
+            <p class="example__grid-background">Content</p>
+          </div>
+          <div class="govuk-o-column-one-third">
+            <p class="example__grid-background">Content</p>
+          </div>
+        </div>
       </div>
 
       <pre>
         <code class="language-markup">
-          {% include "snippets/layout_grid_thirds_two_thirds_one_third.html" %}
+          {# include "snippets/layout_grid_thirds_two_thirds_one_third.html" #}
+          <div class="govuk-o-grid-row">
+            <div class="govuk-o-column-two-thirds">
+              <p>Content</p>
+            </div>
+            <div class="govuk-o-column-one-third">
+              <p>Content</p>
+            </div>
+          </div>
         </code>
       </pre>
 
       <h4 class="govuk-heading-medium">One third / Two thirds</h4>
       <div class="example example-grid">
-        {% include "snippets/layout_grid_thirds_one_third_two_thirds.html" %}
+        {# include "snippets/layout_grid_thirds_one_third_two_thirds.html" #}
+        <div class="govuk-o-grid-row">
+          <div class="govuk-o-column-one-third">
+            <p class="example__grid-background">Content</p>
+          </div>
+          <div class="govuk-o-column-two-thirds">
+            <p class="example__grid-background">Content</p>
+          </div>
+        </div>
       </div>
 
       <pre>
         <code class="language-markup">
-          {% include "snippets/layout_grid_thirds_one_third_two_thirds.html" %}
+          {# include "snippets/layout_grid_thirds_one_third_two_thirds.html" #}
+          <div class="govuk-o-grid-row">
+            <div class="govuk-o-column-one-third">
+              <p>Content</p>
+            </div>
+            <div class="govuk-o-column-two-thirds">
+              <p>Content</p>
+            </div>
+          </div>
         </code>
       </pre>
 
       <h4 class="govuk-heading-medium">Quarters</h4>
       <div class="example example-grid">
-        {% include "snippets/layout_grid_quarters.html" %}
+        {# include "snippets/layout_grid_quarters.html" #}
+        <div class="govuk-o-grid-row">
+          <div class="govuk-o-column-one-quarter">
+            <p class="example__grid-background">Content</p>
+          </div>
+          <div class="govuk-o-column-one-quarter">
+            <p class="example__grid-background">Content</p>
+          </div>
+           <div class="govuk-o-column-one-quarter">
+            <p class="example__grid-background">Content</p>
+          </div>
+          <div class="govuk-o-column-one-quarter">
+            <p class="example__grid-background">Content</p>
+          </div>
+        </div>
       </div>
 
       <pre>
         <code class="language-markup">
-          {% include "snippets/layout_grid_quarters.html" %}
+          {# include "snippets/layout_grid_quarters.html" #}
+          <div class="govuk-o-grid-row">
+            <div class="govuk-o-column-one-quarter">
+              <p>Content</p>
+            </div>
+            <div class="govuk-o-column-one-quarter">
+              <p>Content</p>
+            </div>
+             <div class="govuk-o-column-one-quarter">
+              <p>Content</p>
+            </div>
+            <div class="govuk-o-column-one-quarter">
+              <p>Content</p>
+            </div>
+          </div>
         </code>
       </pre>
 
