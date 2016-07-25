@@ -5,7 +5,13 @@
 {% block content %}
 <main class="govuk-o-wrapper" id="content" role="main" tabindex="-1">
 
-  {% include "includes/phase_banner_survey.html" %}
+  <div class="govuk-c-phase-banner govuk-c-phase-banner--alpha">
+    <div class="govuk-c-phase-banner__content">
+      <strong class="govuk-c-phase-tag govuk-c-phase-tag--alpha">ALPHA</strong>
+      <span class="govuk-c-phase-banner__text">You can help us improve this app by completing our <a href="https://www.surveymonkey.co.uk/r/2MZRS9H">5 minute survey</a>.</span>
+    </div>
+  </div>
+
   {% include "includes/breadcrumb.html" %}
 
   <div class="govuk-o-grid-row">
