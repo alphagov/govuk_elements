@@ -1043,12 +1043,14 @@
       </p>
 
       <div class="example">
-        {% include "snippets/buttons_button.html" %}
+        {# include "snippets/buttons_button.html" #}
+        <input class="govuk-c-button" type="submit" value="Save and continue">
       </div>
 
       <pre>
       <code class="language-markup">
-        {% include "snippets/buttons_button.html" %}
+        {# include "snippets/buttons_button.html" #}
+        <input class="govuk-c-button" type="submit" value="Save and continue">
       </code>
       </pre>
 
@@ -1058,12 +1060,14 @@
       </p>
 
       <div class="example">
-        {% include "snippets/buttons_button_start_now.html" %}
+        {# include "snippets/buttons_button_start_now.html" #}
+        <input class="govuk-c-button govuk-c-button--start-now" type="submit" value="Save and continue">
       </div>
 
       <pre>
       <code class="language-markup">
-        {% include "snippets/buttons_button_start_now.html" %}
+        {# include "snippets/buttons_button_start_now.html" #}
+        <input class="govuk-c-button govuk-c-button--start-now" type="submit" value="Save and continue">
       </code>
       </pre>
 
@@ -1080,7 +1084,7 @@
             <input type="text" class="form-control" id="form-email-address-1">
           </div>
           <div class="form-group">
-            <button class="button">Save and continue</button>
+            <button class="govuk-c-button">Save and continue</button>
           </div>
         </form>
 
@@ -1092,12 +1096,13 @@
       </p>
 
       <div class="example">
-        <button class="button" disabled="disabled">Primary button</button>
+        <button class="govuk-c-button govuk-c-button--disabled" disabled="disabled">Primary button</button>
       </div>
 
       <pre>
       <code class="language-markup">
-        {% include "snippets/buttons_button_disabled.html" %}
+        {# include "snippets/buttons_button_disabled.html" #}
+        <button class="govuk-c-button govuk-c-button--disabled" disabled="disabled">Primary button</button>
       </code>
       </pre>
 
@@ -1106,14 +1111,14 @@
         Use the GOV.UK Sass button mixin &ndash; find this in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/design-patterns/_buttons.scss" rel="external">buttons.scss</a> file.
       </p>
 
-      <div class="example example-button">
-        <div class="grid-row">
-          <div class="column-one-third">
+      <div class="example">
+        <div class="govuk-o-grid-row">
+          <div class="govuk-o-column-one-third">
 
-            <button class="button">Save and continue</button>
+            <button class="govuk-c-button">Save and continue</button>
 
           </div>
-          <div class="column-one-third">
+          <div class="govuk-o-column-one-third">
 
             <div class="swatch-wrapper">
               <h4 class="govuk-heading-small">Button</h4>
@@ -1125,7 +1130,7 @@
             </div>
 
           </div>
-          <div class="column-one-third">
+          <div class="govuk-o-column-one-third">
 
             <div class="swatch-wrapper">
               <h4 class="govuk-heading-small">Focus</h4>
