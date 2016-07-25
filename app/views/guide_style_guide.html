@@ -1527,23 +1527,47 @@
 
       <h3 class="govuk-heading-medium" id="alpha-banner">Alpha banner</h3>
       <div class="example">
-        {% include "snippets/phase_banner_alpha.html" %}
+        {# include "snippets/phase_banner_alpha.html" #}
+        <div class="govuk-c-phase-banner govuk-c-phase-banner--alpha">
+          <div class="govuk-c-phase-banner__content">
+            <strong class="govuk-c-phase-tag govuk-c-phase-tag--alpha">ALPHA</strong>
+            <span class="govuk-c-phase-banner__text">This is a new service – your <a href="#">feedback</a> will help us to improve it.</a>.</span>
+          </div>
+        </div>
       </div>
 
       <pre>
       <code class="language-markup">
-        {% include "snippets/phase_banner_alpha.html" %}
+        {# include "snippets/phase_banner_alpha.html" #}
+        <div class="govuk-c-phase-banner govuk-c-phase-banner--alpha">
+          <div class="govuk-c-phase-banner__content">
+            <strong class="govuk-c-phase-tag govuk-c-phase-tag--alpha">ALPHA</strong>
+            <span class="govuk-c-phase-banner__text">This is a new service – your <a href="#">feedback</a> will help us to improve it.</a>.</span>
+          </div>
+        </div>
       </code>
       </pre>
 
       <h3 class="govuk-heading-medium" id="beta-banner">Beta banner</h3>
       <div class="example">
-        {% include "snippets/phase_banner_beta.html" %}
+        {# include "snippets/phase_banner_beta.html" #}
+        <div class="govuk-c-phase-banner govuk-c-phase-banner--beta">
+          <div class="govuk-c-phase-banner__content">
+            <strong class="govuk-c-phase-tag govuk-c-phase-tag--alpha">BETA</strong>
+            <span class="govuk-c-phase-banner__text">This is a new service – your <a href="#">feedback</a> will help us to improve it.</a>.</span>
+          </div>
+        </div>
       </div>
 
       <pre>
       <code class="language-markup">
-        {% include "snippets/phase_banner_beta.html" %}
+        {# include "snippets/phase_banner_beta.html" #}
+        <div class="govuk-c-phase-banner govuk-c-phase-banner--beta">
+          <div class="govuk-c-phase-banner__content">
+            <strong class="govuk-c-phase-tag govuk-c-phase-tag--beta">BETA</strong>
+            <span class="govuk-c-phase-banner__text">This is a new service – your <a href="#">feedback</a> will help us to improve it.</a>.</span>
+          </div>
+        </div>
       </code>
       </pre>
 
