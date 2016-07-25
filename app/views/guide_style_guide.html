@@ -12,7 +12,7 @@
 
     <div class="govuk-o-column-one-quarter outdent-navigation">
 
-      <h2 class="heading-small">Layout</h2>
+      <h2 class="govuk-heading-small">Layout</h2>
       <ul class="list list-underline font-xsmall">
         <li><a href="#page-width">Page width</a></li>
         <li><a href="#screen-size">Screen size</a></li>
@@ -20,7 +20,7 @@
         <li><a href="#layout-grid-unit-proportions">Grid unit proportions</a></li>
       </ul>
 
-      <h2 class="heading-small">Typography</h2>
+      <h2 class="govuk-heading-small">Typography</h2>
       <ul class="list list-underline font-xsmall">
         <li><a href="#typography-font">Font</a></li>
         <li><a href="#typography-headings">Headings</a></li>
@@ -33,7 +33,7 @@
         <li><a href="#typography-hidden-text">Hidden text (progressive disclosure)</a></li>
       </ul>
 
-      <h2 class="heading-small">Colour</h2>
+      <h2 class="govuk-heading-small">Colour</h2>
       <ul class="list list-underline font-xsmall">
         <li><a href="#colour-contrast">Colour contrast</a></li>
         <li><a href="#colour-sass-variables">Sass variables</a></li>
@@ -43,20 +43,20 @@
         <li><a href="#examples">Examples</a></li>
       </ul>
 
-      <h2 class="heading-small">Icons and images</h2>
+      <h2 class="govuk-heading-small">Icons and images</h2>
       <ul class="list list-underline font-xsmall">
         <li><a href="#icons">Icons</a></li>
         <li><a href="#images">Images</a></li>
       </ul>
 
-      <h2 class="heading-small">Data</h2>
+      <h2 class="govuk-heading-small">Data</h2>
       <ul class="list list-underline font-xsmall">
         <li><a href="#data-table-numeric">Numeric tabular data</a></li>
         <li><a href="#data-in-a-table">Data in a table</a></li>
         <li><a href="#data-visualisation">Data visualisation</a></li>
       </ul>
 
-      <h2 class="heading-small">Buttons</h2>
+      <h2 class="govuk-heading-small">Buttons</h2>
       <ul class="list list-underline font-xsmall">
         <li><a href="#button-text">Button text</a></li>
         <li><a href="#button-start-now">Start now button</a></li>
@@ -65,7 +65,7 @@
         <li><a href="#creating-buttons">Creating buttons</a></li>
       </ul>
 
-      <h2 class="heading-small">Form elements</h2>
+      <h2 class="govuk-heading-small">Form elements</h2>
       <ul class="list list-underline font-xsmall">
         <li><a href="#form-optional-fields">Optional and mandatory fields</a></li>
         <li><a href="#form-labels">Labels</a></li>
@@ -80,14 +80,14 @@
         <li><a href="#form-toggle-content">Conditionally revealing content</a></li>
       </ul>
 
-      <h2 class="heading-small">Errors and validation</h2>
+      <h2 class="govuk-heading-small">Errors and validation</h2>
       <ul class="list list-underline font-xsmall">
         <li><a href="#one-question-per-page">Ask one question per page</a></li>
         <li><a href="#summarise-errors">Summarise errors</a></li>
         <li><a href="#highlight-errors">Highlight errors in forms</a></li>
       </ul>
 
-      <h2 class="heading-small">Alpha and beta banners</h2>
+      <h2 class="govuk-heading-small">Alpha and beta banners</h2>
       <ul class="list list-underline font-xsmall">
         <li><a href="#alpha-banner">Alpha banner</a></li>
         <li><a href="#beta-banner">Beta banner</a></li>
@@ -98,12 +98,12 @@
 
     <div class="govuk-o-layout-full">
 
-      <h1 class="heading-xlarge no-top-margin">
-        <span class="heading-secondary">GOV.UK elements</span>
+      <h1 class="govuk-heading-xlarge no-top-margin">
+        <span class="govuk-heading-secondary">GOV.UK elements</span>
         Front-end style guide
       </h1>
 
-      <h3 class="heading-medium" id="page-width">Page width</h3>
+      <h3 class="govuk-heading-medium" id="page-width">Page width</h3>
       <div class="text">
         <p>
           The default maximum page width is 1020px, but go wider if the content requires it.
@@ -116,7 +116,7 @@
         </p>
       </div>
 
-      <h3 class="heading-medium" id="screen-size">Screen size</h3>
+      <h3 class="govuk-heading-medium" id="screen-size">Screen size</h3>
       <div class="text">
         <p>
           Design for small screens first using a single column layout.
@@ -126,7 +126,7 @@
         </p>
       </div>
 
-      <h3 class="heading-medium" id="layout-spacing">Spacing</h3>
+      <h3 class="govuk-heading-medium" id="layout-spacing">Spacing</h3>
       <ul class="list list-bullet text">
         <li>spacing between elements is usually 5px, 10px, 15px or multiples of 15px</li>
         <li>gutters are 15px for smaller screens and 30px for larger screens</li>
@@ -136,13 +136,13 @@
         {% include "snippets/layout_spacing.html" %}
       </div>
 
-      <h3 class="heading-medium" id="layout-grid-unit-proportions">Grid unit proportions</h3>
+      <h3 class="govuk-heading-medium" id="layout-grid-unit-proportions">Grid unit proportions</h3>
       <ul class="list list-bullet text">
         <li>introduce columns as the content requires it – base column ratios on halves, thirds or quarters of the page width</li>
         <li>for screen breakpoints use media queries &ndash; find these in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_conditionals.scss">_conditionals.scss</a> file</li>
       </ul>
 
-      <h4 class="heading-medium">Halves</h4>
+      <h4 class="govuk-heading-medium">Halves</h4>
       <div class="example example-grid">
         {% include "snippets/layout_grid_halves.html" %}
       </div>
@@ -153,7 +153,7 @@
         </code>
       </pre>
 
-      <h4 class="heading-medium">Thirds</h4>
+      <h4 class="govuk-heading-medium">Thirds</h4>
       <div class="example example-grid">
         {% include "snippets/layout_grid_thirds.html" %}
       </div>
@@ -164,7 +164,7 @@
         </code>
       </pre>
 
-      <h4 class="heading-medium">Two thirds / One third</h4>
+      <h4 class="govuk-heading-medium">Two thirds / One third</h4>
       <div class="example example-grid">
         {% include "snippets/layout_grid_thirds_two_thirds_one_third.html" %}
       </div>
@@ -175,7 +175,7 @@
         </code>
       </pre>
 
-      <h4 class="heading-medium">One third / Two thirds</h4>
+      <h4 class="govuk-heading-medium">One third / Two thirds</h4>
       <div class="example example-grid">
         {% include "snippets/layout_grid_thirds_one_third_two_thirds.html" %}
       </div>
@@ -186,7 +186,7 @@
         </code>
       </pre>
 
-      <h4 class="heading-medium">Quarters</h4>
+      <h4 class="govuk-heading-medium">Quarters</h4>
       <div class="example example-grid">
         {% include "snippets/layout_grid_quarters.html" %}
       </div>
@@ -197,7 +197,7 @@
         </code>
       </pre>
 
-      <h3 class="heading-medium" id="typography-font">Font</h3>
+      <h3 class="govuk-heading-medium" id="typography-font">Font</h3>
       <div class="text">
         <p>
           Use the GDS Transport Website font in Light and Bold. It's licensed for use on the GOV.UK domains only.
@@ -207,7 +207,7 @@
         </p>
       </div>
 
-      <h3 class="heading-medium" id="typography-headings">
+      <h3 class="govuk-heading-medium" id="typography-headings">
         Headings
       </h3>
 
@@ -227,7 +227,7 @@
         </code>
       </pre>
 
-      <h3 class="heading-medium" id="typography-lead-paragraph">
+      <h3 class="govuk-heading-medium" id="typography-lead-paragraph">
         Lead paragraph
       </h3>
 
@@ -248,7 +248,7 @@
         </code>
       </pre>
 
-      <h3 class="heading-medium" id="typography-body-copy">
+      <h3 class="govuk-heading-medium" id="typography-body-copy">
         Body copy
       </h3>
 
@@ -272,7 +272,7 @@
         </code>
       </pre>
 
-      <h3 class="heading-medium" id="typography-links">Links</h3>
+      <h3 class="govuk-heading-medium" id="typography-links">Links</h3>
       <ul class="list list-bullet text">
         <li>links within body copy should be blue and underlined</li>
         <li>links without surrounding text should not have a full stop at the end</li>
@@ -291,7 +291,7 @@
         </code>
       </pre>
 
-      <h3 class="heading-medium" id="typography-lists">Lists</h3>
+      <h3 class="govuk-heading-medium" id="typography-lists">Lists</h3>
       <p class="text">
         List items start with a lowercase letter and have no full stop at the end.
       </p>
@@ -306,7 +306,7 @@
         </code>
       </pre>
 
-      <h3 class="heading-medium" id="typography-inset-text">Inset text</h3>
+      <h3 class="govuk-heading-medium" id="typography-inset-text">Inset text</h3>
       <p class="text">
         Use bordered inset text to draw attention to important content on the page.
       </p>
@@ -323,7 +323,7 @@
         </code>
       </pre>
 
-      <h3 class="heading-medium" id="typography-legal-text">Legal text</h3>
+      <h3 class="govuk-heading-medium" id="typography-legal-text">Legal text</h3>
       <p class="text">
         Use bold text with an exclamation icon if there are legal consequences - for example, a fine or prison sentence.
       </p>
@@ -340,7 +340,7 @@
         </code>
       </pre>
 
-      <h3 class="heading-medium" id="typography-hidden-text">Hidden text (progressive disclosure)</h3>
+      <h3 class="govuk-heading-medium" id="typography-hidden-text">Hidden text (progressive disclosure)</h3>
       <p class="text">
         Use this to make your page easier to scan,
         only showing contextual information when required.
@@ -372,12 +372,12 @@
         </p>
       </div>
 
-      <h3 class="heading-medium" id="colour-contrast">Colour contrast</h3>
+      <h3 class="govuk-heading-medium" id="colour-contrast">Colour contrast</h3>
       <p class="text">
         The colour contrast ratio for text and interactive elements should be at least 4.5:1 <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" rel="external">as recommended by the W3C</a>. Test your service to meet this standard.
       </p>
 
-      <h3 class="heading-medium"  id="colour-sass-variables">Sass variables</h3>
+      <h3 class="govuk-heading-medium"  id="colour-sass-variables">Sass variables</h3>
       <p class="text">
         Use Sass variables in case colour values need to be updated &ndash; find these in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss" rel="external">colours.scss</a> file.
       </p>
@@ -385,7 +385,7 @@
       <div class="example">
 
         <div class="swatch-wrapper">
-          <h4 class="heading-small">Text</h4>
+          <h4 class="govuk-heading-small">Text</h4>
 
           <div class="swatch swatch-text-colour"></div>
           <ul>
@@ -408,7 +408,7 @@
         </div>
 
         <div class="swatch-wrapper">
-          <h4 class="heading-small">Links</h4>
+          <h4 class="govuk-heading-small">Links</h4>
 
           <div class="swatch swatch-link-colour"></div>
           <ul>
@@ -430,7 +430,7 @@
         </div>
 
         <div class="swatch-wrapper">
-          <h4 class="heading-small">Backgrounds</h4>
+          <h4 class="govuk-heading-small">Backgrounds</h4>
 
           <div class="swatch swatch-border-colour"></div>
           <ul>
@@ -452,7 +452,7 @@
         </div>
 
         <div class="swatch-wrapper">
-          <h4 class="heading-small">Buttons</h4>
+          <h4 class="govuk-heading-small">Buttons</h4>
 
           <div class="swatch swatch-button-colour"></div>
           <ul>
@@ -468,7 +468,7 @@
         </div>
 
         <div class="swatch-wrapper">
-          <h4 class="heading-small">Focus</h4>
+          <h4 class="govuk-heading-small">Focus</h4>
           <div class="swatch swatch-yellow"></div>
           <ul>
             <li><b>#FFBF47</b></li>
@@ -478,7 +478,7 @@
 
       </div>
 
-      <h3 class="heading-medium" id="colour-status-colours">Status colours</h3>
+      <h3 class="govuk-heading-medium" id="colour-status-colours">Status colours</h3>
 
       <div class="example">
 
@@ -524,7 +524,7 @@
 
       </div>
 
-      <h3 class="heading-medium" id="colour-greyscale-palette">Greyscale palette</h3>
+      <h3 class="govuk-heading-medium" id="colour-greyscale-palette">Greyscale palette</h3>
       <div class="example">
 
         <div class="swatch-wrapper">
@@ -569,7 +569,7 @@
 
       </div>
 
-      <h3 class="heading-medium" id="colour-extended-palette">Extended palette</h3>
+      <h3 class="govuk-heading-medium" id="colour-extended-palette">Extended palette</h3>
       <ul class="list list-bullet text">
         <li>used for graphs and supporting material</li>
         <li>for tints of the extended palette use 50% or 25%</li>
@@ -580,7 +580,7 @@
       <div class="example">
 
         <div class="swatch-wrapper">
-          <h4 class="heading-small">Purple</h4>
+          <h4 class="govuk-heading-small">Purple</h4>
 
           <div class="swatch swatch-purple"></div>
           <ul>
@@ -588,7 +588,7 @@
             <li>$purple</li>
           </ul>
 
-          <h4 class="heading-small">Mauve</h4>
+          <h4 class="govuk-heading-small">Mauve</h4>
 
           <div class="swatch swatch-mauve"></div>
           <ul>
@@ -596,7 +596,7 @@
             <li>$mauve</li>
           </ul>
 
-          <h4 class="heading-small">Fuschia</h4>
+          <h4 class="govuk-heading-small">Fuschia</h4>
 
           <div class="swatch swatch-fuschia"></div>
           <ul>
@@ -606,7 +606,7 @@
         </div>
 
         <div class="swatch-wrapper">
-          <h4 class="heading-small">Pink</h4>
+          <h4 class="govuk-heading-small">Pink</h4>
 
           <div class="swatch swatch-pink"></div>
           <ul>
@@ -614,7 +614,7 @@
             <li>$pink</li>
           </ul>
 
-          <h4 class="heading-small">Baby pink</h4>
+          <h4 class="govuk-heading-small">Baby pink</h4>
 
           <div class="swatch swatch-baby-pink"></div>
           <ul>
@@ -622,7 +622,7 @@
             <li>$baby-pink</li>
           </ul>
 
-          <h4 class="heading-small">Red</h4>
+          <h4 class="govuk-heading-small">Red</h4>
 
           <div class="swatch swatch-red"></div>
           <ul>
@@ -632,7 +632,7 @@
         </div>
 
         <div class="swatch-wrapper">
-          <h4 class="heading-small">Mellow red</h4>
+          <h4 class="govuk-heading-small">Mellow red</h4>
 
           <div class="swatch swatch-mellow-red"></div>
           <ul>
@@ -640,7 +640,7 @@
             <li>$mellow-red</li>
           </ul>
 
-          <h4 class="heading-small">Orange</h4>
+          <h4 class="govuk-heading-small">Orange</h4>
 
           <div class="swatch swatch-orange"></div>
           <ul>
@@ -648,7 +648,7 @@
             <li>$orange</li>
           </ul>
 
-          <h4 class="heading-small">Brown</h4>
+          <h4 class="govuk-heading-small">Brown</h4>
 
           <div class="swatch swatch-brown"></div>
           <ul>
@@ -658,7 +658,7 @@
         </div>
 
         <div class="swatch-wrapper">
-          <h4 class="heading-small">Yellow</h4>
+          <h4 class="govuk-heading-small">Yellow</h4>
 
           <div class="swatch swatch-yellow"></div>
           <ul>
@@ -666,7 +666,7 @@
             <li>$yellow</li>
           </ul>
 
-          <h4 class="heading-small">Green</h4>
+          <h4 class="govuk-heading-small">Green</h4>
 
           <div class="swatch swatch-green"></div>
           <ul>
@@ -674,7 +674,7 @@
             <li>$green</li>
           </ul>
 
-          <h4 class="heading-small">Grass green</h4>
+          <h4 class="govuk-heading-small">Grass green</h4>
 
           <div class="swatch swatch-grass-green"></div>
           <ul>
@@ -684,7 +684,7 @@
         </div>
 
         <div class="swatch-wrapper">
-          <h4 class="heading-small">Turquoise</h4>
+          <h4 class="govuk-heading-small">Turquoise</h4>
 
           <div class="swatch swatch-turquoise"></div>
           <ul>
@@ -692,7 +692,7 @@
             <li>$turquoise</li>
           </ul>
 
-          <h4 class="heading-small">Light blue</h4>
+          <h4 class="govuk-heading-small">Light blue</h4>
 
           <div class="swatch swatch-light-blue"></div>
           <ul>
@@ -700,7 +700,7 @@
             <li>$light-blue</li>
           </ul>
 
-          <h4 class="heading-small">GOV.UK blue</h4>
+          <h4 class="govuk-heading-small">GOV.UK blue</h4>
 
           <div class="swatch swatch-govuk-blue"></div>
           <ul>
@@ -718,14 +718,14 @@
         </a>
       </p>
 
-      <h3 class="heading-medium" id="examples">Examples</h3>
-      <h4 class="heading-small">Transaction end page</h4>
+      <h3 class="govuk-heading-medium" id="examples">Examples</h3>
+      <h4 class="govuk-heading-small">Transaction end page</h4>
 
       <div class="example">
         <div class="grid-row">
           <div class="column-two-thirds">
 
-            <h1 class="heading-xlarge">
+            <h1 class="govuk-heading-xlarge">
               Example service name
             </h1>
 
@@ -735,7 +735,7 @@
               </h2>
               <p>
                 Your reference number is </br>
-                <strong class="heading-medium">HDJ2123F</strong>
+                <strong class="govuk-heading-medium">HDJ2123F</strong>
               </p>
             </div>
 
@@ -743,7 +743,7 @@
               We have sent you a confirmation email.
             </p>
 
-            <h2 class="heading-medium">
+            <h2 class="govuk-heading-medium">
               What happens next?
             </h2>
             <p>
@@ -757,7 +757,7 @@
         </div>
       </div>
 
-      <h3 class="heading-medium" id="icons">Icons</h3>
+      <h3 class="govuk-heading-medium" id="icons">Icons</h3>
       <ul class="list list-bullet text">
         <li>
           if icons are needed ensure they are clear, simple and accompanied by relevant text
@@ -771,7 +771,7 @@
         GOV.UK standard icons are provided, as well as organisation crests and media player icons &ndash; find these in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/tree/master/images" rel="external">images folder</a>.
       </p>
 
-      <h4 class="heading-small">Legal text</h4>
+      <h4 class="govuk-heading-small">Legal text</h4>
       <p class="text">
         Use bold text with an exclamation icon if there are legal consequences - for example, a fine or prison sentence.
       </p>
@@ -788,7 +788,7 @@
       </code>
       </pre>
 
-      <h3 class="heading-medium" id="images">Images</h3>
+      <h3 class="govuk-heading-medium" id="images">Images</h3>
       <p>
         If images are needed they should be landscape, 3:2 aspect ratio.
       </p>
@@ -804,12 +804,12 @@
         </div>
       </div>
 
-      <h3 class="heading-medium" id="examples">Examples</h3>
+      <h3 class="govuk-heading-medium" id="examples">Examples</h3>
       <ul class="list list-bullet">
         <li><a href="/icons-images/example-icons/">Example page: Icons in the GOV.UK frontend toolkit</a></li>
       </ul>
 
-      <h3 class="heading-medium" id="data-table-numeric">Numeric tabular data</h3>
+      <h3 class="govuk-heading-medium" id="data-table-numeric">Numeric tabular data</h3>
       <ul class="text list list-bullet">
         <li>when comparing rows of numbers, align numbers to the right in table cells</li>
         <li>use the GOV.UK frontend toolkit's <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/docs/mixins.md#tabular-numbers" rel="external">tabular numbers</a> to allow numbers of the same width to be more easily compared</li>
@@ -825,7 +825,7 @@
       </code>
       </pre>
 
-      <h3 class="heading-medium" id="data-in-a-table">Data in a table</h3>
+      <h3 class="govuk-heading-medium" id="data-in-a-table">Data in a table</h3>
       <p>
         Not all content in tables should be right aligned.
       </p>
@@ -846,7 +846,7 @@
         </a>
       </p>
 
-      <h3 class="heading-medium" id="data-visualisation">Data visualisation</h3>
+      <h3 class="govuk-heading-medium" id="data-visualisation">Data visualisation</h3>
       <ul class="list list-bullet text">
         <li>data is recommended as an alternative to using images</li>
         <li>for screen readers, ensure the data value appears first so it makes sense when read aloud</li>
@@ -894,7 +894,7 @@
         </div>
       </div>
 
-      <h3 class="heading-medium" id="examples">Examples</h3>
+      <h3 class="govuk-heading-medium" id="examples">Examples</h3>
       <ul class="list list-bullet">
         <li>
           <a href="https://www.gov.uk/pay-leave-for-parents/y/yes/2013-1-2/employee/employee/yes/yes/122.00-week/yes/yes/yes/122.00-week/yes" rel="external">
@@ -908,7 +908,7 @@
         </li>
       </ul>
 
-      <h3 class="heading-medium" id="button-text">Button text</h3>
+      <h3 class="govuk-heading-medium" id="button-text">Button text</h3>
       <p class="text">
         Button text should be short and describe the action the button performs.
       </p>
@@ -923,7 +923,7 @@
       </code>
       </pre>
 
-      <h3 class="heading-medium" id="button-start-now">Start now button</h3>
+      <h3 class="govuk-heading-medium" id="button-start-now">Start now button</h3>
       <p class="text">
         Launch your service with a Start now button.
       </p>
@@ -938,7 +938,7 @@
       </code>
       </pre>
 
-      <h3 class="heading-medium" id="button-alignment">Button alignment</h3>
+      <h3 class="govuk-heading-medium" id="button-alignment">Button alignment</h3>
       <p class="text">
         Align the primary action button to the left edge of your form, in the user's line of sight.
       </p>
@@ -957,7 +957,7 @@
 
       </div>
 
-      <h3 class="heading-medium" id="button-disabled">Disabled buttons</h3>
+      <h3 class="govuk-heading-medium" id="button-disabled">Disabled buttons</h3>
       <p>
         Disabled buttons should be set at 50% opacity.
       </p>
@@ -972,7 +972,7 @@
       </code>
       </pre>
 
-      <h3 class="heading-medium" id="creating-buttons">Creating buttons</h3>
+      <h3 class="govuk-heading-medium" id="creating-buttons">Creating buttons</h3>
       <p class="text">
         Use the GOV.UK Sass button mixin &ndash; find this in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/design-patterns/_buttons.scss" rel="external">buttons.scss</a> file.
       </p>
@@ -987,7 +987,7 @@
           <div class="column-one-third">
 
             <div class="swatch-wrapper">
-              <h4 class="heading-small">Button</h4>
+              <h4 class="govuk-heading-small">Button</h4>
               <div class="swatch swatch-button-colour"></div>
               <ul>
                 <li><b>#00823B</b></li>
@@ -999,7 +999,7 @@
           <div class="column-one-third">
 
             <div class="swatch-wrapper">
-              <h4 class="heading-small">Focus</h4>
+              <h4 class="govuk-heading-small">Focus</h4>
               <div class="swatch swatch-yellow"></div>
               <ul>
                 <li><b>#FFBF47</b></li>
@@ -1018,14 +1018,14 @@
         </a>
       </p>
 
-      <h3 class="heading-medium" id="form-optional-fields">Optional and mandatory fields</h3>
+      <h3 class="govuk-heading-medium" id="form-optional-fields">Optional and mandatory fields</h3>
       <ul class="text list list-bullet">
         <li>only ask for the information you absolutely need</li>
         <li>if you do ask for optional information, mark the labels of optional fields with '(optional)'</li>
         <li>don't mark mandatory fields with asterisks</li>
       </ul>
 
-      <h3 class="heading-medium" id="form-labels">Labels</h3>
+      <h3 class="govuk-heading-medium" id="form-labels">Labels</h3>
       <ul class="text list list-bullet">
         <li>all form fields should be given labels</li>
         <li>don't hide labels, unless the surrounding context makes them unnecessary</li>
@@ -1044,7 +1044,7 @@
       </code>
       </pre>
 
-      <h3 class="heading-medium" id="form-fields">Form fields</h3>
+      <h3 class="govuk-heading-medium" id="form-fields">Form fields</h3>
       <div class="text">
         <p>
           Make field widths proportional to the input they take.
@@ -1063,7 +1063,7 @@
         </a>
       </p>
 
-      <h3 class="heading-medium" id="form-focus-states">Form focus states</h3>
+      <h3 class="govuk-heading-medium" id="form-focus-states">Form focus states</h3>
       <div class="text">
         <p>
           All elements use the yellow focus style as a highlight, as either a fill or 3px outline.
@@ -1077,7 +1077,7 @@
         {% include "snippets/form_focus.html" %}
       </div>
 
-      <h3 class="heading-medium"  id="form-hint-text">Hint text</h3>
+      <h3 class="govuk-heading-medium"  id="form-hint-text">Hint text</h3>
       <ul class="list list-bullet text">
         <li>don't use placeholder text in form fields, as this will disappear once content is entered into the form field</li>
         <li>use hint text for supporting contextual help, this will always be shown</li>
@@ -1095,7 +1095,7 @@
       </code>
       </pre>
 
-      <h3 class="heading-medium" id="form-spacing">Spacing between form elements</h3>
+      <h3 class="govuk-heading-medium" id="form-spacing">Spacing between form elements</h3>
       <p class="text">
         Ensure there is sufficient spacing between form elements.
       </p>
@@ -1110,12 +1110,12 @@
       </code>
       </pre>
 
-      <h3 class="heading-medium" id="form-fieldsets">Fieldsets and legends</h3>
+      <h3 class="govuk-heading-medium" id="form-fieldsets">Fieldsets and legends</h3>
       <p class="text">
         Use fieldsets to group related form controls. The first element inside a fieldset must be a <code class="code">legend</code> element which describes the group.
       </p>
 
-      <h3 class="heading-medium" id="form-select-boxes">Select boxes</h3>
+      <h3 class="govuk-heading-medium" id="form-select-boxes">Select boxes</h3>
       <p class="text">
         Avoid using select boxes (drop-down lists) - use radio buttons or checkboxes instead.
       </p>
@@ -1126,14 +1126,14 @@
         </a>
       </p>
 
-      <h3 class="heading-medium" id="form-radio-buttons">Radio buttons</h3>
+      <h3 class="govuk-heading-medium" id="form-radio-buttons">Radio buttons</h3>
       <ul class="list list-bullet text">
         <li>use these to let users choose a single option from a list</li>
         <li>for more than two options, radio buttons should be stacked</li>
         <li>radio buttons with large hit areas are easier to select with a mouse or touch devices</li>
       </ul>
 
-      <h4 class="heading-small">Inline radio buttons</h4>
+      <h4 class="govuk-heading-small">Inline radio buttons</h4>
       <div class="example">
         <form>
           {% include "snippets/form_radio_buttons_inline.html" %}
@@ -1146,7 +1146,7 @@
       </code>
       </pre>
 
-      <h4 class="heading-small">Stacked radio buttons</h4>
+      <h4 class="govuk-heading-small">Stacked radio buttons</h4>
       <div class="example">
         <form>
           {% include "snippets/form_radio_buttons.html" %}
@@ -1159,13 +1159,13 @@
       </code>
       </pre>
 
-      <h3 class="heading-medium" id="form-checkboxes">Checkboxes</h3>
+      <h3 class="govuk-heading-medium" id="form-checkboxes">Checkboxes</h3>
       <ul class="list list-bullet text">
         <li>use these to select either on/off toggles or multiple selections</li>
         <li>make it clear with words when users can select one or multiple options</li>
       </ul>
 
-      <h4 class="heading-small">Stacked checkboxes</h4>
+      <h4 class="govuk-heading-small">Stacked checkboxes</h4>
       <div class="example">
         <form>
           {% include "snippets/form_checkboxes.html" %}
@@ -1178,7 +1178,7 @@
       </code>
       </pre>
 
-      <h4 class="heading-small">Inline checkboxes</h4>
+      <h4 class="govuk-heading-small">Inline checkboxes</h4>
       <ul class="list list-bullet text">
         <li>large hit areas aren't always appropriate</li>
         <li>only pre-select options if there's a strong, user-centred reason to</li>
@@ -1202,7 +1202,7 @@
         </a>
       </p>
 
-      <h3 class="heading-medium" id="form-toggle-content">
+      <h3 class="govuk-heading-medium" id="form-toggle-content">
         Conditionally revealing content
       </h3>
       <ul class="list list-bullet text">
@@ -1210,7 +1210,7 @@
         <li>a left border is used to emphasise this supporting information</li>
       </ul>
 
-      <h4 class="heading-small" id="form-toggle-content-radios">
+      <h4 class="govuk-heading-small" id="form-toggle-content-radios">
         Radio buttons
       </h4>
       <div class="text">
@@ -1251,7 +1251,7 @@
          In the code snippet above, the <code class="language-markup">data-target=""</code> attribute is present on every label, as each option reveals an extra field.
       </p>
 
-      <h4 class="heading-small" id="form-toggle-content-checkboxes">
+      <h4 class="govuk-heading-small" id="form-toggle-content-checkboxes">
         Checkboxes
       </h4>
       <p>
@@ -1275,14 +1275,14 @@
         </a>
       </p>
 
-      <h3 class="heading-medium" id="examples">Examples</h3>
+      <h3 class="govuk-heading-medium" id="examples">Examples</h3>
       <ul class="list list-bullet">
         <li><a href="/form-elements/example-form-elements/">form elements</a></li>
         <li><a href="/form-elements/example-date/">date pattern</a></li>
         <li><a href="/form-elements/example-radios-checkboxes/">radio buttons and checkboxes</a></li>
       </ul>
 
-      <h3 class="heading-medium" id="one-question-per-page">Ask one question per page</h3>
+      <h3 class="govuk-heading-medium" id="one-question-per-page">Ask one question per page</h3>
       <div class="text">
         <p>
           Recovering from errors can be hard for users, especially if a page contains multiple errors.
@@ -1292,7 +1292,7 @@
         </p>
       </div>
 
-      <h3 class="heading-medium" id="summarise-errors">
+      <h3 class="govuk-heading-medium" id="summarise-errors">
         Summarise errors at the top of the page
       </h3>
 
@@ -1306,7 +1306,7 @@
         <li>link to each of the problematic questions</li>
       </ul>
 
-      <h4 class="heading-small">Error message and summary box</h4>
+      <h4 class="govuk-heading-small">Error message and summary box</h4>
       <div class="example example-error">
         {% include "snippets/form_error_radio_show_errors.html" %}
       </div>
@@ -1318,12 +1318,12 @@
       </pre>
 
       <div class="panel panel-border-narrow">
-        <h3 class="heading-small">
+        <h3 class="govuk-heading-small">
           The error summary must appear at the top of the page, so it is visible when the page is refreshed and is immediately read out by assistive technology.
         </h3>
       </div>
 
-      <h3 class="heading-medium" id="highlight-errors">Highlight errors in forms</h3>
+      <h3 class="govuk-heading-medium" id="highlight-errors">Highlight errors in forms</h3>
 
       <p class="lead-in">
         For each error:
@@ -1351,7 +1351,7 @@
       </code>
       </pre>
 
-      <h3 class="heading-medium" id="examples">Examples</h3>
+      <h3 class="govuk-heading-medium" id="examples">Examples</h3>
       <ul class="list list-bullet">
         <li>
           <a href="/errors/example-form-validation-single-question-radio">
@@ -1365,7 +1365,7 @@
         </li>
       </ul>
 
-      <h3 class="heading-medium" id="alpha-banner">Alpha banner</h3>
+      <h3 class="govuk-heading-medium" id="alpha-banner">Alpha banner</h3>
       <div class="example">
         {% include "snippets/phase_banner_alpha.html" %}
       </div>
@@ -1376,7 +1376,7 @@
       </code>
       </pre>
 
-      <h3 class="heading-medium" id="beta-banner">Beta banner</h3>
+      <h3 class="govuk-heading-medium" id="beta-banner">Beta banner</h3>
       <div class="example">
         {% include "snippets/phase_banner_beta.html" %}
       </div>
@@ -1387,7 +1387,7 @@
       </code>
       </pre>
 
-      <h3 class="heading-medium" id="creating-phase-banners">Creating alpha and beta banners</h3>
+      <h3 class="govuk-heading-medium" id="creating-phase-banners">Creating alpha and beta banners</h3>
       <p class="text">
         Use the GOV.UK Sass phase banner mixin &ndash; find this in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/design-patterns/_alpha-beta.scss">alpha-beta.scss</a> file.
       </p>
