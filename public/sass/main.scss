@@ -1,1 +1,81 @@
-@import "govuk-elements";
+// @import "govuk-elements";
+
+// This is a test to see if this works.
+// This is copied (for now) from node_modules/prototype-scss-refactor
+
+// Settings - variables
+@import "settings/global";
+@import "settings/colours";
+@import "settings/colours-organisation";
+
+// Tools - functions and mixins
+@import "tools/clearfix";
+@import "tools/conditionals";
+@import "tools/css3";
+@import "tools/device-pixels";
+@import "tools/inline-block";
+@import "tools/print";
+@import "tools/pxtoem";
+@import "tools/typography";
+@import "tools/url-helpers";
+
+// Generic - Reset
+@import "generic/normalize";
+@import "generic/reset";
+// Should the print stylesheet sit here?
+@import "generic/print";
+
+// Unclassed HTML elements (not to be confused with GOV.UK elements)
+@import "elements/page";
+@import "elements/typography";
+@import "elements/form-elements";
+@import "elements/links";
+@import "elements/lists";
+@import "elements/tables";
+
+// Objects
+@import "objects/wrapper";
+@import "objects/grid-layout";
+
+// Components
+// It should be possible to reorder these without affecting the appearance of any components
+
+@import "components/box";
+@import "components/breadcrumb";
+@import "components/buttons";
+@import "components/details";
+@import "components/external-links";
+@import "components/form-element";
+@import "components/form-custom";
+@import "components/form-date";
+@import "components/form-validation";
+@import "components/global-header";
+@import "components/global-footer";
+@import "components/icons";
+@import "components/lists";
+@import "components/media-player";
+@import "components/message-bar";
+@import "components/notice";
+@import "components/panel";
+@import "components/phase-banner";
+@import "components/phase-tag";
+@import "components/tables";
+@import "components/typography";
+
+// Add a scope layer
+// This can be used for cms content (e.g. govuk-govspeak)
+// @import "scope/govspeak"
+
+// Hacks and fixes
+@import "trumps/shame";
+
+// Overrides, helpers and utilities
+@import "trumps/helpers";
+
+@import "trumps/shame";
+
+@import "trumps/utility-clearfix";
+@import "trumps/utility-inline-block";
+@import "trumps/utility-vertical-spacing";
+@import "trumps/utility-visually-hidden";
+@import "trumps/utility-widths";
