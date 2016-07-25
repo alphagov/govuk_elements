@@ -1,0 +1,93 @@
+// Style guide - Example boxes
+// ==========================================================================
+
+.example {
+  @include clearfix;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid $grey-2;
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
+
+  padding-top: $gutter;
+  padding-right: $gutter-half;
+  padding-bottom: $gutter-half;
+  padding-left: $gutter-half;
+
+  @include media(tablet) {
+    padding-top: $gutter*1.5;
+    padding-right: $gutter;
+    padding-bottom: $gutter;
+    padding-left: $gutter;
+  }
+
+  &:before {
+    content: "EXAMPLE";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding: em(4) em(15) em(4) em(15);
+
+    @include core-14;
+    background: $grey-2;
+    color: white;
+  }
+
+  // Blue text for heading sizes
+  .highlight {
+    font-style: normal;
+    color: $hm-government;
+  }
+
+  // Lists (reset this to elements default)
+  .list-bullet {
+    margin-bottom: 20px;
+  }
+
+  // Fix grid layout within example boxes for IE7 and below
+  // where box-sizing isn't supported: http://caniuse.com/#search=box-sizing
+  @mixin example-box-column($width) {
+    width: (($site-width - $gutter) * $width) - $gutter;
+  }
+
+  @include ie-lte(7){
+
+    // Set example box width to 900px (removing left and right padding)
+    $example-box-width: $site-width - ($gutter * 2);
+    width: $example-box-width;
+
+    // Recalculate grid column widths
+    .column-quarter {
+      @include example-box-column( 1/4 );
+    }
+    .column-half {
+      @include example-box-column( 1/2 );
+    }
+    .column-third {
+      @include example-box-column( 1/3 );
+    }
+    .column-two-thirds {
+      @include example-box-column( 2/3 );
+    }
+
+    // Scale images to fit grid columns
+    img {
+      width: 100%;
+    }
+  }
+
+  &__grid-item {
+    width: 100%;
+    background: file-url("examples/grid.png") 0 0 repeat;
+    margin-bottom: 0;
+    height: 30px;
+    @include media(tablet) {
+      height: 60px;
+    }
+    overflow: hidden;
+    text-indent: -999em;
+  }
+
+}

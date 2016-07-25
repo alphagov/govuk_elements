@@ -1,0 +1,170 @@
+// Colour swatches
+.swatch {
+  width: 60px;
+  height: 60px;
+  @include border-radius(100%);
+  @include media(mobile) {
+    clear: both;
+    float: left;
+    margin-right: $gutter-half;
+    margin-bottom: $gutter-half;
+  }
+  @include media(tablet) {
+    margin: 0 auto $gutter-half auto;
+  }
+}
+
+// Sass list for colour palette
+$palette: (
+  ("purple", $purple),
+  ("mauve", $mauve),
+  ("fuschia", $fuschia),
+  ("pink", $pink),
+  ("baby-pink", $baby-pink),
+  ("red", $red),
+  ("mellow-red", $mellow-red),
+  ("orange", $orange),
+  ("brown", $brown),
+  ("yellow", $yellow),
+  ("green", $green),
+  ("grass-green", $grass-green),
+  ("turquoise", $turquoise),
+  ("light-blue", $light-blue),
+  ("govuk-blue", $govuk-blue)
+);
+
+@mixin color-swatches {
+  @each $color in $palette {
+    $color-name: nth($color, 1);
+    $color-var: nth($color, 2);
+    .swatch-#{$color-name} {
+      background-color: $color-var;
+    }
+  }
+}
+
+// Generate swatch classes for each colour in palette list
+@include color-swatches;
+
+.swatch-alpha {
+  background-color: $alpha-colour;
+}
+
+.swatch-beta {
+  background-color: $beta-colour;
+}
+
+.swatch-discovery {
+  background-color: $discovery-colour;
+}
+
+.swatch-live {
+  background-color: $live-colour;
+}
+
+.swatch-error {
+  background-color: $error-colour;
+}
+
+.swatch-focus {
+  background-color: $focus-colour;
+}
+
+.swatch-button-colour {
+  background-color: $button-colour;
+}
+
+.swatch-black {
+  background-color: $black;
+}
+
+.swatch-grey-1 {
+  background-color: $grey-1;
+}
+
+.swatch-grey-2 {
+  background-color: $grey-2;
+}
+
+.swatch-grey-3 {
+  background-color: $grey-3;
+}
+
+.swatch-grey-4 {
+  background-color: $grey-4;
+}
+
+.swatch-white {
+  background-color: $white;
+  border: 1px solid $grey-3;
+}
+
+.swatch-text-colour {
+  background-color: $text-colour;
+}
+
+.swatch-text-secondary {
+  background-color: $secondary-text-colour;
+}
+
+.swatch-page-colour {
+  background-color: $page-colour;
+  border: 1px solid $grey-3;
+}
+
+.swatch-button-colour {
+  background-color: $button-colour;
+}
+
+.swatch-link-colour {
+ background-color: $link-colour;
+}
+
+.swatch-link-colour-visited {
+ background-color: $link-visited-colour;
+}
+
+.swatch-link-colour-hover {
+ background-color: $link-hover-colour;
+}
+
+.swatch-border-colour {
+  background-color: $border-colour;
+}
+
+.swatch-panel-colour {
+  background-color: $panel-colour;
+}
+
+.swatch-highlight-colour {
+  background-color: $highlight-colour;
+}
+
+// Colour swatch layout
+.swatch-wrapper {
+  @include media(tablet) {
+    float: left;
+    width: 20%;
+    text-align: center;
+  }
+
+  .heading-small {
+    margin-bottom: em(10);
+  }
+
+  ul {
+    list-style-type: none;
+    padding-bottom: $gutter-half;
+    @include media(mobile) {
+      min-height: 50px;
+      padding-top: 10px;
+    }
+  }
+  li {
+    @include core-16;
+  }
+  b {
+  font-weight: bold;
+  text-transform: uppercase;
+  }
+}

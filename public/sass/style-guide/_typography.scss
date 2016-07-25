@@ -1,0 +1,14 @@
+// Heading variants
+
+// Increase spacing above headings
+.heading-xlarge {
+  @include media(tablet) {
+    margin-top: em(60, 48);
+    margin-bottom: em(30, 48);
+  }
+}
+
+// Reduce top and bottom margins
+.heading-medium {
+  margin: 1em 0 0 0;
+}

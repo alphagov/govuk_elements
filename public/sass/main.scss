@@ -79,3 +79,14 @@
 @import "trumps/utility-vertical-spacing";
 @import "trumps/utility-visually-hidden";
 @import "trumps/utility-widths";
+
+
+// Import the styles for the style guide page
+// Unless you're creating a style guide which looks like GOV.UK elements, you won't need these
+
+@import "style-guide/colour-swatch";
+@import "style-guide/example";
+@import "style-guide/layout";
+@import "style-guide/lists";
+@import "style-guide/make-these-utility-classes";
+@import "style-guide/typography";
