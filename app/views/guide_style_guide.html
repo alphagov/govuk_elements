@@ -12,7 +12,25 @@
     </div>
   </div>
 
-  {% include "includes/breadcrumb.html" %}
+  <div class="govuk-c-breadcrumb">
+    <ol class="govuk-c-breadcrumb__list">
+      <li class="govuk-c-breadcrumb__list-item govuk-c-breadcrumb__list-item--first">
+        <a class="govuk-c-breadcrumb__link" ref="/">
+        GOV.UK elements
+        </a>
+      </li>
+      {% if section %}
+      <li class="govuk-c-breadcrumb__list-item">
+        <a class="govuk-c-breadcrumb__link" href="/{{ section }}/">
+        {% if section_name %} {{ section_name }} {% endif %}
+        </a>
+      </li>
+      {% endif %}
+      {% if page_name %}
+      <li class="govuk-c-breadcrumb__list-item">{{ page_name }}</li>
+      {% endif %}
+    </ol>
+  </div>
 
   <div class="govuk-o-grid-row">
 
