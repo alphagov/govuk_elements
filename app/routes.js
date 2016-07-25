@@ -10,6 +10,11 @@ module.exports = {
       res.redirect('/');
     });
 
+    app.get('/style-guide', function (req, res) {
+      var page_name = "Front-end style guide";
+      res.render('guide_style_guide', { 'page_name' : page_name });
+    });
+
     // Layout
     app.get('/layout', function (req, res) {
       var page_name = "Layout";

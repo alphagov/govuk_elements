@@ -17,6 +17,12 @@
   }
 }
 
+.outdent-navigation {
+  @include media(tablet) {
+    margin-left: -25%;
+  }
+}
+
 // Increase spacing above headings
 .heading-xlarge {
   @include media(tablet) {
@@ -44,6 +50,22 @@
   margin-bottom: ($gutter*1.5);
 }
 
+.list-underline {
+  border-top: 1px solid #bfc1c3;
+}
+
+.list-underline li {
+  border-bottom: 1px solid #bfc1c3;
+  padding: 2px 0 3px 0;
+}
+
+.list-underline a {
+  text-decoration: none;
+}
+
+.no-top-margin {
+  margin-top: 0;
+}
 
 // Example boxes
 // ==========================================================================

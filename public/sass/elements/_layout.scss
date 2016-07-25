@@ -60,3 +60,7 @@
 .column-two-thirds {
   @include grid-column(2 / 3);
 }
+
+.column-full {
+  @include grid-column(1);
+}
