@@ -14,8 +14,9 @@ module.exports = function (grunt) {
         },
         options: {
           includePaths: [
-            'govuk_modules/govuk_template/assets/stylesheets',
-            'govuk_modules/govuk_frontend_toolkit/stylesheets'
+            'node_modules/prototype-scss-refactor'
+            //'govuk_modules/govuk_template/assets/stylesheets',
+            //'govuk_modules/govuk_frontend_toolkit/stylesheets'
           ],
           outputStyle: 'expanded',
           imagePath: '../images'
