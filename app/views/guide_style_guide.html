@@ -1112,10 +1112,10 @@
 
       <div class="example">
         {# include "snippets/data_table.html" #}
-        <table>
+        <table class="govuk-c-table">
           <thead>
             <tr>
-              <th colspan="2">Dates and amounts</th>
+              <th class="govuk-c-table__header" colspan="2">Dates and amounts</th>
             </tr>
           </thead>
           <tbody>
@@ -1142,6 +1142,31 @@
       <pre>
         <code class="language-markup">
           {# include "snippets/data_table.html" #}
+          <table class="govuk-c-table">
+            <thead>
+              <tr>
+                <th class="govuk-c-table__header" colspan="2">Dates and amounts</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>First 6 weeks</td>
+                <td>£109.80 per week</td>
+              </tr>
+              <tr>
+                <td>Next 33 weeks</td>
+                <td>£109.80 per week</td>
+              </tr>
+              <tr>
+               <td>Total estimated pay</td>
+                <td>£4,282.20</td>
+              </tr>
+              <tr>
+                <td>Tell the mother’s employer</td>
+                <td>28 days before they want to start maternity pay</td>
+              </tr>
+            </tbody>
+          </table>
         </code>
       </pre>
 
@@ -1157,34 +1182,60 @@
           <thead>
             <tr>
               <th scope="col">Date</th>
-              <th class="numeric" scope="col">Paper form</th>
-              <th class="numeric" scope="col">Digital</th>
+              <th class="govuk-c-table__header--numeric" scope="col">Paper form</th>
+              <th class="govuk-c-table__header--numeric" scope="col">Digital</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>25 November to 1 December 2013</td>
-              <td class="numeric">2,763</td>
-              <td class="numeric">1,792</td>
+              <td class="govuk-c-table__header--numeric">2,763</td>
+              <td class="govuk-c-table__header--numeric">1,792</td>
             </tr>
             <tr>
               <td>2 to 8 December 2013</td>
-              <td class="numeric">2,850</td>
-              <td class="numeric">1,740</td>
+              <td class="govuk-c-table__header--numeric">2,850</td>
+              <td class="govuk-c-table__header--numeric">1,740</td>
             </tr>
             <tr>
              <td>9 to 15 December 2013</td>
-              <td class="numeric">2,388</td>
-              <td class="numeric">1,683</td>
+              <td class="govuk-c-table__header--numeric">2,388</td>
+              <td class="govuk-c-table__header--numeric">1,683</td>
             </tr>
           </tbody>
         </table>
       </div>
 
       <pre>
-      <code class="language-markup">
-        {# include "snippets/data_table_numeric.html" #}
-      </code>
+        <code class="language-markup">
+          {# include "snippets/data_table_numeric.html" #}
+          <table class="govuk-c-table">
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th class="govuk-c-table__header--numeric" scope="col">Paper form</th>
+                <th class="govuk-c-table__header--numeric" scope="col">Digital</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>25 November to 1 December 2013</td>
+                <td class="govuk-c-table__cell--numeric">2,763</td>
+                <td class="govuk-c-table__cell--numeric">1,792</td>
+              </tr>
+              <tr>
+                <td>2 to 8 December 2013</td>
+                <td class="govuk-c-table__cell--numeric">2,850</td>
+                <td class="govuk-c-table__cell--numeric">1,740</td>
+              </tr>
+              <tr>
+               <td>9 to 15 December 2013</td>
+                <td class="govuk-c-table__cell--numeric">2,388</td>
+                <td class="govuk-c-table__cell--numeric">1,683</td>
+              </tr>
+            </tbody>
+          </table>
+        </code>
       </pre>
 
       <p>
