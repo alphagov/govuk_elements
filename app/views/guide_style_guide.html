@@ -512,20 +512,56 @@
         </code>
       </pre>
 
-      <h3 class="govuk-u-heading-medium" id="typography-inset-text">Inset text</h3>
+      <h3 class="govuk-u-heading-medium" id="typography-inset-text">Panels (Inset text)</h3>
       <p class="text">
         Use bordered inset text to draw attention to important content on the page.
       </p>
 
       <div class="example">
         <div class="text">
-          {% include "snippets/typography_inset_text.html" %}
+          {# include "snippets/typography_inset_text.html" #}
+          <div class="govuk-c-panel govuk-c-panel--border-wide">
+            <p>
+              It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
+            </p>
+          </div>
         </div>
       </div>
 
       <pre>
         <code class="language-markup">
-          {% include "snippets/typography_inset_text.html" %}
+          {# include "snippets/typography_inset_text.html" #}
+          <div class="govuk-c-panel govuk-c-panel--border-wide">
+            <p>
+              It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
+            </p>
+          </div>
+        </code>
+      </pre>
+
+      <p class="text">
+        Use narrow bordered text too to show the left edge of "toggled" content.
+      </p>
+
+      <div class="example">
+        <div class="text">
+          {# include "snippets/typography_inset_text.html" #}
+          <div class="govuk-c-panel govuk-c-panel--border-narrow">
+            <p>
+              Inset text in here.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <pre>
+        <code class="language-markup">
+          {# include "snippets/typography_inset_text.html" #}
+          <div class="govuk-c-panel govuk-c-panel--border-wide">
+            <p>
+              Inset text in here.
+            </p>
+          </div>
         </code>
       </pre>
 
