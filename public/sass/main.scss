@@ -26,12 +26,13 @@
 // @import "generic/print";
 
 // Unclassed HTML elements (not to be confused with GOV.UK elements)
-@import "elements/page";
-@import "elements/typography";
-@import "elements/form-elements";
-@import "elements/links";
-@import "elements/lists";
-@import "elements/tables";
+// Let's rename this folder to /base for now
+@import "base/page";
+@import "base/typography";
+@import "base/form-elements";
+@import "base/links";
+@import "base/lists";
+@import "base/tables";
 
 // Objects
 @import "objects/wrapper";
