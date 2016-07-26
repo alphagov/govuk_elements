@@ -75,8 +75,8 @@
 
       <h2 class="govuk-u-heading-small">Data</h2>
       <ul class="govuk-c-list govuk-c-list--underline">
-        <li class="govuk-c-list__item"><a href="#data-table-numeric">Numeric tabular data</a></li>
         <li class="govuk-c-list__item"><a href="#data-in-a-table">Data in a table</a></li>
+        <li class="govuk-c-list__item"><a href="#data-table-numeric">Numeric tabular data</a></li>
         <li class="govuk-c-list__item"><a href="#data-visualisation">Data visualisation</a></li>
       </ul>
 
@@ -1105,51 +1105,9 @@
         <li class="govuk-c-list__item"><a href="/icons-images/example-icons/">Example page: Icons in the GOV.UK frontend toolkit</a></li>
       </ul>
 
-      <h3 class="govuk-u-heading-medium" id="data-table-numeric">Numeric tabular data</h3>
-      <ul class="text govuk-c-list govuk-c-list--bullet">
-        <li class="govuk-c-list__item">when comparing rows of numbers, align numbers to the right in table cells</li>
-        <li class="govuk-c-list__item">use the GOV.UK frontend toolkit's <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/docs/mixins.md#tabular-numbers" rel="external">tabular numbers</a> to allow numbers of the same width to be more easily compared</li>
-      </ul>
-
-      <div class="example">
-        {# include "snippets/data_table_numeric.html" #}
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">Date</th>
-              <th class="numeric" scope="col">Paper form</th>
-              <th class="numeric" scope="col">Digital</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>25 November to 1 December 2013</td>
-              <td class="numeric">2,763</td>
-              <td class="numeric">1,792</td>
-            </tr>
-            <tr>
-              <td>2 to 8 December 2013</td>
-              <td class="numeric">2,850</td>
-              <td class="numeric">1,740</td>
-            </tr>
-            <tr>
-             <td>9 to 15 December 2013</td>
-              <td class="numeric">2,388</td>
-              <td class="numeric">1,683</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <pre>
-      <code class="language-markup">
-        {# include "snippets/data_table_numeric.html" #}
-      </code>
-      </pre>
-
       <h3 class="govuk-u-heading-medium" id="data-in-a-table">Data in a table</h3>
       <p>
-        Not all content in tables should be right aligned.
+        Align table content to the left, unless the table cell contains numbers - then align the cells to the right to make them easier to scan.
       </p>
 
       <div class="example">
@@ -1182,8 +1140,50 @@
       </div>
 
       <pre>
+        <code class="language-markup">
+          {# include "snippets/data_table.html" #}
+        </code>
+      </pre>
+
+      <h3 class="govuk-u-heading-medium" id="data-table-numeric">Numeric tabular data</h3>
+      <ul class="text govuk-c-list govuk-c-list--bullet">
+        <li class="govuk-c-list__item">when comparing rows of numbers, align numbers to the right in table cells</li>
+        <li class="govuk-c-list__item">use the GOV.UK frontend toolkit's <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/docs/mixins.md#tabular-numbers" rel="external">tabular numbers</a> to allow numbers of the same width to be more easily compared</li>
+      </ul>
+
+      <div class="example">
+        {# include "snippets/data_table_numeric.html" #}
+        <table class="govuk-c-table">
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th class="numeric" scope="col">Paper form</th>
+              <th class="numeric" scope="col">Digital</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>25 November to 1 December 2013</td>
+              <td class="numeric">2,763</td>
+              <td class="numeric">1,792</td>
+            </tr>
+            <tr>
+              <td>2 to 8 December 2013</td>
+              <td class="numeric">2,850</td>
+              <td class="numeric">1,740</td>
+            </tr>
+            <tr>
+             <td>9 to 15 December 2013</td>
+              <td class="numeric">2,388</td>
+              <td class="numeric">1,683</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <pre>
       <code class="language-markup">
-        {# include "snippets/data_table.html" #}
+        {# include "snippets/data_table_numeric.html" #}
       </code>
       </pre>
 
