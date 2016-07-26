@@ -66,20 +66,19 @@
 // This can be used for cms content (e.g. govuk-govspeak)
 // @import "scope/govspeak"
 
-// Hacks and fixes
 // I can't have a layer called "Trumps". Sorry, not sorry.
-@import "utilities/shame";
-
 // Overrides, helpers and utilities
-@import "utilities/helpers";
-
-@import "utilities/shame";
-
 @import "utilities/clearfix";
+@import "utilities/headings";
+@import "utilities/helpers";
 @import "utilities/inline-block";
+@import "utilities/text";
 @import "utilities/vertical-spacing";
 @import "utilities/visually-hidden";
 @import "utilities/widths";
+
+// Hacks and fixes
+@import "utilities/shame";
 
 
 // Import the styles for the style guide page
