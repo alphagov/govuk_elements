@@ -32,7 +32,7 @@
     </ol>
   </div>
 
-  <div class="govuk-o-grid-row">
+  <div class="govuk-o-govuk-o-grid-row">
 
     <div class="govuk-o-grid-item govuk-u-one-quarter outdent-navigation">
 
@@ -158,7 +158,7 @@
 
       <div class="example example-images">
         {# include "snippets/layout_spacing.html" #}
-        <div class="govuk-o-grid-row">
+        <div class="govuk-o-govuk-o-grid-row">
           <div class="govuk-o-grid-item govuk-u-one-half">
             <img src="/public/images/examples/15px-gutter-example.png" alt="15px gutter example">
           </div>
@@ -177,7 +177,7 @@
       <h4 class="govuk-u-heading-medium">Halves</h4>
       <div class="example">
         {# include "snippets/layout_grid_halves.html" #}
-        <div class="govuk-o-grid-row">
+        <div class="govuk-o-govuk-o-grid-row">
           <div class="govuk-o-grid-item govuk-u-one-half">
             <p class="example__grid-background">Content</p>
           </div>
@@ -190,7 +190,7 @@
       <pre>
         <code class="language-markup">
           {# include "snippets/layout_grid_halves.html #}
-          <div class="govuk-o-grid-row">
+          <div class="govuk-o-govuk-o-grid-row">
             <div class="govuk-o-grid-item govuk-u-one-half">
               <p>Content</p>
             </div>
@@ -204,7 +204,7 @@
       <h4 class="govuk-u-heading-medium">Thirds</h4>
       <div class="example example-grid">
         {# include "snippets/layout_grid_thirds.html" #}
-        <div class="govuk-o-grid-row">
+        <div class="govuk-o-govuk-o-grid-row">
           <div class="govuk-o-grid-item govuk-u-one-third">
             <p class="example__grid-background">Content</p>
           </div>
@@ -219,7 +219,7 @@
 
       <pre>
         <code class="language-markup">
-          <div class="govuk-o-grid-row">
+          <div class="govuk-o-govuk-o-grid-row">
             <div class="govuk-o-grid-item govuk-u-one-third">
               <p>Content</p>
             </div>
@@ -236,7 +236,7 @@
       <h4 class="govuk-u-heading-medium">Two thirds / One third</h4>
       <div class="example example-grid">
         {# include "snippets/layout_grid_thirds_two_thirds_one_third.html" #}
-        <div class="govuk-o-grid-row">
+        <div class="govuk-o-govuk-o-grid-row">
           <div class="govuk-o-grid-item govuk-u-two-thirds">
             <p class="example__grid-background">Content</p>
           </div>
@@ -249,7 +249,7 @@
       <pre>
         <code class="language-markup">
           {# include "snippets/layout_grid_thirds_two_thirds_one_third.html" #}
-          <div class="govuk-o-grid-row">
+          <div class="govuk-o-govuk-o-grid-row">
             <div class="govuk-o-grid-item govuk-u-two-thirds">
               <p>Content</p>
             </div>
@@ -263,7 +263,7 @@
       <h4 class="govuk-u-heading-medium">One third / Two thirds</h4>
       <div class="example example-grid">
         {# include "snippets/layout_grid_thirds_one_third_two_thirds.html" #}
-        <div class="govuk-o-grid-row">
+        <div class="govuk-o-govuk-o-grid-row">
           <div class="govuk-o-grid-item govuk-u-one-third">
             <p class="example__grid-background">Content</p>
           </div>
@@ -276,7 +276,7 @@
       <pre>
         <code class="language-markup">
           {# include "snippets/layout_grid_thirds_one_third_two_thirds.html" #}
-          <div class="govuk-o-grid-row">
+          <div class="govuk-o-govuk-o-grid-row">
             <div class="govuk-o-grid-item govuk-u-two-thirds">
               <p>Content</p>
             </div>
@@ -290,7 +290,7 @@
       <h4 class="govuk-u-heading-medium">Quarters</h4>
       <div class="example example-grid">
         {# include "snippets/layout_grid_quarters.html" #}
-        <div class="govuk-o-grid-row">
+        <div class="govuk-o-govuk-o-grid-row">
           <div class="govuk-o-grid-item govuk-u-one-quarter">
             <p class="example__grid-background">Content</p>
           </div>
@@ -309,7 +309,7 @@
       <pre>
         <code class="language-markup">
           {# include "snippets/layout_grid_quarters.html" #}
-          <div class="govuk-o-grid-row">
+          <div class="govuk-o-govuk-o-grid-row">
             <div class="govuk-o-grid-item govuk-u-one-quarter">
               <p>Content</p>
             </div>
@@ -1004,27 +1004,25 @@
       <h4 class="govuk-u-heading-small">Transaction end page</h4>
 
       <div class="example">
-        <div class="grid-row">
-          <div class="column-two-thirds">
+        <div class="govuk-o-grid-row">
+          <div class="govuk-o-grid-item govuk-u-one-half">
 
             <h1 class="govuk-u-heading-xlarge">
               Example service name
             </h1>
 
             <div class="govuk-c-box govuk-c-box--highlight">
-              <h2 class="bold-large">
+              <h2 class="govuk-u-text-bold-xlarge">
                 Application complete
               </h2>
-              <p>
+              <p class="govuk-u-text-medium">
                 Your reference number is </br>
                 <strong class="govuk-u-heading-medium">HDJ2123F</strong>
               </p>
             </div>
-
             <p>
               We have sent you a confirmation email.
             </p>
-
             <h2 class="govuk-u-heading-medium">
               What happens next?
             </h2>
@@ -1060,13 +1058,29 @@
 
       <div class="example">
         <div class="text">
-          {% include "snippets/typography_legal_text.html" %}
+          {# include "snippets/typography_legal_text.html" #}
+          <div class="govuk-c-notice">
+            <i class="govuk-c-notice__icon govuk-c-icon govuk-c-icon--important">
+              <span class="govuk-u-visually-hidden">Warning</span>
+            </i>
+            <strong class="govuk-c-notice__text">
+              You can be fined up to £5,000 if you don’t register.
+            </strong>
+          </div>
         </div>
       </div>
 
       <pre>
       <code class="language-markup">
-        {% include "snippets/typography_legal_text.html" %}
+        {# include "snippets/typography_legal_text.html" #}
+        <div class="govuk-c-notice">
+          <i class="govuk-c-notice__icon govuk-c-icon govuk-c-icon--important">
+            <span class="govuk-u-visually-hidden">Warning</span>
+          </i>
+          <strong class="govuk-c-notice__text">
+            You can be fined up to £5,000 if you don’t register.
+          </strong>
+        </div>
       </code>
       </pre>
 
@@ -1075,12 +1089,12 @@
         If images are needed they should be landscape, 3:2 aspect ratio.
       </p>
 
-      <div class="example example-images">
-        <div class="grid-row">
-          <div class="column-one-half">
+      <div class="example">
+        <div class="govuk-o-govuk-o-grid-row">
+          <div class="govuk-o-grid__item govuk-u-one-half">
             <img src="/public/images/examples/3by2.jpg" alt="3:2">
           </div>
-          <div class="column-one-half">
+          <div class="govuk-u-one-half">
             <img src="/public/images/examples/pm.jpg" alt="">
           </div>
         </div>
@@ -1186,8 +1200,8 @@
       </ul>
 
       <div class="example">
-        <div class="grid-row">
-          <div class="column-one-half">
+        <div class="govuk-o-grid-row">
+          <div class="govuk-o-grid-item govuk-u-one-half">
 
             <div class="data">
               <h2 class="bold-xxlarge">24</h2>
@@ -1195,7 +1209,7 @@
             </div>
 
           </div>
-          <div class="column-one-half">
+          <div class="govuk-o-grid-item govuk-u-one-half">
 
             <div class="data">
               <h2 class="bold-xxlarge">80px</h2>
@@ -1207,8 +1221,8 @@
       </div>
 
       <div class="example">
-        <div class="grid-row">
-          <div class="column-one-half">
+        <div class="govuk-o-grid-row">
+          <div class="govuk-o-grid-item govuk-u-one-half">
 
             <div class="data">
               <h2 class="bold-xlarge">56/154</h2>
@@ -1216,7 +1230,7 @@
             </div>
 
           </div>
-          <div class="column-one-half">
+          <div class="govuk-o-grid-item govuk-u-one-half">
 
             <div class="data">
               <h2 class="bold-xlarge">48px</h2>
@@ -1317,12 +1331,12 @@
 
       <div class="example">
         <div class="govuk-o-grid-row">
-          <div class="govuk-o-column-one-third">
+          <div class="govuk-o-grid-item govuk-u-one-third">
 
             <button class="govuk-c-button">Save and continue</button>
 
           </div>
-          <div class="govuk-o-column-one-third">
+          <div class="govuk-o-grid-item govuk-u-one-third">
 
             <div class="swatch-wrapper">
               <h4 class="govuk-u-heading-small">Button</h4>
@@ -1334,7 +1348,7 @@
             </div>
 
           </div>
-          <div class="govuk-o-column-one-third">
+          <div class="govuk-o-grid-item govuk-u-one-third">
 
             <div class="swatch-wrapper">
               <h4 class="govuk-u-heading-small">Focus</h4>
