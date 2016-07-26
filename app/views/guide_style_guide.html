@@ -53,8 +53,8 @@
         <li class="govuk-c-list__item"><a href="#typography-links">Links</a></li>
         <li class="govuk-c-list__item"><a href="#typography-lists">Lists</a></li>
         <li class="govuk-c-list__item"><a href="#typography-inset-text">Inset text</a></li>
-        <li class="govuk-c-list__item"><a href="#typography-legal-text">Legal text</a></li>
         <li class="govuk-c-list__item"><a href="#typography-hidden-text">Hidden text (progressive disclosure)</a></li>
+        <li class="govuk-c-list__item"><a href="#typography-legal-text">Legal text</a></li>
       </ul>
 
       <h2 class="govuk-u-heading-small">Colour</h2>
@@ -545,7 +545,6 @@
 
       <div class="example">
         <div class="text">
-          {# include "snippets/typography_inset_text.html" #}
           <div class="govuk-c-panel govuk-c-panel--border-narrow">
             <p>
               Inset text in here.
@@ -556,44 +555,10 @@
 
       <pre>
         <code class="language-markup">
-          {# include "snippets/typography_inset_text.html" #}
           <div class="govuk-c-panel govuk-c-panel--border-wide">
             <p>
               Inset text in here.
             </p>
-          </div>
-        </code>
-      </pre>
-
-      <h3 class="govuk-u-heading-medium" id="typography-legal-text">Legal text</h3>
-      <p class="text">
-        Use bold text with an exclamation icon if there are legal consequences - for example, a fine or prison sentence.
-      </p>
-
-      <div class="example">
-        <div class="text">
-          {# include "snippets/typography_legal_text.html" #}
-          <div class="govuk-c-notice">
-            <i class="govuk-c-notice__icon govuk-c-icon govuk-c-icon--important">
-              <span class="govuk-u-visually-hidden">Warning</span>
-            </i>
-            <strong class="govuk-c-notice__text">
-              You can be fined up to £5,000 if you don’t register.
-            </strong>
-          </div>
-        </div>
-      </div>
-
-      <pre>
-        <code class="language-markup">
-          {# include "snippets/typography_legal_text.html" #}
-          <div class="govuk-c-notice">
-            <i class="govuk-c-notice__icon govuk-c-icon govuk-c-icon--important">
-              <span class="govuk-u-visually-hidden">Warning</span>
-            </i>
-            <strong class="govuk-u-text-bold-small">
-              You can be fined up to £5,000 if you don’t register.
-            </strong>
           </div>
         </code>
       </pre>
@@ -655,6 +620,39 @@
           <a href="/typography/example-details-summary/">Take a look at example page</a> which demonstrates conditionally revealing information, using the HTML5 details and summary elements.
         </p>
       </div>
+
+      <h3 class="govuk-u-heading-medium" id="typography-legal-text">Legal text</h3>
+      <p class="text">
+        Use bold text with an exclamation icon if there are legal consequences - for example, a fine or prison sentence.
+      </p>
+
+      <div class="example">
+        <div class="text">
+          {# include "snippets/typography_legal_text.html" #}
+          <div class="govuk-c-notice">
+            <i class="govuk-c-notice__icon govuk-c-icon govuk-c-icon--important">
+              <span class="govuk-u-visually-hidden">Warning</span>
+            </i>
+            <strong class="govuk-c-notice__text">
+              You can be fined up to £5,000 if you don’t register.
+            </strong>
+          </div>
+        </div>
+      </div>
+
+      <pre>
+        <code class="language-markup">
+          {# include "snippets/typography_legal_text.html" #}
+          <div class="govuk-c-notice">
+            <i class="govuk-c-notice__icon govuk-c-icon govuk-c-icon--important">
+              <span class="govuk-u-visually-hidden">Warning</span>
+            </i>
+            <strong class="govuk-u-text-bold-small">
+              You can be fined up to £5,000 if you don’t register.
+            </strong>
+          </div>
+        </code>
+      </pre>
 
       <h3 class="govuk-u-heading-medium" id="colour-contrast">Colour contrast</h3>
       <p class="text">
