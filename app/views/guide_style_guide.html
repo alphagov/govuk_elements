@@ -572,13 +572,29 @@
 
       <div class="example">
         <div class="text">
-          {% include "snippets/typography_legal_text.html" %}
+          {# include "snippets/typography_legal_text.html" #}
+          <div class="govuk-c-notice">
+            <i class="govuk-c-notice__icon govuk-c-icon govuk-c-icon--important">
+              <span class="govuk-u-visually-hidden">Warning</span>
+            </i>
+            <strong class="govuk-c-notice__text">
+              You can be fined up to £5,000 if you don’t register.
+            </strong>
+          </div>
         </div>
       </div>
 
       <pre>
         <code class="language-markup">
-          {% include "snippets/typography_legal_text.html" %}
+          {# include "snippets/typography_legal_text.html" #}
+          <div class="govuk-c-notice">
+            <i class="govuk-c-notice__icon govuk-c-icon govuk-c-icon--important">
+              <span class="govuk-u-visually-hidden">Warning</span>
+            </i>
+            <strong class="govuk-u-text-bold-small">
+              You can be fined up to £5,000 if you don’t register.
+            </strong>
+          </div>
         </code>
       </pre>
 
