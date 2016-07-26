@@ -67,18 +67,19 @@
 // @import "scope/govspeak"
 
 // Hacks and fixes
-@import "trumps/shame";
+// I can't have a layer called "Trumps". Sorry, not sorry.
+@import "utilities/shame";
 
 // Overrides, helpers and utilities
-@import "trumps/helpers";
+@import "utilities/helpers";
 
-@import "trumps/shame";
+@import "utilities/shame";
 
-@import "trumps/utility-clearfix";
-@import "trumps/utility-inline-block";
-@import "trumps/utility-vertical-spacing";
-@import "trumps/utility-visually-hidden";
-@import "trumps/utility-widths";
+@import "utilities/clearfix";
+@import "utilities/inline-block";
+@import "utilities/vertical-spacing";
+@import "utilities/visually-hidden";
+@import "utilities/widths";
 
 
 // Import the styles for the style guide page
