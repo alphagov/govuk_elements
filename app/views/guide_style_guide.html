@@ -1477,7 +1477,27 @@
       </div>
 
       <div class="example">
-        {% include "snippets/form_focus.html" %}
+        {# include "snippets/form_focus.html" #}
+        <div class="govuk-o-grid-row">
+          <div class="govuk-o-grid-item govuk-u-two-thirds">
+            <form>
+              <div class="form-group">
+                <label class="form-label" for="full-name-f2">Full name</label>
+                <input class="form-control" type="text" id="full-name-f2">
+              </div>
+            </form>
+          </div>
+          <div class="govuk-o-grid-item govuk-u-one-third">
+            <div class="swatch-wrapper">
+              <h4 class="heading-small">Focus</h4>
+              <div class="swatch swatch-yellow"></div>
+              <ul>
+                <li><b>#FFBF47</b></li>
+                <li>$focus-colour</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
 
       <h3 class="govuk-u-heading-medium"  id="form-hint-text">Hint text</h3>
