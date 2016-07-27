@@ -1438,12 +1438,20 @@
         <li class="govuk-c-list__item">labels should be associated with form fields using the <code class="code">for</code> attribute</li>
       </ul>
       <div class="example">
-        {% include "snippets/form_labels.html" %}
+        {# include "snippets/form_labels.html" #}
+        <div class="govuk-c-form-element">
+          <label class="govuk-c-form-element__label" for="example-form-label-1">Full name</label>
+          <input class="govuk-c-form-element__control" id="example-form-label-1" type="text">
+        </div>
       </div>
 
       <pre>
       <code class="language-markup">
-        {% include "snippets/form_labels.html" %}
+        {# include "snippets/form_labels.html" #}
+        <div class="govuk-c-form-element">
+          <label class="govuk-c-form-element__label" for="example-form-label-2">Full name</label>
+          <input class="govuk-c-form-element__control" id="example-form-label-2" type="text">
+        </div>
       </code>
       </pre>
 
@@ -1841,5 +1849,6 @@
 
     </div>
   </div>
+
 </main><!-- / #content -->
 {% endblock %}
