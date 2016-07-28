@@ -1439,18 +1439,18 @@
       </ul>
       <div class="example">
         {# include "snippets/form_labels.html" #}
-        <div class="govuk-c-form-element">
-          <label class="govuk-c-form-element__label" for="example-form-label-1">Full name</label>
-          <input class="govuk-c-form-element__control" id="example-form-label-1" type="text">
+        <div class="govuk-c-form-group">
+          <label class="govuk-c-form-group__label" for="example-form-label-1">Full name</label>
+          <input class="govuk-c-form-group__control" id="example-form-label-1" type="text">
         </div>
       </div>
 
       <pre>
       <code class="language-markup">
         {# include "snippets/form_labels.html" #}
-        <div class="govuk-c-form-element">
-          <label class="govuk-c-form-element__label" for="example-form-label-2">Full name</label>
-          <input class="govuk-c-form-element__control" id="example-form-label-2" type="text">
+        <div class="govuk-c-form-group">
+          <label class="govuk-c-form-group__label" for="example-form-label-2">Full name</label>
+          <input class="govuk-c-form-group__control" id="example-form-label-2" type="text">
         </div>
       </code>
       </pre>
@@ -1490,9 +1490,9 @@
         <div class="govuk-o-grid-row">
           <div class="govuk-o-grid-item govuk-u-two-thirds">
             <form>
-              <div class="govuk-c-form-element">
-                <label class="govuk-c-form-element__label" for="example-form-focus-1">Full name</label>
-                <input class="govuk-c-form-element__control" id="example-form-focus-1" type="text">
+              <div class="govuk-c-form-group">
+                <label class="govuk-c-form-group__label" for="example-form-focus-1">Full name</label>
+                <input class="govuk-c-form-group__control" id="example-form-focus-1" type="text">
               </div>
             </form>
           </div>
@@ -1519,14 +1519,14 @@
 
       <div class="example">
         {# include "snippets/form_hint_text.html" #}
-        <div class="govuk-c-form-element">
-          <label class="govuk-c-form-element__label" for="example-hint-text-1">
+        <div class="govuk-c-form-group">
+          <label class="govuk-c-form-group__label" for="example-hint-text-1">
             National Insurance number
-            <span class="govuk-c-form-element__hint">
+            <span class="govuk-c-form-group__hint">
               It'll be on your last payslip. For example, VO 12 34 56 D.
             </span>
           </label>
-          <input class="govuk-c-form-element__control" id="example-hint-text-1" type="text">
+          <input class="govuk-c-form-group__control" id="example-hint-text-1" type="text">
         </div>
       </div>
 
@@ -1535,14 +1535,14 @@
       <pre>
       <code class="language-markup">
         {# include "snippets/form_hint_text.html" #}
-        <div class="govuk-c-form-element">
-          <label class="govuk-c-form-element__label" for="example-hint-text-2">
+        <div class="govuk-c-form-group">
+          <label class="govuk-c-form-group__label" for="example-hint-text-2">
             National Insurance number
-            <span class="govuk-c-form-element__hint">
+            <span class="govuk-c-form-group__hint">
               It'll be on your last payslip. For example, VO 12 34 56 D.
             </span>
           </label>
-          <input class="govuk-c-form-element__control" id="example-hint-text-2" type="text">
+          <input class="govuk-c-form-group__control" id="example-hint-text-2" type="text">
         </div>
       </code>
       </pre>
@@ -1553,14 +1553,30 @@
       </p>
 
       <div class="example">
-        {% include "snippets/form_spacing.html" %}
+        {# include "snippets/form_spacing.html" #}
         <!-- TODO: Show form spacing once vertical spacing utility classes are added -->
+        <div class="govuk-c-form-group">
+          <label class="govuk-c-form-group__label" for="example-form-label-3">First name</label>
+          <input class="govuk-c-form-group__control" id="example-form-label-3" type="text">
+        </div>
+        <div class="govuk-c-form-group">
+          <label class="govuk-c-form-group__label" for="example-form-label-4">Last name</label>
+          <input class="govuk-c-form-group__control" id="example-form-label-4" type="text">
+        </div>
       </div>
 
       <pre>
       <code class="language-markup">
-        {% include "snippets/form_spacing.html" %}
+        {# include "snippets/form_spacing.html" #}
         <!-- TODO: Show form spacing once vertical spacing utility classes are added -->
+        <div class="govuk-c-form-group">
+          <label class="govuk-c-form-group__label govuk-c-form-group__label--bold" for="example-form-label-5">First name</label>
+          <input class="govuk-c-form-group__control" id="example-form-label-5" type="text">
+        </div>
+        <div class="govuk-c-form-group">
+          <label class="govuk-c-form-group__label govuk-c-form-group__label--bold" for="example-form-label-6">Last name</label>
+          <input class="govuk-c-form-group__control" id="example-form-label-6" type="text">
+        </div>
       </code>
       </pre>
 
@@ -1602,15 +1618,62 @@
 
       <h4 class="govuk-u-heading-small">Stacked radio buttons</h4>
       <div class="example">
+        {# include "snippets/form_radio_buttons.html" #}
+
+        <h1 class="govuk-u-heading-medium">Where do you live?</h1>
         <form>
-          {% include "snippets/form_radio_buttons.html" %}
+
+          <fieldset class="govuk-c-form-group">
+
+            <legend class="govuk-c-form-group__legend govuk-u-visually-hidden">Where do you live?</legend>
+
+            <label class="govuk-c-form-custom" for="example-custom-radio-1a">
+              Northern Ireland
+              <input class="govuk-c-form-custom__control" id="example-custom-radio-1a" type="radio" name="radio-group" value="Northern Ireland">
+            </label>
+
+            <label class="govuk-c-form-custom" for="example-custom-radio-1b">
+              Isle of Man or the Channel Islands
+              <input class="govuk-c-form-custom__control" id="example-custom-radio-1b" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+            </label>
+
+            <label class="govuk-c-form-custom" for="example-custom-radio-1c">
+              I am a British citizen living abroad
+              <input class="govuk-c-form-custom__control" id="example-custom-radio-1c" type="radio" name="radio-group" value="I am a British citizen living abroad">
+            </label>
+
+          </fieldset>
         </form>
       </div>
 
       <pre>
-      <code class="language-markup">
-        {% include "snippets/form_radio_buttons.html" %}
-      </code>
+        <code class="language-markup">
+          {# include "snippets/form_radio_buttons.html" #}
+          <h1 class="govuk-u-heading-medium">Where do you live?</h1>
+          <form>
+
+            <fieldset class="govuk-c-form-group">
+
+              <legend class="govuk-c-form-group__legend govuk-u-visually-hidden">Where do you live?</legend>
+
+              <label class="govuk-c-form-custom" for="example-custom-radio-1a">
+                Northern Ireland
+                <input class="govuk-c-form-custom__control" id="example-custom-radio-1a" type="radio" name="radio-group" value="Northern Ireland">
+              </label>
+
+              <label class="govuk-c-form-custom" for="example-custom-radio-1b">
+                Isle of Man or the Channel Islands
+                <input class="govuk-c-form-custom__control" id="example-custom-radio-1b" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+              </label>
+
+              <label class="govuk-c-form-custom" for="example-custom-radio-1c">
+                I am a British citizen living abroad
+                <input class="govuk-c-form-custom__control" id="example-custom-radio-1c" type="radio" name="radio-group" value="I am a British citizen living abroad">
+              </label>
+
+            </fieldset>
+          </form>
+        </code>
       </pre>
 
       <h3 class="govuk-u-heading-medium" id="form-checkboxes">Checkboxes</h3>
