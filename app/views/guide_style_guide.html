@@ -1016,7 +1016,7 @@
                 Application complete
               </h2>
               <p class="govuk-u-text-medium">
-                Your reference number is </br>
+                Your reference number is <br>
                 <strong class="govuk-u-heading-medium">HDJ2123F</strong>
               </p>
             </div>
@@ -1605,9 +1605,7 @@
 
       <h4 class="govuk-u-heading-small">Inline radio buttons</h4>
       <div class="example">
-        <form>
-          {% include "snippets/form_radio_buttons_inline.html" %}
-        </form>
+        {% include "snippets/form_radio_buttons_inline.html" %}
       </div>
 
       <pre>
@@ -1782,8 +1780,51 @@
       </div>
 
       <div class="example">
+        {# include "snippets/form_inset_radios.html" #}
+        <h1 class="govuk-u-heading-medium">
+          How do you want to be contacted?
+        </h1>
         <form>
-          {% include "snippets/form_inset_radios.html" %}
+          <fieldset class="govuk-c-form-group">
+
+            <legend class="govuk-c-form-group__legend govuk-u-visually-hidden">
+              How do you want to be contacted?
+            </legend>
+
+            <label class="govuk-c-form-custom" data-target="contact-by-email" for="example-contact-by-email">
+              <input class="govuk-c-form-custom__control" id="example-contact-by-email" type="radio" name="radio-contact-group" value="Email">
+              Email
+            </label>
+
+            <div class="govuk-c-panel govuk-c-panel--border-narrow govuk-u-pb-0 js-hidden" id="contact-by-email">
+              <div class="govuk-c-form-group govuk-u-mb-0">
+                <label class="govuk-c-form-group__label" for="contact-email">Email address</label>
+                <input class="govuk-c-form-group__control" name="contact-email" type="text" id="contact-email">
+              </div>
+            </div>
+
+            <label class="govuk-c-form-custom" data-target="contact-by-phone" for="example-contact-by-phone">
+              <input class="govuk-c-form-custom__control" id="example-contact-by-phone" type="radio" name="radio-contact-group" value="Phone">
+              Phone
+            </label>
+            <div class="govuk-c-panel govuk-c-panel--border-narrow govuk-u-pb-0 js-hidden" id="contact-by-phone">
+              <div class="govuk-c-form-group govuk-u-mb-0">
+                <label class="govuk-c-form-group__label" for="contact-phone">Phone number</label>
+                <input class="govuk-c-form-group__control" name="contact-phone" type="text" id="contact-phone">
+              </div>
+            </div>
+
+            <label class="govuk-c-form-custom" data-target="contact-by-text" for="example-contact-by-text">
+              <input class="govuk-c-form-custom__control" id="example-contact-by-text" type="radio" name="radio-contact-group" value="Text message">
+              Text message
+            </label>
+            <div class="govuk-c-panel govuk-c-panel--border-narrow govuk-u-pb-0 js-hidden" id="contact-by-text">
+              <div class="govuk-c-form-group govuk-u-mb-0">
+                <label class="govuk-c-form-group__label" for="contact-text-message">Mobile phone number</label>
+                <input class="govuk-c-form-group__control" name="contact-text-message" type="text" id="contact-text-message">
+              </div>
+            </div>
+          </fieldset>
         </form>
       </div>
 
