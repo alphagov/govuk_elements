@@ -1,14 +1,14 @@
 function ShowHideContent() {
   var self = this;
 
-
   self.escapeElementName = function(str) {
     result = str.replace('[', '\\[').replace(']', '\\]')
     return(result);
   };
 
   self.showHideRadioToggledContent = function () {
-    $(".block-label input[type='radio']").each(function () {
+
+    $(".govuk-c-form-custom input[type='radio']").each(function () {
 
       var $radio = $(this);
       var $radioGroupName = $radio.attr('name');
@@ -27,7 +27,7 @@ function ShowHideContent() {
         $radio.on('click', function () {
 
           // Select radio buttons in the same group
-          $radio.closest('form').find(".block-label input[name=" + self.escapeElementName($radioGroupName) + "]").each(function () {
+          $radio.closest('form').find(".govuk-c-form-custom input[name=" + self.escapeElementName($radioGroupName) + "]").each(function () {
             var $this = $(this);
 
             var groupDataTarget = $this.parent('label').attr('data-target');
@@ -55,7 +55,7 @@ function ShowHideContent() {
         $radio.on('click', function () {
 
           // Select radio buttons in the same group
-          $(".block-label input[name=" + self.escapeElementName($radioGroupName) + "]").each(function () {
+          $(".govuk-c-form-custom input[name=" + self.escapeElementName($radioGroupName) + "]").each(function () {
 
             var groupDataTarget = $(this).parent('label').attr('data-target');
             var $groupDataTarget = $('#' + groupDataTarget);
@@ -74,7 +74,7 @@ function ShowHideContent() {
   }
   self.showHideCheckboxToggledContent = function () {
 
-    $(".block-label input[type='checkbox']").each(function() {
+    $(".govuk-c-form-custom input[type='checkbox']").each(function() {
 
       var $checkbox = $(this);
       var $checkboxLabel = $(this).parent();
@@ -125,7 +125,7 @@ $(document).ready(function() {
   // Details/summary polyfill
   // See /javascripts/vendor/details.polyfill.js
 
-  // Where .block-label uses the data-target attribute
+  // Where .govuk-c-form-custom uses the data-target attribute
   // to toggle hidden content
   var toggleContent = new ShowHideContent();
   toggleContent.showHideRadioToggledContent();
