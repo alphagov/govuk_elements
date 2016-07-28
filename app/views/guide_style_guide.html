@@ -1619,29 +1619,22 @@
       <h4 class="govuk-u-heading-small">Stacked radio buttons</h4>
       <div class="example">
         {# include "snippets/form_radio_buttons.html" #}
-
         <h1 class="govuk-u-heading-medium">Where do you live?</h1>
         <form>
-
           <fieldset class="govuk-c-form-group">
-
             <legend class="govuk-c-form-group__legend govuk-u-visually-hidden">Where do you live?</legend>
-
             <label class="govuk-c-form-custom" for="example-custom-radio-1a">
               Northern Ireland
               <input class="govuk-c-form-custom__control" id="example-custom-radio-1a" type="radio" name="radio-group" value="Northern Ireland">
             </label>
-
             <label class="govuk-c-form-custom" for="example-custom-radio-1b">
               Isle of Man or the Channel Islands
               <input class="govuk-c-form-custom__control" id="example-custom-radio-1b" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
             </label>
-
             <label class="govuk-c-form-custom" for="example-custom-radio-1c">
               I am a British citizen living abroad
               <input class="govuk-c-form-custom__control" id="example-custom-radio-1c" type="radio" name="radio-group" value="I am a British citizen living abroad">
             </label>
-
           </fieldset>
         </form>
       </div>
@@ -1651,26 +1644,20 @@
           {# include "snippets/form_radio_buttons.html" #}
           <h1 class="govuk-u-heading-medium">Where do you live?</h1>
           <form>
-
             <fieldset class="govuk-c-form-group">
-
               <legend class="govuk-c-form-group__legend govuk-u-visually-hidden">Where do you live?</legend>
-
               <label class="govuk-c-form-custom" for="example-custom-radio-1a">
                 Northern Ireland
                 <input class="govuk-c-form-custom__control" id="example-custom-radio-1a" type="radio" name="radio-group" value="Northern Ireland">
               </label>
-
               <label class="govuk-c-form-custom" for="example-custom-radio-1b">
                 Isle of Man or the Channel Islands
                 <input class="govuk-c-form-custom__control" id="example-custom-radio-1b" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
               </label>
-
               <label class="govuk-c-form-custom" for="example-custom-radio-1c">
                 I am a British citizen living abroad
                 <input class="govuk-c-form-custom__control" id="example-custom-radio-1c" type="radio" name="radio-group" value="I am a British citizen living abroad">
               </label>
-
             </fieldset>
           </form>
         </code>
@@ -1684,15 +1671,55 @@
 
       <h4 class="govuk-u-heading-small">Stacked checkboxes</h4>
       <div class="example">
+        {# include "snippets/form_checkboxes.html" #}
+        <h3 class="govuk-u-heading-medium">Which types of waste do you transport regularly?</h3>
+        <p>Select all that apply</p>
         <form>
-          {% include "snippets/form_checkboxes.html" %}
+          <fieldset class="govuk-c-form-group">
+            <legend class="govuk-c-form-group__legend govuk-u-visually-hidden">
+              Which types of waste do you transport regularly?
+            </legend>
+            <label class="govuk-c-form-custom" for="waste-type-1">
+              <input class="govuk-c-form-custom__control" id="waste-type-1" name="waste-types" type="checkbox" value="waste-animal">
+              Waste from animal carcasses
+            </label>
+            <label class="govuk-c-form-custom" for="waste-type-2">
+              <input class="govuk-c-form-custom__control" id="waste-type-2" name="waste-types" type="checkbox" value="waste-mines">
+              Waste from mines or quarries
+            </label>
+            <label class="govuk-c-form-custom" for="waste-type-3">
+              <input class="govuk-c-form-custom__control" id="waste-type-3" name="waste-types" type="checkbox" value="waste-farm-agricultural">
+              Farm or agricultural waste
+            </label>
+          </fieldset>
         </form>
       </div>
 
       <pre>
-      <code class="language-markup">
-        {% include "snippets/form_checkboxes.html" %}
-      </code>
+        <code class="language-markup">
+          {# include "snippets/form_checkboxes.html" #}
+          <h3 class="govuk-u-heading-medium">Which types of waste do you transport regularly?</h3>
+          <p>Select all that apply</p>
+          <form>
+            <fieldset class="govuk-c-form-group">
+              <legend class="govuk-c-form-group__legend govuk-u-visually-hidden">
+                Which types of waste do you transport regularly?
+              </legend>
+              <label class="govuk-c-form-custom" for="waste-type-1">
+                <input class="govuk-c-form-custom__control" id="waste-type-1" name="waste-types" type="checkbox" value="waste-animal">
+                Waste from animal carcasses
+              </label>
+              <label class="govuk-c-form-custom" for="waste-type-2">
+                <input class="govuk-c-form-custom__control" id="waste-type-2" name="waste-types" type="checkbox" value="waste-mines">
+                Waste from mines or quarries
+              </label>
+              <label class="govuk-c-form-custom" for="waste-type-3">
+                <input class="govuk-c-form-custom__control" id="waste-type-3" name="waste-types" type="checkbox" value="waste-farm-agricultural">
+                Farm or agricultural waste
+              </label>
+            </fieldset>
+          </form>
+        </code>
       </pre>
 
       <h4 class="govuk-u-heading-small">Inline checkboxes</h4>
