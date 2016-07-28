@@ -1730,14 +1730,34 @@
 
       <div class="example">
         <form>
-          {% include "snippets/form_checkbox_native.html" %}
+          {# include "snippets/form_checkbox_native.html" #}
+          <div class="govuk-c-form-group">
+            <label class="govuk-c-form-group__label" for="telephone-number">Enter your telephone number</label>
+            <input class="govuk-c-form-group__control" id="telephone-number" name="telephone-number" type="text">
+          </div>
+          <div class="govuk-c-form-group">
+            <label class="govuk-c-form-group__label" for="checkbox-telephone-number">
+              <input class="govuk-c-form-group__control-native" id="checkbox-telephone-number" name="contact-by-text-phone" type="checkbox" value="true">
+              I need to be contacted using a text phone
+            </label>
+          </div>
         </form>
       </div>
 
       <pre>
-      <code class="language-markup">
-        {% include "snippets/form_checkbox_native.html" %}
-      </code>
+        <code class="language-markup">
+          {# include "snippets/form_checkbox_native.html" #}
+          <div class="govuk-c-form-group">
+            <label class="govuk-c-form-group__label" for="telephone-number">Enter your telephone number</label>
+            <input class="govuk-c-form-group__control" id="telephone-number" name="telephone-number" type="text">
+          </div>
+          <div class="govuk-c-form-group">
+            <label class="govuk-c-form-group__label" for="checkbox-telephone-number">
+              <input class="govuk-c-form-group__control" id="checkbox-telephone-number" name="contact-by-text-phone" type="checkbox" value="true">
+              I need to be contacted using a text phone
+            </label>
+          </div>
+        </code>
       </pre>
 
       <p>
