@@ -114,6 +114,9 @@ function ShowHideContent() {
 
 $(document).ready(function() {
 
+  GOVUK.stickAtTopWhenScrolling.init();
+  GOVUK.stopScrollingAtFooter.addEl($('.styleguide__sidebar'));
+
   // Turn off jQuery animation
   jQuery.fx.off = true;
 
@@ -154,4 +157,3 @@ $(window).load(function() {
   }
 
 });
-
