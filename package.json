@@ -5,7 +5,7 @@
   "repository": "alphagov/govuk_elements",
   "license": "MIT",
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=4.4.7"
   },
   "dependencies": {
     "govuk_frontend_toolkit": "^4.14.1"
