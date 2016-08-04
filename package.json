@@ -5,10 +5,10 @@
   "repository": "alphagov/govuk_elements",
   "license": "MIT",
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=4.4.7"
   },
   "dependencies": {
-    "govuk_frontend_toolkit": "^4.13.0"
+    "govuk_frontend_toolkit": "^4.14.1"
   },
   "devDependencies": {
     "body-parser": "^1.14.1",
