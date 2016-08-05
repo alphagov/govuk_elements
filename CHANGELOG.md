@@ -1,3 +1,11 @@
+# 1.2.2
+
+- Bump govuk frontend toolkit to 4.14.4 (PR #278)
+- Add a .column-full class (PR #270)
+- Add a file upload example (PR #268)
+- Remove the blue outline from the main content area (PR #265)
+- Fix legend text wrapping in IE (PR #248)
+
 # 1.2.1
 
 - Consistent spacing underneath block labels and toggled content (PR #229)
@@ -25,7 +33,7 @@
 
 # 1.1.3
 
-- Bump govuk frontend toolki to 4.9.1 (PR #195)
+- Bump govuk frontend toolkit to 4.9.1 (PR #195)
 - Use the GOV.UK lint gem for scss linting (PR #191)
 - Use aria-describedby to associate a form hint with a form fields (PR #187)
 - Bump govuk template to 0.17.0 (PR #186)
