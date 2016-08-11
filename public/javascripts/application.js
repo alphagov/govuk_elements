@@ -122,6 +122,10 @@ $(document).ready(function() {
   var $blockLabels = $(".block-label input[type='radio'], .block-label input[type='checkbox']");
   new GOVUK.SelectionButtons($blockLabels);
 
+  // Use GOV.UK shim-links-with-button-role.js to trigger a link styled to look like a button,
+  // with role="button" when the space key is pressed.
+  GOVUK.shimLinksWithButtonRole.init();
+
   // Details/summary polyfill
   // See /javascripts/vendor/details.polyfill.js
 
