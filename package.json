@@ -16,7 +16,7 @@
     "express": "4.13.3",
     "express-nunjucks": "^0.9.3",
     "express-writer": "0.0.4",
-    "govuk_template_jinja": "0.17.3",
+    "govuk_template_jinja": "0.18.0",
     "grunt": "^0.4.2",
     "grunt-cli": "0.1.13",
     "grunt-concurrent": "^0.4.3",
