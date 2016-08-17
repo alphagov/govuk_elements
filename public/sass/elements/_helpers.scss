@@ -4,7 +4,7 @@
 // If image-url is not defined (if we are not in a Rails environment)
 // Set a path to /public/images
 @if not(function-exists(image-url)) {
-  $path: "/public/images/";
+  $path: "/public/images/" !default;
 }
 
 // Return ems from a pixel value
