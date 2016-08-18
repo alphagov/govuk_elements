@@ -1,0 +1,96 @@
+<h1 class="heading-medium" id="example-conditional-errors">
+  Your income
+</h1>
+
+<form>
+  <div class="form-group error">
+
+    <fieldset>
+
+      <legend>
+        <span class="form-label-bold">How often do you get paid?</span>
+        <span class="error-message">Choose an answer</span>
+      </legend>
+
+      <label class="block-label" data-target="paid-weekly" for="example-paid-weekly">
+        <input type="radio" name="radio-income-group" value="Yes" id="example-paid-weekly">
+        Weekly
+      </label>
+      <div class="panel panel-border-narrow js-hidden" id="paid-weekly">
+        <label class="form-label" for="example-paid-weekly-pay">Weekly take home pay after tax</label>
+        <input class="form-control" name="example-paid-weekly-pay" type="text" id="example-paid-weekly-pay">
+      </div>
+
+      <label class="block-label" data-target="paid-fortnightly" for="example-paid-fortnightly">
+        <input type="radio" name="radio-income-group" value="Yes" id="example-paid-fortnightly">
+        Fortnightly
+      </label>
+      <div class="panel panel-border-narrow js-hidden" id="paid-fortnightly">
+        <label class="form-label" for="example-paid-fortnightly-pay">Weekly take home pay after tax</label>
+        <input class="form-control" name="example-paid-fortnightly-pay" type="text" id="example-paid-fortnightly-pay">
+      </div>
+
+      <label class="block-label" data-target="paid-monthly" for="example-paid-monthly">
+        <input type="radio" name="radio-income-group" value="Yes" id="example-paid-monthly">
+        Monthly
+      </label>
+      <div class="panel panel-border-narrow js-hidden" id="paid-monthly">
+        <label class="form-label" for="example-paid-monthly-pay">Monthly take home pay after tax</label>
+        <input class="form-control" name="example-paid-monthly-pay" type="text" id="example-paid-monthly-pay">
+      </div>
+
+    </fieldset>
+  </div>
+</form>
+
+<h1 class="heading-medium" id="example-conditional-errors-2">
+  Your income
+</h1>
+
+<form>
+  <div class="form-group">
+
+    <fieldset>
+
+      <legend>
+        <span class="form-label-bold">How often do you get paid?</span>
+      </legend>
+
+      <label class="block-label" data-target="paid-weekly-2" for="example-paid-weekly-2">
+        <input type="radio" name="radio-income-group-2" value="Yes" id="example-paid-weekly-2">
+        Weekly
+      </label>
+      <div class="panel panel-border-narrow js-hidden" id="paid-weekly-2">
+        <label class="form-label" for="example-paid-weekly-pay-2">Weekly take home pay after tax</label>
+        <input class="form-control" name="example-paid-weekly-pay-2" type="text" id="example-paid-weekly-pay-2">
+      </div>
+
+      <label class="block-label" data-target="paid-fortnightly-2" for="example-paid-fortnightly-2">
+        <input type="radio" name="radio-income-group-2" value="Yes" id="example-paid-fortnightly-2">
+        Fortnightly
+      </label>
+      <div class="panel panel-border-narrow js-hidden" id="paid-fortnightly-2">
+        <label class="form-label" for="example-paid-fortnightly-pay-2">Weekly take home pay after tax</label>
+        <input class="form-control" name="example-paid-fortnightly-pay-2" type="text" id="example-paid-fortnightly-pay-2">
+      </div>
+
+      <label class="block-label" data-target="paid-monthly-2" for="example-paid-monthly-2">
+        <input type="radio" name="radio-income-group-2" value="Yes" id="example-paid-monthly-2" checked="checked">
+        Monthly
+      </label>
+      <div class="panel panel-border-narrow panel-with-error" id="paid-monthly-2">
+        <div class="form-group error">
+          <label class="form-label" for="example-paid-monthly-pay-2">
+            Monthly take home pay (after tax)?
+            <span class="error-message">
+              Error message about monthly pay goes here
+            </span>
+          </label>
+          <input class="form-control" name="example-paid-monthly-pay-2" type="text" id="example-paid-monthly-pay-2">
+        </div>
+      </div>
+
+    </fieldset>
+  </div>
+</form>
+
