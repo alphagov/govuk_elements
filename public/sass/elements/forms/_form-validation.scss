@@ -9,7 +9,8 @@
   margin-right: 15px;
 
   // Form inputs should have a red border
-  .form-control {
+  // Add a red border to .form-controls that are direct descendants
+  > .form-control {
     border: 4px solid $error-colour;
   }
 
