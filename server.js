@@ -1,10 +1,10 @@
 var path = require('path')
 var express = require('express')
 var nunjucks = require('express-nunjucks')
-var routes = require(path.join(__dirname, '/app/routes.js'))
+var routes = require('./app/routes.js')
 var app = express()
 var bodyParser = require('body-parser')
-var config = require(path.join(__dirname, '/app/config.js'))
+var config = require('./app/config.js')
 var port = (process.env.PORT || 3000)
 
 // Application settings
