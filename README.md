@@ -150,6 +150,22 @@ Run the app
 Go to [localhost:3000](http://localhost:3000) in your browser.
 
 
+## Linting
+
+### GOV.UK lint
+[GOV.UK elements uses govuk-lint](https://github.com/alphagov/govuk-lint#sass), which uses [scss-lint](https://github.com/brigade/scss-lint) as its scss linter.
+
+### Standard JavaScript
+GOV.UK elements uses [standardjs](http://standardjs.com/), an opinionated JavaScript linter. All JavaScript files follow its conventions.
+
+Both linters run on CI to ensure that new pull requests are in line with them.
+
+## Linting
+
+To check the whole codebase, run:
+
+    npm test
+
 ## Running Wraith to compare changes
 
 GOV.UK elements uses Wraith so that regressions can be easily spotted.
