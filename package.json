@@ -31,13 +31,13 @@
     "readdir": "0.0.6",
     "standard": "^7.1.2"
   },
-  "scripts": {
+  "scripts":{
     "test": "standard && ./node_modules/grunt-cli/bin/grunt test"
   },
   "standard": {
     "ignore": [
       "lib",
-      "public",
+      "public/javascripts/vendor/",
       "node_modules",
       "tests"
     ]
