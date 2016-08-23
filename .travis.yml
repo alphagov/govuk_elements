@@ -6,7 +6,7 @@ before_install:
 install:
 - npm install
 script:
-- "./node_modules/grunt-cli/bin/grunt test"
+- npm test
 notifications:
   email: false
 before_deploy:

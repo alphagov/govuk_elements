@@ -5,6 +5,7 @@ guidelines:
 
 ## Indentation and whitespace
 
+Your JavaScript code should pass [linting](https://github.com/alphagov/govuk_prototype_kit/blob/0d9835b7ad8d7bc06aa288204eb3ce9a07116be2/docs/linting.md).
 2-space, soft-tabs only. No trailing whitespace.
 
 ## Versioning

@@ -1,5 +1,4 @@
 module.exports = function (grunt) {
-
   grunt.initConfig({
 
     // Builds Sass
@@ -14,7 +13,7 @@ module.exports = function (grunt) {
           'public/stylesheets/elements-page-ie6.css': 'public/sass/elements-page-ie6.scss',
           'public/stylesheets/elements-page-ie7.css': 'public/sass/elements-page-ie7.scss',
           'public/stylesheets/elements-page-ie8.css': 'public/sass/elements-page-ie8.scss',
-          'public/stylesheets/prism.css': 'public/sass/prism.scss',
+          'public/stylesheets/prism.css': 'public/sass/prism.scss'
         },
         options: {
           includePaths: [
@@ -29,7 +28,7 @@ module.exports = function (grunt) {
 
     // Empty encoded snippets folder
     clean: {
-      contents: ['app/views/snippets/encoded/*'],
+      contents: ['app/views/snippets/encoded/*']
     },
 
     // Copies templates and assets from external modules and dirs
@@ -59,11 +58,11 @@ module.exports = function (grunt) {
       govuk_template_jinja: {
         files: [{
           expand: true,
-            cwd: 'govuk_modules/govuk_template/views/layouts/',
-            src: '**',
-            dest: 'lib/'
-          }]
-      },
+          cwd: 'govuk_modules/govuk_template/views/layouts/',
+          src: '**',
+          dest: 'lib/'
+        }]
+      }
     },
 
     // Encode HTML snippets
@@ -71,7 +70,7 @@ module.exports = function (grunt) {
       files: {
         src: ['app/views/snippets/*.html'],
         dest: 'app/views/snippets/encoded/'
-      },
+      }
     },
 
     // workaround for libsass
@@ -124,9 +123,9 @@ module.exports = function (grunt) {
       }
     }
 
-  });
+  })
 
-  [
+  ;[
     'grunt-contrib-clean',
     'grunt-contrib-copy',
     'grunt-contrib-watch',
@@ -136,8 +135,8 @@ module.exports = function (grunt) {
     'grunt-shell',
     'grunt-htmlentities'
   ].forEach(function (task) {
-    grunt.loadNpmTasks(task);
-  });
+    grunt.loadNpmTasks(task)
+  })
 
   grunt.registerTask('default', [
     'clean',
@@ -145,7 +144,7 @@ module.exports = function (grunt) {
     'encode_snippets',
     'sass',
     'concurrent:target'
-  ]);
+  ])
 
   grunt.registerTask(
     'test_default',
@@ -154,45 +153,45 @@ module.exports = function (grunt) {
       'copy',
       'sass'
     ]
-  );
+  )
 
   grunt.registerTask(
     'encode_snippets',
     'Encode HTML snippets',
-    function() {
-      grunt.task.run('htmlentities');
+    function () {
+      grunt.task.run('htmlentities')
     }
-  );
+  )
 
   grunt.registerTask(
     'lint',
     'Use govuk-scss-lint to lint the sass files',
-    function() {
-      grunt.task.run('shell', 'lint_message');
+    function () {
+      grunt.task.run('shell', 'lint_message')
     }
-  );
+  )
 
   grunt.registerTask(
     'lint_message',
     'Output a message once linting is complete',
-    function() {
-      grunt.log.write("scss lint is complete, without errors.");
+    function () {
+      grunt.log.write('scss lint is complete, without errors.')
     }
-  );
+  )
 
   grunt.registerTask(
     'test',
     'Lint the Sass files, then check the app runs',
-    function() {
-      grunt.task.run('lint', 'test_default', 'test_message');
+    function () {
+      grunt.task.run('lint', 'test_default', 'test_message')
     }
-  );
+  )
 
   grunt.registerTask(
     'test_message',
     'Output a message once the tests are complete',
-    function() {
-      grunt.log.write("scss lint is complete and the app runs, without errors.");
+    function () {
+      grunt.log.write('scss lint is complete and the app runs, without errors.')
     }
-  );
-};
+  )
+}

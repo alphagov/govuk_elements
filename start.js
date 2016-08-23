@@ -1,15 +1,19 @@
-var fs = require('fs'),
-    pidFile = __dirname + '/.start.pid',
-    fileOptions = { encoding : 'utf-8' };
+var path = require('path')
+var fs = require('fs')
+var pidFile = path.join(__dirname, '/.start.pid')
+var fileOptions = { encoding: 'utf-8' }
 
 // start grunt
+var gruntfile = path.join(__dirname, '/Gruntfile.js')
+require('./node_modules/grunt/lib/grunt.js').cli({
+  'gruntfile': gruntfile
+})
 
-require(__dirname + '/node_modules/grunt/lib/grunt.js').cli();
-fs.writeFileSync(pidFile, process.pid, fileOptions);
-process.on('SIGINT', function() {
-  var pid = fs.readFileSync(pidFile, fileOptions);
+fs.writeFileSync(pidFile, process.pid, fileOptions)
+process.on('SIGINT', function () {
+  var pid = fs.readFileSync(pidFile, fileOptions)
 
-  fs.unlink(pidFile);
-  process.kill(pid, 'SIGTERM');
-  process.exit();
+  fs.unlink(pidFile)
+  process.kill(pid, 'SIGTERM')
+  process.exit()
 })
