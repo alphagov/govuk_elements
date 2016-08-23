@@ -125,6 +125,10 @@ a:active {
 }
 
 // External link styles
+// These are currently deprecated and are liable to be removed in a future release.
+// If your service has user research that indicates that external links are useful
+// (or not) then we’d like to hear from you either on Slack,
+// digital-service-designers or opening an issue.
 a[rel="external"] {
   @include external-link-default;
   @include external-link-16;
