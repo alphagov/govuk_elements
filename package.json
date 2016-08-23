@@ -38,7 +38,6 @@
     "ignore": [
       "lib",
       "public/javascripts/vendor/",
-      "node_modules",
       "tests"
     ]
   },
