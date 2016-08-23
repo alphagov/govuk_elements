@@ -1,3 +1,13 @@
+# 2.0.0
+
+- Remove the images path override from the helpers partial ([PR #292](https://github.com/alphagov/govuk_elements/pull/292)). This will break background images that are currently using the `file-url` function from [the url-helpers partial in the frontend toolkit](https://github.com/alphagov/govuk_frontend_toolkit/blob/d54c9b26d314a6e6cb50ba90f6e96ca50049498f/stylesheets/_url-helpers.scss). As `$path` will vary from project to project you will need to define this in your main application stylesheet.
+- Bump govuk frontend toolkit to 4.16.1 ([PR #288](https://github.com/alphagov/govuk_elements/pull/288)). This adds space key activation to links with a role of button.
+- Form validation patterns for conditionally revealing content ([PR #286](https://github.com/alphagov/govuk_elements/pull/286))
+- Centre text on full-width buttons ([PR #289](https://github.com/alphagov/govuk_elements/pull/289))
+- Lint JS code using [StandardJS](http://standardjs.com/) ([PR #290](https://github.com/alphagov/govuk_elements/pull/290))
+
+*This version deprecates external link styles. If your service has user research that indicates that external links are useful (or not) then we’d like to hear from you either on Slack, [digital-service-designers](https://groups.google.com/a/digital.cabinet-office.gov.uk/forum/#!forum/digital-service-designers) or [opening an issue](https://github.com/alphagov/govuk_elements/issues/new).*
+
 # 1.2.2
 
 - Bump govuk frontend toolkit to 4.14.4 (PR #278)
