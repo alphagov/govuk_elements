@@ -1,4 +1,5 @@
 <!--- Provide a summary of the issue in the Title above -->
+<!--- Providing context helps us come up with a solution that is most useful in the real world -->
 
 ## How would you expect it to work?
 <!--- If you're describing a bug, tell us what should happen -->
@@ -18,10 +19,6 @@
 2.
 3.
 4.
-
-## Tell us a little more (optional)
-<!--- How has this issue affected you? What are you trying to accomplish? -->
-<!--- Providing context helps us come up with a solution that is most useful in the real world -->
 
 ## Tell us about your environment
 <!--- Include as many relevant details about the environment you experienced the bug in -->

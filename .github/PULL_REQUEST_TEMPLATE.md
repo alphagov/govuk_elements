@@ -1,11 +1,11 @@
 <!--- Provide a summary of your changes in the Title above -->
 
-## What does this pull request do?
-<!--- Describe your changes -->
-
-## What problem does it solve?
+## What problem does the pull request solve?
 <!--- Why is this change required? -->
 <!--- If it fixes an open issue, please link to the issue here. -->
+
+## What does it do?
+<!--- Describe your changes -->
 
 ## How has this been tested?
 <!--- Please describe in detail how you tested your changes. -->
