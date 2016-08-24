@@ -11,9 +11,9 @@ GOV.UK elements
 
 GOV.UK elements is three things:
 
-1. an online design guide, explaining how to make your service look consistent with the rest of GOV.UK
+1. [an online design guide](http://govuk-elements.herokuapp.com/), explaining how to make your service look consistent with the rest of GOV.UK
 2. an example of how to use the code in the [GOV.UK template](https://github.com/alphagov/govuk_template) and the [GOV.UK frontend toolkit](https://github.com/alphagov/govuk_frontend_toolkit)
-3. an npm package of the Sass files
+3. an [npm package of the Sass files](https://www.npmjs.com/package/govuk-elements-sass)
 
 The guide can be seen here: [http://govuk-elements.herokuapp.com](http://govuk-elements.herokuapp.com/).
 
@@ -38,15 +38,35 @@ Ignore the `/public/sass/elements-page.scss` files, these exist to style the pag
 
 ## Using the govuk-elements-sass package
 
+## Install
+
 To install the govuk-elements-sass package, use:
 
     `npm install govuk-elements-sass`
 
 This installs the package as well as the packages it depends on to the local `/node_modules/` folder.
 
-The GOV.UK frontend toolkit scss dependencies must be imported first, as these contain Sass variables, mixins and functions.
+## Usage
 
-The `_govuk_elements.scss` partial shows which files are required.
+To import all of the govuk-elements-sass files, first import the `_govuk-elements.scss` partial.
+
+    @import govuk-elements;
+
+## Set a path for your image assets
+
+If you are not using Rails or Compass, then you will need to define a $path variable in your main application stylesheet.
+
+In `public/sass/main.scss` there is an example of this:
+
+    // Path to assets for use with the file-url function
+    // in the govuk frontend toolkit's url-helpers partial
+    $path: "/public/images/";
+
+## Alternate usage
+
+You can pick and chosoe partials from the govuk-elements-sass package.
+
+**The GOV.UK frontend toolkit scss dependencies listed below must be imported first**.
 
     // GOV.UK frontend toolkit
     // Sass variables, mixins and functions
@@ -71,17 +91,28 @@ The `_govuk_elements.scss` partial shows which files are required.
     // Functions
     // @import "url-helpers";                         // Function to output image-url, or prefixed path (Rails and Compass only)
 
+You can find these at the top of the `_govuk_elements.scss` partial.
 
-Add the `node_modules/govuk_frontend_toolkit` and `node_modules/govuk-elements-sass` directories to the `includePaths` property of your Sass plugin - if you're using a task runner like Gulp, to reference the location of these files.
-
-If you're not using the [GOV.UK template](https://github.com/alphagov/govuk_template), you'll also need to uncomment the base partial in `_govuk_elements.scss`, or create your own.
+If you're not using the [GOV.UK template](https://github.com/alphagov/govuk_template),
+you'll also need to uncomment the base partial in `_govuk_elements.scss`, or create your own.
 
     // @import "elements/base";                       // HTML elements, set by the GOV.UK template
 
+## Compile
 
-## Example: Using [Gulp](http://gulpjs.com/) to compile the govuk-elements-sass files
+### Using a task runner to compile the Sass files
 
-### Example folder structure
+### Using Grunt
+
+Take a look at this project's Gruntfile.js.
+
+### Using Gulp
+
+Add the `node_modules/govuk_frontend_toolkit` and `node_modules/govuk-elements-sass` directories to the `includePaths` property of your Sass plugin - if you're using a task runner like Gulp, to reference the location of these files.
+
+#### Example: Using [Gulp](http://gulpjs.com/) to compile the govuk-elements-sass files
+
+#### Example folder structure
 
     - index.html
     -- node_modules
@@ -96,7 +127,7 @@ If you're not using the [GOV.UK template](https://github.com/alphagov/govuk_temp
 
 Import `_govuk-elements.scss` into your main.scss file.
 
-### Example Gulpfile.js
+#### Example Gulpfile.js
 
     'use strict';
 
@@ -104,8 +135,8 @@ Import `_govuk-elements.scss` into your main.scss file.
     var sass = require('gulp-sass');
 
     var repo_root = __dirname + '/';
-    var govuk_frontend_toolkit_root =  repo_root + 'node_modules/govuk_frontend_toolkit/stylesheets'; // 1
-    var govuk_elements_sass_root =  repo_root + 'node_modules/govuk-elements-sass/public/sass'; // 2
+    var govuk_frontend_toolkit_root =  repo_root + 'node_modules/govuk_frontend_toolkit/stylesheets'; // 1.
+    var govuk_elements_sass_root =  repo_root + 'node_modules/govuk-elements-sass/public/sass';       // 2.
 
     // Compile scss files to css
     gulp.task('styles', function () {
@@ -122,11 +153,12 @@ In the example above `includePaths` uses two paths to resolve the scss @import s
 1. The location of the directory containing the govuk_frontend_toolkit sass files
 2. The location of the directory containing the govuk-elements-sass files
 
-### Run
+#### Run
 
     gulp styles
 
 To compile the govuk-elements-sass files.
+
 
 ## Running this site locally
 
