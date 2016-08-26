@@ -9,11 +9,9 @@
   clear: left;
   position: relative;
 
-  background: $panel-colour;
-  border: 1px solid $panel-colour;
-  padding: (18px $gutter $gutter-half $gutter * 1.8);
+  padding: (7px $gutter-one-third 7px $gutter * 1.5);
+  margin-bottom: $gutter-half;
 
-  margin-bottom: 10px;
   cursor: pointer; // Encourage clicking on block labels
 
   @include media(tablet) {
@@ -24,21 +22,74 @@
   // Absolutely position inputs within label, to allow text to wrap
   input {
     position: absolute;
-    top: 15px;
-    left: $gutter-half;
     cursor: pointer;
-    margin: 0;
-    width: 29px;
-    height: 29px;
+    left: 0;
+    top: 0;
+    width: 37px;
+    height: 37px;
 
-    @include ie(8) {
-      top: 12px;
+    .js-enabled & {
+      // hide off-sceeen, as visibility: hidden removes inputs from tab order
+      left: -9999px;
+    }
+
+    @include ie-lte(8) {
+      &,
+      .js-enabled & {
+        left: 0;
+      }
     }
   }
 
-  // Change border on hover
-  &:hover {
-    border-color: $black;
+  .js-enabled & {
+    &.selection-button-radio::before {
+      content: "";
+      border: 2px solid $black;
+      border-radius: 50%;
+      background: $white;
+      width: 33px;
+      height: 33px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &.selection-button-radio.selected::after {
+      content: "";
+      border: 2px solid $black;
+      border-radius: 50%;
+      background: $black;
+      width: 19px;
+      height: 19px;
+      position: absolute;
+      top: 7px;
+      left: 7px;
+    }
+
+    &.selection-button-checkbox::before {
+      content: "";
+      border: 2px solid $black;
+      background: $white;
+      width: 33px;
+      height: 33px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &.selection-button-checkbox.selected::after {
+      content: "";
+      border: solid $black;
+      border-width: 0 0 4px 4px;
+      width: 15px;
+      height: 9px;
+      position: absolute;
+      top: 9px;
+      left: 9px;
+      -webkit-transform: rotate(-45deg); // Safari 8 compatibility
+      -ms-transform: rotate(-45deg); // IE9 compatibility
+      transform: rotate(-45deg);
+    }
   }
 
   &:last-child,
@@ -53,7 +104,7 @@
 
   @include media (tablet) {
     margin-bottom: 0;
-    margin-right: 10px;
+    margin-right: $gutter-half;
   }
 }
 
@@ -62,15 +113,15 @@
 // Allow a qualifying element for the selected state
 // scss-lint:disable QualifyingElement
 
-// Add selected state
-.js-enabled label.selected {
-  background: $white;
-  border-color: $black;
+// Add focus to block labels inputs
+.js-enabled label.focused::before {
+  @include box-shadow(0 0 0 3px $focus-colour);
 }
 
-// Add focus to block labels
-.js-enabled label.focused {
-  outline: 3px solid $focus-colour;
+@include ie-lte(8) {
+  .js-enabled label.focused {
+    outline: 3px solid $focus-colour;
+  }
 }
 
 // scss-lint:enable QualifyingElement
