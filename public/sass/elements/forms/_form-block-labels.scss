@@ -28,15 +28,10 @@
     width: 37px;
     height: 37px;
 
-    .js-enabled & {
-      // hide off-sceeen, as visibility: hidden removes inputs from tab order
-      left: -9999px;
-    }
-
-    @include ie-lte(8) {
-      &,
+    // IE8 doesn’t support pseudoelements, so we don’t want to hide native elements.
+    @if ($is-ie == false) or ($ie-version == 9) {
       .js-enabled & {
-        left: 0;
+        @include visually-hidden;
       }
     }
   }
