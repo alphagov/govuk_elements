@@ -49,16 +49,19 @@
       left: 0;
     }
 
-    &.selection-button-radio.selected::after {
+    &.selection-button-radio::after {
       content: "";
-      border: 2px solid currentColor;
       border-radius: 50%;
-      background: currentColor;
-      width: 19px;
-      height: 19px;
+      background: transparent;
+      width: 23px;
+      height: 23px;
       position: absolute;
       top: 7px;
       left: 7px;
+    }
+
+    &.selection-button-radio.selected::after {
+      background: currentColor;
     }
 
     &.selection-button-checkbox::before {
@@ -72,9 +75,9 @@
       left: 0;
     }
 
-    &.selection-button-checkbox.selected::after {
+    &.selection-button-checkbox::after {
       content: "";
-      border: solid currentColor;
+      border: solid transparent;
       border-width: 0 0 4px 4px;
       background: transparent;
       width: 15px;
@@ -85,6 +88,10 @@
       -webkit-transform: rotate(-45deg); // Safari 8 compatibility
       -ms-transform: rotate(-45deg); // IE9 compatibility
       transform: rotate(-45deg);
+    }
+
+    &.selection-button-checkbox.selected::after {
+      border-color: currentColor;
     }
   }
 
