@@ -39,9 +39,9 @@
   .js-enabled & {
     &.selection-button-radio::before {
       content: "";
-      border: 2px solid $black;
+      border: 2px solid currentColor;
       border-radius: 50%;
-      background: $white;
+      background: transparent;
       width: 33px;
       height: 33px;
       position: absolute;
@@ -51,9 +51,9 @@
 
     &.selection-button-radio.selected::after {
       content: "";
-      border: 2px solid $black;
+      border: 2px solid currentColor;
       border-radius: 50%;
-      background: $black;
+      background: currentColor;
       width: 19px;
       height: 19px;
       position: absolute;
@@ -63,8 +63,8 @@
 
     &.selection-button-checkbox::before {
       content: "";
-      border: 2px solid $black;
-      background: $white;
+      border: 2px solid currentColor;
+      background: transparent;
       width: 33px;
       height: 33px;
       position: absolute;
@@ -74,8 +74,9 @@
 
     &.selection-button-checkbox.selected::after {
       content: "";
-      border: solid $black;
+      border: solid currentColor;
       border-width: 0 0 4px 4px;
+      background: transparent;
       width: 15px;
       height: 9px;
       position: absolute;
