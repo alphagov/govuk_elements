@@ -54,16 +54,13 @@
     &.selection-button-radio::after {
       content: "";
       border-radius: 50%;
-      background: transparent;
+      background: currentColor;
       width: 20px;
       height: 20px;
       position: absolute;
       top: 9px;
       left: 9px;
-    }
-
-    &.selection-button-radio.selected::after {
-      background: currentColor;
+      @include opacity(0);
     }
 
     &.selection-button-checkbox::before {
@@ -79,7 +76,7 @@
 
     &.selection-button-checkbox::after {
       content: "";
-      border: solid transparent;
+      border: solid currentColor;
       border-width: 0 0 5px 5px;
       background: transparent;
       width: 17px;
@@ -90,10 +87,23 @@
       -webkit-transform: rotate(-45deg); // Safari 8 compatibility
       -ms-transform: rotate(-45deg); // IE9 compatibility
       transform: rotate(-45deg);
+      @include opacity(0);
     }
 
-    &.selection-button-checkbox.selected::after {
-      border-color: currentColor;
+    // Hover state
+    &.selection-button-radio,
+    &.selection-button-checkbox {
+      &:hover::after {
+        @include opacity(.15);
+      }
+    }
+
+    // Selected state
+    &.selection-button-radio,
+    &.selection-button-checkbox {
+      &.selected::after {
+        @include opacity(1);
+      }
     }
   }
 
