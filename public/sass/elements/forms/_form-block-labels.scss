@@ -9,13 +9,15 @@
   clear: left;
   position: relative;
 
-  padding: (7px $gutter-one-third 7px $gutter * 1.5);
-  margin-bottom: $gutter-half;
+  padding: (8px $gutter-one-third 9px 50px);
+  margin-bottom: $gutter-one-third;
 
   cursor: pointer; // Encourage clicking on block labels
 
   @include media(tablet) {
     float: left;
+    padding-top: 7px;
+    padding-bottom: 7px;
     // width: 25%; - Test : check that text within labels will wrap
   }
 
@@ -25,8 +27,8 @@
     cursor: pointer;
     left: 0;
     top: 0;
-    width: 37px;
-    height: 37px;
+    width: 38px;
+    height: 38px;
 
     // IE8 doesn’t support pseudoelements, so we don’t want to hide native elements.
     @if ($is-ie == false) or ($ie-version == 9) {
@@ -42,8 +44,8 @@
       border: 2px solid currentColor;
       border-radius: 50%;
       background: transparent;
-      width: 33px;
-      height: 33px;
+      width: 34px;
+      height: 34px;
       position: absolute;
       top: 0;
       left: 0;
@@ -53,11 +55,11 @@
       content: "";
       border-radius: 50%;
       background: transparent;
-      width: 23px;
-      height: 23px;
+      width: 20px;
+      height: 20px;
       position: absolute;
-      top: 7px;
-      left: 7px;
+      top: 9px;
+      left: 9px;
     }
 
     &.selection-button-radio.selected::after {
@@ -68,8 +70,8 @@
       content: "";
       border: 2px solid currentColor;
       background: transparent;
-      width: 33px;
-      height: 33px;
+      width: 34px;
+      height: 34px;
       position: absolute;
       top: 0;
       left: 0;
@@ -78,13 +80,13 @@
     &.selection-button-checkbox::after {
       content: "";
       border: solid transparent;
-      border-width: 0 0 4px 4px;
+      border-width: 0 0 5px 5px;
       background: transparent;
-      width: 15px;
-      height: 9px;
+      width: 17px;
+      height: 7px;
       position: absolute;
-      top: 9px;
-      left: 9px;
+      top: 10px;
+      left: 8px;
       -webkit-transform: rotate(-45deg); // Safari 8 compatibility
       -ms-transform: rotate(-45deg); // IE9 compatibility
       transform: rotate(-45deg);
@@ -107,7 +109,7 @@
 
   @include media (tablet) {
     margin-bottom: 0;
-    margin-right: $gutter-half;
+    margin-right: $gutter;
   }
 }
 
@@ -118,7 +120,7 @@
 
 // Add focus to block labels inputs
 .js-enabled label.focused::before {
-  @include box-shadow(0 0 0 3px $focus-colour);
+  @include box-shadow(0 0 0 5px $focus-colour);
 }
 
 @include ie-lte(8) {
