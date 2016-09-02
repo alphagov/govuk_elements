@@ -30,7 +30,7 @@
     width: 38px;
     height: 38px;
 
-    // IE8 doesn’t support pseudoelements, so we don’t want to hide native elements.
+    // IE8 doesn’t support pseudoelements, so we don’t want to hide native elements there.
     @if ($is-ie == false) or ($ie-version == 9) {
       .js-enabled & {
         @include visually-hidden;
@@ -98,6 +98,25 @@
       }
     }
 
+    // Focused state
+    &.selection-button-radio,
+    &.selection-button-checkbox {
+      &.focused::before {
+        @include box-shadow(0 0 0 5px $focus-colour);
+      }
+      // IE8 focus outline should stay as a border around the entire label
+      // Lack of padding doesn’t matter as IE8 won’t resize the inputs.
+      @include ie-lte(8) {
+        &.focused {
+          outline: 3px solid $focus-colour;
+
+          input:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+
     // Selected state
     &.selection-button-radio,
     &.selection-button-checkbox {
@@ -121,27 +140,4 @@
     margin-bottom: 0;
     margin-right: $gutter;
   }
-}
-
-// Selected and focused states
-
-// Allow a qualifying element for the selected state
-// scss-lint:disable QualifyingElement
-
-// Add focus to block labels inputs
-.js-enabled label.focused::before {
-  @include box-shadow(0 0 0 5px $focus-colour);
-}
-
-@include ie-lte(8) {
-  .js-enabled label.focused {
-    outline: 3px solid $focus-colour;
-  }
-}
-
-// scss-lint:enable QualifyingElement
-
-// Remove focus from radio/checkboxes
-.js-enabled .focused input:focus {
-  outline: none;
 }
