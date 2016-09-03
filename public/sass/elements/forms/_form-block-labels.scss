@@ -96,6 +96,12 @@
       &:hover::after {
         @include opacity(.15);
       }
+      // hide the hover state in iOS / mobile Chrome
+      @media (hover: none) {
+        &:hover::after {
+          opacity: 0;
+        }
+      }
     }
 
     // Focused state
