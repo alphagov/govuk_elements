@@ -84,6 +84,8 @@
       position: absolute;
       top: 10px;
       left: 8px;
+      -moz-transform: rotate(-45deg); // Firefox 15 compatibility
+      -o-transform: rotate(-45deg); // Opera 12.0 compatibility
       -webkit-transform: rotate(-45deg); // Safari 8 compatibility
       -ms-transform: rotate(-45deg); // IE9 compatibility
       transform: rotate(-45deg);
