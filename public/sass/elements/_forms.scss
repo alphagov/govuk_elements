@@ -148,11 +148,6 @@ textarea {
   padding: 5px 4px 4px;
   background-color: transparent;
   border: 2px solid;
-  border-color: currentColor;
-
-  @include ie-lte(8) {
-    border-color: $text-colour;
-  }
 
   // TODO: Remove 50% width set for tablet and up
   // !! BREAKING CHANGE !!
