@@ -145,9 +145,14 @@ textarea {
   @include core-19;
   width: 100%;
 
-  padding: 4px;
-  background-color: $white;
-  border: 2px solid $grey-1;
+  padding: 5px 4px 4px;
+  background-color: transparent;
+  border: 2px solid;
+  border-color: currentColor;
+
+  @include ie-lte(8) {
+    border-color: $text-colour;
+  }
 
   // TODO: Remove 50% width set for tablet and up
   // !! BREAKING CHANGE !!
