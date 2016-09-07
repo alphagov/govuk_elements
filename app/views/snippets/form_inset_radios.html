@@ -1,16 +1,19 @@
 <h1 class="heading-medium">
   How do you want to be contacted?
 </h1>
+<p>
+  Select all that apply:
+</p>
 
 <form>
   <fieldset>
 
-    <legend class="visuallyhidden">How do you want to be contacted?</legend>
+    <legend class="visually-hidden">How do you want to be contacted?</legend>
 
     <div class="form-group">
 
       <label class="block-label" data-target="contact-by-email" for="example-contact-by-email">
-        <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes">
+        <input id="example-contact-by-email" type="checkbox" value="Yes">
         Email
       </label>
       <div class="panel panel-border-narrow js-hidden" id="contact-by-email">
@@ -19,7 +22,7 @@
       </div>
 
       <label class="block-label" data-target="contact-by-phone" for="example-contact-by-phone">
-        <input id="example-contact-by-phone" type="radio" name="radio-contact-group" value="No">
+        <input id="example-contact-by-phone" type="checkbox" value="No">
         Phone
       </label>
       <div class="panel panel-border-narrow js-hidden" id="contact-by-phone">
@@ -28,7 +31,7 @@
       </div>
 
       <label class="block-label" data-target="contact-by-text" for="example-contact-by-text">
-        <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No">
+        <input id="example-contact-by-text" type="checkbox" value="No">
         Text message
       </label>
       <div class="panel panel-border-narrow js-hidden" id="contact-by-text">
