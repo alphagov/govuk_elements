@@ -177,7 +177,7 @@ Install the required node modules
 
 Run the app
 
-    node start.js
+    npm start
 
 Go to [localhost:3000](http://localhost:3000) in your browser.
 
