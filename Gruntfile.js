@@ -48,12 +48,12 @@ module.exports = function (grunt) {
           src: '**',
           dest: 'govuk_modules/govuk_frontend_toolkit/'
         },
-        {
-          expand: true,
-          cwd: 'node_modules/govuk_template_jinja/',
-          src: '**',
-          dest: 'govuk_modules/govuk_template/'
-        }]
+          {
+            expand: true,
+            cwd: 'node_modules/govuk_template_jinja/',
+            src: '**',
+            dest: 'govuk_modules/govuk_template/'
+          }]
       },
       govuk_template_jinja: {
         files: [{
@@ -138,60 +138,26 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks(task)
   })
 
-  grunt.registerTask('default', [
-    'clean',
-    'copy',
-    'encode_snippets',
-    'sass',
-    'concurrent:target'
-  ])
+  grunt.registerTask('default', ['clean', 'copy', 'encode-snippets', 'sass', 'concurrent:target'])
 
-  grunt.registerTask(
-    'test_default',
-    'Test that the default task runs the app',
-    [
-      'copy',
-      'sass'
-    ]
-  )
+  // Encode HTML snippets
+  grunt.registerTask('encode-snippets', ['htmlentities', 'encode-snippets-success'])
+  grunt.registerTask('encode-snippets-success', function () {
+    grunt.log.writeln('HTML snippets encoded.'['yellow'].bold)
+  })
 
-  grunt.registerTask(
-    'encode_snippets',
-    'Encode HTML snippets',
-    function () {
-      grunt.task.run('htmlentities')
-    }
-  )
+  // Tests
+  grunt.registerTask('test', ['lint', 'test-default', 'test-success'])
+  grunt.registerTask('test-success', function () {
+    grunt.log.writeln('The tests are complete and the app runs, without errors.'['yellow'].bold)
+  })
 
-  grunt.registerTask(
-    'lint',
-    'Use govuk-scss-lint to lint the sass files',
-    function () {
-      grunt.task.run('shell', 'lint_message')
-    }
-  )
+  // 1. Use govuk-scss-lint to lint the sass files
+  grunt.registerTask('lint', ['shell', 'lint-success'])
+  grunt.registerTask('lint-success', function () {
+    grunt.log.writeln('Scss lint is complete, without errors.'['yellow'].bold)
+  })
 
-  grunt.registerTask(
-    'lint_message',
-    'Output a message once linting is complete',
-    function () {
-      grunt.log.write('scss lint is complete, without errors.')
-    }
-  )
-
-  grunt.registerTask(
-    'test',
-    'Lint the Sass files, then check the app runs',
-    function () {
-      grunt.task.run('lint', 'test_default', 'test_message')
-    }
-  )
-
-  grunt.registerTask(
-    'test_message',
-    'Output a message once the tests are complete',
-    function () {
-      grunt.log.write('scss lint is complete and the app runs, without errors.')
-    }
-  )
+  // 2. Test that the default grunt task runs the app
+  grunt.registerTask('test-default', ['clean', 'copy', 'encode-snippets', 'sass'])
 }
