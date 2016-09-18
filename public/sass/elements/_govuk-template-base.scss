@@ -5,9 +5,7 @@ input,
 table,
 td,
 th {
-  // Allow uppercase letters in font stack variable names
-  // scss-lint:disable NameFormat
-  font-family: $NTA-Light;
+  font-family: $toolkit-font-stack;
 }
 
 // basic styles for HTML5 and other elements
