@@ -53,6 +53,8 @@ pre[class*="language-"] {
   padding: 1em;
   margin: 0 0 30px 0;
   overflow: auto;
+  -webkit-user-select: all;
+  user-select: all;
 }
 
 :not(pre) > code[class*="language-"],
