@@ -32,7 +32,8 @@
     "standard": "^7.1.2"
   },
   "scripts": {
-    "test": "standard && grunt test",
+    "test": "standard && grunt test && npm run lint --silent",
+    "lint": "bundle && bundle exec govuk-lint-sass public/sass/elements/",
     "start": "grunt"
   },
   "standard": {
