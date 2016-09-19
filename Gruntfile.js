@@ -111,16 +111,6 @@ module.exports = function (grunt) {
           logConcurrentOutput: true
         }
       }
-    },
-
-    // Lint scss files
-    shell: {
-      multiple: {
-        command: [
-          'bundle',
-          'bundle exec govuk-lint-sass public/sass/elements/'
-        ].join('&&')
-      }
     }
 
   })
@@ -132,7 +122,6 @@ module.exports = function (grunt) {
     'grunt-sass',
     'grunt-nodemon',
     'grunt-concurrent',
-    'grunt-shell',
     'grunt-htmlentities'
   ].forEach(function (task) {
     grunt.loadNpmTasks(task)
@@ -153,7 +142,7 @@ module.exports = function (grunt) {
   })
 
   // 1. Use govuk-scss-lint to lint the sass files
-  grunt.registerTask('lint', ['shell', 'lint-success'])
+  grunt.registerTask('lint', ['lint-success'])
   grunt.registerTask('lint-success', function () {
     grunt.log.writeln('Scss lint is complete, without errors.'['yellow'].bold)
   })
