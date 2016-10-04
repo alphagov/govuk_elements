@@ -24,12 +24,12 @@
   // Absolutely position inputs within label, to allow text to wrap
   input {
     position: absolute;
-    top: 15px;
+    top: 21px; // 15px; updated as height is removed
     left: $gutter-half;
     cursor: pointer;
     margin: 0;
     width: 29px;
-    height: 29px;
+    // height: 29px; // removed as a fix for safari
 
     @include ie(8) {
       top: 12px;
