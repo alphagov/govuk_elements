@@ -32,3 +32,6 @@ deploy:
     tags: true
     all_branches: true
 sudo: false
+env:
+  global:
+    secure: eFtS+dlf00c3h4Rpp1FSZw6wOmZPmY4lYbqPV6MQa+VUgh+FRbUYOjDJP3UFaTsWNxMIL4mhEKFYLnkVftBdz1FgPjhIO3jNXleGMgVVedtD+qo5hTu1KI39t68K2YcELx9+kzeccX77WVmv/qJTVg7+f84WP9ebzVOJCQprJuw=
