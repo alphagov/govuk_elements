@@ -32,7 +32,7 @@ deploy:
     tags: true
     all_branches: true
 - provider: script
-  script: "update-release-branch.sh"
+  script: "./update-release-branch.sh"
 sudo: false
 env:
   global:
