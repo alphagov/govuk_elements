@@ -59,6 +59,11 @@ main {
   @include bold-16();
 }
 
+// Bold, without needing a font size
+.bold {
+  font-weight: 700;
+}
+
 // Common heading sizes
 // Using the bold-xx mixins from the govuk_toolkit _typography.scss file
 // Spacing is set in em, using the px to em function in the elements _helpers.scss file
