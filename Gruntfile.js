@@ -13,7 +13,7 @@ module.exports = function (grunt) {
           'public/stylesheets/elements-page-ie6.css': 'public/sass/elements-page-ie6.scss',
           'public/stylesheets/elements-page-ie7.css': 'public/sass/elements-page-ie7.scss',
           'public/stylesheets/elements-page-ie8.css': 'public/sass/elements-page-ie8.scss',
-          'public/stylesheets/prism.css': 'public/sass/prism.scss'
+          'public/stylesheets/vendor/prism.css': 'public/sass/vendor/prism.scss'
         },
         options: {
           includePaths: [
@@ -48,12 +48,12 @@ module.exports = function (grunt) {
           src: '**',
           dest: 'govuk_modules/govuk_frontend_toolkit/'
         },
-        {
-          expand: true,
-          cwd: 'node_modules/govuk_template_jinja/',
-          src: '**',
-          dest: 'govuk_modules/govuk_template/'
-        }]
+          {
+            expand: true,
+            cwd: 'node_modules/govuk_template_jinja/',
+            src: '**',
+            dest: 'govuk_modules/govuk_template/'
+          }]
       },
       govuk_template_jinja: {
         files: [{
