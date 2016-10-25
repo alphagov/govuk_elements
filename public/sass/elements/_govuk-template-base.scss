@@ -122,25 +122,6 @@ a:active {
   color: $link-active-colour;
 }
 
-// External link styles
-// These are currently deprecated and are liable to be removed in a future release.
-// If your service has user research that indicates that external links are useful
-// (or not) then we’d like to hear from you either on Slack,
-// digital-service-designers or opening an issue.
-a[rel="external"] {
-  @include external-link-default;
-  @include external-link-16;
-
-  @include media(tablet) {
-    @include external-link-19;
-  }
-}
-
-.external-link {
-  @include external-link-12-no-hover;
-  @include external-link-heading;
-}
-
 // Set focus styles
 a {
   // Allow RGBA here, this line has been copied from govuk_template
