@@ -8,7 +8,7 @@
     "node": ">=4.4.7"
   },
   "dependencies": {
-    "govuk_frontend_toolkit": "^4.18.4"
+    "govuk_frontend_toolkit": "^5.0.0"
   },
   "devDependencies": {
     "body-parser": "^1.14.1",
@@ -16,7 +16,7 @@
     "express": "4.13.3",
     "express-nunjucks": "^0.9.3",
     "express-writer": "0.0.4",
-    "govuk_template_jinja": "0.18.3",
+    "govuk_template_jinja": "0.19.0",
     "grunt": "^0.4.2",
     "grunt-cli": "0.1.13",
     "grunt-concurrent": "^0.4.3",
