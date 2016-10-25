@@ -1,3 +1,13 @@
+# 2.1.0
+
+- Update govuk_frontend_toolkit to 5.0.0 and govuk_template to 0.19.0 ([PR #333](https://github.com/alphagov/govuk_elements/pull/333))
+- Add a select box example ([PR #303](https://github.com/alphagov/govuk_elements/pull/303))
+- Add bullet points describing use of disabled buttons ([PR #304](https://github.com/alphagov/govuk_elements/pull/304))
+- Add reasoning for native over custom file inputs
+- Clear floats on details elements ([PR #328](https://github.com/alphagov/govuk_elements/pull/328))
+- Add a `.bold` utility class ([PR #321](https://github.com/alphagov/govuk_elements/pull/321))
+- Remove external link styles ([PR #274](https://github.com/alphagov/govuk_elements/pull/274))
+
 # 2.0.0
 
 - Remove the images path override from the helpers partial ([PR #292](https://github.com/alphagov/govuk_elements/pull/292)). This will break background images that are currently using the `file-url` function from [the url-helpers partial in the frontend toolkit](https://github.com/alphagov/govuk_frontend_toolkit/blob/d54c9b26d314a6e6cb50ba90f6e96ca50049498f/stylesheets/_url-helpers.scss). As `$path` will vary from project to project you will need to define this in your main application stylesheet.
