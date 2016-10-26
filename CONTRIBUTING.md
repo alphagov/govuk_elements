@@ -5,8 +5,18 @@ guidelines:
 
 ## Indentation and whitespace
 
-Your JavaScript code should pass [linting](https://github.com/alphagov/govuk_prototype_kit/blob/0d9835b7ad8d7bc06aa288204eb3ce9a07116be2/docs/linting.md).
 2-space, soft-tabs only. No trailing whitespace.
+
+## JavaScript
+
+`govuk_elements` uses [standardjs](http://standardjs.com/), an opinionated JavaScript linter.
+All JavaScript files follow its conventions, and it runs on CI to ensure that new pull requests are in line with them.
+
+To check the whole codebase, run:
+
+`npm test`
+
+Take a look at the [prototype kit documentation on linting](https://github.com/alphagov/govuk_prototype_kit/blob/master/docs/linting.md).
 
 ## Versioning
 
