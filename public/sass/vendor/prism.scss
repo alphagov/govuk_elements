@@ -32,7 +32,6 @@ pre[class*="language-"] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  background-color: $code-background; // light grey
   word-spacing: normal;
   word-break: normal;
   // Wrap lines of code rather than overflowing
@@ -133,6 +132,11 @@ pre[class*="language-"] {
 .token.string,
 .token.variable {
   color: $code-blue;
+}
+
+// Color numbers the same as un-detected text for css - so 'core-16' and similar is coloured correctly.
+.language-scss .token.number, .language-css .token.number {
+  color: $code-text;
 }
 
 // Other styling
