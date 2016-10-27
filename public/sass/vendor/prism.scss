@@ -19,7 +19,7 @@ $code-green: #1E8400;
 code[class*="language-"],
 pre[class*="language-"] {
   color: $code-text;
-  text-shadow: 0 1px white;
+  text-shadow: 0 1px $white;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: 14px;
   direction: ltr;
@@ -35,21 +35,25 @@ pre[class*="language-"] {
   word-spacing: normal;
   word-break: normal;
   // Wrap lines of code rather than overflowing
-  white-space: pre-wrap;       /* css-3 */
-  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;      /* Opera 4-6 */
-  white-space: -o-pre-wrap;    /* Opera 7 */
-  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  white-space: pre-wrap;       // css-3
+  white-space: -moz-pre-wrap;  // Mozilla, since 1999
+  white-space: -pre-wrap;      // Opera 4-6
+  white-space: -o-pre-wrap;    // Opera 7
+  word-wrap: break-word;       // Internet Explorer 5.5+
 }
 
-pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
   text-shadow: none;
   background: #b3d4fc;
 }
 
-pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
-code[class*="language-"]::selection, code[class*="language-"] ::selection {
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
   text-shadow: none;
   background: #b3d4fc;
 }
@@ -61,7 +65,7 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
   }
 }
 
-/* Code blocks */
+// Code blocks
 pre[class*="language-"] {
   border: 1px solid $grey-2;
   padding: 1em;
@@ -74,7 +78,7 @@ pre[class*="language-"] {
   background: $code-background;
 }
 
-/* Inline code */
+// Inline code
 :not(pre) > code[class*="language-"] {
   padding: .1em;
   border-radius: .3em;
@@ -135,7 +139,8 @@ pre[class*="language-"] {
 }
 
 // Color numbers the same as un-detected text for css - so 'core-16' and similar is coloured correctly.
-.language-scss .token.number, .language-css .token.number {
+.language-scss .token.number,
+.language-css .token.number {
   color: $code-text;
 }
 
@@ -144,6 +149,7 @@ pre[class*="language-"] {
 .token.bold {
   font-weight: bold;
 }
+
 .token.italic {
   font-style: italic;
 }
