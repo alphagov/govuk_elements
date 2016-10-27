@@ -157,6 +157,14 @@ textarea {
 
 }
 
+input.form-control,
+textarea.form-control {
+  // Remove inner shadow
+  -webkit-appearance: none;
+  // Remove rounded corners
+  border-radius: 0;
+}
+
 // Radio buttons
 .form-radio {
   display: block;
