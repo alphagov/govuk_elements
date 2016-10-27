@@ -157,6 +157,12 @@ textarea {
 
 }
 
+// Box shadow to get round corners
+select.form-control:focus {
+  outline: none;
+  @include box-shadow(0 0 0 3px $focus-colour);
+}
+
 // Radio buttons
 .form-radio {
   display: block;
