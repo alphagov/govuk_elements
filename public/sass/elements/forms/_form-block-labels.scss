@@ -42,24 +42,24 @@
     &.selection-button-radio::before {
       content: "";
       border: 2px solid;
-      border-radius: 50%;
       background: transparent;
       width: 34px;
       height: 34px;
       position: absolute;
       top: 0;
       left: 0;
+      @include border-radius(50%);
     }
 
     &.selection-button-radio::after {
       content: "";
-      border-radius: 50%;
       background: currentColor;
       width: 20px;
       height: 20px;
       position: absolute;
       top: 9px;
       left: 9px;
+      @include border-radius(50%);
       @include opacity(0);
     }
 
