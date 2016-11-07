@@ -157,6 +157,17 @@ textarea {
 
 }
 
+// Allow a qualifying element, remove rounded corners from inputs and textareas
+// scss-lint:disable QualifyingElement
+input.form-control,
+textarea.form-control {
+  // Remove inner shadow
+  -webkit-appearance: none;
+  // Remove rounded corners
+  border-radius: 0;
+}
+// scss-lint:enable QualifyingElement
+
 // Radio buttons
 .form-radio {
   display: block;
