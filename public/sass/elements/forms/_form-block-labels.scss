@@ -33,7 +33,8 @@
     // IE8 doesn’t support pseudoelements, so we don’t want to hide native elements there.
     @if ($is-ie == false) or ($ie-version == 9) {
       .js-enabled & {
-        @include visually-hidden;
+        margin: 0;
+        @include opacity(0);
       }
     }
   }
