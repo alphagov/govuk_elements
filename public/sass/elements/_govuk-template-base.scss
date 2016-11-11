@@ -139,4 +139,5 @@ textarea:focus,
 select:focus,
 button:focus {
   outline: 3px solid $focus-colour;
+  outline-offset: 0;
 }
