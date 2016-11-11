@@ -1,3 +1,10 @@
+# 2.1.1
+
+- Remove rounded corners on form inputs elements and textareas in iOS ([PR #342](https://github.com/alphagov/govuk_elements/pull/342))
+- Fix focus outline on form fields in Chrome / Safari ([PR #346](https://github.com/alphagov/govuk_elements/pull/346))
+- Updates the contribution guidelines ([PR #339](https://github.com/alphagov/govuk_elements/pull/339))
+- Recommend `.visually-hidden` over `.visuallyhidden` ([PR #341](https://github.com/alphagov/govuk_elements/pull/341))
+
 # 2.1.0
 
 - Update govuk_frontend_toolkit to 5.0.0 and govuk_template to 0.19.0 ([PR #333](https://github.com/alphagov/govuk_elements/pull/333))
