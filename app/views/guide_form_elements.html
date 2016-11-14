@@ -277,15 +277,29 @@
     {% include "snippets/form_inset_radios.html" %}
   </div>
 
-  <div class="panel panel-border-wide text">
+  <pre>
+  <code class="language-markup">
+    {% include "snippets/encoded/form_inset_radios.html" %}
+  </code>
+  </pre>
+
+  <p class="text">
+    In the code snippet above, the <code class="language-markup">data-target=""</code> attribute is present on every label, as each option reveals an extra field.
+  </p>
+
+  <div class="text">
     <p>
       A grey left hand border is used to visually connect the revealed content with the question above.
     </p>
   </div>
 
+<div class="example">
+  {% include "snippets/form_inset_panel.html" %}
+</div>
+
 <pre>
 <code class="language-markup">
-  <div class="panel panel-border-narrow"></div>
+  {% include "snippets/encoded/form_inset_panel.html" %}
 </code>
 </pre>
 
@@ -294,16 +308,6 @@
       The <a href="/typography/#typography-inset-text">inset text section</a> has more information on where and how to use panels (content with a grey left hand border).
     </p>
   </div>
-
-<pre>
-<code class="language-markup">
-  {% include "snippets/encoded/form_inset_radios.html" %}
-</code>
-</pre>
-
-  <p class="text">
-     In the code snippet above, the <code class="language-markup">data-target=""</code> attribute is present on every label, as each option reveals an extra field.
-  </p>
 
   <h4 class="heading-small" id="form-toggle-content-checkboxes">
     Checkboxes
