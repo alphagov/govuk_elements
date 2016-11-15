@@ -291,3 +291,19 @@ hr {
     margin-left: -$gutter-half;
   }
 }
+
+// Data
+.data {
+  margin-top: em(5, 16);
+  margin-bottom: em(20, 16);
+
+  @include media(tablet) {
+    margin-top: em(5, 19);
+    margin-bottom: em(20, 19);
+  }
+}
+
+.data-item {
+  display: block;
+  line-height: 1;
+}
