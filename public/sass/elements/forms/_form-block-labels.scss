@@ -54,9 +54,9 @@
 
     &.selection-button-radio::after {
       content: "";
-      background: currentColor;
-      width: 20px;
-      height: 20px;
+      border: 10px solid;
+      width: 0;
+      height: 0;
       position: absolute;
       top: 9px;
       left: 9px;
