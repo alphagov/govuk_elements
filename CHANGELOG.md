@@ -1,3 +1,9 @@
+# 2.1.2
+
+- Add snippets for data visualisation examples ([PR #351](https://github.com/alphagov/govuk_elements/pull/351)) and ([PR #350](https://github.com/alphagov/govuk_elements/pull/350))
+- Fix the grey left hand border example for Radios and checkboxes ([PR #349](https://github.com/alphagov/govuk_elements/pull/349))
+- Fix the spacing underneath the "inline" block label example ([PR #348](https://github.com/alphagov/govuk_elements/pull/348))
+
 # 2.1.1
 
 - Remove rounded corners on form inputs elements and textareas in iOS ([PR #342](https://github.com/alphagov/govuk_elements/pull/342))
