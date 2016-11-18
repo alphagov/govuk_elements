@@ -9,36 +9,116 @@
   clear: left;
   position: relative;
 
-  background: $panel-colour;
-  border: 1px solid $panel-colour;
-  padding: (18px $gutter $gutter-half $gutter * 1.8);
+  padding: (8px $gutter-one-third 9px 50px);
+  margin-bottom: $gutter-one-third;
 
-  margin-bottom: 10px;
   cursor: pointer; // Encourage clicking on block labels
 
   @include media(tablet) {
     float: left;
+    padding-top: 7px;
+    padding-bottom: 7px;
     // width: 25%; - Test : check that text within labels will wrap
   }
 
   // Absolutely position inputs within label, to allow text to wrap
   input {
     position: absolute;
-    top: 15px;
-    left: $gutter-half;
     cursor: pointer;
-    margin: 0;
-    width: 29px;
-    height: 29px;
+    left: 0;
+    top: 0;
+    width: 38px;
+    height: 38px;
 
-    @include ie(8) {
-      top: 12px;
+    // IE8 doesn’t support pseudoelements, so we don’t want to hide native elements there.
+    @if ($is-ie == false) or ($ie-version == 9) {
+      .js-enabled & {
+        margin: 0;
+        @include opacity(0);
+      }
     }
   }
 
-  // Change border on hover
-  &:hover {
-    border-color: $black;
+  .js-enabled & {
+    &.selection-button-radio::before {
+      content: "";
+      border: 2px solid;
+      background: transparent;
+      width: 34px;
+      height: 34px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include border-radius(50%);
+    }
+
+    &.selection-button-radio::after {
+      content: "";
+      border: 10px solid;
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 9px;
+      left: 9px;
+      @include border-radius(50%);
+      @include opacity(0);
+    }
+
+    &.selection-button-checkbox::before {
+      content: "";
+      border: 2px solid;
+      background: transparent;
+      width: 34px;
+      height: 34px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &.selection-button-checkbox::after {
+      content: "";
+      border: solid;
+      border-width: 0 0 5px 5px;
+      background: transparent;
+      width: 17px;
+      height: 7px;
+      position: absolute;
+      top: 10px;
+      left: 8px;
+      -moz-transform: rotate(-45deg); // Firefox 15 compatibility
+      -o-transform: rotate(-45deg); // Opera 12.0 compatibility
+      -webkit-transform: rotate(-45deg); // Safari 8 compatibility
+      -ms-transform: rotate(-45deg); // IE9 compatibility
+      transform: rotate(-45deg);
+      @include opacity(0);
+    }
+
+    // Focused state
+    &.selection-button-radio,
+    &.selection-button-checkbox {
+      &.focused::before {
+        @include box-shadow(0 0 0 5px $focus-colour);
+      }
+      // IE8 focus outline should stay as a border around the entire label
+      // Lack of padding doesn’t matter as IE8 won’t resize the inputs.
+      @include ie-lte(8) {
+        &.focused {
+          outline: 3px solid $focus-colour;
+
+          input:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+
+    // Selected state
+    &.selection-button-radio,
+    &.selection-button-checkbox {
+      &.selected::after {
+        @include opacity(1);
+      }
+    }
   }
 
   &:last-child,
@@ -53,29 +133,6 @@
 
   @include media (tablet) {
     margin-bottom: 0;
-    margin-right: 10px;
+    margin-right: $gutter;
   }
-}
-
-// Selected and focused states
-
-// Allow a qualifying element for the selected state
-// scss-lint:disable QualifyingElement
-
-// Add selected state
-.js-enabled label.selected {
-  background: $white;
-  border-color: $black;
-}
-
-// Add focus to block labels
-.js-enabled label.focused {
-  outline: 3px solid $focus-colour;
-}
-
-// scss-lint:enable QualifyingElement
-
-// Remove focus from radio/checkboxes
-.js-enabled .focused input:focus {
-  outline: none;
 }
