@@ -1,3 +1,9 @@
+# 2.2.0
+
+- New radio buttons and checkboxes ([PR #296](https://github.com/alphagov/govuk_elements/pull/296))
+
+You will need to make sure that your version of the GOV.UK Frontend Toolkit is at least 4.17.0.
+
 # 2.1.2
 
 - Add snippets for data visualisation examples ([PR #351](https://github.com/alphagov/govuk_elements/pull/351)) and ([PR #350](https://github.com/alphagov/govuk_elements/pull/350))
