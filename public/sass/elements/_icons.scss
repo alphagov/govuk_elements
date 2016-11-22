@@ -81,9 +81,7 @@
   background: $black;
   color: $white;
 
-  // Allow uppercase letters in font stack variable names
-  // scss-lint:disable NameFormat
-  font-family: $NTA-Light-Tabular;
+  font-family: $toolkit-font-stack-tabular;
   font-size: 12px;
   font-weight: bold;
   text-align: center;
