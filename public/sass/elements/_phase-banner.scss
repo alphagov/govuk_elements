@@ -2,9 +2,9 @@
 // ==========================================================================
 
 .phase-banner-alpha {
-  @include phase-banner($state: alpha);
+  @include phase-banner();
 }
 
 .phase-banner-beta {
-  @include phase-banner($state: beta);
+  @include phase-banner();
 }
