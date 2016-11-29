@@ -14,6 +14,10 @@
 
   cursor: pointer; // Encourage clicking on block labels
 
+   // remove 300ms pause on mobile
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+
   @include media(tablet) {
     float: left;
     padding-top: 7px;
