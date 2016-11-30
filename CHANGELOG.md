@@ -1,3 +1,7 @@
+# 2.2.1
+
+- Fix contrast issues with phase banners. Use $govuk-blue for the phase tag and update the examples ([PR #364](https://github.com/alphagov/govuk_elements/pull/364)).
+
 # 2.2.0
 
 - New radio buttons and checkboxes ([PR #296](https://github.com/alphagov/govuk_elements/pull/296))
