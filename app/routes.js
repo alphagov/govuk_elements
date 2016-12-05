@@ -9,11 +9,6 @@ module.exports = {
       res.redirect('/')
     })
 
-    app.get('/style-guide', function (req, res) {
-      var pageName = 'Front-end style guide'
-      res.render('guide_style_guide', { 'page_name': pageName })
-    })
-
     // Layout
     app.get('/layout', function (req, res) {
       var pageName = 'Layout'
