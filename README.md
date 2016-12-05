@@ -94,7 +94,7 @@ You can pick and chosoe partials from the govuk-elements-sass package.
 You can find these at the top of the `_govuk_elements.scss` partial.
 
 If you're not using the [GOV.UK template](https://github.com/alphagov/govuk_template),
-you'll also need to uncomment the base partial in `_govuk_elements.scss`, or create your own.
+you’ll also need to uncomment the base partial in `_govuk_elements.scss`, or create your own.
 
     // @import "elements/base";                       // HTML elements, set by the GOV.UK template
 
