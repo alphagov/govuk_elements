@@ -17,12 +17,6 @@
   }
 }
 
-.outdent-navigation {
-  @include media(tablet) {
-    margin-left: -25%;
-  }
-}
-
 // Increase spacing above headings
 .heading-xlarge {
   @include media(tablet) {
