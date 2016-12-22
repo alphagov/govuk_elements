@@ -37,20 +37,20 @@
 
             <legend class="visually-hidden">What is your nationality?</legend>
 
-            <label for="nationality_british" class="block-label selection-button-checkbox">
+            <div class="block-label">
               <input type="checkbox" name="nationality_british" value="British" id="nationality_british">
-              British
-            </label>
+              <label for="nationality_british">British</label>
+            </div>
 
-            <label for="nationality_irish" class="block-label selection-button-checkbox">
+            <div class="block-label">
               <input type="checkbox" name="nationality_irish" value="Irish" id="nationality_irish">
-              Irish
-            </label>
+              <label for="nationality_irish">Irish</label>
+            </div>
 
-            <label for="nationality_other" class="block-label selection-button-checkbox" data-target="example_nationality_other">
+            <div class="block-label" data-target="example_nationality_other">
               <input type="checkbox" name="nationality_other" value="Wales" id="nationality_other">
-              Citizen of another country
-            </label>
+              <label for="nationality_other">Citizen of another country</label>
+            </div>
 
             <div class="panel panel-border-narrow js-hidden" id="example_nationality_other">
               <label for="nationality_other_countries" class="form-label">
@@ -73,15 +73,15 @@
               Where should we send your new passport?
             </legend>
 
-            <label for="radio-home-address" class="block-label selection-button-radio">
+            <div class="block-label">
               <input id="radio-home-address" type="radio" name="radio-indent-group" value="Yes">
-              Home address
-            </label>
+              <label for="radio-home-address">Home address</label>
+            </div>
 
-            <label for="radio-other-address" class="block-label selection-button-radio" data-target="example-other-address">
+            <div class="block-label" data-target="example-other-address">
               <input id="radio-other-address" type="radio" name="radio-indent-group" value="No">
-              Other address
-            </label>
+              <label for="radio-other-address">Other address</label>
+            </div>
 
             <div class="panel panel-border-narrow js-hidden" id="example-other-address">
 
@@ -136,33 +136,22 @@
               Which part of the Housing Act was your licence isued under?
             </legend>
 
-            <label for="radio-part-2" class="block-label selection-button-radio">
+            <div class="block-label">
               <input id="radio-part-2" type="radio" name="housing-act" value="Part 2">
-              <span class="heading-small">Part 2 of the Housing Act 2004</span><br>
-              For properties that are 3 or more stories high and occupied by 5 or more people
+              <label for="radio-part-2"><span class="heading-small">Part 2 of the Housing Act 2004</span><br></label>
+              For divroperties that are 3 or more stories high and occupied by 5 or more people
             </label>
 
-            <label for="radio-part-3" class="block-label selection-button-radio">
+            <div class="block-label">
               <input id="radio-part-3" type="radio" name="housing-act" value="Part 3">
-              <span class="heading-small">Part 3 of the Housing Act 2004</span><br>
-              For properties that are within a geographical area defined by a local council
+              <label for="radio-part-3"><span class="heading-small">Part 3 of the Housing Act 2004</span><br></label>
+              For divroperties that are within a geographical area defined by a local council
             </label>
 
           </fieldset>
         </div>
 
       </form>
-
-      <h2 class="heading-medium implementation-advice">Implementation advice</h2>
-      <ul class="list list-bullet text">
-        <li>
-          Add a class to your labels for quicker initialisation.
-          <span class="panel panel-border-narrow">
-            for radio buttons use <code>class="block-label selection-button-radio"</code> and for checkboxes use <code>class="block-label selection-button-checkbox"</code>
-          </span>
-          If you don’t add this class it’ll still work, but will be slower for users.
-        </li>
-      </ul>
 
     </div>
   </div>

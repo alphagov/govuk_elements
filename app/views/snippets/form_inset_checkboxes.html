@@ -11,18 +11,18 @@
 
       <legend class="visually-hidden">What is your nationality?</legend>
 
-      <label class="block-label selection-button-checkbox" for="nationalities-british">
+      <div class="block-label">
         <input id="nationalities-british" name="nationalities" type="checkbox" value="British">
-        British (including English, Scottish, Welsh and Northern Irish)
-      </label>
-      <label class="block-label selection-button-checkbox" for="nationalities-irish">
+        <label for="nationalities-british">British (including English, Scottish, Welsh and Northern Irish)</label>
+      </div>
+      <div class="block-label">
         <input id="nationalities-irish" name="nationalities" type="checkbox" value="Irish">
-        Irish
-      </label>
-      <label class="block-label selection-button-checkbox" for="nationalities-other" data-target="example-different-country">
+        <label for="nationalities-irish">Irish</label>
+      </div>
+      <div class="block-label" data-target="example-different-country">
         <input id="nationalities-other" name="nationalities" type="checkbox" value="Citizen of a different country">
-        Citizen of a different country
-      </label>
+        <label for="nationalities-other">Citizen of a different country</label>
+      </div>
       <div class="panel panel-border-narrow js-hidden" id="example-different-country">
         <label class="form-label" for="nationalities-other-country">Country name</label>
         <input class="form-control" type="text" id="nationalities-other-country" name="nationalities-other-country">

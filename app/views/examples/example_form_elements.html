@@ -40,10 +40,10 @@
                   This is the label text in bold
                 </span>
               </legend>
-              <label class="block-label selection-button-radio" for="example-radio-yes-no-yes">
+              <div class="block-label">
                 <input id="example-radio-yes-no-yes" type="radio" name="example-yes-no-group" value="Yes">
-                  Yes
-              </label>
+                <label for="example-radio-yes-no-yes">Yes</label>
+              </div>
             </fieldset>
           </div>
         </div>
@@ -86,10 +86,10 @@
                   This is hint text
                 </span>
               </legend>
-              <label class="block-label selection-button-radio" for="radio-yes-no-yes-b">
+              <div class="block-label">
                 <input id="radio-yes-no-yes-b" type="radio" name="yes-no-group-b" value="Yes">
-                  Yes
-              </label>
+                <label for="radio-yes-no-yes-b">Yes</label>
+              </div>
             </fieldset>
           </div>
 
@@ -166,10 +166,10 @@
                   Error message goes here
                 </span>
               </legend>
-              <label class="block-label selection-button-radio" for="radio-yes-no-yes-c">
+              <div class="block-label">
                 <input id="radio-yes-no-yes-c" type="radio" name="yes-no-group-c" value="Yes">
-                  Yes
-              </label>
+                <label for="radio-yes-no-yes-c">Yes</label>
+              </div>
             </fieldset>
           </div>
 
@@ -211,14 +211,14 @@
                 Do you already have a personal user account?
               </span>
             </legend>
-            <label class="block-label selection-button-radio" for="radio-inline-1a">
+            <div class="block-label">
               <input id="radio-inline-1a" type="radio" name="radio-inline-group" value="Yes">
-              Yes
-            </label>
-            <label class="block-label selection-button-radio" for="radio-inline-2a">
+              <label for="radio-inline-1a">Yes</label>
+            </div>
+            <div class="block-label">
               <input id="radio-inline-2a" type="radio" name="radio-inline-group" value="No">
-              No
-            </label>
+              <label for="radio-inline-2a">No</label>
+            </div>
           </fieldset>
         </div>
 
@@ -234,14 +234,14 @@
               </span>
             </legend>
             <div class="form-group">
-              <label class="block-label selection-button-radio" data-target="yes-and-do-next" for="radio-yes-no-yes-a">
+              <div class="block-label">
                 <input id="radio-yes-no-yes-a" type="radio" name="yes-no-group-a" value="Yes">
-                Yes
-              </label>
-              <label class="block-label selection-button-radio" data-target="no-and-do-next" for="radio-yes-no-no-a">
+                <label data-target="yes-and-do-next" for="radio-yes-no-yes-a">Yes</label>
+              </div>
+              <div class="block-label">
                 <input id="radio-yes-no-no-a" type="radio" name="yes-no-group-a" value="No">
-                No
-              </label>
+                <label data-target="no-and-do-next" for="radio-yes-no-no-a">No</label>
+              </div>
               <div class="panel panel-border-narrow js-hidden" id="yes-and-do-next-a">
                 <label class="form-label" for="yes-next-a">Yes, this next</label>
                 <input class="form-control" name="yes-next" type="text" id="yes-next-a">
