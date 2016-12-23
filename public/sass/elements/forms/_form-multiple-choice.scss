@@ -1,7 +1,7 @@
 // Radio buttons & checkboxes
 
-// By default, block labels stack vertically
-.block-label {
+// By default, multiple choice inputs stack vertically
+.multiple-choice {
 
   display: block;
   float: none;
@@ -11,7 +11,7 @@
   padding: (8px $gutter-one-third 9px 50px);
   margin-bottom: $gutter-one-third;
 
-  cursor: pointer; // Encourage clicking on block labels
+  cursor: pointer; // Encourage clicking on the label
 
    // remove 300ms pause on mobile
   -ms-touch-action: manipulation;
@@ -122,8 +122,8 @@
   }
 }
 
-// To stack horizontally, use .inline on parent, to sit block labels next to each other
-.inline .block-label {
+// To sit multiple choice inputs next to each other, use .inline on parent
+.inline .multiple-choice {
   clear: none;
 
   @include media (tablet) {
