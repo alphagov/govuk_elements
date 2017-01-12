@@ -2,6 +2,8 @@ language: node_js
 node_js:
  - "4.4.7"
 before_install:
+- git remote -v
+- exit 1
 - npm install -g grunt-cli
 install:
 - npm install
