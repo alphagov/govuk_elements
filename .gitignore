@@ -1,3 +1,4 @@
+.grunt
 .sass-cache
 .DS_Store
 .start.pid
@@ -11,6 +12,7 @@ public/stylesheets/
 
 # Ignore test files
 dist/*.html
+_SpecRunner.html
 
 # Wraith
 shots

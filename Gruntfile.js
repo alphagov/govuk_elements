@@ -85,6 +85,19 @@ module.exports = function (grunt) {
       }
     },
 
+    // Runs javascript unit tests
+    jasmine: {
+      javascripts: {
+        src: [
+          'public/javascripts/vendor/jquery-1.11.0.min.js'
+        ],
+        options: {
+          specs: 'spec/unit/**/*.spec.js',
+          helpers: 'spec/unit/*.helper.js'
+        }
+      }
+    },
+
     // Watches styles and specs for changes
     watch: {
       css: {
@@ -119,6 +132,7 @@ module.exports = function (grunt) {
     'grunt-contrib-clean',
     'grunt-contrib-copy',
     'grunt-contrib-watch',
+    'grunt-contrib-jasmine',
     'grunt-sass',
     'grunt-nodemon',
     'grunt-concurrent',
@@ -136,7 +150,7 @@ module.exports = function (grunt) {
   })
 
   // Tests
-  grunt.registerTask('test', ['lint', 'test-default', 'test-success'])
+  grunt.registerTask('test', ['lint', 'jasmine', 'test-default', 'test-success'])
   grunt.registerTask('test-success', function () {
     grunt.log.writeln('The tests are complete and the app runs, without errors.'['yellow'].bold)
   })
