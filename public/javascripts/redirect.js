@@ -51,7 +51,7 @@
       '#alpha-beta-creating-banners': '/alpha-beta-banners/#creating-phase-banners'
     }
 
-    if (newRoutes[fragment] !== 'undefined') {
+    if (typeof newRoutes[fragment] !== 'undefined') {
       return baseURL + newRoutes[fragment]
     }
 
