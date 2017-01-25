@@ -187,4 +187,4 @@
   // but if it's not supported then the second one will fire
   addEvent(document, 'DOMContentLoaded', addDetailsPolyfill)
   addEvent(window, 'load', addDetailsPolyfill)
-})()
+})(); // eslint-disable-line semi

@@ -69,4 +69,4 @@
   if (newRoute) {
     window.location.href = newRoute
   }
-}())
+}()); // eslint-disable-line semi

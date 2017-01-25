@@ -40,4 +40,4 @@ $(window).load(function () {
       $('.error input:first').focus()
     }
   }
-})
+}); // eslint-disable-line semi
