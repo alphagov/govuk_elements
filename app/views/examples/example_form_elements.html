@@ -25,19 +25,21 @@
           <p>
             There should be 10px under the label or legend and the input
           </p>
+
           <!-- Text inside a label -->
           <div class="form-group">
-            <label class="form-label-bold" for="example-form-label">
-              This is the label text in bold
+            <label class="form-label" for="example-form-label">
+              This is the label text
             </label>
             <input class="form-control" id="example-form-label" type="text">
           </div>
+
           <!-- Text inside a legend -->
           <div class="form-group">
             <fieldset>
               <legend>
-                <span class="form-label-bold">
-                  This is the label text in bold
+                <span class="form-label">
+                  This is the legend text, styled to look like a label
                 </span>
               </legend>
               <label class="block-label selection-button-radio" for="example-radio-yes-no-yes">
@@ -55,32 +57,21 @@
 
           <!-- Hint text inside a label -->
           <div class="form-group">
-            <label class="form-label-bold" for="example-form-label-bold">
-              This is the label text in bold
+            <label class="form-label" for="example-form-label">
+              This is the label text
               <span class="form-hint">
                 This is hint text
               </span>
             </label>
-            <input class="form-control" id="example-form-label-bold" type="text">
-          </div>
-
-          <!-- Hint text outside a label (preference is inside, to be read by AT) -->
-          <div class="form-group">
-            <label class="form-label-bold" for="example-form-label-bold">
-              This is the label text in bold
-            </label>
-            <span class="form-hint">
-              This is hint text
-            </span>
-            <input class="form-control" id="example-form-label-bold" type="text">
+            <input class="form-control" id="example-form-label" type="text">
           </div>
 
           <!-- Text inside a legend -->
           <div class="form-group">
             <fieldset>
               <legend>
-                <span class="form-label-bold">
-                  This is the label text in bold
+                <span class="form-label">
+                  This is the legend text, styled to look like a label
                 </span>
                 <span class="form-hint">
                   This is hint text
@@ -97,7 +88,7 @@
           <div class="form-group">
             <fieldset>
               <legend>
-                <span class="form-label-bold">This is the label text in bold</span>
+                <span class="form-label">This is the label text</span>
                 <span class="form-hint" id="dob-hint">This is hint text</span>
               </legend>
               <div class="form-date">
@@ -125,7 +116,7 @@
 
           <!-- Text inside a label - error -->
           <div class="form-group error">
-            <label class="form-label-bold" for="example-form-control">
+            <label class="form-label" for="example-form-control">
               This is the label text
               <span class="form-hint">
                 This is hint text
@@ -137,27 +128,13 @@
             <input class="form-control" id="example-form-control" type="text">
           </div>
 
-          <!-- Hint text outside a label (preference is inside, to be read by AT) - error -->
-          <div class="form-group error">
-            <label class="form-label-bold" for="example-form-control">
-              This is the label text
-            </label>
-            <span class="form-hint">
-              This is hint text
-            </span>
-            <span class="error-message">
-              Error message goes here
-            </span>
-            <input class="form-control" id="example-form-control" type="text">
-          </div>
-
           <!-- Text inside a legend - error -->
           <div class="form-group error">
             <fieldset>
 
               <legend>
-                <span class="form-label-bold">
-                  Do you have a National Insurance number?
+                <span class="form-label">
+                  This is the legend text, styled to look like a label
                 </span>
                 <span class="form-hint">
                   This is hint text
@@ -177,7 +154,7 @@
           <div class="form-group error">
             <fieldset>
               <legend>
-                <span class="form-label-bold">Date of birth</span>
+                <span class="form-label">Date of birth</span>
                 <span class="form-hint" id="example-dob-hint">For example, 31 3 1980</span>
                 <span class="error-message">Error message goes here</span>
               </legend>
@@ -207,8 +184,8 @@
           <!-- Yes or No question (without revealed content ) -->
           <fieldset class="inline">
             <legend>
-              <span class="form-label-bold">
-                Do you already have a personal user account?
+              <span class="form-label">
+                This is the legend text, styled to look like a label
               </span>
             </legend>
             <label class="block-label selection-button-radio" for="radio-inline-1a">
@@ -226,8 +203,8 @@
           <!-- Yes or No question (select one option to reveal content) -->
           <fieldset class="inline">
             <legend>
-              <span class="form-label-bold">
-                This is the label text
+              <span class="form-label">
+                This is the legend text, styled to look like a label
               </span>
               <span class="form-hint">
                 This is the hint text
@@ -279,38 +256,10 @@
             <input class="form-control" id="input-text-b" type="text">
           </div>
 
-          <!-- Input type="text" (bold label) -->
-          <div class="form-group">
-            <label class="form-label-bold" for="input-text-c">
-              This is the label text in bold
-            </label>
-            <input class="form-control" id="input-text-c" type="text">
-          </div>
-
-          <!-- Input type="text" - error (bold label) -->
-          <div class="form-group error">
-            <label class="form-label-bold" for="input-text-d">
-              This is the label text in bold
-              <span class="error-message">
-                Error message goes here
-              </span>
-            </label>
-            <input class="form-control" id="input-text-d" type="text">
-          </div>
-
-          <!-- Input type="text" (bold label with hint text) -->
-          <div class="form-group">
-            <label class="form-label-bold" for="input-text-g">
-              This is the label text
-              <span class="form-hint">
-                This is hint text
-              </span>
-            </label>
-            <input class="form-control" id="input-text-g" type="text">
-          </div>
+          <!-- Input type="text" (label with hint text) -->
 
           <div class="form-group">
-            <label class="form-label-bold" for="input-text-g">
+            <label class="form-label" for="input-text-g">
               This is the label text
             </label>
             <span class="form-hint">
@@ -321,7 +270,7 @@
 
           <!-- Input type="text" - error (bold label with hint text) -->
           <div class="form-group error">
-            <label class="form-label-bold" for="input-text-h">
+            <label class="form-label" for="input-text-h">
               This is the label text
               <span class="form-hint">
                 This is hint text
@@ -362,45 +311,6 @@
             <textarea class="form-control" id="textarea-b" cols="30" rows="10"></textarea>
           </div>
 
-          <!-- Textarea (bold label) -->
-          <div class="form-group">
-            <label class="form-label-bold" for="textarea-c">
-              This is the label text in bold
-            </label>
-            <textarea class="form-control" id="textarea-c" cols="30" rows="10"></textarea>
-          </div>
-
-          <!-- Textarea - error (bold label) -->
-          <div class="form-group error">
-            <label class="form-label-bold" for="textarea-d">
-              This is the label text in bold
-              <span class="error-message">
-                Error message goes here
-              </span>
-            </label>
-            <textarea class="form-control" id="textarea-d" cols="30" rows="10"></textarea>
-          </div>
-
-          <!-- Textarea (bold label, with hint text) -->
-          <div class="form-group">
-            <label class="form-label-bold" for="textarea-e">
-              This is the label text
-              <span class="form-hint">This is hint text</span>
-            </label>
-            <textarea class="form-control" id="textarea-e" cols="30" rows="10"></textarea>
-          </div>
-
-          <!-- Textarea - error (bold label, with hint text) -->
-          <div class="form-group error">
-            <label class="form-label-bold" for="textarea-f">
-              This is the label text
-              <span class="form-hint">This is hint text</span>
-              <span class="error-message">
-                Error message goes here
-              </span>
-            </label>
-            <textarea class="form-control" id="textarea-f" cols="30" rows="10"></textarea>
-          </div>
         </div>
 
         <div class="form-section">
@@ -409,14 +319,7 @@
           </h2>
 
           <!-- Select box -->
-          <div class="form-group">
-            <label class="form-label" for="select-box-a">This is the label text</label>
-            <select class="form-control" id="select-box-a">
-              <option>GOV.UK elements option 1</option>
-              <option>GOV.UK elements option 2</option>
-              <option>GOV.UK elements option 3</option>
-            </select>
-          </div>
+          {% include "snippets/form_select_boxes.html" %}
 
           <!-- Select box - error -->
           <div class="form-group error">
@@ -427,70 +330,6 @@
               </span>
             </label>
             <select class="form-control" id="select-box-b">
-              <option>GOV.UK elements option 1</option>
-              <option>GOV.UK elements option 2</option>
-              <option>GOV.UK elements option 3</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-section">
-          <!-- Select box (with bold text) -->
-          <div class="form-group">
-            <label class="form-label-bold" for="select-box-c">
-              This is the label text
-            </label>
-            <select class="form-control" id="select-box-c">
-              <option>GOV.UK elements option 1</option>
-              <option>GOV.UK elements option 2</option>
-              <option>GOV.UK elements option 3</option>
-            </select>
-          </div>
-
-          <!-- Select box - error (with bold text) -->
-          <div class="form-group error">
-            <label class="form-label-bold" for="select-box-d">
-              This is the label text
-              <span class="error-message">
-                Error message goes here
-              </span>
-            </label>
-            <select class="form-control" id="select-box-d">
-              <option>GOV.UK elements option 1</option>
-              <option>GOV.UK elements option 2</option>
-              <option>GOV.UK elements option 3</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-section">
-          <!-- Select box (with bold text and hint text) -->
-          <div class="form-group">
-            <label class="form-label-bold" for="select-box-g">
-              This is the label text
-              <span class="form-hint">
-                This the hint text
-              </span>
-            </label>
-            <select class="form-control" id="select-box-g">
-              <option>GOV.UK elements option 1</option>
-              <option>GOV.UK elements option 2</option>
-              <option>GOV.UK elements option 3</option>
-            </select>
-          </div>
-
-          <!-- Select box - error (with bold text and hint text) -->
-          <div class="form-group error">
-            <label class="form-label-bold" for="select-box-h">
-              This is the label text
-              <span class="form-hint">
-                This is the hint text
-              </span>
-              <span class="error-message">
-                Error message goes here
-              </span>
-            </label>
-            <select class="form-control" id="select-box-h">
               <option>GOV.UK elements option 1</option>
               <option>GOV.UK elements option 2</option>
               <option>GOV.UK elements option 3</option>
