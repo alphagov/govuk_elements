@@ -101,7 +101,7 @@
     &.selection-button-checkbox .focused::before {
       @include box-shadow(0 0 0 3px $focus-colour);
     }
-     
+    
     &.selection-button-radio .focused::before {
       @include box-shadow(0 0 0 4px $focus-colour);
     }
