@@ -106,17 +106,15 @@
       @include box-shadow(0 0 0 4px $focus-colour);
     }
 
-    &.selection-button-radio,
-    &.selection-button-checkbox {
-      // IE8 focus outline should stay as a border around the entire label
-      // Lack of padding doesn’t matter as IE8 won’t resize the inputs.
-      @include ie-lte(8) {
-        &.focused {
-          outline: 3px solid $focus-colour;
+    // IE8 focus outline should stay as a border around the entire label
+    // Lack of padding doesn’t matter as IE8 won’t resize the inputs.
+    @include ie-lte(8) {
+      &.selection-button-radio.focused,
+      &.selection-button-checkbox.focused {
+        outline: 3px solid $focus-colour;
 
-          input:focus {
-            outline: none;
-          }
+        input:focus {
+          outline: none;
         }
       }
     }
