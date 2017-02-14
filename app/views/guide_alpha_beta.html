@@ -23,6 +23,7 @@
       <ul class="list list-contents">
         <li><a href="#alpha-banner">Alpha banner</a></li>
         <li><a href="#beta-banner">Beta banner</a></li>
+        <li><a href="#phase-tags">Phase tags</a></li>
         <li><a href="#creating-phase-banners">Creating phase banners</a></li>
       </ul>
     </div>
@@ -47,6 +48,33 @@
 <pre>
 <code class="language-markup">
   {% include "snippets/encoded/phase_banner_beta.html" %}
+</code>
+</pre>
+
+<h3 class="heading-medium" id="phase-tags">Alpha and Beta phase tags</h3>
+<p>
+  Phase tags are mostly used inside phase banners as an indication of the state of a project. It’s possible to use them outside phase banners, for example as part of a service header.
+</p>
+
+<h4 class="heading-small">Alpha tag</h4>
+<div class="example">
+  {% include "snippets/phase_tag_alpha.html" %}
+</div>
+
+<pre>
+<code class="language-markup">
+  {% include "snippets/encoded/phase_tag_alpha.html" %}
+</code>
+</pre>
+
+  <h4 class="heading-small">Beta tag</h4>
+  <div class="example">
+    {% include "snippets/phase_tag_beta.html" %}
+  </div>
+
+<pre>
+<code class="language-markup">
+  {% include "snippets/encoded/phase_tag_beta.html" %}
 </code>
 </pre>
 

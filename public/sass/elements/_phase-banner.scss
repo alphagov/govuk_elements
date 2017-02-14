@@ -1,4 +1,4 @@
-// Phase banners
+// Phase banners and tags
 // ==========================================================================
 
 .phase-banner {
@@ -10,4 +10,8 @@
 .phase-banner-alpha,
 .phase-banner-beta {
   @include phase-banner();
+}
+
+.phase-tag {
+  @include phase-tag();
 }
