@@ -39,7 +39,7 @@
 
   </label>
 
-  <input class="form-control" id="example-full-name" type="text" name="fullName" value="{{fullName}}" {% if error %}{% if not fullName %} aria-describedby="error-message-full-name"{% endif %}{% endif %}>
+  <input class="form-control {% if error %}{% if not fullName %} form-control-error{% endif %}{% endif %}" id="example-full-name" type="text" name="fullName" value="{{fullName}}" {% if error %}{% if not fullName %} aria-describedby="error-message-full-name"{% endif %}{% endif %}>
 </div>
 
 <div class="form-group {% if error %}{% if not niNo %} error{% endif %}{% endif %}">
@@ -61,7 +61,7 @@
     {% endif %}
   </label>
 
-  <input class="form-control" id="example-ni-number" type="text" name="niNo" value="{{niNo}}" {% if error %}{% if not niNo %} aria-describedby="error-message-ni-number"{% endif %}{% endif %}>
+  <input class="form-control {% if error %}{% if not niNo %} form-control-error{% endif %}{% endif %}" id="example-ni-number" type="text" name="niNo" value="{{niNo}}" {% if error %}{% if not niNo %} aria-describedby="error-message-ni-number"{% endif %}{% endif %}>
 
 </div>
 
