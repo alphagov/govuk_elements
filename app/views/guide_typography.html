@@ -21,6 +21,7 @@
   <div class="grid-row">
     <div class="column-two-thirds">
       <ul class="list list-contents">
+        <li><a href="#typography-class">Style elements automatically</a></li>
         <li><a href="#typography-font">Font</a></li>
         <li><a href="#typography-headings">Headings</a></li>
         <li><a href="#typography-lead-paragraph">Lead paragraph</a></li>
@@ -34,6 +35,23 @@
       </ul>
     </div>
   </div>
+
+  <h3 class="heading-medium" id="typography-class">Style elements automatically</h3>
+  <div class="text">
+    <p>You can use the <code class="code">govuk-prose</code> class around a body of prose. Then certain elements inside will be styled automatically without the need to add specific classes to each of them.</p>
+    <p>That will apply to most typographic elements: headings, lists, links, strong and code. Some elements are already always styled without that class: Tables, paragraphs, details and horizontal rules. (Links and strong are only automatically styled without that class when using govuk_template or govuk-template-base.scss.)</p>
+    <p>Please note, adding this class to anything as generic as the <code class="code">body</code> is not supported and can have unintended consequences.</p>
+  </div>
+
+<div class="example">
+  {% include "snippets/typography_class.html" %}
+</div>
+
+<pre>
+<code class="language-markup">
+  {% filter escape %}{% include "snippets/typography_class.html" %}{% endfilter %}
+</code>
+</pre>
 
   <h3 class="heading-medium" id="typography-font">Font</h3>
   <div class="text">
@@ -228,7 +246,6 @@
       <a href="/typography/example-details-summary/">Take a look at example page</a> which demonstrates conditionally revealing information, using the HTML5 details and summary elements.
     </p>
   </div>
-
 
   <h3 class="heading-medium" id="examples">Examples</h3>
   <ul class="list list-bullet">
