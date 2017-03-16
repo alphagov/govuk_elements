@@ -124,7 +124,7 @@
           </p>
 
           <!-- Text inside a label - error -->
-          <div class="form-group error">
+          <div class="form-group form-group-error">
             <label class="form-label-bold" for="example-form-control">
               This is the label text
               <span class="form-hint">
@@ -134,11 +134,11 @@
                 Error message goes here
               </span>
             </label>
-            <input class="form-control" id="example-form-control" type="text">
+            <input class="form-control form-control-error" id="example-form-control" type="text">
           </div>
 
           <!-- Hint text outside a label (preference is inside, to be read by AT) - error -->
-          <div class="form-group error">
+          <div class="form-group form-group-error">
             <label class="form-label-bold" for="example-form-control">
               This is the label text
             </label>
@@ -148,11 +148,11 @@
             <span class="error-message">
               Error message goes here
             </span>
-            <input class="form-control" id="example-form-control" type="text">
+            <input class="form-control form-control-error" id="example-form-control" type="text">
           </div>
 
           <!-- Text inside a legend - error -->
-          <div class="form-group error">
+          <div class="form-group form-group-error">
             <fieldset>
 
               <legend>
@@ -174,29 +174,80 @@
           </div>
 
           <!-- Date of birth -->
-          <div class="form-group error">
+          <div class="form-group form-group-error">
             <fieldset>
               <legend>
                 <span class="form-label-bold">Date of birth</span>
-                <span class="form-hint" id="example-dob-hint">For example, 31 3 1980</span>
+                <span class="form-hint" id="example-dob-hint-1">For example, 31 3 1980</span>
                 <span class="error-message">Error message goes here</span>
               </legend>
               <div class="form-date">
                 <div class="form-group form-group-day">
-                  <label class="form-label" for="example-dob-day">Day</label>
-                  <input class="form-control" id="example-dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="example-dob-hint">
+                  <label class="form-label" for="example-dob-day-1">Day</label>
+                  <input class="form-control form-control-error" id="example-dob-day-1" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="example-dob-hint-1">
                 </div>
                 <div class="form-group form-group-month">
-                  <label class="form-label" for="example-dob-month">Month</label>
-                  <input class="form-control" id="example-dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                  <label class="form-label" for="example-dob-month-1">Month</label>
+                  <input class="form-control" id="example-dob-month-1" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
                 </div>
                 <div class="form-group form-group-year">
-                  <label class="form-label" for="example-dob-year">Year</label>
-                  <input class="form-control" id="example-dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                  <label class="form-label" for="example-dob-year-1">Year</label>
+                  <input class="form-control" id="example-dob-year-1" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
                 </div>
               </div>
             </fieldset>
           </div>
+
+          <!-- Date of birth -->
+          <div class="form-group form-group-error">
+            <fieldset>
+              <legend>
+                <span class="form-label-bold">Date of birth</span>
+                <span class="form-hint" id="example-dob-hint-2">For example, 31 3 1980</span>
+                <span class="error-message">Error message goes here</span>
+              </legend>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label class="form-label" for="example-dob-day-2">Day</label>
+                  <input class="form-control" id="example-dob-day-2" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="example-dob-hint-2">
+                </div>
+                <div class="form-group form-group-month">
+                  <label class="form-label" for="example-dob-month-2">Month</label>
+                  <input class="form-control form-control-error" id="example-dob-month-2" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                </div>
+                <div class="form-group form-group-year">
+                  <label class="form-label" for="example-dob-year-2">Year</label>
+                  <input class="form-control" id="example-dob-year-2" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- Date of birth -->
+          <div class="form-group form-group-error">
+            <fieldset>
+              <legend>
+                <span class="form-label-bold">Date of birth</span>
+                <span class="form-hint" id="example-dob-hint-3">For example, 31 3 1980</span>
+                <span class="error-message">Error message goes here</span>
+              </legend>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label class="form-label" for="example-dob-day-3">Day</label>
+                  <input class="form-control" id="example-dob-day-3" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="example-dob-hint-3">
+                </div>
+                <div class="form-group form-group-month">
+                  <label class="form-label" for="example-dob-month-3">Month</label>
+                  <input class="form-control" id="example-dob-month-3" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                </div>
+                <div class="form-group form-group-year">
+                  <label class="form-label" for="example-dob-year-3">Year</label>
+                  <input class="form-control form-control-error" id="example-dob-year-3" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
         </div>
 
         <div class="form-section">
@@ -269,14 +320,14 @@
           </div>
 
           <!-- Input type="text" - error -->
-          <div class="form-group error">
+          <div class="form-group form-group-error">
             <label class="form-label" for="input-text-b">
               This is the label text
               <span class="error-message">
                 Error message goes here
               </span>
             </label>
-            <input class="form-control" id="input-text-b" type="text">
+            <input class="form-control form-control-error" id="input-text-b" type="text">
           </div>
 
           <!-- Input type="text" (bold label) -->
@@ -288,14 +339,14 @@
           </div>
 
           <!-- Input type="text" - error (bold label) -->
-          <div class="form-group error">
+          <div class="form-group form-group-error">
             <label class="form-label-bold" for="input-text-d">
               This is the label text in bold
               <span class="error-message">
                 Error message goes here
               </span>
             </label>
-            <input class="form-control" id="input-text-d" type="text">
+            <input class="form-control form-control-error" id="input-text-d" type="text">
           </div>
 
           <!-- Input type="text" (bold label with hint text) -->
@@ -320,7 +371,7 @@
           </div>
 
           <!-- Input type="text" - error (bold label with hint text) -->
-          <div class="form-group error">
+          <div class="form-group form-group-error">
             <label class="form-label-bold" for="input-text-h">
               This is the label text
               <span class="form-hint">
@@ -330,7 +381,7 @@
                 Error message goes here
               </span>
             </label>
-            <input class="form-control" id="input-text-h" type="text">
+            <input class="form-control form-control-error" id="input-text-h" type="text">
           </div>
         </div>
 
@@ -352,14 +403,14 @@
           </div>
 
           <!-- Textarea - error -->
-          <div class="form-group error">
+          <div class="form-group form-group-error">
             <label class="form-label" for="textarea-b">
               This is the label text
               <span class="error-message">
                 Error message goes here
               </span>
             </label>
-            <textarea class="form-control" id="textarea-b" cols="30" rows="10"></textarea>
+            <textarea class="form-control form-control-error" id="textarea-b" cols="30" rows="10"></textarea>
           </div>
 
           <!-- Textarea (bold label) -->
@@ -371,14 +422,14 @@
           </div>
 
           <!-- Textarea - error (bold label) -->
-          <div class="form-group error">
+          <div class="form-group form-group-error">
             <label class="form-label-bold" for="textarea-d">
               This is the label text in bold
               <span class="error-message">
                 Error message goes here
               </span>
             </label>
-            <textarea class="form-control" id="textarea-d" cols="30" rows="10"></textarea>
+            <textarea class="form-control form-control-error" id="textarea-d" cols="30" rows="10"></textarea>
           </div>
 
           <!-- Textarea (bold label, with hint text) -->
@@ -391,7 +442,7 @@
           </div>
 
           <!-- Textarea - error (bold label, with hint text) -->
-          <div class="form-group error">
+          <div class="form-group form-group-error">
             <label class="form-label-bold" for="textarea-f">
               This is the label text
               <span class="form-hint">This is hint text</span>
@@ -399,7 +450,7 @@
                 Error message goes here
               </span>
             </label>
-            <textarea class="form-control" id="textarea-f" cols="30" rows="10"></textarea>
+            <textarea class="form-control form-control-error" id="textarea-f" cols="30" rows="10"></textarea>
           </div>
         </div>
 
@@ -419,14 +470,14 @@
           </div>
 
           <!-- Select box - error -->
-          <div class="form-group error">
+          <div class="form-group form-group-error">
             <label class="form-label" for="select-box-b">
               This is the label text
               <span class="error-message">
                 Error message goes here
               </span>
             </label>
-            <select class="form-control" id="select-box-b">
+            <select class="form-control form-control-error" id="select-box-b">
               <option>GOV.UK elements option 1</option>
               <option>GOV.UK elements option 2</option>
               <option>GOV.UK elements option 3</option>
@@ -448,14 +499,14 @@
           </div>
 
           <!-- Select box - error (with bold text) -->
-          <div class="form-group error">
+          <div class="form-group form-group-error">
             <label class="form-label-bold" for="select-box-d">
               This is the label text
               <span class="error-message">
                 Error message goes here
               </span>
             </label>
-            <select class="form-control" id="select-box-d">
+            <select class="form-control form-control-error" id="select-box-d">
               <option>GOV.UK elements option 1</option>
               <option>GOV.UK elements option 2</option>
               <option>GOV.UK elements option 3</option>
@@ -480,7 +531,7 @@
           </div>
 
           <!-- Select box - error (with bold text and hint text) -->
-          <div class="form-group error">
+          <div class="form-group form-group-error">
             <label class="form-label-bold" for="select-box-h">
               This is the label text
               <span class="form-hint">
@@ -490,7 +541,7 @@
                 Error message goes here
               </span>
             </label>
-            <select class="form-control" id="select-box-h">
+            <select class="form-control form-control-error" id="select-box-h">
               <option>GOV.UK elements option 1</option>
               <option>GOV.UK elements option 2</option>
               <option>GOV.UK elements option 3</option>
