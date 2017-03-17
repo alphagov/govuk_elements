@@ -8,7 +8,7 @@
     "node": ">=6.0"
   },
   "dependencies": {
-    "govuk_frontend_toolkit": "^5.1.1"
+    "govuk_frontend_toolkit": "^5.1.2"
   },
   "devDependencies": {
     "body-parser": "^1.14.1",
