@@ -18,17 +18,17 @@ table {
 
   th {
     font-weight: 700;
-    // Right align headings for numeric content
-    &.numeric {
-      text-align: right;
-    }
+  }
+
+  // Right align table header cells and table cells with a numeric class
+  .numeric {
+    text-align: right;
   }
 
   // Allow a qualifying element, only table data cells should use tabular numbers
   // scss-lint:disable QualifyingElement
   td.numeric {
-    @include core-16($tabular-numbers: true);
-    text-align: right;
+    font-family: $toolkit-font-stack-tabular;
   }
 }
 
