@@ -1,3 +1,8 @@
+# 3.0.1
+
+- Update govuk_frontend_toolkit to 5.1.2 ([PR #425](https://github.com/alphagov/govuk_elements/pull/425)). This updates show-hide-content.js to work with new .multiple-choice custom radio buttons and checkboxes, released in GOV.UK elements 3.0.0.
+- Ensure that table cells using tabular-numbers are 19px ([PR #424](https://github.com/alphagov/govuk_elements/pull/424)).
+
 # 3.0.0
 
 - Breaking changes to form validation ([#PR 405](https://github.com/alphagov/govuk_elements/pull/405))
