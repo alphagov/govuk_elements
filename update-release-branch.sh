@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+set -e
 
 # Update the latest-release branch with the most recent tagged release
 
@@ -13,14 +13,8 @@ if [ "$TRAVIS_REPO_SLUG" == "alphagov/govuk_elements" ] && [ "$TRAVIS_PULL_REQUE
   # check to make sure the tag doesn't already exist
   if ! git rev-parse $VERSION_TAG >/dev/null 2>&1; then
     echo "Using the most recent tag: $VERSION_TAG and creating a latest-release branch"
-    git config --global user.email "travis@travis-ci.org"
-    git config --global user.name "Travis CI"
-    set +x
-    git remote add deploy-latest-release https://"${GH_TOKEN}"@github.com/alphagov/govuk_elements.git > /dev/null 2>&1
-    set -x
-    # check the remote has been added
     git checkout -b latest-release v"$VERSION_TAG"
-    git push --force deploy-latest-release latest-release
+    git push --force origin_ssh latest-release
     echo "Pushed latest-release branch to GitHub"
   else
     echo "Not updating the latest-release branch as the tag already exists..."
