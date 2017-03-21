@@ -3,10 +3,6 @@ node_js:
  - "4.4.7"
 before_install:
 - npm install -g grunt-cli
-install:
-- npm install
-script:
-- npm test
 notifications:
   email: false
 before_deploy:
