@@ -2,7 +2,7 @@
 
 set -e
 
-echo "Starting provider"
+echo "Add config for alphagov/govuk_elements"
 
 git config --global user.name "Travis CI"
 git config --global user.email "travis@travis-ci.org"
