@@ -1,13 +1,13 @@
 #!/bin/bash
 set -e
 
-REPO_PATH='govuk_elements'
+REPO_PATH='alphagov/govuk_elements'
 
 echo "Add config for alphagov/$REPO_PATH"
 
 git config --global user.name "Travis CI"
 git config --global user.email "travis@travis-ci.org"
-git remote add origin_ssh git@github.com:REPO_PATH.git
+git remote add origin_ssh git@github.com:$REPO_PATH.git
 
 # This openssl command was generated automatically by `travis encrypt-file`, see `.travis/README.md` for more details
 openssl aes-256-cbc -K $encrypted_85ebe8034b89_key -iv $encrypted_85ebe8034b89_iv -in .travis/govuk_elements.enc -out ~/.ssh/id_rsa -d
