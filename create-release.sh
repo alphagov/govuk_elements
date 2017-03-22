@@ -1,14 +1,17 @@
 #!/bin/bash
 set -e
 
-echo "Add config for alphagov/govuk_elements"
+REPO_PATH='govuk_elements'
+
+echo "Add config for alphagov/$REPO_PATH"
 
 git config --global user.name "Travis CI"
 git config --global user.email "travis@travis-ci.org"
-git remote add origin_ssh git@github.com:alphagov/govuk_elements.git
+git remote add origin_ssh git@github.com:REPO_PATH.git
 
 # This openssl command was generated automatically by `travis encrypt-file`, see `.travis/README.md` for more details
-openssl aes-256-cbc -K $encrypted_85ebe8034b89_key -iv $encrypted_85ebe8034b89_iv -in .travis/govuk_elements.enc -out ~/.ssh/id_rsa -d && chmod 600 ~/.ssh/id_rsa
+openssl aes-256-cbc -K $encrypted_85ebe8034b89_key -iv $encrypted_85ebe8034b89_iv -in .travis/govuk_elements.enc -out ~/.ssh/id_rsa -d
+chmod 600 ~/.ssh/id_rsa
 
 echo "Check to see if the version file has been updated"
 
@@ -28,6 +31,7 @@ if ! git rev-parse $VERSION_TAG >/dev/null 2>&1; then
 
   # This tag will trigger the builds for the deploy providers marked "# For tagged commits" in .travis.yml
 
+  # Alias branch for the most recently released tag, for easier diffing
   # Force push local `master` branch to the `latest-release` branch on Github
   git push --force origin_ssh master:latest-release
   echo "Pushed latest-release branch to GitHub"
