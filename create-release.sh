@@ -28,9 +28,8 @@ if ! git rev-parse $VERSION_TAG >/dev/null 2>&1; then
 
   # This tag will trigger the builds for the deploy providers marked "# For tagged commits" in .travis.yml
 
-  # Update the latest-release branch with the most recent tagged release
-  git checkout -b latest-release v"$VERSION_TAG"
-  git push --force origin_ssh latest-release
+  # Force push local `master` branch to the `latest-release` branch on Github
+  git push --force origin_ssh master:latest-release
   echo "Pushed latest-release branch to GitHub"
 
 else
