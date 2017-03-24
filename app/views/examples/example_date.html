@@ -18,6 +18,83 @@
       <!-- Date of birth -->
       {% include "snippets/form_date.html" %}
 
+      {% include "snippets/form_date_show_errors.html" %}
+
+      <!-- Date of birth -->
+      <div class="form-group form-group-error">
+        <fieldset>
+          <legend>
+            <span class="form-label-bold">Date of birth</span>
+            <span class="form-hint" id="example-dob-hint-1">For example, 31 3 1980</span>
+            <span class="error-message">Error message goes here</span>
+          </legend>
+          <div class="form-date">
+            <div class="form-group form-group-day">
+              <label class="form-label" for="example-dob-day-1">Day</label>
+              <input class="form-control form-control-error" id="example-dob-day-1" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="example-dob-hint-1">
+            </div>
+            <div class="form-group form-group-month">
+              <label class="form-label" for="example-dob-month-1">Month</label>
+              <input class="form-control" id="example-dob-month-1" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+            </div>
+            <div class="form-group form-group-year">
+              <label class="form-label" for="example-dob-year-1">Year</label>
+              <input class="form-control" id="example-dob-year-1" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- Date of birth -->
+      <div class="form-group form-group-error">
+        <fieldset>
+          <legend>
+            <span class="form-label-bold">Date of birth</span>
+            <span class="form-hint" id="example-dob-hint-2">For example, 31 3 1980</span>
+            <span class="error-message">Error message goes here</span>
+          </legend>
+          <div class="form-date">
+            <div class="form-group form-group-day">
+              <label class="form-label" for="example-dob-day-2">Day</label>
+              <input class="form-control" id="example-dob-day-2" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="example-dob-hint-2">
+            </div>
+            <div class="form-group form-group-month">
+              <label class="form-label" for="example-dob-month-2">Month</label>
+              <input class="form-control form-control-error" id="example-dob-month-2" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+            </div>
+            <div class="form-group form-group-year">
+              <label class="form-label" for="example-dob-year-2">Year</label>
+              <input class="form-control" id="example-dob-year-2" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- Date of birth -->
+      <div class="form-group form-group-error">
+        <fieldset>
+          <legend>
+            <span class="form-label-bold">Date of birth</span>
+            <span class="form-hint" id="example-dob-hint-3">For example, 31 3 1980</span>
+            <span class="error-message">Error message goes here</span>
+          </legend>
+          <div class="form-date">
+            <div class="form-group form-group-day">
+              <label class="form-label" for="example-dob-day-3">Day</label>
+              <input class="form-control" id="example-dob-day-3" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="example-dob-hint-3">
+            </div>
+            <div class="form-group form-group-month">
+              <label class="form-label" for="example-dob-month-3">Month</label>
+              <input class="form-control" id="example-dob-month-3" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+            </div>
+            <div class="form-group form-group-year">
+              <label class="form-label" for="example-dob-year-3">Year</label>
+              <input class="form-control form-control-error" id="example-dob-year-3" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
     </div>
   </div>
 

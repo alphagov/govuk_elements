@@ -1,3 +1,26 @@
+# 3.0.1
+
+- Update govuk_frontend_toolkit to 5.1.2 ([PR #425](https://github.com/alphagov/govuk_elements/pull/425)). This updates show-hide-content.js to work with new .multiple-choice custom radio buttons and checkboxes, released in GOV.UK elements 3.0.0.
+- Ensure that table cells using tabular-numbers are 19px ([PR #424](https://github.com/alphagov/govuk_elements/pull/424)).
+
+# 3.0.0
+
+- Breaking changes to form validation ([#PR 405](https://github.com/alphagov/govuk_elements/pull/405))
+
+This adds two new classes: `.form-group-error` and `.form-control-error`, and removes the old `.error` class. This lets specific controls within a group be accurately marked as having errors. For example, this allows parts of a date entry to be marked rather than the whole section.
+
+To upgrade, you’ll need to change any occurences of `.error` that were applied to form groups to be `.form-group-error`, and then add `.form-control-error` to the failing input inside.
+
+- Radio buttons and checkboxes have new markup that doesn’t need JavaScript ([PR #406](https://github.com/alphagov/govuk_elements/pull/406))
+
+Previously the radio buttons and checkboxes relied on selection-buttons.js (from [govuk_frontend_toolkit](https://github.com/alphagov/govuk_frontend_toolkit)) to work. By reworking the markup (see [examples](govuk-elements.herokuapp.com/form-elements/#form-radio-buttons)) we’ve been able remove this requirement.
+
+To upgrade, you’ll need to change your markup to match the new pattern. Once that has been done you’ll be able to stop including selection-buttons.js and remove [the `GOVUK.SelectionButtons` constructor](https://github.com/alphagov/govuk_frontend_toolkit/blob/master/docs/javascript.md#selection-buttons) from your JavaScript. The look and feel remains the same barring some tweaks to the focus weight. Accessibility and device compatibility remains the same as the previous version.
+
+- Add examples of phase tags used outside of phase banners ([PR #366](https://github.com/alphagov/govuk_elements/pull/366))
+- Fix invisible input content when changing colours ([PR #397](https://github.com/alphagov/govuk_elements/pull/397))
+- Recommend the use of `aria-current="page"` for the last breadcrumb ([PR #418](https://github.com/alphagov/govuk_elements/pull/418))
+
 # 2.2.1
 
 - Fix contrast issues with phase banners. Use $govuk-blue for the phase tag and update the examples ([PR #364](https://github.com/alphagov/govuk_elements/pull/364)).

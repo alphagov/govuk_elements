@@ -1,19 +1,9 @@
 // Form validation
 // ==========================================================================
 
-// Use error to add a red border to the left of a .form-group
-.error {
-
-  // Ensure the .error class is applied to .form-group, otherwise box-sizing(border-box) will need to be used
-  // @include box-sizing(border-box);
+// Use .form-group-error to add a red border to the left of a .form-group
+.form-group-error {
   margin-right: 15px;
-
-  // Form inputs should have a red border
-  // Add a red border to .form-controls that are direct descendants
-  > .form-control {
-    border: 4px solid $error-colour;
-  }
-
   border-left: 4px solid $error-colour;
   padding-left: 10px;
 
@@ -21,8 +11,13 @@
     border-left: 5px solid $error-colour;
     padding-left: $gutter-half;
   }
-
 }
+
+// Use .form-control-error to add a red border to .form-control
+.form-control-error {
+  border: 4px solid $error-colour;
+}
+
 
 // Error messages should be red and bold
 .error-message {

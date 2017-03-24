@@ -64,7 +64,7 @@ In `public/sass/main.scss` there is an example of this:
 
 ## Alternate usage
 
-You can pick and chosoe partials from the govuk-elements-sass package.
+You can pick and choose partials from the govuk-elements-sass package.
 
 **The GOV.UK frontend toolkit scss dependencies listed below must be imported first**.
 

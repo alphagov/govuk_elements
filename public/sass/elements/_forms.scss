@@ -146,9 +146,9 @@ textarea {
   width: 100%;
 
   padding: 5px 4px 4px;
-  color: inherit;
-  background-color: transparent;
-  border: 2px solid;
+  // setting any background-color makes text invisible when changing colours to dark backgrounds in Firefox (https://bugzilla.mozilla.org/show_bug.cgi?id=1335476)
+  // as background-color and color need to always be set together, color should not be set either
+  border: 2px solid $text-colour;
 
   // TODO: Remove 50% width set for tablet and up
   // !! BREAKING CHANGE !!
@@ -168,28 +168,6 @@ textarea.form-control {
   border-radius: 0;
 }
 // scss-lint:enable QualifyingElement
-
-// Radio buttons
-.form-radio {
-  display: block;
-  margin: 10px 0;
-
-  input {
-    vertical-align: middle;
-    margin: -4px 5px 0 0;
-  }
-}
-
-// Checkboxes
-.form-checkbox {
-  display: block;
-  margin: $gutter-half 0;
-
-  input {
-    vertical-align: middle;
-    margin: -2px 5px 0 0;
-  }
-}
 
 
 // 6. Form control widths
