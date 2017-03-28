@@ -1,8 +1,10 @@
 language: node_js
 node_js:
  - "4.4.7"
-before_install:
-- npm install -g grunt-cli
+script:
+# Ensures `package.json` and `yarn.lock` stay in sync
+- yarn check --integrity
+- yarn test
 notifications:
   email: false
 before_deploy:
