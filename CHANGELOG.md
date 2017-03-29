@@ -1,3 +1,7 @@
+# 3.0.2
+
+- Resolve 'dead area' between radio/checkbox and label that has hand cursor but is not clickable ([PR #435](https://github.com/alphagov/govuk_elements/pull/435))
+
 # 3.0.1
 
 - Update govuk_frontend_toolkit to 5.1.2 ([PR #425](https://github.com/alphagov/govuk_elements/pull/425)). This updates show-hide-content.js to work with new .multiple-choice custom radio buttons and checkboxes, released in GOV.UK elements 3.0.0.
