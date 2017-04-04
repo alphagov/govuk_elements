@@ -11,6 +11,8 @@
 @import "grid_layout";                            // Basic grid layout mixin
 @import "typography";                             // Core bold and heading mixins, also external links
 
+// GOV.UK elements
+@import "elements/helpers";                       // Helper functions and classes
 
 // ==========================================================================
 // Elements page styles
@@ -159,9 +161,13 @@
 // 1. Layout
 // ==========================================================================
 
+$grid-stripe-light: #7DADD3;
+$grid-stripe-dark: #B7CFE1;
+
 .example-grid p {
   width: 100%;
-  background: file-url("examples/grid.png") 0 0 repeat;
+  background-color: $grid-stripe-light;
+  background-image: repeating-linear-gradient(180deg, $grid-stripe-light, $grid-stripe-light $gutter-half, $grid-stripe-dark $gutter-half, $grid-stripe-dark $gutter);
   margin-bottom: 0;
   height: 30px;
   @include media(tablet) {
