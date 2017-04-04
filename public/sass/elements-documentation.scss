@@ -157,6 +157,18 @@
   text-indent: -999em;
 }
 
+// Grid layout example page
+.example-highlight-grid {
+  .grid-row {
+    background: $grey-2;
+  }
+
+  .column-highlight {
+    background: $grey-3;
+    width: 100%;
+  }
+}
+
 // 2. Typography
 // ==========================================================================
 
