@@ -2,6 +2,21 @@
 
 {% block page_title %}Example: Grid layout — Layout — GOV.UK elements{% endblock %}
 
+{% block head %}
+
+{% include "includes/elements_stylesheets.html" %}
+
+<style>
+  .example-highlight-grid .grid-row {
+    background-color: #bfc1c3;
+  }
+  .example-highlight-grid .column-highlight {
+    background-color: #dee0e2;
+    width: 100%;
+  }
+</style>
+{% endblock %}
+
 {% block content %}
 <main id="content" role="main" tabindex="-1">
 
