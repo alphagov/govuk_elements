@@ -5,7 +5,7 @@
 //  based on prism default theme
 //  Based on dabblet (http://dabblet.com)
 
-@import "colours";
+@import "./node_modules/govuk_frontend_alpha/assets/scss/toolkit/colours";      // Colour variables
 
 // Use GOV.UK colour palette where possible, or tints thereof to meet contrast rules
 $code-text: $text-colour;
