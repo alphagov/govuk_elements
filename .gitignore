@@ -3,7 +3,7 @@
 .start.pid
 node_modules
 govuk_modules
-lib/govuk_template.html
+lib/*
 # Ignore generated snippets
 app/views/snippets/encoded/*.html
 # Ignore compiled stylesheets
