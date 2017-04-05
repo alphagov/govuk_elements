@@ -5,10 +5,6 @@ module.exports = function (grunt) {
     sass: {
       dev: {
         files: {
-          'public/stylesheets/govuk-elements-styles.css': 'public/sass/govuk-elements-styles.scss',
-          'public/stylesheets/govuk-elements-styles-ie6.css': 'public/sass/govuk-elements-styles-ie6.scss',
-          'public/stylesheets/govuk-elements-styles-ie7.css': 'public/sass/govuk-elements-styles-ie7.scss',
-          'public/stylesheets/govuk-elements-styles-ie8.css': 'public/sass/govuk-elements-styles-ie8.scss',
           'public/stylesheets/elements-documentation.css': 'public/sass/elements-documentation.scss',
           'public/stylesheets/elements-documentation-ie6.css': 'public/sass/elements-documentation-ie6.scss',
           'public/stylesheets/elements-documentation-ie7.css': 'public/sass/elements-documentation-ie7.scss',
@@ -17,7 +13,6 @@ module.exports = function (grunt) {
         },
         options: {
           includePaths: [
-            'govuk_modules/govuk_template/assets/stylesheets',
             'govuk_modules/govuk_frontend_toolkit/stylesheets'
           ],
           outputStyle: 'expanded',
@@ -41,24 +36,18 @@ module.exports = function (grunt) {
           dest: 'public/'
         }]
       },
-      govuk: {
+      govuk_frontend_assets: {
         files: [{
           expand: true,
-          cwd: 'node_modules/govuk_frontend_toolkit/',
+          cwd: 'node_modules/govuk_frontend_alpha/assets/',
           src: '**',
-          dest: 'govuk_modules/govuk_frontend_toolkit/'
-        },
-        {
-          expand: true,
-          cwd: 'node_modules/govuk_template_jinja/',
-          src: '**',
-          dest: 'govuk_modules/govuk_template/'
+          dest: 'govuk_modules/govuk_frontend_alpha/'
         }]
       },
-      govuk_template_jinja: {
+      govuk_frontend_template: {
         files: [{
           expand: true,
-          cwd: 'govuk_modules/govuk_template/views/layouts/',
+          cwd: 'node_modules/govuk_frontend_alpha/templates/',
           src: '**',
           dest: 'lib/'
         }]
