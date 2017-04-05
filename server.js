@@ -1,6 +1,6 @@
 var path = require('path')
 var express = require('express')
-var nunjucks = require('express-nunjucks')
+var nunjucks = require('nunjucks')
 var routes = require('./app/routes.js')
 var app = express()
 var bodyParser = require('body-parser')
@@ -9,17 +9,29 @@ var port = (process.env.PORT || 3000)
 
 // Application settings
 app.set('view engine', 'html')
-app.set('views', [path.join(__dirname, '/app/views'), path.join(__dirname, '/lib/')])
 
-nunjucks.setup({
-  autoescape: true,
-  watch: true,
-  noCache: true
-}, app)
+// Set the location of the template files
+var appViews = [
+  path.join(__dirname, '/app/views'),
+  path.join(__dirname, '/lib/'),
+  path.join(__dirname, '/node_modules/govuk_frontend_alpha/templates/')
+]
 
-// Middleware to serve static assets
+// Tell nunjucks we are using express to serve the templates within
+// the views defined in appViews
+nunjucks.configure(appViews, {
+  express: app
+})
+
+// Serve static content for the app from the "public" directory
 app.use('/public', express.static(path.join(__dirname, '/public')))
-app.use('/public', express.static(path.join(__dirname, '/node_modules/govuk_frontend_alpha/assets')))
+
+// Serve the govuk_frontend_alpha assets from the node_modules directory
+app.use('/public', express.static(path.join(__dirname, '/node_modules/govuk_frontend_alpha/assets/')))
+
+// For the default compiled stylesheet only - serve the govuk_frontend_alpha toolkit and template assets from the node_modules directory
+app.use('/images/toolkit', express.static(path.join(__dirname, '/node_modules/govuk_frontend_alpha/assets/images/toolkit/')))
+app.use('/images/template', express.static(path.join(__dirname, '/node_modules/govuk_frontend_alpha/assets/images/template/')))
 
 // Support for parsing data in POSTs
 app.use(bodyParser.json())
