@@ -12,9 +12,6 @@ module.exports = function (grunt) {
           'public/stylesheets/vendor/prism.css': 'public/sass/vendor/prism.scss'
         },
         options: {
-          includePaths: [
-            'govuk_modules/govuk_frontend_toolkit/stylesheets'
-          ],
           outputStyle: 'expanded',
           imagePath: '../images'
         }
@@ -34,22 +31,6 @@ module.exports = function (grunt) {
           cwd: 'app/assets/',
           src: ['**/*', '!sass/**'],
           dest: 'public/'
-        }]
-      },
-      govuk_frontend_assets: {
-        files: [{
-          expand: true,
-          cwd: 'node_modules/govuk_frontend_alpha/assets/',
-          src: '**',
-          dest: 'govuk_modules/govuk_frontend_alpha/'
-        }]
-      },
-      govuk_frontend_template: {
-        files: [{
-          expand: true,
-          cwd: 'node_modules/govuk_frontend_alpha/templates/',
-          src: '**',
-          dest: 'lib/'
         }]
       }
     },
