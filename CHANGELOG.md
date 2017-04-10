@@ -17,7 +17,7 @@ To upgrade, you’ll need to change any occurences of `.error` that were applied
 
 - Radio buttons and checkboxes have new markup that doesn’t need JavaScript ([PR #406](https://github.com/alphagov/govuk_elements/pull/406))
 
-Previously the radio buttons and checkboxes relied on selection-buttons.js (from [govuk_frontend_toolkit](https://github.com/alphagov/govuk_frontend_toolkit)) to work. By reworking the markup (see [examples](govuk-elements.herokuapp.com/form-elements/#form-radio-buttons)) we’ve been able remove this requirement.
+Previously the radio buttons and checkboxes relied on selection-buttons.js (from [govuk_frontend_toolkit](https://github.com/alphagov/govuk_frontend_toolkit)) to work. By reworking the markup (see [examples](https://govuk-elements.herokuapp.com/form-elements/#form-radio-buttons)) we’ve been able remove this requirement.
 
 To upgrade, you’ll need to change your markup to match the new pattern. Once that has been done you’ll be able to stop including selection-buttons.js and remove [the `GOVUK.SelectionButtons` constructor](https://github.com/alphagov/govuk_frontend_toolkit/blob/master/docs/javascript.md#selection-buttons) from your JavaScript. The look and feel remains the same barring some tweaks to the focus weight. Accessibility and device compatibility remains the same as the previous version.
 
