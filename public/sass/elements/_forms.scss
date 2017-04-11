@@ -19,6 +19,11 @@ fieldset {
   width: 100%;
 }
 
+// Set textarea to block so Chrome and FF don't add a bottom margin
+textarea{
+  display: block;
+}
+
 // Fix left hand gap in IE7 and below
 @include ie-lte(7) {
   legend {
