@@ -9,6 +9,7 @@
 // 4. Form hints
 // 5. Form controls
 // 6. Form control widths
+// 7. Browser accessibility fixes
 
 // 1. Helpers
 // ==========================================================================
@@ -222,4 +223,14 @@ textarea.form-control {
   @include media(tablet) {
     width: 12.5%;
   }
+}
+
+// 7. Browser accessibility fixes
+// ==========================================================================
+
+option:active,
+option:checked,
+select:focus::-ms-value {
+  color: $white;
+  background-color: $govuk-blue;
 }
