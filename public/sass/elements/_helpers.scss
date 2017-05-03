@@ -7,20 +7,6 @@
   @return ($px / $base) + em;
 }
 
-// Want to see how the grid works?
-// add this class to the body to see how grid padding is set
-.example-highlight-grid {
-  .grid-row {
-    background: $grey-2;
-  }
-
-  .column-highlight {
-    background: $grey-3;
-    width: 100%;
-  }
-
-}
-
 // Hide, but not for screenreaders
 @mixin visually-hidden {
   position: absolute;

@@ -1,4 +1,18 @@
-@import "main";
+// GOV.UK front end toolkit
+// Sass variables, mixins and functions
+// https://github.com/alphagov/govuk_frontend_toolkit/tree/master/stylesheets
+
+// Settings (variables)
+@import "colours";                                // Colour variables
+@import "measurements";                           // Widths and gutter variables
+
+// Mixins
+@import "conditionals";                           // Media query mixin
+@import "grid_layout";                            // Basic grid layout mixin
+@import "typography";                             // Core bold and heading mixins, also external links
+
+// GOV.UK elements
+@import "elements/helpers";                       // Helper functions and classes
 
 // ==========================================================================
 // Elements page styles
@@ -147,9 +161,13 @@
 // 1. Layout
 // ==========================================================================
 
+$grid-stripe-light: #7DADD3;
+$grid-stripe-dark: #B7CFE1;
+
 .example-grid p {
   width: 100%;
-  background: file-url("examples/grid.png") 0 0 repeat;
+  background-color: $grid-stripe-light;
+  background-image: repeating-linear-gradient(180deg, $grid-stripe-light, $grid-stripe-light $gutter-half, $grid-stripe-dark $gutter-half, $grid-stripe-dark $gutter);
   margin-bottom: 0;
   height: 30px;
   @include media(tablet) {
@@ -171,7 +189,7 @@
 .swatch {
   width: 60px;
   height: 60px;
-  @include border-radius(100%);
+  border-radius: 100%;
   @include media(mobile) {
     clear: both;
     float: left;
