@@ -1,6 +1,7 @@
 var path = require('path')
 var express = require('express')
-var nunjucks = require('express-nunjucks')
+var nunjucks = require('nunjucks')
+var expressNunjucks = require('express-nunjucks')
 var routes = require('./app/routes.js')
 var app = express()
 var bodyParser = require('body-parser')
@@ -11,11 +12,13 @@ var port = (process.env.PORT || 3000)
 app.set('view engine', 'html')
 app.set('views', [path.join(__dirname, '/app/views'), path.join(__dirname, '/lib/')])
 
-nunjucks.setup({
+const njk = expressNunjucks(app, {
   autoescape: true,
   watch: true,
-  noCache: true
-}, app)
+  noCache: true,
+  throwOnUndefined: true,
+  loader: nunjucks.FileSystemLoader
+})
 
 // Middleware to serve static assets
 app.use('/public', express.static(path.join(__dirname, '/public')))

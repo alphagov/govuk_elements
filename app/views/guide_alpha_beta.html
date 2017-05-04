@@ -29,62 +29,26 @@
     </div>
   </div>
 
-<h3 class="heading-medium" id="alpha-banner">Alpha banner</h3>
-<div class="example">
-  {% include "snippets/phase_banner_alpha.html" %}
-</div>
+  <h3 class="heading-medium" id="alpha-banner">Alpha banner</h3>
 
-<pre>
-<code class="language-markup">
-  {% filter escape %}
-    {% include "snippets/phase_banner_alpha.html" %}
-  {% endfilter %}
-</code>
-</pre>
+  {{ snippet.example_with_code_block("phase_banner_alpha") }}
 
-<h3 class="heading-medium" id="beta-banner">Beta banner</h3>
-<div class="example">
-  {% include "snippets/phase_banner_beta.html" %}
-</div>
+  <h3 class="heading-medium" id="beta-banner">Beta banner</h3>
 
-<pre>
-<code class="language-markup">
-  {% filter escape %}
-    {% include "snippets/phase_banner_beta.html" %}
-  {% endfilter %}
-</code>
-</pre>
+  {{ snippet.example_with_code_block("phase_banner_beta") }}
 
-<h3 class="heading-medium" id="phase-tags">Alpha and Beta phase tags</h3>
-<p>
-  Phase tags are mostly used inside phase banners as an indication of the state of a project. It’s possible to use them outside phase banners, for example as part of a service header.
-</p>
+  <h3 class="heading-medium" id="phase-tags">Alpha and Beta phase tags</h3>
+  <p>
+    Phase tags are mostly used inside phase banners as an indication of the state of a project. It’s possible to use them outside phase banners, for example as part of a service header.
+  </p>
 
-<h4 class="heading-small">Alpha tag</h4>
-<div class="example">
-  {% include "snippets/phase_tag_alpha.html" %}
-</div>
+  <h4 class="heading-small">Alpha tag</h4>
 
-<pre>
-<code class="language-markup">
-  {% filter escape %}
-    {% include "snippets/phase_tag_alpha.html" %}
-  {% endfilter %}
-</code>
-</pre>
+  {{ snippet.example_with_code_block("phase_tag_alpha") }}
 
   <h4 class="heading-small">Beta tag</h4>
-  <div class="example">
-    {% include "snippets/phase_tag_beta.html" %}
-  </div>
 
-<pre>
-<code class="language-markup">
-  {% filter escape %}
-    {% include "snippets/phase_tag_beta.html" %}
-  {% endfilter %}
-</code>
-</pre>
+  {{ snippet.example_with_code_block("phase_tag_beta") }}
 
   <h3 class="heading-medium" id="creating-phase-banners">Creating alpha and beta banners</h3>
   <p class="text">

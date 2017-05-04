@@ -1,0 +1,11 @@
+{% macro example_with_code_block(name) %}
+  <div class="example">
+    {{ code }}
+  </div>
+
+  <pre>
+    <code class="language-markup">
+    {{ code | escape }}
+    </code>
+  </pre>
+{% endmacro %}
