@@ -32,3 +32,13 @@ gulp.task('styles', () => {
     .pipe(cssnano())
     .pipe(gulp.dest(paths.publicCss))
 })
+
+// Images build task ---------------------
+// Copies images to /public/images
+// ---------------------------------------
+
+gulp.task('images', () => {
+  return gulp.src(paths.assetsImg + '**/*')
+    .pipe(gulp.dest(paths.publicImg))
+})
+
