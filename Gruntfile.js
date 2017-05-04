@@ -26,11 +26,6 @@ module.exports = function (grunt) {
       }
     },
 
-    // Empty encoded snippets folder
-    clean: {
-      contents: ['app/views/snippets/encoded/*']
-    },
-
     // Copies templates and assets from external modules and dirs
     copy: {
       assets: {
@@ -62,14 +57,6 @@ module.exports = function (grunt) {
           src: '**',
           dest: 'lib/'
         }]
-      }
-    },
-
-    // Encode HTML snippets
-    htmlentities: {
-      files: {
-        src: ['app/views/snippets/*.html'],
-        dest: 'app/views/snippets/encoded/'
       }
     },
 
@@ -121,19 +108,12 @@ module.exports = function (grunt) {
     'grunt-contrib-watch',
     'grunt-sass',
     'grunt-nodemon',
-    'grunt-concurrent',
-    'grunt-htmlentities'
+    'grunt-concurrent'
   ].forEach(function (task) {
     grunt.loadNpmTasks(task)
   })
 
-  grunt.registerTask('default', ['clean', 'copy', 'encode-snippets', 'sass', 'concurrent:target'])
-
-  // Encode HTML snippets
-  grunt.registerTask('encode-snippets', ['htmlentities', 'encode-snippets-success'])
-  grunt.registerTask('encode-snippets-success', function () {
-    grunt.log.writeln('HTML snippets encoded.'['yellow'].bold)
-  })
+  grunt.registerTask('default', ['copy', 'sass', 'concurrent:target'])
 
   // Tests
   grunt.registerTask('test', ['lint', 'test-default', 'test-success'])
@@ -148,5 +128,5 @@ module.exports = function (grunt) {
   })
 
   // 2. Test that the default grunt task runs the app
-  grunt.registerTask('test-default', ['clean', 'copy', 'encode-snippets', 'sass'])
+  grunt.registerTask('test-default', ['copy', 'sass'])
 }
