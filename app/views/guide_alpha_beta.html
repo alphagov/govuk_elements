@@ -36,7 +36,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/phase_banner_alpha.html" %}
+  {% filter escape %}
+    {% include "snippets/phase_banner_alpha.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -47,7 +49,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/phase_banner_beta.html" %}
+  {% filter escape %}
+    {% include "snippets/phase_banner_beta.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -63,7 +67,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/phase_tag_alpha.html" %}
+  {% filter escape %}
+    {% include "snippets/phase_tag_alpha.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -74,7 +80,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/phase_tag_beta.html" %}
+  {% filter escape %}
+    {% include "snippets/phase_tag_beta.html" %}
+  {% endfilter %}
 </code>
 </pre>
 

@@ -78,7 +78,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/layout_grid_full.html" %}
+  {% filter escape %}
+    {% include "snippets/layout_grid_full.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -89,7 +91,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/layout_grid_halves.html" %}
+  {% filter escape %}
+    {% include "snippets/layout_grid_halves.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -100,7 +104,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/layout_grid_thirds.html" %}
+  {% filter escape %}
+    {% include "snippets/layout_grid_thirds.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -111,7 +117,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/layout_grid_thirds_two_thirds_one_third.html" %}
+  {% filter escape %}
+    {% include "snippets/layout_grid_thirds_two_thirds_one_third.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -122,7 +130,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/layout_grid_thirds_one_third_two_thirds.html" %}
+  {% filter escape %}
+    {% include "snippets/layout_grid_thirds_one_third_two_thirds.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -133,7 +143,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/layout_grid_quarters.html" %}
+  {% filter escape %}
+    {% include "snippets/layout_grid_quarters.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
