@@ -60,7 +60,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/form_error_radio_show_errors.html" %}
+  {% filter escape %}
+    {% include "snippets/form_error_radio_show_errors.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -94,7 +96,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/form_error_multiple_show_errors.html" %}
+  {% filter escape %}
+    {% include "snippets/form_error_multiple_show_errors.html" %}
+  {% endfilter %}
 </code>
 </pre>
 

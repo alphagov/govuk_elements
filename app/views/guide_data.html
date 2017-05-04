@@ -41,7 +41,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/data_table_numeric.html" %}
+  {% filter escape %}
+    {% include "snippets/data_table_numeric.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -56,7 +58,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/data_table.html" %}
+  {% filter escape %}
+    {% include "snippets/data_table.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -85,7 +89,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/data_80px_16px_example.html" %}
+  {% filter escape %}
+    {% include "snippets/data_80px_16px_example.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -102,7 +108,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/data_48px_16px_example.html" %}
+  {% filter escape %}
+    {% include "snippets/data_48px_16px_example.html" %}
+  {% endfilter %}
 </code>
 </pre>
 

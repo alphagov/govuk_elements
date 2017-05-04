@@ -61,7 +61,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/form_labels.html" %}
+  {% filter escape %}
+    {% include "snippets/form_labels.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -112,7 +114,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/form_hint_text.html" %}
+  {% filter escape %}
+    {% include "snippets/form_hint_text.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -127,7 +131,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/form_spacing.html" %}
+  {% filter escape %}
+    {% include "snippets/form_spacing.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -140,7 +146,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/form_file_upload.html" %}
+  {% filter escape %}
+    {% include "snippets/form_file_upload.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -178,7 +186,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/form_select_boxes.html" %}
+  {% filter escape %}
+    {% include "snippets/form_select_boxes.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -202,7 +212,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/form_radio_buttons_inline.html" %}
+  {% filter escape %}
+    {% include "snippets/form_radio_buttons_inline.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -213,7 +225,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/form_radio_buttons.html" %}
+  {% filter escape %}
+    {% include "snippets/form_radio_buttons.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -230,7 +244,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/form_checkboxes.html" %}
+  {% filter escape %}
+    {% include "snippets/form_checkboxes.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -246,7 +262,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/form_checkbox.html" %}
+  {% filter escape %}
+    {% include "snippets/form_checkbox.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -277,7 +295,9 @@
 
   <pre>
   <code class="language-markup">
-    {% include "snippets/encoded/form_inset_radios.html" %}
+    {% filter escape %}
+      {% include "snippets/form_inset_radios.html" %}
+    {% endfilter %}
   </code>
   </pre>
 
@@ -297,7 +317,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/form_inset_panel.html" %}
+  {% filter escape %}
+    {% include "snippets/form_inset_panel.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -319,7 +341,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/form_inset_checkboxes.html" %}
+  {% filter escape %}
+    {% include "snippets/form_inset_checkboxes.html" %}
+  {% endfilter %}
 </code>
 </pre>
 

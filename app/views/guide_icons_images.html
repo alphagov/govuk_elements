@@ -55,7 +55,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/typography_legal_text.html" %}
+  {% filter escape %}
+    {% include "snippets/typography_legal_text.html" %}
+  {% endfilter %}
 </code>
 </pre>
 

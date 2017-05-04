@@ -63,7 +63,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/typography_headings.html" %}
+  {% filter escape %}
+    {% include "snippets/typography_headings.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -84,7 +86,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/typography_lead_paragraph.html" %}
+  {% filter escape %}
+    {% include "snippets/typography_lead_paragraph.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -108,7 +112,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/typography_paragraphs.html" %}
+  {% filter escape %}
+    {% include "snippets/typography_paragraphs.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -128,14 +134,16 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/typography_links.html" %}
+  {% filter escape %}
+    {% include "snippets/typography_links.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
   <h3 class="heading-medium" id="typography-lists">Lists</h3>
-  
+
   <ul class="list list-bullet text">
-    <li>list items start with a lowercase letter and have no full stop at the end</li> 
+    <li>list items start with a lowercase letter and have no full stop at the end</li>
     <li>see the style guide to check how to <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#steps">punctuate numbered lists</a></li>
   </ul>
 
@@ -145,7 +153,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/typography_lists.html" %}
+  {% filter escape %}
+    {% include "snippets/typography_lists.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -162,7 +172,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/typography_inset_text.html" %}
+  {% filter escape %}
+    {% include "snippets/typography_inset_text.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -179,7 +191,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/typography_legal_text.html" %}
+  {% filter escape %}
+    {% include "snippets/typography_legal_text.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
@@ -198,7 +212,9 @@
 
 <pre>
 <code class="language-markup">
-  {% include "snippets/encoded/typography_progressive_disclosure.html" %}
+  {% filter escape %}
+    {% include "snippets/typography_progressive_disclosure.html" %}
+  {% endfilter %}
 </code>
 </pre>
 
