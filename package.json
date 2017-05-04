@@ -18,6 +18,7 @@
     "gulp-mocha": "^4.3.1",
     "gulp-nodemon": "^2.2.1",
     "gulp-rename": "^1.2.2",
+    "gulp-run": "^1.7.1",
     "gulp-sass": "^3.1.0",
     "gulp-util": "^3.0.8",
     "node-sass": "^4.5.2",
