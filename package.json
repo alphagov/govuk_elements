@@ -15,6 +15,8 @@
     "express-writer": "0.0.4",
     "govuk_frontend_toolkit": "^5.2.0",
     "govuk_template_jinja": "0.19.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
     "node-sass": "^4.5.2",
     "readdir": "0.0.6",
     "standard": "^7.1.2"
