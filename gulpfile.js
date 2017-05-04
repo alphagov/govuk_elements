@@ -8,11 +8,11 @@ const runsequence = require('run-sequence')
 const sass = require('gulp-sass')
 
 // Clean task ----------------------------
-// Deletes the /public directory
+// Deletes the /public and /dist directories
 // ---------------------------------------
 
 gulp.task('clean', () => {
-  return del(paths.public)
+  return del([paths.public, paths.dist])
 })
 
 // Styles build task ---------------------
@@ -56,3 +56,18 @@ gulp.task('scripts', () => {
 gulp.task('copy-assets', cb => {
   runsequence('clean', ['styles', 'images', 'scripts'], cb)
 })
+
+// Package task ----------------------------
+// Copies the scss files to dist/ for the govuk-elements-sass package
+// Ignores the elements-documentation stylesheets
+// ---------------------------------------
+
+gulp.task('package', () => {
+  return gulp.src(
+    [
+      paths.assetsScss + '**/elements/*.scss',
+      paths.assetsScss + '_govuk-elements.scss'
+    ])
+    .pipe(gulp.dest(paths.dist))
+})
+

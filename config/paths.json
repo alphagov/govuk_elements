@@ -3,6 +3,7 @@
   "assetsImg": "assets/images/",
   "assetsJs": "assets/javascripts/",
   "assetsScss": "assets/sass/",
+  "dist": "dist/",
   "nodeModules": "node_modules/",
   "views": "views/",
   "public": "public/",
