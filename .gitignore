@@ -2,14 +2,11 @@
 .DS_Store
 .start.pid
 node_modules
-govuk_modules
 lib/govuk_template.html
-# Ignore compiled stylesheets
-public/stylesheets/
-
-# Ignore test files
-dist/*.html
-
+# Ignore copied folders
+public/*
+# Ignore built package
+dist/*
 # Wraith
 shots
 shots_history
