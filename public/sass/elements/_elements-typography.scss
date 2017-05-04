@@ -134,6 +134,36 @@ main {
 
 }
 
+.page-header {
+  clear: both;
+  display: table;
+  margin-bottom: em(30, 32);
+  margin-top: em(60, 32);
+  padding-top: 8px;
+
+  @include media(tablet) {
+    margin-bottom: em(60, 48);
+    margin-top: em(90, 48);
+  }
+
+  .heading-xlarge {
+    @include bold-48();
+    margin-bottom: 0;
+    margin-top: em(8, 32);
+
+    @include media(tablet) {
+      margin-top: em(6, 48);
+    }
+  }
+
+  .heading-secondary {
+    @include heading-27();
+
+    color: $secondary-text-colour;
+    display: table-header-group;
+  }
+}
+
 // Text
 p {
   margin-top: em(5, 16);
