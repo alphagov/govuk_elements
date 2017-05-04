@@ -33,13 +33,13 @@
     <span class="form-hint">As shown on your birth certificate or passport</span>
     {% if error %}
       {% if not fullName %}
-      <span class="error-message" id="error-message-full-name">Error message about full name goes here</span>
+      <span class="error-message">Error message about full name goes here</span>
       {% endif %}
     {% endif %}
 
   </label>
 
-  <input class="form-control {% if error %}{% if not fullName %} form-control-error{% endif %}{% endif %}" id="example-full-name" type="text" name="fullName" value="{{fullName}}" {% if error %}{% if not fullName %} aria-describedby="error-message-full-name"{% endif %}{% endif %}>
+  <input class="form-control {% if error %}{% if not fullName %} form-control-error{% endif %}{% endif %}" id="example-full-name" type="text" name="fullName" value="{{fullName}}">
 </div>
 
 <div class="form-group {% if error %}{% if not niNo %} form-group-error{% endif %}{% endif %}">
@@ -54,14 +54,14 @@
     </span>
     {% if error %}
       {% if not niNo %}
-      <span class="error-message" id="error-message-ni-number">
+      <span class="error-message">
         Error message about National Insurance number goes here
       </span>
       {% endif %}
     {% endif %}
   </label>
 
-  <input class="form-control {% if error %}{% if not niNo %} form-control-error{% endif %}{% endif %}" id="example-ni-number" type="text" name="niNo" value="{{niNo}}" {% if error %}{% if not niNo %} aria-describedby="error-message-ni-number"{% endif %}{% endif %}>
+  <input class="form-control {% if error %}{% if not niNo %} form-control-error{% endif %}{% endif %}" id="example-ni-number" type="text" name="niNo" value="{{niNo}}">
 
 </div>
 
