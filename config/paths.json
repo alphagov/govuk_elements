@@ -3,11 +3,13 @@
   "assetsImg": "assets/images/",
   "assetsJs": "assets/javascripts/",
   "assetsScss": "assets/sass/",
+  "dist": "dist/",
   "nodeModules": "node_modules/",
   "views": "views/",
   "public": "public/",
   "publicImg": "public/images/",
   "publicCss": "public/stylesheets/",
   "publicJs": "public/javascripts/",
-  "testSpecs": "test/specs/"
+  "testSpecs": "test/specs/",
+  "temp": "temp/"
 }
