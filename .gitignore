@@ -2,8 +2,6 @@
 .DS_Store
 .start.pid
 node_modules
-# Ignore copied folders
-public/*
 # Ignore built package
 dist/*
 # Wraith
