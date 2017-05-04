@@ -42,3 +42,10 @@ gulp.task('images', () => {
     .pipe(gulp.dest(paths.publicImg))
 })
 
+// Scripts build task ---------------------
+// Copies JavaScript to /public/javascripts
+// ---------------------------------------
+gulp.task('scripts', () => {
+  return gulp.src(paths.assetsJs + '**/*.js')
+    .pipe(gulp.dest(paths.publicJs))
+})
