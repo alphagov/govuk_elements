@@ -4,6 +4,7 @@ const paths = require('./config/paths.json')
 const gulp = require('gulp')
 const del = require('del')
 const rename = require('gulp-rename')
+const runsequence = require('run-sequence')
 const sass = require('gulp-sass')
 
 // Clean task ----------------------------
@@ -46,4 +47,12 @@ gulp.task('images', () => {
 gulp.task('scripts', () => {
   return gulp.src(paths.assetsJs + '**/*.js')
     .pipe(gulp.dest(paths.publicJs))
+})
+
+// Copy assets task ----------------------------
+// Runs tasks that copy assets to the public directory.
+// ---------------------------------------
+
+gulp.task('copy-assets', cb => {
+  runsequence('clean', ['styles', 'images', 'scripts'], cb)
 })
