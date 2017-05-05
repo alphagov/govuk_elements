@@ -1,7 +1,7 @@
 'use strict'
 
 const packageJson = require('./package.json')
-const packageName = packageJson.name + '-' + packageJson.version
+const packageName = packageJson.name + '-sass-' + packageJson.version
 const paths = require('./config/paths.json')
 const gulp = require('gulp')
 const gutil = require('gulp-util')
@@ -71,16 +71,16 @@ gulp.task('build', cb => {
 
 const buildNpmPackageJson = () => {
   const npmPackageJson = {}
-  npmPackageJson['name'] = packageJson.name
+  npmPackageJson['name'] = packageJson.name + '-sass'
   npmPackageJson['version'] = packageJson.version
-  npmPackageJson['description'] = packageJson.description
+  npmPackageJson['description'] = packageJson.description + ' Sass files'
   npmPackageJson['dependencies'] = packageJson.dependencies
   npmPackageJson['repository'] = packageJson.repository
   npmPackageJson['author'] = packageJson.author
   npmPackageJson['license'] = packageJson.license
   npmPackageJson['bugs'] = packageJson.bugs
   npmPackageJson['homepage'] = packageJson.homepage
-  return JSON.stringify(npmPackageJson)
+  return JSON.stringify(npmPackageJson, null, ' ')
 }
 
 gulp.task('package', cb => {
