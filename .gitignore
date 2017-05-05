@@ -2,7 +2,6 @@
 .DS_Store
 .start.pid
 node_modules
-lib/govuk_template.html
 # Ignore copied folders
 public/*
 # Ignore built package
@@ -10,3 +9,7 @@ dist/*
 # Wraith
 shots
 shots_history
+# Ignore folders which have been removed
+lib/*
+app/views/snippets/encoded/*
+govuk_modules/*
