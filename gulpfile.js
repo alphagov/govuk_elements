@@ -4,6 +4,7 @@ const paths = require('./config/paths.json')
 const gulp = require('gulp')
 const cssnano = require('gulp-cssnano')
 const del = require('del')
+const nodemon = require('gulp-nodemon')
 const rename = require('gulp-rename')
 const runsequence = require('run-sequence')
 const sass = require('gulp-sass')
@@ -57,4 +58,19 @@ gulp.task('scripts', () => {
 
 gulp.task('copy-assets', cb => {
   runsequence('clean', ['styles', 'images', 'scripts'], cb)
+})
+
+// Server task --------------------------
+// Configures nodemon
+// ---------------------------------------
+gulp.task('server', () => {
+  nodemon({
+    script: 'server.js',
+    ext: '*',
+    ignore: [
+      paths.public + '*',
+      paths.assets + '*',
+      paths.nodeModules + '*'
+    ]
+  })
 })
