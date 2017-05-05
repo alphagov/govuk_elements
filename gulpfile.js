@@ -93,3 +93,11 @@ gulp.task('watch:images', () => {
   return gulp.watch(paths.assetsImg + '**/*', ['images'])
 })
 
+// Develop task --------------------------
+// Runs copy-assets task and sets up watches.
+// ---------------------------------------
+gulp.task('develop', cb => {
+  runsequence('build',
+              'watch',
+              'server', cb)
+})
