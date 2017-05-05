@@ -1,13 +1,14 @@
 {
-  "name": "govuk-elements-sass",
+  "name": "govuk-elements",
   "version": "3.0.2",
-  "description": "GOVUK elements Sass files",
+  "description": "GOV.UK elements",
   "repository": "alphagov/govuk_elements",
   "license": "MIT",
   "engines": {
     "node": ">=6.0"
   },
   "dependencies": {
+    "assert": "^1.4.1",
     "body-parser": "^1.14.1",
     "del": "^2.2.2",
     "express": "^4.15.2",
@@ -26,6 +27,21 @@
     "standard": "^7.1.2",
     "supertest": "^3.0.0"
   },
+  "scripts": {
+    "test": "standard && gulp test && npm run lint --silent",
+    "lint": "bundle && bundle exec govuk-lint-sass assets/sass/elements/",
+    "start": "gulp develop"
+  },
+  "standard": {
+    "ignore": [
+      "assets/javascripts/vendor/",
+      "tests"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/alphagov/govuk_elements/issues"
+  },
+  "homepage": "https://govuk-elements.herokuapp.com",
   "scripts": {
     "test": "standard && gulp test && npm run lint --silent",
     "lint": "bundle && bundle exec govuk-lint-sass assets/sass/elements/",
