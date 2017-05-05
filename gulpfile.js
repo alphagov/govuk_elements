@@ -86,3 +86,22 @@ gulp.task('server', () => {
     ]
   })
 })
+
+// Watch task ----------------------------
+// When a file is changed, re-run the build task.
+// ---------------------------------------
+
+gulp.task('watch', ['watch:styles', 'watch:scripts', 'watch:images'])
+
+gulp.task('watch:styles', () => {
+  return gulp.watch(paths.assetsScss + '**/*.scss', ['styles'])
+})
+
+gulp.task('watch:scripts', () => {
+  return gulp.watch(paths.assetsJs + '**/*.js', ['scripts'])
+})
+
+gulp.task('watch:images', () => {
+  return gulp.watch(paths.assetsImg + '**/*', ['images'])
+})
+
