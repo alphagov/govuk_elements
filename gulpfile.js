@@ -1,12 +1,16 @@
 'use strict'
 
+const packageJson = require('./package.json')
+const packageName = packageJson.name + '-' + packageJson.version
 const paths = require('./config/paths.json')
 const gulp = require('gulp')
 const gutil = require('gulp-util')
 const del = require('del')
+const fs = require('fs')
 const mocha = require('gulp-mocha')
 const nodemon = require('gulp-nodemon')
 const rename = require('gulp-rename')
+const run = require('gulp-run')
 const runsequence = require('run-sequence')
 const sass = require('gulp-sass')
 
@@ -15,7 +19,7 @@ const sass = require('gulp-sass')
 // ---------------------------------------
 
 gulp.task('clean', () => {
-  return del([paths.public, paths.dist])
+  return del([paths.public, paths.dist, paths.temp])
 })
 
 // Styles build task ---------------------
@@ -65,14 +69,46 @@ gulp.task('build', cb => {
 // Ignores the elements-documentation stylesheets
 // ---------------------------------------
 
-gulp.task('package', () => {
+const buildNpmPackageJson = () => {
+  const npmPackageJson = {}
+  npmPackageJson['name'] = packageJson.name
+  npmPackageJson['version'] = packageJson.version
+  npmPackageJson['description'] = packageJson.description
+  npmPackageJson['dependencies'] = packageJson.dependencies
+  npmPackageJson['repository'] = packageJson.repository
+  npmPackageJson['author'] = packageJson.author
+  npmPackageJson['license'] = packageJson.license
+  npmPackageJson['bugs'] = packageJson.bugs
+  npmPackageJson['homepage'] = packageJson.homepage
+  return JSON.stringify(npmPackageJson)
+}
+
+gulp.task('package', cb => {
+  runsequence('package:prepare', 'package:json', 'package:build', 'package:copy', 'package:clean', cb)
+})
+
+gulp.task('package:prepare', () => {
   return gulp.src(
     [
+      './CHANGELOG.md',
+      './LICENSE.txt',
+      './README.md',
       paths.assetsScss + '**/elements/*.scss',
       paths.assetsScss + '_govuk-elements.scss'
     ])
+    .pipe(gulp.dest(paths.temp))
+})
+
+gulp.task('package:json', cb => fs.writeFile(paths.temp + 'package.json', buildNpmPackageJson(), cb))
+
+gulp.task('package:build', () => run(`cd ${paths.temp} && npm pack`).exec())
+
+gulp.task('package:copy', () => {
+  return gulp.src(paths.temp + packageName + '.tgz')
     .pipe(gulp.dest(paths.dist))
 })
+
+gulp.task('package:clean', () => del(`${paths.temp}`))
 
 // Server task --------------------------
 // Configures nodemon
