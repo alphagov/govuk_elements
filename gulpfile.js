@@ -3,6 +3,7 @@
 const paths = require('./config/paths.json')
 const gulp = require('gulp')
 const del = require('del')
+const nodemon = require('gulp-nodemon')
 const rename = require('gulp-rename')
 const runsequence = require('run-sequence')
 const sass = require('gulp-sass')
@@ -71,3 +72,17 @@ gulp.task('package', () => {
     .pipe(gulp.dest(paths.dist))
 })
 
+// Server task --------------------------
+// Configures nodemon
+// ---------------------------------------
+gulp.task('server', () => {
+  nodemon({
+    script: 'server.js',
+    ext: '*',
+    ignore: [
+      paths.public + '*',
+      paths.assets + '*',
+      paths.nodeModules + '*'
+    ]
+  })
+})
