@@ -2,6 +2,7 @@
 
 const paths = require('./config/paths.json')
 const gulp = require('gulp')
+const gutil = require('gulp-util')
 const cssnano = require('gulp-cssnano')
 const del = require('del')
 const nodemon = require('gulp-nodemon')
@@ -100,4 +101,29 @@ gulp.task('develop', cb => {
   runsequence('build',
               'watch',
               'server', cb)
+})
+
+// Default task --------------------------
+// Lists out available tasks.
+// ---------------------------------------
+
+gulp.task('default', () => {
+  const cyan = gutil.colors.cyan
+  const green = gutil.colors.green
+
+  gutil.log(green('----------'))
+
+  gutil.log(('The following main ') + cyan('tasks') + (' are available:'))
+
+  gutil.log(cyan('copy-assets'
+    ) + ': copies assets to the public directory.'
+  )
+  gutil.log(cyan('develop'
+    ) + ': performs an initial build then sets up watches.'
+  )
+  gutil.log(cyan('package'
+    ) + ': prepares the govuk-elements-sass npm package'
+  )
+
+  gutil.log(green('----------'))
 })
