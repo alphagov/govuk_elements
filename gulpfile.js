@@ -4,6 +4,7 @@ const paths = require('./config/paths.json')
 const gulp = require('gulp')
 const gutil = require('gulp-util')
 const del = require('del')
+const mocha = require('gulp-mocha')
 const nodemon = require('gulp-nodemon')
 const rename = require('gulp-rename')
 const runsequence = require('run-sequence')
@@ -51,11 +52,11 @@ gulp.task('scripts', () => {
     .pipe(gulp.dest(paths.publicJs))
 })
 
-// Copy assets task ----------------------------
+// Build task ----------------------------
 // Runs tasks that copy assets to the public directory.
 // ---------------------------------------
 
-gulp.task('copy-assets', cb => {
+gulp.task('build', cb => {
   runsequence('clean', ['styles', 'images', 'scripts'], cb)
 })
 
@@ -87,6 +88,26 @@ gulp.task('server', () => {
     ]
   })
 })
+
+// Test task --------------------------
+// Check that the build task copies assets
+// to /public and that the app runs.
+// ---------------------------------------
+gulp.task('test', cb => {
+  runsequence('build', ['test:app'], cb)
+})
+
+gulp.task('test:app', () =>
+  gulp.src(paths.testSpecs + 'app_spec.js', {read: false})
+  .pipe(mocha({reporter: 'spec'}))
+  // https://github.com/sindresorhus/gulp-mocha#test-suite-not-exiting
+  .once('error', () => {
+    process.exit(1)
+  })
+  .once('end', () => {
+    process.exit()
+  })
+)
 
 // Watch task ----------------------------
 // When a file is changed, re-run the build task.
@@ -127,7 +148,7 @@ gulp.task('default', () => {
 
   gutil.log(('The following main ') + cyan('tasks') + (' are available:'))
 
-  gutil.log(cyan('copy-assets'
+  gutil.log(cyan('build'
     ) + ': copies assets to the public directory.'
   )
   gutil.log(cyan('develop'

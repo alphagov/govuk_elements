@@ -7,6 +7,8 @@ var bodyParser = require('body-parser')
 var config = require('./app/config.js')
 var port = (process.env.PORT || 3000)
 
+module.exports = app
+
 // Application settings
 app.set('view engine', 'html')
 

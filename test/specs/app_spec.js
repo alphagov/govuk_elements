@@ -11,8 +11,9 @@ describe('Copy assets to public and run the app...', () => {
     it('should copy assets into the /public folder', function () {
       assert.doesNotThrow(function () {
         fs.accessSync(path.resolve(__dirname, '../../public/javascripts/application.js'))
-        fs.accessSync(path.resolve(__dirname, '../../public/images/test.gif'))
-        fs.accessSync(path.resolve(__dirname, '../../public/stylesheets/application.css'))
+        fs.accessSync(path.resolve(__dirname, '../../public/images/examples/larry-the-cat.jpg'))
+        fs.accessSync(path.resolve(__dirname, '../../public/stylesheets/govuk-elements-styles.css'))
+        fs.accessSync(path.resolve(__dirname, '../../public/stylesheets/elements-documentation.css'))
       })
     })
   })
