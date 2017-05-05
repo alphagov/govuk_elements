@@ -54,7 +54,6 @@ routes.bind(app, '/public/')
 
 // start the app
 
-app.listen(port)
-console.log('')
-console.log('Listening on port ' + port)
-console.log('')
+app.listen(port, function () {
+  console.log('Listening on port ' + port + '   url: http://localhost:' + port)
+})
