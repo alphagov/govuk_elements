@@ -1,7 +1,7 @@
 {
-  "name": "govuk-elements-sass",
+  "name": "govuk-elements",
   "version": "3.0.2",
-  "description": "GOVUK elements Sass files",
+  "description": "GOV.UK elements",
   "repository": "alphagov/govuk_elements",
   "license": "MIT",
   "engines": {
