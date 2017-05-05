@@ -1,6 +1,6 @@
 var path = require('path')
 var express = require('express')
-var nunjucks = require('express-nunjucks')
+var nunjucks = require('nunjucks')
 var routes = require('./app/routes.js')
 var app = express()
 var bodyParser = require('body-parser')
@@ -9,19 +9,26 @@ var port = (process.env.PORT || 3000)
 
 // Application settings
 app.set('view engine', 'html')
-app.set('views', [path.join(__dirname, '/app/views'), path.join(__dirname, '/lib/')])
 
-nunjucks.setup({
+// Set the location of the views and govuk_template layout file
+var appViews = [
+  path.join(__dirname, '/app/views'),
+  path.join(__dirname, '/node_modules/govuk_template_jinja/views/layouts')
+]
+
+// Tell nunjucks we are using express to serve the templates within
+// the views defined in appViews
+nunjucks.configure(appViews, {
+  express: app,
   autoescape: true,
   watch: true,
   noCache: true
-}, app)
+})
 
 // Middleware to serve static assets
 app.use('/public', express.static(path.join(__dirname, '/public')))
-app.use('/public', express.static(path.join(__dirname, '/govuk_modules/public')))
-app.use('/public', express.static(path.join(__dirname, '/govuk_modules/govuk_template/assets')))
-app.use('/public', express.static(path.join(__dirname, '/govuk_modules/govuk_frontend_toolkit')))
+app.use('/public', express.static(path.join(__dirname, '/node_modules/govuk_template_jinja/assets')))
+app.use('/public', express.static(path.join(__dirname, '/node_modules/govuk_frontend_toolkit')))
 
 // Support for parsing data in POSTs
 app.use(bodyParser.json())
