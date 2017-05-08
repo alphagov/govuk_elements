@@ -27,7 +27,8 @@
     "supertest": "^3.0.0"
   },
   "scripts": {
-    "test": "standard && gulp test && npm run lint --silent",
+    "pretest": "npm run lint --silent",
+    "test": "standard && gulp test",
     "lint": "bundle && bundle exec govuk-lint-sass assets/sass/elements/",
     "start": "gulp develop"
   },
