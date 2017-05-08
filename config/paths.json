@@ -10,5 +10,6 @@
   "publicImg": "public/images/",
   "publicCss": "public/stylesheets/",
   "publicJs": "public/javascripts/",
-  "testSpecs": "test/specs/"
+  "testSpecs": "test/specs/",
+  "temp": "temp/"
 }
