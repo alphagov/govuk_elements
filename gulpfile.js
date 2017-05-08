@@ -67,8 +67,8 @@ gulp.task('build', cb => {
 // ---------------------------------------
 gulp.task('server', () => {
   nodemon({
+    watch: ['.env', '**/*.js', '**/*.json'],
     script: 'server.js',
-    ext: '*',
     ignore: [
       paths.public + '*',
       paths.assets + '*',
