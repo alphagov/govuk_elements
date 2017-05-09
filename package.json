@@ -30,6 +30,7 @@
     "pretest": "npm run lint --silent",
     "test": "standard && gulp test",
     "lint": "bundle && bundle exec govuk-lint-sass assets/sass/elements/",
+    "postinstall": "gulp build",
     "start": "gulp develop"
   },
   "standard": {
