@@ -6,6 +6,7 @@ var app = express()
 var bodyParser = require('body-parser')
 var config = require('./app/config.js')
 var port = (process.env.PORT || 3000)
+var IS_HEROKU = process.env.hasOwnProperty('IS_HEROKU')
 
 module.exports = app
 
@@ -57,5 +58,7 @@ routes.bind(app, '/public/')
 // start the app
 
 app.listen(port, function () {
-  console.log('Listening on port ' + port + '   url: http://localhost:' + port)
+  if (!IS_HEROKU) {
+    console.log('Listening on port ' + port + '   url: http://localhost:' + port)
+  }
 })
