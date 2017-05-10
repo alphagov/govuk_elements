@@ -77,7 +77,7 @@ const buildNpmPackageJson = () => {
   npmPackageJson['name'] = packageJson.name + '-sass'
   npmPackageJson['version'] = packageJson.version
   npmPackageJson['description'] = packageJson.description + ' Sass files'
-  npmPackageJson['dependencies'] = packageJson.dependencies
+  npmPackageJson['dependencies'] = packageJson.devDependencies
   npmPackageJson['repository'] = packageJson.repository
   npmPackageJson['author'] = packageJson.author
   npmPackageJson['license'] = packageJson.license
