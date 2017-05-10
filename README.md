@@ -1,42 +1,25 @@
 GOV.UK elements
 ===============
 
----
-
-#### You can help us improve this app by completing our [5 minute survey](https://www.surveymonkey.co.uk/r/2MZRS9H).
-
----
-
-## What is it?
-
 GOV.UK elements is three things:
 
-1. [an online design guide](http://govuk-elements.herokuapp.com/), explaining how to make your service look consistent with the rest of GOV.UK
-2. an example of how to use the code in the [GOV.UK template](https://github.com/alphagov/govuk_template) and the [GOV.UK frontend toolkit](https://github.com/alphagov/govuk_frontend_toolkit)
-3. an [npm package of the Sass files](https://www.npmjs.com/package/govuk-elements-sass)
+1. [An online design guide](http://govuk-elements.herokuapp.com/), explaining how to make your service look consistent with the rest of GOV.UK.
+2. An example of how to use the code in the [GOV.UK template](https://github.com/alphagov/govuk_template) and the [GOV.UK frontend toolkit](https://github.com/alphagov/govuk_frontend_toolkit).
+3. An [npm package of the Sass files](https://www.npmjs.com/package/govuk-elements-sass).
 
-The guide can be seen here: [http://govuk-elements.herokuapp.com](http://govuk-elements.herokuapp.com/).
+# GOV.UK elements guide
 
-To preview the latest relase of govuk-elements-sass:
-[http://govuk-elements-sass-release.herokuapp.com/](http://govuk-elements-sass-release.herokuapp.com/)
-This is the most recent tagged version.
+[http://govuk-elements.herokuapp.com/](http://govuk-elements.herokuapp.com/).
 
-## How can it be used?
+# Using govuk-elements-sass
 
-It can be used as a base of frontend code.
+GOV.UK elements has the [GOV.UK frontend toolkit](https://github.com/alphagov/govuk_frontend_toolkit) as a dependency.
 
-GOV.UK elements has the [GOV.UK frontend toolkit](https://github.com/alphagov/govuk_frontend_toolkit) and the [GOV.UK template](https://github.com/alphagov/govuk_template) as dependencies.
+It assumes your project is using the [GOV.UK template](https://github.com/alphagov/govuk_template).
 
-The toolkit provides Sass variables, functions and mixins, they *must be imported* before any of the GOV.UK elements Sass files.
+The govuk_frontend_toolkit provides Sass variables, functions and mixins, they *must be imported* before any of the GOV.UK elements Sass files.
 
-Take a look at the top of `/public/sass/_govuk-elements.scss` to see how the GOV.UK frontend toolkit's Sass files are imported.
-
-Choose the Sass files you need to build on top of those provided by the frontend toolkit.
-
-Ignore the `/public/sass/elements-page.scss` files, these exist to style the page furniture of GOV.UK elements (for example, the HTML example boxes and colour swatches).
-
-
-## Using the govuk-elements-sass package
+The govuk_frontend_toolkit's Sass files are imported at the top of `_govuk-elements.scss`.
 
 ## Install
 
@@ -48,23 +31,23 @@ This installs the package as well as the packages it depends on to the local `/n
 
 ## Usage
 
-To import all of the govuk-elements-sass files, first import the `_govuk-elements.scss` partial.
+To import all of the govuk-elements-sass files, import the `_govuk-elements.scss` partial.
 
     @import govuk-elements;
 
 ## Set a path for your image assets
 
-If you are not using Rails or Compass, then you will need to define a $path variable in your main application stylesheet.
+If you are not using Rails or Compass, then you will need to define a `$path` variable in your main application stylesheet.
 
-In `public/sass/main.scss` there is an example of this:
+     $path: "/public/images/";
 
-    // Path to assets for use with the file-url function
-    // in the govuk frontend toolkit's url-helpers partial
-    $path: "/public/images/";
+There is an example of this in: `assets/sass/govuk-elements-styles.scss`.
 
 ## Alternate usage
 
 You can pick and choose partials from the govuk-elements-sass package.
+
+Choose these from the list of imported partials in `_govuk_elements.scss`.
 
 **The GOV.UK frontend toolkit scss dependencies listed below must be imported first**.
 
@@ -91,28 +74,22 @@ You can pick and choose partials from the govuk-elements-sass package.
     // Functions
     // @import "url-helpers";                         // Function to output image-url, or prefixed path (Rails and Compass only)
 
-You can find these at the top of the `_govuk_elements.scss` partial.
 
 If you're not using the [GOV.UK template](https://github.com/alphagov/govuk_template),
 you’ll also need to uncomment the base partial in `_govuk_elements.scss`, or create your own.
 
     // @import "elements/base";                       // HTML elements, set by the GOV.UK template
 
+
 ## Compile
 
 ### Using a task runner to compile the Sass files
 
-### Using Grunt
+Add the `node_modules/govuk_frontend_toolkit` and `node_modules/govuk-elements-sass` directories to the `includePaths` property of your Sass plugin - if you're using a task runner like Gulp or Grunt, to reference the location of these files.
 
-Take a look at this project's Gruntfile.js.
+Import `_govuk-elements.scss` into your main.scss file.
 
-### Using Gulp
-
-Add the `node_modules/govuk_frontend_toolkit` and `node_modules/govuk-elements-sass` directories to the `includePaths` property of your Sass plugin - if you're using a task runner like Gulp, to reference the location of these files.
-
-#### Example: Using [Gulp](http://gulpjs.com/) to compile the govuk-elements-sass files
-
-#### Example folder structure
+### Example folder structure
 
     - index.html
     -- node_modules
@@ -124,41 +101,58 @@ Add the `node_modules/govuk_frontend_toolkit` and `node_modules/govuk-elements-s
         -- css
             - main.css
 
-
-Import `_govuk-elements.scss` into your main.scss file.
+### Using [Gulp](http://gulpjs.com/)
 
 #### Example Gulpfile.js
 
     'use strict';
 
-    var gulp = require('gulp');
-    var sass = require('gulp-sass');
-
-    var repo_root = __dirname + '/';
-    var govuk_frontend_toolkit_root =  repo_root + 'node_modules/govuk_frontend_toolkit/stylesheets'; // 1.
-    var govuk_elements_sass_root =  repo_root + 'node_modules/govuk-elements-sass/public/sass';       // 2.
+    const gulp = require('gulp')
+    const sass = require('gulp-sass')
 
     // Compile scss files to css
-    gulp.task('styles', function () {
-      return gulp.src('./assets/scss/**/*.scss')
-        .pipe(sass({includePaths: [
-          govuk_frontend_toolkit_root,
-          govuk_elements_sass_root
-          ]}).on('error', sass.logError))
-        .pipe(gulp.dest('./assets/css'));
-    });
+    gulp.task('styles', () => {
+      return gulp.src('./sass/**/*.scss')
+        .pipe(sass({
+          includePaths: [
+            'node_modules/govuk_frontend_toolkit/stylesheets', // 1
+            'node_modules/govuk-elements-sass/public/sass'     // 2
+          ]
+        }).on('error', sass.logError))
+        .pipe(gulp.dest('./css'))
+    })
 
 In the example above `includePaths` uses two paths to resolve the scss @import statements.
 
-1. The location of the directory containing the govuk_frontend_toolkit sass files
-2. The location of the directory containing the govuk-elements-sass files
+1. The location of the directory containing the govuk_frontend_toolkit sass files.
+2. The location of the directory containing the govuk-elements-sass files.
 
-#### Run
+### Using Grunt
 
-    gulp styles
+#### Example Gruntfile.js
 
-To compile the govuk-elements-sass files.
+    grunt.loadNpmTasks('grunt-contrib-sass')
 
+    grunt.initConfig({
+      sass: {
+        dist: {
+          options: {
+            includePaths: [
+              'node_modules/govuk_frontend_toolkit/stylesheets', // 1
+              'node_modules/govuk-elements-sass/public/sass'     // 2
+            ],
+          },
+          files: {
+            'main.css': 'main.scss'
+          }
+        }
+      }
+    })
+
+In the example above `includePaths` uses two paths to resolve the scss @import statements.
+
+1. The location of the directory containing the govuk_frontend_toolkit sass files.
+2. The location of the directory containing the govuk-elements-sass files.
 
 ## Running this site locally
 
@@ -170,7 +164,7 @@ Clone this repository
     git clone git@github.com:alphagov/govuk_elements.git
 
 
-Install the required node modules
+Install all dependencies
 
     npm install
 
@@ -182,6 +176,12 @@ Run the app
 Go to [localhost:3000](http://localhost:3000) in your browser.
 
 
+## Running tests
+
+To check the whole codebase, run:
+
+    npm test
+
 ## Linting
 
 ### GOV.UK lint
@@ -192,11 +192,6 @@ GOV.UK elements uses [standardjs](http://standardjs.com/), an opinionated JavaSc
 
 Both linters run on CI to ensure that new pull requests are in line with them.
 
-## Linting
-
-To check the whole codebase, run:
-
-    npm test
 
 ## Running Wraith to compare changes
 
@@ -204,27 +199,27 @@ GOV.UK elements uses Wraith so that regressions can be easily spotted.
 
 This needs to be run from the Wraith directory `/tests/wraith` and some dependencies need to be installed on the local machine first.
 
-### Install Wraith and its dependencies
+1. Install Wraith and its dependencies.
 
     gem install wraith
     brew install phantomjs
     brew install imagemagick
 
-### Usage
+2. Take a baseline of the current version.
 
-Take a baseline of the current version.
 On master run:
 
     wraith history config.yaml
 
 
-Switch to your feature branch and make changes.
-On feature branch run:
+3. Switch to your feature branch and make changes.
+
+On your feature branch run:
 
     wraith latest config.yaml
 
 
-## How are people building with GOV.UK elements?
+## Pattern libraries using GOV.UK elements
 
 Here are examples of service-specific pattern libraries using GOV.UK elements.
 
@@ -232,7 +227,7 @@ Here are examples of service-specific pattern libraries using GOV.UK elements.
 * [Land Registry pattern library](http://land-registry-elements.herokuapp.com) | [Source Code](https://github.com/LandRegistry/land-registry-elements)
 * [Digital Marketplace frontend toolkit](http://alphagov.github.io/digitalmarketplace-frontend-toolkit/) | [Source Code](https://github.com/alphagov/digitalmarketplace-frontend-toolkit)
 
-## Contribution Guidelines
+
+## Contributing
 
 You can find contribution guidelines in [CONTRIBUTING.md](https://github.com/alphagov/govuk_elements/blob/master/CONTRIBUTING.md)
-
