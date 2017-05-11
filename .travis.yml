@@ -34,6 +34,7 @@ deploy:
   api_key:
     secure: VAHPK3W0YVWqx03j659FbKjvEwd+UIDfb1x55to9u+PzyVqQp1CXalsYuKQSavxqInaV3gzNJpbANo6SIXlpAUxZPChiTk0rJwUhz7u1fRY0Lshb+aDOMnXSfjSqiIGThNRpjYdxBiJsnrYP1T6unHuo2A1K8mXjwdFtxhadh+w=
   email: govuk-dev@digital.cabinet-office.gov.uk
+  skip_cleanup: true  # Don't cleanup /dist
   on:
     tags: true
     all_branches: true
