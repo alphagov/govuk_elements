@@ -116,7 +116,7 @@ Import `_govuk-elements.scss` into your main.scss file.
         .pipe(sass({
           includePaths: [
             'node_modules/govuk_frontend_toolkit/stylesheets', // 1
-            'node_modules/govuk-elements-sass/public/sass'     // 2
+            'node_modules/govuk-elements-sass'     // 2
           ]
         }).on('error', sass.logError))
         .pipe(gulp.dest('./css'))
@@ -139,7 +139,7 @@ In the example above `includePaths` uses two paths to resolve the scss @import s
           options: {
             includePaths: [
               'node_modules/govuk_frontend_toolkit/stylesheets', // 1
-              'node_modules/govuk-elements-sass/public/sass'     // 2
+              'node_modules/govuk-elements-sass'     // 2
             ],
           },
           files: {
