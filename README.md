@@ -1,4 +1,5 @@
-GOV.UK elements
+GOV.UK elements ·
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 ===============
 
 GOV.UK elements is three things:
