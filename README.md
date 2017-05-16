@@ -1,5 +1,6 @@
 GOV.UK elements ·
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Greenkeeper badge](https://badges.greenkeeper.io/alphagov/govuk_elements.svg)](https://greenkeeper.io/)
 ===============
 
 GOV.UK elements is three things:
