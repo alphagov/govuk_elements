@@ -20,14 +20,32 @@ Take a look at the [prototype kit documentation on linting](https://github.com/a
 
 ## Versioning
 
-Follow the guidelines on [semver.org](http://semver.org/) for assigning version
-numbers.
+We use [Semantic Versioning](http://semver.org/).
 
-Versions should only be changed in a commit of their own, in a pull request of
-their own. This alerts team members to the new version and allows for
-last-minute scrutiny before the new version is released. Also, by raising a
-separate pull request, we avoid version number conflicts between feature
-branches.
+## To release a new version
+
+1. Run the package task (to copy the Sass files from `/public/sass` to `/packages/govuk-elements-sass/public/sass/`)
+
+    gulp package
+
+2. Open a new pull request with two commits:
+
+**The first commit:**
+Commit the changes to the Sass files in the package.
+Update CHANGELOG.md to summarise these changes.
+
+To see the commits to be summarised in the changelog since the last release, [compare the latest-release branch with master](https://github.com/alphagov/govuk_frontend_toolkit/compare/latest-release...master).
+
+**The second commit:**
+Propose a new version numer in [`VERSION.txt`](https://github.com/alphagov/govuk-elements-sass/blob/master/packages/govuk-elements-sass/VERSION.txt) and update [`package.json`](https://github.com/alphagov/govuk-elements-sass/blob/master/packages/govuk-elements-sass/CHANGELOG.md) with the new version number.
+
+3. Once merged into master a new version will be built:
+
+The [create-release.sh](https://github.com/alphagov/govuk_elements/blob/master/create-release.sh) script will check for an existing tag matching the version number in `packages/govuk-elements-sass/VERSION.txt`, if it doesn’t exist, it creates a tag and pushes this to Github.
+
+On a tagged commit, Travis deploys the package to npm.
+
+The contents of `/packages/govuk-elements-sass` will be also be released using [GitHub Releases using Travis](https://docs.travis-ci.com/user/deployment/releases/).
 
 ## Commit hygiene
 
