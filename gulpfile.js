@@ -139,7 +139,7 @@ gulp.task('package:prepare', () => {
       paths.assetsScss + '**/elements/**/*.scss',
       paths.assetsScss + '_govuk-elements.scss'
     ])
-    .pipe(gulp.dest(paths.package))
+    .pipe(gulp.dest(paths.package + 'public/sass/'))
 })
 
 // Default task --------------------------
