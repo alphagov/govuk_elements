@@ -16,7 +16,7 @@ chmod 600 ~/.ssh/id_rsa
 echo "Check to see if the version file has been updated"
 
 # Get the version from the version file
-VERSION_TAG="v`cat VERSION.txt`"
+VERSION_TAG="v`cat packages/govuk-elements-sass/VERSION.txt`"
 
 # Create a new tag - if the version file has been updated and a tag for that
 # version doesn't already exist
