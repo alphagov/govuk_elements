@@ -124,6 +124,24 @@ gulp.task('develop', cb => {
               'server', cb)
 })
 
+// Package task ----------------------------
+// Copies the scss files to packages/govuk-elements-sass/
+// Ignores the elements-documentation stylesheets
+// ---------------------------------------
+
+gulp.task('package', cb => {
+  runsequence('package:prepare', cb)
+})
+
+gulp.task('package:prepare', () => {
+  return gulp.src(
+    [
+      paths.assetsScss + '**/elements/**/*.scss',
+      paths.assetsScss + '_govuk-elements.scss'
+    ])
+    .pipe(gulp.dest(paths.package + 'public/sass/'))
+})
+
 // Default task --------------------------
 // Lists out available tasks.
 // ---------------------------------------

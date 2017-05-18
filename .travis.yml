@@ -37,6 +37,14 @@ deploy:
   on:
     tags: true
     all_branches: true
+- provider: releases  # For tagged commits, upload the contents of packages/govuk-elements-sass/ to GitHub releases
+  api_key:
+    secure: "v7iqOh5d19kzYiRAJNDmXrrKhY49XPePE9b6jgTQdz2p/ErQ16ftNSYU7IbWM8lZnN/DB7ck8LAgqpQDMAWdfh6OoyTUWciYrQwfDN77HTPI28EPXepgvGBS/saTEEXQL1CFYVmyrW+H+NMd55F0MNSbnYlDCgG7c3yFdy8MRPs="
+  file_glob: true
+  file: packages/govuk-elements-sass/*
+  skip_cleanup: true
+  on:
+    tags: true
 sudo: false
 env:
   global:
