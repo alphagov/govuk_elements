@@ -1,3 +1,8 @@
+# 3.0.3
+
+- Increase the size of the text in the highlight box - used for confirmation pages ([PR #451](https://github.com/alphagov/govuk_elements/pull/451))
+- Fix insufficient colour contrast on select boxes in Windows 10 ([PR #456](https://github.com/alphagov/govuk_elements/pull/456))
+
 # 3.0.2
 
 - Resolve 'dead area' between radio/checkbox and label that has hand cursor but is not clickable ([PR #435](https://github.com/alphagov/govuk_elements/pull/435))
