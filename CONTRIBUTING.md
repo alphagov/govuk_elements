@@ -34,7 +34,7 @@ We use [Semantic Versioning](http://semver.org/).
 Commit the changes to the Sass files in the package.
 Update CHANGELOG.md to summarise these changes.
 
-To see the commits to be summarised in the changelog since the last release, [compare the latest-release branch with master](https://github.com/alphagov/govuk_frontend_toolkit/compare/latest-release...master).
+To see the commits to be summarised in the changelog since the last release, [compare the latest-release branch with master](https://github.com/alphagov/govuk_elements/compare/latest-release...master).
 
 **The second commit:**
 Propose a new version numer in [`VERSION.txt`](https://github.com/alphagov/govuk-elements-sass/blob/master/packages/govuk-elements-sass/VERSION.txt) and update [`package.json`](https://github.com/alphagov/govuk-elements-sass/blob/master/packages/govuk-elements-sass/CHANGELOG.md) with the new version number.
