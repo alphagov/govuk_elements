@@ -40,6 +40,10 @@
       "tests"
     ]
   },
+  "author": {
+    "name": "Government Digital Service developers",
+    "email": "govuk-dev@digital.cabinet-office.gov.uk"
+  },
   "bugs": {
     "url": "https://github.com/alphagov/govuk_elements/issues"
   }
