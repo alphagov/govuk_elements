@@ -9,42 +9,57 @@ notifications:
   email: false
 before_deploy:
 - test $TRAVIS_TEST_RESULT = 0
-deploy:
-- provider: heroku    # Deploy master to Heroku - production (http://govuk-elements.herokuapp.com/)
-  api_key:
-    secure: nQCOBk2EnuJ0yaC0cO2RabfLlF+3WiZ4MrLLBPt3l+fNQO69KcJZu59Npbt45f/ip6Dv8cEGxdzSqzNsPu/XB+fmyAZd1bml0u7JMKWNQeVLKddoM+A1ETFSyXHoM/Ra3Qw8+2XS/ZJNTAD7BGibSh8SvzYdg9fy9kCN77Sn9Ro=
-  app: govuk-elements
-  on: master
-- provider: heroku    # Deploy master to Heroku - review (http://govuk-elements-review.herokuapp.com/)
-  api_key:
-    secure: nQCOBk2EnuJ0yaC0cO2RabfLlF+3WiZ4MrLLBPt3l+fNQO69KcJZu59Npbt45f/ip6Dv8cEGxdzSqzNsPu/XB+fmyAZd1bml0u7JMKWNQeVLKddoM+A1ETFSyXHoM/Ra3Qw8+2XS/ZJNTAD7BGibSh8SvzYdg9fy9kCN77Sn9Ro=
-  app: govuk-elements-review
-  on: master
-- provider: script    # (If version.txt is updated) - create a new tag and push to Github, update the latest-release branch
-  script: ./create-release.sh
-  on: master
-- provider: heroku    # For tagged commits, update the release Heroku app (http://govuk-elements-sass-release.herokuapp.com/)
-  api_key:
-    secure: nQCOBk2EnuJ0yaC0cO2RabfLlF+3WiZ4MrLLBPt3l+fNQO69KcJZu59Npbt45f/ip6Dv8cEGxdzSqzNsPu/XB+fmyAZd1bml0u7JMKWNQeVLKddoM+A1ETFSyXHoM/Ra3Qw8+2XS/ZJNTAD7BGibSh8SvzYdg9fy9kCN77Sn9Ro=
-  app: govuk-elements-sass-release
-  on:
-    tags: true
-    all_branches: true
-- provider: npm       # For tagged commits, update the NPM package (https://www.npmjs.com/package/govuk-elements-sass)
-  api_key:
-    secure: VAHPK3W0YVWqx03j659FbKjvEwd+UIDfb1x55to9u+PzyVqQp1CXalsYuKQSavxqInaV3gzNJpbANo6SIXlpAUxZPChiTk0rJwUhz7u1fRY0Lshb+aDOMnXSfjSqiIGThNRpjYdxBiJsnrYP1T6unHuo2A1K8mXjwdFtxhadh+w=
-  email: govuk-dev@digital.cabinet-office.gov.uk
-  on:
-    tags: true
-    all_branches: true
-- provider: releases  # For tagged commits, upload the contents of packages/govuk-elements-sass/ to GitHub releases
-  api_key:
-    secure: "v7iqOh5d19kzYiRAJNDmXrrKhY49XPePE9b6jgTQdz2p/ErQ16ftNSYU7IbWM8lZnN/DB7ck8LAgqpQDMAWdfh6OoyTUWciYrQwfDN77HTPI28EPXepgvGBS/saTEEXQL1CFYVmyrW+H+NMd55F0MNSbnYlDCgG7c3yFdy8MRPs="
-  file_glob: true
-  file: packages/govuk-elements-sass/*
-  skip_cleanup: true
-  on:
-    tags: true
+jobs:
+  include:
+    - stage: heroku deploy
+      script: echo "Deploying to Heroku ..."
+      deploy:
+        - provider: heroku    # Deploy master to Heroku - production (http://govuk-elements.herokuapp.com/)
+          api_key:
+            secure: nQCOBk2EnuJ0yaC0cO2RabfLlF+3WiZ4MrLLBPt3l+fNQO69KcJZu59Npbt45f/ip6Dv8cEGxdzSqzNsPu/XB+fmyAZd1bml0u7JMKWNQeVLKddoM+A1ETFSyXHoM/Ra3Qw8+2XS/ZJNTAD7BGibSh8SvzYdg9fy9kCN77Sn9Ro=
+          app: govuk-elements
+          on: master
+        - provider: heroku    # Deploy master to Heroku - review (http://govuk-elements-review.herokuapp.com/)
+          api_key:
+            secure: nQCOBk2EnuJ0yaC0cO2RabfLlF+3WiZ4MrLLBPt3l+fNQO69KcJZu59Npbt45f/ip6Dv8cEGxdzSqzNsPu/XB+fmyAZd1bml0u7JMKWNQeVLKddoM+A1ETFSyXHoM/Ra3Qw8+2XS/ZJNTAD7BGibSh8SvzYdg9fy9kCN77Sn9Ro=
+          app: govuk-elements-review
+          on: master
+    - stage: tag create
+      script: echo "Running create-release.sh ..."
+      deploy:
+        - provider: script    # (If version.txt is updated) - create a new tag and push to Github, update the latest-release branch
+          script: ./create-release.sh
+          on: master
+        - provider: heroku    # For tagged commits, update the release Heroku app (http://govuk-elements-sass-release.herokuapp.com/)
+          api_key:
+            secure: nQCOBk2EnuJ0yaC0cO2RabfLlF+3WiZ4MrLLBPt3l+fNQO69KcJZu59Npbt45f/ip6Dv8cEGxdzSqzNsPu/XB+fmyAZd1bml0u7JMKWNQeVLKddoM+A1ETFSyXHoM/Ra3Qw8+2XS/ZJNTAD7BGibSh8SvzYdg9fy9kCN77Sn9Ro=
+          app: govuk-elements-sass-release
+          on:
+            tags: true
+            all_branches: true
+    - stage: npm release
+      script: echo "Deploying to npm ..."
+      script: cd packages/govuk-elements-sass/
+      deploy:
+        provider: npm       # For tagged commits, update the NPM package (https://www.npmjs.com/package/govuk-elements-sass)
+        email: govuk-dev@digital.cabinet-office.gov.uk
+        api_key:
+          secure: VAHPK3W0YVWqx03j659FbKjvEwd+UIDfb1x55to9u+PzyVqQp1CXalsYuKQSavxqInaV3gzNJpbANo6SIXlpAUxZPChiTk0rJwUhz7u1fRY0Lshb+aDOMnXSfjSqiIGThNRpjYdxBiJsnrYP1T6unHuo2A1K8mXjwdFtxhadh+w=
+        on:
+          tags: true
+          all_branches: true
+    - stage: GitHub release
+      script: echo "Deploying to GitHub releases ..."
+      deploy:
+        provider: releases  # For tagged commits, upload the contents of packages/govuk-elements-sass/ to GitHub releases
+        api_key:
+          secure: HZD7iqjcf/Yg792jMqksiVsCSQJSZG2TJ77EIGNh7qsdmCSJneUKPpeohQIEvkpjKiz+RyP4v0UqHx9lxHx7rBDmzOdTUCKAV3biTFvmf/W6IUb4UGXbjsDA5AMlNgpCdy4xT2iYBSyUKRR4qLjLDITduDoRQZFET5Z52nzcJgo=
+        file_glob: true
+        file: packages/govuk-elements-sass/*
+        skip_cleanup: true
+        on:
+          tags: true
+          all_branches: true
 sudo: false
 env:
   global:
