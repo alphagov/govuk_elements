@@ -39,6 +39,7 @@ jobs:
             all_branches: true
     - stage: npm release
       script: echo "Deploying to npm ..."
+      script: cd packages/govuk-elements-sass/
       deploy:
         provider: npm       # For tagged commits, update the NPM package (https://www.npmjs.com/package/govuk-elements-sass)
         email: govuk-dev@digital.cabinet-office.gov.uk
