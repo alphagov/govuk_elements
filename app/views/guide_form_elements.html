@@ -24,6 +24,7 @@
         <li><a href="#form-optional-fields">Optional and mandatory fields</a></li>
         <li><a href="#form-labels">Labels</a></li>
         <li><a href="#form-fields">Form fields</a></li>
+        <li><a href="#form-textarea">Textarea</a></li>
         <li><a href="#form-focus-states">Form focus states</a></li>
         <li><a href="#form-hint-text">Hint text</a></li>
         <li><a href="#form-spacing">Spacing</a></li>
@@ -85,6 +86,25 @@
       Discuss form fields on the design patterns Hackpad
     </a>
   </p>
+
+  <h3 class="heading-medium" id="form-textarea">Textarea</h3>
+  <div class="text">
+    <p>
+      Make the height of a textarea proportional to the amount of text to be entered.
+    </p>
+  </div>
+
+  <div class="example">
+    {% include "snippets/form_textarea.html" %}
+  </div>
+
+<pre>
+<code class="language-markup">
+  {% filter escape %}
+    {% include "snippets/form_textarea.html" %}
+  {% endfilter %}
+</code>
+</pre>
 
   <h3 class="heading-medium" id="form-focus-states">Form focus states</h3>
   <div class="text">

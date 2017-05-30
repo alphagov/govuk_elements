@@ -163,10 +163,15 @@ textarea {
 // scss-lint:disable QualifyingElement
 input.form-control,
 textarea.form-control {
-  // Remove inner shadow
+  // Disable inner shadow and remove rounded corners
   -webkit-appearance: none;
-  // Remove rounded corners
   border-radius: 0;
+}
+
+textarea.form-control {
+  // Disable opacity and background image for Firefox
+  opacity: 1;
+  background-image: none;
 }
 // scss-lint:enable QualifyingElement
 
