@@ -1,10 +1,14 @@
 language: node_js
 node_js:
- - "4.4.7"
+ - "7"
+before_install:
+- npm install npm@latest -g
+- npm install -g gulp
+- npm install -g greenkeeper-lockfile@1
 script:
-# Ensures `package.json` and `yarn.lock` stay in sync
-- yarn check --integrity
-- yarn test
+- npm test
+before_script: greenkeeper-lockfile-update
+after_script: greenkeeper-lockfile-upload
 notifications:
   email: false
 before_deploy:
