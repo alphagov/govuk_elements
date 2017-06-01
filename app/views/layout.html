@@ -10,6 +10,13 @@
   {% include "includes/elements_tracking.html" %}
 {% endblock %}
 
+{% block content %}
+<div class="site-wrapper">
+  {% include "includes/breadcrumb.html" %}
+  {% block main_content %}{% endblock %}
+</div>
+{% endblock %}
+
 {% block cookie_message %}
   <p>{{cookieText | safe }}</p>
 {% endblock %}
