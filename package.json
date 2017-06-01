@@ -1,5 +1,6 @@
 {
   "name": "govuk-elements",
+  "version": "0.0.0",
   "private": "true",
   "description": "The GOV.UK elements application",
   "repository": "alphagov/govuk_elements",
