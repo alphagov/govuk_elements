@@ -7,6 +7,14 @@ var bodyParser = require('body-parser')
 var config = require('./app/config.js')
 var port = (process.env.PORT || 3000)
 var IS_HEROKU = process.env.hasOwnProperty('IS_HEROKU')
+var utils = path.join(__dirname, '/lib/utils.js')
+
+// Grab environment variables specified in Procfile or as Heroku config vars
+var env = process.env.NODE_ENV || 'development'
+var useHttps = process.env.USE_HTTPS || config.useHttps
+
+env = env.toLowerCase()
+useHttps = useHttps.toLowerCase()
 
 module.exports = app
 
@@ -62,3 +70,8 @@ app.listen(port, function () {
     console.log('Listening on port ' + port + '   url: http://localhost:' + port)
   }
 })
+
+// Force HTTPs on production connections
+if (env === 'production' && useHttps === 'true') {
+  app.use(utils.forceHttps)
+}
