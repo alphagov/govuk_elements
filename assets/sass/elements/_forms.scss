@@ -20,6 +20,11 @@ fieldset {
   width: 100%;
 }
 
+// Hack to let legends or elements within legends have margins in webkit browsers
+legend {
+  overflow: hidden;
+}
+
 // Fix left hand gap in IE7 and below
 @include ie-lte(7) {
   legend {
