@@ -1,55 +1,61 @@
-<div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+<div class="grid-row">
+  <div class="column-two-thirds">
 
-  <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
-    Message to alert the user to a problem goes here
-  </h1>
+    <div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
 
-  <p>
-    Optional description of the errors and how to correct them
-  </p>
+      <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+        Message to alert the user to a problem goes here
+      </h1>
 
-  <ul class="error-summary-list">
-    <li><a href="#example-personal-details">Descriptive link to the question with an error</a></li>
-  </ul>
+      <p>
+        Optional description of the errors and how to correct them
+      </p>
 
-</div>
+      <ul class="error-summary-list">
+        <li><a href="#example-personal-details">Descriptive link to the question with an error</a></li>
+      </ul>
 
-<h1 class="heading-large">
-  Check your personal details
-</h1>
+    </div>
 
-<p>
-  Look at your name, signature and other details.
-</p>
+    <h1 class="heading-large">
+      Check your personal details
+    </h1>
 
-<form>
-  <div class="form-group form-group-error">
-    <fieldset>
+    <p>
+      Look at your name, signature and other details.
+    </p>
 
-      <legend id="example-personal-details">
+    <form>
+      <div class="form-group form-group-error">
+        <fieldset>
 
-        <span class="form-label-bold">
-          Are your personal details correct and up-to-date?
-        </span>
-        <span class="error-message">
-          Error message about personal details goes here
-        </span>
+          <legend id="example-personal-details">
 
-      </legend>
+            <span class="form-label-bold">
+              Are your personal details correct and up-to-date?
+            </span>
+            <span class="error-message">
+              Error message about personal details goes here
+            </span>
 
-      <div class="multiple-choice">
-        <input id="personal_details_yes" type="radio" name="personalDetails" value="Yes">
-        <label for="personal_details_yes">Yes, my personal details are correct</label>
+          </legend>
+
+          <div class="multiple-choice">
+            <input id="personal_details_yes" type="radio" name="personalDetails" value="Yes">
+            <label for="personal_details_yes">Yes, my personal details are correct</label>
+          </div>
+
+          <div class="multiple-choice">
+            <input id="personal_details_no" type="radio" name="personalDetails" value="No">
+            <label for="personal_details_no">No, some details are wrong or have changed</label>
+          </div>
+
+        </fieldset>
       </div>
 
-      <div class="multiple-choice">
-        <input id="personal_details_no" type="radio" name="personalDetails" value="No">
-        <label for="personal_details_no">No, some details are wrong or have changed</label>
-      </div>
+      <input class="button" type="submit" value="Continue">
 
-    </fieldset>
+    </form>
+
   </div>
-
-  <input class="button" type="submit" value="Continue">
-
-</form>
+</div>
