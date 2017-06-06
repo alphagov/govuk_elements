@@ -56,9 +56,6 @@ textarea {
   @extend %contain-floats;
   @include box-sizing(border-box);
 
-  float: left;
-  width: 100%;
-
   margin-bottom: $gutter-half;
 
   @include media(tablet) {
