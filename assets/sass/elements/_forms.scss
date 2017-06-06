@@ -97,9 +97,8 @@ textarea {
 
 // Used for the 'or' in between block label options
 .form-block {
-  @extend %contain-floats;
   float: left;
-  width: 100%;
+  clear: left;
 
   margin-top: -5px;
   margin-bottom: 5px;
