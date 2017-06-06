@@ -34,6 +34,10 @@ table {
   td.numeric {
     font-family: $toolkit-font-stack-tabular;
   }
+
+  caption {
+    text-align: left;
+  }
 }
 
 .table-font-xsmall {
