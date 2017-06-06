@@ -36,14 +36,14 @@ textarea {
 // 2. Form wrappers
 // ==========================================================================
 
-// Form section is used to wrap .form-group and has twice its margin
-.form-section {
+.form-section,
+.form-group {
   @extend %contain-floats;
   @include box-sizing(border-box);
+}
 
-  float: left;
-  width: 100%;
-
+// Form section is used to wrap .form-group and has twice its margin
+.form-section {
   margin-bottom: $gutter;
 
   @include media(tablet) {
@@ -53,9 +53,6 @@ textarea {
 
 // Form group is used to wrap label and input pairs
 .form-group {
-  @extend %contain-floats;
-  @include box-sizing(border-box);
-
   margin-bottom: $gutter-half;
 
   @include media(tablet) {
