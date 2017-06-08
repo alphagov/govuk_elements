@@ -56,6 +56,22 @@ GOV.UK elements uses [standardjs](http://standardjs.com/), an opinionated JavaSc
 Both linters run on CI to ensure that new pull requests are in line with them.
 
 
+## Add govuk_elements to your project
+
+### Install with NPM
+From the command line, run the following to include elements as a dependency in your project:
+```bash
+npm install --save alphagov/govuk_elements
+```
+
+### Require the code
+Code can be required in the standard way (even on the client if using `browserify`):
+```javascript
+// polyfill `details` elements on older browsers
+require('govuk-elements/assets/javascripts/govuk/details.polyfill');
+```
+
+
 ## Running Wraith to compare changes
 
 GOV.UK elements uses Wraith so that regressions can be easily spotted.
