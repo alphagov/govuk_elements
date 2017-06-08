@@ -137,7 +137,9 @@ gulp.task('package:prepare', () => {
   return gulp.src(
     [
       paths.assetsScss + '**/elements/**/*.scss',
-      paths.assetsScss + '_govuk-elements.scss'
+      paths.assetsScss + '_govuk-elements.scss',
+      paths.assetsScss + '_govuk-toolkit.scss',
+      paths.assetsScss + '_elements.scss'
     ])
     .pipe(gulp.dest(paths.package + 'public/sass/'))
 })
