@@ -16,5 +16,6 @@
   },
   "bugs": {
     "url": "https://github.com/alphagov/govuk_elements/issues"
-  }
+  },
+  "sass": "./public/_elements.scss"
 }
