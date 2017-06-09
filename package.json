@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "body-parser": "^1.14.1",
-    "del": "^2.2.2",
+    "del": "^3.0.0",
     "express": "^4.15.2",
     "govuk_frontend_toolkit": "^6.0.2",
     "govuk_template_jinja": "0.22.0",
