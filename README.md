@@ -63,23 +63,25 @@ GOV.UK elements uses Wraith so that regressions can be easily spotted.
 This needs to be run from the Wraith directory `/tests/wraith` and some dependencies need to be installed on the local machine first.
 
 1. Install Wraith and its dependencies.
-
-    gem install wraith
-    brew install phantomjs
-    brew install imagemagick
+      
+        gem install wraith
+        
+        brew install phantomjs
+        
+        brew install imagemagick
 
 2. Take a baseline of the current version.
 
 On master run:
 
-    wraith history config.yaml
+        wraith history config.yaml
 
 
 3. Switch to your feature branch and make changes.
 
 On your feature branch run:
 
-    wraith latest config.yaml
+        wraith latest config.yaml
 
 ## Releasing a new version
 
