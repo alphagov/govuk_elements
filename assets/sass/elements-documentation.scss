@@ -16,9 +16,21 @@
 
 // ==========================================================================
 // Elements page styles
+// These are example styles, used only for the elements pages
 // ==========================================================================
 
-// These are example styles, used only for the elements pages
+// Add a class to wrap the <main> element
+// This is so the breadcrumb can sit outside <main>
+.site-wrapper {
+  @extend %site-width-container;
+
+  // Override margins set on #content
+  // This is a kludge to prevent a breaking change to govuk_elements_sass
+  // where @extend %site-width-container; is set for #content, so we need to override its margins
+  #content {
+    margin: 0;
+  }
+}
 
 .elements-index {
   // Reduce top and bottom margins
