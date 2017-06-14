@@ -4,6 +4,9 @@
 
 module.exports = {
 
+  // Force HTTP to redirect to HTTPs on production
+  useHttps: 'true',
+
   // Cookie warning
   cookieText: 'GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a>'
 
