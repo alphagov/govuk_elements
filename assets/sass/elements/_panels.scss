@@ -49,12 +49,13 @@
 
 // The last panel in a group
 .form-group .panel-border-narrow:last-child {
-  margin-top: 10px;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
 // For inline panels
-.inline .panel-border-narrow {
+.inline .panel-border-narrow,
+.inline .panel-border-narrow:last-child {
   margin-top: 10px;
   margin-bottom: 0;
 }
