@@ -5,7 +5,7 @@ GOV.UK elements ·
 
 GOV.UK elements is three things:
 
-1. [An online design guide](https://govuk-elements.herokuapp.com/), explaining how to make your service look consistent with the rest of GOV.UK.
+1. [An online design guide](http://govuk-elements.herokuapp.com/), explaining how to make your service look consistent with the rest of GOV.UK.
 2. An example of how to use the code in the [GOV.UK template](https://github.com/alphagov/govuk_template) and the [GOV.UK frontend toolkit](https://github.com/alphagov/govuk_frontend_toolkit).
 3. An [npm package of the Sass files](https://www.npmjs.com/package/govuk-elements-sass).
 
