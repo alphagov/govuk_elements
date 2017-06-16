@@ -24,7 +24,7 @@ jobs:
             secure: nQCOBk2EnuJ0yaC0cO2RabfLlF+3WiZ4MrLLBPt3l+fNQO69KcJZu59Npbt45f/ip6Dv8cEGxdzSqzNsPu/XB+fmyAZd1bml0u7JMKWNQeVLKddoM+A1ETFSyXHoM/Ra3Qw8+2XS/ZJNTAD7BGibSh8SvzYdg9fy9kCN77Sn9Ro=
           app: govuk-elements-review
           on: master
-    - stage: tag create
+    - stage: tag create, npm release, GitHub release
       script: echo "Running create-release.sh ..."
       deploy:
         - provider: script    # (If version.txt is updated) - create a new tag and push to Github, update the latest-release branch
@@ -34,32 +34,24 @@ jobs:
           api_key:
             secure: nQCOBk2EnuJ0yaC0cO2RabfLlF+3WiZ4MrLLBPt3l+fNQO69KcJZu59Npbt45f/ip6Dv8cEGxdzSqzNsPu/XB+fmyAZd1bml0u7JMKWNQeVLKddoM+A1ETFSyXHoM/Ra3Qw8+2XS/ZJNTAD7BGibSh8SvzYdg9fy9kCN77Sn9Ro=
           app: govuk-elements-sass-release
+        - provider: script
+          script: echo "Deploying to npm ..."
+          script: cd packages/govuk-elements-sass/
+        - provider: npm       # For tagged commits, update the NPM package (https://www.npmjs.com/package/govuk-elements-sass)
+          email: govuk-dev@digital.cabinet-office.gov.uk
+          api_key:
+            secure: VAHPK3W0YVWqx03j659FbKjvEwd+UIDfb1x55to9u+PzyVqQp1CXalsYuKQSavxqInaV3gzNJpbANo6SIXlpAUxZPChiTk0rJwUhz7u1fRY0Lshb+aDOMnXSfjSqiIGThNRpjYdxBiJsnrYP1T6unHuo2A1K8mXjwdFtxhadh+w=
+        - provider: script
+          script: echo "Deploying to GitHub releases ..."
+        - provider: releases  # For tagged commits, upload the contents of packages/govuk-elements-sass/ to GitHub releases
+          api_key:
+            secure: HZD7iqjcf/Yg792jMqksiVsCSQJSZG2TJ77EIGNh7qsdmCSJneUKPpeohQIEvkpjKiz+RyP4v0UqHx9lxHx7rBDmzOdTUCKAV3biTFvmf/W6IUb4UGXbjsDA5AMlNgpCdy4xT2iYBSyUKRR4qLjLDITduDoRQZFET5Z52nzcJgo=
+          file_glob: true
+          file: packages/govuk-elements-sass/*
+          skip_cleanup: true
           on:
             tags: true
             all_branches: true
-    - stage: npm release
-      script: echo "Deploying to npm ..."
-      script: cd packages/govuk-elements-sass/
-      deploy:
-        provider: npm       # For tagged commits, update the NPM package (https://www.npmjs.com/package/govuk-elements-sass)
-        email: govuk-dev@digital.cabinet-office.gov.uk
-        api_key:
-          secure: VAHPK3W0YVWqx03j659FbKjvEwd+UIDfb1x55to9u+PzyVqQp1CXalsYuKQSavxqInaV3gzNJpbANo6SIXlpAUxZPChiTk0rJwUhz7u1fRY0Lshb+aDOMnXSfjSqiIGThNRpjYdxBiJsnrYP1T6unHuo2A1K8mXjwdFtxhadh+w=
-        on:
-          tags: true
-          all_branches: true
-    - stage: GitHub release
-      script: echo "Deploying to GitHub releases ..."
-      deploy:
-        provider: releases  # For tagged commits, upload the contents of packages/govuk-elements-sass/ to GitHub releases
-        api_key:
-          secure: HZD7iqjcf/Yg792jMqksiVsCSQJSZG2TJ77EIGNh7qsdmCSJneUKPpeohQIEvkpjKiz+RyP4v0UqHx9lxHx7rBDmzOdTUCKAV3biTFvmf/W6IUb4UGXbjsDA5AMlNgpCdy4xT2iYBSyUKRR4qLjLDITduDoRQZFET5Z52nzcJgo=
-        file_glob: true
-        file: packages/govuk-elements-sass/*
-        skip_cleanup: true
-        on:
-          tags: true
-          all_branches: true
 sudo: false
 env:
   global:
