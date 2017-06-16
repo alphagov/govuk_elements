@@ -20,6 +20,11 @@ fieldset {
   width: 100%;
 }
 
+// Hack to let legends or elements within legends have margins in webkit browsers
+legend {
+  overflow: hidden;
+}
+
 // Fix left hand gap in IE7 and below
 @include ie-lte(7) {
   legend {
@@ -36,14 +41,14 @@ textarea {
 // 2. Form wrappers
 // ==========================================================================
 
-// Form section is used to wrap .form-group and has twice its margin
-.form-section {
+.form-section,
+.form-group {
   @extend %contain-floats;
   @include box-sizing(border-box);
+}
 
-  float: left;
-  width: 100%;
-
+// Form section is used to wrap .form-group and has twice its margin
+.form-section {
   margin-bottom: $gutter;
 
   @include media(tablet) {
@@ -53,12 +58,6 @@ textarea {
 
 // Form group is used to wrap label and input pairs
 .form-group {
-  @extend %contain-floats;
-  @include box-sizing(border-box);
-
-  float: left;
-  width: 100%;
-
   margin-bottom: $gutter-half;
 
   @include media(tablet) {
@@ -103,9 +102,8 @@ textarea {
 
 // Used for the 'or' in between block label options
 .form-block {
-  @extend %contain-floats;
   float: left;
-  width: 100%;
+  clear: left;
 
   margin-top: -5px;
   margin-bottom: 5px;
@@ -163,10 +161,15 @@ textarea {
 // scss-lint:disable QualifyingElement
 input.form-control,
 textarea.form-control {
-  // Remove inner shadow
+  // Disable inner shadow and remove rounded corners
   -webkit-appearance: none;
-  // Remove rounded corners
   border-radius: 0;
+}
+
+textarea.form-control {
+  // Disable opacity and background image for Firefox
+  opacity: 1;
+  background-image: none;
 }
 // scss-lint:enable QualifyingElement
 

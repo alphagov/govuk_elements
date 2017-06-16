@@ -1,3 +1,17 @@
+# 3.1.0
+
+- Split the list of partials imported by GOV.UK elements into two further files - elements and frontend-toolkit. This supports npm-sass, where the frontend toolkit dependencies are imported separately ([PR #489](https://github.com/alphagov/govuk_elements/pull/489)).
+- Add a new class `.body-text` for use inside legends, for text to accompany radio buttons or checkboxes - either 'select one', or 'select all that apply'. Ensure legends or elements within legends have margins in webkit browsers ([PR #484](https://github.com/alphagov/govuk_elements/pull/484)).
+- Move the breadcrumb so it sits outside the main element ([PR #478](https://github.com/alphagov/govuk_elements/pull/478))
+- Constrain error summary boxes to 2/3 of the page width ([PR #477](https://github.com/alphagov/govuk_elements/pull/477))
+- Remove the right padding from the last column of items in a table, also remove color set for table headers and cells, to allow users to change colour settings ([PR #482](https://github.com/alphagov/govuk_elements/pull/482)
+- Align table captions to the left ([PR #476](https://github.com/alphagov/govuk_elements/pull/482)).
+- Add guidance for use of table captions ([PR #488](https://github.com/alphagov/govuk_elements/pull/488)).
+- Fix unnecessary float and width 100% for `.form-section` and `.form-group` ([PR #487](https://github.com/alphagov/govuk_elements/pull/487)).
+- Fix incorrect margin above the last panel in a group ([PR #498](https://github.com/alphagov/govuk_elements/pull/498)).
+- Add guidance for the mininum text size to be used with the highlight box on confimation boxes ([PR #481](https://github.com/alphagov/govuk_elements/pull/481)).
+- Update govuk_template_jinja to 0.22.0 ([PR #493](https://github.com/alphagov/govuk_elements/pull/493)).
+
 # 3.0.3
 
 - Increase the size of the text in the highlight box - used for confirmation pages ([PR #451](https://github.com/alphagov/govuk_elements/pull/451))
