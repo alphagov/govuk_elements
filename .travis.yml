@@ -9,9 +9,7 @@ jobs:
   include:
     - stage: run tests
       script:
-        # Ensures `package.json` and `yarn.lock` stay in sync
-        - yarn check --integrity
-        - yarn test
+        - npm test
     - stage: heroku deploy
       script: echo "Deploying to Heroku ..."
       install: skip
