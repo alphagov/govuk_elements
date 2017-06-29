@@ -14,6 +14,7 @@ jobs:
         - yarn test
     - stage: heroku deploy
       script: echo "Deploying to Heroku ..."
+      install: skip
       deploy:
         - provider: heroku    # Deploy master to Heroku - production (http://govuk-elements.herokuapp.com/)
           api_key:
@@ -27,6 +28,7 @@ jobs:
           on: master
     - stage: tag create, npm release, GitHub release
       script: echo "Running create-release.sh ..."
+      install: skip
       deploy:
         - provider: script    # (If version.txt is updated) - create a new tag and push to Github, update the latest-release branch
           script: ./create-release.sh
