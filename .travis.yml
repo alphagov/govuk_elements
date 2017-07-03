@@ -1,16 +1,17 @@
 language: node_js
 node_js:
  - "4.4.7"
-script:
-# Ensures `package.json` and `yarn.lock` stay in sync
-- yarn check --integrity
-- yarn test
 notifications:
   email: false
 before_deploy:
 - test $TRAVIS_TEST_RESULT = 0
 jobs:
   include:
+    - stage: run tests
+      script:
+        # Ensures `package.json` and `yarn.lock` stay in sync
+        - yarn check --integrity
+        - yarn test
     - stage: heroku deploy
       script: echo "Deploying to Heroku ..."
       deploy:
