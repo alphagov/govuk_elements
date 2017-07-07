@@ -22,7 +22,7 @@ Choose partials from:
 
 GOV.UK elements has the [GOV.UK frontend toolkit](https://github.com/alphagov/govuk_frontend_toolkit) as a dependency.
 
-    npm install govuk-frontend-toolkit
+    npm install govuk_frontend_toolkit
 
 > The GOV.UK frontend toolkit scss dependencies listed below must be imported before any govuk-elements partials.
 
