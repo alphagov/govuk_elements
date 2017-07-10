@@ -116,8 +116,13 @@
   }
 
   // Disabled state
+  input:disabled {
+    cursor: default;
+  }
+
   input:disabled + label {
     @include opacity(0.5);
+    cursor: default;
   }
 
   &:last-child,

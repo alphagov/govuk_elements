@@ -252,6 +252,19 @@
 </code>
 </pre>
 
+  <h4 class="heading-small" id="form-radio-buttons-disabled">Disabled radio buttons</h4>
+  <div class="example">
+    {% include "snippets/form_radio_buttons_disabled.html" %}
+  </div>
+
+<pre>
+<code class="language-markup">
+  {% filter escape %}
+    {% include "snippets/form_radio_buttons_disabled.html" %}
+  {% endfilter %}
+</code>
+</pre>
+
   <h3 class="heading-medium" id="form-checkboxes">Checkboxes</h3>
   <ul class="list list-bullet text">
     <li>use these to select either on/off toggles or multiple selections</li>
@@ -267,6 +280,19 @@
 <code class="language-markup">
   {% filter escape %}
     {% include "snippets/form_checkboxes.html" %}
+  {% endfilter %}
+</code>
+</pre>
+
+  <h4 class="heading-small" id="form-checkboxes-disabled">Disabled checkboxes</h4>
+  <div class="example">
+    {% include "snippets/form_checkboxes_disabled.html" %}
+  </div>
+
+<pre>
+<code class="language-markup">
+  {% filter escape %}
+    {% include "snippets/form_checkboxes_disabled.html" %}
   {% endfilter %}
 </code>
 </pre>
