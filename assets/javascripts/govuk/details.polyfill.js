@@ -116,7 +116,7 @@
       details.__summary = details.getElementsByTagName('summary').item(0)
       details.__content = details.getElementsByTagName('div').item(0)
 
-      if (!details.__summary || !details.__content){
+      if (!details.__summary || !details.__content) {
         return
       }
 
