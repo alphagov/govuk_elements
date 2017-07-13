@@ -11,7 +11,7 @@ jobs:
       script:
         # Ensure Travis aborts without running tests if the lockfile needs updating
         - set -e
-        - ./check-lockfile.sh
+        - ./scripts/check-lockfile.sh
         - yarn test
     - stage: heroku deploy
       script: echo "Deploying to Heroku ..."
@@ -26,11 +26,14 @@ jobs:
             secure: nQCOBk2EnuJ0yaC0cO2RabfLlF+3WiZ4MrLLBPt3l+fNQO69KcJZu59Npbt45f/ip6Dv8cEGxdzSqzNsPu/XB+fmyAZd1bml0u7JMKWNQeVLKddoM+A1ETFSyXHoM/Ra3Qw8+2XS/ZJNTAD7BGibSh8SvzYdg9fy9kCN77Sn9Ro=
           app: govuk-elements-review
           on: master
-    - stage: tag create, npm release, GitHub release
-      script: echo "Running create-release.sh ..."
+    - stage: create release
+      script:
+      # Ensure Travis aborts without creating a release if version hasn't changed
+      - set -e
+      - ./scripts/check-release-version.sh
       deploy:
         - provider: script    # (If version.txt is updated) - create a new tag and push to Github, update the latest-release branch
-          script: ./create-release.sh
+          script: ./scripts/create-release.sh
           on: master
         - provider: heroku    # For tagged commits, update the release Heroku app (http://govuk-elements-sass-release.herokuapp.com/)
           api_key:
@@ -54,6 +57,8 @@ jobs:
           on:
             tags: true
             all_branches: true
+  allow_failures: # Allow this stage to fail without breaking the build (as we only release on tagged commits)
+    - stage: create release
 sudo: false
 env:
   global:

@@ -3,6 +3,7 @@ set -e
 
 REPO_PATH='alphagov/govuk_elements'
 
+echo "Running create-release.sh ..."
 echo "Add config for alphagov/$REPO_PATH"
 
 git config --global user.name "GOV.UK Patterns & Tools CI User"
