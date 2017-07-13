@@ -27,14 +27,13 @@ jobs:
           app: govuk-elements-review
           on: master
     - stage: tag create, npm release, GitHub release
-      script: echo "Running create-release.sh ..."
       script:
       # Ensure Travis aborts without creating a release if version hasn't changed
       - set -e
       - ./scripts/check-release-version.sh
       deploy:
         - provider: script    # (If version.txt is updated) - create a new tag and push to Github, update the latest-release branch
-          script: ./create-release.sh
+          script: ./scripts/create-release.sh
           on: master
         - provider: heroku    # For tagged commits, update the release Heroku app (http://govuk-elements-sass-release.herokuapp.com/)
           api_key:
