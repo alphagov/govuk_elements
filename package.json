@@ -6,7 +6,7 @@
   "homepage": "https://govuk-elements.herokuapp.com/",
   "license": "MIT",
   "engines": {
-    "node": ">=6.0"
+    "node": ">=8.1.4"
   },
   "dependencies": {
     "body-parser": "^1.14.1",
