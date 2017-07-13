@@ -1603,9 +1603,9 @@ govuk_frontend_toolkit@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/govuk_frontend_toolkit/-/govuk_frontend_toolkit-7.0.0.tgz#346f35d2d2b373cb053a0036c67392d2c8cd010b"
 
-govuk_template_jinja@0.22.2:
-  version "0.22.2"
-  resolved "https://registry.yarnpkg.com/govuk_template_jinja/-/govuk_template_jinja-0.22.2.tgz#ec0b4f7be36cd62da1df20d255ee1e2cf7fb71f9"
+govuk_template_jinja@0.22.3:
+  version "0.22.3"
+  resolved "https://registry.yarnpkg.com/govuk_template_jinja/-/govuk_template_jinja-0.22.3.tgz#d704cb2b7ce92682a8174be7d746668d4afad9d6"
 
 graceful-fs@^3.0.0:
   version "3.0.11"
