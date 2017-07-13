@@ -1,3 +1,12 @@
+# 3.1.1
+
+- Only make column headers bold, not row headers ([PR #483](https://github.com/alphagov/govuk_elements/pull/483))
+- Update govuk_template_jinja to 0.22.2 ([PR #505](https://github.com/alphagov/govuk_elements/pull/505))
+- De-duplicate legends/headings when there is one question per page by placing the heading for the question inside the legend of the fieldset ([PR #507](https://github.com/alphagov/govuk_elements/pull/507)).
+- Set cursor: default for for both the disabled input and the label - for radio buttons and checkboxes ([PR #519](https://github.com/alphagov/govuk_elements/pull/519)).
+- Fix stray line on checkboxes on IE11 caused by miscalculation of the border width of rotated element ([PR #520](https://github.com/alphagov/govuk_elements/pull/520)).
+- Fix hard error in details.polyfill.js raised when the `<details>` element doesn't follow [the specified structure](https://govuk-elements.herokuapp.com/typography/#typography-hidden-text) ([PR #521](https://github.com/alphagov/govuk_elements/pull/521)).
+
 # 3.1.0
 
 - Split the list of partials imported by GOV.UK elements into two further files - elements and frontend-toolkit. This supports npm-sass, where the frontend toolkit dependencies are imported separately ([PR #489](https://github.com/alphagov/govuk_elements/pull/489)).
