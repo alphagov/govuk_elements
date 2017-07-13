@@ -11,7 +11,7 @@ jobs:
       script:
         # Ensure Travis aborts without running tests if the lockfile needs updating
         - set -e
-        - ./check-lockfile.sh
+        - ./scripts/check-lockfile.sh
         - yarn test
     - stage: heroku deploy
       script: echo "Deploying to Heroku ..."
