@@ -24,7 +24,7 @@ We use [Semantic Versioning](http://semver.org/).
 
 ## To release a new version
 
-1. Run the package task (to copy the Sass files from `/public/sass` to `/packages/govuk-elements-sass/public/sass/`)
+1. Run the package task (to copy the Sass files from `/assets/sass` to `/packages/govuk-elements-sass/public/sass/`)
 
     gulp package
 
