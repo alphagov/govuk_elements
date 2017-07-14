@@ -14,29 +14,22 @@ git remote add origin_ssh git@github.com:$REPO_PATH.git
 openssl aes-256-cbc -K $encrypted_85ebe8034b89_key -iv $encrypted_85ebe8034b89_iv -in .travis/govuk_elements.enc -out ~/.ssh/id_rsa -d
 chmod 600 ~/.ssh/id_rsa
 
-echo "Check to see if the version file has been updated"
+# VERSION.txt has been updated and a tag
+# doesn't already exist
 
 # Get the version from the version file
 VERSION_TAG="v`cat packages/govuk-elements-sass/VERSION.txt`"
 
-# Create a new tag - if the version file has been updated and a tag for that
-# version doesn't already exist
+# Create a new tag
+echo "Creating new tag: $VERSION_TAG"
 
-# Check to make sure the tag doesn't already exist
-if ! git rev-parse $VERSION_TAG >/dev/null 2>&1; then
-  echo "Creating new tag: $VERSION_TAG"
+# Create a new tag and push to Github
+git tag $VERSION_TAG
+git push origin_ssh $VERSION_TAG
 
-  # Create a new tag and push to Github
-  git tag $VERSION_TAG
-  git push origin_ssh $VERSION_TAG
+# This tag will trigger the builds for the deploy providers marked "# For tagged commits" in .travis.yml
 
-  # This tag will trigger the builds for the deploy providers marked "# For tagged commits" in .travis.yml
-
-  # Alias branch for the most recently released tag, for easier diffing
-  # Force push local `master` branch to the `latest-release` branch on Github
-  git push --force origin_ssh master:latest-release
-  echo "Pushed latest-release branch to GitHub"
-
-else
-  echo "Not creating a new tag, or updating the latest-release branch as the tag already exists..."
-fi
+# Alias branch for the most recently released tag, for easier diffing
+# Force push local `master` branch to the `latest-release` branch on Github
+git push --force origin_ssh master:latest-release
+echo "Pushed latest-release branch to GitHub"
