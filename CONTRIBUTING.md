@@ -37,7 +37,7 @@ Update CHANGELOG.md to summarise these changes.
 To see the commits to be summarised in the changelog since the last release, [compare the latest-release branch with master](https://github.com/alphagov/govuk_elements/compare/latest-release...master).
 
 **The second commit:**
-Propose a new version numer in [`VERSION.txt`](https://github.com/alphagov/govuk-elements-sass/blob/master/packages/govuk-elements-sass/VERSION.txt) and update [`package.json`](https://github.com/alphagov/govuk-elements-sass/blob/master/packages/govuk-elements-sass/CHANGELOG.md) with the new version number.
+Propose a new version number in [`VERSION.txt`](https://github.com/alphagov/govuk-elements-sass/blob/master/packages/govuk-elements-sass/VERSION.txt) and update [`package.json`](https://github.com/alphagov/govuk-elements-sass/blob/master/packages/govuk-elements-sass/CHANGELOG.md) with the new version number.
 
 3. Once merged into master a new version will be built:
 
