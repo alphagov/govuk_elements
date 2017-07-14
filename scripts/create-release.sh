@@ -14,6 +14,9 @@ git remote add origin_ssh git@github.com:$REPO_PATH.git
 openssl aes-256-cbc -K $encrypted_85ebe8034b89_key -iv $encrypted_85ebe8034b89_iv -in .travis/govuk_elements.enc -out ~/.ssh/id_rsa -d
 chmod 600 ~/.ssh/id_rsa
 
+# VERSION.txt has been updated and a tag
+# doesn't already exist
+
 # Get the version from the version file
 VERSION_TAG="v`cat packages/govuk-elements-sass/VERSION.txt`"
 
