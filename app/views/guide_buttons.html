@@ -85,12 +85,13 @@
   <ul class="list list-bullet text">
     <li>don’t disable buttons, unless there’s a good reason to</li>
     <li>if you have to disable buttons, make sure they look like you can’t click them (use 50% opacity)</li>
+    <li>use the <code class="code">aria-disabled</code> attribute for older screen readers</li>
     <li>an example of a useful disabled option is a calendar with greyed out days where no bookings are available</li>
     <li>provide another way for the user to continue, add an error message or text to explain why the button is disabled</li>
   </ul>
 
 <div class="example">
-  <button class="button" disabled="disabled">Disabled primary button</button>
+  <button class="button" disabled="disabled" aria-disabled="true">Disabled primary button</button>
 </div>
 
 <pre>
