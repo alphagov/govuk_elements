@@ -286,8 +286,12 @@ hr {
   .icon {
     position: absolute;
     left: 0;
-    top: 50%;
-    margin-top: -17px; // Half the height of the important icon
+    top: 0;
+
+    margin-top: -8px;   // Adjust the position of the icon, so text aligns with the center of the icon
+    @include media(tablet) {
+      margin-top: -5px; // Reduce the adjustment for 19px text
+    }
   }
 
   strong {
