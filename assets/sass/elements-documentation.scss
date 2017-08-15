@@ -43,8 +43,8 @@
   }
 }
 
-// Increase spacing above headings
-.heading-xlarge {
+// Increase spacing above GOV.UK elements page headings
+main > .heading-xlarge {
   @include media(tablet) {
     margin-top: em(60, 48);
     margin-bottom: em(30, 48);
