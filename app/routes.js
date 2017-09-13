@@ -173,6 +173,50 @@ module.exports = {
       res.render('examples/example_form_validation_single_question_radio', { 'section': section, 'section_name': sectionName, 'page_name': pageName, 'personal_details': personalDetails, 'error': error })
     })
 
+    // Example page: Form validation
+    app.get('/errors/example-form-validation-single-question-radio-h1-legend', function (req, res) {
+      var section = 'errors'
+      var sectionName = 'Errors and validation'
+      var pageName = 'Example: Form validation - single question, page heading in legend'
+      res.render('examples/example_form_validation_single_question_radio_h1_legend', { 'section': section, 'section_name': sectionName, 'page_name': pageName })
+    })
+
+    app.post('/errors/example-form-validation-single-question-radio-h1-legend', function (req, res) {
+      var section = 'errors'
+      var sectionName = 'Errors and validation'
+      var pageName = 'Example: Form validation - single question, page heading in legend'
+      var personalDetails = req.body.personalDetails
+      var error = false
+      if (!personalDetails) {
+        error = true
+      } else {
+        error = false
+      }
+      res.render('examples/example_form_validation_single_question_radio_h1_legend', { 'section': section, 'section_name': sectionName, 'page_name': pageName, 'personal_details': personalDetails, 'error': error })
+    })
+
+    // Example page: Form validation
+    app.get('/errors/example-form-validation-single-question-text-h1-label', function (req, res) {
+      var section = 'errors'
+      var sectionName = 'Errors and validation'
+      var pageName = 'Example: Form validation - single question, labed in page heading'
+      res.render('examples/example_form_validation_single_question_text_h1_label', { 'section': section, 'section_name': sectionName, 'page_name': pageName })
+    })
+
+    app.post('/errors/example-form-validation-single-question-text-h1-label', function (req, res) {
+      var section = 'errors'
+      var sectionName = 'Errors and validation'
+      var pageName = 'Example: Form validation - single question, label in page heading'
+      var personalDetails = req.body.personalDetails
+      var error = false
+      if (!personalDetails) {
+        error = true
+      } else {
+        error = false
+      }
+      res.render('examples/example_form_validation_single_question_text_h1_label', { 'section': section, 'section_name': sectionName, 'page_name': pageName, 'personal_details': personalDetails, 'error': error })
+    })
+
     // Redirect examples from /examples/ to /section/example-name-of-example
     app.get('/examples/form-validation-single-question-radio', function (req, res) {
       res.redirect('/errors/example-form-validation-single-question-radio')
