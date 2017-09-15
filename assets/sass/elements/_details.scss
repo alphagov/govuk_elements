@@ -11,6 +11,7 @@ details {
     cursor: pointer;
     position: relative;
     margin-bottom: em(5);
+    counter-reset: summary-closed;
 
     &:hover {
       color: $link-hover-colour;
@@ -19,6 +20,18 @@ details {
     &:focus {
       outline: 3px solid $focus-colour;
     }
+
+    &::before {
+      content: counter(summary-closed, disclosure-closed) " ";
+    }
+  }
+
+  &[open] > summary {
+    counter-reset: summary-open;
+  }
+
+  &[open] > summary::before {
+    content: counter(summary-open, disclosure-open) " ";
   }
 
   // Underline only summary text (not the arrow)
