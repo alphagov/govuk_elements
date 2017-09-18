@@ -14,6 +14,11 @@
   @include media(desktop) {
     padding-bottom: $gutter * 3;
   }
+
+  // DEPRECATED: Tabindex on #content
+  // https://github.com/alphagov/govuk_elements/pull/534
+  // We no longer recommend using tabindex on #content
+  outline: none;
 }
 
 
