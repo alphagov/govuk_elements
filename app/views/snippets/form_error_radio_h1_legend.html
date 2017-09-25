@@ -17,7 +17,7 @@
 {% endif %}
 
 <div class="form-group {% if error %} form-group-error{% endif %}">
-  <fieldset>
+  <fieldset{% if error %} class="after-error-summary"{% endif %}>
 
     <legend {% if error %} id="example-personal-details"{% endif %}>
       <h1 class="heading-large">
