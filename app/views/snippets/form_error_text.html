@@ -17,22 +17,26 @@
 {% endif %}
 
 
-<div class="form-group {% if error %} form-group-error{% endif %}">
+<div class="form-group">
     <h1>
       <label for="name"{% if error %} id="example-name"{% endif %}>
         <span class="heading-large">What is your name?</span>
 
+        {% if error %}<div class="form-group-error">{% endif %}
         <span class="form-hint">You can enter your full name</span>
 
         {% if error %}
           <span class="error-message">
             Error message about name goes here
           </span>
+        </div>
         {% endif %}
       </label>
     </h1>
 
+    {% if error %}<div class="form-group-error">{% endif %}
     <input type="text" class="form-control{% if error %} form-control-error{% endif %}" id="name" name="name" value="">
+    {% if error %}</div>{% endif %}
 </div>
 
 <input class="button" type="submit" value="Continue">

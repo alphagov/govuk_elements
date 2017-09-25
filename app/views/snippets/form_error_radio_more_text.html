@@ -1,0 +1,71 @@
+{% if error %}
+<div class="error-summary" role="alert" aria-labelledby="error-summary-heading" tabindex="-1">
+
+  <h2 class="heading-medium error-summary-heading" id="error-summary-heading">
+    Message to alert the user to a problem goes here
+  </h2>
+
+  <p>
+    Optional description of the errors and how to correct them
+  </p>
+
+  <ul class="error-summary-list">
+    <li><a href="#example-recognisable">Descriptive link to the question with an error</a></li>
+  </ul>
+
+</div>
+{% endif %}
+
+<h1 class="heading-large">
+  Compare your old and new photos
+</h1>
+
+<p>
+  To prevent fraud, an examiner will compare your new photo with the photo from your old passport.
+</p>
+
+<p>
+  If the examiner can't recognise you, someone else will have to complete a form to verify that it's really you (a 'countersignature').
+</p>
+
+<p>
+  To save time, look at the photo in your current passport and tell us now if you look very different.
+</p>
+
+<div class="panel panel-border-wide">
+  <p>
+    Don't worry about normal signs of ageing, or your hairstyle or facial hair changing a lot - the examiners are used to that
+  </p>
+</div>
+
+
+<div class="form-group {% if error %} form-group-error{% endif %}">
+  <fieldset>
+
+    <legend {% if error %} id="example-recognisable"{% endif %}>
+
+      <span class="form-label-bold">
+        Can you be recognised as the same person?
+      </span>
+      {% if error %}
+        <span class="error-message">
+          Error message about recognisable goes here
+        </span>
+      {% endif %}
+
+    </legend>
+
+    <div class="multiple-choice">
+      <input id="recognisable_yes" type="radio" name="recognisable" value="Yes">
+      <label for="recognisable_yes">Yes, I'm recognisable</label>
+    </div>
+
+    <div class="multiple-choice">
+      <input id="recognisable_no" type="radio" name="recognisable" value="No">
+      <label for="recognisable_no">No, my appearance has changed a lot</label>
+    </div>
+
+  </fieldset>
+</div>
+
+<input class="button" type="submit" value="Continue">

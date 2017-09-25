@@ -16,31 +16,27 @@
 </div>
 {% endif %}
 
-<h1 class="heading-large">
-  Check your personal details
-</h1>
-
-<p class="lede">
-  Look at your name, signature and other details.
-</p>
-
-
-<div class="form-group {% if error %} form-group-error{% endif %}">
-  <fieldset>
+<div class="form-group">
+  <fieldset{% if error %} class="after-error-summary"{% endif %}>
 
     <legend {% if error %} id="example-personal-details"{% endif %}>
-
-      <span class="form-label-bold">
+      <h1 class="heading-large">
         Are your personal details correct and up-to-date?
-      </span>
+      </h1>
+
+      {% if error %}<div class="form-group-error">{% endif %}
+      <span class="form-hint">Look at your name, signature and other details.</span>
+
       {% if error %}
         <span class="error-message">
           Error message about personal details goes here
         </span>
+      </div>
       {% endif %}
 
     </legend>
 
+    {% if error %}<div class="form-group-error">{% endif %}
     <div class="multiple-choice">
       <input id="personal_details_yes" type="radio" name="personalDetails" value="Yes">
       <label for="personal_details_yes">Yes, my personal details are correct</label>
@@ -50,6 +46,7 @@
       <input id="personal_details_no" type="radio" name="personalDetails" value="No">
       <label for="personal_details_no">No, some details are wrong or have changed</label>
     </div>
+    {% if error %}</div>{% endif %}
 
   </fieldset>
 </div>
