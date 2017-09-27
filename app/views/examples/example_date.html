@@ -97,13 +97,8 @@
     </div>
     <div class="panel panel-border-wide text">
       <p>
-        A HTML validator will produce the following error for this date pattern: "Attribute pattern is only allowed when the input type is email, password, search, tel, text, or url."
-      </p>
-      <p>
-        This is a known issue. The pattern attribute is needed to force numeric keypads on iOS devices. Type=number alone does not force the numeric keypad.
-      </p>
-      <p>
-        <a href="http://bradfrost.com/blog/mobile/better-numerical-inputs-for-mobile-forms/" target="_blank">Take a look at this article</a> which explains the issue in more detail.
+        Note: validators will identify the <span class="bold">pattern</span> attribute as not being valid for inputs
+        where the <span class="bold">type</span> attribute is <i>number</i>. It is added to <a href="http://bradfrost.com/blog/mobile/better-numerical-inputs-for-mobile-forms" target="_blank">force numeric keypads on iOS devices</a>.
       </p>
     </div>
   </div>
