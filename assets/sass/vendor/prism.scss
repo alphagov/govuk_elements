@@ -11,8 +11,8 @@
 $code-text: $text-colour;
 $code-grey: darken($secondary-text-colour, 2%); // grey #6a7276 4.62:1
 $code-background: scale-color($highlight-colour, $lightness:50%); // light grey
-$code-light-red: darken($mellow-red, 2%);
-$code-dark-red: darken($red, 7%);
+$code-light-red: darken($red, 2%);
+$code-dark-red: darken($dark-red, 7%);
 $code-blue: $govuk-blue;
 $code-green: #1E8400;
 
