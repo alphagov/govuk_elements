@@ -15,6 +15,7 @@
       '#typography-links': '/typography/#typography-links',
       '#typography-lists': '/typography/#typography-lists',
       '#typography-inset-text': '/typography/#typography-inset-text',
+      '/typography/#typography-legal-text': '/typography/#typography-warning-text',
       '#typography-hidden-text': '/typography/#typography-hidden-text',
       '#guide-colour': '/colour',
       '#colour-contrast': '/colour/#colour-contrast',
