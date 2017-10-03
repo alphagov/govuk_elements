@@ -1,6 +1,6 @@
 {
   "name": "govuk-elements-sass",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "description": "GOVUK elements Sass files",
   "repository": "alphagov/govuk_elements",
   "license": "MIT",
@@ -8,11 +8,11 @@
     "node": ">=6.0"
   },
   "dependencies": {
-    "govuk_frontend_toolkit": "^6.0.2"
+    "govuk_frontend_toolkit": "^7.1.0"
   },
   "author": {
-    "name": "Government Digital Service developers",
-    "email": "govuk-dev@digital.cabinet-office.gov.uk"
+    "name": "GOV.UK Design System Team (Government Digital Service)",
+    "email": "design-system-developers@digital.cabinet-office.gov.uk"
   },
   "bugs": {
     "url": "https://github.com/alphagov/govuk_elements/issues"
