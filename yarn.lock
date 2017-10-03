@@ -1585,9 +1585,9 @@ got@^3.2.0:
     read-all-stream "^3.0.0"
     timed-out "^2.0.0"
 
-govuk_frontend_toolkit@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/govuk_frontend_toolkit/-/govuk_frontend_toolkit-7.0.0.tgz#346f35d2d2b373cb053a0036c67392d2c8cd010b"
+govuk_frontend_toolkit@^7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/govuk_frontend_toolkit/-/govuk_frontend_toolkit-7.1.0.tgz#9c24ccbccd2b4df5ae9ecd3eeeac70b436597325"
 
 govuk_template_jinja@0.23.0:
   version "0.23.0"
