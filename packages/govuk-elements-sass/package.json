@@ -11,8 +11,8 @@
     "govuk_frontend_toolkit": "^7.1.0"
   },
   "author": {
-    "name": "Government Digital Service developers",
-    "email": "govuk-dev@digital.cabinet-office.gov.uk"
+    "name": "GOV.UK Design System Team (Government Digital Service)",
+    "email": "design-system-developers@digital.cabinet-office.gov.uk"
   },
   "bugs": {
     "url": "https://github.com/alphagov/govuk_elements/issues"
