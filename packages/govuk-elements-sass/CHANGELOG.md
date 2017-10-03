@@ -1,3 +1,12 @@
+# 3.1.2
+
+- Update govuk_frontend_toolkit from v6.0.2 to v7.1.0:
+  - Remove the multivariate test library (not used in elements)
+  - Fix volume up and down buttons in the media player
+  - Promote the details polyfill to Frontend Toolkit
+- Ensure the back link remains black when focussed ([PR #544](https://github.com/alphagov/govuk_elements/pull/544))
+- Deprecate adding a tabindex to the main element ([PR #534](https://github.com/alphagov/govuk_elements/pull/534))
+
 # 3.1.1
 
 - Only make column headers bold, not row headers ([PR #483](https://github.com/alphagov/govuk_elements/pull/483))

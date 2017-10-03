@@ -201,9 +201,11 @@ p,
   &:link,
   &:visited,
   &:hover,
+  a#{&}:focus,
   &:active {
     color: $black;
   }
+
 
   text-decoration: none;
   border-bottom: 1px solid $black;
@@ -234,7 +236,6 @@ p,
   }
 
 }
-
 // Code styles
 .code {
   color: $text-colour;
