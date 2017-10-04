@@ -27,10 +27,6 @@ jobs:
         - provider: script    # (If version.txt is updated) - create a new tag and push to Github, update the latest-release branch
           script: ./scripts/create-release.sh
           on: master
-        - provider: heroku    # For tagged commits, update the release Heroku app (http://govuk-elements-sass-release.herokuapp.com/)
-          api_key:
-            secure: nQCOBk2EnuJ0yaC0cO2RabfLlF+3WiZ4MrLLBPt3l+fNQO69KcJZu59Npbt45f/ip6Dv8cEGxdzSqzNsPu/XB+fmyAZd1bml0u7JMKWNQeVLKddoM+A1ETFSyXHoM/Ra3Qw8+2XS/ZJNTAD7BGibSh8SvzYdg9fy9kCN77Sn9Ro=
-          app: govuk-elements-sass-release
         - provider: script
           script: echo "Deploying to npm ..."
           script: cd packages/govuk-elements-sass/
