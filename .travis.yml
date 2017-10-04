@@ -13,34 +13,43 @@ jobs:
         - set -e
         - ./scripts/check-lockfile.sh
         - yarn test
-    - stage: create release
+    - stage: check for new release
       script:
       # Ensure Travis aborts without creating a release if version hasn't changed
       - set -e
       - ./scripts/check-release-version.sh
       deploy:
-        # Automatic deploys are enabled in Heroku for this app
-        # Every push to master will deploy a new version of this app. Deploys happen automatically.
-        # Heroku will wait for CI to pass before deploying.
-        # Production (http://govuk-elements.herokuapp.com/)
-        # Review apps (http://govuk-elements-review.herokuapp.com/)
-        - provider: script    # (If version.txt is updated) - create a new tag and push to Github, update the latest-release branch
+        # This whole section is only run if check-release-version exits without
+        # error, which only happens when there is a new release to roll out.
+        # 
+        # GitHub releases are created from the tagged commit. All other deploy
+        # providers are only triggered on the master branch.
+        #
+        # Heroku is configured to automatically deploy the following branches
+        # once CI passes:
+        # master         -> http://govuk-elements.herokuapp.com/
+        #                -> http://govuk-elements-review.herokuapp.com/
+        # latest-release -> http://govuk-elements-sass-release.herokuapp.com/
+        
+        # Create a new tag on Github and update the latest-release branch
+        - provider: script
           script: ./scripts/create-release.sh
-          on: master
-        - provider: heroku    # For tagged commits, update the release Heroku app (http://govuk-elements-sass-release.herokuapp.com/)
-          api_key:
-            secure: nQCOBk2EnuJ0yaC0cO2RabfLlF+3WiZ4MrLLBPt3l+fNQO69KcJZu59Npbt45f/ip6Dv8cEGxdzSqzNsPu/XB+fmyAZd1bml0u7JMKWNQeVLKddoM+A1ETFSyXHoM/Ra3Qw8+2XS/ZJNTAD7BGibSh8SvzYdg9fy9kCN77Sn9Ro=
-          app: govuk-elements-sass-release
+
+        # Update the NPM package (https://www.npmjs.com/package/govuk-elements-sass)
         - provider: script
           script: echo "Deploying to npm ..."
           script: cd packages/govuk-elements-sass/
-        - provider: npm       # For tagged commits, update the NPM package (https://www.npmjs.com/package/govuk-elements-sass)
+
+        - provider: npm
           email: govuk-dev@digital.cabinet-office.gov.uk
           api_key:
             secure: CW79rsUR5MFR+YyIsmwhbrndukNjzoKstp2SKupdEzUYTthnzsDxz2CGgI3SwwIcxPh41onxkDZm5R0ZvxwFQf4R+IJEhM94KqjwLdVE5bkKPD0JNYGbYRTDrTCYb74InvjN6LIhYvQwcKO+ThaiMA1IttEc4vCzKHPKKbPv340=
+
+        # Upload the contents of packages/govuk-elements-sass/ to GitHub releases
         - provider: script
           script: echo "Deploying to GitHub releases ..."
-        - provider: releases  # For tagged commits, upload the contents of packages/govuk-elements-sass/ to GitHub releases
+
+        - provider: releases
           api_key:
             secure: HZD7iqjcf/Yg792jMqksiVsCSQJSZG2TJ77EIGNh7qsdmCSJneUKPpeohQIEvkpjKiz+RyP4v0UqHx9lxHx7rBDmzOdTUCKAV3biTFvmf/W6IUb4UGXbjsDA5AMlNgpCdy4xT2iYBSyUKRR4qLjLDITduDoRQZFET5Z52nzcJgo=
           file_glob: true
@@ -49,8 +58,11 @@ jobs:
           on:
             tags: true
             all_branches: true
-  allow_failures: # Allow this stage to fail without breaking the build (as we only release on tagged commits)
-    - stage: create release
+
+  # Allow this stage to fail without breaking the build (as we only release when
+  # the version changes)
+  allow_failures:
+    - stage: check for new release
 sudo: false
 env:
   global:

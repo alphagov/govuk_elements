@@ -29,7 +29,8 @@ git push origin_ssh $VERSION_TAG
 
 # This tag will trigger the builds for the deploy providers marked "# For tagged commits" in .travis.yml
 
-# Alias branch for the most recently released tag, for easier diffing
+# Alias branch for the most recently released tag, for easier diffing and
+# automatic deployment to Heroku.
 # Force push local `master` branch to the `latest-release` branch on Github
 git push --force origin_ssh master:latest-release
 echo "Pushed latest-release branch to GitHub"
