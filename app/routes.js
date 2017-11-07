@@ -152,17 +152,39 @@ module.exports = {
     })
 
     // Example page: Form validation
+    app.get('/errors/example-form-validation-single-question-more-text', function (req, res) {
+      var section = 'errors'
+      var sectionName = 'Errors and validation'
+      var pageName = 'Example: Form validation - single question with additional guidance'
+      res.render('examples/example_form_validation_single_question_more_text', { 'section': section, 'section_name': sectionName, 'page_name': pageName })
+    })
+
+    app.post('/errors/example-form-validation-single-question-more-text', function (req, res) {
+      var section = 'errors'
+      var sectionName = 'Errors and validation'
+      var pageName = 'Example: Form validation - single question with additional guidance'
+      var recognisable = req.body.recognisable
+      var error = false
+      if (!recognisable) {
+        error = true
+      } else {
+        error = false
+      }
+      res.render('examples/example_form_validation_single_question_more_text', { 'section': section, 'section_name': sectionName, 'page_name': pageName, 'recognisable': recognisable, 'error': error })
+    })
+
+    // Example page: Form validation
     app.get('/errors/example-form-validation-single-question-radio', function (req, res) {
       var section = 'errors'
       var sectionName = 'Errors and validation'
-      var pageName = 'Example: Form validation - single question'
+      var pageName = 'Example: Form validation - single question, radio button'
       res.render('examples/example_form_validation_single_question_radio', { 'section': section, 'section_name': sectionName, 'page_name': pageName })
     })
 
     app.post('/errors/example-form-validation-single-question-radio', function (req, res) {
       var section = 'errors'
       var sectionName = 'Errors and validation'
-      var pageName = 'Example: Form validation - single question'
+      var pageName = 'Example: Form validation - single question, radio button'
       var personalDetails = req.body.personalDetails
       var error = false
       if (!personalDetails) {
@@ -171,6 +193,28 @@ module.exports = {
         error = false
       }
       res.render('examples/example_form_validation_single_question_radio', { 'section': section, 'section_name': sectionName, 'page_name': pageName, 'personal_details': personalDetails, 'error': error })
+    })
+
+    // Example page: Form validation
+    app.get('/errors/example-form-validation-single-question-text', function (req, res) {
+      var section = 'errors'
+      var sectionName = 'Errors and validation'
+      var pageName = 'Example: Form validation - single question, text field'
+      res.render('examples/example_form_validation_single_question_text', { 'section': section, 'section_name': sectionName, 'page_name': pageName })
+    })
+
+    app.post('/errors/example-form-validation-single-question-text', function (req, res) {
+      var section = 'errors'
+      var sectionName = 'Errors and validation'
+      var pageName = 'Example: Form validation - single question, text field'
+      var personalDetails = req.body.personalDetails
+      var error = false
+      if (!personalDetails) {
+        error = true
+      } else {
+        error = false
+      }
+      res.render('examples/example_form_validation_single_question_text', { 'section': section, 'section_name': sectionName, 'page_name': pageName, 'personal_details': personalDetails, 'error': error })
     })
 
     // Redirect examples from /examples/ to /section/example-name-of-example

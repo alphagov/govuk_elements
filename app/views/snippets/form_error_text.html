@@ -1,0 +1,42 @@
+{% if error %}
+<div class="error-summary" role="alert" aria-labelledby="error-summary-heading" tabindex="-1">
+
+  <h2 class="heading-medium error-summary-heading" id="error-summary-heading">
+    Message to alert the user to a problem goes here
+  </h2>
+
+  <p>
+    Optional description of the errors and how to correct them
+  </p>
+
+  <ul class="error-summary-list">
+    <li><a href="#example-name">Descriptive link to the question with an error</a></li>
+  </ul>
+
+</div>
+{% endif %}
+
+
+<div class="form-group">
+    <h1>
+      <label for="name"{% if error %} id="example-name"{% endif %}>
+        <span class="heading-large">What is your name?</span>
+
+        {% if error %}<div class="form-group-error">{% endif %}
+        <span class="form-hint">You can enter your full name</span>
+
+        {% if error %}
+          <span class="error-message">
+            Error message about name goes here
+          </span>
+        </div>
+        {% endif %}
+      </label>
+    </h1>
+
+    {% if error %}<div class="form-group-error">{% endif %}
+    <input type="text" class="form-control{% if error %} form-control-error{% endif %}" id="name" name="name" value="">
+    {% if error %}</div>{% endif %}
+</div>
+
+<input class="button" type="submit" value="Continue">
