@@ -254,5 +254,10 @@ module.exports = {
       var pageName = 'Alpha and beta banners'
       res.render('guide_alpha_beta', { 'page_name': pageName })
     })
+
+    // temporary access to analytics txt file
+    app.get('/analytics.txt', function (req, res) {
+      res.sendFile('/analytics.txt', { root: 'public' })
+    })
   }
 }

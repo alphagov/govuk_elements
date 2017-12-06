@@ -46,6 +46,14 @@ gulp.task('images', () => {
     .pipe(gulp.dest(paths.publicImg))
 })
 
+// ---------------------------------------
+// Copies .txt file to /public/
+// ---------------------------------------
+gulp.task('copy-txt-file', () => {
+  return gulp.src('assets/*.txt')
+    .pipe(gulp.dest(paths.public))
+})
+
 // Scripts build task ---------------------
 // Copies JavaScript to /public/javascripts
 // ---------------------------------------
@@ -59,7 +67,7 @@ gulp.task('scripts', () => {
 // ---------------------------------------
 
 gulp.task('build', cb => {
-  runsequence('clean', ['styles', 'images', 'scripts'], cb)
+  runsequence('clean', ['styles', 'images', 'scripts', 'copy-txt-file'], cb)
 })
 
 // Server task --------------------------
