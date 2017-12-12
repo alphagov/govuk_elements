@@ -28,7 +28,11 @@ GEM
 
 PLATFORMS
   ruby
+  x86_64-darwin-16
 
 DEPENDENCIES
   govuk-lint (= 0.7.0)
   sass (= 3.4.15)
+
+BUNDLED WITH
+   1.16.0.pre.3

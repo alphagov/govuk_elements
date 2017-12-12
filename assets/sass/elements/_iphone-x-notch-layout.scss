@@ -1,30 +1,29 @@
-@media only screen 
-and (device-width : 375px) 
-and (device-height : 812px)
-and (orientation: landscape) 
-and (-webkit-device-pixel-ratio : 3)  {
-  
+// Checks for iPhone X landscape mode
+@media only screen and (device-width : 375px) and (device-height : 812px)and (orientation: landscape) and (-webkit-device-pixel-ratio : 3)  {
+  // Only apply styles to the main layout wrapper elements
+  // scss-lint:disable Comment
+  // scss-lint:disable IdSelector
+  // scss-lint:disable QualifyingElement
+  // scss-lint:disable DuplicateProperty
   header#global-header,
-  #wrapper, .site-wrapper,
+  #wrapper,
+  .site-wrapper,
   footer#footer,
   #global-app-error {
-    /* iOS 11 */
+    // iOS 11
     padding-left: calc(constant(safe-area-inset-left) - 30px);
     padding-right: calc(constant(safe-area-inset-right) - 30px);
-    
-    /* iOS 11.2+ */
+    // iOS 11.2+
     padding-left: calc(env(safe-area-inset-left) - 30px);
     padding-right: calc(env(safe-area-inset-right) - 30px);
   }
 
   #global-header-bar {
-    /* iOS 11 */
+    //iOS 11
     margin-left: constant(safe-area-inset-left);
     margin-right: constant(safe-area-inset-right);
-    
-    /* iOS 11.2+ */
+    // iOS 11.2+
     margin-left: env(safe-area-inset-left);
     margin-right: env(safe-area-inset-right);
   }
-
 }
