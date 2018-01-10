@@ -27,9 +27,9 @@
         <li><a href="#typography-body-copy">Body copy</a></li>
         <li><a href="#typography-links">Links</a></li>
         <li><a href="#typography-lists">Lists</a></li>
-        <li><a href="#typography-inset-text">Inset text</a></li>
         <li><a href="#typography-warning-text">Warning text</a></li>
         <li><a href="#typography-hidden-text">Hidden text (progressive disclosure)</a></li>
+        <li><a href="#typography-inset-text">Inset text</a></li>
         <li><a href="#examples">Examples</a></li>
       </ul>
     </div>
@@ -157,25 +157,6 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="typography-inset-text">Inset text</h3>
-  <p class="text">
-    Use bordered inset text to draw attention to important content on the page.
-  </p>
-
-<div class="example">
-  <div class="text">
-    {% include "snippets/typography_inset_text.html" %}
-  </div>
-</div>
-
-<pre>
-<code class="language-markup">
-  {% filter escape %}
-    {% include "snippets/typography_inset_text.html" %}
-  {% endfilter %}
-</code>
-</pre>
-
   <h3 class="heading-medium" id="typography-warning-text">Warning text</h3>
   <p class="text">
     Use bold text with an exclamation icon to warn people about something important, for example if there are legal consequences like a fine or prison sentence.
@@ -231,6 +212,28 @@
       <a href="/typography/example-details-summary/">Take a look at example page</a> which demonstrates conditionally revealing information, using the HTML5 details and summary elements.
     </p>
   </div>
+
+  <h3 class="heading-medium" id="typography-inset-text">Inset text</h3>
+  <p class="text">
+    Use this bordered inset text to show something is related to the element above it and was revealed by it. This is used for revealing content in <a href="#typography-hidden-text">hidden text</a> and <a href="/form-elements/#form-toggle-content">form elements</a>.
+  </p>
+  <p class="text">
+    Don't use it to highlight important content. There should only be one way to draw attention to text on the page with the <a href="#typography-warning-text">warning text</a> and it should be done sparingly.
+  </p>
+
+<div class="example">
+  <div class="text">
+    {% include "snippets/typography_inset_text.html" %}
+  </div>
+</div>
+
+<pre>
+<code class="language-markup">
+  {% filter escape %}
+    {% include "snippets/typography_inset_text.html" %}
+  {% endfilter %}
+</code>
+</pre>
 
 
   <h3 class="heading-medium" id="examples">Examples</h3>
