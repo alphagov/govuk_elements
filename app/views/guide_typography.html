@@ -28,7 +28,7 @@
         <li><a href="#typography-links">Links</a></li>
         <li><a href="#typography-lists">Lists</a></li>
         <li><a href="#typography-inset-text">Inset text</a></li>
-        <li><a href="#typography-legal-text">Legal text</a></li>
+        <li><a href="#typography-warning-text">Warning text</a></li>
         <li><a href="#typography-hidden-text">Hidden text (progressive disclosure)</a></li>
         <li><a href="#examples">Examples</a></li>
       </ul>
@@ -176,21 +176,24 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="typography-legal-text">Legal text</h3>
+  <h3 class="heading-medium" id="typography-warning-text">Warning text</h3>
   <p class="text">
-    Use bold text with an exclamation icon if there are legal consequences - for example, a fine or prison sentence. And remember that the hidden text (here: 'Warning') might need to be rewritten to be appropriate for your case.
+    Use bold text with an exclamation icon to warn people about something important, for example if there are legal consequences like a fine or prison sentence.
+  </p>
+  <p class="text">
+    Use this sparingly. And remember that the hidden text (here: 'Warning') might need to be rewritten to be appropriate for your case.
   </p>
 
 <div class="example">
   <div class="text">
-    {% include "snippets/typography_legal_text.html" %}
+    {% include "snippets/typography_warning_text.html" %}
   </div>
 </div>
 
 <pre>
 <code class="language-markup">
   {% filter escape %}
-    {% include "snippets/typography_legal_text.html" %}
+    {% include "snippets/typography_warning_text.html" %}
   {% endfilter %}
 </code>
 </pre>
