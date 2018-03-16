@@ -98,19 +98,6 @@ module.exports = {
       res.render('guide_form_elements', { 'page_name': pageName })
     })
 
-    // Example page: Basic form
-    app.get('/form-elements/example-forms', function (req, res) {
-      var section = 'form-elements'
-      var sectionName = 'Form elements'
-      var pageName = 'Example: Form'
-      res.render('examples/example_forms', { 'section': section, 'section_name': sectionName, 'page_name': pageName })
-    })
-
-    // Redirect examples from /examples/ to /section/example-name-of-example
-    app.get('/examples/forms', function (req, res) {
-      res.redirect('/form-elements/example-forms')
-    })
-
     // Example page: Date pattern
     app.get('/form-elements/example-date', function (req, res) {
       var section = 'form-elements'
