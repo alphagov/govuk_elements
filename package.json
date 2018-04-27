@@ -13,7 +13,7 @@
     "del": "^3.0.0",
     "express": "^4.15.2",
     "govuk_frontend_toolkit": "^7.1.0",
-    "govuk_template_jinja": "0.23.0",
+    "govuk_template_jinja": "0.24.0",
     "gulp": "^3.9.1",
     "gulp-cssnano": "^2.1.2",
     "gulp-mocha": "^4.3.1",
