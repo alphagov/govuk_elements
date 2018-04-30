@@ -50,7 +50,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       }
 
       function addOpenCloseAllButton() {
-        $element.prepend( '<div class="subsection-controls js-subsection-controls"><button aria-expanded="false">Open all</button></div>' );
+        $element.prepend( '<div class="subsection-controls js-subsection-controls"><button aria-expanded="false">Otvoriť všetko</button></div>' );
       }
 
       function addButtonsToSubsections() {
@@ -166,16 +166,16 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
           var action = '';
 
           // update button text
-          if ($openOrCloseAllButton.text() == "Open all") {
-            $openOrCloseAllButton.text("Close all");
+          if ($openOrCloseAllButton.text() == "Otvoriť všetko") {
+            $openOrCloseAllButton.text("Zatvoriť všetko");
             $openOrCloseAllButton.attr("aria-expanded", "true");
             action = 'open';
 
             track('pageElementInteraction', 'accordionAllOpened', {
-              label: 'Open All'
+              label: 'Otvoriť všetko'
             });
           } else {
-            $openOrCloseAllButton.text("Open all");
+            $openOrCloseAllButton.text("Otvoriť všetko");
             $openOrCloseAllButton.attr("aria-expanded", "false");
             action = 'close';
 
@@ -224,9 +224,9 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
         var openSubsections = $element.find('.subsection--is-open').length;
         // Find out if the number of is-opens == total number of sections
         if (openSubsections === totalSubsections) {
-          $openOrCloseAllButton.text('Close all');
+          $openOrCloseAllButton.text('Zatvoriť všetko');
         } else {
-          $openOrCloseAllButton.text('Open all');
+          $openOrCloseAllButton.text('Otvoriť všetko');
         }
       }
 
