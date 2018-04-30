@@ -28,7 +28,7 @@ gulp.task('styles', () => {
   return gulp.src(paths.assetsScss + '**/*.scss')
     .pipe(sass({
       includePaths: [
-        'node_modules/govuk_frontend_toolkit/stylesheets'
+        'node_modules/idsk_frontend_toolkit/stylesheets'
       ]
     }).on('error', sass.logError))
     .pipe(gulp.dest(paths.publicCss))
