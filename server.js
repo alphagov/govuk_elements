@@ -16,7 +16,7 @@ app.set('view engine', 'html')
 // Set the location of the views and govuk_template layout file
 var appViews = [
   path.join(__dirname, '/app/views'),
-  path.join(__dirname, '/node_modules/govuk_template_jinja/views/layouts')
+  path.join(__dirname, '/node_modules/idsk_template_jinja/views/layouts')
 ]
 
 // Tell nunjucks we are using express to serve the templates within
@@ -30,8 +30,8 @@ nunjucks.configure(appViews, {
 
 // Middleware to serve static assets
 app.use('/public', express.static(path.join(__dirname, '/public')))
-app.use('/public', express.static(path.join(__dirname, '/node_modules/govuk_template_jinja/assets')))
-app.use('/public', express.static(path.join(__dirname, '/node_modules/govuk_frontend_toolkit')))
+app.use('/public', express.static(path.join(__dirname, '/node_modules/idsk_template_jinja/assets')))
+app.use('/public', express.static(path.join(__dirname, '/node_modules/idsk_frontend_toolkit')))
 
 // Support for parsing data in POSTs
 app.use(bodyParser.json())
