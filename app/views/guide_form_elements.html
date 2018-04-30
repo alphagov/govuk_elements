@@ -1,58 +1,59 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Form elements — GOV.UK elements{% endblock %}
+{% block page_title %}Formulárové prvky — Webové komponenty {% endblock %}
 
 {% block main_content %}
 
 <main id="content" role="main">
 
   <h1 class="heading-xlarge">
-    <span class="heading-secondary">GOV.UK elements</span>
-    Form elements
+    <span class="heading-secondary">Webové komponenty</span>
+    Formulárové prvky
   </h1>
 
   <p class="lede text">
-    Keep forms as simple as possible &ndash; only ask what’s needed to run your service.
+    Formuláre udržujte čo najjednoduchšie – vždy vyžadujte iba údaje nevyhnutné pre spustenie danej služby.
   </p>
 
-  <h2 class="heading-small heading-contents">Contents:</h2>
+  <h2 class="heading-small heading-contents">Obsah:</h2>
   <div class="grid-row">
     <div class="column-two-thirds">
       <ul class="list list-contents">
-        <li><a href="#form-optional-fields">Optional and mandatory fields</a></li>
-        <li><a href="#form-labels">Labels</a></li>
-        <li><a href="#form-fields">Form fields</a></li>
-        <li><a href="#form-textarea">Textarea</a></li>
-        <li><a href="#form-focus-states">Form focus states</a></li>
-        <li><a href="#form-hint-text">Hint text</a></li>
-        <li><a href="#form-spacing">Spacing</a></li>
-        <li><a href="#form-file-upload">File upload</a></li>
-        <li><a href="#form-fieldsets">Fieldsets</a></li>
-        <li><a href="#form-select-boxes">Select boxes</a></li>
-        <li><a href="#form-radio-buttons">Radio buttons</a></li>
-        <li><a href="#form-checkboxes">Checkboxes</a></li>
-        <li><a href="#form-toggle-content">Conditionally revealing content</a></li>
-        <li><a href="#examples">Examples</a></li>
+        <li><a href="#form-optional-fields">Povinné a nepovinné polia</a></li>
+        <li><a href="#form-labels">Názov dátového poľa</a></li>
+        <li><a href="#form-fields">Formulárové polia</a></li>
+        <li><a href="#form-textarea">Textové polia</a></li>
+        <li><a href="#form-focus-states">Zvýraznenie aktívneho poľa</a></li>
+        <li><a href="#form-hint-text">Pomocný text</a></li>
+        <li><a href="#form-spacing">Odsadenie</a></li>
+        <li><a href="#form-file-upload">Nahratie súboru</a></li>
+        <li><a href="#form-fieldsets">Legendy</a></li>
+        <li><a href="#form-select-boxes">Rozbaľovacie zoznamy</a></li>
+        <li><a href="#form-radio-buttons">Prepínače</a></li>
+        <li><a href="#form-checkboxes">Začiarkávacie políčka</a></li>
+        <li><a href="#form-toggle-content">Podmienečne zobrazovaný obsah</a></li>
+        <li><a href="#examples">Príklady</a></li>
       </ul>
     </div>
   </div>
 
 
-  <h3 class="heading-medium" id="form-optional-fields">Optional and mandatory fields</h3>
+  <h3 class="heading-medium" id="form-optional-fields">Povinné a nepovinné polia</h3>
   <ul class="text list list-bullet">
-    <li>only ask for the information you absolutely need</li>
-    <li>if you do ask for optional information, mark the labels of optional fields with ‘(optional)’</li>
-    <li>don’t mark mandatory fields with asterisks</li>
+    <li>Vyžadujú sa iba tie údaje, ktoré sú bezprostredne potrebné k spusteniu služby.</li>
+    <li>Pri nepovinných údajoch je potrebné tieto polia označiť ako nepovinné “(nepovinný údaj)”.</li>
+    <li>Povinné polia sa neoznačujú hviezdičkou.</li>
   </ul>
 
-  <h3 class="heading-medium" id="form-labels">Labels</h3>
+  <h3 class="heading-medium" id="form-labels">Názov dátového poľa (ang. label)</h3>
   <ul class="text list list-bullet">
-    <li>all form fields should be given labels</li>
-    <li>don’t hide labels, unless the surrounding context makes them unnecessary</li>
-    <li>labels should be aligned above their fields</li>
-    <li>label text should be short, direct and in sentence case</li>
-    <li>avoid colons at the end of labels</li>
-    <li>labels should be associated with form fields using the <code class="code">for</code> attribute</li>
+    <li>Každý formulárový prvok má priradený výstižný názov dátového poľa.</li>
+    <li>Názvy dátových polí sa skrývajú iba v prípade, že sú vďaka okolitému kontextu nepotrebné.</li>
+    <li>Názvy dátových polí musia byť zarovnané nad polia, ktoré označujú.</li>
+    <li>Názvy dátových polí by mali byť krátke, zrozumiteľné a výstižné.</li>
+    <li>Je potrebné sa vyhýbať dvojbodkám za menovkami.</li>
+    <li>Názvy dátových polí sa uvádzajú v súlade s účelom použitia dátových prvkov.</li>
+    <li>Názvy dátových polí musia byť priradené k poliam pomocou atribútu <code class="code">for</code></li>
   </ul>
   <div class="example">
     {% include "snippets/form_labels.html" %}
@@ -66,29 +67,26 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="form-fields">Form fields</h3>
+  <h3 class="heading-medium" id="form-fields">Formulárové polia</h3>
   <div class="text">
     <p>
-      Make field widths proportional to the input they take.
+      Veľkosť polí musí zohľadňovať prípustný počet znakov daného dátového poľa (proporčne prispôsobená údajom, ktoré do nich budú vpisované).
     </p>
     <p>
-      Ensure that users can enter the information they need at smaller screen sizes.
+      Je potrebné sa uistiť, že používatelia budú schopní zadať potrebné údaje aj na menších obrazovkách.
     </p>
     <p>
-      Snap form fields to 100% width at smaller screen sizes.
+      Pri menších veľkostiach obrazoviek je vhodné roztiahnuť polia na celú šírku obrazovky.
+    </p>
+    <p>
+      Formátovanie dátových polí je poskytované v súlade s formátom príslušných dátových prvkov.
     </p>
   </div>
 
-  <p>
-    <a href="https://paper.dropbox.com/doc/Text-boxes-8NLlgz9tjR8OzTz2N9wE3" rel="external">
-      Discuss form fields on Dropbox Paper
-    </a>
-  </p>
-
-  <h3 class="heading-medium" id="form-textarea">Textarea</h3>
+  <h3 class="heading-medium" id="form-textarea">Textové polia</h3>
   <div class="text">
     <p>
-      Make the height of a textarea proportional to the amount of text to be entered.
+      Výšku textového poľa nastavujeme úmerne k množstvu textu, ktorý sa doň bude vpisovať.
     </p>
   </div>
 
@@ -104,13 +102,13 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="form-focus-states">Form focus states</h3>
+  <h3 class="heading-medium" id="form-focus-states">Zvýraznenie aktívneho poľa</h3>
   <div class="text">
     <p>
-      All elements use the yellow focus style as a highlight, as either a fill or 3px outline.
+      Všetky elementy používajú žltú farbu na zvýraznenie aktívneho poľa. Žltou farbou sa vyplní celé vnútro poľa alebo sa použije žltý obrys veľkosti 3 pixelov.
     </p>
     <p>
-      Click on the label “Full name” or inside the form field to show the focus state.
+      Ukážka: Pre zobrazenie aktívneho stavu kliknite v nasledujúcom príklade na “Meno a priezvisko” alebo do textového poľa.
     </p>
   </div>
 
@@ -118,12 +116,13 @@
     {% include "snippets/form_focus.html" %}
   </div>
 
-  <h3 class="heading-medium"  id="form-hint-text">Hint text</h3>
+  <h3 class="heading-medium"  id="form-hint-text">Pomocný text</h3>
   <ul class="list list-bullet text">
-    <li>don’t use placeholder text in form fields, as this will disappear once content is entered into the form field</li>
-    <li>use hint text for supporting contextual help, this will always be shown</li>
-    <li>hint text should sit above a form field</li>
-    <li>ensure hint text can be read correctly by screen readers</li>
+    <li>Nepoužívajte pomocný text vo vnútri textového poľa, keďže tento text sa stratí, akonáhle používateľ zadá akýkoľvek znak do textového poľa.</li>
+    <li>Pomocný text alebo príklad, v akom formáte je potrebné zadať údaje, umiestnite nad konkrétnym elementom vo formulári tak, aby mohli byť zobrazené
+      po celú dobu zadávania údajov.</li>
+    <li>V pomocnom texte musí byť jednoznačne uvedené, čo má používateľ v danom prvku vyplniť alebo zvoliť a ako s ním má používateľ zaobchádzať.</li>
+    <li>Overte si, že čítačky obrazoviek dokážu pomocný text správne prečítať.</li>
   </ul>
 
   <div class="example">
@@ -138,9 +137,9 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="form-spacing">Spacing between form elements</h3>
+  <h3 class="heading-medium" id="form-spacing">Odsadenie elementov</h3>
   <p class="text">
-    Ensure there is sufficient spacing between form elements.
+    Uistite sa, že medzi jednotlivými elementami vo formulári je dostatok voľného miesta.
   </p>
 
   <div class="example">
@@ -155,8 +154,8 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="form-file-upload">File upload</h3>
-  <p>A control that lets the user select a file.</p>
+  <h3 class="heading-medium" id="form-file-upload">Nahratie súboru</h3>
+  <p>Pre nahratie súboru použite ovládací prvok, ktorý umožňuje používateľovi vybrať súbor.</p>
 
   <div class="example">
     {% include "snippets/form_file_upload.html" %}
@@ -171,35 +170,48 @@
 </pre>
 
   <div class="text">
-    <p>
-      We recommend using a native input using <code class="code">type="file"</code>, rather than a custom implementation.
-    </p>
     <p class="lead-in">
-      This is so:
+      Používajte natívny input element (načrtnutý v ukážke kódu vyššie) pomocou <code class="code">type="file"</code> a to z nasledovných dôvodov:
     </p>
     <ul class="list list-bullet">
-      <li>the control gains focus when tabbing through the page</li>
-      <li>the control functions using a keyboard</li>
-      <li>the control functions using assistive technology</li>
-      <li>the control functions when javascript is not available</li>
+      <li>na ovládací prvok sa dostaneme aj pri prechádzaní stránky len za pomoci tabulátora,</li>
+      <li>funguje ovládanie pomocou klávesnice,</li>
+      <li>funguje ovládanie pomocou asistenčných technológií,</li>
+      <li>funguje aj pri vypnutom javascripte,</li>
+      <li>môže byť rozšírený aj o pokročilú funkcionalitu cez javascript, pričom musí zostať zachovaná natívna funkcionalita a štandardy prístupnosti.</li>
     </ul>
     <p>
-      A custom implementation of this control would need to meet the criteria above.
+      Vlastné riešenia na nahratie súboru musia spĺňať vyššie uvedené kritériá.
     </p>
   </div>
 
-  <h3 class="heading-medium" id="form-fieldsets">Fieldsets and legends</h3>
+  <h3 class="heading-medium" id="form-fieldsets">Legendy a skupiny polí (ang. fieldset)</h3>
   <p class="text">
-    Use fieldsets to group related form controls. The first element inside a fieldset must be a <code class="code">legend</code> element which describes the group.
+    Skupiny polí (ang. fieldset) používame na zoskupenie súvisiacich prvkov. Prvým z elementov vo fieldsete musí byť legenda, ktorá popisuje celú skupinu prvkov.
   </p>
   <p class="text">
-    Any general text which is important for filling in the form and cannot be put into a <a href="#form-hint-text">hint</a>, should be in that legend (as shown in the <a href="#form-checkboxes">checkbox example</a>). But the legend shouldn't be too long either.
+    Celý text, ktorý je dôležitý pri vypĺňaní formulára a nie je možné ho umiestniť ako pomocný text, by sa mal nachádzať v legende
+    (viď <a href="#form-checkboxes">príklad</a> nižšie – začiarkavacie políčka). Legenda by taktiež nemala byť, kvôli asistenčným technológiam, príliš dlhá.
   </p>
 
-  <h3 class="heading-medium" id="form-select-boxes">Select boxes</h3>
+  <h3 class="heading-medium" id="form-select-boxes">Rozbaľovacie zoznamy (ang. drop-down lists)</h3>
   <p class="text">
-    Avoid using select boxes (drop-down lists) - use radio buttons or checkboxes instead.
+    Je potrebné sa vyhýbať používaniu rozbaľovacích zoznamov (drop-down lists). Namiesto nich je lepšie použiť prepínače
+    (radio button) alebo začiarkavacie políčka (checkbox).
   </p>
+
+  <div class="text">
+    <p class="lead-in">
+      Pri rozbaľovacích zoznamoch používajte natívne prvky pretože:
+    </p>
+    <ul class="list list-bullet">
+      <li>na ovládací prvok sa dostaneme aj pri prechádzaní stránky len za pomoci tabulátora,</li>
+      <li>funguje ovládanie pomocou klávesnice,</li>
+      <li>funguje ovládanie pomocou asistenčných technológií,</li>
+      <li>funguje aj pri vypnutom javascripte,</li>
+      <li>môžu byť rozšírené aj o pokročilú funkcionalitu cez javascript, pričom musí zostať zachovaná natívna funkcionalita a štandardy prístupnosti.</li>
+    </ul>
+  </div>
 
   <div class="example">
     {% include "snippets/form_select_boxes.html" %}
@@ -213,20 +225,27 @@
 </code>
 </pre>
 
-  <p>
-    <a href="https://paper.dropbox.com/doc/Select-boxes-v7PWDvPDV2tmc9pzDbm3s" rel="external">
-      Discuss select boxes on Dropbox Paper
-    </a>
-  </p>
-
-  <h3 class="heading-medium" id="form-radio-buttons">Radio buttons</h3>
+  <h3 class="heading-medium" id="form-radio-buttons">Prepínače (ang. radio buttons)</h3>
   <ul class="list list-bullet text">
-    <li>use these to let users choose a single option from a list</li>
-    <li>for more than two options, radio buttons should be stacked</li>
-    <li>radio buttons with large hit areas are easier to select with a mouse or touch devices</li>
+    <li>Využívajú sa v prípade, ak si má používateľ vybrať jednu z možností.</li>
+    <li>Pre viac ako dve možnosti sa prepínače zarovnávajú pod seba.</li>
+    <li>Prepínače by mali byť dostatočne veľké, aby sa dali ľahko použiť na PC (myš) ale aj dotykových zariadeniach (mobil, tablet).</li>
   </ul>
 
-  <h4 class="heading-small">Inline radio buttons</h4>
+  <div class="text">
+    <p class="lead-in">
+      Pri prepínačoch používajte natívne prvky pretože:
+    </p>
+    <ul class="list list-bullet">
+      <li>na ovládací prvok sa dostaneme aj pri prechádzaní stránky len za pomoci tabulátora,</li>
+      <li>funguje ovládanie pomocou klávesnice,</li>
+      <li>funguje ovládanie pomocou asistenčných technológií,</li>
+      <li>funguje aj pri vypnutom javascripte,</li>
+      <li>môžu byť rozšírené aj o pokročilú funkcionalitu cez javascript, pričom musí zostať zachovaná natívna funkcionalita a štandardy prístupnosti.</li>
+    </ul>
+  </div>
+
+  <h4 class="heading-small">Prepínače umiestnené vedľa seba</h4>
   <div class="example">
     {% include "snippets/form_radio_buttons_inline.html" %}
   </div>
@@ -239,7 +258,7 @@
 </code>
 </pre>
 
-  <h4 class="heading-small">Stacked radio buttons</h4>
+  <h4 class="heading-small">Prepínače umiestnené pod sebou</h4>
   <div class="example">
     {% include "snippets/form_radio_buttons.html" %}
   </div>
@@ -252,7 +271,7 @@
 </code>
 </pre>
 
-  <h4 class="heading-small" id="form-radio-buttons-disabled">Disabled radio buttons</h4>
+  <h4 class="heading-small" id="form-radio-buttons-disabled">Neaktívny prepínač</h4>
   <div class="example">
     {% include "snippets/form_radio_buttons_disabled.html" %}
   </div>
@@ -265,13 +284,27 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="form-checkboxes">Checkboxes</h3>
+  <h3 class="heading-medium" id="form-checkboxes">Začiarkavacie políčka (ang. checkboxes)</h3>
   <ul class="list list-bullet text">
-    <li>use these to select either on/off toggles or multiple selections</li>
-    <li>make it clear with words when users can select one or multiple options</li>
+    <li>Používa sa na výber viacerých možností zo zoznamu, alebo na zapnutie/vypnutie.</li>
+    <li>Vždy je potrebné používateľovi zdôrazniť, či si môže vybrať jednu alebo viacero možností.</li>
+    <li>Ak sa jedná o súhlas alebo potvrdenie, je dôležité nechať začiarkávacie v predvolenom stave prázdne.</li>
   </ul>
 
-  <h4 class="heading-small">Stacked checkboxes</h4>
+  <div class="text">
+    <p class="lead-in">
+      Pri začiarkávacích políčkach používajte natívne prvky pretože:
+    </p>
+    <ul class="list list-bullet">
+      <li>na ovládací prvok sa dostaneme aj pri prechádzaní stránky len za pomoci tabulátora,</li>
+      <li>funguje ovládanie pomocou klávesnice,</li>
+      <li>funguje ovládanie pomocou asistenčných technológií,</li>
+      <li>fungujú aj pri vypnutom javascripte,</li>
+      <li>môžu byť rozšírené aj o pokročilú funkcionalitu cez javascript, pričom musí zostať zachovaná natívna funkcionalita a štandardy prístupnosti.</li>
+    </ul>
+  </div>
+
+  <h4 class="heading-small">Začiarkavacie políčka umiestnené pod sebou</h4>
   <div class="example">
     {% include "snippets/form_checkboxes.html" %}
   </div>
@@ -284,7 +317,7 @@
 </code>
 </pre>
 
-  <h4 class="heading-small" id="form-checkboxes-disabled">Disabled checkboxes</h4>
+  <h4 class="heading-small" id="form-checkboxes-disabled">Neaktívne začiarkavacie políčko</h4>
   <div class="example">
     {% include "snippets/form_checkboxes_disabled.html" %}
   </div>
@@ -298,7 +331,7 @@
 </pre>
 
   <p>
-    Only pre-select options if there’s a strong, user-centred reason to.
+    Automaticky predvyplníme (začiarkneme) políčka iba vtedy, ak je to dôležité z hľadiska používateľa.
   </p>
 
   <div class="example">
@@ -315,23 +348,19 @@
 </code>
 </pre>
 
-<p>
-Discuss <a href="https://paper.dropbox.com/doc/Radio-buttons-oIwWoxwBKClt5IXvDbnpF" rel="external">radio buttons</a> and <a href="https://paper.dropbox.com/doc/Checkboxes-HDLVh9YAhInay2xJ7vBl8" rel="external">checkboxes</a> on Dropbox Paper
-</p>
-
   <h3 class="heading-medium" id="form-toggle-content">
-    Conditionally revealing content
+    Podmienečné odhaľovanie obsahu
   </h3>
   <ul class="list list-bullet text">
-    <li>reveal additional questions, depending on the context</li>
-    <li>a left border is used to emphasise this supporting information</li>
+    <li>Dodatočné otázky, ktoré zobrazujeme na základe predchádzajúceho kontextu.</li>
+    <li>Na zvýraznenie dodatočnej otázky používame vodiacu linku zarovnanú naľavo.</li>
   </ul>
 
   <h4 class="heading-small" id="form-toggle-content-radios">
-    Radio buttons
+    Prepínače
   </h4>
   <div class="text">
-    <p>Choose an option below to see how this works.</p>
+    <p>Ukážka:, Vyberte jednu z možností uvedených v nasledujúcom príklade:</p>
   </div>
 
   <div class="example">
@@ -347,12 +376,13 @@ Discuss <a href="https://paper.dropbox.com/doc/Radio-buttons-oIwWoxwBKClt5IXvDbn
   </pre>
 
   <p class="text">
-    In the code snippet above, the <code class="language-markup">data-target=""</code> attribute is present on every label, as each option reveals an extra field.
+    Tak ako je uvedené v časti kódu vyššie, pri každom názve dátového poľa sa nachádza atribút <code class="language-markup">data-target=""</code>
+    (ang. label), keďže pri každej z možností sa zobrazí extra pole.
   </p>
 
   <div class="text">
     <p>
-      A grey left hand border is used to visually connect the revealed content with the question above.
+      Šedá vodiaca linka na ľavej strane vizuálne spája obsah s otázkou umiestnenou vyššie.
     </p>
   </div>
 
@@ -368,17 +398,11 @@ Discuss <a href="https://paper.dropbox.com/doc/Radio-buttons-oIwWoxwBKClt5IXvDbn
 </code>
 </pre>
 
-  <div class="text">
-    <p>
-      The <a href="/typography/#typography-inset-text">inset text section</a> has more information on where and how to use panels (content with a grey left hand border).
-    </p>
-  </div>
-
   <h4 class="heading-small" id="form-toggle-content-checkboxes">
-    Checkboxes
+    Začiarkavacie políčka
   </h4>
   <p>
-    Click on "Citizen of a different country" to see how this works.
+    Ukážka: Pre ukážku kliknite v nasledujúcom príklade na "Občan inej národnosti".
   </p>
   <div class="example">
     {% include "snippets/form_inset_checkboxes.html" %}
@@ -392,17 +416,11 @@ Discuss <a href="https://paper.dropbox.com/doc/Radio-buttons-oIwWoxwBKClt5IXvDbn
 </code>
 </pre>
 
-  <p>
-    <a href="https://paper.dropbox.com/doc/Progressive-disclosure-rUra4ZisgaWjafhBP1ivr" rel="external">
-      Discuss conditional form fields on Dropbox Paper
-    </a>
-  </p>
-
-  <h3 class="heading-medium" id="examples">Examples</h3>
+  <h3 class="heading-medium" id="examples">Príklady</h3>
   <ul class="list list-bullet">
-    <li><a href="/form-elements/example-form-elements/">form elements</a></li>
-    <li><a href="/form-elements/example-date/">date pattern</a></li>
-    <li><a href="/form-elements/example-radios-checkboxes/">radio buttons and checkboxes</a></li>
+    <li><a href="/form-elements/example-form-elements/">Formulárové prvky</a></li>
+    <li><a href="/form-elements/example-date/">Dátumy</a></li>
+    <li><a href="/form-elements/example-radios-checkboxes/">Prepínače a začiarkavacie políčka</a></li>
   </ul>
 
 </main><!-- / #content -->

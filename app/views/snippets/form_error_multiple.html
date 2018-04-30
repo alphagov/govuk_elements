@@ -2,19 +2,19 @@
 <div class="error-summary" role="alert" aria-labelledby="error-summary-heading" tabindex="-1">
 
   <h2 class="heading-medium error-summary-heading" id="error-summary-heading">
-    Message to alert the user to a problem goes here
+    Miesto pre správu, ktorá upozorňuje, že nastal problém
   </h2>
 
   <p>
-    Optional description of the errors and how to correct them
+    Priestor pre popis k akým chybám došlo a ako ich opraviť
   </p>
 
   <ul class="error-summary-list">
     {% if not fullName %}
-    <li><a href="#example-full-name">Descriptive link to the question with an error</a></li>
+    <li><a href="#example-full-name">Popis s odkazom na otázku, v ktorej nastala chyba</a></li>
     {% endif %}
     {% if not niNo %}
-    <li><a href="#example-ni-number">Descriptive link to the question with an error</a></li>
+    <li><a href="#example-ni-number">Popis s odkazom na otázku, v ktorej nastala chyba</a></li>
     {% endif %}
   </ul>
 
@@ -22,18 +22,18 @@
 {% endif %}
 
 <h1 class="heading-large">
-  Your personal details
+  Vaše osobné údaje
 </h1>
 
 <div class="form-group {% if error %}{% if not fullName %} form-group-error{% endif %}{% endif %}">
 
   <label for="example-full-name" {% if error %}{% if not fullName %} id="error-full-name"{% endif %}{% endif %}>
 
-    <span class="form-label-bold">Full name</span>
-    <span class="form-hint">As shown on your birth certificate or passport</span>
+    <span class="form-label-bold">Meno a priezvisko</span>
+    <span class="form-hint">Tak ako ho máte uvedené v rodnom liste alebo pase</span>
     {% if error %}
       {% if not fullName %}
-      <span class="error-message">Error message about full name goes here</span>
+      <span class="error-message">Priestor pre chybovú hlášku</span>
       {% endif %}
     {% endif %}
 
@@ -46,16 +46,16 @@
 
   <label for="example-ni-number" {% if error %}{% if not niNo %} id="error-full-name"{% endif %}{% endif %}>
 
-    <span class="form-label-bold">National Insurance number</span>
+    <span class="form-label-bold">Číslo preukazu poistenca</span>
     <span class="form-hint">
-      It’s on your National Insurance card, benefit letter, payslip or P60.
+      Nájdete ho na prednej strane vášho preukazu poistenca.
       <br>
-      For example, ‘QQ 12 34 56 C’.
+      napríklad, ‘QQ 12 34 56 C’.
     </span>
     {% if error %}
       {% if not niNo %}
       <span class="error-message">
-        Error message about National Insurance number goes here
+        Priestor pre chybovú hlášku
       </span>
       {% endif %}
     {% endif %}
@@ -65,4 +65,4 @@
 
 </div>
 
-<input class="button" type="submit" value="Continue">
+<input class="button" type="submit" value="Pokračovať">

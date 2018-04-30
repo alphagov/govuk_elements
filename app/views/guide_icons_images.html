@@ -1,68 +1,94 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Icons and images — GOV.UK elements{% endblock %}
+{% block page_title %}Ikony a obrázky — Webové komponenty{% endblock %}
 
 {% block main_content %}
 
 <main id="content" role="main">
 
   <h1 class="heading-xlarge">
-    <span class="heading-secondary">GOV.UK elements</span>
-    Icons and images
+    <span class="heading-secondary">Webové komponenty</span>
+    Ikony a obrázky
   </h1>
 
   <p class="lede text">
-    Avoid unnecessary decoration - only use icons and images if there’s a real user need.
+    Vyhnite sa zbytočným grafickým prvkom. Ikony a obrázky používajte iba vtedy, keď ich používateľ naozaj potrebuje.
   </p>
 
-  <h2 class="heading-small heading-contents">Contents:</h2>
+  <h2 class="heading-small heading-contents">Obsah:</h2>
   <div class="grid-row">
     <div class="column-two-thirds">
       <ul class="list list-contents">
-        <li><a href="#icons">Icons</a></li>
-        <li><a href="#images">Images</a></li>
-        <li><a href="#examples">Examples</a></li>
+        <li><a href="#icons">Ikony</a></li>
+        <li><a href="#important-info">Dôležité oznamy a text s právnym dopadom</a></li>
+        <li><a href="#images">Obrázky</a></li>
+        <li><a href="#examples">Príklady</a></li>
       </ul>
     </div>
   </div>
 
-  <h3 class="heading-medium" id="icons">Icons</h3>
+  <h3 class="heading-medium" id="icons">Ikony</h3>
   <ul class="list list-bullet text">
     <li>
-      if icons are needed ensure they are clear, simple and accompanied by relevant text
+      Používajte len bežne používané ikony zo zoznamu
+      <a href="https://github.com/alphagov/govuk_frontend_toolkit/tree/master/images" rel="external">dostupných ikon</a>
+      Nevytvárajte vlastné ikony, ak to nie je nutné.
+    <li>
+      Ak predsa len potrebujete použiť ikony, uistite sa, že sú pre používateľov zrozumiteľné, napríklad používateľským prieskumom.
+      Ak použijete ikony, ktoré sú menej používané, je nutné k nim pridať viditeľný sprievodný text. Sprievodný text je odporúčaný pri všetkých ikonách.
+    </li>
     </li>
     <li>
-      don’t hide functionality under icons
+      Každá ikona musí v HTML kóde stránky obsahovať popisný text “title”.
+    </li>
+    <li>
+      Pre obrázky a ikony poskytujte textový ekvivalent v atribúte “alt”. Pokiaľ obrázok alebo ikona neobsahuje významovú hodnotu, v atribúte uveďte prázdnu hodnotu.
+    </li>
+    <li>
+      Neskrývajte nejasnú funkčnosť za ikonami, použite radšej textovú linku s krátkym vysvetlením.
     </li>
   </ul>
 
   <p class="text">
-    GOV.UK standard icons are provided, as well as organisation crests and media player icons &ndash; find these in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/tree/master/images" rel="external">images folder</a>.
+     <a href="https://github.com/alphagov/govuk_frontend_toolkit/tree/master/images" rel="external">Dostupné ikony</a>.
   </p>
 
-  <h4 class="heading-small">Example</h4>
+  <h3 class="heading-medium" id="important-info">Dôležité oznamy a text s právnym dopadom</h3>
   <p class="text">
-    An exclamation icon is used for <a href="/typography/#typography-warning-text">warning text</a>.
+    V prípade dôležitého textu s možným právnym následkom (napríklad pokuta alebo trest odňatia slobody) použite tučné písmo s ikonou výkričníka.
   </p>
 
 <div class="example">
   <div class="text">
-    {% include "snippets/typography_warning_text.html" %}
+    {% include "snippets/typography_legal_text.html" %}
   </div>
 </div>
 
 <pre>
 <code class="language-markup">
   {% filter escape %}
-    {% include "snippets/typography_warning_text.html" %}
+    {% include "snippets/typography_legal_text.html" %}
   {% endfilter %}
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="images">Images</h3>
-  <p>
-    If images are needed they should be landscape, 3:2 aspect ratio.
-  </p>
+  <h3 class="heading-medium" id="images">Obrázky</h3>
+  <ul class="list list-bullet">
+    <li>Ak sú potrebné obrázky, mali by byť orientované na šírku a v pomere strán 3:2.</li>
+    <li>Nepoužívajte obrázky ako náhradu textu. Výnimkou sú obrázky s grafmi alebo
+      schémami, ktoré nie sú textom plne nahraditeľné.
+    </li>
+  </ul>
+
+  <h3 class="heading-medium" id="images">Obrázkové odkazy</h3>
+  <ul class="list list-bullet">
+    <li>Odkaz z obrázku výstižne označte zmenou kurzora</li>
+    <li>Obrázkový odkaz doplňte ideálne aj popisným textom tak, aby bol jasný cieľ odkazu.
+      Pokiaľ to nie je možné, je pre jednoznačnú identifikáciu odkazu potrebné použiť atribút
+      <code class="code">title</code> prvku <code class="code">&#60;a&#62;</code>.
+
+    </li>
+  </ul>
 
   <div class="example example-images">
     <div class="grid-row">
@@ -70,14 +96,31 @@
         <img src="/public/images/examples/3by2.jpg" alt="3:2">
       </div>
       <div class="column-one-half">
-        <img src="/public/images/examples/larry-the-cat.jpg" alt="">
+        <img src="/public/images/examples/beskydy.jpg" alt="">
       </div>
     </div>
   </div>
 
-  <h3 class="heading-medium" id="examples">Examples</h3>
+<pre>
+<code class="language-markup">
+  {% filter escape %}
+    <div class="example example-images">
+    <div class="grid-row">
+      <div class="column-one-half">
+        <img src="/public/images/examples/3by2.jpg" alt="3:2">
+      </div>
+      <div class="column-one-half">
+        <img src="/public/images/examples/beskydy.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  {% endfilter %}
+</code>
+</pre>
+
+  <h3 class="heading-medium" id="examples">Príklady</h3>
   <ul class="list list-bullet">
-    <li><a href="/icons-images/example-icons/">Example page: Icons in the GOV.UK frontend toolkit</a></li>
+    <li><a href="/icons-images/example-icons/">Stránka s príkladom: Ikony na stránke</a></li>
   </ul>
 
 </main><!-- / #content -->

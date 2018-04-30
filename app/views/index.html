@@ -1,131 +1,378 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  GOV.UK elements
+GOV.SK Elementy
 {% endblock %}
 
 {% block main_content %}
+
+
 <main class="elements-index" id="content" role="main">
 
-  <div class="grid-row">
-    <div class="column-two-thirds">
+    <div class="grid-row">
+        <div class="column-two-thirds">
 
-      <h1 class="heading-xlarge">
-        GOV.UK elements
-      </h1>
+            <h1 class="heading-xlarge">
+                Webové komponenty
+            </h1>
 
-      <p class="lede">
-        This guide shows how to make your service look consistent with the rest of GOV.UK.
-      </p>
+            <p class="lede">
+                Prehľad webových komponentov, ktoré sa používajú na tvorbu elektronických služieb.
+            </p>
+
+        </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <div class="js-accordion-with-descriptions" data-module="accordion-with-descriptions">
+
+                <div class="subsection-wrapper">
+                    <div class="js-subsection subsection">
+                        <div class="subsection__header">
+                            <h2 class="subsection__title" id="designing-government-services">
+                                <button class="subsection__button js-subsection-button" aria-expanded="false"
+                                        aria-controls="subsection_content_0">Úvod
+                                </button>
+                            </h2>
+                            <p class="subsection__description">Úvod</p>
+                            <span class="subsection__icon"></span></div>
+                        <div class="subsection__content js-subsection-content js-hidden" id="subsection_content_0">
+                            <ul class="subsection__list">
+                                <li class="subsection__list-item">
+                                    <a href="/uvod/metodicky">Metodický úvod</a>
+                                </li>
+                                <li class="subsection__list-item">
+                                    <a href="/uvod/principy">Princípy tvorby elektronických služieb</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="subsection js-subsection">
+                        <div class="subsection__header">
+                            <h2 class="subsection__title" id="working-with-frontend">
+                                <button class="subsection__button js-subsection-button" aria-expanded="false"
+                                        aria-controls="subsection_content_1">Webové komponenty
+                                </button>
+                            </h2>
+                            <p class="subsection__description">Prehľad webových komponentov, ktoré sa používajú na tvorbu elektronických služieb. </p>
+                            <span class="subsection__icon"></span></div>
+                        <div class="subsection__content js-subsection-content js-hidden" id="subsection_content_1">
+                            <ul class="subsection__list">
+                                <li class="subsection__list-item">
+                                    <a href="/layout/">
+                                       Rozloženie stránky</a>
+                                </li>
+                                <li class="subsection__list-item">
+                                    <a href="/typography/">
+                                        Typografia
+                                    </a>
+                                </li>
+                                <li class="subsection__list-item">
+                                    <a href="/colour/">
+                                        Farby
+                                    </a>
+                                </li>
+                                <li class="subsection__list-item">
+                                    <a href="/icons-images/">
+                                        Ikony a obrázky
+                                    </a>
+                                </li>
+                                <li class="subsection__list-item">
+                                    <a href="/data/">
+                                        Dáta
+                                    </a>
+                                </li>
+
+                                <li class="subsection__list-item">
+                                    <a href="/buttons/">
+                                        Tlačidlá
+                                    </a>
+                                </li>
+                                <li class="subsection__list-item">
+                                    <a href="/form-elements/">
+                                        Formulárové prvky
+                                    </a>
+                                </li>
+                                <li class="subsection__list-item">
+                                    <a href="/errors/">
+                                        Chyby a validácia
+                                    </a>
+                                </li>
+                                <li class="subsection__list-item">
+                                    <a href="/alpha-beta-banners/">
+                                        Upozornenia na novú a na testovaciu verziu služby
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="subsection js-subsection">
+                        <div class="subsection__header">
+                            <h2 class="subsection__title" id="working-with-patterns">
+                                <button class="subsection__button js-subsection-button" aria-expanded="false"
+                                        aria-controls="subsection_content_2">Vzory
+                                </button>
+                            </h2>
+                            <p class="subsection__description">Používanie a adaptácia návrhových vzorov</p>
+                            <span class="subsection__icon"></span></div>
+                        <div class="subsection__content js-subsection-content js-hidden" id="subsection_content_2">
+                            <ul class="subsection__list">
+                                <li class="subsection__list-item">
+                                    <a href="/vzory/adresy">Adresy</a>
+                                </li>
+                                <li class="subsection__list-item">
+                                    <a href="/vzory/oznacenie-verzie-sluzby">Označenie verzie služby</a>
+                                </li>
+                                <li class="subsection__list-item">
+                                    <a href="/vzory/overenie-pred-zaciatkom-procesu">Overenie pred začiatkom procesu</a>
+                                </li>
+                                <li class="subsection__list-item">
+                                    <a href="/vzory/zhrnutie">Zhrnutie</a>
+                                </li>
+
+                                <li class="subsection__list-item">
+                                    <a href="/vzory/stranky-dokoncenia-procesu">Stránky dokončenia procesu</a>
+                                </li>
+                                <li class="subsection__list-item">
+                                    <a href="/vzory/datumy">Dátumy</a>
+                                </li>
+                                <li class="subsection__list-item">
+                                    <a href="/vzory/emailove-adresy">E-mailové adresy</a>
+                                </li>
+                                <li class="subsection__list-item">
+                                    <a href="/vzory/proces-overenia-emailovej-adresy">Proces overenia e-mailovej adresy</a>
+                                </li>
+
+                                <li class="subsection__list-item">
+                                    <a href="/vzory/stranky-so-spatnou-vazbou">Stránky so spätnou väzbou</a>
+                                </li>
+
+                                <li class="subsection__list-item">
+                                    <a href="/vzory/struktura-formularov">Štruktúra formulárov</a>
+                                </li>
+
+                                <li class="subsection__list-item">
+                                    <a href="/vzory/vyber-pohlavia">Výber pohlavia</a>
+                                </li>
+
+                                <li class="subsection__list-item">
+                                    <a href="/vzory/pomocny-text">Pomocný text</a>
+                                </li>
+
+                                <li class="subsection__list-item">
+                                    <a href="/vzory/mena">Mená</a>
+                                </li>
+
+                                <li class="subsection__list-item">
+                                    <a href="/vzory/hesla">Heslá</a>
+                                </li>
+
+                                <li class="subsection__list-item">
+                                    <a href="/vzory/platobna-stranka">Platobná stránka</a>
+                                </li>
+
+                                <li class="subsection__list-item">
+                                    <a href="/vzory/indikatory-progresu">Indikátory progresu</a>
+                                </li>
+
+                                <li class="subsection__list-item">
+                                    <a href="/vzory/stranky-s-otazkami">Stránky s otázkami</a>
+                                </li>
+
+                                <li class="subsection__list-item">
+                                    <a href="/vzory/uvodne-obrazovky">Úvodné obrazovky</a>
+                                </li>
+
+                                <li class="subsection__list-item">
+                                    <a href="/vzory/zoznamy-uloh">Zoznamy úloh</a>
+                                </li>
+
+                                <li class="subsection__list-item">
+                                    <a href="/vzory/prihlasenie-a-ucty">Prihlásenie a používateľské účty</a>
+                                </li>
+
+                                <li class="subsection__list-item">
+                                    <a href="/vzory/ukazka-podania-ziadosti">Ukážka podania žiadosti</a>
+                                </li>
+
+                                <li class="subsection__list-item">
+                                    <a href="/vzory/pouzivatelske-mena">Používateľské mená</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="subsection js-subsection">
+                        <div class="subsection__header">
+                            <h2 class="subsection__title" id="find-patterns">
+                                <button class="subsection__button js-subsection-button" aria-expanded="false"
+                                        aria-controls="subsection_content_3">Slovník
+                                </button>
+                            </h2>
+                            <p class="subsection__description">Slovník pojmov</p>
+                            <span class="subsection__icon"></span></div>
+                        <div class="subsection__content js-subsection-content js-hidden" id="subsection_content_3">
+                            <ul class="subsection__list">
+                                <li class="subsection__list-item">
+                                    <a href="/slovnik/slovnik">Slovník</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="column-third">-->
+            <!--<aside class="related">-->
+                <!--<div class="related-item">-->
+                    <!--<h2 class="related-item__title" id="related-communities">-->
+                        <!--Join the community </h2>-->
+                    <!--<p class="related-item__description">-->
+                        <!--Find out what the cross-government community does and how to get involved.-->
+                    <!--</p>-->
+                    <!--<nav role="navigation" aria-labelledby="related-communities" class="related-communities">-->
+                        <!--<ul class="related-item__list">-->
+                            <!--<li class="related-item__list-item">-->
+                                <!--<a href="/service-manual/communities/design-community">Design community</a>-->
+                            <!--</li>-->
+                            <!--<li class="related-item__list-item">-->
+                                <!--<a href="/service-manual/communities/technology-community-frontend-development">Technology-->
+                                    <!--community (frontend development)</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</nav>-->
+                <!--</div>-->
+
+                <!--<div class="related-item">-->
+                    <!--<h2 class="related-item__title" id="related-subscriptions">-->
+                        <!--Get notifications-->
+                    <!--</h2>-->
+                    <!--<p class="related-item__description">When any guidance within this topic is updated-->
+                        <!--<a class="related-item__email-link" href="/service-manual/design/email-signup">email</a>-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</aside>-->
+        <!--</div>-->
 
     </div>
-  </div>
 
-  <div class="grid-row">
-    <div class="column-one-third">
+    <!--<div class="grid-row">-->
+        <!--<div class="column-one-third">-->
 
-      <h2 class="heading-medium"><a href="/layout/">Layout</a></h2>
-      <p>
-        Grid unit proportions, gutters and spacing.
-      </p>
+            <!--<h2 class="heading-medium"><a href="/layout/">Rozloženie stránky</a></h2>-->
+            <!--<p>-->
+                <!--Popis rozloženia stránky, preddefinovaného stĺpcového dizajnu, vonkajších okrajov a medzier. Postup pri-->
+                <!--návrhu stránok.-->
+            <!--</p>-->
 
+        <!--</div>-->
+        <!--<div class="column-one-third">-->
+
+            <!--<h2 class="heading-medium"><a href="/typography/">Typografia</a></h2>-->
+            <!--<p>-->
+                <!--Nadpisy, hlavný text, odkazy, zoznamy, vsadený text, skrytý text.-->
+            <!--</p>-->
+
+        <!--</div>-->
+        <!--<div class="column-one-third">-->
+
+            <!--<h2 class="heading-medium"><a href="/colour/">Farby</a></h2>-->
+            <!--<p>-->
+                <!--Používané farby, farebný kontrast, Sass premenné, farebné palety.-->
+            <!--</p>-->
+
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="grid-row">-->
+        <!--<div class="column-one-third">-->
+
+            <!--<h2 class="heading-medium"><a href="/icons-images/">Ikony a obrázky</a></h2>-->
+            <!--<p>-->
+                <!--Popis použitia ikoniek, dôležitých oznamov a obrázkov.-->
+            <!--</p>-->
+
+        <!--</div>-->
+        <!--<div class="column-one-third">-->
+
+            <!--<h2 class="heading-medium"><a href="/data/">Dáta</a></h2>-->
+            <!--<p>-->
+                <!--Zobrazenie dát v tabuľke, číselné údaje, vizualizácia údajov.-->
+            <!--</p>-->
+
+        <!--</div>-->
+        <!--<div class="column-one-third">-->
+
+            <!--<h2 class="heading-medium"><a href="/buttons/">Tlačidlá</a></h2>-->
+            <!--<p>-->
+                <!--Tvorba tlačidiel, textácia a zarovnanie.-->
+            <!--</p>-->
+
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="grid-row">-->
+        <!--<div class="column-one-third">-->
+
+            <!--<h2 class="heading-medium"><a href="/form-elements/">Formulárové prvky</a></h2>-->
+            <!--<p>-->
+                <!--Formulárové prvky, menovky, zvýraznenie aktívneho poľa, prepínače, začiarkávacie políčka.-->
+            <!--</p>-->
+
+        <!--</div>-->
+        <!--<div class="column-one-third">-->
+
+            <!--<h2 class="heading-medium"><a href="/errors/">Chyby a validácia</a></h2>-->
+            <!--<p>-->
+                <!--Sumarizácia chybových oznamov, zvýraznie chybových oznamov priamo vo formulároch.-->
+            <!--</p>-->
+
+        <!--</div>-->
+        <!--<div class="column-one-third">-->
+
+            <!--<h2 class="heading-medium"><a href="/alpha-beta-banners/">Upozornenia na novú a na testovaciu verziu-->
+                <!--služby</a></h2>-->
+            <!--<p>-->
+                <!--Ako vytvárať označenie online služby v stave Nová verzia a Testovacia verzia.-->
+            <!--</p>-->
+
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="grid-row divider">
+        <div class="column-two-thirds">
+
+            <h3 class="heading-small">Hľadáte všetky zdroje na jednom mieste?</h3>
+            <p>
+                Všetky príklady nájdete na <a href="https://github.com/alphagov/govuk_elements/tree/master/assets/sass"
+                                              rel="external">GitHube</a>.
+            </p>
+
+        </div>
     </div>
-    <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="/typography/">Typography</a></h2>
-      <p>
-        Headings, body text, links, lists, inset text, hidden text.
-      </p>
-
-    </div>
-    <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="/colour/">Colour</a></h2>
-      <p>
-        Colour contrast, Sass variables, colour palettes.
-      </p>
-
-    </div>
-  </div>
-
-  <div class="grid-row">
-    <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="/icons-images/">Icons and images</a></h2>
-      <p>
-        Icons and image ratios.
-      </p>
-
-    </div>
-    <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="/data/">Data</a></h2>
-      <p>
-        Data in a table, numeric tabular data, data visualisation.
-      </p>
-
-    </div>
-    <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="/buttons/">Buttons</a></h2>
-      <p>
-        Button text, button alignment, creating buttons.
-      </p>
-
-    </div>
-  </div>
-
-  <div class="grid-row">
-    <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="/form-elements/">Form elements</a></h2>
-      <p>
-        Form fields, labels, focus states, radio buttons, checkboxes.
-      </p>
-
-    </div>
-    <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="/errors/">Errors and validation</a></h2>
-      <p>
-        Summary boxes, highlighting errors in forms.
-      </p>
-
-    </div>
-    <div class="column-one-third">
-
-      <h2 class="heading-medium"><a href="/alpha-beta-banners/">Alpha and beta banners</a></h2>
-      <p>
-        How to create alpha and beta banners using the front-end toolkit.
-      </p>
-
-    </div>
-  </div>
-
-  <div class="grid-row divider">
-    <div class="column-two-thirds">
-
-      <h3 class="heading-small">Looking for the styles?</h3>
-      <p>
-         The Sass files for <a href="https://github.com/alphagov/govuk_elements/tree/master/assets/sass" rel="external">all the examples can be found on GitHub</a>.
-      </p>
-
-      <h3 class="heading-small">Want to discuss these patterns?</h3>
-      <p>
-        <a href="https://paper.dropbox.com/doc/About-GOV.UK-Design-Patterns-hkou7bpzKya8Dadv24V1z" rel="external">
-          Discuss GOV.UK Design Patterns
-        </a>.
-      </p>
-
-    </div>
-  </div>
 
 </main><!-- / #content -->
 {% endblock %}
 
 {% block body_end %}
-  <!-- GOV.UK elements redirect -->
-  <script src="/public/javascripts/redirect.js"></script>
-  {% include "includes/scripts.html" %}
+<!-- GOV.UK elements redirect -->
+<script src="/public/javascripts/redirect.js"></script>
+
+<script src="https://assets.publishing.service.gov.uk/static/libs/jquery/jquery-1.12.4-5f1157a433c276bcb98f3651434f7cb1f49ff45fe2ec2808b46ee088e61159b5.js">
+
+</script>
+
+<!--<script src="https://assets.publishing.service.gov.uk/service-manual-frontend/application-e47aec62c201636b5b94203bb32057a69146baab883a806db90521d0445d35ea.js">-->
+<!--</script>-->
+
+<!--<script src="https://assets.publishing.service.gov.uk/static/header-footer-only-d03b5fd21e9197119d11b83e3325c35f8695a4040cf96e50b824f1198be8c4af.js"></script>-->
+
+
+{% include "includes/scripts.html" %}
 {% endblock %}
 

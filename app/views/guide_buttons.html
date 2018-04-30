@@ -1,36 +1,36 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Buttons — GOV.UK elements{% endblock %}
+{% block page_title %}Tlačidlá — Webové komponenty{% endblock %}
 
 {% block main_content %}
 
 <main id="content" role="main">
 
   <h1 class="heading-xlarge">
-    <span class="heading-secondary">GOV.UK elements</span>
-    Buttons
+    <span class="heading-secondary">Webové komponenty</span>
+    Tlačidlá
   </h1>
 
   <p class="lede text">
-    Use buttons to move though a transaction, aim to use only one button per page.
+    Tlačidlá sa používajú na posun medzi krokmi v rámci procesov. Cieľom je používať jedno tlačidlo na stránku.
   </p>
 
-  <h2 class="heading-small heading-contents">Contents:</h2>
+  <h2 class="heading-small heading-contents">Obsah:</h2>
   <div class="grid-row">
     <div class="column-two-thirds">
       <ul class="list list-contents">
-        <li><a href="#button-text">Button text</a></li>
-        <li><a href="#button-start-now">Start now button</a></li>
-        <li><a href="#button-alignment">Button alignment</a></li>
-        <li><a href="#button-disabled">Disabled buttons</a></li>
-        <li><a href="#creating-buttons">Creating buttons</a></li>
+        <li><a href="#button-text">Text tlačidla</a></li>
+        <li><a href="#button-start-now">Spúšťacie tlačidlo</a></li>
+        <li><a href="#button-alignment">Zarovnanie tlačidla</a></li>
+        <li><a href="#button-disabled">Neaktívne tlačidlá</a></li>
+        <li><a href="#creating-buttons">Vytváracie tlačidlá</a></li>
       </ul>
     </div>
   </div>
 
-  <h3 class="heading-medium" id="button-text">Button text</h3>
+  <h3 class="heading-medium" id="button-text">Text tlačidiel</h3>
   <p class="text">
-    Button text should be short and describe the action the button performs.
+    Text v tlačidle by mal byť krátky a opisovať akciu, ktorá nastane po stlačení daného tlačidla.
   </p>
 
 <div class="example">
@@ -45,9 +45,9 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="button-start-now">Start now button</h3>
+  <h3 class="heading-medium" id="button-start-now">Tlačidlo začať</h3>
   <p class="text">
-    Launch your service with a Start now button.
+    Tlačidlo “Začať” príp. “Chcem začať” používame na spustenie služby, procesu, alebo registrácie.
   </p>
 
 <div class="example">
@@ -62,36 +62,36 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="button-alignment">Button alignment</h3>
+  <h3 class="heading-medium" id="button-alignment">Zarovnanie tlačidla</h3>
   <p class="text">
-    Align the primary action button to the left edge of your form, in the user’s line of sight.
+    Hlavné tlačidlo zarovnávame na ľavú stranu formulára, v zornom poli používateľa.
   </p>
 
   <div class="example example-button">
 
     <form action="/" method="post" class="form">
       <div class="form-group">
-        <label for="form-email-address-1" class="form-label">Email address</label>
+        <label for="form-email-address-1" class="form-label">Emailová adresa</label>
         <input type="text" class="form-control" id="form-email-address-1">
       </div>
       <div class="form-group">
-        <button class="button">Save and continue</button>
+        <button class="button">Uložiť a pokračovať</button>
       </div>
     </form>
 
   </div>
 
-  <h3 class="heading-medium" id="button-disabled">Disabled buttons</h3>
+  <h3 class="heading-medium" id="button-disabled">Neaktívne tlačidlá</h3>
   <ul class="list list-bullet text">
-    <li>don’t disable buttons, unless there’s a good reason to</li>
-    <li>if you have to disable buttons, make sure they look like you can’t click them (use 50% opacity)</li>
-    <li>use the <code class="code">aria-disabled</code> attribute for older screen readers</li>
-    <li>an example of a useful disabled option is a calendar with greyed out days where no bookings are available</li>
-    <li>provide another way for the user to continue, add an error message or text to explain why the button is disabled</li>
+    <li>Neaktívne tlačidlá by sa nemali používať, ak na to nie je vážny dôvod.</li>
+    <li>Ak už musíte použiť neaktívne tlačidlo, uistite sa, že jeho dizajn vyzerá tak, že sa naň nedá kliknúť (používa sa 50% priehľadnosť).</li>
+    <li>Používajte atribút <code class="code">aria-disabled</code> kvôli starším čítačkám obrazoviek.</li>
+    <li>Príkladom neaktívneho tlačidla sú napr. v kalendároch dni, ktoré už nie je možné zvoliť alebo si na ne rezervovať termín.</li>
+    <li>Je potrebné používateľovi poskytnúť informáciu, ako môže postupovať ďalej, napr. pridaním pomocného textu s vysvetlením prečo je tlačidlo neaktívne.</li>
   </ul>
 
 <div class="example">
-  <button class="button" disabled="disabled" aria-disabled="true">Disabled primary button</button>
+  <button class="button" disabled="disabled" aria-disabled="true">Neaktívne tlačidlo</button>
 </div>
 
 <pre>
@@ -102,22 +102,22 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="creating-buttons">Creating buttons</h3>
+  <h3 class="heading-medium" id="creating-buttons">Vytváranie tlačidiel</h3>
   <p class="text">
-    Use the GOV.UK Sass button mixin &ndash; find this in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/design-patterns/_buttons.scss" rel="external">buttons.scss</a> file.
+    Pri programovaní tlačidiel použite z toolkitu JDMES Sass mixin štýl tlačidiel, ktorý nájdete vo frontend toolkite na JDMES v súbore <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/design-patterns/_buttons.scss" rel="external">buttons.scss</a>.
   </p>
 
   <div class="example example-button">
     <div class="grid-row">
       <div class="column-one-third">
 
-        <button class="button">Save and continue</button>
+        <button class="button">Uložiť a pokračovať</button>
 
       </div>
       <div class="column-one-third">
 
         <div class="swatch-wrapper">
-          <h4 class="heading-small">Button</h4>
+          <h4 class="heading-small">Tlačidlo</h4>
           <div class="swatch swatch-button-colour"></div>
           <ul>
             <li><b>#00823B</b></li>
@@ -129,7 +129,7 @@
       <div class="column-one-third">
 
         <div class="swatch-wrapper">
-          <h4 class="heading-small">Focus</h4>
+          <h4 class="heading-small">Aktívny stav</h4>
           <div class="swatch swatch-yellow"></div>
           <ul>
             <li><b>#FFBF47</b></li>
@@ -142,10 +142,9 @@
     </div>
   </div>
 
-  <p>
-    <a href="https://paper.dropbox.com/doc/Navigation-buttons-continue-next-previous-ghLqL5a9Ostxxb3rvBhyO" rel="external">
-      Discuss navigation buttons on Dropbox Paper
-    </a>
+  <p class="text">
+    Pri vytváraní tlačidiel dbajte tiež na to, aby sa za tlačidlom nenachádzal obrázok prípadne,
+    aby tlačidlo nebolo inak upravované.
   </p>
 
 </main><!-- / #content -->

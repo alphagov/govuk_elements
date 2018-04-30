@@ -1,59 +1,65 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Errors and validation — GOV.UK elements{% endblock %}
+{% block page_title %}Chyby a validácia — Webové komponenty{% endblock %}
 
 {% block main_content %}
 
 <main id="content" role="main">
 
   <h1 class="heading-xlarge">
-    <span class="heading-secondary">GOV.UK elements</span>
-    Errors and validation
+    <span class="heading-secondary">Webové komponenty</span>
+    Chyby a validácia
   </h1>
 
   <p class="lede text">
-    Minimise the number of errors on a page.
+    Minimalizujte počet chýb na stránke.
   </p>
 
-  <h2 class="heading-small heading-contents">Contents:</h2>
+  <h2 class="heading-small heading-contents">Obsah:</h2>
   <div class="grid-row">
     <div class="column-two-thirds">
       <ul class="list list-contents">
-        <li><a href="#one-question-per-page">Ask one question per page</a></li>
-        <li><a href="#summarise-errors">Summarise errors</a></li>
-        <li><a href="#highlight-errors">Highlight errors in forms</a></li>
-        <li><a href="#examples">Examples</a></li>
+        <li><a href="#one-question-per-page">Pýtajte sa jednu otázku na jednu stránku</a></li>
+        <li><a href="#summarise-errors">Prehľad chýb</a></li>
+        <li><a href="#highlight-errors">Zvýraznenie chýb vo formulároch</a></li>
+        <li><a href="#examples">Príklady</a></li>
       </ul>
     </div>
   </div>
 
-  <h3 class="heading-medium" id="one-question-per-page">Ask one question per page</h3>
+  <h3 class="heading-medium" id="one-question-per-page">Pýtajte sa jednu otázku na jednu stránku</h3>
   <div class="text">
   <p>
-    Recovering from errors can be hard for users, especially if a page contains multiple errors.
+    Pre používateľov môže byť ťažké zorientovať sa na stránke po zobrazení chyby, najmä ak sa na nej vyskytlo viacero chýb súčasne.
+    <p>
+    Zjednodušte formuláre tak, že ich prepíšete, prípadne ak je to možné, rozdeľujte dlhé formuláre na niekoľko stránok -
+    pričom na každej z nich sa pýtajte jednu otázku.
   </p>
+
   <p>
-    Simplify forms by rewriting and where possible, splitting long forms across multiple pages - with each page asking a single question.
+    Pri štruktúrovaní formulára zvážte aj kontext. Ak spolu žiadané informácie súvisia, je možné ich umiestniť na
+    stránke viac. Napríklad meno, priezvisko a číslo občianskeho preukazu.
   </p>
   </div>
 
   <h3 class="heading-medium" id="summarise-errors">
-    Summarise errors at the top of the page
+    Prehľad o chybách v hornej časti stránky
   </h3>
 
   <p class="text lead-in">
-    You must:
+    Je dôležité:
   </p>
 
   <ul class="text list list-bullet">
-    <li>show an error summary at the top of the page</li>
-    <li>include a heading to alert the user to the error</li>
-    <li>link to each of the problematic questions</li>
+    <li>zobraziť prehľad o chybách v hornej časti stránky,</li>
+    <li>pridať nadpis, ktorý upozorní používateľa na chybu,</li>
+    <li>zobraziť odkaz na každú problematickú otázku.</li>
   </ul>
 
-  <p class="text">Additionally, you should reflect that there's been an error in the <code>&lt;title&gt;</code> by prefixing the existing title with "Error: ". That will make sure screen readers are alerted to there being an error as soon as possible.</p>
+  <p class="text">Okrem toho je potrebné aj v nadpise stránky v prvku <code>&lt;title&gt;</code> zobraziť, že došlo k chybe, a to umiestnením slova "Chyba: "
+    pred existujúci nadpis (ang. title). To zabezpečí upozornenie používateľov na chybu hneď ako to bude možné.</p>
 
-  <h4 class="heading-small">Error message and summary box</h4>
+  <h4 class="heading-small">Chybová správa so zhrnutím chýb</h4>
 <div class="example example-error">
   {% include "snippets/form_error_radio_show_errors.html" %}
 </div>
@@ -68,26 +74,27 @@
 
   <div class="panel panel-border-narrow">
     <h3 class="heading-small">
-      The error summary must appear at the top of the page, so it is visible when the page is refreshed and is immediately read out by assistive technology.
+      Prehľad o chybách sa musí nachádzať v hornej časti stránky tak, aby bol viditeľný, keď sa stránka aktualizuje a ihneď ju vedela prečítať pomocná technológia.
     </h3>
   </div>
 
-  <h3 class="heading-medium" id="highlight-errors">Highlight errors in forms</h3>
+  <h3 class="heading-medium" id="highlight-errors">Zvýraznenie chýb vo formulároch</h3>
 
   <p class="lead-in">
-    For each error:
+    Pre každú chybu:
   </p>
 
   <ul class="list list-bullet text">
-    <li>write a message that helps the user to understand why the error occurred and what to do about it</li>
-    <li>put the message in the <code class="code">&lt;label&gt;</code> or <code class="code">&lt;legend&gt;</code> for the question,
-    after the question text, in red</li>
-    <li>use a red border to visually connect the message and the question it belongs to</li>
-    <li>if the error relates to specific text fields within the question, give these a red border as well</li>
+    <li>napíšte správu, ktorá pomôže používateľovi pochopiť, prečo sa chyba vyskytla a ako ju má odstrániť, </li>
+    <li>správu vložte do prvku <code class="code">&lt;label&gt;</code> alebo <code class="code">&lt;legend&gt;</code>
+      k danej otázke a umiestnite ju pod textom otázky, pričom použite červenú farbu písma</li>
+    <li>použite červený okraj na vizuálne prepojenie chybovej správy a otázky, ku ktorej sa chyba vzťahuje,</li>
+    <li>ak sa chyba vzťahuje na konkrétne textové polia v rámci otázky, zvýraznite ich aj červeným orámovaním.</li>
   </ul>
 
   <p class="text">
-    For red, use the <code class="code">$error-colour</code> Sass variable &ndash; find this in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss" rel="external">colours.scss</a> file.
+    V prípade červenej farby použite Sass premennú <code class="code">$error-colour</code> - ktorú nájdete v súbore GOV.SK
+    frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss" rel="external">colours.scss</a>.
   </p>
 
 <div class="example example-error">
@@ -102,35 +109,19 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="examples">Examples</h3>
+  <h3 class="heading-medium" id="examples">Príklady</h3>
   <ul class="list list-bullet">
     <li>
       <a href="/errors/example-form-validation-single-question-radio">
-        form validation - single question with radio buttons
-      </a>
-    </li>
-    <li>
-      <a href="/errors/example-form-validation-single-question-text">
-        form validation - single question with text field
-       </a>
-     </li>
-    <li>
-      <a href="/errors/example-form-validation-single-question-more-text">
-        form validation - single question with additional guidance
+        Validácia formulára - jedna otázka
       </a>
     </li>
     <li>
       <a href="/errors/example-form-validation-multiple-questions">
-        form validation - multiple questions
+        Validácia formulára - viacero otázok
       </a>
     </li>
   </ul>
-
-  <p>
-    <a href="https://paper.dropbox.com/doc/Error-messages-fifEJpOYMGjRy0lHTmthb" rel="external">
-      Discuss error messages and validation on Dropbox Paper
-    </a>
-  </p>
 
 </main><!-- / #content -->
 {% endblock %}

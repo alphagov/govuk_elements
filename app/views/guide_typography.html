@@ -1,62 +1,62 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Typography — GOV.UK elements{% endblock %}
+{% block page_title %}Typografia — Webové komponenty{% endblock %}
 
 {% block main_content %}
 
 <main id="content" role="main">
 
   <h1 class="heading-xlarge">
-    <span class="heading-secondary">GOV.UK elements</span>
-    Typography
+    <span class="heading-secondary">Webové komponenty</span>
+    Typografia
   </h1>
 
-  <div class="text">
-    <p class="lede">
-      For GOV.UK domains, always use the GDS Transport Website font in Light and Bold.
-    </p>
-  </div>
+  <!--<div class="text">-->
+    <!--<p class="lede">-->
+      <!--For GOV.UK domains, always use the GDS Transport Website font in Light and Bold.-->
+    <!--</p>-->
+  <!--</div>-->
 
-  <h2 class="heading-small heading-contents">Contents:</h2>
+  <h2 class="heading-small heading-contents">Obsah:</h2>
   <div class="grid-row">
     <div class="column-two-thirds">
       <ul class="list list-contents">
-        <li><a href="#typography-font">Font</a></li>
-        <li><a href="#typography-headings">Headings</a></li>
-        <li><a href="#typography-lead-paragraph">Lead paragraph</a></li>
-        <li><a href="#typography-body-copy">Body copy</a></li>
-        <li><a href="#typography-links">Links</a></li>
-        <li><a href="#typography-lists">Lists</a></li>
-        <li><a href="#typography-inset-text">Inset text</a></li>
-        <li><a href="#typography-warning-text">Warning text</a></li>
-        <li><a href="#typography-hidden-text">Hidden text (progressive disclosure)</a></li>
-        <li><a href="#examples">Examples</a></li>
+        <li><a href="#typography-font">Písmo</a></li>
+        <li><a href="#typography-headings">Nadpisy</a></li>
+        <li><a href="#typography-lead-paragraph">Úvodný odsek</a></li>
+        <li><a href="#typography-body-copy">Hlavný text</a></li>
+        <li><a href="#typography-links">Textové odkazy</a></li>
+        <li><a href="#typography-lists">Zoznamy</a></li>
+        <li><a href="#typography-inset-text">Vsadený text</a></li>
+        <li><a href="#typography-legal-text">Právny text</a></li>
+        <li><a href="#typography-hidden-text">Skrytý text (postupné zverejňovanie)</a></li>
+        <li><a href="#examples">Príklady</a></li>
       </ul>
     </div>
   </div>
 
-  <h3 class="heading-medium" id="typography-font">Font</h3>
+  <h3 class="heading-medium" id="typography-font">Písmo</h3>
   <div class="text">
     <p>
-      Use the GDS Transport Website font in Light and Bold. It’s licensed for use on the GOV.UK domains only.
+      Používajte písmo. <!-- @TODO -->
     </p>
     <p>
-      For services publicly available on different domains, use an alternative typeface like Arial.
+      Používajte typy písma podobné Arialu. Vždy uvádzajte aj generický font písma.
     </p>
   </div>
 
   <h3 class="heading-medium" id="typography-headings">
-    Headings
+    Nadpisy
   </h3>
 
   <ul class="list list-bullet text">
-    <li>use GDS Transport Website Bold</li>
-    <li>use sentence case for headings</li>
-    <li>use headings consistently to create a clear hierarchy</li>
+    <!--<li>use GDS Transport Website Bold</li>-->
+    <li>V nadpisoch používajte veľké písmeno len na začiatku prvého slova a podľa pravidiel slovenského pravopisu. Napoužívajte kapitálky na celé nadpisy.</li>
+    <li>Dôsledne používajte nadpisy pre vytvorenie správnej a zrozumiteľnej hierarchie.</li>
   </ul>
 
 <div class="example">
-  {% include "snippets/typography_headings.html" %}
+  {% include "snippets/typography_headings_example.html" %}
 </div>
 
 <pre>
@@ -68,17 +68,17 @@
 </pre>
 
   <h3 class="heading-medium" id="typography-lead-paragraph">
-    Lead paragraph
+    Úvodný odstavec
   </h3>
 
   <ul class="list list-bullet">
-    <li>use 24px for a lead paragraph</li>
-    <li>there should only be one lead paragraph per page</li>
+    <li>Používajte veľkosť 24 px (pixelov) na úvodný odsek. Veľkosť písma sa uvádzať v relatívnych jednotkách.</li>
+    <li>Na každej strane by mal byť maximálne jeden úvodný odsek.</li>
   </ul>
 
 <div class="example">
   <div class="text">
-    {% include "snippets/typography_lead_paragraph.html" %}
+    {% include "snippets/typography_lead_paragraph_example.html" %}
   </div>
 </div>
 
@@ -91,20 +91,22 @@
 </pre>
 
   <h3 class="heading-medium" id="typography-body-copy">
-    Body copy
+    Hlavný text
   </h3>
 
   <ul class="list list-bullet text">
-    <li>use GDS Transport Website Light</li>
-    <li>avoid using bold and italics</li>
-    <li>use 19px for body copy &ndash; 16px for smaller screens</li>
-    <li>use smaller sizes only if there’s a user need (eg 16px, 14px, 12px)</li>
-    <li>make sure lines of text don’t exceed 75 characters, as they become harder to read beyond that point</li>
+    <!--<li>use GDS Transport Website Light</li>-->
+    <li>Vyhnite sa nadmernému používaniu tučného písma a používaniu šikmého rezu písma (kurzíva).</li>
+    <li>Veľkosť hlavného textu je 19 pixelov, pre menšie obrazovky 16 pixelov.</li>
+    <li>Veľkosť písma sa povinne definuje v relatívnych jednotkách, pomocou hodnôt xx-small,
+      x-small, small, medium, large, x-large a xx-large alebo pomocou percent, hodnôt smaller, larger a jednotiek em a ex.
+      Veľkosť písma sa nedefinuje prostredníctvom jednotiek pt, pc, in, cm, mm a px. </li>
+    <li>Uistite sa, že riadky textu nepresahujú 75 znakov, keďže viac znakov spraví text menej čitateľným.</li>
   </ul>
 
 <div class="example">
   <div class="text">
-    {% include "snippets/typography_paragraphs.html" %}
+    {% include "snippets/typography_paragraphs_example.html" %}
   </div>
 </div>
 
@@ -116,12 +118,16 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="typography-links">Links</h3>
+  <h3 class="heading-medium" id="typography-links">Odkazy</h3>
 
   <ul class="list list-bullet text">
-    <li>links within body copy should be blue and underlined</li>
-    <li>links without surrounding text should not have a full stop at the end</li>
-    <li>link colours can be found in the <a href="/colour">colour palette</a></li>
+    <li>Odkazy v hlavnom texte by mali byť modré a musia byť buď podčiarknuté alebo inak zvýraznené (nie len farebne).</li>
+    <li>Samostatne stojace odkazy (bez obklopujúceho textu) by nemali končiť bodkou.</li>
+    <li>Farby pre odkazy nájdete vo <a href="/colour">farebnej palete</a></li>
+    <li>Označenie každého odkazu výstižne popisuje jeho cieľ nezávisle na okolitom kontexte. Pokiaľ je to možné, cieľ
+      odkazu by mal byť zrejmý už zo samotného textu odkazu. Pokiaľ to nie je možné, je pre jednoznačnú identifikáciu
+      odkazu potrebné použiť atribút „title“ prvku <a>. Nepoužívajú sa odkazy v tvare „kliknite tu“, „sem“, „celý text
+        článku“, bez toho, že by tento text bol doplnený atribútom „title“ prvku <a> s doplňujúcou informáciou.</li>
   </ul>
 
   <div class="example">
@@ -138,11 +144,14 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="typography-lists">Lists</h3>
+  <h3 class="heading-medium" id="typography-lists">Zoznamy</h3>
 
   <ul class="list list-bullet text">
-    <li>list items start with a lowercase letter and have no full stop at the end</li>
-    <li>see the style guide to check how to <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#steps">punctuate numbered lists</a></li>
+    <li>Vymenúvacie zoznamy sú uvedené vetou zakončenou dvojbodkou, pričom každý riadok zoznamu začína malým písmenom
+      a je ukončený čiarkou. Posledný bod zoznamu je ukončený bodkou.</li>
+    <li>Alternatívou k tomu môže byť taká verzia, že každý bod zoznamu bude začínať veľkým písmenom a ukončí sa bodkou.</li>
+    <li>Pre používanie interpunkcie v číselných zoznamoch si pozrite
+      <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#steps">sprievodcu štýlmi</a></li>
   </ul>
 
 <div class="example">
@@ -157,9 +166,9 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="typography-inset-text">Inset text</h3>
+  <h3 class="heading-medium" id="typography-inset-text">Vsadený text</h3>
   <p class="text">
-    Use bordered inset text to draw attention to important content on the page.
+    Pre upriamenie pozornosti na dôležitý obsah stránky používajte ohraničený vsadený text.
   </p>
 
 <div class="example">
@@ -176,35 +185,30 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="typography-warning-text">Warning text</h3>
+  <h3 class="heading-medium" id="typography-legal-text">Dôležité oznamy a text s právnym dopadom</h3>
   <p class="text">
-    Use bold text with an exclamation icon to warn people about something important, for example if there are legal consequences like a fine or prison sentence.
-  </p>
-  <p class="text">
-    Use this sparingly. And remember that the hidden text (here: 'Warning') might need to be rewritten to be appropriate for your case.
+    V prípade dôležitého textu s možným právnym následkom (napríklad pokuta alebo trest odňatia slobody) použite tučné písmo s ikonou výkričníka.
   </p>
 
 <div class="example">
   <div class="text">
-    {% include "snippets/typography_warning_text.html" %}
+    {% include "snippets/typography_legal_text.html" %}
   </div>
 </div>
 
 <pre>
 <code class="language-markup">
   {% filter escape %}
-    {% include "snippets/typography_warning_text.html" %}
+    {% include "snippets/typography_legal_text.html" %}
   {% endfilter %}
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="typography-hidden-text">Hidden text (progressive disclosure)</h3>
+  <h3 class="heading-medium" id="typography-hidden-text">Skrytý text (zobrazenie na požiadanie)</h3>
   <p class="text">
-    Use this to make your page easier to scan,
-    only showing contextual information when required.
-  </p>
+    Používajte tento prvok na uľahčenie prezerania obsahu stránky tak, že v prípade potreby zobrazíte doplnkové kontextové informácie.
   <p class="text">
-    Click on "Help with nationality" to see how this works.
+    Kliknite na “Pomoc s národnosťou” pre ukážku.
   </p>
 
 <div class="example">
@@ -221,23 +225,24 @@
 
   <div class="panel panel-border-wide text">
     <p>
-      If you’re using the HTML5 details and summary elements, you’ll need a polyfill for <a href="http://caniuse.com/#feat=details" rel="external">not-so-modern browsers</a>.
+      Ak používate HTML5 elementy, budete potrebovať knižnicu pre  <a href="http://caniuse.com/#feat=details" rel="external">staršie prehliadače</a>.
     </p>
     <p>
-      You’ll need to ensure that your markup matches the example above.
-      <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/javascripts/govuk/details.polyfill.js" rel="external">GOV.UK elements uses this polyfill from GOV.UK frontend toolkit</a>.
+      Uistite sa, že váš zdrojový kód zodpovedá príkladu vyššie.
     </p>
     <p>
-      <a href="/typography/example-details-summary/">Take a look at example page</a> which demonstrates conditionally revealing information, using the HTML5 details and summary elements.
+      Pozrite sa na <a href="/typography/example-details-summary/">stránku s príkladom</a>,
+      ktorá znázorňuje podmienečné odkrývanie informácií s použitím detailov HTML5 a prvkami “summary”.
+
     </p>
   </div>
 
 
-  <h3 class="heading-medium" id="examples">Examples</h3>
+  <h3 class="heading-medium" id="examples">Príklady</h3>
   <ul class="list list-bullet">
     <li>
       <a href="/typography/example-typography/">
-        an example typography page
+        príklad stránky s typografiou
       </a>
     </li>
   </ul>

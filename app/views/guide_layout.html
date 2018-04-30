@@ -1,75 +1,87 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Layout — GOV.UK elements{% endblock %}
+{% block page_title %}Rozmiestnenie — Webové komponenty{% endblock %}
 
 {% block main_content %}
 
 <main id="content" role="main">
 
   <h1 class="heading-xlarge">
-    <span class="heading-secondary">GOV.UK elements</span>
-    Layout
+    <span class="heading-secondary">Webové komponenty</span>
+    Rozloženie stránky
   </h1>
 
   <div class="text">
     <p class="lede">
-      Use white space to create a visual hierarchy on the page.
+      Obsah stránky umiestnite do stĺpcového dizajnu (ang. Grid). Návrh začnite vytvárať od najmenších veľkostí obrazovky a až potom ho prispôsobte väčším rozmerom.
     </p>
   </div>
 
-  <h2 class="heading-small heading-contents">Contents:</h2>
+  <h2 class="heading-small heading-contents">Obsah:</h2>
   <div class="grid-row">
     <div class="column-two-thirds">
       <ul class="list list-contents">
-        <li><a href="#page-width">Page width</a></li>
-        <li><a href="#screen-size">Screen size</a></li>
-        <li><a href="#layout-spacing">Spacing</a></li>
-        <li><a href="#layout-grid-unit-proportions">Grid unit proportions</a></li>
-        <li><a href="#examples">Examples</a></li>
+        <li><a href="#page-width">Šírka strany</a></li>
+        <li><a href="#screen-size">Veľkosť obrazovky</a></li>
+        <li><a href="#layout-spacing">Medzery a vonkajšie okraje</a></li>
+        <li><a href="#layout-block">Šírka textových blokov</a></li>
+        <li><a href="#layout-grid-unit-proportions">Stĺpcový dizajn</a></li>
+        <li><a href="#examples">Príklady</a></li>
       </ul>
     </div>
   </div>
 
-  <h3 class="heading-medium" id="page-width">Page width</h3>
+  <h3 class="heading-medium" id="page-width">Šírka strany</h3>
   <div class="text">
     <p>
-      The default maximum page width is 1020px, but go wider if the content requires it.
-    </p>
-    <p>
-      <a href="#layout-grid-unit-proportions">Use a grid</a> to lay out your content. To prevent long lines of text, content should sit in a column which is two-thirds of the page width.
-    </p>
-    <p>
-      Long lines reduce legibility, so all lines of text should be no longer than 70 to 80 characters.
+      Predvolená maximálna šírka stránky je 1020 px (pixelov). Ak si to obsah nevyhnutne vyžaduje, je prijateľná aj
+      širšia stránka. Myslite však na to, že používatelia s bežnými či menšími obrazovkami budú musieť obsah horizontálne posúvať.
     </p>
   </div>
 
-  <h3 class="heading-medium" id="screen-size">Screen size</h3>
+  <h3 class="heading-medium" id="screen-size">Veľkosť obrazovky</h3>
   <div class="text">
     <p>
-      Design for small screens first using a single column layout.
-    </p>
-     <p>
-      Optimise for different screen sizes, but don’t make assumptions about what devices people are using.
+      Pri navrhovaní rozloženia obsahu stránky začnite s návrhom pre malé obrazovky (rozmiestnenie obsahu do jedného stĺpca). Následne optimalizujte stránku pre rôzne veľkosti obrazoviek.
+      Obsah stránky umiestnite do predvoleného stĺpcového dizajnu. Aby ste vytvorili vizuálnu hierarchiu obsahu stránky, využite prázdny priestor medzi elementami.
+
     </p>
   </div>
 
-  <h3 class="heading-medium" id="layout-spacing">Spacing</h3>
+  <h3 class="heading-medium" id="layout-spacing">Medzery a vonkajšie okraje</h3>
   <ul class="list list-bullet text">
-    <li>spacing between elements is usually 5px, 10px, 15px or multiples of 15px</li>
-    <li>gutters are 15px for smaller screens and 30px for larger screens</li>
+    <li>medzery medzi jednotlivými prvkami sú zvyčajne 5 px, 10 px, 15 px alebo násobky 15 px</li>
+    <li>vonkajšie okraje sú 15px pre menšie obrazovky a 30 px pre väčšie obrazovky</li>
   </ul>
 
   <div class="example example-images">
     {% include "snippets/layout_spacing.html" %}
   </div>
 
-  <h3 class="heading-medium" id="layout-grid-unit-proportions">Grid unit proportions</h3>
+  <h3 class="heading-medium" id="layout-block">Šírka textových blokov</h3>
+  <p>
+    Pri vytváraní stránky pamätajte na to, že dlhé riadky textu znižujú jeho čitateľnosť, čiže všetky riadky s textom
+    by nemali mať viac ako 70 až 80 znakov. Pre zamedzenie dlhých riadkov textu by mal obsah v stĺpci dosahovať maximálne dve tretiny šírky strany
+  </p>
+
+
+  <h3 class="heading-medium" id="layout-block">Stĺpcový dizajn</h3>
+  <p>
+    Pre rozloženie obsahu na stránke použite <a href="#layout-grid-unit-proportions">preddefinovaný stĺpcový dizajn</a> (ang. Grid).
+  </p>
+  <p>
+    Základné pomery stĺpcov sú:
+  </p>
   <ul class="list list-bullet text">
-    <li>introduce columns as the content requires it – base column ratios on halves, thirds or quarters of the page width</li>
-    <li>for screen breakpoints use media queries &ndash; find these in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_conditionals.scss">_conditionals.scss</a> file</li>
+    <li>1 stĺpec na celú šírku stránky</li>
+    <li>2 stĺpce - polovice</li>
+    <li>3 stĺpce - tretiny</li>
+    <li>4 stĺpce - štvrtiny</li>
+    <li>Na určenie hraničných bodov pre rôzne veľkosti obrazoviek (ang. Breakpoints) používajte media výrazy (ang. Media query) - nájdete ich na JDMES v tomto súbore
+      <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_conditionals.scss">frontend toolkit</a></li>
   </ul>
 
-<h4 class="heading-medium">Full width</h4>
+<h4 class="heading-medium">Celá šírka (1 stĺpcový dizajn)</h4>
 <div class="example example-grid">
   {% include "snippets/layout_grid_full.html" %}
 </div>
@@ -82,7 +94,7 @@
 </code>
 </pre>
 
-<h4 class="heading-medium">Halves</h4>
+<h4 class="heading-medium">Polovice (2 stĺpcový dizajn)</h4>
 <div class="example example-grid">
   {% include "snippets/layout_grid_halves.html" %}
 </div>
@@ -95,7 +107,7 @@
 </code>
 </pre>
 
-<h4 class="heading-medium">Thirds</h4>
+<h4 class="heading-medium">Tretiny (3 stĺpcový dizajn)</h4>
 <div class="example example-grid">
   {% include "snippets/layout_grid_thirds.html" %}
 </div>
@@ -108,7 +120,7 @@
 </code>
 </pre>
 
-<h4 class="heading-medium">Two thirds / One third</h4>
+<h4 class="heading-medium">Dve tretiny / Jedna tretina</h4>
 <div class="example example-grid">
   {% include "snippets/layout_grid_thirds_two_thirds_one_third.html" %}
 </div>
@@ -121,7 +133,7 @@
 </code>
 </pre>
 
-<h4 class="heading-medium">One third / Two thirds</h4>
+<h4 class="heading-medium">Jedna tretina / Dve tretiny</h4>
 <div class="example example-grid">
   {% include "snippets/layout_grid_thirds_one_third_two_thirds.html" %}
 </div>
@@ -134,7 +146,7 @@
 </code>
 </pre>
 
-<h4 class="heading-medium">Quarters</h4>
+<h4 class="heading-medium">Štvrtiny (4 stĺpcový dizajn)</h4>
 <div class="example example-grid">
   {% include "snippets/layout_grid_quarters.html" %}
 </div>
@@ -147,11 +159,11 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="examples">Examples</h3>
+  <h3 class="heading-medium" id="examples">Príklady</h3>
   <ul class="list list-bullet">
     <li>
       <a href="/layout/example-grid-layout/">
-        an example grid layout page
+        Stránka s príkladmi preddefinovaného stĺpcového dizajnu
       </a>
     </li>
   </ul>

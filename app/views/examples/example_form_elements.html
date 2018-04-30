@@ -1,6 +1,6 @@
 {% extends "layout_example.html" %}
 
-{% block page_title %}Example: Form elements — Form elements — GOV.UK elements{% endblock %}
+{% block page_title %}Príklad: Formulárové elementy — Webové komponenty{% endblock %}
 
 {% block content %}
 <main id="content" role="main">
@@ -11,24 +11,24 @@
     <div class="column-two-thirds">
 
       <h1 class="heading-large">
-        <span class="heading-secondary">Form elements</span>
-        Example: Form elements
+        <span class="heading-secondary">Formulárové prvky</span>
+        Príklad: Formulárové prvky
       </h1>
 
       <form action="/" method="post" class="form">
 
         <h2 class="heading-medium">
-          The examples below show the spacing between form labels, hint text and error messages
+          Príklady nižšie podrobne popisujú odsadenie jednotlivých nadpisov a elementov vo formulároch ako aj použitie chybových hlášok a pomocného textu.
         </h2>
 
         <div class="form-section">
           <p>
-            There should be 10px under the label or legend and the input
+            Pod menovkou, legendou a textovým poľom použite 10px medzeru.
           </p>
           <!-- Text inside a label -->
           <div class="form-group">
             <label class="form-label-bold" for="example-form-label">
-              This is the label text in bold
+              Toto je text menovky v bold formáte
             </label>
             <input class="form-control" id="example-form-label" type="text">
           </div>
@@ -37,12 +37,12 @@
             <fieldset>
               <legend>
                 <span class="form-label-bold">
-                  This is the label text in bold
+                  Toto je text menovky v bold formáte
                 </span>
               </legend>
               <div class="multiple-choice">
-                <input id="example-radio-yes-no-yes" type="radio" name="example-yes-no-group" value="Yes">
-                <label for="example-radio-yes-no-yes">Yes</label>
+                <input id="example-radio-yes-no-yes" type="radio" name="example-yes-no-group" value="Áno">
+                <label for="example-radio-yes-no-yes">Áno</label>
               </div>
             </fieldset>
           </div>
@@ -50,15 +50,15 @@
 
         <div class="form-section">
           <p>
-            There should be 10px under the label or legend and the input (when hint text is shown)
+            Medzeru 10px  použite tiež pod menovkou alebo legendou ak zobrazujete pomocný text.
           </p>
 
           <!-- Hint text inside a label -->
           <div class="form-group">
             <label class="form-label-bold" for="example-form-label-bold">
-              This is the label text in bold
+              Toto je text menovky v bold formáte
               <span class="form-hint">
-                This is hint text
+                Text nápovedy
               </span>
             </label>
             <input class="form-control" id="example-form-label-bold" type="text">
@@ -67,10 +67,10 @@
           <!-- Hint text outside a label (preference is inside, to be read by AT) -->
           <div class="form-group">
             <label class="form-label-bold" for="example-form-label-bold">
-              This is the label text in bold
+              Toto je text menovky v bold formáte
             </label>
             <span class="form-hint">
-              This is hint text
+              Text nápovedy
             </span>
             <input class="form-control" id="example-form-label-bold" type="text">
           </div>
@@ -80,15 +80,15 @@
             <fieldset>
               <legend>
                 <span class="form-label-bold">
-                  This is the label text in bold
+                  Toto je text menovky v bold formáte
                 </span>
                 <span class="form-hint">
-                  This is hint text
+                  Text nápovedy
                 </span>
               </legend>
               <div class="multiple-choice">
-                <input id="radio-yes-no-yes-b" type="radio" name="yes-no-group-b" value="Yes">
-                <label for="radio-yes-no-yes-b">Yes</label>
+                <input id="radio-yes-no-yes-b" type="radio" name="yes-no-group-b" value="Áno">
+                <label for="radio-yes-no-yes-b">Áno</label>
               </div>
             </fieldset>
           </div>
@@ -97,21 +97,21 @@
           <div class="form-group">
             <fieldset>
               <legend>
-                <span class="form-label-bold">This is the label text in bold</span>
-                <span class="form-hint">This is hint text</span>
+                <span class="form-label-bold">Toto je text menovky v bold formáte</span>
+                <span class="form-hint">Toto je nápoveda</span>
               </legend>
               <div class="form-date">
                 <div class="form-group form-group-day">
-                  <label class="form-label" for="dob-day">Day</label>
-                  <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                  <label class="form-label" for="dob-day">Deň</label>
+                  <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
                 </div>
                 <div class="form-group form-group-month">
-                  <label class="form-label" for="dob-month">Month</label>
-                  <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                  <label class="form-label" for="dob-month">Mesiac</label>
+                  <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
                 </div>
                 <div class="form-group form-group-year">
-                  <label class="form-label" for="dob-year">Year</label>
-                  <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                  <label class="form-label" for="dob-year">Rok</label>
+                  <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
                 </div>
               </div>
             </fieldset>
@@ -120,18 +120,18 @@
 
         <div class="form-section">
           <p>
-            There should be 10px under the label or legend and the input (when an error message is shown) and 15px above the error message.
+            Pri zobrazení chybovej hlášky použite štandardne medzeru 10px pod menovkou, legendou a textovým poľom. Navyše použite medzeru 15px nad samotnou chybovou hláškou.
           </p>
 
           <!-- Text inside a label - error -->
           <div class="form-group form-group-error">
             <label class="form-label-bold" for="example-form-control">
-              This is the label text
+              Toto je text menovky
               <span class="form-hint">
-                This is hint text
+                Text nápovedy
               </span>
               <span class="error-message">
-                Error message goes here
+                Text chybovej hlášky
               </span>
             </label>
             <input class="form-control form-control-error" id="example-form-control" type="text">
@@ -140,13 +140,13 @@
           <!-- Hint text outside a label (preference is inside, to be read by AT) - error -->
           <div class="form-group form-group-error">
             <label class="form-label-bold" for="example-form-control">
-              This is the label text
+              Toto je text menovky
             </label>
             <span class="form-hint">
-              This is hint text
+              Text nápovedy
             </span>
             <span class="error-message">
-              Error message goes here
+              Text chybovej hlášky
             </span>
             <input class="form-control form-control-error" id="example-form-control" type="text">
           </div>
@@ -157,13 +157,13 @@
 
               <legend>
                 <span class="form-label-bold">
-                  Do you have a National Insurance number?
+                  Máte Európsky preukaz zdravotného poistenia?
                 </span>
                 <span class="form-hint">
-                  This is hint text
+                  Text nápovedy
                 </span>
                 <span class="error-message">
-                  Error message goes here
+                  Text chybovej hlášky
                 </span>
               </legend>
               <div class="multiple-choice">
@@ -177,98 +177,46 @@
           <div class="form-group form-group-error">
             <fieldset>
               <legend>
-                <span class="form-label-bold">Date of birth</span>
-                <span class="form-hint">For example, 31 3 1980</span>
-                <span class="error-message">Error message goes here</span>
+                <span class="form-label-bold">Dátum narodenia</span>
+                <span class="form-hint">Napríklad, 31 3 1980</span>
+                <span class="error-message">Priestor pre chybovú hlášku</span>
               </legend>
               <div class="form-date">
                 <div class="form-group form-group-day">
-                  <label class="form-label" for="example-dob-day-1">Day</label>
-                  <input class="form-control form-control-error" id="example-dob-day-1" name="dob-day" type="number" pattern="[0-9]*">
+                  <label class="form-label" for="example-dob-day-1">Deň</label>
+                  <input class="form-control form-control-error" id="example-dob-day-1" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
                 </div>
                 <div class="form-group form-group-month">
-                  <label class="form-label" for="example-dob-month-1">Month</label>
-                  <input class="form-control" id="example-dob-month-1" name="dob-month" type="number" pattern="[0-9]*">
+                  <label class="form-label" for="example-dob-month-1">Mesiac</label>
+                  <input class="form-control" id="example-dob-month-1" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
                 </div>
                 <div class="form-group form-group-year">
-                  <label class="form-label" for="example-dob-year-1">Year</label>
-                  <input class="form-control" id="example-dob-year-1" name="dob-year" type="number" pattern="[0-9]*">
+                  <label class="form-label" for="example-dob-year-1">Rok</label>
+                  <input class="form-control" id="example-dob-year-1" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
                 </div>
               </div>
             </fieldset>
           </div>
-
-          <!-- Date of birth -->
-          <div class="form-group form-group-error">
-            <fieldset>
-              <legend>
-                <span class="form-label-bold">Date of birth</span>
-                <span class="form-hint">For example, 31 3 1980</span>
-                <span class="error-message">Error message goes here</span>
-              </legend>
-              <div class="form-date">
-                <div class="form-group form-group-day">
-                  <label class="form-label" for="example-dob-day-2">Day</label>
-                  <input class="form-control" id="example-dob-day-2" name="dob-day" type="number" pattern="[0-9]*">
-                </div>
-                <div class="form-group form-group-month">
-                  <label class="form-label" for="example-dob-month-2">Month</label>
-                  <input class="form-control form-control-error" id="example-dob-month-2" name="dob-month" type="number" pattern="[0-9]*">
-                </div>
-                <div class="form-group form-group-year">
-                  <label class="form-label" for="example-dob-year-2">Year</label>
-                  <input class="form-control" id="example-dob-year-2" name="dob-year" type="number" pattern="[0-9]*">
-                </div>
-              </div>
-            </fieldset>
-          </div>
-
-          <!-- Date of birth -->
-          <div class="form-group form-group-error">
-            <fieldset>
-              <legend>
-                <span class="form-label-bold">Date of birth</span>
-                <span class="form-hint">For example, 31 3 1980</span>
-                <span class="error-message">Error message goes here</span>
-              </legend>
-              <div class="form-date">
-                <div class="form-group form-group-day">
-                  <label class="form-label" for="example-dob-day-3">Day</label>
-                  <input class="form-control" id="example-dob-day-3" name="dob-day" type="number" pattern="[0-9]*">
-                </div>
-                <div class="form-group form-group-month">
-                  <label class="form-label" for="example-dob-month-3">Month</label>
-                  <input class="form-control" id="example-dob-month-3" name="dob-month" type="number" pattern="[0-9]*">
-                </div>
-                <div class="form-group form-group-year">
-                  <label class="form-label" for="example-dob-year-3">Year</label>
-                  <input class="form-control form-control-error" id="example-dob-year-3" name="dob-year" type="number" pattern="[0-9]*">
-                </div>
-              </div>
-            </fieldset>
-          </div>
-
-        </div>
 
         <div class="form-section">
           <h3 class="heading-medium">
-            These examples show legend text styled to look like a label
+            Príklady nižšie zobrazujú text legendy v rovnakom štýle, aký sa používa na menovky.
           </h3>
 
           <!-- Yes or No question (without revealed content ) -->
           <fieldset class="inline">
             <legend>
               <span class="form-label-bold">
-                Do you already have a personal user account?
+                Máte už vytvorený osobný účet?
               </span>
             </legend>
             <div class="multiple-choice">
-              <input id="radio-inline-1a" type="radio" name="radio-inline-group" value="Yes">
-              <label for="radio-inline-1a">Yes</label>
+              <input id="radio-inline-1a" type="radio" name="radio-inline-group" value="Áno">
+              <label for="radio-inline-1a">Áno</label>
             </div>
             <div class="multiple-choice">
-              <input id="radio-inline-2a" type="radio" name="radio-inline-group" value="No">
-              <label for="radio-inline-2a">No</label>
+              <input id="radio-inline-2a" type="radio" name="radio-inline-group" value="Nie">
+              <label for="radio-inline-2a">Nie</label>
             </div>
           </fieldset>
         </div>
@@ -278,20 +226,20 @@
           <fieldset class="inline">
             <legend>
               <span class="form-label-bold">
-                This is the label text
+                Toto je text menovky
               </span>
               <span class="form-hint">
-                This is the hint text
+                Toto je miesto pre nápovedu
               </span>
             </legend>
             <div class="form-group">
               <div class="multiple-choice">
-                <input id="radio-yes-no-yes-a" type="radio" name="yes-no-group-a" value="Yes">
-                <label data-target="yes-and-do-next" for="radio-yes-no-yes-a">Yes</label>
+                <input id="radio-yes-no-yes-a" type="radio" name="yes-no-group-a" value="Áno">
+                <label data-target="yes-and-do-next" for="radio-yes-no-yes-a">Áno</label>
               </div>
               <div class="multiple-choice">
-                <input id="radio-yes-no-no-a" type="radio" name="yes-no-group-a" value="No">
-                <label data-target="no-and-do-next" for="radio-yes-no-no-a">No</label>
+                <input id="radio-yes-no-no-a" type="radio" name="yes-no-group-a" value="Nie">
+                <label data-target="no-and-do-next" for="radio-yes-no-no-a">Nie</label>
               </div>
               <div class="panel panel-border-narrow js-hidden" id="yes-and-do-next-a">
                 <label class="form-label" for="yes-next-a">Yes, this next</label>
@@ -308,13 +256,13 @@
         <div class="form-section">
 
           <h2 class="heading-medium">
-            Example: input type="text" and error
+            Príklad chybových hlášok
           </h2>
 
           <!-- Input type="text" -->
           <div class="form-group">
             <label class="form-label" for="input-text-a">
-              This is the label text
+              Toto je text menovky
             </label>
             <input class="form-control" id="input-text-a" type="text">
           </div>
@@ -322,9 +270,9 @@
           <!-- Input type="text" - error -->
           <div class="form-group form-group-error">
             <label class="form-label" for="input-text-b">
-              This is the label text
+              Toto je nápoveda
               <span class="error-message">
-                Error message goes here
+                Text chybovej hlášky
               </span>
             </label>
             <input class="form-control form-control-error" id="input-text-b" type="text">
@@ -333,39 +281,29 @@
           <!-- Input type="text" (bold label) -->
           <div class="form-group">
             <label class="form-label-bold" for="input-text-c">
-              This is the label text in bold
+              Toto je text menovky v bold formáte
             </label>
             <input class="form-control" id="input-text-c" type="text">
           </div>
 
-          <!-- Input type="text" - error (bold label) -->
+          <!-- Input type="text" - error (bold label with hint text) -->
           <div class="form-group form-group-error">
-            <label class="form-label-bold" for="input-text-d">
-              This is the label text in bold
+            <label class="form-label-bold" for="input-text-h">
+              Toto je text menovky v bold formáte
               <span class="error-message">
-                Error message goes here
+                Text chybovej hlášky
               </span>
             </label>
-            <input class="form-control form-control-error" id="input-text-d" type="text">
+            <input class="form-control form-control-error" id="input-text-h" type="text">
           </div>
-
-          <!-- Input type="text" (bold label with hint text) -->
-          <div class="form-group">
-            <label class="form-label-bold" for="input-text-g">
-              This is the label text
-              <span class="form-hint">
-                This is hint text
-              </span>
-            </label>
-            <input class="form-control" id="input-text-g" type="text">
-          </div>
+        </div>
 
           <div class="form-group">
             <label class="form-label-bold" for="input-text-g">
-              This is the label text
+              Toto je text menovky
             </label>
             <span class="form-hint">
-              This is hint text
+              Toto je nápoveda
             </span>
             <input class="form-control" id="input-text-g" type="text">
           </div>
@@ -373,12 +311,12 @@
           <!-- Input type="text" - error (bold label with hint text) -->
           <div class="form-group form-group-error">
             <label class="form-label-bold" for="input-text-h">
-              This is the label text
+              Toto je text menovky
               <span class="form-hint">
-                This is hint text
+                Toto je nápoveda
               </span>
               <span class="error-message">
-                Error message goes here
+                Text chybovej hlášky
               </span>
             </label>
             <input class="form-control form-control-error" id="input-text-h" type="text">
@@ -391,13 +329,13 @@
 
         <div class="form-section">
           <h2 class="heading-medium">
-            Example: textarea and error
+            Príklad: Textové polia a chybové hlášky
           </h2>
 
           <!-- Textarea -->
           <div class="form-group">
             <label class="form-label" for="textarea-a">
-              This is the label text
+              Toto je text menovky
             </label>
             <textarea class="form-control" id="textarea-a" cols="30" rows="10"></textarea>
           </div>
@@ -405,9 +343,9 @@
           <!-- Textarea - error -->
           <div class="form-group form-group-error">
             <label class="form-label" for="textarea-b">
-              This is the label text
+              Toto je text menovky
               <span class="error-message">
-                Error message goes here
+                Text chybovej hlášky
               </span>
             </label>
             <textarea class="form-control form-control-error" id="textarea-b" cols="30" rows="10"></textarea>
@@ -416,7 +354,10 @@
           <!-- Textarea (bold label) -->
           <div class="form-group">
             <label class="form-label-bold" for="textarea-c">
-              This is the label text in bold
+              Toto je text menovky
+              <span class="form-hint">
+                Toto je text nápovedy
+              </span>
             </label>
             <textarea class="form-control" id="textarea-c" cols="30" rows="10"></textarea>
           </div>
@@ -424,63 +365,46 @@
           <!-- Textarea - error (bold label) -->
           <div class="form-group form-group-error">
             <label class="form-label-bold" for="textarea-d">
-              This is the label text in bold
+              Toto je text menovky
+              <span class="form-hint">
+                Toto je text nápovedy
+              </span>
               <span class="error-message">
-                Error message goes here
+                Text chybovej hlášky
               </span>
             </label>
             <textarea class="form-control form-control-error" id="textarea-d" cols="30" rows="10"></textarea>
           </div>
 
-          <!-- Textarea (bold label, with hint text) -->
-          <div class="form-group">
-            <label class="form-label-bold" for="textarea-e">
-              This is the label text
-              <span class="form-hint">This is hint text</span>
-            </label>
-            <textarea class="form-control" id="textarea-e" cols="30" rows="10"></textarea>
-          </div>
 
-          <!-- Textarea - error (bold label, with hint text) -->
-          <div class="form-group form-group-error">
-            <label class="form-label-bold" for="textarea-f">
-              This is the label text
-              <span class="form-hint">This is hint text</span>
-              <span class="error-message">
-                Error message goes here
-              </span>
-            </label>
-            <textarea class="form-control form-control-error" id="textarea-f" cols="30" rows="10"></textarea>
-          </div>
-        </div>
 
         <div class="form-section">
           <h2 class="heading-medium">
-            Example: select boxes and error
+            Príklad: Rozbaľovacie zoznamy a chybové hlášky
           </h2>
 
           <!-- Select box -->
           <div class="form-group">
-            <label class="form-label" for="select-box-a">This is the label text</label>
+            <label class="form-label" for="select-box-a">Toto je nápoveda</label>
             <select class="form-control" id="select-box-a">
-              <option>GOV.UK elements option 1</option>
-              <option>GOV.UK elements option 2</option>
-              <option>GOV.UK elements option 3</option>
+              <option>Element - prvá možnosť</option>
+              <option>Element - druhá možnosť</option>
+              <option>Element - tretia možnosť</option>
             </select>
           </div>
 
           <!-- Select box - error -->
           <div class="form-group form-group-error">
             <label class="form-label" for="select-box-b">
-              This is the label text
+              Toto je nápoveda
               <span class="error-message">
-                Error message goes here
+                Text chybovej hlášky
               </span>
             </label>
             <select class="form-control form-control-error" id="select-box-b">
-              <option>GOV.UK elements option 1</option>
-              <option>GOV.UK elements option 2</option>
-              <option>GOV.UK elements option 3</option>
+              <option>Element - prvá možnosť</option>
+              <option>Element - druhá možnosť</option>
+              <option>Element - tretia možnosť</option>
             </select>
           </div>
         </div>
@@ -489,27 +413,27 @@
           <!-- Select box (with bold text) -->
           <div class="form-group">
             <label class="form-label-bold" for="select-box-c">
-              This is the label text
+              Toto je nápoveda
             </label>
             <select class="form-control" id="select-box-c">
-              <option>GOV.UK elements option 1</option>
-              <option>GOV.UK elements option 2</option>
-              <option>GOV.UK elements option 3</option>
+              <option>Element - prvá možnosť</option>
+              <option>Element - druhá možnosť</option>
+              <option>Element - tretia možnosť</option>
             </select>
           </div>
 
           <!-- Select box - error (with bold text) -->
           <div class="form-group form-group-error">
             <label class="form-label-bold" for="select-box-d">
-              This is the label text
+              Toto je nápoveda
               <span class="error-message">
-                Error message goes here
+                Text chybovej hlášky
               </span>
             </label>
             <select class="form-control form-control-error" id="select-box-d">
-              <option>GOV.UK elements option 1</option>
-              <option>GOV.UK elements option 2</option>
-              <option>GOV.UK elements option 3</option>
+              <option>Element - prvá možnosť</option>
+              <option>Element - druhá možnosť</option>
+              <option>Element - tretia možnosť</option>
             </select>
           </div>
         </div>
@@ -518,33 +442,33 @@
           <!-- Select box (with bold text and hint text) -->
           <div class="form-group">
             <label class="form-label-bold" for="select-box-g">
-              This is the label text
+              Toto je text menovky
               <span class="form-hint">
-                This the hint text
+                Toto je text nápovedy
               </span>
             </label>
             <select class="form-control" id="select-box-g">
-              <option>GOV.UK elements option 1</option>
-              <option>GOV.UK elements option 2</option>
-              <option>GOV.UK elements option 3</option>
+              <option>Element - prvá možnosť</option>
+              <option>Element - druhá možnosť</option>
+              <option>Element - tretia možnosť</option>
             </select>
           </div>
 
           <!-- Select box - error (with bold text and hint text) -->
           <div class="form-group form-group-error">
             <label class="form-label-bold" for="select-box-h">
-              This is the label text
+              Toto je text menovky
               <span class="form-hint">
-                This is the hint text
+                Toto je text nápovedy
               </span>
               <span class="error-message">
-                Error message goes here
+                Text chybovej hlášky
               </span>
             </label>
             <select class="form-control form-control-error" id="select-box-h">
-              <option>GOV.UK elements option 1</option>
-              <option>GOV.UK elements option 2</option>
-              <option>GOV.UK elements option 3</option>
+              <option>Element - prvá možnosť</option>
+              <option>Element - druhá možnosť</option>
+              <option>Element - tretia možnosť</option>
             </select>
           </div>
         </div>
@@ -561,7 +485,8 @@
 
       <div class="form-section">
         <h3 class="heading-medium">
-          These examples are one-question-per-page examples and use a heading for the question inside the legend of the fieldset.
+          Nasledovné príklady sú príkladmi zobrazenia jednej otázky na stránku. Nemalo by sa ich na stránke nachádzať viac.
+          Otázka je v kóde umiestnená v časti “heading” v rámci legendy daného poľa (fieldsetu).
         </h3>
         <!-- "Chunky" Radio buttons, stacked -->
         {% include "snippets/form_radio_buttons.html" %}
@@ -575,11 +500,6 @@
       <div class="form-section">
         <!-- Yes or No question (without revealed content ) -->
         {% include "snippets/form_radio_buttons_inline.html" %}
-      </div>
-
-      <div class="form-section">
-        <!-- Yes or No question (select one option to reveal content) -->
-        {% include "snippets/form_radio_inline_yes_no.html" %}
       </div>
 
       <div class="form-section">

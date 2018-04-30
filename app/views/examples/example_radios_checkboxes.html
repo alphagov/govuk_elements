@@ -1,6 +1,6 @@
 {% extends "layout_example.html" %}
 
-{% block page_title %}Example: Radio buttons and checkboxes — Form elements — GOV.UK elements{% endblock %}
+{% block page_title %}Príklad: Prepínače a začiarkavacie políčka — Formulárové prvky — Webové komponenty{% endblock %}
 
 {% block content %}
 <main id="content" role="main">
@@ -11,17 +11,18 @@
     <div class="column-two-thirds">
 
       <h1 class="heading-xlarge">
-        <span class="heading-secondary">Form elements</span>
-        Example: Radio buttons <br> and checkboxes
+        <span class="heading-secondary">Formulárové prvky</span>
+        Príklad: Prepínače a <br> začiarkavacie políčka
       </h1>
 
       <div class="text">
         <p>
-          This test page demonstrates the new <code class="code">.multiple-choice</code> radio buttons and checkboxes, released in GOV.UK elements v3.0.0.
+          Príklady nižšie zobrazujú použitie <code class="code">.multiple-choice</code> prepínačov (ang. radio buttons) a začiarkavacích políčiek (ang. checkboxes).
         </p>
 
         <p>
-          It also demonstrates setting ARIA attributes when showing and hiding additional content - using <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/javascripts/govuk/show-hide-content.js">show-hide-content.js</a> from the GOV.UK frontend toolkit.
+          Takisto zobrazuje nastavenie ARIA pri zobrazovaní a schovávaní dodatočného obsahu - použitím
+          <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/javascripts/govuk/show-hide-content.js">show-hide-content.js</a>.
         </p>
       </div>
 
@@ -32,31 +33,27 @@
 
             <legend>
               <h1 class="heading-large">
-                What is your nationality?
+                Aká je vaša národnosť?
               </h1>
-              <span class="body-text">If you have dual nationality, select all options that are relevant to you.</span>
+              <span class="body-text">Označte všetky možnosti, ktoré sú pre vás relevantné.</span>
             </legend>
 
             <div class="multiple-choice">
-              <input type="checkbox" name="nationality_british" value="British" id="nationality_british">
-              <label for="nationality_british">British</label>
+              <input id="nationalities-british" name="nationalities" type="checkbox" value="Slovak">
+              <label for="nationalities-british">slovenská</label>
             </div>
-
             <div class="multiple-choice">
-              <input type="checkbox" name="nationality_irish" value="Irish" id="nationality_irish">
-              <label for="nationality_irish">Irish</label>
+              <input id="nationalities-irish" name="nationalities" type="checkbox" value="Czech">
+              <label for="nationalities-irish">česká</label>
             </div>
-
-            <div class="multiple-choice" data-target="example_nationality_other">
-              <input type="checkbox" name="nationality_other" value="Wales" id="nationality_other">
-              <label for="nationality_other">Citizen of another country</label>
+            <div class="multiple-choice" data-target="example-different-country">
+              <input id="nationalities-other" name="nationalities" type="checkbox" value="Citizen of a different country">
+              <label for="nationalities-other">občan inej národnosti</label>
             </div>
-
-            <div class="panel panel-border-narrow js-hidden" id="example_nationality_other">
-              <label for="nationality_other_countries" class="form-label">
-                Country name
-              </label>
-              <input class="form-control" type="text" id="nationality_other_countries">
+            <div class="panel panel-border-narrow js-hidden" id="example-different-country">
+              <label class="form-label" for="nationalities-other-country">Názov krajiny</label>
+              <input class="form-control" type="text" id="nationalities-other-country" name="nationalities-other-country">
+            </div>
             </div>
 
           </fieldset>
@@ -67,18 +64,18 @@
 
             <legend>
               <h1 class="heading-large">
-                Where should we send your new passport?
+                Kde vám máme poslať váš nový pas?
               </h1>
             </legend>
 
             <div class="multiple-choice">
               <input id="radio-home-address" type="radio" name="radio-indent-group" value="Yes">
-              <label for="radio-home-address">Home address</label>
+              <label for="radio-home-address">Domov</label>
             </div>
 
             <div class="multiple-choice" data-target="example-other-address">
               <input id="radio-other-address" type="radio" name="radio-indent-group" value="No">
-              <label for="radio-other-address">Other address</label>
+              <label for="radio-other-address">Na inú adresu</label>
             </div>
 
             <div class="panel panel-border-narrow js-hidden" id="example-other-address">
@@ -87,27 +84,27 @@
 
                 <legend>
                   <h2 class="heading-medium">
-                    Your other address
+                    Iná adresa
                   </h2>
                 </legend>
 
                 <div class="form-group form-group-compound">
-                  <label class="form-label" for="address-line-1">Street</label>
+                  <label class="form-label" for="address-line-1">Adresa</label>
                   <input type="text" class="form-control" id="address-line-1">
                 </div>
 
                 <div class="form-group">
-                  <label class="form-label visually-hidden" for="address-line-2">Street</label>
+                  <label class="form-label visually-hidden" for="address-line-2">Ulica</label>
                   <input type="text" class="form-control" id="address-line-2">
                 </div>
 
                 <div class="form-group">
-                  <label class="form-label" for="address-town">Town or City</label>
+                  <label class="form-label" for="address-town">Mesto</label>
                   <input type="text" class="form-control form-control-1-4" id="address-town">
                 </div>
 
                 <div class="form-group">
-                  <label class="form-label" for="address-postcode">Postcode</label>
+                  <label class="form-label" for="address-postcode">PSČ</label>
                   <input type="text" class="form-control form-control-1-8" id="address-postcode">
                 </div>
 
@@ -121,26 +118,36 @@
           <fieldset>
 
             <legend>
-              <h1 class="heading-large">
-                Which part of the Housing Act was your licence issued under?
+              <h1 class="heading-medium">
+                Ako vás máme kontaktovať?
               </h1>
-              <span class="body-text">Select one of the options below.</span>
             </legend>
 
-            <div class="multiple-choice">
-              <input id="radio-part-2" type="radio" name="housing-act" value="Part 2">
-              <label for="radio-part-2">
-                <span class="form-label-bold">Part 2 of the Housing Act 2004</span>
-                For properties that are 3 or more stories high and occupied by 5 or more people
-              </label>
+            <div class="multiple-choice" data-target="contact-by-email">
+              <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes">
+              <label for="example-contact-by-email">Email</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="contact-by-email">
+              <label class="form-label" for="contact-email">Emailová adresa</label>
+              <input class="form-control" name="contact-email" type="text" id="contact-email">
             </div>
 
-            <div class="multiple-choice">
-              <input id="radio-part-3" type="radio" name="housing-act" value="Part 3">
-              <label for="radio-part-3">
-                <span class="form-label-bold">Part 3 of the Housing Act 2004</span>
-                For properties that are within a geographical area defined by a local council
-              </label>
+            <div class="multiple-choice" data-target="contact-by-phone">
+              <input id="example-contact-by-phone" type="radio" name="radio-contact-group" value="No">
+              <label for="example-contact-by-phone">Mobil</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="contact-by-phone">
+              <label class="form-label" for="contact-phone">Telefónne číslo</label>
+              <input class="form-control" name="contact-phone" type="text" id="contact-phone">
+            </div>
+
+            <div class="multiple-choice" data-target="contact-by-text">
+              <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No">
+              <label for="example-contact-by-text">SMS</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="contact-by-text">
+              <label class="form-label" for="contact-text-message">Telefónne číslo</label>
+              <input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
             </div>
 
           </fieldset>

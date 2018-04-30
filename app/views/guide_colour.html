@@ -1,42 +1,45 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Colour — GOV.UK elements{% endblock %}
+{% block page_title %}Farby - Webové komponenty{% endblock %}
 
 {% block main_content %}
 
 <main id="content" role="main">
 
   <h1 class="heading-xlarge">
-    <span class="heading-secondary">GOV.UK elements</span>
-    Colour
+    <span class="heading-secondary">Webové komponenty</span>
+    Farby
   </h1>
 
   <p class="lede text">
-    Always use the GOV.UK colour palette.
+    Vždy používajte farebnú paletu GOV.SK
   </p>
 
-  <h2 class="heading-small heading-contents">Contents:</h2>
+  <h2 class="heading-small heading-contents">Obsah:</h2>
   <div class="grid-row">
     <div class="column-two-thirds">
       <ul class="list list-contents">
-        <li><a href="#colour-contrast">Colour contrast</a></li>
-        <li><a href="#colour-sass-variables">Sass variables</a></li>
-        <li><a href="#colour-status-colours">Status colours</a></li>
-        <li><a href="#colour-greyscale-palette">Greyscale palette</a></li>
-        <li><a href="#colour-extended-palette">Extended palette</a></li>
-        <li><a href="#examples">Examples</a></li>
+        <li><a href="#colour-contrast">Farebný kontrast</a></li>
+        <li><a href="#colour-sass-variables">Sass premenné</a></li>
+        <li><a href="#colour-status-colours">Farby stavu</a></li>
+        <li><a href="#colour-greyscale-palette">Paleta odtieňov šedej</a></li>
+        <li><a href="#colour-extended-palette">Rozšírená paleta</a></li>
+        <li><a href="#examples">Príklady</a></li>
       </ul>
     </div>
   </div>
 
-  <h3 class="heading-medium" id="colour-contrast">Colour contrast</h3>
+  <h3 class="heading-medium" id="colour-contrast">Farebný kontrast</h3>
   <p class="text">
-    The colour contrast ratio for text and interactive elements should be at least 4.5:1 <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" rel="external">as recommended by the W3C</a>. Test your service to meet this standard.
+    Pomerová hodnota farebného kontrastu pre text a interaktívne prvky by mala byť aspoň 4,5:1
+    <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" rel="external">
+      ako odporúča W3C</a>. Na to, aby vaša služba spĺňala tento štandard, je potrebné vždy otestovať kontrast všetkých použitých prvkov.
   </p>
 
-  <h3 class="heading-medium"  id="colour-sass-variables">Sass variables</h3>
+  <h3 class="heading-medium"  id="colour-sass-variables">Sass premenné</h3>
   <p class="text">
-    Use Sass variables in case colour values need to be updated &ndash; find these in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss" rel="external">colours.scss</a> file.
+    Odporúčame používať nasledovné Sass premenné pre prípad, že farby bude nutné v budúcnosti aktualizovať. Nájdete ich v súbore
+    <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss" rel="external">colours.scss</a>.
   </p>
 
   <div class="example">
@@ -65,7 +68,7 @@
     </div>
 
     <div class="swatch-wrapper">
-      <h4 class="heading-small">Links</h4>
+      <h4 class="heading-small">Textové odkazy</h4>
 
       <div class="swatch swatch-link-colour"></div>
       <ul>
@@ -87,7 +90,7 @@
     </div>
 
     <div class="swatch-wrapper">
-      <h4 class="heading-small">Backgrounds</h4>
+      <h4 class="heading-small">Pozadie</h4>
 
       <div class="swatch swatch-border-colour"></div>
       <ul>
@@ -109,7 +112,7 @@
     </div>
 
     <div class="swatch-wrapper">
-      <h4 class="heading-small">Buttons</h4>
+      <h4 class="heading-small">Tlačidlá</h4>
 
       <div class="swatch swatch-button-colour"></div>
       <ul>
@@ -120,12 +123,12 @@
       <div class="swatch swatch-green"></div>
       <ul>
         <li><b>#006435</b></li>
-        <li>$green (hover colour)</li>
+        <li>$green (vznášacia farba)</li>
       </ul>
     </div>
 
     <div class="swatch-wrapper">
-      <h4 class="heading-small">Focus</h4>
+      <h4 class="heading-small">Aktívny stav</h4>
       <div class="swatch swatch-yellow"></div>
       <ul>
         <li><b>#FFBF47</b></li>
@@ -135,7 +138,7 @@
 
   </div>
 
-  <h3 class="heading-medium" id="colour-status-colours">Status colours</h3>
+  <h3 class="heading-medium" id="colour-status-colours">Farby stavu</h3>
   <div class="example">
 
     <div class="swatch-wrapper">
@@ -145,7 +148,7 @@
         <li>$govuk-blue</li>
       </ul>
       <p>
-        Use for Alpha and Beta banners
+        Označenie novej a textovacej verzie služby
       </p>
     </div>
 
@@ -156,13 +159,13 @@
         <li>$error-colour</li>
       </ul>
       <p>
-        Use for error messages
+        Chybové oznamy
       </p>
     </div>
 
   </div>
 
-  <h3 class="heading-medium" id="colour-greyscale-palette">Greyscale palette</h3>
+  <h3 class="heading-medium" id="colour-greyscale-palette">Paleta odtieňov šedej</h3>
   <div class="example">
 
     <div class="swatch-wrapper">
@@ -207,18 +210,16 @@
 
   </div>
 
-  <h3 class="heading-medium" id="colour-extended-palette">Extended palette</h3>
+  <h3 class="heading-medium" id="colour-extended-palette">Rozšírená paleta</h3>
   <ul class="list list-bullet text">
-    <li>used for graphs and supporting material</li>
-    <li>for tints of the extended palette use 50% or 25%</li>
-    <li>for departmental colours
-     &ndash; find these in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/colours/_organisation.scss" rel="external">organisation.scss file</a></li>
+    <li>Tieto farby používajte na grafy a doplnkový materiál.</li>
+    <li>Ak potrebujete použiť menej sýte odtiene farby rozšírenej palety, znížte intenzitu farby na  50% alebo 25%.</li>
   </ul>
 
   <div class="example">
 
     <div class="swatch-wrapper">
-      <h4 class="heading-small">Purple</h4>
+      <h4 class="heading-small">Nočná modrá</h4>
 
       <div class="swatch swatch-purple"></div>
       <ul>
@@ -226,7 +227,7 @@
         <li>$purple</li>
       </ul>
 
-      <h4 class="heading-small">Mauve</h4>
+      <h4 class="heading-small">Modro fialová</h4>
 
       <div class="swatch swatch-mauve"></div>
       <ul>
@@ -234,7 +235,7 @@
         <li>$mauve</li>
       </ul>
 
-      <h4 class="heading-small">Fuschia</h4>
+      <h4 class="heading-small">Purpurová</h4>
 
       <div class="swatch swatch-fuschia"></div>
       <ul>
@@ -244,7 +245,7 @@
     </div>
 
     <div class="swatch-wrapper">
-      <h4 class="heading-small">Pink</h4>
+      <h4 class="heading-small">Tmavá ružová</h4>
 
       <div class="swatch swatch-pink"></div>
       <ul>
@@ -252,7 +253,7 @@
         <li>$pink</li>
       </ul>
 
-      <h4 class="heading-small">Baby pink</h4>
+      <h4 class="heading-small">Ružová</h4>
 
       <div class="swatch swatch-baby-pink"></div>
       <ul>
@@ -260,7 +261,7 @@
         <li>$baby-pink</li>
       </ul>
 
-      <h4 class="heading-small">Red</h4>
+      <h4 class="heading-small">Karmínová červená</h4>
 
       <div class="swatch swatch-red"></div>
       <ul>
@@ -270,7 +271,7 @@
     </div>
 
     <div class="swatch-wrapper">
-      <h4 class="heading-small">Mellow red</h4>
+      <h4 class="heading-small">Červená</h4>
 
       <div class="swatch swatch-mellow-red"></div>
       <ul>
@@ -278,7 +279,7 @@
         <li>$mellow-red</li>
       </ul>
 
-      <h4 class="heading-small">Orange</h4>
+      <h4 class="heading-small">Oranžová</h4>
 
       <div class="swatch swatch-orange"></div>
       <ul>
@@ -286,7 +287,7 @@
         <li>$orange</li>
       </ul>
 
-      <h4 class="heading-small">Brown</h4>
+      <h4 class="heading-small">Hnedobéžová</h4>
 
       <div class="swatch swatch-brown"></div>
       <ul>
@@ -296,7 +297,7 @@
     </div>
 
     <div class="swatch-wrapper">
-      <h4 class="heading-small">Yellow</h4>
+      <h4 class="heading-small">Žltá</h4>
 
       <div class="swatch swatch-yellow"></div>
       <ul>
@@ -304,7 +305,7 @@
         <li>$yellow</li>
       </ul>
 
-      <h4 class="heading-small">Green</h4>
+      <h4 class="heading-small">Listová zelená</h4>
 
       <div class="swatch swatch-green"></div>
       <ul>
@@ -312,7 +313,7 @@
         <li>$green</li>
       </ul>
 
-      <h4 class="heading-small">Grass green</h4>
+      <h4 class="heading-small">Trávová zelená</h4>
 
       <div class="swatch swatch-grass-green"></div>
       <ul>
@@ -322,7 +323,7 @@
     </div>
 
     <div class="swatch-wrapper">
-      <h4 class="heading-small">Turquoise</h4>
+      <h4 class="heading-small">Tyrkysová</h4>
 
       <div class="swatch swatch-turquoise"></div>
       <ul>
@@ -330,7 +331,7 @@
         <li>$turquoise</li>
       </ul>
 
-      <h4 class="heading-small">Light blue</h4>
+      <h4 class="heading-small">Svetlomodrá</h4>
 
       <div class="swatch swatch-light-blue"></div>
       <ul>
@@ -338,7 +339,7 @@
         <li>$light-blue</li>
       </ul>
 
-      <h4 class="heading-small">GOV.UK blue</h4>
+      <h4 class="heading-small">GOV.SK modrá</h4>
 
       <div class="swatch swatch-govuk-blue"></div>
       <ul>
@@ -350,13 +351,15 @@
 
   </div>
 
-  <h3 class="heading-medium" id="examples">Examples</h3>
-  <h4 class="heading-small">Confirmation page</h4>
+  <h3 class="heading-medium" id="examples">Príklady</h3>
+  <h4 class="heading-small">Stránka s potvrdením</h4>
 
   <div class="text">
     <div class="panel panel-border-wide">
       <p>
-        When using the white text on a turquoise background &mdash; ensure the minimum text size is 24px normal weight, or 19px bold. This is to meet colour contrast ratio requirements.
+        Pri použití bieleho textu na pozadí tyrkysovej farby sa uistite, že približná minimálna veľkosť písma je 24 pixelov
+        (normálny rez písma) alebo 19 pixelov tučného písma, pričom veľkosť sa uvádza v relatívnych jednotkách a nie v jednotkách
+        pixelov. Týmto splníte požiadavku na dostatočný farebný kontrast.
       </p>
     </div>
   </div>
@@ -367,26 +370,26 @@
 
         <div class="govuk-box-highlight">
           <h1 class="heading-xlarge">
-            Application complete
+            Žiadosť ukončená
           </h1>
           <p class="font-large">
-            Your reference number is <br>
+            Vaše referenčné číslo je <br>
             <strong class="bold">HDJ2123F</strong>
           </p>
         </div>
 
         <p>
-          We have sent you a confirmation email.
+          Poslali sme Vám email s potvrdením.
         </p>
 
         <h2 class="heading-medium">
-          What happens next?
+          Čo teraz?
         </h2>
         <p>
-          We’ve sent your application to Hackney Electoral Register Office.
+         Poslali sme vašu žiadosť na volebný úrad.
         </p>
         <p>
-          They will contact you either to confirm your registration, or to ask for more information.
+          Budú Vás kontaktovať s cieľom potvrdenia vašej registrácie alebo Vás požiadajú o viac informácií.
         </p>
       </div>
     </div>

@@ -1,6 +1,6 @@
 {% extends "layout_example.html" %}
 
-{% block page_title %}Example: Date — Form elements — GOV.UK elements{% endblock %}
+{% block page_title %}Príklad: Dátumy — Formulárové prvky — Webové komponenty{% endblock %}
 
 {% block content %}
 <main id="content" role="main">
@@ -11,8 +11,8 @@
     <div class="column-two-thirds">
 
       <h1 class="heading-xlarge">
-        <span class="heading-secondary">Form elements</span>
-        Example: Date
+        <span class="heading-secondary">Formulárové prvky</span>
+        Príklad: Dátumy
       </h1>
       <!-- Date of birth -->
       {% include "snippets/form_date.html" %}
@@ -23,22 +23,22 @@
       <div class="form-group form-group-error">
         <fieldset>
           <legend>
-            <span class="form-label-bold">Date of birth</span>
-            <span class="form-hint">For example, 31 3 1980</span>
-            <span class="error-message">Error message goes here</span>
+            <span class="form-label-bold">Dátum narodenia</span>
+            <span class="form-hint">Napríklad, 31 3 1980</span>
+            <span class="error-message">Text chybovej hlášky</span>
           </legend>
           <div class="form-date">
             <div class="form-group form-group-day">
-              <label class="form-label" for="example-dob-day-1">Day</label>
-              <input class="form-control form-control-error" id="example-dob-day-1" name="dob-day" type="number" pattern="[0-9]*">
+              <label class="form-label" for="example-dob-day-1">Deň</label>
+              <input class="form-control form-control-error" id="example-dob-day-1" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
             </div>
             <div class="form-group form-group-month">
-              <label class="form-label" for="example-dob-month-1">Month</label>
-              <input class="form-control" id="example-dob-month-1" name="dob-month" type="number" pattern="[0-9]*">
+              <label class="form-label" for="example-dob-month-1">Mesiac</label>
+              <input class="form-control" id="example-dob-month-1" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
             </div>
             <div class="form-group form-group-year">
-              <label class="form-label" for="example-dob-year-1">Year</label>
-              <input class="form-control" id="example-dob-year-1" name="dob-year" type="number" pattern="[0-9]*">
+              <label class="form-label" for="example-dob-year-1">Rok</label>
+              <input class="form-control" id="example-dob-year-1" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
             </div>
           </div>
         </fieldset>
@@ -48,22 +48,22 @@
       <div class="form-group form-group-error">
         <fieldset>
           <legend>
-            <span class="form-label-bold">Date of birth</span>
-            <span class="form-hint">For example, 31 3 1980</span>
-            <span class="error-message">Error message goes here</span>
+            <span class="form-label-bold">Dátum narodenia</span>
+            <span class="form-hint">Napríklad, 31 3 1980</span>
+            <span class="error-message">Text chybovej hlášky</span>
           </legend>
           <div class="form-date">
             <div class="form-group form-group-day">
-              <label class="form-label" for="example-dob-day-2">Day</label>
-              <input class="form-control" id="example-dob-day-2" name="dob-day" type="number" pattern="[0-9]*">
+              <label class="form-label" for="example-dob-day-2">Deň</label>
+              <input class="form-control" id="example-dob-day-2" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
             </div>
             <div class="form-group form-group-month">
-              <label class="form-label" for="example-dob-month-2">Month</label>
-              <input class="form-control form-control-error" id="example-dob-month-2" name="dob-month" type="number" pattern="[0-9]*">
+              <label class="form-label" for="example-dob-month-2">Mesiac</label>
+              <input class="form-control form-control-error" id="example-dob-month-2" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
             </div>
             <div class="form-group form-group-year">
-              <label class="form-label" for="example-dob-year-2">Year</label>
-              <input class="form-control" id="example-dob-year-2" name="dob-year" type="number" pattern="[0-9]*">
+              <label class="form-label" for="example-dob-year-2">Rok</label>
+              <input class="form-control" id="example-dob-year-2" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
             </div>
           </div>
         </fieldset>
@@ -73,35 +73,28 @@
       <div class="form-group form-group-error">
         <fieldset>
           <legend>
-            <span class="form-label-bold">Date of birth</span>
-            <span class="form-hint">For example, 31 3 1980</span>
-            <span class="error-message">Error message goes here</span>
+            <span class="form-label-bold">Dátum narodenia</span>
+            <span class="form-hint">Napríklad, 31 3 1980</span>
+            <span class="error-message">Text chybovej hlášky</span>
           </legend>
           <div class="form-date">
             <div class="form-group form-group-day">
-              <label class="form-label" for="example-dob-day-3">Day</label>
-              <input class="form-control" id="example-dob-day-3" name="dob-day" type="number" pattern="[0-9]*">
+              <label class="form-label" for="example-dob-day-3">Deň</label>
+              <input class="form-control" id="example-dob-day-3" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
             </div>
             <div class="form-group form-group-month">
-              <label class="form-label" for="example-dob-month-3">Month</label>
-              <input class="form-control" id="example-dob-month-3" name="dob-month" type="number" pattern="[0-9]*">
+              <label class="form-label" for="example-dob-month-3">Mesiac</label>
+              <input class="form-control" id="example-dob-month-3" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
             </div>
             <div class="form-group form-group-year">
-              <label class="form-label" for="example-dob-year-3">Year</label>
-              <input class="form-control form-control-error" id="example-dob-year-3" name="dob-year" type="number" pattern="[0-9]*">
+              <label class="form-label" for="example-dob-year-3">Rok</label>
+              <input class="form-control form-control-error" id="example-dob-year-3" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
             </div>
           </div>
         </fieldset>
       </div>
 
     </div>
-    <div class="column-two-thirds">
-      <div class="panel panel-border-wide text">
-        <p>
-          Note: The <code class="code">pattern</code> attribute is not valid HTML for inputs where the <code class="code">type</code> attribute is <code class="code">number</code>. It is added deliberately to <a href="http://bradfrost.com/blog/mobile/better-numerical-inputs-for-mobile-forms">force numeric keypads on iOS devices</a>.
-        </p>
-      </div>
-    </div>  
   </div>
 
 </main><!-- /#content -->

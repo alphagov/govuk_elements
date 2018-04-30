@@ -1,43 +1,43 @@
 {% extends "layout.html" %}
 
-{% block page_title %}Data — GOV.UK elements{% endblock %}
+{% block page_title %}Dáta — Webové komponenty{% endblock %}
 
 {% block main_content %}
 
 <main id="content" role="main">
 
   <h1 class="heading-xlarge">
-    <span class="heading-secondary">GOV.UK elements</span>
-    Data
+    <span class="heading-secondary">Webové komponenty</span>
+    Údaje
   </h1>
 
   <p class="lede text">
-    Consider putting content into tables to make it easier to scan.
+    Zvážte umiestnenie obsahu do tabuľky tak, aby sa dal jednoduchšie prezerať.
   </p>
 
-  <h2 class="heading-small heading-contents">Contents:</h2>
+  <h2 class="heading-small heading-contents">Obsah:</h2>
   <div class="grid-row">
     <div class="column-two-thirds">
       <ul class="list list-contents">
-        <li><a href="#data-table-numeric">Numeric tabular data</a></li>
-        <li><a href="#data-in-a-table">Data in a table</a></li>
-        <li><a href="#data-visualisation">Data visualisation</a></li>
-        <li><a href="#examples">Examples</a></li>
+        <li><a href="#data-table-numeric">Číselné tabuľkové údaje</a></li>
+        <li><a href="#data-in-a-table">Údaje v tabuľke</a></li>
+        <li><a href="#data-visualisation">Vizualizácia údajov v infografike</a></li>
       </ul>
     </div>
   </div>
 
-  <h3 class="heading-medium" id="data-table-numeric">Numeric tabular data</h3>
+  <h3 class="heading-medium" id="data-table-numeric">Číselné tabuľkové údaje</h3>
   <ul class="text list list-bullet">
-    <li>when comparing rows of numbers, align numbers to the right in table cells</li>
-    <li>use the GOV.UK frontend toolkit’s <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/docs/mixins.md#tabular-numbers" rel="external">tabular numbers</a> to allow numbers of the same width to be more easily compared</li>
+    <li>Ak porovnávate riadky alebo stĺpce čísel, zarovnajte čísla v bunkách tabuľky vpravo.</li>
+    <li>Použite štýl tabuľkové čísla z
+      <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/docs/mixins.md#tabular-numbers" rel="external"> JDMES frontend toolkitu</a>, aby sa dali čísla rovnakej šírky jednoduchšie porovnať.</li>
   </ul>
 
-<div class="example">
-  {% include "snippets/data_table_numeric.html" %}
-</div>
+  <div class="example">
+    {% include "snippets/data_table_numeric.html" %}
+  </div>
 
-<pre>
+  <pre>
 <code class="language-markup">
   {% filter escape %}
     {% include "snippets/data_table_numeric.html" %}
@@ -45,19 +45,35 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="data-in-a-table">Data in a table</h3>
+  <h3 class="heading-medium" id="data-in-a-table">Údaje v tabuľke</h3>
+
+  <ul class="text list list-bullet">
+    <li>
+      Textové informácie v tabuľkách zarovnajte vľavo alebo na stred.
+    </li>
+    <li>
+      Na popis tabuľky použite titulok rovnako, ako by ste použili nadpis. Pomôže to používateľom nájsť tabuľku, zorientovať sa v nej a porozumieť jej.
+    </li>
+    <li>
+      V dátových tabuľkách identifikujte hlavičky riadkov a stĺpcov. Obsah buniek má obsahovať zmysluplné hodnoty, ktoré súvisia s danými hlavičkami.
+    </li>
+    <li>
+      Pre dátové tabuľky, ktoré majú dve alebo viac logických úrovní hlavičiek riadkov alebo stĺpcov, sa používa zvýraznenie vzťahov medzi dátovými bunkami a bunkami hlavičky.
+    </li>
+    <li>Tabuľky musia dávať zmysel pri čítaní zľava doprava.</li>
+    <li>Bunky v tabuľkách nezlučujte. Ak obsah bunky tabuľky významovo patrí do viacerých buniek, nachádza sa vo viacerých bunkách.</li>
+    <li>Každá tabuľka musí dávať zmysel v horizontálnej podobe, tabuľky sa totiž čítajú po riadkoch. Ak tabuľka nedáva zmysel po riadkoch, nepoužíva sa. </li>
+  </ul>
+
+
+
   <p>
-    Not all content in tables should be right aligned.
   </p>
-  <p class="text">
-    Use a caption to describe the table in the same way you would use a heading. It can help users find, navigate and understand tables.
-  </p>
+  <div class="example">
+    {% include "snippets/data_table.html" %}
+  </div>
 
-<div class="example">
-  {% include "snippets/data_table.html" %}
-</div>
-
-<pre>
+  <pre>
 <code class="language-markup">
   {% filter escape %}
     {% include "snippets/data_table.html" %}
@@ -65,16 +81,14 @@
 </code>
 </pre>
 
-<p>
-  <a href="https://paper.dropbox.com/doc/Tables-uJx87vr8kI2xKiLwsEdRt" rel="external">
-    Discuss tables on Dropbox Paper
-  </a>
-</p>
-
-  <h3 class="heading-medium" id="data-visualisation">Data visualisation</h3>
+  <h3 class="heading-medium" id="data-visualisation">Vizualizácia dát v infografike</h3>
   <ul class="list list-bullet text">
-    <li>data is recommended as an alternative to using images</li>
-    <li>for screen readers, ensure the data value appears first so it makes sense when read aloud</li>
+    <li>
+      Údaje sú odporúčané ako alternatíva k používaniu obrázkov. V prípade poskytovania údajov vo forme
+      obrázkov sa vždy musí poskytovať textový ekvivalent.
+    </li>
+    <li>V prípade použitia čítačky obrazoviek sa musí dátová hodnota zobraziť ako prvá, aby bol údaj pri čítaní
+      nahlas zmysluplný. Pri lineárnom usporiadaní vizualizácie je teda dátová hodnota poskytovaná ako prvá.</li>
   </ul>
 
   <div class="example">
@@ -88,7 +102,7 @@
     </div>
   </div>
 
-<pre>
+  <pre>
 <code class="language-markup">
   {% filter escape %}
     {% include "snippets/data_80px_16px_example.html" %}
@@ -107,27 +121,13 @@
     </div>
   </div>
 
-<pre>
+  <pre>
 <code class="language-markup">
   {% filter escape %}
     {% include "snippets/data_48px_16px_example.html" %}
   {% endfilter %}
 </code>
 </pre>
-
-  <h3 class="heading-medium" id="examples">Examples</h3>
-  <ul class="list list-bullet">
-    <li>
-      <a href="https://www.gov.uk/pay-leave-for-parents/y/yes/2013-1-2/employee/employee/yes/yes/122.00-week/yes/yes/yes/122.00-week/yes" rel="external">
-        see an example of table usage on GOV.UK
-      </a>
-    </li>
-    <li>
-      <a href="https://www.gov.uk/performance/carers-allowance/volumetrics" rel="external">
-        see an example of numeric table usage on GOV.UK
-      </a>
-    </li>
-  </ul>
 
 </main><!-- / #content -->
 {% endblock %}
