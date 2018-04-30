@@ -15,15 +15,15 @@ main {
 }
 
 .font-xlarge {
-  @include core-48;
+  @include core-52;
 }
 
 .font-large {
-  @include core-36;
+  @include core-38;
 }
 
 .font-medium {
-  @include core-24;
+  @include core-20;
 }
 
 .font-small {
@@ -40,15 +40,15 @@ main {
 }
 
 .bold-xlarge {
-  @include bold-48();
+  @include bold-52();
 }
 
 .bold-large {
-  @include bold-36();
+  @include bold-38();
 }
 
 .bold-medium {
-  @include bold-24();
+  @include bold-20();
 }
 
 .bold-small {
@@ -70,7 +70,7 @@ main {
 
 // Headings
 .heading-xlarge {
-  @include bold-48();
+  @include bold-52();
 
   margin-top: em(15, 32);
   margin-bottom: em(30, 32);
@@ -81,7 +81,7 @@ main {
   }
 
   .heading-secondary {
-    @include heading-27();
+    @include heading-26();
 
     display: block;
     color: $secondary-text-colour;
@@ -90,7 +90,7 @@ main {
 }
 
 .heading-large {
-  @include bold-36();
+  @include bold-38();
 
   margin-top: em(25, 24);
   margin-bottom: em(10, 24);
@@ -101,7 +101,7 @@ main {
   }
 
   .heading-secondary {
-    @include heading-24();
+    @include heading-20();
 
     display: block;
     color: $secondary-text-colour;
@@ -110,7 +110,7 @@ main {
 }
 
 .heading-medium {
-  @include bold-24();
+  @include bold-20();
 
   margin-top: em(25, 20);
   margin-bottom: em(10, 20);
@@ -153,7 +153,7 @@ p,
 
 // Lede, or intro text
 .lede {
-  @include core-24;
+  @include core-20;
 }
 
 // Set a max-width for text blocks
