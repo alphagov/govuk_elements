@@ -1,0 +1,284 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.SK Elementy
+{% endblock %}
+
+{% block main_content %}
+
+
+<div id="wrapper" class="direction-ltr">
+    <main role="main" id="content" lang="en">
+
+        <!-- Page title and contact -->
+        <div class="grid-row">
+
+            <div class="column-two-thirds">
+                <div class="page-header">
+                    <h1 class="page-header__title">
+                        Dátumy
+                    </h1>
+                    <p class="page-header__context">Tento návod opisuje postup, ako žiadať od používateľov uvedenie dátumov.</p>
+
+                </div>
+            </div>
+
+            <div class="column-third">
+
+                <!--<div class="community-contact">
+                    <p>
+                        <a class="feedback" href="/contact/govuk">Give feedback about this page</a>
+                    </p>
+                </div>-->
+            </div>
+        </div>
+
+        <!-- Metadata-->
+        <div class="grid-row">
+            <div class="column-two-thirds">
+
+                <!--<div class="metadata">
+                    <dl>
+                        <dt>Published by:</dt>
+                        <dd>
+                            <a href="/service-manual/communities/design-community">Design community</a>
+                        </dd>
+                        <dt>Last updated:</dt>
+                        <dd>
+                            7 months ago
+                        </dd>
+                    </dl>
+                </div>-->
+
+            </div>
+        </div>
+
+        <div class="grid-row" data-module="highlight-active-section-heading">
+            <div class="column-third">
+
+                <!--  Page contents -->
+                <div class="page-contents js-page-contents js-stick-at-top-when-scrolling js-sticky-resize" style="width: 300px;">
+                    <h3 class="page-contents__title">Stránka obsahuje:</h3>
+                    <ol class="page-contents__list">
+                        <li><a href="#typy">Typy dátumov</a></li>
+                        <li><a href="#poziadanie1">Požadovanie ľahko zapamätateľných dátumov</a></li>
+                        <li><a href="#poziadanie2">Požadovanie dátumov z dokumentov a kariet</a></li>
+                        <li><a href="#poziadanie3">Požadovanie približných dátumov</a></li>
+                        <li><a href="#poziadanie4">Požadovanie relatívnych dátumov</a></li>
+                        <li><a href="#pouzivanie">Používanie kalendára</a></li>
+                        <li><a href="#ako-pisat">Ako písať dátumy</a></li>
+                        <li><a href="#overit">Ako overiť, že sú dátumy správne</a></li>
+                        <li><a href="#suvisiace">Súvisiace návody</a></li>
+                    </ol>
+                </div>
+
+            </div>
+            <div class="column-two-thirds">
+
+                <div class="govspeak-wrapper">
+
+                    <div class="govuk-govspeak ">
+
+                        <h2 id="typy">Typy dátumov</h2>
+                        <p>
+                            Spôsob, akým sa pýtate používateľov na dátumy, závisí od typov dátumov, na ktoré sa pýtate. Napríklad:
+                        </p>
+                        <ul class="list-bullet">
+                            <li>ľahko zapamätateľné dátumy (ako dátum narodenia alebo svadby),</li>
+                            <li>dátumy z dokumentov alebo kariet (ako pas alebo kreditná karta),</li>
+                            <li>približné dátumy (ako “jún 1983”),</li>
+                            <li>relatívne dátumy (ako “4 dni od dnes”).</li>
+                        </ul>
+
+                        <h2 id="poziadanie1">Požadovanie ľahko zapamätateľných dátumov</h2>
+                        <p>
+                            Na požadovanie ľahko zapamätateľných dátumov, ktoré má používateľ vyplniť, ako dátum narodenia, používajte textové polia.
+                        </p>
+                        <p>
+                            Napríklad:
+                        </p>
+                        <img src="/public/images/patterns/date1.png">
+                        <p>
+                        Použite tri polia, pretože bude jednoduchšie overiť jednotlivé časti než sa snažiť validovať jedno samostatné pole. Uvádzajte ich v poradí deň, mesiac, rok. Platnosť  dátumu validujte. Ak celý dátum nemusí byť známy, umožnite vypĺňať iba známu časť  dátumu.
+                        </p>
+                        <p>
+                        Neposúvajte používateľov medzi poľami automaticky. Môže to totiž kolidovať s používaním klávesnice a zmiasť používateľov.
+                        </p>
+                        <p>
+                        Použitie kalendára (vizuálne kalendáre, ktoré môžu byť použité na výber dátumu) nie sú zvlášť užitočné pri výbere známych dátumov a niektorí používatelia majú problém vybrať si dátum takýmto spôsobom.
+                        </p>
+
+                        <h3>Spustenie numerickej klávesnice na zariadeniach iPhone</h3>
+
+                        <p>Na spustenie numerickej klávesnice na zariadeniach iPhone, pridajte do dátového poľa nasledovný pattern atribút: pattern="[0-9]*"</p>
+
+
+                        <h2 id="poziadanie2">Požadovanie dátumov z dokumentov alebo kariet</h2>
+                        <p>Požadovanie dátumov z dokumentov alebo kariet</p>
+
+                        <h2 id="poziadanie3">Požadovanie približných dátumov</h2>
+                        <p>Ak nepotrebujete presný dátum a pýtate sa na dátum, ktorý si používateľ nemusí pamätať (napríklad “dátum kedy ste stratili svoj pas”), uistite sa, že dáte používateľovi možnosť uviesť približný dátum, ako napríklad “Jún 1983”.</p>
+                        <p>Tu je príklad:</p>
+                        <img src="/public/images/patterns/date2.png">
+
+                        <h2 id="poziadanie4">Požadovanie relatívnych dátumov</h2>
+                        <p>
+                        Môžete prísť do situácie, kedy budete potrebovať dátumy, ktoré sú relatívne k dnešnému dátumu alebo k inému dňu – toto je bežné, ak si používateľ rezervuje stretnutie.
+                        </p>
+                        <p>
+                        Preto by ste mali umožniť používateľovi uviesť alebo vybrať relatívny dátum ako “zajtra” alebo “o 4 pracovné dni”, pričom v takomto prípade odporúčame aj informatívne zobraziť automaticky vypočítanú informáciu o výslednom dátume, napr. “približne 23. júna”. Ak je deň v týždni dôležitý, uveďte aj túto informáciu.
+                        </p>
+
+                        <h2 id="pouzivanie">Používanie kalendára</h2>
+                        <p>
+                            Kalendár použite iba v prípadoch, ak bude používateľ v nasledovných situáciách:
+                        </p>
+                        <ul class="list-bullet">
+                            <li>pozná deň v týždni a konkrétny dátum,</li>
+                            <li>porovnáva dátumy,</li>
+                            <li>uvádza rozsah dátumov.</li>
+                        </ul>
+                        <p>
+                            Použitie kalendára môže pomôcť používateľom, ktorí si napríklad potrebujú rezervovať stretnutie ako súčasť využitia vašej služby.
+                        </p>
+                        <p>
+                            Ak potrebujete zobraziť dostupné dátumy, vložte kalendár na stránku a uistite sa, že je dostatočne veľký na to, aby bol čitateľný.
+                        </p>
+
+                        <p>
+                            Tu je príklad:
+                        </p>
+
+                        <img src="/public/images/patterns/date3.png">
+                        <p>Nikdy nevytvárajte ovládanie kalendára, ktoré je závislé od JavaScriptu, ako od jedinej vstupnej možnosti.</p>
+
+
+                        <h2 id="ako-pisat">Ako zobrazovať dátumy
+                        </h2>
+                        <p>Ak potrebujete zobraziť dátum, použite formát “deň mesiac rok”, napríklad “8. júl 2017”. Nepoužívajte medzi mesiacom a rokom čiarku.
+                        </p>
+                        <p>
+                            Použite predložky “od, do” v rozsahu dátumov (nie pomlčku), napríklad “od 8. júla do 9. augusta”.
+                        </p>
+                        <h2 id="overit">Ako kontrolovať, že sú dátumy správne</h2>
+                        <p>Aby ste overili, že sú dátumy používateľov správne, sústreďte sa na:</p>
+                        <ul class="list-bullet">
+                            <li>prvý dátum v rozsahu dátumov je skorší ako druhý,</li>
+                            <li>minulé dátumy sú v minulosti,</li>
+                            <li>budúce dátumy sú v budúcnosti,</li>
+                            <li>skontrolujte preklepy v dátumoch.</li>
+                        </ul>
+
+                        <h2 id="suvisiace">Súvisiace návody</h2>
+
+                        <p>Tieto návody môžu byť pre vás užitočné:</p>
+                        <ul class="list-bullet">
+                            <li><a href="/#working-with-patterns">ID-SK dizajnové vzory</a></li>
+                            <li><a href="https://www.gov.uk/service-manual/design/using-the-govuk-template-frontend-toolkit-and-elements">použitie ID-SK šablóny, frontend toolkit a elementy</a></li>
+                            <li><a href="https://www.gov.uk/service-manual/design/making-prototypes">Vytváranie prototypov</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!--<div class="change-history" data-module="toggle">
+                    <div class="change-history__latest-change">
+                        <dl>
+                            <dt>Published by:</dt>
+                            <dd>
+                                <a href="/service-manual/communities/design-community">Design community</a>
+                            </dd>
+                            <dt>Last update:</dt>
+                            <dd>
+                                <time datetime="2017-10-03T10:35:26+00:00" class="timestamp"> 3 October 2017</time>
+                                <p class="change-history__summary">
+                                    Added information on operating services in line with departmental Welsh language scheme requirements
+                                    (previously in the guide 'Making your service accessible: an introduction').
+                                </p>
+
+                            </dd>
+                        </dl>
+                    </div>
+                    <p><a href="#full-history" data-controls="full-history" data-expanded="false" role="button" aria-controls="full-history" aria-expanded="false">+ Show all page updates (2)</a></p>
+                    <ol id="full-history" class="change-history__past js-hidden" aria-live="polite" role="region">
+                        <li>
+                            <time datetime="2016-11-07T12:18:52+00:00" class="timestamp"> 7 November 2016</time>
+                            <p class="change-history__summary">
+                                Guidance first published
+                            </p>
+
+                        </li>
+                    </ol>
+                </div>-->
+
+            </div>
+        </div>
+
+    </main>
+
+    <!--<div class="full-page-width-wrapper">
+        <div class="improve-this-page" data-module="improve-this-page">
+            <div class="improve-this-page__prompt js-prompt clearfix" tabindex="-1">
+                <h3 class="improve-this-page__is-useful-question">Is this page useful?</h3>
+                <a class="improve-this-page__page-is-useful-button js-page-is-useful" data-track-category="manualFeedbackForm" data-track-action="ffYesClick" href="/contact/govuk">
+                    Yes <span class="visually-hidden"> this page is useful</span>
+                </a>      <a class="js-page-is-not-useful" data-track-category="manualFeedbackForm" data-track-action="ffNoClick" aria-controls="improveThisPageForm" aria-expanded="false" href="/contact/govuk">
+                No <span class="visually-hidden"> this page is not useful</span>
+            </a>      <a class="js-something-is-wrong improve-this-page__anything-wrong" data-track-category="manualFeedbackForm" data-track-action="ffWrongClick" aria-controls="improveThisPageForm" aria-expanded="false" href="/contact/govuk">
+                Is there anything wrong with this page?
+            </a>    </div>
+            <div id="improveThisPageForm" class="improve-this-page__form js-feedback-form js-hidden" data-track-category="manualFeedbackForm" data-track-action="ffFormSubmit" aria-hidden="true">
+                <a href="#" class="improve-this-page__close js-close-feedback-form" aria-controls="improveThisPageForm" aria-expanded="false">Close</a>
+                <div class="grid-row">
+                    <div class="column-two-thirds">
+                        <div class="js-errors"></div>
+                        <form>
+                            <input type="hidden" name="url" value="https://www.gov.uk/service-manual/design/introduction-designing-government-services">
+                            <input type="hidden" name="user_agent" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36">
+                            <div class="form-group">
+                                <label class="form-label-bold" for="description-field">
+                                    How should we improve this page?
+                                </label>
+                                <textarea id="description-field" class="form-control" name="description" rows="5" aria-required="true"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="name-field">
+                                    Name (optional)
+                                    <span class="form-hint">Include your name and email address if you'd like us to get back to you.</span>
+                                </label>
+                                <input id="name-field" class="form-control" type="text" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email-field">Email (optional)</label>
+                                <input id="email-field" class="form-control" type="text" name="email">
+                            </div>
+                            <div>
+                                <input class="button" type="submit" value="Send message">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+</div>
+{% endblock %}
+
+{% block body_end %}
+<!-- GOV.UK elements redirect -->
+<script src="/public/javascripts/redirect.js"></script>
+
+<script src="https://assets.publishing.service.gov.uk/static/libs/jquery/jquery-1.12.4-5f1157a433c276bcb98f3651434f7cb1f49ff45fe2ec2808b46ee088e61159b5.js">
+
+</script>
+
+<script src="https://assets.publishing.service.gov.uk/service-manual-frontend/application-e47aec62c201636b5b94203bb32057a69146baab883a806db90521d0445d35ea.js">
+</script>
+
+<script src="https://assets.publishing.service.gov.uk/static/header-footer-only-d03b5fd21e9197119d11b83e3325c35f8695a4040cf96e50b824f1198be8c4af.js"></script>
+
+
+{% include "includes/scripts.html" %}
+{% endblock %}
+

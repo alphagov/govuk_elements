@@ -1,0 +1,287 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.SK Elementy
+{% endblock %}
+
+{% block main_content %}
+
+
+<div id="wrapper" class="direction-ltr">
+    <main role="main" id="content" lang="en">
+
+        <!-- Page title and contact -->
+        <div class="grid-row">
+
+            <div class="column-two-thirds">
+                <div class="page-header">
+                    <h1 class="page-header__title">
+                        Proces overenia e-mailovej adresy
+                    </h1>
+                    <p class="page-header__context">Tento návod opisuje spôsob použitia, procesu overenia e-mailovej adresy na zistenie, či má používateľ prístup k špecifickému e-mailovému účtu.</p>
+                </div>
+            </div>
+
+            <div class="column-third">
+
+                <!--<div class="community-contact">
+                    <p>
+                        <a class="feedback" href="/contact/govuk">Give feedback about this page</a>
+                    </p>
+                </div>-->
+            </div>
+        </div>
+
+        <!-- Metadata-->
+        <div class="grid-row">
+            <div class="column-two-thirds">
+
+                <!--<div class="metadata">
+                    <dl>
+                        <dt>Published by:</dt>
+                        <dd>
+                            <a href="/service-manual/communities/design-community">Design community</a>
+                        </dd>
+                        <dt>Last updated:</dt>
+                        <dd>
+                            7 months ago
+                        </dd>
+                    </dl>
+                </div>-->
+
+            </div>
+        </div>
+
+        <div class="grid-row" data-module="highlight-active-section-heading">
+            <div class="column-third">
+
+                <!--  Page contents -->
+                <div class="page-contents js-page-contents js-stick-at-top-when-scrolling js-sticky-resize" style="width: 300px;">
+                    <h3 class="page-contents__title">Stránka obsahuje:</h3>
+                    <ol class="page-contents__list">
+                        <li><a href="#kedy">Kedy použiť proces overenia e-mailovej adresy</a></li>
+                        <li><a href="#ako">Ak použijete proces overenia e-mailovej adresy</a></li>
+                        <li><a href="#suvisiace">Súvisiace návody</a></li>
+                    </ol>
+                </div>
+
+            </div>
+            <div class="column-two-thirds">
+
+                <div class="govspeak-wrapper">
+
+                    <div class="govuk-govspeak ">
+                        <h2 id="kedy">Kedy použiť proces overenia e-mailovej adresy</h2>
+                        <p>Vyhnite sa použitiu procesu overenia e-mailových adries, okrem situácií kedy:</p>
+                        <ul class="list-bullet">
+                            <li>je kritická funkcionalita v službe prístupná iba prostredníctvom e-mailu (napríklad resetovanie hesla),</li>
+                            <li>náhodné použitie nesprávnej e-mailovej adresy by spôsobilo, že niekto iný by sa dostal k citlivým údajom iného používateľa.</li>
+                        </ul>
+                        <p>Proces overenia e-mailových adries môže byť rušivý, pretože núti používateľa prepínať z vašej služby na jeho e-mailovú adresu a späť.
+                        </p>
+                        <p>Môže sa preto stať, že používateľ nedokončí proces, pretože:
+                        </p>
+                        <ul class="list-bullet">
+                            <li>bude zmätený,</li>
+                            <li>nemá prístup k svojmu e-mailovému účtu alebo nemá e-mailový účet,</li>
+                            <li>nedostane svoj potvrdzovací e-mail rýchlo,</li>
+                            <li>neuvidí potvrdzovací e-mail (napríklad, pretože je doručený do Spam priečinku).</li>
+                        </ul>
+                        <p>Vašu službu musíte navrhnúť tak, aby predchádzala týmto problémom.
+                        </p>
+                        <p>Pamätajte si, že potvrdzujúce e-maily nepotvrdzujú totožnosť danej osoby, ale iba to, že osoba má prístup k danej e-mailovej adrese v čase potvrdenia.
+                        </p>
+
+                        <h2 id="ako">Ak použijete proces overenia e-mailovej adresy</h2>
+                        <p>Ak použijete proces overenia e-mailovej adresy, mali by ste zvážiť:
+                        </p>
+                        <ul class="list-bullet">
+                            <li>dobu vypršania platnosti odkazu, ktorú nastavíte pre odkaz zaslaný v potvrdzovacom e-maili,</li>
+                            <li>umožniť používateľovi znova si poslať aktivačný e-mail,</li>
+                            <li>použitie vynúteného alebo nevynúteného spôsobu overenia e-mailovej adresy,</li>
+                            <li>vytvoriť dizajn stránky na aktiváciu účtu.</li>
+                        </ul>
+                        <h3>Nastavenie doby vypršania platnosti</h3>
+                        <p>Aby odkaz nemohol byť použitý po určitom časovom období, nastavte mu dátum vypršania platnosti.
+                        </p>
+                        <p>Zneaktívniť odkaz by ste mali tiež v prípade, ak:
+                        </p>
+                        <ul class="list-bullet">
+                            <li>už odkaz bol raz použitý,</li>
+                            <li>bol nahradený novým odkazom,</li>
+                            <li>si používateľ na svojom účte zmenil e-mailovú adresu.</li>
+                        </ul>
+                        <p>Ak sa používateľ pokúsi použiť už neplatný odkaz alebo odkaz, ktorý už bol použitý, je potrebné ho o tom upovedomiť.
+                        </p>
+                        <h3>Umožniť používateľovi preposlať si e-mail</h3>
+                        <p>Umožnite používateľom znova si poslať potvrdzovací e-mail v prípade, že vložili nesprávnu e-mailovú adresu alebo im z nejakého dôvodu e-mail nebol doručený.
+                        </p>
+                        <h3>Použitie vynúteného a nevynúteného overenia
+                        </h3>
+
+                        <p>Existujú dva spôsoby procesu overenia e-mailovej adresy, vynútený a nevynútený.</p>
+                        <p>
+                            Vynútený spôsob overenia zabraňuje používateľovi v použití služby, pokiaľ nepotvrdí svoju e-mailovú adresu.
+                        </p>
+                        <p>
+                            Pri nevynútenom spôsobe overenia používateľ môže pokračovať vo využívaní služby, ale bude pravidelne upozorňovaný, že potrebuje potvrdiť svoju e-mailovú adresu. Niektoré funkcionality nemusia byť pre používateľa dostupné pokiaľ nepotvrdí e-mail.
+                        </p>
+                        <p>
+                            Vynútené overenie je jednoduchšie, no ak používateľ nemôže potvrdiť svoj e-mail, nie je vôbec schopný službu použiť. Je veľmi dôležité, aby ste používateľovi v takomto prípade poslali e-mail ihneď.
+                        </p>
+                        <p>
+                            Nevynútený spôsob overenia si vyžaduje citlivejší dizajn. Neviete totiž garantovať, že si všetci používatelia potvrdia e-mailovú adresu. To môže zabrániť používateľovi v prístupe k vaše službe.
+                        </p>
+                        <p>
+                            Niektoré služby zo začiatku podporujú nevynútené overenie a následne sa zmenia na vynútené.
+                        </p>
+
+                        <h3>Dizajnovanie stránky na aktiváciu účtu
+                        </h3>
+    <p>
+                        Táto stránka má informovať, čo potrebuje používateľ na aktiváciu svojho účtu.
+    </p>
+                        <p>
+                        Obvykle by mala vaša služba zobraziť túto stránku okamžite po tom, ako používateľ zadá svoju e-mailovú adresu alebo ak sa pokúsi prihlásiť pred tým, ako potvrdí svoj e-mail.
+                        </p>
+                        <p>
+                        Stránka by mala:
+                        </p>
+
+                        <ul class="list-bullet">
+                            <li>zobraziť používateľovi e-mailovú adresu, na ktorú ste mu poslali aktivačný e-mail,</li>
+                            <li>vysvetliť používateľovi, že pre pokračovanie musí kliknúť na odkaz v e-maili,</li>
+                            <li>umožniť používateľovi preposlať si aktivačný email (na inú e-mailovú adresu, ak je to potrebné).</li>
+                        </ul>
+
+                        <p>V prípade vynúteného overenia by táto stránka mala byť jedinou, ktorú používateľ uvidí pri snahe prihlásiť sa ešte pred aktiváciou svojho účtu.
+                        </p>
+                        <p>Ak používate nevynútené overenie a používateľ sa prihlasuje pred aktiváciou účtu, potom by ste mu mali:
+                        </p>
+
+                        <ul class="list-bullet">
+                            <li>umožniť službu používať,</li>
+                            <li>pripomenúť, že si potrebuje aktivovať svoj účet,</li>
+                            <li>povedať, kam bol odoslaný aktivačný e-mail,</li>
+                            <li>umožniť znovu si odoslať aktivačný e-mail,</li>
+                            <li>umožniť zmeniť e-mailovú adresu a potvrdiť namiesto starej novú.</li>
+                        </ul>
+
+                        <p>Ak používateľ klikne na odkaz v aktivačnom e-maili, presmerujte ho na stránku, ktorá potvrdzuje, že si svoj účet aktivoval. V tomto bode môžete alebo aj nemusíte vyžadovať, aby sa používateľ prihlásil. Závisí to od toho, kde v procese sa nachádza aktivačná stránka.
+                        </p>
+
+                        <h2 id="suvisiace">Súvisiace návody</h2>
+
+                        <p>Tieto návody môžu byť pre vás užitočné:</p>
+                        <ul class="list-bullet">
+                            <li><a href="/#working-with-patterns">ID-SK dizajnové vzory</a></li>
+                            <li><a href="https://www.gov.uk/service-manual/design/using-the-govuk-template-frontend-toolkit-and-elements">použitie ID-SK šablóny, frontend toolkit a elementy</a></li>
+                            <li><a href="https://www.gov.uk/service-manual/design/making-prototypes">Vytváranie prototypov</a></li>
+                        </ul>
+
+
+                    </div>
+
+                </div>
+
+                <!--<div class="change-history" data-module="toggle">
+                    <div class="change-history__latest-change">
+                        <dl>
+                            <dt>Published by:</dt>
+                            <dd>
+                                <a href="/service-manual/communities/design-community">Design community</a>
+                            </dd>
+                            <dt>Last update:</dt>
+                            <dd>
+                                <time datetime="2017-10-03T10:35:26+00:00" class="timestamp"> 3 October 2017</time>
+                                <p class="change-history__summary">
+                                    Added information on operating services in line with departmental Welsh language scheme requirements
+                                    (previously in the guide 'Making your service accessible: an introduction').
+                                </p>
+
+                            </dd>
+                        </dl>
+                    </div>
+                    <p><a href="#full-history" data-controls="full-history" data-expanded="false" role="button" aria-controls="full-history" aria-expanded="false">+ Show all page updates (2)</a></p>
+                    <ol id="full-history" class="change-history__past js-hidden" aria-live="polite" role="region">
+                        <li>
+                            <time datetime="2016-11-07T12:18:52+00:00" class="timestamp"> 7 November 2016</time>
+                            <p class="change-history__summary">
+                                Guidance first published
+                            </p>
+
+                        </li>
+                    </ol>
+                </div>-->
+
+            </div>
+        </div>
+
+    </main>
+
+    <!--<div class="full-page-width-wrapper">
+        <div class="improve-this-page" data-module="improve-this-page">
+            <div class="improve-this-page__prompt js-prompt clearfix" tabindex="-1">
+                <h3 class="improve-this-page__is-useful-question">Is this page useful?</h3>
+                <a class="improve-this-page__page-is-useful-button js-page-is-useful" data-track-category="manualFeedbackForm" data-track-action="ffYesClick" href="/contact/govuk">
+                    Yes <span class="visually-hidden"> this page is useful</span>
+                </a>      <a class="js-page-is-not-useful" data-track-category="manualFeedbackForm" data-track-action="ffNoClick" aria-controls="improveThisPageForm" aria-expanded="false" href="/contact/govuk">
+                No <span class="visually-hidden"> this page is not useful</span>
+            </a>      <a class="js-something-is-wrong improve-this-page__anything-wrong" data-track-category="manualFeedbackForm" data-track-action="ffWrongClick" aria-controls="improveThisPageForm" aria-expanded="false" href="/contact/govuk">
+                Is there anything wrong with this page?
+            </a>    </div>
+            <div id="improveThisPageForm" class="improve-this-page__form js-feedback-form js-hidden" data-track-category="manualFeedbackForm" data-track-action="ffFormSubmit" aria-hidden="true">
+                <a href="#" class="improve-this-page__close js-close-feedback-form" aria-controls="improveThisPageForm" aria-expanded="false">Close</a>
+                <div class="grid-row">
+                    <div class="column-two-thirds">
+                        <div class="js-errors"></div>
+                        <form>
+                            <input type="hidden" name="url" value="https://www.gov.uk/service-manual/design/introduction-designing-government-services">
+                            <input type="hidden" name="user_agent" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36">
+                            <div class="form-group">
+                                <label class="form-label-bold" for="description-field">
+                                    How should we improve this page?
+                                </label>
+                                <textarea id="description-field" class="form-control" name="description" rows="5" aria-required="true"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="name-field">
+                                    Name (optional)
+                                    <span class="form-hint">Include your name and email address if you'd like us to get back to you.</span>
+                                </label>
+                                <input id="name-field" class="form-control" type="text" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email-field">Email (optional)</label>
+                                <input id="email-field" class="form-control" type="text" name="email">
+                            </div>
+                            <div>
+                                <input class="button" type="submit" value="Send message">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+</div>
+{% endblock %}
+
+{% block body_end %}
+<!-- GOV.UK elements redirect -->
+<script src="/public/javascripts/redirect.js"></script>
+
+<script src="https://assets.publishing.service.gov.uk/static/libs/jquery/jquery-1.12.4-5f1157a433c276bcb98f3651434f7cb1f49ff45fe2ec2808b46ee088e61159b5.js">
+
+</script>
+
+<script src="https://assets.publishing.service.gov.uk/service-manual-frontend/application-e47aec62c201636b5b94203bb32057a69146baab883a806db90521d0445d35ea.js">
+</script>
+
+<script src="https://assets.publishing.service.gov.uk/static/header-footer-only-d03b5fd21e9197119d11b83e3325c35f8695a4040cf96e50b824f1198be8c4af.js"></script>
+
+
+{% include "includes/scripts.html" %}
+{% endblock %}
+

@@ -1,0 +1,272 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.SK Elementy
+{% endblock %}
+
+{% block main_content %}
+
+
+<div id="wrapper" class="direction-ltr">
+    <main role="main" id="content" lang="en">
+
+        <!-- Page title and contact -->
+        <div class="grid-row">
+
+            <div class="column-two-thirds">
+                <div class="page-header">
+                    <h1 class="page-header__title">
+                        Štruktúra formulárov
+                    </h1>
+                    <p class="page-header__context">
+                        Tento návod opisuje postup, ako správne usporiadať online formuláre.
+                    </p>
+                </div>
+            </div>
+
+            <div class="column-third">
+
+                <!--<div class="community-contact">
+                    <p>
+                        <a class="feedback" href="/contact/govuk">Give feedback about this page</a>
+                    </p>
+                </div>-->
+            </div>
+        </div>
+
+        <!-- Metadata-->
+        <div class="grid-row">
+            <div class="column-two-thirds">
+
+                <!--<div class="metadata">
+                    <dl>
+                        <dt>Published by:</dt>
+                        <dd>
+                            <a href="/service-manual/communities/design-community">Design community</a>
+                        </dd>
+                        <dt>Last updated:</dt>
+                        <dd>
+                            7 months ago
+                        </dd>
+                    </dl>
+                </div>-->
+
+            </div>
+        </div>
+
+        <div class="grid-row" data-module="highlight-active-section-heading">
+            <div class="column-third">
+
+                <!--  Page contents -->
+                <div class="page-contents js-page-contents js-stick-at-top-when-scrolling js-sticky-resize" style="width: 300px;">
+                    <h3 class="page-contents__title">Stránka obsahuje:</h3>
+                    <ol class="page-contents__list">
+                        <li><a href="#nadizajnujte"> Nedizajnujte online formuláre rovnako ako papierové formuláre</a></li>
+                        <li><a href="#pytajte">Pri každej otázke musíte vedieť, prečo sa ju pýtate</a></li>
+                        <li><a href="#navrhnite">Najprv navrhnite najčastejšie scenáre</a></li>
+                        <li><a href="#zacnite">Začnite s jednou vecou na stránku</a></li>
+                        <li><a href="#pomoc"> Štruktúrovanie formulára pomáha používateľom</a></li>
+                        <li><a href="#automaticke"> Automatické ukladanie</a></li>
+                    </ol>
+                </div>
+
+            </div>
+            <div class="column-two-thirds">
+
+                <div class="govspeak-wrapper">
+
+                    <div class="govuk-govspeak ">
+
+                        <h2 id="nadizajnujte">Ukážka stránok s potvrdením</h2>
+                        <p>Nesnažte sa vytvoriť digitálnu verziu existujúceho papierového formulára. Papierové formuláre sú produktom nedigitálnej doby a majú iné obmedzenia ako digitálne služby.</p>
+
+                        <p>Vždy vnímajte službu ako celok.</p>
+
+
+                        <h2 id="pytajte"> Nedizajnujte online formuláre rovnako ako papierové formuláre</h2>
+                        <p>Skôr než začnete, vytvorte si zoznam všetkých informácií, ktoré od používateľov potrebujete.</p>
+
+                        <p>Otázky sa pýtajte iba vtedy, ak viete:</p>
+                        <ul class="list-bullet">
+                            <li>že dané informácie sú nevyhnutné pre poskytnutie služby,</li>
+                            <li>prečo potrebujete tieto informácie,</li>
+                            <li>ako s nimi naložíte,</li>
+                            <li>ktorí používatelia vám musia poskytnúť informácie,</li>
+                            <li>ako skontrolujete, či sú získané informácie správne,</li>
+                            <li>ako udržať získané informácie aktuálne a v bezpečí.</li>
+                        </ul>
+
+                        <p>
+                            Tento zoznam sa nazýva “kontrola otázok” a hovorí o tom, ako so získanými informáciami naložíte.
+                        </p>
+                        <p>
+                            Kontrola otázok vás núti, aby ste odpovedali na otázku, prečo od používateľov žiadate dané informácie. Jedná sa o spôsob, vďaka ktorému zistíte, ktoré z otázok nie sú potrebné pre poskytnutie vašej služby.
+                        </p>
+
+                        <h2 id="navrhnite">Najprv navrhnite najčastejšie scenáre</h2>
+                        <p>Ak už máte kontrolu otázok dokončenú, môžete začať rozhodovať, v akom poradí sa budete používateľov otázky pýtať.</p>
+
+                        <p>Začnite s otázkami, na základe ktorých používatelia zistia, či sú oprávnení žiadať o danú službu, aby zbytočne nestrácali čas.</p>
+
+                        <p>Používajte vetviace otázky, aby používatelia odpovedali len na otázky, ktoré sú pre nich relevantné. Uistite sa, že poznáte jednotlivé skupiny používateľov vašej služby. Musíte sa rozhodnúť, ktorá skupina používateľov je majoritná a následne navrhnite formulár tak, aby ho táto skupina používateľov vedela čo najjednoduchšie vyplniť.</p>
+
+                        <h2 id="zacnite">Začnite s jednou vecou na stránku</h2>
+                        <p>Ak sa vaša služba používa iba zriedkavo, je možné, že používatelia bez digitálnych zručností budú mať problém s vyplnením komplikovaných formulárov.</p>
+
+                        <p>Rozdeľte formulár na viacero stránok tak, aby sa každá stránka obsahovo týkala iba jednej témy, napríklad:</p>
+                        <ul class="list-bullet">
+                            <li>jedna informácia, ktorú komunikujete používateľovi,</li>
+                            <li>jedno rozhodnutie, ktoré musí používateľ spraviť,</li>
+                            <li>jedna otázka, ktorú musí používateľ zodpovedať.</li>
+                        </ul>
+
+                        <p>Pri používateľskom výskume zistíte, kedy a ktoré stránky môžete zlúčiť.
+                        </p>
+                        <p>
+                            Zobrazenie iba jednej informácie na stránke pomáha používateľom:
+                        </p>
+
+                        <ul class="list-bullet">
+                            <li>pochopiť, čo od nich žiadate,</li>
+                            <li>zamerať sa na konkrétnu otázku a jej odpoveď,</li>
+                            <li>zorientovať sa v zložitom procese,</li>
+                            <li>používať službu aj na mobilnom zariadení,</li>
+                            <li>ľahko sa zorientovať po zobrazení chyby pri vypĺňaní formulára.</li>
+                        </ul>
+
+                        <p>Rovnako pomáha zobrazenie jednej informácie na stránke aj vám:
+                        </p>
+
+                        <ul class="list-bullet">
+                            <li>automaticky ukladať odpovede používateľa počas vypĺňania formulára,</li>
+                            <li>analyzovať odpovede pomocou analytických nástrojov,</li>
+                            <li>zvládnuť rozvetvené otázky a cykly.</li>
+                        </ul>
+                        <p>V prípade väčšieho počtu nepodmienených otázok sa odporúča umožniť preskočiť konkrétnu časť otázok, napríklad jednej oblasti a vrátiť sa k nim neskôr.
+                        </p>
+
+                        <h2 id="pomoc"> Štruktúrovanie formulára pomáha používateľom</h2>
+
+                        <p>Nie vždy je vhodné použiť len jedno textové pole formulára ako odpoveď na otázku. Napríklad pre vpísanie dátumu narodenia je najlepšie použiť tri textové polia.</p>
+
+                        <p>Pre názvy stránok môžete použiť buď otázku, alebo len nadpis. Napríklad: "Aký je dátum narodenia?" alebo len "Dátum narodenia".</p>
+
+                        <p>Nepoužívajte otázky a súčasne aj nadpisy. Je dôležité, aby ste používali konzistentne iba jednu formu. Pomôžete tak používateľom dostať sa do rytmu odpovedí. To im umožňuje zamerať sa na obsah otázok a nie na ich prezentáciu.</p>
+
+                        <h2 id="automaticke"> Automatické ukladanie</h2>
+
+                        <p>Odporúčame, aby všetky formuláre implementovali funkciu automatického ukladania. Používateľovi bude rozpracovaný formulár uložený do konceptov v elektronickej schránke.</p>
+
+                        <p>Používateľovi indikujeme ukladanie ako aj uloženie konceptu stavovým riadkom, ktorý je umiestnený pod hlavným nadpisom.</p>
+
+                        <h3>Ukážka 1</h3>
+                        <img src="/public/images/patterns/ukazka1.png">
+                        <h3>Ukážka 2</h3>
+                        <img src="/public/images/patterns/ukazka2.png">
+                        <h3>Ukážka 3</h3>
+                        <img src="/public/images/patterns/ukazka3.png">
+                    </div>
+
+                </div>
+
+                <!--<div class="change-history" data-module="toggle">
+                    <div class="change-history__latest-change">
+                        <dl>
+                            <dt>Published by:</dt>
+                            <dd>
+                                <a href="/service-manual/communities/design-community">Design community</a>
+                            </dd>
+                            <dt>Last update:</dt>
+                            <dd>
+                                <time datetime="2017-10-03T10:35:26+00:00" class="timestamp"> 3 October 2017</time>
+                                <p class="change-history__summary">
+                                    Added information on operating services in line with departmental Welsh language scheme requirements
+                                    (previously in the guide 'Making your service accessible: an introduction').
+                                </p>
+
+                            </dd>
+                        </dl>
+                    </div>
+                    <p><a href="#full-history" data-controls="full-history" data-expanded="false" role="button" aria-controls="full-history" aria-expanded="false">+ Show all page updates (2)</a></p>
+                    <ol id="full-history" class="change-history__past js-hidden" aria-live="polite" role="region">
+                        <li>
+                            <time datetime="2016-11-07T12:18:52+00:00" class="timestamp"> 7 November 2016</time>
+                            <p class="change-history__summary">
+                                Guidance first published
+                            </p>
+
+                        </li>
+                    </ol>
+                </div>-->
+
+            </div>
+        </div>
+
+    </main>
+
+    <!--<div class="full-page-width-wrapper">
+        <div class="improve-this-page" data-module="improve-this-page">
+            <div class="improve-this-page__prompt js-prompt clearfix" tabindex="-1">
+                <h3 class="improve-this-page__is-useful-question">Is this page useful?</h3>
+                <a class="improve-this-page__page-is-useful-button js-page-is-useful" data-track-category="manualFeedbackForm" data-track-action="ffYesClick" href="/contact/govuk">
+                    Yes <span class="visually-hidden"> this page is useful</span>
+                </a>      <a class="js-page-is-not-useful" data-track-category="manualFeedbackForm" data-track-action="ffNoClick" aria-controls="improveThisPageForm" aria-expanded="false" href="/contact/govuk">
+                No <span class="visually-hidden"> this page is not useful</span>
+            </a>      <a class="js-something-is-wrong improve-this-page__anything-wrong" data-track-category="manualFeedbackForm" data-track-action="ffWrongClick" aria-controls="improveThisPageForm" aria-expanded="false" href="/contact/govuk">
+                Is there anything wrong with this page?
+            </a>    </div>
+            <div id="improveThisPageForm" class="improve-this-page__form js-feedback-form js-hidden" data-track-category="manualFeedbackForm" data-track-action="ffFormSubmit" aria-hidden="true">
+                <a href="#" class="improve-this-page__close js-close-feedback-form" aria-controls="improveThisPageForm" aria-expanded="false">Close</a>
+                <div class="grid-row">
+                    <div class="column-two-thirds">
+                        <div class="js-errors"></div>
+                        <form>
+                            <input type="hidden" name="url" value="https://www.gov.uk/service-manual/design/introduction-designing-government-services">
+                            <input type="hidden" name="user_agent" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36">
+                            <div class="form-group">
+                                <label class="form-label-bold" for="description-field">
+                                    How should we improve this page?
+                                </label>
+                                <textarea id="description-field" class="form-control" name="description" rows="5" aria-required="true"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="name-field">
+                                    Name (optional)
+                                    <span class="form-hint">Include your name and email address if you'd like us to get back to you.</span>
+                                </label>
+                                <input id="name-field" class="form-control" type="text" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email-field">Email (optional)</label>
+                                <input id="email-field" class="form-control" type="text" name="email">
+                            </div>
+                            <div>
+                                <input class="button" type="submit" value="Send message">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+</div>
+{% endblock %}
+
+{% block body_end %}
+<!-- GOV.UK elements redirect -->
+<script src="/public/javascripts/redirect.js"></script>
+
+<script src="https://assets.publishing.service.gov.uk/static/libs/jquery/jquery-1.12.4-5f1157a433c276bcb98f3651434f7cb1f49ff45fe2ec2808b46ee088e61159b5.js">
+
+</script>
+
+<script src="https://assets.publishing.service.gov.uk/service-manual-frontend/application-e47aec62c201636b5b94203bb32057a69146baab883a806db90521d0445d35ea.js">
+</script>
+
+<script src="https://assets.publishing.service.gov.uk/static/header-footer-only-d03b5fd21e9197119d11b83e3325c35f8695a4040cf96e50b824f1198be8c4af.js"></script>
+
+
+{% include "includes/scripts.html" %}
+{% endblock %}
+

@@ -1,0 +1,300 @@
+no{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.SK Elementy
+{% endblock %}
+
+{% block main_content %}
+
+
+<div id="wrapper" class="direction-ltr">
+    <main role="main" id="content" lang="en">
+
+        <!-- Page title and contact -->
+        <div class="grid-row">
+
+            <div class="column-two-thirds">
+                <div class="page-header">
+                    <p class="page-header__context">Design</p>
+                    <h1 class="page-header__title">
+                        Metodika UCD (user-centered dizajn)
+                    </h1>
+                </div>
+            </div>
+
+            <div class="column-third">
+
+                <!--<div class="community-contact">
+                    <p>
+                        <a class="feedback" href="/contact/govuk">Give feedback about this page</a>
+                    </p>
+                </div>-->
+            </div>
+        </div>
+
+        <!-- Metadata-->
+        <div class="grid-row">
+            <div class="column-two-thirds">
+
+                <!--<div class="metadata">
+                    <dl>
+                        <dt>Published by:</dt>
+                        <dd>
+                            <a href="/service-manual/communities/design-community">Design community</a>
+                        </dd>
+                        <dt>Last updated:</dt>
+                        <dd>
+                            7 months ago
+                        </dd>
+                    </dl>
+                </div>-->
+
+            </div>
+        </div>
+
+        <div class="grid-row" data-module="highlight-active-section-heading">
+            <div class="column-third">
+
+                <!--  Page contents -->
+                <div class="page-contents js-page-contents js-stick-at-top-when-scrolling js-sticky-resize" style="width: 300px;">
+                    <h2 class="page-contents__title">Stránka obsahuje:</h2>
+                    <ul class="page-contents__list">
+                        <li><a href="#metodika">Metodika UCD</a></li>
+                        <li><a href="#vyskum">Úvodná analýza a výskum zákazníckych skupín</a></li>
+                        <li><a href="#prototyp">Návrh navigácie prototypu a testovanie</a></li>
+                        <li><a href="#rozhranie">Benchmarking používateľského rozhrania</a></li>
+                        <li><a href="#optimalizacia">Optimalizácia analytikou správania používateľa</a></li>
+                        <li><a href="#vystupy">Forma výstupov plynúcich z metodiky UCD</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="column-two-thirds">
+
+                <div class="govspeak-wrapper">
+
+                    <div class="govuk-govspeak ">
+                        
+                        <h2 id="metodika">Metodika UCD</h2>
+                        <p>Elektronické služby štátu by mali byť pripravované metodikou user-centered dizajnu (UCD), aby sa zabezpečila zmysluplnosť a použiteľnosť služieb zo strany koncového používateľa – občana. Na dodržanie user-centered prístupu je nutné rozdeliť prípravnú fázu projektu do 4 fáz:</p>
+                        <p>
+                        <ul>
+                            <li>Úvodná analýza a výskum zákazníckych skupín.</li>
+                            <li>Návrh navigácie, prototypu a testovanie.</li>
+                            <li>Benchmarking používateľského rozhrania.</li>
+                            <li>Optimalizácia používateľského rozhrania.</li>
+                        </ul>
+                        </p>
+                        
+                        <h2 id="vyskum">Úvodná analýza a výskum zákazníckych skupín</h2>
+                        <p>V prípravnej fáze projektu, kedy je vykonávaná biznis analýza a technická analýza, je nutné analýzy doplniť o výskum správania koncových používateľov, ktorý overí navrhnuté biznis koncepty, doplní očakávania občanov v doméne danej elektronickej služby a zanalyzuje ich motivácie, problémy, znalosti a potreby. Aktivita by mala byť realizovaná ako kvalitatívny výskum s účasťou všetkých relevantných cieľových skupín. Výstupmi takejto aktivity musia byť požiadavky zákazníkov na prínos systému, popis požiadaviek na používateľské rozhranie a argumentácia ako používateľské rozhranie adresuje zdokumentované potreby koncových používateľov. Ďalšími výstupmi môžu byť aj definícia persón alebo definícia zákazníckych ciest.</p>
+                        
+                        <h2 id="prototyp">Návrh navigácie prototypu a testovanie</h2>
+                        <p>Realizované používateľské rozhranie musí byť tvorené v aktívnej kooperácii s koncovými používateľmi, aby projekt zabezpečil jeho úplnú použiteľnosť. Používatelia musia byť zapojení do tvorby informačnej architektúry a štruktúry navigácie. Tá by mala byť testovaná kvantitatívne so zapojením všetkých účastných cieľových skupín. Informačná architektúra musí zohľadňovať slovník, ktorý je definovaný v Jednotnom dizajn manuáli elektronických služieb.</p>
+                        <p>Prototyp elektronickej služby musí byť testovaný aspoň 3x počas jeho prípravy so zástupcami všetkých relevantných cieľových skupín metódou formatívneho testovania použiteľnosti, ideálne však na týždennej báze. Zistenia z testovania musia byť následne zapracované do prototypu. Grafický dizajn a frontend programový kód elektronickej služby musí zohľadňovať Jednotný dizajn manuál elektronických služieb.</p>
+                        
+                        <h2 id="rozhranie">Benchmarking používateľského rozhrania</h2>
+                        <p>Pred uvedením systému do plnej prevádzky musí byť systém otestovaný sumatívnym testovaním použiteľnosti s účasťou všetkých relevantných skupín. Počas testovania budú zdokumentované metriky použiteľnosti (čas úlohy, chybovosť úlohy, efektivita úlohy, SUS skóre) pre kľúčové prípady použitia. Zároveň bude vykonané testovanie prístupnosti systému zohľadňujúce štandardy pre prístupnosť webu WCAG 2.0 AA- Web Content Accessibility Guidelines 2.0).</p>
+                        <p>Používateľské rozhranie by malo spĺňať nasledovné kritéria:</p>
+                        <ul>
+                            <li>namerané SUS skóre je vyššie ako 50 bodov;</li>
+                            <li>miera dokončenia kľúčových úloh je vyššia ako 80%;</li>
+                            <li>chybovosť kľúčových úloh je nižšia ako 40%.</li>
+                        </ul>
+                        
+                        <h2 id="optimalizacia">Optimalizácia analytikou správania používateľa</h2>
+                        <p>Po nasadení systému do ostrej prevádzky bude systém iteraktívne zlepšovaný na základe meraní z analytických nástrojov. Tieto by mali merať pri najmenšom chybovosť vykonávania úloh, čas úlohy, efektivitu úlohy a pomer transakcií vykonaných v používateľskom rozhraní (online) k počtu transakcií vykonaných pôvodným spôsobom (offline).</p>
+                        
+                        <h2 id="vystupy">Forma výstupov plynúcich z metodiky UCD</h2>
+                        <p>V nasledujúcej časti uvádzame odporúčanú formu výstupov, ktoré sú dodávané počas realizácie projektu so zaimplementovanou metodikou User-centered dizajnu.</p>
+                            <ol>
+                                <li><h3>Report zákazníckeho výskumu</h3></li>
+                                    <p>Je dokument, ktorý hĺbkovo analyzuje poznatky zozbierané kvalitatívnym výskumom (rozhovormi so zákazníkmi). Vyhodnocuje sa ním priorita potrieb budúcich používateľov, ich motivácie na používanie produktu, problémy, s ktorými sa aktuálne stretávajú a definuje ich znalostný kapitál. Pozostáva z častí:</p>
+                                    <ul>
+                                        <li>Metóda výskumu poznatkov</li>
+                                        <li>Kľúčové požiadavky zákazníkov na prínos systému</li>
+                                        <li>Zákaznícke cesty (customer journeys) (nie je nutné)</li>
+                                        <li>Zákaznícke persóny (nie je nutné)</li>
+                                    </ul>
+                                    
+                                    <h4>Metóda výskumu poznatkov</h4>
+                                    <p>Táto časť obsahuje:</p>
+                                    <ul>
+                                        <li>Použitú metodológiu</li>
+                                        <li>Scenár výskumu</li>
+                                        <li>Screener – sociodemografický charakter oslovených používateľov</li>
+                                        <li>Priebeh oslovovania a naplnenie screeneru</li>
+                                        <li>Dátum vykonania výskumu</li>
+                                    </ul>
+                                    <h4>Kľúčové požiadavky zákazníkov na prínos systému</h4>
+                                    <p>Táto časť pozostáva z:</p>
+                                    <ul>
+                                        <li>Opisu kľúčovej požiadavky</li>
+                                        <li>Rácio požiadavky opisujúcej poznatky z výskumu</li>
+                                        <li>Návrhu spôsobu validácie požiadavky kvantitatívnym výskumom</li>
+                                        <li>Konkrétnych návrhovriešení požiadavky v používateľskom rozhraní a ich prioritizácie</li>
+                                    </ul>
+                                
+                                    <h4>Zákaznícke cesty (customer journeys)</h4>
+                                    <p>Je diagram, ktorý mapuje spôsob používania systému skutočnými zákazníkmi na základe ich doterajších skúseností. Diagram spravidla obsahuje na osi X fázy procesu a na osi Y nasledujúce poznatky pre každú fázu:</p>    
+                                    <ul>
+                                        <li>Diagram aktivít</li>
+                                        <li>Miesto, zariadenie, kanál</li>
+                                        <li>Časový horizont</li>
+                                        <li>Aktivita</li>
+                                        <li>Motivácia</li>
+                                        <li>Bariéry</li>
+                                        <li>Vynaložené úsilie</li>
+                                        <li>Cieľ a potreba</li>
+                                    </ul>
+                                    <p>Zákaznícke cesty by mali uvádzať všetky kľúčové prípady použitia.</p>
+                                
+                                    <h4>Zákaznícke persóny</h4>
+                                    <p>Sú predstaviteľmi cieľových skupín používateľského rozhrania a agregujú typické správanie skupiny používateľov. Pre každú cieľovú skupinu by mali byť vytvorené 1-3 persóny.</p>
+                                    
+                                
+                                <li><h3>Mapa stránky a/alebo “user flow” (cesty zákazníka)</h3></li>
+                                    <p>Oba prístupy (mapa stránky aj “user flow”) môžu byť využité spolu alebo samostatne. Mapa stránky sa používa na popis stromových štruktúr aplikácii alebo webových sídiel. “User flow” (cesty zákazníka) opisuje lineárnu štruktúru aplikácie alebo webového sídla.</p>
+                                
+                                <li><h3>Prototyp</h3></li>
+                                    <p>Prototyp je skupina čiernobielych skíc používateľského rozhrania (wireframov) vo forme obrázkov, ktoré sú navzájom poprepájané tak, aby používateľom pripomínali skutočné používateľské rozhranie. Wireframy sú pritom pripravené takým spôsobom, aby zohľadňovali pravidlá definované v Jednotnom dizajn manuáli elektronických služieb.</p>
+                                
+                                <li><h3>Report formatívneho testovania</h3></li>
+                                    <p>Formatívne testovanie použiteľnosti prototypu je vykonané na vzorke aspoň 6 respondentov pre každú relevantnú cieľovú skupinu. Výstupom testovania je report, ktorý obsahuje:</p>
+                                    <ul>
+                                        <li>Sprioritizovaný zoznam identifikovaných problémov použiteľnosti podľa frekvencie a závažnosti,</li>
+                                        <li>scenár testovania,</li>
+                                        <li>screener – sociodemografický charakter oslovených používateľov,</li>
+                                        <li>priebeh oslovovania a naplnenie screeneru,</li>
+                                        <li>dátum vykonania výskumu,</li>
+                                        <li>popis metodiky testovania.</li>
+                                    </ul>
+                                
+                                <li><h3>Report sumatívneho testovania</h3></li>
+                                    <p>Sumatívne testovanie použiteľnosti prototypu je vykonané na vzorke aspoň 21 respondentov, ktorí sú zvolení z cieľových skupín používateľského rozhrania. Výstupom testovania je report, ktorý obsahuje:</p>
+                                    <ul>
+                                        <li>sprioritizovaný zoznam identifikovaných problémov použiteľnosti podľa frekvencie a závažnosti,</li>    
+                                        <li>dokumentáciu meraných metrík pre kľúčové prípady použitia:
+                                            <ul>
+                                                <li>čas úlohy</li>
+                                                <li>chybovosť úlohy</li>
+                                                <li>efektivita úlohy</li>
+                                            </ul>
+                                        </li>
+                                        <li>výsledok merania SUS skóre,</li>
+                                        <li>scenár testovania,</li>
+                                        <li>screener – sociodemografický charakter oslovených používateľov,</li>
+                                        <li>priebeh oslovovania a naplnenie screeneru,</li>
+                                        <li>dátum vykonania výskumu</li>
+                                        <li>popis metodiky testovania.</li>
+                                    </ul>
+                                
+                                <li><h3>Report testovania prístupnosti</h3></li>
+                                    <p>Report musí deklarovať splnenie požiadaviek podľa štandardu WCAG 2.0 AA a podľa výnosu Ministerstva financií Slovenskej republiky č. 55/2014 Z. z. o štandardoch pre informačné systémy verejnej správy. </p>
+                            </ol>
+                        
+                    </div>
+
+                </div>
+
+                <!--<div class="change-history" data-module="toggle">
+                    <div class="change-history__latest-change">
+                        <dl>
+                            <dt>Published by:</dt>
+                            <dd>
+                                <a href="/service-manual/communities/design-community">Design community</a>
+                            </dd>
+                            <dt>Last update:</dt>
+                            <dd>
+                                <time datetime="2017-10-03T10:35:26+00:00" class="timestamp"> 3 October 2017</time>
+                                <p class="change-history__summary">
+                                    Added information on operating services in line with departmental Welsh language scheme requirements
+                                    (previously in the guide 'Making your service accessible: an introduction').
+                                </p>
+
+                            </dd>
+                        </dl>
+                    </div>
+                    <p><a href="#full-history" data-controls="full-history" data-expanded="false" role="button" aria-controls="full-history" aria-expanded="false">+ Show all page updates (2)</a></p>
+                    <ol id="full-history" class="change-history__past js-hidden" aria-live="polite" role="region">
+                        <li>
+                            <time datetime="2016-11-07T12:18:52+00:00" class="timestamp"> 7 November 2016</time>
+                            <p class="change-history__summary">
+                                Guidance first published
+                            </p>
+
+                        </li>
+                    </ol>
+                </div>-->
+
+            </div>
+        </div>
+
+    </main>
+
+    <!--<div class="full-page-width-wrapper">
+        <div class="improve-this-page" data-module="improve-this-page">
+            <div class="improve-this-page__prompt js-prompt clearfix" tabindex="-1">
+                <h3 class="improve-this-page__is-useful-question">Is this page useful?</h3>
+                <a class="improve-this-page__page-is-useful-button js-page-is-useful" data-track-category="manualFeedbackForm" data-track-action="ffYesClick" href="/contact/govuk">
+                    Yes <span class="visually-hidden"> this page is useful</span>
+                </a>      <a class="js-page-is-not-useful" data-track-category="manualFeedbackForm" data-track-action="ffNoClick" aria-controls="improveThisPageForm" aria-expanded="false" href="/contact/govuk">
+                No <span class="visually-hidden"> this page is not useful</span>
+            </a>      <a class="js-something-is-wrong improve-this-page__anything-wrong" data-track-category="manualFeedbackForm" data-track-action="ffWrongClick" aria-controls="improveThisPageForm" aria-expanded="false" href="/contact/govuk">
+                Is there anything wrong with this page?
+            </a>    </div>
+            <div id="improveThisPageForm" class="improve-this-page__form js-feedback-form js-hidden" data-track-category="manualFeedbackForm" data-track-action="ffFormSubmit" aria-hidden="true">
+                <a href="#" class="improve-this-page__close js-close-feedback-form" aria-controls="improveThisPageForm" aria-expanded="false">Close</a>
+                <div class="grid-row">
+                    <div class="column-two-thirds">
+                        <div class="js-errors"></div>
+                        <form>
+                            <input type="hidden" name="url" value="https://www.gov.uk/service-manual/design/introduction-designing-government-services">
+                            <input type="hidden" name="user_agent" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36">
+                            <div class="form-group">
+                                <label class="form-label-bold" for="description-field">
+                                    How should we improve this page?
+                                </label>
+                                <textarea id="description-field" class="form-control" name="description" rows="5" aria-required="true"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="name-field">
+                                    Name (optional)
+                                    <span class="form-hint">Include your name and email address if you'd like us to get back to you.</span>
+                                </label>
+                                <input id="name-field" class="form-control" type="text" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email-field">Email (optional)</label>
+                                <input id="email-field" class="form-control" type="text" name="email">
+                            </div>
+                            <div>
+                                <input class="button" type="submit" value="Send message">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+</div>
+{% endblock %}
+
+{% block body_end %}
+<!-- GOV.UK elements redirect -->
+<script src="/public/javascripts/redirect.js"></script>
+
+<script src="https://assets.publishing.service.gov.uk/static/libs/jquery/jquery-1.12.4-5f1157a433c276bcb98f3651434f7cb1f49ff45fe2ec2808b46ee088e61159b5.js">
+
+</script>
+
+<script src="https://assets.publishing.service.gov.uk/service-manual-frontend/application-e47aec62c201636b5b94203bb32057a69146baab883a806db90521d0445d35ea.js">
+</script>
+
+<script src="https://assets.publishing.service.gov.uk/static/header-footer-only-d03b5fd21e9197119d11b83e3325c35f8695a4040cf96e50b824f1198be8c4af.js"></script>
+
+
+{% include "includes/scripts.html" %}
+{% endblock %}
+

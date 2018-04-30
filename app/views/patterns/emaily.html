@@ -1,0 +1,226 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.SK Elementy
+{% endblock %}
+
+{% block main_content %}
+
+
+<div id="wrapper" class="direction-ltr">
+    <main role="main" id="content" lang="en">
+
+        <!-- Page title and contact -->
+        <div class="grid-row">
+
+            <div class="column-two-thirds">
+                <div class="page-header">
+                    <h1 class="page-header__title">
+                        E-mailové adresy
+                    </h1>
+                    <p class="page-header__context">Tento návod opisuje, ako požiadať používateľov o ich e-mailovú adresu.</p>
+                </div>
+            </div>
+
+            <div class="column-third">
+
+                <!--<div class="community-contact">
+                    <p>
+                        <a class="feedback" href="/contact/govuk">Give feedback about this page</a>
+                    </p>
+                </div>-->
+            </div>
+        </div>
+
+        <!-- Metadata-->
+        <div class="grid-row">
+            <div class="column-two-thirds">
+
+                <!--<div class="metadata">
+                    <dl>
+                        <dt>Published by:</dt>
+                        <dd>
+                            <a href="/service-manual/communities/design-community">Design community</a>
+                        </dd>
+                        <dt>Last updated:</dt>
+                        <dd>
+                            7 months ago
+                        </dd>
+                    </dl>
+                </div>-->
+
+            </div>
+        </div>
+
+        <div class="grid-row" data-module="highlight-active-section-heading">
+            <div class="column-third">
+
+                <!--  Page contents -->
+                <div class="page-contents js-page-contents js-stick-at-top-when-scrolling js-sticky-resize" style="width: 300px;">
+                    <h3 class="page-contents__title">Stránka obsahuje:</h3>
+                    <ol class="page-contents__list">
+                        <li><a href="#priklad">Príklad</a></li>
+                        <li><a href="#pole">Pole na e-mailovú adresu musí byť dostatočne dlhé</a></li>
+                        <li><a href="#email">Upovedomte používateľov prečo od nich požadujete e-mailovú adresu</a></li>
+                        <li><a href="#pomoc">Pomôžte používateľom zadávať platnú e-mailovú adresu</a></li>
+                        <li><a href="#overenie">Overte, či má používateľ prístup k svojmu e-mailovému účtu</a></li>
+                    </ol>
+                </div>
+
+            </div>
+            <div class="column-two-thirds">
+
+                <div class="govspeak-wrapper">
+
+                    <div class="govuk-govspeak ">
+
+                        <h2 id="priklad">Príklad</h2>
+                        <img src="/public/images/patterns/email.png" alt="email">
+                        <p>Keď si od používateľov žiadate e-mailové adresy, je dôležité aby:</p>
+                        <ul class="list-bullet">
+                            <li>ste navrhli pole na e-mailovú adresu dostatočne veľké,</li>
+                            <li>bolo používateľom dostatočne jasné, prečo od nich adresu požadujete,</li>
+                            <li>pomôžte používateľom zadávať platnú e-mailovú adresu.</li>
+                        </ul>
+                        <p>Odporúčame skontrolovať, či majú používatelia prístup k e-mailovému účtu, ktorý vám dávajú.</p>
+
+
+                        <h2 id="pole">Pole na e-mailovú adresu musí byť dostatočne dlhé</h2>
+
+                        <p>Uistite sa, že pole e-mailovej adresy je natoľko dlhé, aby vyhovovalo aspoň 95% e-mailových adries používateľov.</p>
+
+                        <p>Odporúča sa používať pole zobrazujúce naraz minimálne 30 znakov, pričom dátové pole musí umožniť spracovanie 255 znakov.</p>
+
+                        <h2 id="email">Upovedomte používateľov prečo od nich požadujete e-mailovú adresu</h2>
+                        <p>Je dôležité používateľa oboznámiť s tým ako bude e-mailová adresa použitá, aby:</p>
+                        <ul class="list-bullet">
+                            <li>používatelia mali istotu, že ich adresy nebudú zneužité,</li>
+                            <li>si používatelia s viacerými e-mailovými adresami mohli vybrať, ktorú adresu poskytnú.</li>
+                        </ul>
+                        <h2 id="pomoc">Pomôžte používateľom zadávať platnú e-mailovú adresu</h2>
+                        <p>Pomôžte používateľom zadať platnú e-mailovú adresu tým, že:</p>
+                        <ul class="list-bullet">
+                            <li>overíte, či nimi zadaný údaj je vo formáte e-mailovej adresy,</li>
+                            <li>umožníte používateľom skopírovať e-mailovú adresu a vložiť ju do poľa,</li>
+                            <li>použite atribút type=“email”, aby zariadenia zobrazovali správnu klávesnicu,</li>
+                            <li>zobrazíte používateľom spätne danú e-mailovú adresu, aby ju vedeli skontrolovať, prípadne opraviť.</li>
+
+                        </ul>
+
+                        <p>Odporúčame tiež skontrolovať bežné chyby v písaní obľúbených poskytovateľov elektronickej pošty (napríklad 'gmail.sk' namiesto 'gmail.com' alebo 'homtail.com' namiesto 'hotmail.com'). Ak zistíte, že používateľ spravil chybu, upovedomte ho o tom. Avšak umožnite mu pokračovať ďalej v prípade, že ide o skutočnú e-mailovú adresu.
+                        </p>
+                        <p>Niektoré služby vyžadujú, aby používatelia opakovane zadali svoju e-mailovú adresu. Tento postup zbytočne pridáva na práci používateľovi, a preto ho odporúčame nepoužívať.
+
+                        </p>
+
+                        <h2 id="overenie">Overte, či má používateľ prístup k svojmu e-mailovému účtu</h2>
+                        <p>V niektorých prípadoch je potrebné použiť <a href="/vzory/proces-overenia-emailovej-adresy">proces overenia</a> e-mailového účtu, aby ste sa uistili, že používateľ má prístup k e-mailovej adrese, ktorú zadal.
+                        </p>
+
+                        <p>Keďže je tento proces pre používateľa rušivým elementom, dôkladne zvážte nutnosť jeho použitia.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!--<div class="change-history" data-module="toggle">
+                    <div class="change-history__latest-change">
+                        <dl>
+                            <dt>Published by:</dt>
+                            <dd>
+                                <a href="/service-manual/communities/design-community">Design community</a>
+                            </dd>
+                            <dt>Last update:</dt>
+                            <dd>
+                                <time datetime="2017-10-03T10:35:26+00:00" class="timestamp"> 3 October 2017</time>
+                                <p class="change-history__summary">
+                                    Added information on operating services in line with departmental Welsh language scheme requirements
+                                    (previously in the guide 'Making your service accessible: an introduction').
+                                </p>
+
+                            </dd>
+                        </dl>
+                    </div>
+                    <p><a href="#full-history" data-controls="full-history" data-expanded="false" role="button" aria-controls="full-history" aria-expanded="false">+ Show all page updates (2)</a></p>
+                    <ol id="full-history" class="change-history__past js-hidden" aria-live="polite" role="region">
+                        <li>
+                            <time datetime="2016-11-07T12:18:52+00:00" class="timestamp"> 7 November 2016</time>
+                            <p class="change-history__summary">
+                                Guidance first published
+                            </p>
+
+                        </li>
+                    </ol>
+                </div>-->
+
+            </div>
+        </div>
+
+    </main>
+
+    <!--<div class="full-page-width-wrapper">
+        <div class="improve-this-page" data-module="improve-this-page">
+            <div class="improve-this-page__prompt js-prompt clearfix" tabindex="-1">
+                <h3 class="improve-this-page__is-useful-question">Is this page useful?</h3>
+                <a class="improve-this-page__page-is-useful-button js-page-is-useful" data-track-category="manualFeedbackForm" data-track-action="ffYesClick" href="/contact/govuk">
+                    Yes <span class="visually-hidden"> this page is useful</span>
+                </a>      <a class="js-page-is-not-useful" data-track-category="manualFeedbackForm" data-track-action="ffNoClick" aria-controls="improveThisPageForm" aria-expanded="false" href="/contact/govuk">
+                No <span class="visually-hidden"> this page is not useful</span>
+            </a>      <a class="js-something-is-wrong improve-this-page__anything-wrong" data-track-category="manualFeedbackForm" data-track-action="ffWrongClick" aria-controls="improveThisPageForm" aria-expanded="false" href="/contact/govuk">
+                Is there anything wrong with this page?
+            </a>    </div>
+            <div id="improveThisPageForm" class="improve-this-page__form js-feedback-form js-hidden" data-track-category="manualFeedbackForm" data-track-action="ffFormSubmit" aria-hidden="true">
+                <a href="#" class="improve-this-page__close js-close-feedback-form" aria-controls="improveThisPageForm" aria-expanded="false">Close</a>
+                <div class="grid-row">
+                    <div class="column-two-thirds">
+                        <div class="js-errors"></div>
+                        <form>
+                            <input type="hidden" name="url" value="https://www.gov.uk/service-manual/design/introduction-designing-government-services">
+                            <input type="hidden" name="user_agent" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36">
+                            <div class="form-group">
+                                <label class="form-label-bold" for="description-field">
+                                    How should we improve this page?
+                                </label>
+                                <textarea id="description-field" class="form-control" name="description" rows="5" aria-required="true"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="name-field">
+                                    Name (optional)
+                                    <span class="form-hint">Include your name and email address if you'd like us to get back to you.</span>
+                                </label>
+                                <input id="name-field" class="form-control" type="text" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email-field">Email (optional)</label>
+                                <input id="email-field" class="form-control" type="text" name="email">
+                            </div>
+                            <div>
+                                <input class="button" type="submit" value="Send message">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+</div>
+{% endblock %}
+
+{% block body_end %}
+<!-- GOV.UK elements redirect -->
+<script src="/public/javascripts/redirect.js"></script>
+
+<script src="https://assets.publishing.service.gov.uk/static/libs/jquery/jquery-1.12.4-5f1157a433c276bcb98f3651434f7cb1f49ff45fe2ec2808b46ee088e61159b5.js">
+
+</script>
+
+<script src="https://assets.publishing.service.gov.uk/service-manual-frontend/application-e47aec62c201636b5b94203bb32057a69146baab883a806db90521d0445d35ea.js">
+</script>
+
+<script src="https://assets.publishing.service.gov.uk/static/header-footer-only-d03b5fd21e9197119d11b83e3325c35f8695a4040cf96e50b824f1198be8c4af.js"></script>
+
+
+{% include "includes/scripts.html" %}
+{% endblock %}
+

@@ -1,0 +1,219 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.SK Elementy
+{% endblock %}
+
+{% block main_content %}
+
+
+<div id="wrapper" class="direction-ltr">
+    <main role="main" id="content" lang="en">
+
+        <!-- Page title and contact -->
+        <div class="grid-row">
+
+            <div class="column-two-thirds">
+                <div class="page-header">
+                    <h1 class="page-header__title">
+                        Zoznamy úloh
+                    </h1>
+                    <p class="page-header__context">Tento návod opisuje spôsob, ako postupovať pri tvorbe komplexných digitálnych služieb, ktoré sa skladajú z viacerých častí.
+                    </p>
+                </div>
+            </div>
+
+            <div class="column-third">
+
+                <!--<div class="community-contact">
+                    <p>
+                        <a class="feedback" href="/contact/govuk">Give feedback about this page</a>
+                    </p>
+                </div>-->
+            </div>
+        </div>
+
+        <!-- Metadata-->
+        <div class="grid-row">
+            <div class="column-two-thirds">
+
+                <!--<div class="metadata">
+                    <dl>
+                        <dt>Published by:</dt>
+                        <dd>
+                            <a href="/service-manual/communities/design-community">Design community</a>
+                        </dd>
+                        <dt>Last updated:</dt>
+                        <dd>
+                            7 months ago
+                        </dd>
+                    </dl>
+                </div>-->
+
+            </div>
+        </div>
+
+        <div class="grid-row" data-module="highlight-active-section-heading">
+            <div class="column-third">
+
+                <!--  Page contents -->
+                <div class="page-contents js-page-contents js-stick-at-top-when-scrolling js-sticky-resize" style="width: 300px;">
+                    <h2 class="page-contents__title">Stránka obsahuje:</h2>
+                    <ul class="page-contents__list">
+                        <li><a href="#priklad-stranky-so-zoznamom-uloh">Príklad stránky so zoznamom úloh</a></li>
+                        <li><a href="#pouzitie-zoznamov-uloh">Použitie zoznamov úloh</a></li>
+                        <li><a href="#zobrazenie-stavu-ulohy">Zobrazenie stavu úlohy</a></li>
+                        <li><a href="#zoskupenie-potrebnych-informacii-do-uloh">Zoskupenie potrebných informácií do úloh</a></li>
+                        <li><a href="#zoskupenie-uloh-do-sekcii">Zoskupenie úloh do sekcií</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="column-two-thirds">
+
+                <div class="govspeak-wrapper">
+
+                    <div class="govuk-govspeak ">
+                        
+                        <p>Stránky so zoznamom úloh umožňujú používateľom zobraziť:</p>
+                        <ul class="list-bullet">
+                            <li>úlohy súvisiace s dokončením žiadosti,</li>
+                            <li>poradie, v ktorom majú byť úlohy vykonané,</li>
+                            <li>informáciu, či boli úlohy dokončené.</li>
+                        </ul>
+                        
+                        <h2 id="priklad-stranky-so-zoznamom-uloh">Príklad stránky so zoznamom úloh</h2>
+                        <img src="\public\images\patterns\zoznam1.png" alt="zoznam">
+
+                        <h2 id="pouzitie-zoznamov-uloh">Použitie zoznamov úloh</h2>
+                        <p>Stránku so zoznamom úloh použite napríklad pri žiadosti, pred ktorej podaním je potrebné vykonať viaceré úlohy. To sa stáva najmä v situáciách, kedy poskytovanie jednotlivých služieb spadá prierezovo pod viaceré rezorty alebo viaceré úrady a zároveň takáto životná situácia nie je plne na portáli Slovensko.sk.</p>
+                        <p>Skôr než tento zoznam úloh použijete, pokúste sa podanie žiadosti čo možno najviac zjednodušiť. Dôležité je znížiť počet úloh alebo krokov, ktoré musí používateľ vykonať, na minimálny.</p>
+                        <p>Pri použití stránky so zoznamom úloh dbajte na to, aby:</p>
+                        <ul class="list-bullet">
+                            <li>bola umiestnená na začiatku danej žiadosti,</li>
+                            <li>sa zobrazila po dokončení každej úlohy,</li>
+                            <li>sa zobrazila na začiatku každej návštevy profilu používateľa.</li>
+                        </ul>
+                        
+                        <h2 id="zobrazenie-stavu-ulohy">Zobrazenie stavu úlohy</h2>
+                        <p>Kedykoľvek používateľovi zobrazíte stránku so zoznamom úloh, musí byť jasné, ktoré úlohy už dokončil pomocou označenia “Hotovo”.</p>
+                        <img src="\public\images\patterns\zoznam2.png" alt="zoznam">
+
+                        <h2 id="zoskupenie-potrebnych-informacii-do-uloh">Zoskupenie potrebných informácií do úloh</h2>
+                        <p>Potrebné informácie a otázky zoskupujte do jednotlivých konkrétnych úloh (napríklad "Poskytnite daňové priznanie" a "Uveďte lekárske záznamy"). Takéto úlohy pomôžu  používateľom správne porozumieť akú informáciu majú poskytnúť, resp. aký doklad majú poskytovateľovi služby doručiť a efektívne si naplánovať s tým súvisiace aktivity.</p>
+                        <p>Názvy úloh by mali:</p>
+                        <ul class="list-bullet">
+                            <li>špecifikovať konkrétnu úlohu alebo s ňou súvisiacu aktivitu</li>
+                            <li>začínať slovesami (napríklad "skontrolovať", "deklarovať", "oznámiť")</li>
+                        </ul>
+                        
+                        <h2 id="zoskupenie-uloh-do-sekcii">Zoskupenie úloh do sekcií</h2>
+                        <p>Ak žiadosť pozostáva z viacerých úloh, rozdeľte ju na sekcie, ktoré budú predstavovať etapy procesu.</p>
+                        <p>Napríklad môžete zoskupiť všetky úlohy, ktoré pomáhajú používateľom zistiť, či je pre nich daná služba vhodná v sekcii nazvanej "Skôr, než začnete".</p>
+                        <p>Umožnite používateľom vykonať úlohy v ľubovoľnom poradí. To im pomôže naplánovať si svoj čas a dokončiť jednotlivé časti sekcie, kedykoľvek budú môcť.</p>
+                        
+                    </div>
+
+                </div>
+
+                <!--<div class="change-history" data-module="toggle">
+                    <div class="change-history__latest-change">
+                        <dl>
+                            <dt>Published by:</dt>
+                            <dd>
+                                <a href="/service-manual/communities/design-community">Design community</a>
+                            </dd>
+                            <dt>Last update:</dt>
+                            <dd>
+                                <time datetime="2017-10-03T10:35:26+00:00" class="timestamp"> 3 October 2017</time>
+                                <p class="change-history__summary">
+                                    Added information on operating services in line with departmental Welsh language scheme requirements
+                                    (previously in the guide 'Making your service accessible: an introduction').
+                                </p>
+
+                            </dd>
+                        </dl>
+                    </div>
+                    <p><a href="#full-history" data-controls="full-history" data-expanded="false" role="button" aria-controls="full-history" aria-expanded="false">+ Show all page updates (2)</a></p>
+                    <ol id="full-history" class="change-history__past js-hidden" aria-live="polite" role="region">
+                        <li>
+                            <time datetime="2016-11-07T12:18:52+00:00" class="timestamp"> 7 November 2016</time>
+                            <p class="change-history__summary">
+                                Guidance first published
+                            </p>
+
+                        </li>
+                    </ol>
+                </div>-->
+
+            </div>
+        </div>
+
+    </main>
+
+    <!--<div class="full-page-width-wrapper">
+        <div class="improve-this-page" data-module="improve-this-page">
+            <div class="improve-this-page__prompt js-prompt clearfix" tabindex="-1">
+                <h3 class="improve-this-page__is-useful-question">Is this page useful?</h3>
+                <a class="improve-this-page__page-is-useful-button js-page-is-useful" data-track-category="manualFeedbackForm" data-track-action="ffYesClick" href="/contact/govuk">
+                    Yes <span class="visually-hidden"> this page is useful</span>
+                </a>      <a class="js-page-is-not-useful" data-track-category="manualFeedbackForm" data-track-action="ffNoClick" aria-controls="improveThisPageForm" aria-expanded="false" href="/contact/govuk">
+                No <span class="visually-hidden"> this page is not useful</span>
+            </a>      <a class="js-something-is-wrong improve-this-page__anything-wrong" data-track-category="manualFeedbackForm" data-track-action="ffWrongClick" aria-controls="improveThisPageForm" aria-expanded="false" href="/contact/govuk">
+                Is there anything wrong with this page?
+            </a>    </div>
+            <div id="improveThisPageForm" class="improve-this-page__form js-feedback-form js-hidden" data-track-category="manualFeedbackForm" data-track-action="ffFormSubmit" aria-hidden="true">
+                <a href="#" class="improve-this-page__close js-close-feedback-form" aria-controls="improveThisPageForm" aria-expanded="false">Close</a>
+                <div class="grid-row">
+                    <div class="column-two-thirds">
+                        <div class="js-errors"></div>
+                        <form>
+                            <input type="hidden" name="url" value="https://www.gov.uk/service-manual/design/introduction-designing-government-services">
+                            <input type="hidden" name="user_agent" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36">
+                            <div class="form-group">
+                                <label class="form-label-bold" for="description-field">
+                                    How should we improve this page?
+                                </label>
+                                <textarea id="description-field" class="form-control" name="description" rows="5" aria-required="true"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="name-field">
+                                    Name (optional)
+                                    <span class="form-hint">Include your name and email address if you'd like us to get back to you.</span>
+                                </label>
+                                <input id="name-field" class="form-control" type="text" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email-field">Email (optional)</label>
+                                <input id="email-field" class="form-control" type="text" name="email">
+                            </div>
+                            <div>
+                                <input class="button" type="submit" value="Send message">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+</div>
+{% endblock %}
+
+{% block body_end %}
+<!-- GOV.UK elements redirect -->
+<script src="/public/javascripts/redirect.js"></script>
+
+<script src="https://assets.publishing.service.gov.uk/static/libs/jquery/jquery-1.12.4-5f1157a433c276bcb98f3651434f7cb1f49ff45fe2ec2808b46ee088e61159b5.js">
+
+</script>
+
+<script src="https://assets.publishing.service.gov.uk/service-manual-frontend/application-e47aec62c201636b5b94203bb32057a69146baab883a806db90521d0445d35ea.js">
+</script>
+
+<script src="https://assets.publishing.service.gov.uk/static/header-footer-only-d03b5fd21e9197119d11b83e3325c35f8695a4040cf96e50b824f1198be8c4af.js"></script>
+
+
+{% include "includes/scripts.html" %}
+{% endblock %}
+

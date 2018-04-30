@@ -1,0 +1,245 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.SK Elementy
+{% endblock %}
+
+{% block main_content %}
+
+
+<div id="wrapper" class="direction-ltr">
+    <main role="main" id="content" lang="en">
+
+        <!-- Page title and contact -->
+        <div class="grid-row">
+
+            <div class="column-two-thirds">
+                <div class="page-header">
+                    <h1 class="page-header__title">
+                        Stránky s otázkami
+                    </h1>
+                    <p class="page-header__context">Tento návod opisuje správne použitie a štruktúrovanie  stránky s otázkami.</p>
+                </div>
+            </div>
+
+            <div class="column-third">
+
+                <!--<div class="community-contact">
+                    <p>
+                        <a class="feedback" href="/contact/govuk">Give feedback about this page</a>
+                    </p>
+                </div>-->
+            </div>
+        </div>
+
+        <!-- Metadata-->
+        <div class="grid-row">
+            <div class="column-two-thirds">
+
+                <!--<div class="metadata">
+                    <dl>
+                        <dt>Published by:</dt>
+                        <dd>
+                            <a href="/service-manual/communities/design-community">Design community</a>
+                        </dd>
+                        <dt>Last updated:</dt>
+                        <dd>
+                            7 months ago
+                        </dd>
+                    </dl>
+                </div>-->
+
+            </div>
+        </div>
+
+        <div class="grid-row" data-module="highlight-active-section-heading">
+            <div class="column-third">
+
+                <!--  Page contents -->
+                <div class="page-contents js-page-contents js-stick-at-top-when-scrolling js-sticky-resize" style="width: 300px;">
+                    <h2 class="page-contents__title">Stránka obsahuje:</h2>
+                    <ul class="page-contents__list">
+                        <li><a href="#ukazka-stranky-s-otazkami">Ukážka stránky s otázkami</a></li>
+                        <li><a href="#pouzitie-stranok-s-otazkami">Použitie stránok s otázkami</a></li>
+                        <li><a href="#nastavenie-stranky-s-otazkami">Nastavenie stránky s otázkami</a></li>
+                        <li><a href="#odkaz-na-predchadzajucu-stranku">Odkaz na predchádzajúcu stránku</a></li>
+                        <li><a href="#hlavicky-stranok">Hlavičky stránok</a></li>
+                        <li><a href="#nadpisy-sekcii">Nadpisy sekcií</a></li>
+                        <li><a href="#tlacidlo-pokracovat">Tlačidlo “Pokračovať”</a></li>
+                        <li><a href="#ako-sa-pytat-pouzivatelov-otazky">Ako sa pýtať používateľov otázky</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="column-two-thirds">
+
+                <div class="govspeak-wrapper">
+
+                    <div class="govuk-govspeak ">
+                        
+
+                        <h2 id="ukazka-stranky-s-otazkami">Ukážka stránky s otázkami</h2>
+                        <img src="\public\images\patterns\question1.png" alt="questions">
+                                                
+                        <h2 id="pouzitie-stranok-s-otazkami">Použitie stránok s otázkami</h2>
+                        <p>Stránky s otázkami slúžia na získanie informácií od používateľov. V procese nahrádzajú komplexné formuláre a imitujú používateľovi osobnú komunikáciu s danou inštitúciou.</p>
+                        <p>Stránky s otázkami sa používajú pri:</p>
+                        <ul class="list-bullet">
+                            <li>dotazníkoch,</li>
+                            <li>formulároch,</li>
+                            <li>kalkuláciach (napr. výpočet materskej dávky)</li>
+                        </ul>
+                        
+                        <h2 id="nastavenie-stranky-s-otazkami">Nastavenie stránky s otázkami</h2>
+                        <p>Stránky s otázkami musia obsahovať:</p>
+                        <ul class="list-bullet">
+                            <li>možnosť vrátiť sa na predchádzajúcu stránku (tlačidlo “Späť”),</li>
+                            <li>nadpis stránky,</li>
+                            <li>tlačidlo “Pokračovať”.</li>
+                        </ul>
+                        
+                        <h2 id="odkaz-na-predchadzajucu-stranku">Odkaz na predchádzajúcu stránku</h2>
+                        <p>Stránka s otázkami musí vždy obsahovať spätný odkaz na predchádzajúcu stránku.</p>
+                        <p>Niektorí používatelia majú obavy z použitia tlačidla “Späť” vo vyhľadávači, najmä pri vypĺňaní dôležitých údajov. Pridanie odkazu na predchádzajúcu stránku (“Späť”) ich ubezpečí, že sa môžu vrátiť a zmeniť svoje predchádzajúce odpovede.</p>
+                        <p>Odkaz by sa mal nachádzať v hornej časti stránky, pretože používatelia sa najčastejšie vracajú späť hneď po vstupe na stránku. Uistite sa, že odkaz na predchádzajúcu stránku funguje, aj keď nie je JavaScript k dispozícií.</p>
+                        
+                        <h2 id="hlavicky-stranok">Názvy stránok</h2>
+                        <p>Ako názvy stránok môžete použiť buď otázku alebo sumarizáciu, čoho sa budú otázky na stránke týkať.</p>
+                        <p>Akonáhle si vyberiete jeden z formátov, používajte ho konzistentne na všetkých stránkach s otázkami.</p>
+                        <h3>Používanie otázky v titulke stránky</h3>
+                        <p>Ak požadujete iba jednu informáciu na stránke, použite otázku ako titulku stránky - napríklad "Aké je vaše poštové smerovacie číslo?".</p>
+                        <img src="\public\images\patterns\question2.png" alt="questions">
+                        <h3>Používanie sumarizačnej titulky</h3>
+                        <p>Ak potrebujete zoskupiť viac vzájomne súvisiacich otázok na jednej stránke, použite sumarizačnú titulku.</p>
+                        <p>V príklade znázornenom nižšie sa od používateľa požadujú detailné informácie ohľadom pasu a keďže sa jedná o viacero súvisiacich otázok, je vhodné ako hlavičku použiť všeobecnejší nadpis sumarizujúci požadované údaje.</p>
+                        <img src="\public\images\patterns\question3.png" alt="questions">
+
+                        <h2 id="nadpisy-sekcii">Nadpisy sekcií</h2>
+                        <p>Nepoužívajte rovnakú titulku na viacerých stránkach. Titulka stránky sa vždy vzťahuje len na požadované informácie na aktuálnej stránke, nie na vyššiu úroveň, ktorej je stránka súčasťou.</p>
+                        <p>Ak potrebujete zobraziť sekciu vyššej úrovne, použite štýl "sekundárnej hlavičky" - napríklad "Vaše údaje".</p>
+                        <img src="\public\images\patterns\question4.png" alt="questions">
+                        <h2 id="tlacidlo-pokracovat">Tlačidlo “Pokračovať”</h2>
+                        <p>Uistite sa, že tlačidlo "Pokračovať" je:</p>
+                        <ul class="list-bullet">
+                            <li>označené ako "Pokračovať" alebo “Ďalej”, nie “Nasledujúci” príp. "Ďalší",</li>
+                            <li>zarovnané doľava, aby ho užívatelia neprehliadli.</li>
+                        </ul>
+                        
+                        <h2 id="ako-sa-pytat-pouzivatelov-otazky">Ako sa pýtať používateľov otázky</h2>
+                        <p>Pri kladení otázok by ste mali:</p>
+                        <ul class="list-bullet">
+                            <li>vysvetliť, prečo používateľom budete klásť otázky,</li>
+                            <li>uviesť počet otázok, ktoré bude nutné zodpovedať,</li>
+                            <li>zoradiť otázky tak, aby väčšina používateľov dosiahla požadovaný zámer za čo najkratší čas,</li>
+                            <li>položiť iba otázky, na ktoré by používatelia určite mali vedieť odpovedať,</li>
+                            <li>umožniť používateľom odpovedať na otázku "Neviem" alebo "Nie som si istý",  ak sú to pre vás relevantné odpovede,</li>
+                            <li>pretransformovať zložité texty (dokumenty) na jednoduché a zrozumiteľné otázky tak, aby používateľ nemusel kvôli zisteniu informácie z dokumentov opustiť stránku.</li>
+                        </ul>
+                        <p>Pri kladení otázok si dajte pozor, aby ste od používateľov nežiadali informácie, ktorými už disponujete.</p>
+                                            
+                        
+                    </div>
+
+                </div>
+
+                <!--<div class="change-history" data-module="toggle">
+                    <div class="change-history__latest-change">
+                        <dl>
+                            <dt>Published by:</dt>
+                            <dd>
+                                <a href="/service-manual/communities/design-community">Design community</a>
+                            </dd>
+                            <dt>Last update:</dt>
+                            <dd>
+                                <time datetime="2017-10-03T10:35:26+00:00" class="timestamp"> 3 October 2017</time>
+                                <p class="change-history__summary">
+                                    Added information on operating services in line with departmental Welsh language scheme requirements
+                                    (previously in the guide 'Making your service accessible: an introduction').
+                                </p>
+
+                            </dd>
+                        </dl>
+                    </div>
+                    <p><a href="#full-history" data-controls="full-history" data-expanded="false" role="button" aria-controls="full-history" aria-expanded="false">+ Show all page updates (2)</a></p>
+                    <ol id="full-history" class="change-history__past js-hidden" aria-live="polite" role="region">
+                        <li>
+                            <time datetime="2016-11-07T12:18:52+00:00" class="timestamp"> 7 November 2016</time>
+                            <p class="change-history__summary">
+                                Guidance first published
+                            </p>
+
+                        </li>
+                    </ol>
+                </div>-->
+
+            </div>
+        </div>
+
+    </main>
+
+    <!--<div class="full-page-width-wrapper">
+        <div class="improve-this-page" data-module="improve-this-page">
+            <div class="improve-this-page__prompt js-prompt clearfix" tabindex="-1">
+                <h3 class="improve-this-page__is-useful-question">Is this page useful?</h3>
+                <a class="improve-this-page__page-is-useful-button js-page-is-useful" data-track-category="manualFeedbackForm" data-track-action="ffYesClick" href="/contact/govuk">
+                    Yes <span class="visually-hidden"> this page is useful</span>
+                </a>      <a class="js-page-is-not-useful" data-track-category="manualFeedbackForm" data-track-action="ffNoClick" aria-controls="improveThisPageForm" aria-expanded="false" href="/contact/govuk">
+                No <span class="visually-hidden"> this page is not useful</span>
+            </a>      <a class="js-something-is-wrong improve-this-page__anything-wrong" data-track-category="manualFeedbackForm" data-track-action="ffWrongClick" aria-controls="improveThisPageForm" aria-expanded="false" href="/contact/govuk">
+                Is there anything wrong with this page?
+            </a>    </div>
+            <div id="improveThisPageForm" class="improve-this-page__form js-feedback-form js-hidden" data-track-category="manualFeedbackForm" data-track-action="ffFormSubmit" aria-hidden="true">
+                <a href="#" class="improve-this-page__close js-close-feedback-form" aria-controls="improveThisPageForm" aria-expanded="false">Close</a>
+                <div class="grid-row">
+                    <div class="column-two-thirds">
+                        <div class="js-errors"></div>
+                        <form>
+                            <input type="hidden" name="url" value="https://www.gov.uk/service-manual/design/introduction-designing-government-services">
+                            <input type="hidden" name="user_agent" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36">
+                            <div class="form-group">
+                                <label class="form-label-bold" for="description-field">
+                                    How should we improve this page?
+                                </label>
+                                <textarea id="description-field" class="form-control" name="description" rows="5" aria-required="true"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="name-field">
+                                    Name (optional)
+                                    <span class="form-hint">Include your name and email address if you'd like us to get back to you.</span>
+                                </label>
+                                <input id="name-field" class="form-control" type="text" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email-field">Email (optional)</label>
+                                <input id="email-field" class="form-control" type="text" name="email">
+                            </div>
+                            <div>
+                                <input class="button" type="submit" value="Send message">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+</div>
+{% endblock %}
+
+{% block body_end %}
+<!-- GOV.UK elements redirect -->
+<script src="/public/javascripts/redirect.js"></script>
+
+<script src="https://assets.publishing.service.gov.uk/static/libs/jquery/jquery-1.12.4-5f1157a433c276bcb98f3651434f7cb1f49ff45fe2ec2808b46ee088e61159b5.js">
+
+</script>
+
+<script src="https://assets.publishing.service.gov.uk/service-manual-frontend/application-e47aec62c201636b5b94203bb32057a69146baab883a806db90521d0445d35ea.js">
+</script>
+
+<script src="https://assets.publishing.service.gov.uk/static/header-footer-only-d03b5fd21e9197119d11b83e3325c35f8695a4040cf96e50b824f1198be8c4af.js"></script>
+
+
+{% include "includes/scripts.html" %}
+{% endblock %}
+

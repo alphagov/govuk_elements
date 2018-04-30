@@ -1,0 +1,280 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.SK Elementy
+{% endblock %}
+
+{% block main_content %}
+
+
+<div id="wrapper" class="direction-ltr">
+    <main role="main" id="content" lang="en">
+
+        <!-- Page title and contact -->
+        <div class="grid-row">
+
+            <div class="column-two-thirds">
+                <div class="page-header">
+                    <p class="page-header__context">
+                    </p>
+
+                    <h1 class="page-header__title">
+                        Slovník pojmov v Jednotnom dizajn manuáli elektronických služieb
+                    </h1>
+                </div>
+            </div>
+
+            <div class="column-third">
+
+                <!--<div class="community-contact">
+                    <p>
+                        <a class="feedback" href="/contact/govuk">Give feedback about this page</a>
+                    </p>
+                </div>-->
+            </div>
+        </div>
+
+        <!-- Metadata-->
+        <div class="grid-row">
+            <div class="column-two-thirds">
+
+                <!--<div class="metadata">
+                    <dl>
+                        <dt>Published by:</dt>
+                        <dd>
+                            <a href="/service-manual/communities/design-community">Design community</a>
+                        </dd>
+                        <dt>Last updated:</dt>
+                        <dd>
+                            7 months ago
+                        </dd>
+                    </dl>
+                </div>-->
+
+            </div>
+        </div>
+
+        <div class="grid-row" data-module="highlight-active-section-heading">
+            <div class="column-third">
+
+                <!--  Page contents -->
+                <div class="page-contents js-page-contents js-stick-at-top-when-scrolling js-sticky-resize" style="width: 300px;">
+                    <h3 class="page-contents__title">Stránka obsahuje:</h3>
+                    <ol class="page-contents__list">
+                        <li><a href="#oznacenie1">Označenie webových komponentov</a></li>
+                        <li><a href="#oznacenie2">Označenie tlačidiel</a></li>
+                        <li><a href="#pouzivane">Používané výrazy</a></li>
+                    </ol>
+                </div>
+
+            </div>
+            <div class="column-two-thirds">
+
+                <div class="govspeak-wrapper">
+
+                    <div class="govuk-govspeak ">
+
+
+                        <h2 id="oznacenie1">Označenie webových komponentov</h2>
+                        <p>
+                            Pre zlepšenie zrozumiteľnosti uvádzame pre programátorov najčastejšie používané výrazy v Jednotnom dizajn manuáli elektronických služieb.
+                        </p>
+                        <ul class="list-bullet">
+                            <li>Breakpoints – Hraničné body pre rôzne veľkosti obrazoviek</li>
+                            <li>Button – Tlačidlo</li>
+                            <li>Default settings – Predvolené nastavenia</li>
+                            <li>Drop-down lists – Rozbaľovací zoznam</li>
+                            <li>Focus – Aktívny stav</li>
+                            <li>Fieldset – Skupiny polí</li>
+                            <li>Grid – Stĺpcový dizajn/preddefinovaný stĺpcový dizajn</li>
+                            <li>Hint text – Pomocný text</li>
+                            <li>Check box – Začiarkavacie políčko</li>
+                            <li>Input field – Editovateľné políčko</li>
+                            <li>Label – Názov dátového poľa</li>
+                            <li>Layout – Rozloženie stránky</li>
+                            <li>Legend – Legenda</li>
+                            <li>Caption – Popisok</li>
+                            <li>Radio button – Prepínač</li>
+                            <li>Text field/free-text field – Textové pole</li>
+                            <li>Link – Odkaz</li>
+                        </ul>
+
+                        <h2 id="oznacenie2">Označenie tlačidiel</h2>
+                        <p>V záujme jednotného označovania odporúčame používať nasledovné názvy tlačidiel.
+                        </p>
+                        <h3>Prihlásiť sa</h3>
+                        <p>Pri prihlásení používajte na tlačidlách jednotné označenie “Prihlásiť sa”. Odporúčame nepoužívať alternatívne označenia ako napríklad Prihlásiť, Prihlásenie, Vstúpiť do služby, a pod.</p>
+
+                        <h3>Odhlásiť sa</h3>
+                        <p>Pre odhlásenie používajte na tlačidlách jednotné označenie “Odhlásiť sa”. Odporúčame nepoužívať alternatívne označenia ako napríklad Odhlásiť, Odhlásenie, Opustiť službu, a pod.</p>
+
+                        <h3>Začať</h3>
+                        <p>Tlačidlo “Začať” prípadne “Chcem začať” používame na spustenie služby, procesu, alebo registrácie.</p>
+
+                        <h3>Pokračovať</h3>
+                        <p>Tlačidlo “Pokračovať” používame na prechod medzi stránkami / krokmi v rámci formulára. Odporúčame nepoužívať alternatívne označenia ako napríklad Ďalej, Nasledujúca stránka, a pod.</p>
+
+                        <h3>Podpísať žiadosť / podanie</h3>
+                        <p>Používateľ môže podpísať žiadosť viacerými spôsobmi, napríklad občianskym preukazom s čipom, klikom, a pod. O spôsobe, akým bude žiadosť podpísaná, je nutné používateľa informovať na začiatku procesu. Odporúčame nepoužívať termín Autorizácia v názve tlačidla, ale priamo popísať akciu. Týmto spôsobom bude používateľ ihneď informovaný, čo bude nasledovať, napríklad “Podpísať žiadosť občianskym preukazom s čipom”.</p>
+
+                        <h3>eID - elektronická identita</h3>
+                        <p>Jedná sa o elektronickú identitu občana. Výraz odporúčame doprevádzať dodatočnou informáciou “elektronická identita” a nepoužívať ho iba samostatne ako eID.</p>
+
+                        <h3>eID karta (občiansky preukaz s čipom)</h3>
+                        <p>Výraz eID karta vždy doprevádzame informáciou v zátvorkách “občiansky preukaz s čipom”. Pre zjednotenie názvoslovia odporúčame nepoužívať alternatívne názvy ako elektronický občiansky preukaz, elektronický preukaz, občiansky preukaz s elektronickým kontaktným čipom, elektronický doklad, autentifikátor alebo iba názov eID karta.</p>
+
+                        <h2 id="pouzivane">Používané výrazy</h2>
+                        <h3>Autentifikácia</h3>
+                        <p>Ide o overenie identity používateľa. Vo fyzickom svete by išlo napríklad o predloženie občianskeho preukazu. Preto odporúčame vyhnúť sa označeniu Autentifikácia a namiesto neho sa držať jednoduchšieho popisu procesu, napríklad “vloženie občianskeho preukazu s čipom do čítača”.</p>
+
+                        <h3>Autorizácia</h3>
+                        <p>Úkon sa deje prostredníctvom elektronického podpisu používateľa, pečaťou, prípadne iným spôsobom uznaným legislatívou. Odporúčame nepoužívať  termín Autorizácia, ale priamo popísať akciu, a tak používateľa ihneď informovať, čo bude nasledovať, napríklad “prejdite k podpisovaniu”.</p>
+
+                        <h3>Elektronické podanie</h3>
+                        <p>Je to každý úkon (napr. návrh, žiadosť, a pod.), ktoré osoba podáva na orgán (štátny orgán, orgány samosprávy) prostredníctvom elektronického formulára.</p>
+
+                        <h3>Elektronická služba</h3>
+                        <p>Pre rovnaké pomenovanie služieb poskytovaných v elektronickej podobe odporúčame používať názov “Elektronická služba”. Vyhnite sa alternatívnym označeniam ako e-služba, el. služba, a pod.</p>
+
+                        <h3>Elektronická schránka</h3>
+                        <p>Na označenie elektronickej schránky používajte zaužívané spojenie “elektronická schránka”. Odporúčame vyhnúť sa skratkám a alternatívam, ako napríklad iba schránka alebo eDesk.</p>
+
+                        <h3>ID-SK (Jednotný dizajn manuál Slovenska)</h3>
+
+                        <h3>Používateľský účet / Profil
+                        (z angl. user account)</h3>
+                        <p>Používateľské účty sa používajú iba v prípade, ak je pravdepodobné, že vaši používatelia budú musieť svoje údaje využívať v budúcnosti, prípadne aktualizovať vo viacerých častiach vašej služby. Nepoužívajte alternatívne názvy ako napríklad konto.</p>
+
+                        <h3>Používateľ
+                        (z angl. people alebo users)</h3>
+                        <p>Osoba, ktorá akýmkoľvek spôsobom používa alebo požaduje poskytovanie vašej služby. Odporúčame vždy používať označenie “používateľ” a vyhnúť sa jeho alternatívam ako napríklad užívateľ, návštevník.</p>
+
+                        <h3>Kvalifikovaný elektronický podpis</h3>
+                        <p>Prostriedok na podpísanie elektronického podania. Pri tvorbe konkrétnej elektronickej služby je potrebné dbať na to, aký prostriedok autorizácie sa vyžaduje podľa § 23 ods. 3 zákona o e-Governmente.</p>
+
+                        <h3>Kvalifikovaná elektronická pečať</h3>
+                        <p>Prostriedok na podpísanie elektronického podania. Pri tvorbe konkrétnej elektronickej služby je potrebné dbať na to, aký prostriedok autorizácie sa vyžaduje podľa § 23 ods. 3 zákona o e-Governmente.</p>
+
+                        <h3>BOK (bezpečnostný osobný kód)</h3>
+                        <p>Väčšina používateľov nevie, čo sa od nich žiada pri použití skratky “BOK”. Odporúčame vždy vysvetliť, že sa jedná o 6 miestny kód, ktorý si používatelia nastavovali pri preberaní občianskeho preukazu s čipom a skratku vždy doplniť o informáciu v zátvorkách “bezpečnostný osobný kód”.</p>
+
+                        <h3>Toolkit</h3>
+                        <p>Sada softvérových nástrojov.</p>
+
+                        <h3>Backend</h3>
+                        <p>Je základom väčšiny systémov alebo aplikácií. Jedná sa o skrytú časť systému (používateľ ju nevidí), ktorá úzko spolupracuje so serverom a databázou.</p>
+
+                        <h3>Frontend</h3>
+                        <p>Front-end je označenie časti webových aplikácií, ktorá zabezpečuje interakciu s používateľom.</p>
+
+                        <h3>Frontend toolkit</h3>
+                        <p>Ide o sadu nástrojov pre programátorov, ktorá zjednodušuje prácu a zabezpečuje konzistentnosť.</p>
+
+                        <h3>SUS skóre (angl. System​ ​Usability​ ​Scale)</h3>
+                        <p>SUS​ ​skóre​ ​je​ ​spoľahlivý​ ​nástroj​ ​na​ ​meranie​ ​použiteľnosti.​ ​Najčastejším​ ​spôsobom​ ​jeho interpretácie​ ​je​ ​konverzia​ ​na​ ​percentil.​ ​Všeobecné​ ​priemerné​ ​SUS​ ​skóre​ ​systémov​ ​sa​ ​pohybuje okolo​ ​68.
+                            Táto​ ​hodnota​ ​predikuje​ ​používateľskú​ ​lojalitu.​ ​Celé​ ​spektrum percentilu​ ​je​ ​oznámkované​ ​písmenami​ ​A-F.​ ​Vrchných​ ​10%​ ​(hodnotenie​ ​A)​ ​znamená,​ ​že​ ​by používatelia​ ​produkt​ ​odporučili​ ​svojim​ ​priateľom​ ​a​ ​známym,​ ​pri​ ​hodnotení​ ​F​ ​by​ ​produkt používatelia​ ​svojim​ ​priateľom​ ​a​ ​známym​ ​pravdepodobne​ ​neodporučili.</p>
+                    </div>
+
+                </div>
+
+                <!--<div class="change-history" data-module="toggle">
+                    <div class="change-history__latest-change">
+                        <dl>
+                            <dt>Published by:</dt>
+                            <dd>
+                                <a href="/service-manual/communities/design-community">Design community</a>
+                            </dd>
+                            <dt>Last update:</dt>
+                            <dd>
+                                <time datetime="2017-10-03T10:35:26+00:00" class="timestamp"> 3 October 2017</time>
+                                <p class="change-history__summary">
+                                    Added information on operating services in line with departmental Welsh language scheme requirements
+                                    (previously in the guide 'Making your service accessible: an introduction').
+                                </p>
+
+                            </dd>
+                        </dl>
+                    </div>
+                    <p><a href="#full-history" data-controls="full-history" data-expanded="false" role="button" aria-controls="full-history" aria-expanded="false">+ Show all page updates (2)</a></p>
+                    <ol id="full-history" class="change-history__past js-hidden" aria-live="polite" role="region">
+                        <li>
+                            <time datetime="2016-11-07T12:18:52+00:00" class="timestamp"> 7 November 2016</time>
+                            <p class="change-history__summary">
+                                Guidance first published
+                            </p>
+
+                        </li>
+                    </ol>
+                </div>-->
+
+            </div>
+        </div>
+
+    </main>
+
+    <!--<div class="full-page-width-wrapper">
+        <div class="improve-this-page" data-module="improve-this-page">
+            <div class="improve-this-page__prompt js-prompt clearfix" tabindex="-1">
+                <h3 class="improve-this-page__is-useful-question">Is this page useful?</h3>
+                <a class="improve-this-page__page-is-useful-button js-page-is-useful" data-track-category="manualFeedbackForm" data-track-action="ffYesClick" href="/contact/govuk">
+                    Yes <span class="visually-hidden"> this page is useful</span>
+                </a>      <a class="js-page-is-not-useful" data-track-category="manualFeedbackForm" data-track-action="ffNoClick" aria-controls="improveThisPageForm" aria-expanded="false" href="/contact/govuk">
+                No <span class="visually-hidden"> this page is not useful</span>
+            </a>      <a class="js-something-is-wrong improve-this-page__anything-wrong" data-track-category="manualFeedbackForm" data-track-action="ffWrongClick" aria-controls="improveThisPageForm" aria-expanded="false" href="/contact/govuk">
+                Is there anything wrong with this page?
+            </a>    </div>
+            <div id="improveThisPageForm" class="improve-this-page__form js-feedback-form js-hidden" data-track-category="manualFeedbackForm" data-track-action="ffFormSubmit" aria-hidden="true">
+                <a href="#" class="improve-this-page__close js-close-feedback-form" aria-controls="improveThisPageForm" aria-expanded="false">Close</a>
+                <div class="grid-row">
+                    <div class="column-two-thirds">
+                        <div class="js-errors"></div>
+                        <form>
+                            <input type="hidden" name="url" value="https://www.gov.uk/service-manual/design/introduction-designing-government-services">
+                            <input type="hidden" name="user_agent" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36">
+                            <div class="form-group">
+                                <label class="form-label-bold" for="description-field">
+                                    How should we improve this page?
+                                </label>
+                                <textarea id="description-field" class="form-control" name="description" rows="5" aria-required="true"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="name-field">
+                                    Name (optional)
+                                    <span class="form-hint">Include your name and email address if you'd like us to get back to you.</span>
+                                </label>
+                                <input id="name-field" class="form-control" type="text" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email-field">Email (optional)</label>
+                                <input id="email-field" class="form-control" type="text" name="email">
+                            </div>
+                            <div>
+                                <input class="button" type="submit" value="Send message">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+</div>
+{% endblock %}
+
+{% block body_end %}
+<!-- GOV.UK elements redirect -->
+<script src="/public/javascripts/redirect.js"></script>
+
+<script src="https://assets.publishing.service.gov.uk/static/libs/jquery/jquery-1.12.4-5f1157a433c276bcb98f3651434f7cb1f49ff45fe2ec2808b46ee088e61159b5.js">
+
+</script>
+
+<script src="https://assets.publishing.service.gov.uk/service-manual-frontend/application-e47aec62c201636b5b94203bb32057a69146baab883a806db90521d0445d35ea.js">
+</script>
+
+<script src="https://assets.publishing.service.gov.uk/static/header-footer-only-d03b5fd21e9197119d11b83e3325c35f8695a4040cf96e50b824f1198be8c4af.js"></script>
+
+
+{% include "includes/scripts.html" %}
+{% endblock %}
+

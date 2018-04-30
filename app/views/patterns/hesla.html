@@ -1,0 +1,257 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.SK Elementy
+{% endblock %}
+
+{% block main_content %}
+
+
+<div id="wrapper" class="direction-ltr">
+    <main role="main" id="content" lang="en">
+
+        <!-- Page title and contact -->
+        <div class="grid-row">
+
+            <div class="column-two-thirds">
+                <div class="page-header">
+                    <h1 class="page-header__title">
+                        Heslá
+                    </h1>
+                    <p class="page-header__context">Tento návod opisuje spôsob, ako pomôcť používateľom vytvoriť ľahko zapamätateľné a bezpečné heslá.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="column-third">
+
+                <!--<div class="community-contact">
+                    <p>
+                        <a class="feedback" href="/contact/govuk">Give feedback about this page</a>
+                    </p>
+                </div>-->
+            </div>
+        </div>
+
+        <!-- Metadata-->
+        <div class="grid-row">
+            <div class="column-two-thirds">
+
+                <!--<div class="metadata">
+                    <dl>
+                        <dt>Published by:</dt>
+                        <dd>
+                            <a href="/service-manual/communities/design-community">Design community</a>
+                        </dd>
+                        <dt>Last updated:</dt>
+                        <dd>
+                            7 months ago
+                        </dd>
+                    </dl>
+                </div>-->
+
+            </div>
+        </div>
+
+        <div class="grid-row" data-module="highlight-active-section-heading">
+            <div class="column-third">
+
+                <!--  Page contents -->
+                <div class="page-contents js-page-contents js-stick-at-top-when-scrolling js-sticky-resize" style="width: 300px;">
+                    <h2 class="page-contents__title">Stránka obsahuje:</h2>
+                    <ul class="page-contents__list">
+                        <li><a href="#nastavenie-vhodnych-pravidiel-tvorby-hesla">Nastavenie vhodných pravidiel tvorby hesla</a></li>
+                        <li><a href="#nenutte-pouzivatelov-aby-si-často-menili-heslo">Nenúťte používateľov, aby si často menili heslo</a></li>
+                        <li><a href="#chybne-pokusy-o-prihlasenie-sa">Chybné pokusy o prihlásenie sa</a></li>
+                        <li><a href="#automaticky-skryvajte-hesla">Automaticky skrývajte heslá</a></li>
+                        <li><a href="#umoznite-pouzivatelom-vlozit-heslo">Umožnite používateľom vložiť heslo</a></li>
+                        <li><a href="#pomoc-pri-zabudnutom-hesle">Pomoc pri zabudnutom hesle</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="column-two-thirds">
+
+                <div class="govspeak-wrapper">
+
+                    <div class="govuk-govspeak ">
+                        
+
+                        <h2 id="nastavenie-vhodnych-pravidiel-tvorby-hesla">Nastavenie vhodných pravidiel tvorby hesla</h2>
+                        <p>Príliš prísne alebo mätúce pravidlá pri tvorbe hesla môžu sťažiť používateľom vytvorenie zapamätateľných hesiel.</p>
+                        <p>Môže to mať za následok, že používatelia:</p>
+                        <ul class="list-bullet">
+                            <li>prestanú používať danú službu,</li>
+                            <li>budú často žiadať o obnovu hesla,</li>
+                            <li>svoje heslo si uložia na nezabezpečené miesto.</li>
+                        </ul>
+                        <p>Zvoľte obmedzenia, ktoré zodpovedajú bezpečnostným potrebám vašej služby. Ak potrebujete zvýšiť bezpečnosť, je vhodnejšie pridať dvojúrovňové overenie, než zložité pravidlá pri tvorbe hesla.</p>
+                        <p>Pri tvorbe hesla dodržujte tieto pravidlá:</p>
+                        <ul class="list-bullet">
+                            <li>heslo musí obsahovať minimálne 8 znakov,</li>
+                            <li>neobmedzujte používateľov v maximálnej dĺžke hesla,</li>
+                            <li>je potrebné používateľom uviesť všetky obmedzenia pri tvorbe hesla,</li>
+                            <li>používajte zoznam nežiadúcich, často používaných hesiel.</li>
+                        </ul>
+                        <h3>Indikátory sily hesla</h3>
+                        <p>Niektoré služby používajú indikátory sily hesla, aby pomohli používateľom vytvoriť bezpečné heslá. Z výskumov zatiaľ nie je známe, či majú tieto indikátory reálny vplyv na tvorbu silnejších hesiel.</p>
+                        
+                        <h2 id="nenutte-pouzivatelov-aby-si-často-menili-heslo">Nenúťte používateľov, aby si často menili heslo</h2>
+                        <p>Niektoré služby nútia používateľov si pravidelne meniť heslá, napríklad každý mesiac.</p>
+                        <p>Nútiť používateľov k pravidelným zmenám hesla sa neodporúča, pretože:</p>
+                        <ul class="list-bullet">
+                            <li>je väčšia pravdepodobnosť, že používatelia zabudnú heslo,</li>
+                            <li>používatelia často zmenia iba časť ich predchádzajúceho hesla,</li>
+                            <li>je pravdepodobné, že si heslo uložia na nezabezpečenom mieste.</li>
+                        </ul>
+                        <p>Zmenu hesla vyžadujte od používateľov iba v prípade podozrenia zo zneužitia hesla.</p>
+                        
+                        <h2 id="chybne-pokusy-o-prihlasenie-sa">Chybné pokusy o prihlásenie sa</h2>
+                        <p>Ak používateľ zadá nesprávne údaje o svojom účte, nezverejňujte, či sa jednalo o nesprávne meno alebo heslo.</p>
+                        <p>Odhalenie tejto informácie by mohlo napomôcť hekerom preniknúť do účtov používateľov.</p>
+                        <p>Nechajte používateľom aspoň 10 pokusov na zadanie správneho hesla skôr, než účet zablokujete alebo podniknete iné bezpečnostné kroky.</p>
+                        
+                        <h2 id="automaticky-skryvajte-hesla">Automaticky skrývajte heslá</h2>
+                        <p>Používatelia môžu byť pri zadávaní alebo vytváraní hesla vo verejnom priestore, takže by ste mali heslá automaticky skryť.</p>
+                        <p>Ak chcete pomôcť používateľom pri tvorbe bezpečného hesla a zamedziť vzniku preklepov:</p>
+                        <ul class="list-bullet">
+                            <li>nechajte používateľov nech si zobrazia heslo, ak o to majú záujem,</li>
+                            <li>zobrazte vždy posledný zadaný znak hesla,</li>
+                            <li>nechajte používateľov zadať heslo dvakrát a automaticky ich porovnajte.</li>
+                        </ul>
+                        
+                        <h2 id="umoznite-pouzivatelom-vlozit-heslo">Umožnite používateľom vložiť heslo</h2>
+                        <p>Umožnite používateľom prilepiť heslo do poľa tomu určeného (funkcia kopírovať a prilepiť). Používatelia môžu mať rôzne dôvody, prečo chcú vložiť svoje heslo, napríklad ak používajú aplikáciu na správu hesiel.</p>
+                        
+                        <h2 id="pomoc-pri-zabudnutom-hesle">Pomoc pri zabudnutom hesle</h2>
+                        <p>Dostatočne silné heslá sú často zložité na zapamätanie.</p>
+                        <p>Ak chcete pomôcť používateľom, ktorí zabudli svoje heslo, mali by ste:</p>
+                        <ul class="list-bullet">
+                            <li>poslať používateľom odkaz alebo kód na obnovu hesla,</li>
+                            <li>vyhnúť sa otázkam na obnovu hesla,</li>
+                            <li>vyhnúť sa pripomínaniu hesla.</li>
+                        </ul>
+                        <h3>Posielanie odkazu na obnovu hesla</h3>
+                        <p>Heslá by ste nikdy nemali posielať e-mailom, pretože to nie je bezpečný kanál.</p>
+                        <p>Namiesto toho odošlite používateľom na e-mailovú adresu alebo telefónne číslo, pod ktorým sa zaregistrovali, časovo obmedzený odkaz, prípadne kód na obnovu hesla.</p>
+                        <p>Vždy, keď dôjde k obnove hesla, upovedomte o tom používateľa pre prípad, že sa niekto iný snaží získať prístup k jeho účtu.</p>
+                        <h3>Pri obnove hesla nepoužívajte bezpečnostné otázky</h3>
+                        <p>Nepoužívajte pri obnove hesla bezpečnostné otázky, pretože odpovede sú:</p>
+                        <ul class="list-bullet">
+                            <li>rovnako ťažké na zapamätanie ako heslo samotné,</li>
+                            <li>príliš ľahké na to, aby sa ich niekto dozvedel (napríklad “krstné meno matky”),</li>
+                            <li>variabilné, a teda časom podliehajú zmenám (napríklad “vaša obľúbená farba”).</li>
+                        </ul>
+                        <h3>Vyhnite sa pripomínaniu hesla</h3>
+                        <p>Vyhnite sa pripomínaniu konkrétneho znenia hesla používateľovi, ktorý si na heslo nevie spomenúť, pretože:</p>
+                        <ul class="list-bullet">
+                            <li>existuje vysoké riziko, že napomáhate potenciálnemu útočníkovi, ktorý sa snaží získať prístup k účtu,</li>
+                            <li>tento spôsob nefunguje, ak majú používatelia veľmi silné heslá obsahujúce náhodné reťazce znakov.</li>
+                        </ul>
+                            
+                    </div>
+
+                </div>
+
+                <!--<div class="change-history" data-module="toggle">
+                    <div class="change-history__latest-change">
+                        <dl>
+                            <dt>Published by:</dt>
+                            <dd>
+                                <a href="/service-manual/communities/design-community">Design community</a>
+                            </dd>
+                            <dt>Last update:</dt>
+                            <dd>
+                                <time datetime="2017-10-03T10:35:26+00:00" class="timestamp"> 3 October 2017</time>
+                                <p class="change-history__summary">
+                                    Added information on operating services in line with departmental Welsh language scheme requirements
+                                    (previously in the guide 'Making your service accessible: an introduction').
+                                </p>
+
+                            </dd>
+                        </dl>
+                    </div>
+                    <p><a href="#full-history" data-controls="full-history" data-expanded="false" role="button" aria-controls="full-history" aria-expanded="false">+ Show all page updates (2)</a></p>
+                    <ol id="full-history" class="change-history__past js-hidden" aria-live="polite" role="region">
+                        <li>
+                            <time datetime="2016-11-07T12:18:52+00:00" class="timestamp"> 7 November 2016</time>
+                            <p class="change-history__summary">
+                                Guidance first published
+                            </p>
+
+                        </li>
+                    </ol>
+                </div>-->
+
+            </div>
+        </div>
+
+    </main>
+
+    <!--<div class="full-page-width-wrapper">
+        <div class="improve-this-page" data-module="improve-this-page">
+            <div class="improve-this-page__prompt js-prompt clearfix" tabindex="-1">
+                <h3 class="improve-this-page__is-useful-question">Is this page useful?</h3>
+                <a class="improve-this-page__page-is-useful-button js-page-is-useful" data-track-category="manualFeedbackForm" data-track-action="ffYesClick" href="/contact/govuk">
+                    Yes <span class="visually-hidden"> this page is useful</span>
+                </a>      <a class="js-page-is-not-useful" data-track-category="manualFeedbackForm" data-track-action="ffNoClick" aria-controls="improveThisPageForm" aria-expanded="false" href="/contact/govuk">
+                No <span class="visually-hidden"> this page is not useful</span>
+            </a>      <a class="js-something-is-wrong improve-this-page__anything-wrong" data-track-category="manualFeedbackForm" data-track-action="ffWrongClick" aria-controls="improveThisPageForm" aria-expanded="false" href="/contact/govuk">
+                Is there anything wrong with this page?
+            </a>    </div>
+            <div id="improveThisPageForm" class="improve-this-page__form js-feedback-form js-hidden" data-track-category="manualFeedbackForm" data-track-action="ffFormSubmit" aria-hidden="true">
+                <a href="#" class="improve-this-page__close js-close-feedback-form" aria-controls="improveThisPageForm" aria-expanded="false">Close</a>
+                <div class="grid-row">
+                    <div class="column-two-thirds">
+                        <div class="js-errors"></div>
+                        <form>
+                            <input type="hidden" name="url" value="https://www.gov.uk/service-manual/design/introduction-designing-government-services">
+                            <input type="hidden" name="user_agent" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36">
+                            <div class="form-group">
+                                <label class="form-label-bold" for="description-field">
+                                    How should we improve this page?
+                                </label>
+                                <textarea id="description-field" class="form-control" name="description" rows="5" aria-required="true"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="name-field">
+                                    Name (optional)
+                                    <span class="form-hint">Include your name and email address if you'd like us to get back to you.</span>
+                                </label>
+                                <input id="name-field" class="form-control" type="text" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email-field">Email (optional)</label>
+                                <input id="email-field" class="form-control" type="text" name="email">
+                            </div>
+                            <div>
+                                <input class="button" type="submit" value="Send message">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+</div>
+{% endblock %}
+
+{% block body_end %}
+<!-- GOV.UK elements redirect -->
+<script src="/public/javascripts/redirect.js"></script>
+
+<script src="https://assets.publishing.service.gov.uk/static/libs/jquery/jquery-1.12.4-5f1157a433c276bcb98f3651434f7cb1f49ff45fe2ec2808b46ee088e61159b5.js">
+
+</script>
+
+<script src="https://assets.publishing.service.gov.uk/service-manual-frontend/application-e47aec62c201636b5b94203bb32057a69146baab883a806db90521d0445d35ea.js">
+</script>
+
+<script src="https://assets.publishing.service.gov.uk/static/header-footer-only-d03b5fd21e9197119d11b83e3325c35f8695a4040cf96e50b824f1198be8c4af.js"></script>
+
+
+{% include "includes/scripts.html" %}
+{% endblock %}
+
