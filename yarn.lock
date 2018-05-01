@@ -2223,9 +2223,9 @@ idsk_frontend_toolkit@^7.4.3:
   version "7.4.3"
   resolved "https://registry.yarnpkg.com/idsk_frontend_toolkit/-/idsk_frontend_toolkit-7.4.3.tgz#5b1c03472be597785a368d407b5e9ac12d05fb95"
 
-idsk_template_jinja@0.24.2:
-  version "0.24.2"
-  resolved "https://registry.yarnpkg.com/idsk_template_jinja/-/idsk_template_jinja-0.24.2.tgz#d2c1039c5e5e425ca46b73f597a5b1c8d52dec25"
+idsk_template_jinja@0.24.4:
+  version "0.24.4"
+  resolved "https://registry.yarnpkg.com/idsk_template_jinja/-/idsk_template_jinja-0.24.4.tgz#7d442f8352887d3ddfbc6ca91cc4caa09c038695"
 
 ignore-by-default@^1.0.1:
   version "1.0.1"
