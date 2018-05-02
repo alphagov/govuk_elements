@@ -12,7 +12,7 @@ describe('Copy assets to public and run the app...', () => {
       assert.doesNotThrow(() => {
         fs.accessSync(path.resolve(__dirname, '../../public/javascripts/application.js'))
         fs.accessSync(path.resolve(__dirname, '../../public/images/examples/larry-the-cat.jpg'))
-        fs.accessSync(path.resolve(__dirname, '../../public/stylesheets/govuk-elements-styles.css'))
+        fs.accessSync(path.resolve(__dirname, '../../public/stylesheets/idsk-elements-styles.css'))
         fs.accessSync(path.resolve(__dirname, '../../public/stylesheets/elements-documentation.css'))
       })
     })

@@ -1,0 +1,6 @@
+// Path to assets for use with the file-url function
+// in the idsk frontend toolkit's url-helpers partial
+$path: "/public/images/";
+
+// Import all the idsk-elements partials listed in _idsk-elements.scss
+@import "idsk-elements";

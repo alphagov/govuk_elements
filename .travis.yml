@@ -27,8 +27,8 @@ jobs:
         #
         # Heroku is configured to automatically deploy the following branches
         # once CI passes:
-        # master         -> http://govuk-elements.herokuapp.com/
-        #                -> http://govuk-elements-review.herokuapp.com/
+        # master         -> http://idsk-elements.herokuapp.com/
+        #                -> http://idsk-elements-review.herokuapp.com/
         # latest-release -> http://idsk-elements-sass-release.herokuapp.com/
         
         # Create a new tag on Github and update the latest-release branch
