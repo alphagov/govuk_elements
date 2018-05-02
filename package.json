@@ -1,9 +1,9 @@
 {
-  "name": "govuk-elements",
+  "name": "idsk-elements",
   "private": "true",
   "description": "The GOV.UK elements application",
-  "repository": "alphagov/govuk_elements",
-  "homepage": "https://govuk-elements.herokuapp.com/",
+  "repository": "id-sk/idsk_elements",
+  "homepage": "https://idsk-elements.herokuapp.com/",
   "license": "MIT",
   "engines": {
     "node": ">=8.1.4"
@@ -41,10 +41,10 @@
     ]
   },
   "author": {
-    "name": "Government Digital Service developers",
-    "email": "govuk-dev@digital.cabinet-office.gov.uk"
+    "name": "Ernest Walzel",
+    "email": "ernest.walzel@slovensko.digital"
   },
   "bugs": {
-    "url": "https://github.com/alphagov/govuk_elements/issues"
+    "url": "https://github.com/id-sk/idsk_elements/issues"
   }
 }
