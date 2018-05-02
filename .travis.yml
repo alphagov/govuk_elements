@@ -37,8 +37,9 @@ jobs:
 
         # Update the NPM package (https://www.npmjs.com/package/idsk-elements-sass)
         - provider: script
-          script: echo "Deploying to npm ..."
-          script: cd packages/idsk-elements-sass/
+          script: 
+          - echo "Deploying to npm ..."
+          - cd packages/idsk-elements-sass/
 
         - provider: npm
           email: ernest.walzel+idsk@slovensko.digital
@@ -47,7 +48,8 @@ jobs:
 
         # Upload the contents of packages/idsk-elements-sass/ to GitHub releases
         - provider: script
-          script: echo "Deploying to GitHub releases ..."
+          script: 
+          - echo "Deploying to GitHub releases ..."
 
         - provider: releases
           api_key:
