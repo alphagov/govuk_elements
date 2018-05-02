@@ -125,7 +125,7 @@ gulp.task('develop', cb => {
 })
 
 // Package task ----------------------------
-// Copies the scss files to packages/govuk-elements-sass/
+// Copies the scss files to packages/idsk-elements-sass/
 // Ignores the elements-documentation stylesheets
 // ---------------------------------------
 
@@ -137,7 +137,7 @@ gulp.task('package:prepare', () => {
   return gulp.src(
     [
       paths.assetsScss + '**/elements/**/*.scss',
-      paths.assetsScss + '_govuk-elements.scss',
+      paths.assetsScss + '_idsk-elements.scss',
       paths.assetsScss + '_frontend-toolkit.scss',
       paths.assetsScss + '_elements.scss'
     ])
@@ -163,7 +163,7 @@ gulp.task('default', () => {
     ) + ': performs an initial build then sets up watches.'
   )
   gutil.log(cyan('package'
-    ) + ': prepares the govuk-elements-sass npm package'
+    ) + ': prepares the idsk-elements-sass npm package'
   )
 
   gutil.log(green('----------'))
