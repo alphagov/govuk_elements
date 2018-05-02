@@ -1,0 +1,57 @@
+// Tables
+// ==========================================================================
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+
+  th,
+  td {
+    @include core-19;
+    padding: em(12, 19) em(20, 19) em(9, 19) 0;
+
+    text-align: left;
+    border-bottom: 1px solid $border-colour;
+  }
+
+  thead th {
+    font-weight: 700;
+  }
+
+  td:last-child,
+  th:last-child {
+    padding-right: 0;
+  }
+
+  // Right align table header cells and table cells with a numeric class
+  .numeric {
+    text-align: right;
+  }
+
+  // Allow a qualifying element, only table data cells should use tabular numbers
+  // scss-lint:disable QualifyingElement
+  td.numeric {
+    font-family: $toolkit-font-stack-tabular;
+  }
+
+  caption {
+    text-align: left;
+  }
+}
+
+.table-font-xsmall {
+
+  th {
+    @include bold-16;
+  }
+
+  td {
+    @include core-16;
+  }
+
+  th,
+  td {
+    padding: em(12, 16) em(20, 16) em(9, 16) 0;
+  }
+}

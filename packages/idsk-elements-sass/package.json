@@ -1,0 +1,21 @@
+{
+  "name": "idsk-elements-sass",
+  "version": "3.1.2",
+  "description": "ID-SK elements Sass files",
+  "repository": "id-sk/idsk_elements",
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.0"
+  },
+  "dependencies": {
+    "idsk_frontend_toolkit": "^7.4.3"
+  },
+  "author": {
+    "name": "Ernest Walzel",
+    "email": "ernest.walzel@slovensko.digital"
+  },
+  "bugs": {
+    "url": "https://github.com/id-sk/idsk_elements/issues"
+  },
+  "sass": "./public/_elements.scss"
+}
