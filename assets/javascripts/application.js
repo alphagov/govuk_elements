@@ -18,7 +18,7 @@ $(document).ready(function () {
   // Details/summary polyfill
   // See /javascripts/vendor/details.polyfill.js
 
-  GOVUK.modules.start();
+  GOVUK.modules.start()
 })
 
 $(window).load(function () {

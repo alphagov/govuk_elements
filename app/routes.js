@@ -211,146 +211,135 @@ module.exports = {
       res.render('guide_alpha_beta', { 'page_name': pageName })
     })
 
-    app.get('/uvod/metodicky', function(req, res) {
-      var pageName = 'Metodický úvod';
+    app.get('/uvod/metodicky', function (req, res) {
+      var pageName = 'Metodický úvod'
       res.render('introduction/id-sk', { 'page_name': pageName })
     })
 
-    app.get('/uvod/principy', function(req, res) {
-      var pageName = 'Princípy tvorby elektronických služieb';
+    app.get('/uvod/principy', function (req, res) {
+      var pageName = 'Princípy tvorby elektronických služieb'
       res.render('introduction/10_principov_tvorby_elektronickych_sluzieb', { 'page_name': pageName })
     })
 
-
     // Patterns
-    app.get('/vzory/adresy', function(req, res) {
-      var pageName = 'Adresy';
+    app.get('/vzory/adresy', function (req, res) {
+      var pageName = 'Adresy'
       res.render('patterns/adresy', { 'page_name': pageName })
     })
 
-    app.get('/vzory/oznacenie-verzie-sluzby', function(req, res) {
-      var pageName = 'Označenie verzie služby';
+    app.get('/vzory/oznacenie-verzie-sluzby', function (req, res) {
+      var pageName = 'Označenie verzie služby'
       res.render('patterns/oznacenie-verzie-sluzby', { 'page_name': pageName })
     })
 
-    app.get('/vzory/overenie-pred-zaciatkom-procesu', function(req, res) {
-      var pageName = 'Overenie pred začiatkom procesu';
+    app.get('/vzory/overenie-pred-zaciatkom-procesu', function (req, res) {
+      var pageName = 'Overenie pred začiatkom procesu'
       res.render('patterns/overenie-pred-zaciatkom-procesu', { 'page_name': pageName })
     })
 
-    app.get('/vzory/zhrnutie', function(req, res) {
-      var pageName = 'Zhrnutie';
+    app.get('/vzory/zhrnutie', function (req, res) {
+      var pageName = 'Zhrnutie'
       res.render('patterns/zhrnutie', { 'page_name': pageName })
     })
 
-    app.get('/vzory/stranky-dokoncenia-procesu', function(req, res) {
-      var pageName = 'Stránky dokočenia procesu';
+    app.get('/vzory/stranky-dokoncenia-procesu', function (req, res) {
+      var pageName = 'Stránky dokočenia procesu'
       res.render('patterns/stranky-dokoncenia-procesu', { 'page_name': pageName })
     })
 
-    app.get('/vzory/datumy', function(req, res) {
-      var pageName = 'Dátumy';
+    app.get('/vzory/datumy', function (req, res) {
+      var pageName = 'Dátumy'
       res.render('patterns/datumy', { 'page_name': pageName })
     })
 
-    app.get('/vzory/emailove-adresy', function(req, res) {
-      var pageName = 'Emailové adresy';
+    app.get('/vzory/emailove-adresy', function (req, res) {
+      var pageName = 'Emailové adresy'
       res.render('patterns/emaily', { 'page_name': pageName })
     })
-    app.get('/vzory/proces-overenia-emailovej-adresy', function(req, res) {
-      var pageName = 'Emailové adresy';
+    app.get('/vzory/proces-overenia-emailovej-adresy', function (req, res) {
+      var pageName = 'Emailové adresy'
       res.render('patterns/proces-overenia-emailovej-adresy', { 'page_name': pageName })
     })
 
-
-
-    app.get('/vzory/stranky-so-spatnou-vazbou', function(req, res) {
-      var pageName = 'Stránky so spätnou väzbou';
+    app.get('/vzory/stranky-so-spatnou-vazbou', function (req, res) {
+      var pageName = 'Stránky so spätnou väzbou'
       res.render('patterns/stranky-so-spatnou-vazbou', { 'page_name': pageName })
     })
 
-    app.get('/vzory/struktura-formularov', function(req, res) {
-      var pageName = 'Štruktúra formulárov';
+    app.get('/vzory/struktura-formularov', function (req, res) {
+      var pageName = 'Štruktúra formulárov'
       res.render('patterns/struktura-formularov', { 'page_name': pageName })
     })
 
-    app.get('/vzory/vyber-pohlavia', function(req, res) {
-      var pageName = 'Výber pohlavia';
+    app.get('/vzory/vyber-pohlavia', function (req, res) {
+      var pageName = 'Výber pohlavia'
       res.render('patterns/vyber-pohlavia', { 'page_name': pageName })
     })
 
-    app.get('/vzory/pomocny-text', function(req, res) {
-      var pageName = 'Pomocný text';
+    app.get('/vzory/pomocny-text', function (req, res) {
+      var pageName = 'Pomocný text'
       res.render('patterns/pomocny-text', { 'page_name': pageName })
     })
 
-    app.get('/vzory/mena', function(req, res) {
-      var pageName = 'Mená';
+    app.get('/vzory/mena', function (req, res) {
+      var pageName = 'Mená'
       res.render('patterns/mena', { 'page_name': pageName })
     })
 
-    app.get('/vzory/hesla', function(req, res) {
-      var pageName = 'Heslá';
+    app.get('/vzory/hesla', function (req, res) {
+      var pageName = 'Heslá'
       res.render('patterns/hesla', { 'page_name': pageName })
     })
 
-    app.get('/vzory/platobna-stranka', function(req, res) {
-      var pageName = 'Platobná stránka';
+    app.get('/vzory/platobna-stranka', function (req, res) {
+      var pageName = 'Platobná stránka'
       res.render('patterns/platobna-stranka', { 'page_name': pageName })
     })
 
-    app.get('/vzory/indikatory-progresu', function(req, res) {
-      var pageName = 'Indukátory progresu';
+    app.get('/vzory/indikatory-progresu', function (req, res) {
+      var pageName = 'Indukátory progresu'
       res.render('patterns/indikatory-progresu', { 'page_name': pageName })
     })
 
-    app.get('/vzory/stranky-s-otazkami', function(req, res) {
-      var pageName = 'Stránky s otázkami';
+    app.get('/vzory/stranky-s-otazkami', function (req, res) {
+      var pageName = 'Stránky s otázkami'
       res.render('patterns/stranky-s-otazkami', { 'page_name': pageName })
     })
 
-    app.get('/vzory/uvodne-obrazovky', function(req, res) {
-      var pageName = 'Úvodné obrazovky';
+    app.get('/vzory/uvodne-obrazovky', function (req, res) {
+      var pageName = 'Úvodné obrazovky'
       res.render('patterns/uvodne-obrazovky', { 'page_name': pageName })
     })
 
-    app.get('/vzory/zoznamy-uloh', function(req, res) {
-      var pageName = 'Zoznamy úloh';
+    app.get('/vzory/zoznamy-uloh', function (req, res) {
+      var pageName = 'Zoznamy úloh'
       res.render('patterns/zoznamy-uloh', { 'page_name': pageName })
     })
 
-    app.get('/vzory/prihlasenie-a-ucty', function(req, res) {
-      var pageName = 'Prihlásenie a používateľské účty';
+    app.get('/vzory/prihlasenie-a-ucty', function (req, res) {
+      var pageName = 'Prihlásenie a používateľské účty'
       res.render('patterns/prihlasenie-a-ucty', { 'page_name': pageName })
     })
 
-    app.get('/vzory/ukazka-podania-ziadosti', function(req, res) {
-      var pageName = 'Ukážka podania žiadosti';
+    app.get('/vzory/ukazka-podania-ziadosti', function (req, res) {
+      var pageName = 'Ukážka podania žiadosti'
       res.render('patterns/ukazka-podania-ziadosti', { 'page_name': pageName })
     })
 
-    app.get('/vzory/pouzivatelske-mena', function(req, res) {
-      var pageName = 'Používateľské mená';
+    app.get('/vzory/pouzivatelske-mena', function (req, res) {
+      var pageName = 'Používateľské mená'
       res.render('patterns/pouzivatelske-mena', { 'page_name': pageName })
     })
 
-    app.get('/vzory/ako-zacat-s-vyvojom', function(req, res) {
-      var pageName = 'Ako začať s vývojom';
+    app.get('/vzory/ako-zacat-s-vyvojom', function (req, res) {
+      var pageName = 'Ako začať s vývojom'
       res.render('introduction/ako-zacat-s-vyvojom', { 'page_name': pageName })
     })
 
-
-
-
-
-
-
     // Slovnik
-    app.get('/slovnik/slovnik', function(req, res) {
-      var pageName = 'Slovník';
+    app.get('/slovnik/slovnik', function (req, res) {
+      var pageName = 'Slovník'
       res.render('dictionary/slovnik', { 'page_name': pageName })
     })
-
-
   }
 }
