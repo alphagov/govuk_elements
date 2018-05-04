@@ -1,14 +1,14 @@
 {
   "name": "govuk-elements-sass",
   "version": "3.1.2",
-  "description": "GOVUK elements Sass files",
-  "repository": "alphagov/govuk_elements",
+  "description": "ID-SK elements Sass files",
+  "repository": "id-sk/idsk_elements",
   "license": "MIT",
   "engines": {
     "node": ">=6.0"
   },
   "dependencies": {
-    "govuk_frontend_toolkit": "^7.1.0"
+    "idsk_frontend_toolkit": "^7.4.3"
   },
   "author": {
     "name": "GOV.UK Design System Team (Government Digital Service)",
