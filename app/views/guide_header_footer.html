@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Dáta — Webové komponenty{% endblock %}
+
+{% block main_content %}
+
+<main id="content" role="main">
+
+    <h1 class="heading-xlarge">
+        <span class="heading-secondary">Webové komponenty</span>
+        Hlavička a pätička stránky
+    </h1>
+
+    <p class="lede text">
+        Odporúčame pridať na stránku svojej služby hlavičku a pätičku podľa tohto manuálu. Je dôležité, aby všetky online služby Slovenskej republiky vyzerali pre používateľa rovnako.
+    </p>
+
+    <h2 class="heading-small heading-contents">Obsah:</h2>
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <ul class="list list-contents">
+                <li><a href="#data-table-numeric">Hlavička stránky</a></li>
+                <li><a href="#data-in-a-table">Pätička stránky</a></li>
+            </ul>
+        </div>
+    </div>
+    <p>Šablónu pre hlavičku a pätičku stránky vašej služby si môžete stiahnuť z repozitára GitHub. Tento poskytuje kód a prostriedky, ktoré potrebujete na pridanie hlavičky a pätičky stránky k vašej službe.</p>
+
+    <h2 class="heading-medium" id="data-table-numeric">Hlavička stránky</h2>
+    <p>Kedykoľvek použijete spoločnú hlavičku prepojte logotyp slovensko.sk späť na domovskú stránku slovensko.sk</p>
+
+    <h3>Úprava hlavičky</h3>
+    <p>Šablónu môžete prispôsobiť v závislosti od typu hlavičky, ktorú potrebujete. To závisí od dĺžky a komplexnosti služby a od  toho  či k nej potrebujete zobraziť aj navigáciu.
+    </p>
+
+    <h3>Hlavička bez názvu služby</h3>
+    <p>Ak má vaša služba len jednu alebo len zopár strán, napr. nejaké doplnkové informácie, použite štandardnú hlavičku stránky.
+    </p>
+    <img src="/public/images/guides/header-footer1.png" alt="img">
+    <p>Pozrite si <a href="http://alphagov.github.io/govuk_template/example-proposition-menu.html">automaticky generovanú šablónu pätičky.</a>
+        Stiahnite si pätičku z <a href="https://github.com/alphagov/govuk_template">GitHub.</a>
+    </p>
+
+    <h3>Hlavička s názvom služby</h3>
+    <p>Pridajte štandardnú a najčastejšie používanú hlavičku s názvom služby, ak vaša služba obsahuje viac než jednu stránku. Pomôžete sa tak používateľovi zorientovať, kde sa práve nachádza.
+    </p>
+
+    <img src="/public/images/guides/header-footer2.png" alt="img">
+
+    <p>Pozrite si <a href="http://alphagov.github.io/govuk_template/example-proposition-menu.html">automaticky generovanú šablónu pätičky.</a>
+        Stiahnite si pätičku z <a href="https://github.com/alphagov/govuk_template">GitHub.</a>
+    </p>
+
+    <h3>Hlavička s dodatočnou navigáciou</h3>
+    <p>Túto hlavičku odporúčame použiť v prípade, že potrebuje doplniť jednoduchú navigáciu.
+    </p>
+
+    <img src="/public/images/guides/header-footer3.png" alt="img">
+    <p>Pozrite si <a href="http://alphagov.github.io/govuk_template/example-proposition-menu.html">automaticky generovanú šablónu pätičky.</a>
+        Stiahnite si pätičku z <a href="https://github.com/alphagov/govuk_template">GitHub.</a>
+    </p>
+
+    <h3>Hlavička s identifikáciou prihlásenia</h3>
+    <p>Túto hlavičku odporúčame použiť v prípade, že pre použitie služby je potrebné prihlásenie používateľa.
+    </p>
+    <img src="/public/images/guides/header-footer4.png" alt="img">
+
+    <p>Pozrite si <a href="http://alphagov.github.io/govuk_template/example-proposition-menu.html">automaticky generovanú šablónu pätičky.</a>
+        Stiahnite si pätičku z <a href="https://github.com/alphagov/govuk_template">GitHub.</a>
+    </p>
+
+    <h2>Pätička stránky</h2>
+    <h3>Základná pätička stránky
+    </h3>
+
+    <p>Všetky služby musia používať základnú štandardnú pätičku stránky, ktorá obsahuje najmä textové informácie o prevádzkovateľovi služby a textové odkazy na:
+    </p>
+
+    <img src="/public/images/guides/header-footer5.png" alt="img">
+    <ul class="text list list-bullet">
+        <li>kontaktnú stránku vašej organizácie</li>
+        <li>pomocné informácie – len ak je táto stránka naozaj nutná kvôli komplexnosti a náročnosti samotnej služby</li>
+        <li>iné jazykové možnosti – názov odkazu píšte v danom jazyku</li>
+        <li>informácie o ochrane osobných údajov</li>
+        <li>vyhlásenie o prístupnosti</li>
+    </ul>
+
+    <h3>Pätička stránky s doplneným logom organizácie</h3>
+    <p>Pätičku môžete doplniť aj o logo vašej organizácie. Používateľ tak nadobudne väčšiu istotu pri prechode zo stránky vašej organizácie na stránku online služby. Maximálna šírka loga organizácie je 210 pixelov, maximálna výška je 70 pixelov.
+    </p>
+
+    <img src="/public/images/guides/header-footer6.png" alt="img">
+    <p>Pozrite si <a href="http://alphagov.github.io/govuk_template/example-proposition-menu.html">automaticky generovanú šablónu pätičky.</a>
+        Stiahnite si pätičku z <a href="https://github.com/alphagov/govuk_template">GitHub.</a>
+    </p>
+
+
+</main><!-- / #content -->
+{% endblock %}
