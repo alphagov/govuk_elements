@@ -66,6 +66,11 @@ module.exports = {
       res.render('guide_colour', { 'page_name': pageName })
     })
 
+    app.get('/hlavicka-paticka', function(req, res) {
+      var pageName = 'Hlavička a pätička'
+      res.render('guide_header_footer', {'page_name': pageName})
+    })
+
     // Icons and images
     app.get('/icons-images', function (req, res) {
       var pageName = 'Ikony a obrázky'
@@ -80,8 +85,8 @@ module.exports = {
       res.render('examples/example_icons', { 'section': section, 'section_name': sectionName, 'page_name': pageName })
     })
 
-    // Data
-    app.get('/data', function (req, res) {
+    // udaje
+    app.get('/udaje', function (req, res) {
       var pageName = 'Údaje'
       res.render('guide_data', { 'page_name': pageName })
     })
@@ -211,14 +216,19 @@ module.exports = {
       res.render('guide_alpha_beta', { 'page_name': pageName })
     })
 
-    app.get('/uvod/metodicky', function(req, res) {
-      var pageName = 'Metodický úvod';
+    app.get('/uvod/id-sk', function(req, res) {
+      var pageName = 'Čo je ID-SK';
       res.render('introduction/id-sk', { 'page_name': pageName })
     })
 
     app.get('/uvod/principy', function(req, res) {
       var pageName = 'Princípy tvorby elektronických služieb';
       res.render('introduction/10_principov_tvorby_elektronickych_sluzieb', { 'page_name': pageName })
+    })
+
+    app.get('/uvod/metodika-ucd', function(req, res) {
+      var pageName = 'Metodika UCD (user-centered dizajn)';
+      res.render('introduction/metodika_ucd', { 'page_name': pageName })
     })
 
 
