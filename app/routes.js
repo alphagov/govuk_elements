@@ -66,7 +66,7 @@ module.exports = {
       res.render('guide_colour', { 'page_name': pageName })
     })
 
-    app.get('/hlavicka-paticka', function(req, res) {
+    app.get('/hlavicka-paticka', function (req, res) {
       var pageName = 'Hlavička a pätička'
       res.render('guide_header_footer', {'page_name': pageName})
     })
@@ -216,8 +216,8 @@ module.exports = {
       res.render('guide_alpha_beta', { 'page_name': pageName })
     })
 
-    app.get('/uvod/id-sk', function(req, res) {
-      var pageName = 'Čo je ID-SK';
+    app.get('/uvod/id-sk', function (req, res) {
+      var pageName = 'Čo je ID-SK'
       res.render('introduction/id-sk', { 'page_name': pageName })
     })
 
@@ -226,8 +226,8 @@ module.exports = {
       res.render('introduction/10_principov_tvorby_elektronickych_sluzieb', { 'page_name': pageName })
     })
 
-    app.get('/uvod/metodika-ucd', function(req, res) {
-      var pageName = 'Metodika UCD (user-centered dizajn)';
+    app.get('/uvod/metodika-ucd', function (req, res) {
+      var pageName = 'Metodika UCD (user-centered dizajn)'
       res.render('introduction/metodika_ucd', { 'page_name': pageName })
     })
 
