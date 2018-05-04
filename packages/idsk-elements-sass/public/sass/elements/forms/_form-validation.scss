@@ -3,6 +3,7 @@
 
 // Use .form-group-error to add a red border to the left of a .form-group
 .form-group-error {
+  @extend %contain-floats;
   margin-right: 15px;
   border-left: 4px solid $error-colour;
   padding-left: 10px;

@@ -18,6 +18,16 @@
 fieldset {
   @extend %contain-floats;
   width: 100%;
+
+  // Avoid extra vertical space (caused by fieldsets preventing margin collapse) when fieldsets with an h1 in the legend appear after the error-summary element.
+  // (Class used instead of adjacent sibling selector for IE 8 compatibility.)
+  &.after-error-summary {
+    margin-top: -$gutter-half;
+
+    @include media(tablet) {
+      margin-top: -$gutter;
+    }
+  }
 }
 
 // Hack to let legends or elements within legends have margins in webkit browsers

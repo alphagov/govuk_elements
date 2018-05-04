@@ -1,24 +1,25 @@
 #!/bin/bash
 set -e
 
-REPO_PATH='alphagov/govuk_elements'
+REPO_PATH='id-sk/idsk_elements'
 
 echo "Running create-release.sh ..."
-echo "Add config for alphagov/$REPO_PATH"
+echo "Add config for id-sk/$REPO_PATH"
 
-git config --global user.name "GOV.UK Design System CI"
-git config --global user.email "design-system-pipeline@digital.cabinet-office.gov.uk"
+git config --global user.name "ID-SK CI"
+git config --global user.email "ernest.walzel+idsk@slovensko.digital"
 git remote add origin_ssh git@github.com:$REPO_PATH.git
 
 # This openssl command was generated automatically by `travis encrypt-file`, see `.travis/README.md` for more details
-openssl aes-256-cbc -K $encrypted_85ebe8034b89_key -iv $encrypted_85ebe8034b89_iv -in .travis/govuk_elements.enc -out ~/.ssh/id_rsa -d
+openssl aes-256-cbc -K $encrypted_232b4f868286_key -iv $encrypted_232b4f868286_iv -in .travis/idsk_elements.enc -out ~/.ssh/id_rsa -d
 chmod 600 ~/.ssh/id_rsa
+
 
 # VERSION.txt has been updated and a tag
 # doesn't already exist
 
 # Get the version from the version file
-VERSION_TAG="v`cat packages/govuk-elements-sass/VERSION.txt`"
+VERSION_TAG="v`cat packages/idsk-elements-sass/VERSION.txt`"
 
 # Create a new tag
 echo "Creating new tag: $VERSION_TAG"
