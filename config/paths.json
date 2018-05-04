@@ -4,7 +4,7 @@
   "assetsScss": "assets/sass/",
   "config": "config/",
   "nodeModules": "node_modules/",
-  "package": "packages/govuk-elements-sass/",
+  "package": "packages/idsk-elements-sass/",
   "public": "public/",
   "publicImg": "public/images/",
   "publicCss": "public/stylesheets/",

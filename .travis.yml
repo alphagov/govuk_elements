@@ -27,33 +27,35 @@ jobs:
         #
         # Heroku is configured to automatically deploy the following branches
         # once CI passes:
-        # master         -> http://govuk-elements.herokuapp.com/
-        #                -> http://govuk-elements-review.herokuapp.com/
-        # latest-release -> http://govuk-elements-sass-release.herokuapp.com/
+        # master         -> http://idsk-elements.herokuapp.com/
+        #                -> http://idsk-elements-review.herokuapp.com/
+        # latest-release -> http://idsk-elements-sass-release.herokuapp.com/
         
         # Create a new tag on Github and update the latest-release branch
         - provider: script
           script: ./scripts/create-release.sh
 
-        # Update the NPM package (https://www.npmjs.com/package/govuk-elements-sass)
+        # Update the NPM package (https://www.npmjs.com/package/idsk-elements-sass)
         - provider: script
-          script: echo "Deploying to npm ..."
-          script: cd packages/govuk-elements-sass/
+          script: 
+          - echo "Deploying to npm ..."
+          - cd packages/idsk-elements-sass/
 
         - provider: npm
-          email: govuk-dev@digital.cabinet-office.gov.uk
+          email: ernest.walzel+idsk@slovensko.digital
           api_key:
-            secure: CW79rsUR5MFR+YyIsmwhbrndukNjzoKstp2SKupdEzUYTthnzsDxz2CGgI3SwwIcxPh41onxkDZm5R0ZvxwFQf4R+IJEhM94KqjwLdVE5bkKPD0JNYGbYRTDrTCYb74InvjN6LIhYvQwcKO+ThaiMA1IttEc4vCzKHPKKbPv340=
+            secure: "Hnco+VyfeGJDLnxk0m9KY7t3lhaeTWD7aFDN/LMpBXqUmdc2+hSAoAYLfMqgW6wjSTOnpFpEdbXhIhN51gD5lDmdz3Nat9iuQKPNVmij30dZrJm0Esr25R1gxfBg5fn0YmVHhxKvga2kN8tYTnXCXh3r8HrsTJj7jndVxqGFipfYLxrFO9bE6l2KfPuVi6+l2RCzzlfdfPUp9dfqA+yh5QCXdTgNfkk1B/at/y8ehqS+nVVmlCFxWDoVYf0kONr2P9RDx3HjR5Helrtq7pJ/cFKOtZ7P7TAxxLpWX9JrBmbWjK/hD2THuVkNUnBMgCJWGkVQFBWN0chgSfskY8y6HIRWSFyxEvyM2ecyIKMab1PhzTVqFJSpz9MaOEnDYOrnit+EoBaYBgWg8agXQV1HP+DLdhwAAEcf6QiuBtYFA1f3Ljz+wQPVedQvcZwver1S3GSX2/Z+8q2YMHszdNRtbpjNUNNIBi7uHHV0e/3EwP0kCrEZ/QymxBev+gQ+T3xQkLKYzIbvk9fZpkQoNTBXZjaUCL/rwGfR49XwprDgwkd1n2rzU5NSOD45mInQAj8AhPz4V5dRjihOybdoe06MCLjJf8ws/OklG7wHv3xdtjRQZ9VtnKb/A5qle1JG4mbC37jq3oIs7/fsQMZ2/KJQjn8cqttZABzYwvdO9yC3utA="
 
-        # Upload the contents of packages/govuk-elements-sass/ to GitHub releases
+        # Upload the contents of packages/idsk-elements-sass/ to GitHub releases
         - provider: script
-          script: echo "Deploying to GitHub releases ..."
+          script: 
+          - echo "Deploying to GitHub releases ..."
 
         - provider: releases
           api_key:
-            secure: HZD7iqjcf/Yg792jMqksiVsCSQJSZG2TJ77EIGNh7qsdmCSJneUKPpeohQIEvkpjKiz+RyP4v0UqHx9lxHx7rBDmzOdTUCKAV3biTFvmf/W6IUb4UGXbjsDA5AMlNgpCdy4xT2iYBSyUKRR4qLjLDITduDoRQZFET5Z52nzcJgo=
+            secure: "k9psSHgQMduQ0EGbWM5w26xoMmjMRuWpdO2N8BrdP3IG9RKBOBfuJEwRMxORbTLDQ5Pb9e8r7Ptc4VUbA4ndx67kex07JV7FQRiOFJfWKwJPLJZhr00p3hSt5L79ey7uwUKRs+YXJDCIl2QVogv9DNkVFkPUKIFt7lyEBojaUrvy8rPZ+qAqQiFhlsoFmQJcMs2/eRtF75SubsUSSg5MfP5qAtaU814klWOxES8lGm8Vjv6ia/tamHbFzAoR2CDz+66R+g+O1kkeEOFFs0zR4G3vNiTo0UqmlDwVae+f411qC1GOBEU4XEbI3i4Y59pXUgcJxTV5PlMHESBNnAU453Q7XvWB6+Kt4hqc0mxiVTOvMXb4reEFhSvqtV7Q7GqUFSIvPmHlAPqS235gTR7wwt790MJJYX2c5jeOsr7NqDuTet2uwTiizJJtQoVbQ8pHSndSZ1WKgUPif/eehgEJzNkjvteOJ0uDvEG373LPY8gJZH8sBoZQt1vYJNUp8Y4dpooxZ3sAlqrRrlKInqJACcxXpp3ja5LpPa/Y0ZNIDiwOfCEnS9giWYHDLDj7C8K4TTCi6anTqmp+ArE8gqVEq3itR2bI7+3LzQdYDUGOQ9cI/F40HBQqRgBELlENFxtpRi960f7G0o7poXFIslF746kflQG8p4I0xbBLHV3dXp4="
           file_glob: true
-          file: packages/govuk-elements-sass/*
+          file: packages/idsk-elements-sass/*
           skip_cleanup: true
           on:
             tags: true

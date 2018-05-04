@@ -1,7 +1,7 @@
 echo "Check to see if a tag for this version exists"
 
 # Get the version from the version file
-VERSION_TAG="v`cat packages/govuk-elements-sass/VERSION.txt`"
+VERSION_TAG="v`cat packages/idsk-elements-sass/VERSION.txt`"
 
 # Check to make sure the tag doesn't already exist
 if ! git rev-parse $VERSION_TAG >/dev/null 2>&1; then

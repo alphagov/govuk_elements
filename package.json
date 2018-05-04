@@ -1,9 +1,9 @@
 {
-  "name": "govuk-elements",
+  "name": "idsk-elements",
   "private": "true",
   "description": "The GOV.UK elements application",
-  "repository": "alphagov/govuk_elements",
-  "homepage": "https://govuk-elements.herokuapp.com/",
+  "repository": "id-sk/idsk_elements",
+  "homepage": "https://idsk-elements.herokuapp.com/",
   "license": "MIT",
   "engines": {
     "node": ">=8.1.4"
@@ -13,7 +13,7 @@
     "del": "^3.0.0",
     "express": "^4.15.2",
     "idsk_frontend_toolkit": "^7.4.3",
-    "idsk_template_jinja": "0.24.2",
+    "idsk_template_jinja": "0.24.4",
     "gulp": "^3.9.1",
     "gulp-cssnano": "^2.1.2",
     "gulp-mocha": "^4.3.1",
@@ -41,10 +41,10 @@
     ]
   },
   "author": {
-    "name": "Government Digital Service developers",
-    "email": "govuk-dev@digital.cabinet-office.gov.uk"
+    "name": "Ernest Walzel",
+    "email": "ernest.walzel@slovensko.digital"
   },
   "bugs": {
-    "url": "https://github.com/alphagov/govuk_elements/issues"
+    "url": "https://github.com/id-sk/idsk_elements/issues"
   }
 }

@@ -11,8 +11,8 @@ The decrypt commands are in `.travis.yml`.
 To regenerate a key:
 
 ```
-ssh-keygen -b 4096 -f .travis/govuk_elements # Make a new keypair
-travis encrypt-file .travis/govuk_elements # Encrypt the private key
-mv govuk_elements.enc .travis/ # Move the private key to the right place
-rm .travis/govuk_elements # Remove the unencrypted private key
+ssh-keygen -b 4096 -f .travis/idsk_elements # Make a new keypair
+travis encrypt-file .travis/idsk_elements # Encrypt the private key
+mv idsk_elements.enc .travis/ # Move the private key to the right place
+rm .travis/idsk_elements # Remove the unencrypted private key
 ```

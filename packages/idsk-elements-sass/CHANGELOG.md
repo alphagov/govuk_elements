@@ -1,3 +1,7 @@
+# 4.1.2
+- Migrate to ID-SK.
+  - Rename to idsk-elements-sass
+
 # 3.1.2
 
 - Update govuk_frontend_toolkit from v6.0.2 to v7.1.0:
