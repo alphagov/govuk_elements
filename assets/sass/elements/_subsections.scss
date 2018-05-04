@@ -47,6 +47,8 @@
 
   // Wrapper for 'open all / close all' button
   .subsection-controls {
+    display: none;
+    
     @extend %contain-floats;
 
     button {
