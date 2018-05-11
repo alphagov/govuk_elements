@@ -6,393 +6,393 @@
 
 <main id="content" role="main">
 
-  <h1 class="heading-xlarge">
-    <span class="heading-secondary">Webové komponenty</span>
-    Farby
-  </h1>
-
-  <p class="lede text">
-    Vždy používajte farebnú paletu ID-SK.
-  </p>
-
-  <h2 class="heading-small heading-contents">Obsah:</h2>
-  <div class="grid-row">
-    <div class="column-two-thirds">
-      <ul class="list list-contents">
-        <li><a href="#colour-contrast">Farebný kontrast</a></li>
-        <li><a href="#colour-sass-variables">Sass premenné</a></li>
-        <li><a href="#colour-status-colours">Farby stavu</a></li>
-        <li><a href="#colour-greyscale-palette">Paleta odtieňov šedej</a></li>
-        <li><a href="#colour-extended-palette">Rozšírená paleta</a></li>
-        <li><a href="#examples">Príklady</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <h3 class="heading-medium" id="colour-contrast">Farebný kontrast</h3>
-  <p class="text">
-    Pomerová hodnota farebného kontrastu pre text a interaktívne prvky by mala byť aspoň 4,5:1
-    <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" rel="external">
-      ako odporúča W3C</a>. Na to, aby vaša služba spĺňala tento štandard, je potrebné vždy otestovať kontrast všetkých použitých prvkov.
-  </p>
-
-  <h3 class="heading-medium"  id="colour-sass-variables">Sass premenné</h3>
-  <p class="text">
-    Odporúčame používať nasledovné Sass premenné pre prípad, že farby bude nutné v budúcnosti aktualizovať. Nájdete ich v súbore
-    <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss" rel="external">colours.scss</a>.
-  </p>
-
-  <div class="example">
-
-    <div class="swatch-wrapper">
-      <h4 class="heading-small">Text</h4>
-
-      <div class="swatch swatch-text-colour"></div>
-      <ul>
-        <li><b>#0B0C0C</b></li>
-        <li>$text-colour</li>
-      </ul>
-
-      <div class="swatch swatch-text-secondary"></div>
-      <ul>
-        <li><b>#6F777B</b></li>
-        <li>$secondary-text-colour</li>
-      </ul>
-
-      <div class="swatch swatch-page-colour"></div>
-
-      <ul>
-        <li><b>#FFFFFF</b></li>
-        <li>$page-colour</li>
-      </ul>
-    </div>
-
-    <div class="swatch-wrapper">
-      <h4 class="heading-small">Textové odkazy</h4>
-
-      <div class="swatch swatch-link-colour"></div>
-      <ul>
-        <li><b>#005ea5</b></li>
-        <li>$link-colour</li>
-      </ul>
-
-      <div class="swatch swatch-link-colour-hover"></div>
-      <ul>
-        <li><b>#2b8cc4</b></li>
-        <li>$link-hover-colour</li>
-      </ul>
-
-      <div class="swatch swatch-link-colour-visited"></div>
-      <ul>
-        <li><b>#4c2c92</b></li>
-        <li>$link-visited-colour</li>
-      </ul>
-    </div>
-
-    <div class="swatch-wrapper">
-      <h4 class="heading-small">Pozadie</h4>
-
-      <div class="swatch swatch-border-colour"></div>
-      <ul>
-        <li><b>#BFC1C3</b></li>
-        <li>$border-colour</li>
-      </ul>
-
-      <div class="swatch swatch-panel-colour"></div>
-      <ul>
-        <li><b>#DEE0E2</b></li>
-        <li>$panel-colour</li>
-      </ul>
-
-      <div class="swatch swatch-highlight-colour"></div>
-      <ul>
-        <li><b>#F8F8F8</b></li>
-        <li>$highlight-colour</li>
-      </ul>
-    </div>
-
-    <div class="swatch-wrapper">
-      <h4 class="heading-small">Tlačidlá</h4>
-
-      <div class="swatch swatch-button-colour"></div>
-      <ul>
-        <li><b>#00823B</b></li>
-        <li>$button-colour</li>
-      </ul>
-
-      <div class="swatch swatch-green"></div>
-      <ul>
-        <li><b>#006435</b></li>
-        <li>$green (vznášacia farba)</li>
-      </ul>
-    </div>
-
-    <div class="swatch-wrapper">
-      <h4 class="heading-small">Aktívny stav</h4>
-      <div class="swatch swatch-yellow"></div>
-      <ul>
-        <li><b>#FFBF47</b></li>
-        <li>$focus-colour</li>
-      </ul>
-    </div>
-
-  </div>
-
-  <h3 class="heading-medium" id="colour-status-colours">Farby stavu</h3>
-  <div class="example">
-
-    <div class="swatch-wrapper">
-      <div class="swatch swatch-govuk-blue"></div>
-      <ul>
-        <li><b>#005ea5</b></li>
-        <li>$govuk-blue</li>
-      </ul>
-      <p>
-        Označenie novej a textovacej verzie služby
-      </p>
-    </div>
-
-    <div class="swatch-wrapper">
-      <div class="swatch swatch-error"></div>
-      <ul>
-        <li><b>#B10E1E</b></li>
-        <li>$error-colour</li>
-      </ul>
-      <p>
-        Chybové oznamy
-      </p>
-    </div>
-
-  </div>
-
-  <h3 class="heading-medium" id="colour-greyscale-palette">Paleta odtieňov šedej</h3>
-  <div class="example">
-
-    <div class="swatch-wrapper">
-      <div class="swatch swatch-black"></div>
-      <ul>
-        <li><b>#0B0C0C</b></li>
-        <li>$black</li>
-      </ul>
-    </div>
-
-    <div class="swatch-wrapper">
-      <div class="swatch swatch-grey-1"></div>
-      <ul>
-        <li><b>#6F777B</b></li>
-        <li>$grey-1</li>
-      </ul>
-    </div>
-
-    <div class="swatch-wrapper">
-      <div class="swatch swatch-grey-2"></div>
-      <ul>
-        <li><b>#BFC1C3</b></li>
-        <li>$grey-2</li>
-      </ul>
-    </div>
-
-    <div class="swatch-wrapper">
-      <div class="swatch swatch-grey-3"></div>
-      <ul>
-        <li><b>#DEE0E2</b></li>
-        <li>$grey-3</li>
-      </ul>
-    </div>
-
-    <div class="swatch-wrapper">
-      <div class="swatch swatch-grey-4"></div>
-      <ul>
-        <li><b>#F8F8F8</b></li>
-        <li>$grey-4</li>
-      </ul>
-    </div>
-
-  </div>
-
-  <h3 class="heading-medium" id="colour-extended-palette">Rozšírená paleta</h3>
-  <ul class="list list-bullet text">
-    <li>Tieto farby používajte na grafy a doplnkový materiál.</li>
-    <li>Ak potrebujete použiť menej sýte odtiene farby rozšírenej palety, znížte intenzitu farby na  50% alebo 25%.</li>
-  </ul>
-
-  <div class="example">
-
-    <div class="swatch-wrapper">
-      <h4 class="heading-small">Nočná modrá</h4>
-
-      <div class="swatch swatch-purple"></div>
-      <ul>
-        <li><b>#2e358b</b></li>
-        <li>$purple</li>
-      </ul>
-
-      <h4 class="heading-small">Modro fialová</h4>
-
-      <div class="swatch swatch-mauve"></div>
-      <ul>
-        <li><b>#6f72af</b></li>
-        <li>$mauve</li>
-      </ul>
-
-      <h4 class="heading-small">Purpurová</h4>
-
-      <div class="swatch swatch-fuschia"></div>
-      <ul>
-        <li><b>#912b88</b></li>
-        <li>$fuschia</li>
-      </ul>
-    </div>
-
-    <div class="swatch-wrapper">
-      <h4 class="heading-small">Tmavá ružová</h4>
-
-      <div class="swatch swatch-pink"></div>
-      <ul>
-        <li><b>#d53880</b></li>
-        <li>$pink</li>
-      </ul>
-
-      <h4 class="heading-small">Ružová</h4>
-
-      <div class="swatch swatch-baby-pink"></div>
-      <ul>
-        <li><b>#f499be</b></li>
-        <li>$baby-pink</li>
-      </ul>
-
-      <h4 class="heading-small">Karmínová červená</h4>
-
-      <div class="swatch swatch-red"></div>
-      <ul>
-        <li><b>#b10e1e</b></li>
-        <li>$red</li>
-      </ul>
-    </div>
-
-    <div class="swatch-wrapper">
-      <h4 class="heading-small">Červená</h4>
-
-      <div class="swatch swatch-mellow-red"></div>
-      <ul>
-        <li><b>#df3034</b></li>
-        <li>$mellow-red</li>
-      </ul>
-
-      <h4 class="heading-small">Oranžová</h4>
-
-      <div class="swatch swatch-orange"></div>
-      <ul>
-        <li><b>#f47738</b></li>
-        <li>$orange</li>
-      </ul>
-
-      <h4 class="heading-small">Hnedobéžová</h4>
-
-      <div class="swatch swatch-brown"></div>
-      <ul>
-        <li><b>#b58840</b></li>
-        <li>$brown</li>
-      </ul>
-    </div>
-
-    <div class="swatch-wrapper">
-      <h4 class="heading-small">Žltá</h4>
-
-      <div class="swatch swatch-yellow"></div>
-      <ul>
-        <li><b>#ffbf47</b></li>
-        <li>$yellow</li>
-      </ul>
-
-      <h4 class="heading-small">Listová zelená</h4>
-
-      <div class="swatch swatch-green"></div>
-      <ul>
-        <li><b>#006435</b></li>
-        <li>$green</li>
-      </ul>
-
-      <h4 class="heading-small">Trávová zelená</h4>
-
-      <div class="swatch swatch-grass-green"></div>
-      <ul>
-        <li><b>#85994b</b></li>
-        <li>$grass-green</li>
-      </ul>
-    </div>
-
-    <div class="swatch-wrapper">
-      <h4 class="heading-small">Tyrkysová</h4>
-
-      <div class="swatch swatch-turquoise"></div>
-      <ul>
-        <li><b>#28a197</b></li>
-        <li>$turquoise</li>
-      </ul>
-
-      <h4 class="heading-small">Svetlomodrá</h4>
-
-      <div class="swatch swatch-light-blue"></div>
-      <ul>
-        <li><b>#2b8cc4</b></li>
-        <li>$light-blue</li>
-      </ul>
-
-      <h4 class="heading-small">Modrá</h4>
-
-      <div class="swatch swatch-govuk-blue"></div>
-      <ul>
-        <li><b>#005ea5</b></li>
-        <li>$govuk-blue</li>
-      </ul>
-
-    </div>
-
-  </div>
-
-  <h3 class="heading-medium" id="examples">Príklady</h3>
-  <h4 class="heading-small">Stránka s potvrdením</h4>
-
-  <div class="text">
-    <div class="panel panel-border-wide">
-      <p>
-        Pri použití bieleho textu na pozadí tyrkysovej farby sa uistite, že približná minimálna veľkosť písma je 24 pixelov
-        (normálny rez písma) alebo 19 pixelov tučného písma, pričom veľkosť sa uvádza v relatívnych jednotkách a nie v jednotkách
-        pixelov. Týmto splníte požiadavku na dostatočný farebný kontrast.
-      </p>
-    </div>
-  </div>
-
-  <div class="example">
+    <h1 class="heading-xlarge">
+        <span class="heading-secondary">Webové komponenty</span>
+        Farby
+    </h1>
+
+    <p class="lede text">
+        Vždy používajte farebnú paletu ID-SK.
+    </p>
+
+    <h2 class="heading-small heading-contents">Obsah:</h2>
     <div class="grid-row">
-      <div class="column-two-thirds">
+        <div class="column-two-thirds">
+            <ul class="list list-contents">
+                <li><a href="#colour-contrast">Farebný kontrast</a></li>
+                <li><a href="#colour-sass-variables">Sass premenné</a></li>
+                <li><a href="#colour-status-colours">Farby stavu</a></li>
+                <li><a href="#colour-greyscale-palette">Paleta odtieňov šedej</a></li>
+                <li><a href="#colour-extended-palette">Rozšírená paleta</a></li>
+                <li><a href="#examples">Príklady</a></li>
+            </ul>
+        </div>
+    </div>
 
-        <div class="govuk-box-highlight">
-          <h1 class="heading-xlarge">
-            Žiadosť ukončená
-          </h1>
-          <p class="font-large">
-            Vaše referenčné číslo je <br>
-            <strong class="bold">HDJ2123F</strong>
-          </p>
+    <h3 class="heading-medium" id="colour-contrast">Farebný kontrast</h3>
+    <p class="text">
+        Pomerová hodnota farebného kontrastu pre text a interaktívne prvky by mala byť aspoň 4,5:1
+        <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" rel="external">
+            ako odporúča W3C</a>. Na to, aby vaša služba spĺňala tento štandard, je potrebné vždy otestovať kontrast všetkých použitých prvkov.
+    </p>
+
+    <h3 class="heading-medium"  id="colour-sass-variables">Sass premenné</h3>
+    <p class="text">
+        Odporúčame používať nasledovné Sass premenné pre prípad, že farby bude nutné v budúcnosti aktualizovať. Nájdete ich v súbore
+        <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss" rel="external">colours.scss</a>.
+    </p>
+
+    <div class="example">
+
+        <div class="swatch-wrapper">
+            <h4 class="heading-small">Text</h4>
+
+            <div class="swatch swatch-text-colour"></div>
+            <ul>
+                <li><b>#0B0C0C</b></li>
+                <li>$text-colour</li>
+            </ul>
+
+            <div class="swatch swatch-text-secondary"></div>
+            <ul>
+                <li><b>#6F777B</b></li>
+                <li>$secondary-text-colour</li>
+            </ul>
+
+            <div class="swatch swatch-page-colour"></div>
+
+            <ul>
+                <li><b>#FFFFFF</b></li>
+                <li>$page-colour</li>
+            </ul>
         </div>
 
-        <p>
-          Poslali sme Vám email s potvrdením.
-        </p>
+        <div class="swatch-wrapper">
+            <h4 class="heading-small">Textové odkazy</h4>
 
-        <h2 class="heading-medium">
-          Čo teraz?
-        </h2>
-        <p>
-         Poslali sme vašu žiadosť na volebný úrad.
-        </p>
-        <p>
-          Budú Vás kontaktovať s cieľom potvrdenia vašej registrácie alebo Vás požiadajú o viac informácií.
-        </p>
-      </div>
+            <div class="swatch swatch-link-colour"></div>
+            <ul>
+                <li><b>#005ea5</b></li>
+                <li>$link-colour</li>
+            </ul>
+
+            <div class="swatch swatch-link-colour-hover"></div>
+            <ul>
+                <li><b>#2b8cc4</b></li>
+                <li>$link-hover-colour</li>
+            </ul>
+
+            <div class="swatch swatch-link-colour-visited"></div>
+            <ul>
+                <li><b>#4c2c92</b></li>
+                <li>$link-visited-colour</li>
+            </ul>
+        </div>
+
+        <div class="swatch-wrapper">
+            <h4 class="heading-small">Pozadie</h4>
+
+            <div class="swatch swatch-border-colour"></div>
+            <ul>
+                <li><b>#BFC1C3</b></li>
+                <li>$border-colour</li>
+            </ul>
+
+            <div class="swatch swatch-panel-colour"></div>
+            <ul>
+                <li><b>#DEE0E2</b></li>
+                <li>$panel-colour</li>
+            </ul>
+
+            <div class="swatch swatch-highlight-colour"></div>
+            <ul>
+                <li><b>#F8F8F8</b></li>
+                <li>$highlight-colour</li>
+            </ul>
+        </div>
+
+        <div class="swatch-wrapper">
+            <h4 class="heading-small">Tlačidlá</h4>
+
+            <div class="swatch swatch-button-colour"></div>
+            <ul>
+                <li><b>#00823B</b></li>
+                <li>$button-colour</li>
+            </ul>
+
+            <div class="swatch swatch-green"></div>
+            <ul>
+                <li><b>#006435</b></li>
+                <li>$green (vznášacia farba)</li>
+            </ul>
+        </div>
+
+        <div class="swatch-wrapper">
+            <h4 class="heading-small">Aktívny stav</h4>
+            <div class="swatch swatch-yellow"></div>
+            <ul>
+                <li><b>#FFBF47</b></li>
+                <li>$focus-colour</li>
+            </ul>
+        </div>
+
     </div>
-  </div>
+
+    <h3 class="heading-medium" id="colour-status-colours">Farby stavu</h3>
+    <div class="example">
+
+        <div class="swatch-wrapper">
+            <div class="swatch swatch-govuk-blue"></div>
+            <ul>
+                <li><b>#005ea5</b></li>
+                <li>$govuk-blue</li>
+            </ul>
+            <p>
+                Označenie novej a textovacej verzie služby
+            </p>
+        </div>
+
+        <div class="swatch-wrapper">
+            <div class="swatch swatch-error"></div>
+            <ul>
+                <li><b>#B10E1E</b></li>
+                <li>$error-colour</li>
+            </ul>
+            <p>
+                Chybové oznamy
+            </p>
+        </div>
+
+    </div>
+
+    <h3 class="heading-medium" id="colour-greyscale-palette">Paleta odtieňov šedej</h3>
+    <div class="example">
+
+        <div class="swatch-wrapper">
+            <div class="swatch swatch-black"></div>
+            <ul>
+                <li><b>#0B0C0C</b></li>
+                <li>$black</li>
+            </ul>
+        </div>
+
+        <div class="swatch-wrapper">
+            <div class="swatch swatch-grey-1"></div>
+            <ul>
+                <li><b>#6F777B</b></li>
+                <li>$grey-1</li>
+            </ul>
+        </div>
+
+        <div class="swatch-wrapper">
+            <div class="swatch swatch-grey-2"></div>
+            <ul>
+                <li><b>#BFC1C3</b></li>
+                <li>$grey-2</li>
+            </ul>
+        </div>
+
+        <div class="swatch-wrapper">
+            <div class="swatch swatch-grey-3"></div>
+            <ul>
+                <li><b>#DEE0E2</b></li>
+                <li>$grey-3</li>
+            </ul>
+        </div>
+
+        <div class="swatch-wrapper">
+            <div class="swatch swatch-grey-4"></div>
+            <ul>
+                <li><b>#F8F8F8</b></li>
+                <li>$grey-4</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <h3 class="heading-medium" id="colour-extended-palette">Rozšírená paleta</h3>
+    <ul class="list list-bullet text">
+        <li>Tieto farby používajte na grafy a doplnkový materiál.</li>
+        <li>Ak potrebujete použiť menej sýte odtiene farby rozšírenej palety, znížte intenzitu farby na  50% alebo 25%.</li>
+    </ul>
+
+    <div class="example">
+
+        <div class="swatch-wrapper">
+            <h4 class="heading-small">Nočná modrá</h4>
+
+            <div class="swatch swatch-purple"></div>
+            <ul>
+                <li><b>#2e358b</b></li>
+                <li>$purple</li>
+            </ul>
+
+            <h4 class="heading-small">Modrofialová</h4>
+
+            <div class="swatch swatch-mauve"></div>
+            <ul>
+                <li><b>#6f72af</b></li>
+                <li>$mauve</li>
+            </ul>
+
+            <h4 class="heading-small">Purpurová</h4>
+
+            <div class="swatch swatch-fuschia"></div>
+            <ul>
+                <li><b>#912b88</b></li>
+                <li>$fuschia</li>
+            </ul>
+        </div>
+
+        <div class="swatch-wrapper">
+            <h4 class="heading-small">Tmavá ružová</h4>
+
+            <div class="swatch swatch-pink"></div>
+            <ul>
+                <li><b>#d53880</b></li>
+                <li>$pink</li>
+            </ul>
+
+            <h4 class="heading-small">Ružová</h4>
+
+            <div class="swatch swatch-baby-pink"></div>
+            <ul>
+                <li><b>#f499be</b></li>
+                <li>$baby-pink</li>
+            </ul>
+
+            <h4 class="heading-small">Karmínová červená</h4>
+
+            <div class="swatch swatch-red"></div>
+            <ul>
+                <li><b>#b10e1e</b></li>
+                <li>$red</li>
+            </ul>
+        </div>
+
+        <div class="swatch-wrapper">
+            <h4 class="heading-small">Červená</h4>
+
+            <div class="swatch swatch-mellow-red"></div>
+            <ul>
+                <li><b>#df3034</b></li>
+                <li>$mellow-red</li>
+            </ul>
+
+            <h4 class="heading-small">Oranžová</h4>
+
+            <div class="swatch swatch-orange"></div>
+            <ul>
+                <li><b>#f47738</b></li>
+                <li>$orange</li>
+            </ul>
+
+            <h4 class="heading-small">Hnedobéžová</h4>
+
+            <div class="swatch swatch-brown"></div>
+            <ul>
+                <li><b>#b58840</b></li>
+                <li>$brown</li>
+            </ul>
+        </div>
+
+        <div class="swatch-wrapper">
+            <h4 class="heading-small">Žltá</h4>
+
+            <div class="swatch swatch-yellow"></div>
+            <ul>
+                <li><b>#ffbf47</b></li>
+                <li>$yellow</li>
+            </ul>
+
+            <h4 class="heading-small">Listová zelená</h4>
+
+            <div class="swatch swatch-green"></div>
+            <ul>
+                <li><b>#006435</b></li>
+                <li>$green</li>
+            </ul>
+
+            <h4 class="heading-small">Trávová zelená</h4>
+
+            <div class="swatch swatch-grass-green"></div>
+            <ul>
+                <li><b>#85994b</b></li>
+                <li>$grass-green</li>
+            </ul>
+        </div>
+
+        <div class="swatch-wrapper">
+            <h4 class="heading-small">Tyrkysová</h4>
+
+            <div class="swatch swatch-turquoise"></div>
+            <ul>
+                <li><b>#28a197</b></li>
+                <li>$turquoise</li>
+            </ul>
+
+            <h4 class="heading-small">Svetlomodrá</h4>
+
+            <div class="swatch swatch-light-blue"></div>
+            <ul>
+                <li><b>#2b8cc4</b></li>
+                <li>$light-blue</li>
+            </ul>
+
+            <h4 class="heading-small">Modrá</h4>
+
+            <div class="swatch swatch-govuk-blue"></div>
+            <ul>
+                <li><b>#005ea5</b></li>
+                <li>$govuk-blue</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <h3 class="heading-medium" id="examples">Príklady</h3>
+    <h4 class="heading-small">Stránka s potvrdením</h4>
+
+    <div class="text">
+        <div class="panel panel-border-wide">
+            <p>
+                Pri použití bieleho textu na pozadí tyrkysovej farby sa uistite, že približná minimálna veľkosť písma je 24 pixelov
+                (normálny rez písma) alebo 19 pixelov tučného písma, pričom veľkosť sa uvádza v relatívnych jednotkách a nie v jednotkách
+                pixelov. Týmto splníte požiadavku na dostatočný farebný kontrast.
+            </p>
+        </div>
+    </div>
+
+    <div class="example">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+
+                <div class="govuk-box-highlight">
+                    <h1 class="heading-xlarge">
+                        Žiadosť ukončená
+                    </h1>
+                    <p class="font-large">
+                        Vaše referenčné číslo je <br>
+                        <strong class="bold">HDJ2123F</strong>
+                    </p>
+                </div>
+
+                <p>
+                    Poslali sme vám email s potvrdením.
+                </p>
+
+                <h2 class="heading-medium">
+                    Čo teraz?
+                </h2>
+                <p>
+                    Poslali sme vašu žiadosť na volebný úrad.
+                </p>
+                <p>
+                    Budú Vás kontaktovať s cieľom potvrdenia vašej registrácie alebo Vás požiadajú o viac informácií.
+                </p>
+            </div>
+        </div>
+    </div>
 </main><!-- / #content -->
 {% endblock %}

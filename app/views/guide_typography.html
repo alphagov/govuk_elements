@@ -6,60 +6,60 @@
 
 <main id="content" role="main">
 
-  <h1 class="heading-xlarge">
-    <span class="heading-secondary">Webové komponenty</span>
-    Typografia
-  </h1>
+    <h1 class="heading-xlarge">
+        <span class="heading-secondary">Webové komponenty</span>
+        Typografia
+    </h1>
 
-  <!--<div class="text">-->
-    <!--<p class="lede">-->
-      <!--For GOV.UK domains, always use the GDS Transport Website font in Light and Bold.-->
-    <!--</p>-->
-  <!--</div>-->
-
-  <h2 class="heading-small heading-contents">Obsah:</h2>
-  <div class="grid-row">
-    <div class="column-two-thirds">
-      <ul class="list list-contents">
-        <li><a href="#typography-font">Písmo</a></li>
-        <li><a href="#typography-headings">Nadpisy</a></li>
-        <li><a href="#typography-lead-paragraph">Úvodný odsek</a></li>
-        <li><a href="#typography-body-copy">Hlavný text</a></li>
-        <li><a href="#typography-links">Textové odkazy</a></li>
-        <li><a href="#typography-lists">Zoznamy</a></li>
-        <li><a href="#typography-inset-text">Vsadený text</a></li>
-        <li><a href="#typography-legal-text">Právny text</a></li>
-        <li><a href="#typography-hidden-text">Skrytý text (postupné zverejňovanie)</a></li>
-        <li><a href="#examples">Príklady</a></li>
-      </ul>
+    <div class="text">
+        <p class="lede">
+            For Odporúčame používať pre všetky stránky jednotne len písmo uvedené v Jednotnom dizajn manuáli elektronických služieb. Zároveň odporúčame štruktúrovať textový obsah tak, aby bol ľahko a rýchlo čitateľný.
+        </p>
     </div>
-  </div>
 
-  <h3 class="heading-medium" id="typography-font">Písmo</h3>
-  <div class="text">
-    <p>
-      Používajte písmo. <!-- @TODO -->
-    </p>
-    <p>
-      Používajte typy písma podobné Arialu. Vždy uvádzajte aj generický font písma.
-    </p>
-  </div>
+    <h2 class="heading-small heading-contents">Obsah:</h2>
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <ul class="list list-contents">
+                <li><a href="#typography-font">Písmo</a></li>
+                <li><a href="#typography-headings">Nadpisy</a></li>
+                <li><a href="#typography-lead-paragraph">Úvodný odsek</a></li>
+                <li><a href="#typography-body-copy">Hlavný text</a></li>
+                <li><a href="#typography-links">Textové odkazy</a></li>
+                <li><a href="#typography-lists">Zoznamy</a></li>
+                <li><a href="#typography-inset-text">Vsadený text</a></li>
+                <li><a href="#typography-legal-text">Právny text</a></li>
+                <li><a href="#typography-hidden-text">Skrytý text (postupné zverejňovanie)</a></li>
+                <li><a href="#examples">Príklady</a></li>
+            </ul>
+        </div>
+    </div>
 
-  <h3 class="heading-medium" id="typography-headings">
-    Nadpisy
-  </h3>
+    <h3 class="heading-medium" id="typography-font">Písmo</h3>
+    <div class="text">
+        <p>
+            Odporúčame používať písmo Source Sans Pro. Tento typ písma je voľne dostupný, môžete si ho stiahnuť napríklad v databáze <a href="https://fonts.google.com/specimen/Source+Sans+Pro">Google Fonts</a>.
+        </p>
+        <p>
+            Pre prípad nedostupnosti typu písma, ponúknite používateľovi typograficky podobnú alternatívu skupiny bezpätkového písma. Príklad: “font-family: Source Sans Pro, sans-serif;”.
+        </p>
+        <p>Pri tvorbe textov dodržujte pravidlá slovenského pravopisu a používania interpunkcie.</p>
+    </div>
 
-  <ul class="list list-bullet text">
-    <!--<li>use GDS Transport Website Bold</li>-->
-    <li>V nadpisoch používajte veľké písmeno len na začiatku prvého slova a podľa pravidiel slovenského pravopisu. Napoužívajte kapitálky na celé nadpisy.</li>
-    <li>Dôsledne používajte nadpisy pre vytvorenie správnej a zrozumiteľnej hierarchie.</li>
-  </ul>
+    <h3 class="heading-medium" id="typography-headings">
+        Nadpisy
+    </h3>
 
-<div class="example">
-  {% include "snippets/typography_headings_example.html" %}
-</div>
+    <ul class="list list-bullet text">
+        <li>V nadpisoch používajte veľké písmeno len na začiatku prvého slova a podľa pravidiel slovenského pravopisu. Nepoužívajte tzv. kapitálky na celé nadpisy.</li>
+        <li>Dôsledne používajte nadpisy pre vytvorenie správnej a zrozumiteľnej hierarchie.</li>
+    </ul>
 
-<pre>
+    <div class="example">
+        {% include "snippets/typography_headings_example.html" %}
+    </div>
+
+    <pre>
 <code class="language-markup">
   {% filter escape %}
     {% include "snippets/typography_headings.html" %}
@@ -67,22 +67,22 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="typography-lead-paragraph">
-    Úvodný odstavec
-  </h3>
+    <h3 class="heading-medium" id="typography-lead-paragraph">
+        Úvodný odsek
+    </h3>
 
-  <ul class="list list-bullet">
-    <li>Používajte veľkosť 24 px (pixelov) na úvodný odsek. Veľkosť písma sa uvádzať v relatívnych jednotkách.</li>
-    <li>Na každej strane by mal byť maximálne jeden úvodný odsek.</li>
-  </ul>
+    <ul class="list list-bullet">
+        <li>Na úvodný odsek odporúčame používať veľkosť 26 pixelov. Veľkosť písma uvádzajte v relatívnych jednotkách.</li>
+        <li>Na každej strane by mal byť maximálne jeden úvodný odsek.</li>
+    </ul>
 
-<div class="example">
-  <div class="text">
-    {% include "snippets/typography_lead_paragraph_example.html" %}
-  </div>
-</div>
+    <div class="example">
+        <div class="text">
+            {% include "snippets/typography_lead_paragraph_example.html" %}
+        </div>
+    </div>
 
-<pre>
+    <pre>
 <code class="language-markup">
   {% filter escape %}
     {% include "snippets/typography_lead_paragraph.html" %}
@@ -90,27 +90,26 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="typography-body-copy">
-    Hlavný text
-  </h3>
+    <h3 class="heading-medium" id="typography-body-copy">
+        Hlavný text
+    </h3>
 
-  <ul class="list list-bullet text">
-    <!--<li>use GDS Transport Website Light</li>-->
-    <li>Vyhnite sa nadmernému používaniu tučného písma a používaniu šikmého rezu písma (kurzíva).</li>
-    <li>Veľkosť hlavného textu je 19 pixelov, pre menšie obrazovky 16 pixelov.</li>
-    <li>Veľkosť písma sa povinne definuje v relatívnych jednotkách, pomocou hodnôt xx-small,
-      x-small, small, medium, large, x-large a xx-large alebo pomocou percent, hodnôt smaller, larger a jednotiek em a ex.
-      Veľkosť písma sa nedefinuje prostredníctvom jednotiek pt, pc, in, cm, mm a px. </li>
-    <li>Uistite sa, že riadky textu nepresahujú 75 znakov, keďže viac znakov spraví text menej čitateľným.</li>
-  </ul>
+    <ul class="list list-bullet text">
+        <li>Veľkosť hlavného textu je 20 pixelov, pre menšie obrazovky 16 pixelov.</li>
+        <li>Menšiu veľkosť písma použite iba vtedy, ak to používateľ potrebuje (napr. 16, 14 alebo 12 pixelov).</li>
+        <li>Uistite sa, že riadky textu nepresahujú 75 znakov, keďže viac znakov urobí text menej čitateľným.</li>
+        <li>Veľkosť písma sa definuje v relatívnych jednotkách, pomocou hodnôt xx-small, x-small, small, medium, large, x-large a xx-large alebo pomocou percent, hodnôt smaller, larger a jednotiek em a ex. Veľkosť písma sa nedefinuje prostredníctvom jednotiek pt, pc, in, cm, mm a px.</li>
+        <li>Neodporúča sa nadmerné používanie tučného písma a používanie šikmého rezu písma (kurzíva).</li>
+        <li>Odstavce textu by sa mali zarovnávať vždy doľava, nikdy nie k obom okrajom.</li>
+    </ul>
 
-<div class="example">
-  <div class="text">
-    {% include "snippets/typography_paragraphs_example.html" %}
-  </div>
-</div>
+    <div class="example">
+        <div class="text">
+            {% include "snippets/typography_paragraphs_example.html" %}
+        </div>
+    </div>
 
-<pre>
+    <pre>
 <code class="language-markup">
   {% filter escape %}
     {% include "snippets/typography_paragraphs.html" %}
@@ -118,25 +117,24 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="typography-links">Odkazy</h3>
+    <h3 class="heading-medium" id="typography-links">Textové odkazy</h3>
 
-  <ul class="list list-bullet text">
-    <li>Odkazy v hlavnom texte by mali byť modré a musia byť buď podčiarknuté alebo inak zvýraznené (nie len farebne).</li>
-    <li>Samostatne stojace odkazy (bez obklopujúceho textu) by nemali končiť bodkou.</li>
-    <li>Farby pre odkazy nájdete vo <a href="/colour">farebnej palete</a></li>
-    <li>Označenie každého odkazu výstižne popisuje jeho cieľ nezávisle na okolitom kontexte. Pokiaľ je to možné, cieľ
-      odkazu by mal byť zrejmý už zo samotného textu odkazu. Pokiaľ to nie je možné, je pre jednoznačnú identifikáciu
-      odkazu potrebné použiť atribút „title“ prvku <a>. Nepoužívajú sa odkazy v tvare „kliknite tu“, „sem“, „celý text
-        článku“, bez toho, že by tento text bol doplnený atribútom „title“ prvku <a> s doplňujúcou informáciou.</li>
-  </ul>
+    <ul class="list list-bullet text">
+        <li>Odkazy v hlavnom texte by mali byť modré a mali by byť odlíšené od zvyšného textu tým, že budú buď podčiarknuté alebo inak zvýraznené (nie len farebne).</li>
+        <li>Farby pre odkazy nájdete vo <a href="/colour">farebnej palete</a>.</li>
+        <li>Samostatne stojace odkazy (bez okolitého textu) by nemali končiť bodkou.</li>
+        <li>Text každého odkazu by ste mali vytvoriť tak, aby výstižne popisoval cieľ nezávisle na okolitom kontexte. Cieľ odkazu by mal byť zrejmý už zo samotného textu odkazu. Pre jednoznačnú identifikáciu odkazu použite atribút „title“ prvku
+            <pre><code class="language-markup"><a></code></pre>. Nepoužívajte odkazy v tvare „kliknite tu“, „sem“, „celý text článku“ bez toho, aby tento text bol doplnený atribútom „title“ prvku <pre><code class="language-markup"><a></code></pre> s doplňujúcou informáciou.</li>
+        <li>V prípade, že uvádzate na stránke telefónne čísla, uistite sa, že je možné ich aktivovaním priamo na dané číslo telefonovať, napr. na mobilnom telefóne.</li>
+    </ul>
 
-  <div class="example">
-    <div class="text">
-      {% include "snippets/typography_links.html" %}
+    <div class="example">
+        <div class="text">
+            {% include "snippets/typography_links.html" %}
+        </div>
     </div>
-  </div>
 
-<pre>
+    <pre>
 <code class="language-markup">
   {% filter escape %}
     {% include "snippets/typography_links.html" %}
@@ -144,21 +142,18 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="typography-lists">Zoznamy</h3>
+    <h3 class="heading-medium" id="typography-lists">Zoznamy</h3>
 
-  <ul class="list list-bullet text">
-    <li>Vymenúvacie zoznamy sú uvedené vetou zakončenou dvojbodkou, pričom každý riadok zoznamu začína malým písmenom
-      a je ukončený čiarkou. Posledný bod zoznamu je ukončený bodkou.</li>
-    <li>Alternatívou k tomu môže byť taká verzia, že každý bod zoznamu bude začínať veľkým písmenom a ukončí sa bodkou.</li>
-    <li>Pre používanie interpunkcie v číselných zoznamoch si pozrite
-      <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#steps">sprievodcu štýlmi</a></li>
-  </ul>
+    <ul class="list list-bullet text">
+        <li>Vymenúvacie zoznamy sú uvedené vetou zakončenou dvojbodkou, pričom každý riadok zoznamu začína malým písmenom a je ukončený čiarkou. Posledný bod zoznamu je ukončený bodkou.</li>
+        <li>Alternatívou k tomu môže byť taká verzia, že každý bod zoznamu bude začínať veľkým písmenom a ukončí sa bodkou.</li>
+    </ul>
 
-<div class="example">
-  {% include "snippets/typography_lists.html" %}
-</div>
+    <div class="example">
+        {% include "snippets/typography_lists.html" %}
+    </div>
 
-<pre>
+    <pre>
 <code class="language-markup">
   {% filter escape %}
     {% include "snippets/typography_lists.html" %}
@@ -166,18 +161,18 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="typography-inset-text">Vsadený text</h3>
-  <p class="text">
-    Pre upriamenie pozornosti na dôležitý obsah stránky používajte ohraničený vsadený text.
-  </p>
+    <h3 class="heading-medium" id="typography-inset-text">Vsadený text</h3>
+    <p class="text">
+        Pre upriamenie pozornosti na dôležitý obsah stránky je účelné používať ohraničený vsadený text.
+    </p>
 
-<div class="example">
-  <div class="text">
-    {% include "snippets/typography_inset_text.html" %}
-  </div>
-</div>
+    <div class="example">
+        <div class="text">
+            {% include "snippets/typography_inset_text.html" %}
+        </div>
+    </div>
 
-<pre>
+    <pre>
 <code class="language-markup">
   {% filter escape %}
     {% include "snippets/typography_inset_text.html" %}
@@ -185,18 +180,18 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="typography-legal-text">Dôležité oznamy a text s právnym dopadom</h3>
-  <p class="text">
-    V prípade dôležitého textu s možným právnym následkom (napríklad pokuta alebo trest odňatia slobody) použite tučné písmo s ikonou výkričníka.
-  </p>
+    <h3 class="heading-medium" id="typography-legal-text">Dôležité oznamy a text s právnym dopadom</h3>
+    <p class="text">
+        V prípade dôležitého textu s možným právnym následkom (napríklad pokuta alebo trest odňatia slobody) použite tučné písmo s ikonou výkričníka.
+    </p>
 
-<div class="example">
-  <div class="text">
-    {% include "snippets/typography_legal_text.html" %}
-  </div>
-</div>
+    <div class="example">
+        <div class="text">
+            {% include "snippets/typography_legal_text.html" %}
+        </div>
+    </div>
 
-<pre>
+    <pre>
 <code class="language-markup">
   {% filter escape %}
     {% include "snippets/typography_legal_text.html" %}
@@ -204,18 +199,18 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="typography-hidden-text">Skrytý text (zobrazenie na požiadanie)</h3>
-  <p class="text">
-    Používajte tento prvok na uľahčenie prezerania obsahu stránky tak, že v prípade potreby zobrazíte doplnkové kontextové informácie.
-  <p class="text">
-    Kliknite na “Pomoc s národnosťou” pre ukážku.
-  </p>
+    <h3 class="heading-medium" id="typography-hidden-text">Skrytý text (zobrazenie na požiadanie)</h3>
+    <p class="text">
+        Tento prvok sa používa na uľahčenie prezerania obsahu stránky tak, že v prípade potreby zobrazíte doplnkové kontextové informácie. Dbajte na to, aby minimálne rozmery klikateľnej plochy boli 30 x 30 pixelov.
+    <p class="text">
+        Kliknite na “Pomoc s národnosťou” pre ukážku.
+    </p>
 
-<div class="example">
-  {% include "snippets/typography_progressive_disclosure.html" %}
-</div>
+    <div class="example">
+        {% include "snippets/typography_progressive_disclosure.html" %}
+    </div>
 
-<pre>
+    <pre>
 <code class="language-markup">
   {% filter escape %}
     {% include "snippets/typography_progressive_disclosure.html" %}
@@ -223,29 +218,24 @@
 </code>
 </pre>
 
-  <div class="panel panel-border-wide text">
-    <p>
-      Ak používate HTML5 elementy, budete potrebovať knižnicu pre  <a href="http://caniuse.com/#feat=details" rel="external">staršie prehliadače</a>.
-    </p>
-    <p>
-      Uistite sa, že váš zdrojový kód zodpovedá príkladu vyššie.
-    </p>
-    <p>
-      Pozrite sa na <a href="/typography/example-details-summary/">stránku s príkladom</a>,
-      ktorá znázorňuje podmienečné odkrývanie informácií s použitím detailov HTML5 a prvkami “summary”.
-
-    </p>
-  </div>
+    <div class="panel panel-border-wide text">
+        <p>
+            Ak používate HTML5 elementy, budete potrebovať knižnicu pre  <a href="http://caniuse.com/#feat=details" rel="external">staršie prehliadače</a>.
+        </p>
+        <p>
+            Uistite sa, že váš zdrojový kód zodpovedá príkladu vyššie.
+        </p>
+    </div>
 
 
-  <h3 class="heading-medium" id="examples">Príklady</h3>
-  <ul class="list list-bullet">
-    <li>
-      <a href="/typography/example-typography/">
-        príklad stránky s typografiou
-      </a>
-    </li>
-  </ul>
+    <h3 class="heading-medium" id="examples">Príklady</h3>
+    <ul class="list list-bullet">
+        <li>
+            <a href="/typography/example-typography/">
+                príklad stránky s typografiou
+            </a>
+        </li>
+    </ul>
 
 </main><!-- / #content -->
 {% endblock %}
