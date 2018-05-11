@@ -6,9 +6,9 @@
 @import "elements/reset";
 
 // Base (unclassed HTML elements)
-// These are predefined by govuk_template
-// If you're not using govuk_template, uncomment the line below.
-// @import "elements/govuk-template-base";        // Base styles set by GOV.UK template
+// These are predefined by idsk_template
+// If you're not using idsk_template, uncomment the line below.
+// @import "elements/idsk-template-base";        // Base styles set by GOV.UK template
 
 // Objects (unstyled design patterns)
 @import "elements/layout";                        // Main content container. Grid layout - rows and column widths

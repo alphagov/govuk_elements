@@ -1,14 +1,14 @@
-# GOV.UK Elements Sass
+# ID-SK Elements Sass
 
 ## Installation
 
-    npm install govuk-elements-sass
+    npm install idsk-elements-sass
 
 ## Usage
 
 **Include all Sass files**
 
-    @import govuk-elements;
+    @import idsk-elements;
 
 
 **Include individual Sass files**
@@ -20,11 +20,11 @@ Choose partials from:
 
 ## Dependencies
 
-GOV.UK elements has the [GOV.UK frontend toolkit](https://github.com/alphagov/govuk_frontend_toolkit) as a dependency.
+ID-SK elements has the [ID-SK frontend toolkit](https://github.com/id-sk/idsk_frontend_toolkit) as a dependency.
 
-    npm install govuk_frontend_toolkit
+    npm install idsk_frontend_toolkit
 
-> The GOV.UK frontend toolkit scss dependencies listed below must be imported before any govuk-elements partials.
+> The ID-SK frontend toolkit scss dependencies listed below must be imported before any idsk-elements partials.
 
     // Settings (variables)
     @import "colours";                                // Colour variables
@@ -46,7 +46,7 @@ GOV.UK elements has the [GOV.UK frontend toolkit](https://github.com/alphagov/go
     // @import "url-helpers";                         // Function to output image-url, or prefixed path (Rails and Compass only)
 
 
-It assumes your project is using [GOV.UK template](https://github.com/alphagov/govuk_template).
+It assumes your project is using [ID-SK template](https://github.com/id-sk/idsk_template).
 
 
 ## Configuration
@@ -61,23 +61,23 @@ The `_url-helpers.scss` partial requires that `$path` is defined in your main ap
 
 **Ensure base styles are set**
 
-If you are not using [GOV.UK template](https://github.com/alphagov/govuk_template).
+If you are not using [ID-SK template](https://github.com/id-sk/idsk_template).
 
-Uncomment the base partial in `_govuk_elements.scss`:
+Uncomment the base partial in `_idsk_elements.scss`:
 
-    // @import "elements/govuk-template-base";          // HTML elements, set by the GOV.UK template
+    // @import "elements/idsk-template-base";          // HTML elements, set by the ID-SK template
 
 
 ## Compiling the Sass files
 
-Add the `node_modules/govuk_frontend_toolkit` and `node_modules/govuk-elements-sass` directories to the `includePaths` property of your Sass plugin - if you're using a task runner like Gulp or Grunt, to reference the location of these files.
+Add the `node_modules/idsk_frontend_toolkit` and `node_modules/idsk-elements-sass` directories to the `includePaths` property of your Sass plugin - if you're using a task runner like Gulp or Grunt, to reference the location of these files.
 
 **Folder structure**
 
     - index.html
     -- node_modules
-        -- govuk-elements-sass
-        -- govuk_frontend_toolkit
+        -- idsk-elements-sass
+        -- idsk_frontend_toolkit
     -- assets
         -- scss
             - main.scss
@@ -94,8 +94,8 @@ Add the `node_modules/govuk_frontend_toolkit` and `node_modules/govuk-elements-s
       return gulp.src('./sass/**/*.scss')
         .pipe(sass({
           includePaths: [
-            'node_modules/govuk_frontend_toolkit/stylesheets', // 1
-            'node_modules/govuk-elements-sass/public/sass'     // 2
+            'node_modules/idsk_frontend_toolkit/stylesheets', // 1
+            'node_modules/idsk-elements-sass/public/sass'     // 2
           ]
         }).on('error', sass.logError))
         .pipe(gulp.dest('./css'))
@@ -103,8 +103,8 @@ Add the `node_modules/govuk_frontend_toolkit` and `node_modules/govuk-elements-s
 
 In the example above `includePaths` uses two paths to resolve the scss @import statements.
 
-1. The location of the directory containing the govuk_frontend_toolkit sass files.
-2. The location of the directory containing the govuk-elements-sass files.
+1. The location of the directory containing the idsk_frontend_toolkit sass files.
+2. The location of the directory containing the idsk-elements-sass files.
 
 **Using [Grunt](https://gruntjs.com/)**
 
@@ -115,8 +115,8 @@ In the example above `includePaths` uses two paths to resolve the scss @import s
         dist: {
           options: {
             includePaths: [
-              'node_modules/govuk_frontend_toolkit/stylesheets', // 1
-              'node_modules/govuk-elements-sass/public/sass'     // 2
+              'node_modules/idsk_frontend_toolkit/stylesheets', // 1
+              'node_modules/idsk-elements-sass/public/sass'     // 2
             ],
           },
           files: {
@@ -128,9 +128,9 @@ In the example above `includePaths` uses two paths to resolve the scss @import s
 
 In the example above `includePaths` uses two paths to resolve the scss @import statements.
 
-1. The location of the directory containing the govuk_frontend_toolkit sass files.
-2. The location of the directory containing the govuk-elements-sass files.
+1. The location of the directory containing the idsk_frontend_toolkit sass files.
+2. The location of the directory containing the idsk-elements-sass files.
 
 ## Contributing
 
-You can find contribution guidelines in [CONTRIBUTING.md](https://github.com/alphagov/govuk_elements/blob/master/CONTRIBUTING.md)
+You can find contribution guidelines in [CONTRIBUTING.md](https://github.com/id-sk/idsk_elements/blob/master/CONTRIBUTING.md)
