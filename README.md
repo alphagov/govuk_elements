@@ -1,3 +1,11 @@
+From the end of June 2018, GDS will stop maintaining the code and guidance in GOV.UK Elements.
+===============
+
+You will be able to get all of the GOV.UK styles, components and patterns in the GOV.UK Design System.
+
+GOV.UK Elements will still be available in case you are already using it, but GDS will only make serious bug fixes and security patches.
+
+
 GOV.UK elements ·
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![Greenkeeper badge](https://badges.greenkeeper.io/alphagov/govuk_elements.svg)](https://greenkeeper.io/)

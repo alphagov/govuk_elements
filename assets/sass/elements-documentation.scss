@@ -87,6 +87,25 @@ main > .heading-xlarge {
   margin-top: 0;
 }
 
+// deprecation notice
+.notification-summary {
+  border: 4px solid $govuk-blue;
+
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
+
+  padding: $gutter-half 10px;
+
+  @include media(tablet) {
+    border: 5px solid $govuk-blue;
+
+    margin-top: $gutter;
+    margin-bottom: $gutter;
+
+    padding: $gutter-two-thirds $gutter-half $gutter-half;
+  }
+}
+
 // Example boxes
 // ==========================================================================
 
