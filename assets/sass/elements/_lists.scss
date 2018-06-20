@@ -6,23 +6,28 @@ ol {
   list-style-type: none;
 }
 
+.govuk-prose ul,
+.govuk-prose ol,
 .list {
   padding: 0;
   margin-top: 5px;
   margin-bottom: 20px;
 }
 
+.govuk-prose li,
 .list li {
   margin-bottom: 5px;
 }
 
 // Bulleted lists
+.govuk-prose ul,
 .list-bullet {
   list-style-type: disc;
   padding-left: 20px;
 }
 
 // Numbered lists
+.govuk-prose ol,
 .list-number {
   list-style-type: decimal;
   padding-left: 20px;
