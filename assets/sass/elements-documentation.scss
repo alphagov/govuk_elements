@@ -96,6 +96,10 @@ main > .heading-xlarge {
 
   padding: $gutter-half 10px;
 
+  p {
+    max-width: 38em;
+  }
+
   @include media(tablet) {
     border: 5px solid $govuk-blue;
 
