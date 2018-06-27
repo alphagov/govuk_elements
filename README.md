@@ -1,11 +1,9 @@
-The GOV.UK Design System is launching 22 June
+The GOV.UK Design System launched on 22 June 2018
 ===============
 
-The Design System will contain new and improved versions of everything you can currently find here.
+The Government Digital Service (GDS) is retiring GOV.UK Elements following the launch of the GOV.UK Design System. GOV.UK Elements will remain available to you if you are currently using it but will no longer be maintained. GDS will only roll out major bug fixes and security patches.
 
-If you’re starting a new project and you’re able to wait until 22 June, we recommend using the Design System when it launches.
-
-GOV.UK elements will still be available in case you are already using it, but GDS will only be making serious bug fixes and security patches after this date.
+For new projects, you can get all of the information about GOV.UK styles, components and patterns in the [GOV.UK Design System](https://www.gov.uk/design-system).
 
 
 GOV.UK elements ·
