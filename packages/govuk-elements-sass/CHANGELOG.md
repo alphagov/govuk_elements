@@ -1,3 +1,10 @@
+# 3.1.3
+
+- Fix missing arrow on the `<details>` element in Firefox ([PR #534](https://github.com/alphagov/govuk_elements/pull/611))
+- Heading classes set to `display: block;` ([PR #552](https://github.com/alphagov/govuk_elements/pull/552))
+- Add class to adjust fieldset top margin when used after error summary ([PR #552](https://github.com/alphagov/govuk_elements/pull/552))
+- Change error layout for single-question form pages ([PR #552](https://github.com/alphagov/govuk_elements/pull/552))
+
 # 3.1.2
 
 - Update govuk_frontend_toolkit from v6.0.2 to v7.1.0:
