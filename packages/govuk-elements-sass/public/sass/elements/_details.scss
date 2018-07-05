@@ -11,6 +11,25 @@ details {
     cursor: pointer;
     position: relative;
     margin-bottom: em(5);
+    padding-left: 25px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-color: transparent;
+      -webkit-clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+      clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+      border-width: 7px 0 7px 12.124px;
+      border-left-color: inherit;
+    }
 
     &:hover {
       color: $link-hover-colour;
@@ -19,6 +38,23 @@ details {
     &:focus {
       outline: 3px solid $focus-colour;
     }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+  }
+
+  &[open]>summary:before {
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    -webkit-clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+    clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+    border-width: 12.124px 7px 0 7px;
+    border-top-color: inherit;
   }
 
   // Underline only summary text (not the arrow)
@@ -26,10 +62,9 @@ details {
     text-decoration: underline;
   }
 
-  // Match fallback arrow spacing with -webkit default
+  // fallback no longer needed
   .arrow {
-    margin-right: .35em;
-    font-style: normal;
+    display: none;
   }
 
 }
