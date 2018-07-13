@@ -43,7 +43,7 @@ jobs:
         - provider: npm
           email: govuk-dev@digital.cabinet-office.gov.uk
           api_key:
-            secure: CW79rsUR5MFR+YyIsmwhbrndukNjzoKstp2SKupdEzUYTthnzsDxz2CGgI3SwwIcxPh41onxkDZm5R0ZvxwFQf4R+IJEhM94KqjwLdVE5bkKPD0JNYGbYRTDrTCYb74InvjN6LIhYvQwcKO+ThaiMA1IttEc4vCzKHPKKbPv340=
+            secure: Cn1t69Nw5opWGkYfyYzxlyZy2i8EeXcHVLNr/gvW04Vg4leRQKc/W3PUYNUduWUxPCQa1f3akWW+q3z/tbIknxhVH40IoH2+4TmeaU6uRPdo9scZKYga+cE/1+auNAgSz289mTqxCIHqOZNmYVqcvndjiro/BZmO+WPxeSxTf3U=
 
         # Upload the contents of packages/govuk-elements-sass/ to GitHub releases
         - provider: script
