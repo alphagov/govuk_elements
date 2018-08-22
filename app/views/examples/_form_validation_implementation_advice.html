@@ -9,25 +9,16 @@
     show an error summary at the top of the page
   </li>
   <li>
-    move keyboard focus to the start of the summary
-    <span class="panel panel-border-narrow">
-      to move keyboard focus, put <code>tabindex="-1"</code> on the containing div and use <code>obj.focus()</code>
-    </span>
+    to move keyboard focus to the start of the summary, put <code>tabindex="-1"</code> on the containing div and use <code>obj.focus()</code>
   </li>
   <li>
-    ensure that the summary is announced to as many screen readers as possible
-    <span class="panel panel-border-narrow">
-      use <code>role="alert"</code> on the containing <code>div</code>
-    </span>
+    to ensure that the summary is announced to as many screen readers as possible use <code>role="alert"</code> on the containing <code>div</code>
   </li>
   <li>
     use a heading at the top of the summary
   </li>
   <li>
-    associate the heading with the summary box
-    <span class="panel panel-border-narrow">
-      use the ARIA attribute <code>aria-labelledby</code> on the containing <code>div</code>, so that screen readers will automatically announce the heading as soon as focus is moved to the div
-    </span>
+    to associate the heading with the summary box use the ARIA attribute <code>aria-labelledby</code> on the containing <code>div</code>, so that screen readers will automatically announce the heading as soon as focus is moved to the div
   </li>
   <li>
     link from the error list in the summary to the fields with errors
