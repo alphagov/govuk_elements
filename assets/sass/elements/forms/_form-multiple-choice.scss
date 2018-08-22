@@ -111,6 +111,17 @@
     @include box-shadow(0 0 0 3px $focus-colour);
   }
 
+  // Hover state
+  input:not(:checked):not(:disabled):hover + label::after {
+    @include opacity(0.15);
+  }
+  // hide the hover state in iOS9.1+ / mobile Chrome
+  @media (hover: none) {
+    input:not(:checked):not(:disabled):hover + label::after {
+      @include opacity(0);
+    }
+  }
+
   // Selected state
   input:checked + label::after {
     @include opacity(1);
