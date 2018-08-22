@@ -42,12 +42,6 @@ legend {
   }
 }
 
-// Remove margin under textarea in Chrome and FF
-textarea {
-  display: block;
-}
-
-
 // 2. Form wrappers
 // ==========================================================================
 
@@ -97,8 +91,8 @@ textarea {
 // TODO: Amend so there is only one label style
 .form-label,
 .form-label-bold {
-  display: block;
   color: $text-colour;
+  display: block;
   padding-bottom: 2px;
 }
 
@@ -112,15 +106,14 @@ textarea {
 
 // Used for the 'or' in between block label options
 .form-block {
-  float: left;
   clear: left;
-
-  margin-top: -5px;
+  float: left;
   margin-bottom: 5px;
+  margin-top: -5px;
 
   @include media(tablet) {
-    margin-top: 0;
     margin-bottom: 10px;
+    margin-top: 0;
   }
 }
 
@@ -130,10 +123,9 @@ textarea {
 // Form hints and example text are light grey and sit above a form control
 .form-hint {
   @include core-19;
-  display: block;
   color: $secondary-text-colour;
+  display: block;
   font-weight: normal;
-
   margin-top: -2px;
   padding-bottom: 2px;
 }
@@ -152,12 +144,13 @@ textarea {
 .form-control {
   @include box-sizing(border-box);
   @include core-19;
-  width: 100%;
-
-  padding: 5px 4px 4px;
   // setting any background-color makes text invisible when changing colours to dark backgrounds in Firefox (https://bugzilla.mozilla.org/show_bug.cgi?id=1335476)
   // as background-color and color need to always be set together, color should not be set either
   border: 2px solid $text-colour;
+  height: 2em;
+  padding: 5px 4px 4px;
+  vertical-align: middle;
+  width: 100%;
 
   // TODO: Remove 50% width set for tablet and up
   // !! BREAKING CHANGE !!
@@ -177,12 +170,43 @@ textarea.form-control {
 }
 
 textarea.form-control {
+  background-image: none;
+  // Remove margin under textarea in Chrome and FF
+  display: block;
+  height: auto;
   // Disable opacity and background image for Firefox
   opacity: 1;
-  background-image: none;
+}
+
+select.form-control {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIpJREFUeNrEkckNgDAMBBfRkEt0ObRBBdsGXUDgmQfK4XhH2m8czQAAy27R3tsw4Qfe2x8uOO6oYLb6GlOor3GF+swURAOmUJ+RwtEJs9WvTGEYxBXqI1MQAZhCfUQKRzDMVj+TwrAIV6jvSUEkYAr1LSkcyTBb/V+KYfX7xAeusq3sLDtGH3kEGACPWIflNZfhRQAAAABJRU5ErkJggg==');
+  background-position: center right 10px;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  border-radius: 0;
+  padding-right: 30px;
+
+  // Removed fixed height and background when multiple select
+  &[multiple] {
+    background-image: none;
+    height: auto;
+  }
+
+  // Hide the native dropdown arrow in ie10
+  &::-ms-expand {
+    display: none;
+  }
+
+  // You can't hide the native dropdown icon on ie9 so we hide the custom one
+  @include ie(9) {
+    background: none;
+    padding-right: 5px;
+  }
 }
 // scss-lint:enable QualifyingElement
-
 
 // 6. Form control widths
 // ==========================================================================
@@ -244,6 +268,6 @@ textarea.form-control {
 option:active,
 option:checked,
 select:focus::-ms-value {
-  color: $white;
   background-color: $govuk-blue;
+  color: $white;
 }
