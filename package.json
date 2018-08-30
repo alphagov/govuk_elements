@@ -24,7 +24,7 @@
     "node-sass": "^4.5.3",
     "nunjucks": "^3.0.0",
     "run-sequence": "^2.1.0",
-    "standard": "^10.0.2",
+    "standard": "^12.0.1",
     "supertest": "^3.0.0"
   },
   "scripts": {
