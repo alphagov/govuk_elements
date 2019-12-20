@@ -45,9 +45,21 @@ app.use(function (req, res, next) {
   next()
 })
 
-// Add variables that are available in all views
+// Hot patch send method to manipulate HTML before it is sent.
 app.use(function (req, res, next) {
-  res.locals.cookieText = config.cookieText
+  var send = res.send
+  res.send = function () {
+    // Check first argument is html before manipluating it
+    var isString = typeof arguments[0] === 'string'
+    var isHTML = isString && arguments[0].trim().startsWith('<!DOCTYPE html>')
+    if (isHTML) {
+      // Remove the cookie banner from the page so cookies are not set,
+      // this is not configurable in govuk_template.
+      var cookieBannerRegex = /<div id="global-cookie-message">\s*<\/div>/
+      arguments[0] = arguments[0].replace(cookieBannerRegex, '')
+    }
+    send.apply(this, arguments)
+  }
   next()
 })
 
