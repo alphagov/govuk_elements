@@ -27,14 +27,6 @@ page.settings.userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleW
 
 //  };
 
-// If you want to set a cookie, just add your details below in the following way.
-
-phantom.addCookie({
-    'name': 'seen_cookie_message',
-    'value': 'yes',
-    'domain': 'localhost'
-});
-
 page.onResourceRequested = function(req) {
   current_requests += 1;
 };
