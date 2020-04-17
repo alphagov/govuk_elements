@@ -12,7 +12,7 @@ jobs:
         # Ensure Travis aborts without running tests if the lockfile needs updating
         - set -e
         - ./scripts/check-lockfile.sh
-        - yarn test
+        - npm test
     - stage: check for new release
       script:
       # Ensure Travis aborts without creating a release if version hasn't changed

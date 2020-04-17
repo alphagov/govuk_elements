@@ -1,12 +1,10 @@
-# Check to see whether the yarn lockfile was changed when Travis ran yarn.
-# We can't use yarn check --integrity because the lock file will already have been updated
-# (but not committed), and so the check will always pass.
+# Check to see whether the package-lock.json file needs updating.
 
-echo "checking Yarn lockfile for changes"
+echo "checking package-lock.json for changes"
 
-if git diff --exit-code --quiet yarn.lock; then
-  echo "no changes have been made to the lockfile"
+if git diff --exit-code --quiet package-lock.json; then
+  echo "no changes have been made to package-lock.json"
 else
-  echo "lockfile needs updating, run yarn and commit"
+  echo "package-lock.json needs updating, run npm install with npm@5+ and commit"
   exit 1
 fi
