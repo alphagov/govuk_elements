@@ -1,10 +1,13 @@
 The GOV.UK Design System launched on 22 June 2018
 ===============
 
-GOV.UK Elements has now been replaced by the GOV.UK Design System. Elements will remain available in case you are currently using it, but is no longer maintained. The Government Digital Service will only carry out major bug fixes and security patches.
+GOV.UK Elements is:
 
-The GOV.UK Design System will be updated to ensure the things it contains meet level AA of WCAG 2.1, but Elements will not. [Read more about accessibility of the GOV.UK Design System](https://design-system.service.gov.uk/accessibility/).
+- no longer maintained
+- will only be updated for major bug fixes and security patches
+- does not meet the [Web Content Accessibility Guidelines (WCAG 2.1 level AA) accessibility standard](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps)
 
+This framework will remain available in case you’re currently using it. To help your service meet accessibility requirements, you should use the [GOV.UK Design System](https://design-system.service.gov.uk/). You can [migrate to the Design System from GOV.UK Elements](https://frontend.design-system.service.gov.uk/migrating-from-legacy-products/).
 
 GOV.UK elements ·
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
@@ -71,11 +74,11 @@ GOV.UK elements uses Wraith so that regressions can be easily spotted.
 This needs to be run from the Wraith directory `/tests/wraith` and some dependencies need to be installed on the local machine first.
 
 1. Install Wraith and its dependencies.
-      
+
         gem install wraith
-        
+
         brew install phantomjs
-        
+
         brew install imagemagick
 
 2. Take a baseline of the current version.
