@@ -5,7 +5,7 @@ GOV.UK Elements is:
 
 - no longer maintained
 - will only be updated for major bug fixes and security patches
-- does not meet the [Web Content Accessibility Guidelines (WCAG 2.1 level AA) accessibility standard](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps)
+- does not meet the [Web Content Accessibility Guidelines (WCAG 2.1 level AA) accessibility standard](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps#meeting-accessibility-requirements)
 
 This framework will remain available in case you’re currently using it. To help your service meet accessibility requirements, you should use the [GOV.UK Design System](https://design-system.service.gov.uk/). You can [migrate to the Design System from GOV.UK Elements](https://frontend.design-system.service.gov.uk/migrating-from-legacy-products/).
 
@@ -74,11 +74,11 @@ GOV.UK elements uses Wraith so that regressions can be easily spotted.
 This needs to be run from the Wraith directory `/tests/wraith` and some dependencies need to be installed on the local machine first.
 
 1. Install Wraith and its dependencies.
-
+      
         gem install wraith
-
+        
         brew install phantomjs
-
+        
         brew install imagemagick
 
 2. Take a baseline of the current version.
