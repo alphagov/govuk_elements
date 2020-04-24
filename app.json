@@ -1,14 +1,9 @@
 {
   "name": "govuk_elements",
+  "stack": "heroku-18",
   "scripts": {
   },
   "env": {
-    "NODE_ENV": {
-      "required": true
-    },
-    "NPM_CONFIG_PRODUCTION": {
-      "required": true
-    }
   },
   "formation": {
   },
