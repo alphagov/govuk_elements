@@ -1,5 +1,6 @@
 {
   "name": "govuk_elements",
+  "stack": "heroku-18",
   "scripts": {
   },
   "env": {
