@@ -16,13 +16,13 @@ GOV.UK elements ·
 
 GOV.UK elements is three things:
 
-1. [An online design guide](http://govuk-elements.herokuapp.com/), explaining how to make your service look consistent with the rest of GOV.UK.
+1. [An online design guide](https://govuk-elements.herokuapp.com/), explaining how to make your service look consistent with the rest of GOV.UK.
 2. An example of how to use the code in the [GOV.UK template](https://github.com/alphagov/govuk_template) and the [GOV.UK frontend toolkit](https://github.com/alphagov/govuk_frontend_toolkit).
 3. An [npm package of the Sass files](https://www.npmjs.com/package/govuk-elements-sass).
 
 # GOV.UK elements guide
 
-[http://govuk-elements.herokuapp.com/](http://govuk-elements.herokuapp.com/).
+[https://govuk-elements.herokuapp.com/](https://govuk-elements.herokuapp.com/).
 
 # Using govuk-elements-sass
 
@@ -31,7 +31,7 @@ Installation and usage instructions can be found in the govuk-elements-sass [REA
 ## Running this site locally
 
 If you would like to clone the repository and run it locally,
-you will need [Node.js](http://nodejs.org/) (at least version v0.10.0).
+you will need [Node.js](https://nodejs.org/) (at least version v0.10.0).
 
 Clone this repository
 
@@ -62,7 +62,7 @@ To check the whole codebase, run:
 [GOV.UK elements uses govuk-lint](https://github.com/alphagov/govuk-lint#sass), which uses [scss-lint](https://github.com/brigade/scss-lint) as its scss linter.
 
 ### Standard JavaScript
-GOV.UK elements uses [standardjs](http://standardjs.com/), an opinionated JavaScript linter. All JavaScript files follow its conventions.
+GOV.UK elements uses [standardjs](https://standardjs.com/), an opinionated JavaScript linter. All JavaScript files follow its conventions.
 
 Both linters run on CI to ensure that new pull requests are in line with them.
 
