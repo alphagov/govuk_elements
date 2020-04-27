@@ -1,6 +1,7 @@
 var path = require('path')
 var express = require('express')
 var nunjucks = require('nunjucks')
+var enforce = require('express-sslify')
 var routes = require('./app/routes.js')
 var app = express()
 var bodyParser = require('body-parser')
@@ -8,6 +9,15 @@ var port = (process.env.PORT || 3000)
 var IS_HEROKU = process.env.hasOwnProperty('IS_HEROKU')
 
 module.exports = app
+
+if (IS_HEROKU) {
+  app.use(enforce.HTTPS({
+    // Heroku uses a reverse proxy for SSL, but then forwards traffic to the
+    // website over http. The X-Forwarded-Proto header provides the original
+    // protocol used, but we have to tell express-sslify to trust it.
+    trustProtoHeader: true
+  }))
+}
 
 // Application settings
 app.set('view engine', 'html')

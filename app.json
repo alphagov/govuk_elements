@@ -4,6 +4,9 @@
   "scripts": {
   },
   "env": {
+    "IS_HEROKU": {
+      "value": true
+    }
   },
   "formation": {
   },
