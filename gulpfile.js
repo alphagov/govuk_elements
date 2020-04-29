@@ -81,9 +81,6 @@ gulp.task('server', () => {
 // Check that the build task copies assets
 // to /public and that the app runs.
 // ---------------------------------------
-gulp.task('test', cb => {
-  runsequence('build', ['test:app'], cb)
-})
 
 gulp.task('test:app', () =>
   gulp.src(paths.testSpecs + 'app_spec.js', {read: false})
@@ -97,11 +94,13 @@ gulp.task('test:app', () =>
   })
 )
 
-// Watch task ----------------------------
+gulp.task('test', cb => {
+  runsequence('build', ['test:app'], cb)
+})
+
+// Watch tasks ----------------------------
 // When a file is changed, re-run the build task.
 // ---------------------------------------
-
-gulp.task('watch', ['watch:styles', 'watch:scripts', 'watch:images'])
 
 gulp.task('watch:styles', () => {
   return gulp.watch(paths.assetsScss + '**/*.scss', ['styles'])
@@ -114,6 +113,8 @@ gulp.task('watch:scripts', () => {
 gulp.task('watch:images', () => {
   return gulp.watch(paths.assetsImg + '**/*', ['images'])
 })
+
+gulp.task('watch', ['watch:styles', 'watch:scripts', 'watch:images'])
 
 // Develop task --------------------------
 // Runs copy-assets task and sets up watches.
@@ -129,10 +130,6 @@ gulp.task('develop', cb => {
 // Ignores the elements-documentation stylesheets
 // ---------------------------------------
 
-gulp.task('package', cb => {
-  runsequence('package:prepare', cb)
-})
-
 gulp.task('package:prepare', () => {
   return gulp.src(
     [
@@ -142,6 +139,10 @@ gulp.task('package:prepare', () => {
       paths.assetsScss + '_elements.scss'
     ])
     .pipe(gulp.dest(paths.package + 'public/sass/'))
+})
+
+gulp.task('package', cb => {
+  runsequence('package:prepare', cb)
 })
 
 // Default task --------------------------
