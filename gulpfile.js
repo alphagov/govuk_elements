@@ -118,7 +118,7 @@ gulp.task('develop', gulp.series(
 // Ignores the elements-documentation stylesheets
 // ---------------------------------------
 
-gulp.task('package:prepare', () => {
+gulp.task('package', () => {
   return gulp.src(
     [
       paths.assetsScss + '**/elements/**/*.scss',
@@ -128,10 +128,6 @@ gulp.task('package:prepare', () => {
     ])
     .pipe(gulp.dest(paths.package + 'public/sass/'))
 })
-
-gulp.task('package', gulp.series(
-  'package:prepare'
-))
 
 // Default task --------------------------
 // Lists out available tasks.
