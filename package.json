@@ -17,7 +17,7 @@
     "govuk_template_jinja": "0.23.0",
     "gulp": "^4.0.2",
     "gulp-cssnano": "^2.1.2",
-    "gulp-mocha": "^4.3.1",
+    "gulp-mocha": "^7.0.2",
     "gulp-nodemon": "^2.2.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
