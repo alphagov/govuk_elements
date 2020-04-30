@@ -3,10 +3,11 @@
 const paths = require('./config/paths.json')
 const gulp = require('gulp')
 const gutil = require('gulp-util')
-const cssnano = require('gulp-cssnano')
+const cssnano = require('cssnano')
 const del = require('del')
 const mocha = require('gulp-mocha')
 const nodemon = require('gulp-nodemon')
+const postcss = require('gulp-postcss')
 const rename = require('gulp-rename')
 const sass = require('gulp-sass')
 
@@ -32,7 +33,7 @@ gulp.task('styles', () => {
     }).on('error', sass.logError))
     .pipe(gulp.dest(paths.publicCss))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(cssnano())
+    .pipe(postcss([ cssnano() ]))
     .pipe(gulp.dest(paths.publicCss))
 })
 
