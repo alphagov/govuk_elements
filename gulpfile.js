@@ -11,12 +11,20 @@ const postcss = require('gulp-postcss')
 const rename = require('gulp-rename')
 const sass = require('gulp-sass')
 
-// Clean task ----------------------------
+// Clean tasks ----------------------------
+
 // Deletes the /public directory
 // ---------------------------------------
 
-gulp.task('clean', () => {
+gulp.task('clean:public', () => {
   return del(paths.public)
+})
+
+// Deletes the /public directory in /package
+// ---------------------------------------
+
+gulp.task('clean:package', () => {
+  return del(paths.packagePublic)
 })
 
 // Styles build task ---------------------
@@ -59,7 +67,7 @@ gulp.task('scripts', () => {
 // ---------------------------------------
 
 gulp.task('build', gulp.series(
-  'clean',
+  'clean:public',
   gulp.parallel('styles', 'images', 'scripts')
 ))
 
@@ -119,7 +127,7 @@ gulp.task('develop', gulp.series(
 // Ignores the elements-documentation stylesheets
 // ---------------------------------------
 
-gulp.task('package', () => {
+gulp.task('prepare:package', () => {
   return gulp.src(
     [
       paths.assetsScss + '**/elements/**/*.scss',
@@ -129,6 +137,11 @@ gulp.task('package', () => {
     ])
     .pipe(gulp.dest(paths.package + 'public/sass/'))
 })
+
+gulp.task('package', gulp.series(
+  'clean:package',
+  'prepare:package'
+))
 
 // Default task --------------------------
 // Lists out available tasks.
