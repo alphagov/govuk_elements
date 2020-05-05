@@ -3,12 +3,12 @@
 const paths = require('./config/paths.json')
 const gulp = require('gulp')
 const gutil = require('gulp-util')
-const cssnano = require('gulp-cssnano')
+const cssnano = require('cssnano')
 const del = require('del')
 const mocha = require('gulp-mocha')
 const nodemon = require('gulp-nodemon')
+const postcss = require('gulp-postcss')
 const rename = require('gulp-rename')
-const runsequence = require('run-sequence')
 const sass = require('gulp-sass')
 
 // Clean task ----------------------------
@@ -33,7 +33,7 @@ gulp.task('styles', () => {
     }).on('error', sass.logError))
     .pipe(gulp.dest(paths.publicCss))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(cssnano())
+    .pipe(postcss([ cssnano() ]))
     .pipe(gulp.dest(paths.publicCss))
 })
 
@@ -58,15 +58,16 @@ gulp.task('scripts', () => {
 // Runs tasks that copy assets to the public directory.
 // ---------------------------------------
 
-gulp.task('build', cb => {
-  runsequence('clean', ['styles', 'images', 'scripts'], cb)
-})
+gulp.task('build', gulp.series(
+  'clean',
+  gulp.parallel('styles', 'images', 'scripts')
+))
 
 // Server task --------------------------
 // Configures nodemon
 // ---------------------------------------
 gulp.task('server', () => {
-  nodemon({
+  return Promise.resolve(nodemon({
     watch: ['.env', '**/*.js', '**/*.json'],
     script: 'server.js',
     ignore: [
@@ -74,66 +75,51 @@ gulp.task('server', () => {
       paths.assets + '*',
       paths.nodeModules + '*'
     ]
-  })
+  }))
 })
 
 // Test task --------------------------
 // Check that the build task copies assets
 // to /public and that the app runs.
 // ---------------------------------------
-gulp.task('test', cb => {
-  runsequence('build', ['test:app'], cb)
-})
 
 gulp.task('test:app', () =>
   gulp.src(paths.testSpecs + 'app_spec.js', {read: false})
-  .pipe(mocha({reporter: 'spec'}))
-  // https://github.com/sindresorhus/gulp-mocha#test-suite-not-exiting
-  .once('error', () => {
-    process.exit(1)
-  })
-  .once('end', () => {
-    process.exit()
-  })
+  .pipe(mocha({reporter: 'spec', exit: true}))
+  .on('error', console.error)
 )
 
-// Watch task ----------------------------
+gulp.task('test', gulp.series(
+  'build',
+  'test:app'
+))
+
+// Watch tasks ----------------------------
 // When a file is changed, re-run the build task.
 // ---------------------------------------
 
-gulp.task('watch', ['watch:styles', 'watch:scripts', 'watch:images'])
-
-gulp.task('watch:styles', () => {
-  return gulp.watch(paths.assetsScss + '**/*.scss', ['styles'])
-})
-
-gulp.task('watch:scripts', () => {
-  return gulp.watch(paths.assetsJs + '**/*.js', ['scripts'])
-})
-
-gulp.task('watch:images', () => {
-  return gulp.watch(paths.assetsImg + '**/*', ['images'])
-})
+gulp.task('watch', () => Promise.all([
+  gulp.watch(paths.assetsScss + '**/*.scss', gulp.task('styles')),
+  gulp.watch(paths.assetsJs + '**/*.js', gulp.task('scripts')),
+  gulp.watch(paths.assetsImg + '**/*', gulp.task('images'))
+]))
 
 // Develop task --------------------------
 // Runs copy-assets task and sets up watches.
 // ---------------------------------------
-gulp.task('develop', cb => {
-  runsequence('build',
-              'watch',
-              'server', cb)
-})
+
+gulp.task('develop', gulp.series(
+  'build',
+  'watch',
+  'server'
+))
 
 // Package task ----------------------------
 // Copies the scss files to packages/govuk-elements-sass/
 // Ignores the elements-documentation stylesheets
 // ---------------------------------------
 
-gulp.task('package', cb => {
-  runsequence('package:prepare', cb)
-})
-
-gulp.task('package:prepare', () => {
+gulp.task('package', () => {
   return gulp.src(
     [
       paths.assetsScss + '**/elements/**/*.scss',
@@ -152,19 +138,18 @@ gulp.task('default', () => {
   const cyan = gutil.colors.cyan
   const green = gutil.colors.green
 
-  gutil.log(green('----------'))
-
-  gutil.log(('The following main ') + cyan('tasks') + (' are available:'))
-
-  gutil.log(cyan('build'
-    ) + ': copies assets to the public directory.'
-  )
-  gutil.log(cyan('develop'
-    ) + ': performs an initial build then sets up watches.'
-  )
-  gutil.log(cyan('package'
-    ) + ': prepares the govuk-elements-sass npm package'
-  )
-
-  gutil.log(green('----------'))
+  return Promise.all([
+    gutil.log(green('----------')),
+    gutil.log(('The following main ') + cyan('tasks') + (' are available:')),
+    gutil.log(cyan('build'
+      ) + ': copies assets to the public directory.'
+    ),
+    gutil.log(cyan('develop'
+      ) + ': performs an initial build then sets up watches.'
+    ),
+    gutil.log(cyan('package'
+      ) + ': prepares the govuk-elements-sass npm package'
+    ),
+    gutil.log(green('----------'))
+  ])
 })
