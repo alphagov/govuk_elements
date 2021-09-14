@@ -39,13 +39,24 @@ To see the commits to be summarised in the changelog since the last release, [co
 **The second commit:**
 Propose a new version number in [`VERSION.txt`](https://github.com/alphagov/govuk-elements-sass/blob/master/packages/govuk-elements-sass/VERSION.txt) and update [`package.json`](https://github.com/alphagov/govuk-elements-sass/blob/master/packages/govuk-elements-sass/CHANGELOG.md) with the new version number.
 
-3. Once merged into master a new version will be built:
+3. Merge to master
 
-The [create-release.sh](https://github.com/alphagov/govuk_elements/blob/master/create-release.sh) script will check for an existing tag matching the version number in `packages/govuk-elements-sass/VERSION.txt`, if it doesn’t exist, it creates a tag and pushes this to Github.
+4. Create a new release in GitHub
 
-On a tagged commit, Travis deploys the package to npm.
+5. Update the `latest-release` branch
 
-The contents of `/packages/govuk-elements-sass` will be also be released using [GitHub Releases using Travis](https://docs.travis-ci.com/user/deployment/releases/).
+```
+git checkout master
+git pull
+git push origin master:latest-release
+```
+
+6. Publish the package to npm with the alphagov user:
+
+```
+cd packages/govuk-elements-sass
+npm publish
+```
 
 ## Commit hygiene
 
