@@ -50,13 +50,13 @@ http {
 		## Document root
 		root /app/dist;
 
-    ## Custom error pages
+		## Custom error pages
 		error_page 410 @gone;
 
-    location @gone {
-      root /app/dist;
-      rewrite ^(.*)$ /410.html break;
-    }
+		location @gone {
+			root /app/dist;
+			rewrite ^(.*)$ /410.html break;
+		}
 
 		return 410;
 	}
