@@ -1,13 +1,5 @@
-The GOV.UK Design System launched on 22 June 2018
-===============
-
-GOV.UK Elements:
-
-- is no longer maintained
-- will only be updated for major bug fixes and security patches
-- does not meet the [Web Content Accessibility Guidelines (WCAG 2.1 level AA) accessibility standard](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps#meeting-accessibility-requirements)
-
-This framework will remain available in case you’re currently using it. To help your service meet accessibility requirements, you should use the [GOV.UK Design System](https://design-system.service.gov.uk/). You can [migrate to the Design System from GOV.UK Elements](https://frontend.design-system.service.gov.uk/migrating-from-legacy-products/).
+> [!WARNING]
+> GOV.UK Elements is deprecated. To design your service using actively maintained and accessible styles, components and patterns, [migrate to the GOV.UK Design System](https://frontend.design-system.service.gov.uk/v4/migrating-from-legacy-products/).
 
 GOV.UK elements ·
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
