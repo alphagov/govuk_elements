@@ -47,6 +47,9 @@ http {
 			return 301 https://$host$request_uri;
 		}
 
+		## Document root
+		root /app/dist;
+
     ## Custom error pages
 		error_page 410 @gone;
 
