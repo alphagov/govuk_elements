@@ -1,0 +1,21 @@
+{
+  "name": "govuk_elements",
+  "stack": "heroku-24",
+  "scripts": {
+  },
+  "env": {
+    "IS_HEROKU": {
+      "value": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku-community/nginx"
+    }
+  ]
+}
