@@ -15,7 +15,7 @@
   ],
   "buildpacks": [
     {
-      "url": "heroku-community/nginx"
+      "url": "https://github.com/heroku/heroku-buildpack-nginx"
     }
   ]
 }
