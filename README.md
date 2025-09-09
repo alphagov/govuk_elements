@@ -16,6 +16,9 @@ GOV.UK elements is three things:
 
 [https://govuk-elements.herokuapp.com/](https://govuk-elements.herokuapp.com/).
 
+> [!NOTE]
+> This website has now been retired and replaced with a '410 Gone' page. The code for this can be found in the `elements-retired` branch.
+
 # Using govuk-elements-sass
 
 Installation and usage instructions can be found in the govuk-elements-sass [README](https://github.com/alphagov/govuk_elements/blob/master/packages/govuk-elements-sass/README.md).
